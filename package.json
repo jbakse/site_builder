@@ -1,0 +1,25 @@
+{
+  "name": "site_builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbakse/site_builder.git"
+  },
+  "author": "Justin Bakse",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jbakse/site_builder/issues"
+  },
+  "homepage": "https://github.com/jbakse/site_builder#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-markdown-it": "^0.1.1",
+    "gulp-wrap": "^0.13.0"
+  }
+}
