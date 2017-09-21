@@ -1,25 +1,40 @@
 # An h1 header!!!
 
-Paragraphs are separated by a blank line.
+Paragraphs "are" separated by a blank line.
 
 2nd paragraph. *Italic*, **bold**, and `monospace`. 
+
+# Test
+
+http://www.google.com
+
+I'm <b>some bold html</b>!
 
 ## Examples
 
 ### Warning
 
-:::warning
-This is a **warning**.
-
-1. Be
-2. Warned
+::: warning
+*here be dragons*
 :::
 
+
+::: warning
+
+### This is a *warning*.
+
+1. Be!
+2. Warned
+
+:::
+
+<div class="warning">
 ### List
 
 - list
 - list
 - list
+</div>
 
 ### Numbered list
 

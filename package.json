@@ -19,7 +19,9 @@
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
-    "gulp-markdown-it": "^0.1.1",
-    "gulp-wrap": "^0.13.0"
+    "gulp-tap": "^1.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp-wrap": "^0.13.0",
+    "markdown-it": "^8.4.0"
   }
 }
