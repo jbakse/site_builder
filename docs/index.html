@@ -21,20 +21,30 @@
 </head>
 
 <body>
+
     <div class="container">
-        <h1>An h1 header!!!</h1>
+        <div class="row">
+            <div class="col-3 d-none d-md-block">
+                <nav>
+                    <ul id="toc">
+                    </ul>
+                </nav>
+            </div>
+            <div class="col">
+                <article id="content">
+                    <h1 id="an-h1-header">An h1 header!!!</h1>
 <p>Paragraphs “are” separated by a blank line.</p>
 <p>2nd paragraph. <em>Italic</em>, <strong>bold</strong>, and <code>monospace</code>.</p>
-<h1>Test</h1>
+<h1 id="test">Test</h1>
 <p><a href="http://www.google.com">http://www.google.com</a></p>
 <p>I’m <b>some bold html</b>!</p>
-<h2>Examples</h2>
-<h3>Warning</h3>
+<h2 id="examples">Examples</h2>
+<h3 id="warning">Warning</h3>
 <div id="" class="">
 <p><em>here be dragons</em></p>
 </div>
 <div id="" class="">
-<h3>This is a <em>warning</em>.</h3>
+<h3 id="this-is-a-warning">This is a <em>warning</em>.</h3>
 <ol>
 <li>Be!</li>
 <li>Warned</li>
@@ -48,22 +58,22 @@
 <li>list</li>
 </ul>
 </div>
-<h3>Numbered list</h3>
+<h3 id="numbered-list">Numbered list</h3>
 <ol>
 <li>list</li>
 <li>list</li>
 <li>list</li>
 </ol>
-<h3>Block Quote</h3>
+<h3 id="block-quote">Block Quote</h3>
 <blockquote>
 <p>Block quotes are
 written like so.</p>
 </blockquote>
-<h3>Fenced</h3>
+<h3 id="fenced">Fenced</h3>
 <pre><code class="language-javascript">x = x + <span class="hljs-number">1</span>;
 </code></pre>
-<h3>Table</h3>
-<table>
+<h3 id="table">Table</h3>
+<table class="table table-responsive">
 <thead>
 <tr>
 <th>a</th>
@@ -82,15 +92,22 @@ written like so.</p>
 <p>9     leather       brown
 10    hemp canvas   natural
 11    glass         transparent</p>
-<h3>Here’s a definition list:</h3>
-<p>apples
-: Good for making applesauce.
-oranges
-: Citrus!
-tomatoes
-: There’s no “e” in tomatoe.</p>
+<h3 id="heres-a-definition-list">Here’s a definition list:</h3>
+<dl>
+<dt>apples</dt>
+<dd>Good for making applesauce.
+oranges</dd>
+<dd>Citrus!
+tomatoes</dd>
+<dd>There’s no “e” in tomatoe.</dd>
+</dl>
 
-            <div>
+                </article>
+            </div>
+        </div>
+        <div>
+
+            <script src="/vendor/toc.js"></script>
 </body>
 
 </html>

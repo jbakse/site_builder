@@ -5,6 +5,7 @@ http://thisdavej.com/build-an-amazing-markdown-editor-using-visual-studio-code-a
 
 [NPM as Build Tool](https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/)
 
+[Build your own Markdown Flavour](http://www.broculos.net/2015/12/build-your-own-markdown-flavour-with.html#.WcVuXNOGMUE)
 
 
 // layout options

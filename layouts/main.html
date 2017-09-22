@@ -21,9 +21,24 @@
 </head>
 
 <body>
+
     <div class="container">
-        <%= contents %>
-            <div>
+        <div class="row">
+            <div class="col-3 d-none d-md-block">
+                <nav>
+                    <ul id="toc">
+                    </ul>
+                </nav>
+            </div>
+            <div class="col">
+                <article id="content">
+                    <%= contents %>
+                </article>
+            </div>
+        </div>
+        <div>
+
+            <script src="/vendor/toc.js"></script>
 </body>
 
 </html>

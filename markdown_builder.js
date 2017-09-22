@@ -14,6 +14,20 @@ var md = new MarkdownIt({
     highlight: higlightSyntax
 });
 
+md.use(require('markdown-it-deflist'));
+md.use(require('markdown-it-anchor'), {
+    permalink: false
+});
+
+
+md.renderer.rules.table_open = function (tokens, idx, options, env, self) {
+    return '<table class="table table-responsive">\n';
+};
+md.renderer.rules.table_close = function (tokens, idx, options, env, self) {
+    return '</table>\n';
+};
+
+
 
 function higlightSyntax(str, lang) {
     // console.log(lang, highlight_js.getLanguage(lang));

@@ -1,13 +1,3 @@
-::: .row
-::: .col-2 .d-none .d-md-block
-
-- Option 1
-- Option 2
-- Option 3
-
-:::
-
-::: .col
 
 ## Overview
 
@@ -18,6 +8,18 @@ value for a dimension property, you must include a linear unit such as
 inches, millimeters, or pixels. Units can also be given with their common
 abbreviation: in, mm, px. You don't have to use the same unit for every
 property, choose the unit that makes the most sense
+
+**bold** *italic* ~~strike~~
+
+::: .alert .alert-danger
+
+Apple
+: You eat apples.
+
+Bears
+: You run from bears.
+
+:::
 
 
 ### Basic Syntax
@@ -37,6 +39,9 @@ if (p1.trim()) {
 }
 ```
 
+### Table
 
-:::
-:::
+| First Header  | Second Header | Third Header  | Fourth Header |
+| ------------- | ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |

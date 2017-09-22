@@ -21,26 +21,41 @@
 </head>
 
 <body>
+
     <div class="container">
-        <h1>H1</h1>
+        <div class="row">
+            <div class="col-3 d-none d-md-block">
+                <nav>
+                    <ul id="toc">
+                    </ul>
+                </nav>
+            </div>
+            <div class="col">
+                <article id="content">
+                    <h1 id="h1">H1</h1>
 <p><strong>bold</strong> <em>italic</em></p>
 <div id="" class="alert alert-danger">
 <p>This is a <strong>bold</strong> warning.</p>
 </div>
 <div id="" class="row">
 <div id="" class="col-md">
-<h2>Column One</h2>
+<h2 id="column-one">Column One</h2>
 <p>This is a simple column, just testing to see if this works.</p>
 <p><a href="http://link">text</a></p>
 </div>
 <div id="" class="col-md">
-<h2>Column Two</h2>
+<h2 id="column-two">Column Two</h2>
 <p>This is a simple column, just testing to see if this works.</p>
 <p><a href="http://link">text</a></p>
 </div>
 </div>
 
-            <div>
+                </article>
+            </div>
+        </div>
+        <div>
+
+            <script src="/vendor/toc.js"></script>
 </body>
 
 </html>

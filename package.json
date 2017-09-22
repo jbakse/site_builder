@@ -23,6 +23,8 @@
     "gulp-util": "^3.0.8",
     "gulp-wrap": "^0.13.0",
     "highlightjs": "^9.10.0",
-    "markdown-it": "^8.4.0"
+    "markdown-it": "^8.4.0",
+    "markdown-it-anchor": "^4.0.0",
+    "markdown-it-deflist": "^2.0.3"
   }
 }
