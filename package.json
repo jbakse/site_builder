@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulper default"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "gulp-tap": "^1.0.1",
     "gulp-util": "^3.0.8",
     "gulp-wrap": "^0.13.0",
+    "highlightjs": "^9.10.0",
     "markdown-it": "^8.4.0"
   }
 }
