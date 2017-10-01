@@ -3,7 +3,7 @@ var browserSync = require('browser-sync').create();
 var tap = require('gulp-tap');
 var wrap = require('gulp-wrap');
 
-markdownToHTML = require('./markdown_builder');
+markdownToHTML = require('./build_src/markdown_builder');
 
 gulp.task('markdown', function () {
     return gulp.src('content/**/*.md')
@@ -19,9 +19,15 @@ gulp.task('vendor', function () {
         .pipe(gulp.dest('docs/vendor'));
 });
 
+gulp.task('src', function () {
+    return gulp.src('src/**/*.*')
+        .pipe(gulp.dest('docs/src'));
+});
+
 gulp.task('watch', function () {
     gulp.watch(['content/**/*.md', 'layouts/**/*.html'], ['markdown']);
     gulp.watch('vendor/**/*.*', ['vendor']).on('change', browserSync.reload);
+    gulp.watch('src/**/*.*', ['src']).on('change', browserSync.reload);
 });
 
 gulp.task('serve', function () {
@@ -38,6 +44,6 @@ gulp.task('serve', function () {
 });
 
 
-gulp.task('build', ['markdown', 'vendor']);
+gulp.task('build', ['markdown', 'vendor', 'src']);
 gulp.task('rebuild', ['build', 'watch']);
 gulp.task('default', ['build', 'serve', 'watch']);
