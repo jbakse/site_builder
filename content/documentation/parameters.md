@@ -16,12 +16,13 @@ Parameters are factors of a system that are exposed. Exposing parameters allows 
 @@include('./slides.md')
 :::
 
-::: callout yellow
+::: .callout .yellow
 # Prompt Yourself
 
 Consider: How did artists use parameters in each work?
 :::
 
+---
 ###### 3.2 Slides
 ## Parameters & Interface Design
 
@@ -29,7 +30,7 @@ Consider: How did artists use parameters in each work?
 
 An **interface** is the common boundary between two systems. Two of the most important interfaces of software systems are **user interfaces (UIs)** and **application programming interfaces (APIs)**.
 
-::: callout blue
+::: .bar-callout .blue
 A **UI** is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. The UI is the primary interface in most *applications*.
 
 An **API** is the part of a software system that is used by programmers to connect the software with other software systems. The API is the primary interface in most *libraries*.
@@ -42,10 +43,19 @@ It is common for software to have both a UI and an API. For example twitter prov
 ### Parameters
 Parameters are factors that control what how a system operates. Exposing parameters allows artists and designers to create systems that can be controlled by others. Choosing which parameters to expose is a core concern of software interface design.
 
+::: .sidebar-left
+Sidebar!
+:::
+
 #### What to Expose
 - Which parameters should be exposed?
 - Which values should be accepted for each parameter?
 - Which parameters are required, which are optional?
+
+
+::: .sidebar-right
+Sidebar!
+:::
 
 #### Balance
 Exposing **more** gives your user more control.  

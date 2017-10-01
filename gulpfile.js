@@ -31,13 +31,14 @@ gulp.task('vendor', function () {
 
 gulp.task('src', function () {
     return gulp.src('src/**/*.*')
-        .pipe(gulp.dest('docs/src'));
+        .pipe(gulp.dest('docs/src'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('watch', function () {
     gulp.watch(['content/**/*.md', 'layouts/**/*.**'], ['markdown']);
-    gulp.watch('vendor/**/*.*', ['vendor']).on('change', browserSync.reload);
-    gulp.watch('src/**/*.*', ['src']).on('change', browserSync.reload);
+    gulp.watch('vendor/**/*.*', ['vendor']);//.on('change', browserSync.reload);
+    gulp.watch('src/**/*.*', ['src']);//.on('change', browserSync.reload);
 });
 
 gulp.task('serve', function () {
@@ -48,7 +49,7 @@ gulp.task('serve', function () {
         open: false
     }, function () {
         console.log("\n\nServer at http://localhost:3000/");
-        browserSync.reload();
+        // browserSync.reload();
     });
 
 });

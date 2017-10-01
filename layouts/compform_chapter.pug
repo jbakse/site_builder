@@ -5,6 +5,7 @@ html(lang="en")
 		script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js", integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", crossorigin="anonymous")
 		
 		//bootstrap
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous")
 		link(rel="stylesheet", href="/vendor/bootstrap/css/bootstrap.min.css", integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M", crossorigin="anonymous")
 		script(src="/vendor/bootstrap/js/bootstrap.min.js", integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1", crossorigin="anonymous")
 		
@@ -23,8 +24,9 @@ html(lang="en")
 			.row
 				.col-md-2
 					| placeholder left
-				.col-md-6
+				.col-md-7
 					article
 						!= contents
-				.col-md-4
+					.scroll-out
+				.col-md-3
 					| placeholder right
