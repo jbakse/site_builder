@@ -1,3 +1,7 @@
+# Bugs
+x.browser reload sometimes fires early. You need to save twice to see changes.
+
+
 
 ## Refrences
 [Markdown Editor in VS Code](

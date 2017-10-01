@@ -10,7 +10,8 @@ gulp.task('markdown', function () {
         .pipe(tap(markdownToHTML))
         .pipe(wrap({ src: 'layouts/main.html' }))
         .pipe(gulp.dest('docs'))
-        ;
+        .pipe(browserSync.stream());
+    ;
 });
 
 gulp.task('vendor', function () {
@@ -19,7 +20,7 @@ gulp.task('vendor', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['content/**/*.md', 'layouts/**/*.html'], ['markdown']).on('change', browserSync.reload);
+    gulp.watch(['content/**/*.md', 'layouts/**/*.html'], ['markdown']);
     gulp.watch('vendor/**/*.*', ['vendor']).on('change', browserSync.reload);
 });
 
@@ -27,7 +28,6 @@ gulp.task('serve', function () {
     browserSync.init({
         server: {
             baseDir: "./docs",
-
         },
         open: false
     }, function () {
