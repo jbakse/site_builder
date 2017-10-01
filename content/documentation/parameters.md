@@ -86,3 +86,13 @@ The way that you think about your software system is often very different from t
 - Who will be using your software?
 - Why will they be using it? What will they be trying to do?
 - Do they understand how your software works under the hood? Should they?
+
+
+#### Example
+This is an example of how to do code.
+
+```javascript
+param = slider.get();
+param = slider.get();
+param = slider.get();
+```
