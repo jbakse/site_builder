@@ -1,3 +1,13 @@
+
+# Features
+
+Frontmatter parsing
+Layout/Template loading
+Markdown parsing by markdown-it
+TOC generation and scroll spying
+Content -> Content includes.
+
+
 # Bugs
 x.browser reload sometimes fires early. You need to save twice to see changes.
 

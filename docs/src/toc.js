@@ -1,7 +1,7 @@
 
 $(() => {
     console.log("hello", $);
-    $("h1, h2, h3, h4, h5, h6").each((i, element) => {
+    $("h1, h2, h3, h4, h5").each((i, element) => {
 
         let $e = $(element);
         let title = $e.text();
@@ -30,7 +30,7 @@ $(() => {
 
         // find the element closest to (and below) the top of the page (+scroll_margin)    
         let $current_element = null;
-        $("h1, h2, h3, h4, h5, h6").each((i, element) => {
+        $("h1, h2, h3, h4, h5").each((i, element) => {
             let $e = $(element);
 
             if ($e.offset().top > window_pos + scroll_margin) {

@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en"><head><!--jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!--bootstrap--><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!--syntax--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!--general styles--><link rel="stylesheet" href="/src/style.css"><!--toc--><link rel="stylesheet" href="/src/toc.css"><script src="/src/toc.js"></script></head><body><div class="container"><div class="row"><div class="col"><article><h6 id="topic-3">Topic 3</h6>
+<h1 id="parameters">Parameters</h1>
+<h6 id="31-slides">3.1 Slides</h6>
+<h2 id="parameter-examples">Parameter Examples</h2>
+<p>Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that are controlled by others.</p>
+<div id="" class="">
+<h1 id="slides-include">Slides Include</h1>
+<p>This is included data!</p>
+</div>
+<div id="" class="">
+<h1 id="prompt-yourself">Prompt Yourself</h1>
+<p>Consider: How did artists use parameters in each work?</p>
+</div>
+<h6 id="32-slides">3.2 Slides</h6>
+<h2 id="parameters-interface-design">Parameters &amp; Interface Design</h2>
+<h3 id="interfaces">Interfaces</h3>
+<p>An <strong>interface</strong> is the common boundary between two systems. Two of the most important interfaces of software systems are <strong>user interfaces (UIs)</strong> and <strong>application programming interfaces (APIs)</strong>.</p>
+<div id="" class="">
+<p>A <strong>UI</strong> is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. The UI is the primary interface in most <em>applications</em>.</p>
+<p>An <strong>API</strong> is the part of a software system that is used by programmers to connect the software with other software systems. The API is the primary interface in most <em>libraries</em>.</p>
+</div>
+<p>It is common for software to have both a UI and an API. For example twitter provides a user interface for making and reading tweets and an API for integrating twitter into existing systems.</p>
+<h3 id="parameters-2">Parameters</h3>
+<p>Parameters are factors that control what how a system operates. Exposing parameters allows artists and designers to create systems that can be controlled by others. Choosing which parameters to expose is a core concern of software interface design.</p>
+<h4 id="what-to-expose">What to Expose</h4>
+<ul>
+<li>Which parameters should be exposed?</li>
+<li>Which values should be accepted for each parameter?</li>
+<li>Which parameters are required, which are optional?</li>
+</ul>
+<h4 id="balance">Balance</h4>
+<p>Exposing <strong>more</strong> gives your user more control.<br>
+Exposing <strong>less</strong> gives you more control.<br>
+Exposing <strong>more</strong> makes your interface harder to understand.<br>
+Exposing <strong>less</strong> makes your interface easier to understand.<br>
+Exposing <strong>more</strong> allows your users to do more good things.<br>
+Exposing <strong>less</strong> prevents your users from doing bad things.</p>
+<h4 id="presenting-your-interface">Presenting your Interface</h4>
+<p>Once you have decided on what to expose via your interface, you must consider how to communicate your interface options to your users.</p>
+<ul>
+<li>What UI controls will you use for each parameter?</li>
+<li>What will you label each control?</li>
+<li>How will you group and order the UI controls?</li>
+<li>How will you explain the purpose of each parameter?</li>
+</ul>
+<h4 id="feedback">Feedback</h4>
+<p>Feedback shows users the impact their actions have on the system. Without feedback, systems are very hard to learn and use.</p>
+<p>In simple cases, showing users the end result of their choices is often enough. In more complex situations, it is often helpful to provide intermediate feedback. For example, if a system will react slowly to user actions, providing immediate confirmation of user input is important.</p>
+<h4 id="parameter-space">Parameter Space</h4>
+<p>A parameter space is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (yes/no) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. A system that takes just two floating point parameters has 9,223,372,036,854,775,808 (9.2 Quintillion!) states. This is a basically inconceivably large number, but it is quite likely that many of those states would look <em>samey</em>.</p>
+<h4 id="keep-your-user-in-mind">Keep Your User in Mind</h4>
+<p>The way that you think about your software system is often very different from the way your users think about it.</p>
+<ul>
+<li>Who will be using your software?</li>
+<li>Why will they be using it? What will they be trying to do?</li>
+<li>Do they understand how your software works under the hood? Should they?</li>
+</ul>
+</article></div></div></div></body></html>
