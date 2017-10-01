@@ -6,12 +6,13 @@ layout: layouts/compform_chapter.pug
 ###### Topic 3
 # Parameters
 
+---
 ###### 3.1 Slides
 ## Parameter Examples
 
 Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that are controlled by others.
 
-::: slides
+::: .slides
 @@include('./slides.md')
 :::
 
