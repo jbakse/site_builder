@@ -12,3 +12,6 @@ http://thisdavej.com/build-an-amazing-markdown-editor-using-visual-studio-code-a
 // http://silvenon.com/simple-layouting-with-gulp/
 // gulp-layout gulp-build
 // http://www.broculos.net/2015/12/build-your-own-markdown-flavour-with.html#.WcQBdtOGMUE
+
+// gulp layout "like a jekyll"
+//https://github.com/macoshita/gulp-layout
