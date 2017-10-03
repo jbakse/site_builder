@@ -1,0 +1,23 @@
+
+
+.bar-callout {
+    /* border-left: 3px solid blue; */
+    padding-left: 15px;
+    position: relative;
+}
+
+.bar-callout:before {
+    content: "";
+    position: absolute;
+    /* border: 1px solid red; */
+    background: blue;
+    border-radius: 2px;
+    width: 4px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.bar-callout strong {
+    color: blue;
+}

@@ -1,0 +1,65 @@
+.container
+{
+}
+
+/* [class^="col"] { outline: 1px dotted rgba(255, 0, 0, 0.3); } */
+
+.active {
+    outline: 1px solid red;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: blue;
+    margin-top: 3rem;
+}
+
+h4 {
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+h6 {
+    color: blue;
+}
+
+hr {
+    margin-left: calc( (100% + 30px) / -7 * 2 - 15px);
+    margin-right: calc((100% + 30px) / -7 * 3 - 15px);
+    
+    border: 0;
+    border-bottom: 1px solid gray;
+    margin-top: 100px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  /* padding-left: 1em;  */
+  /* text-indent: -.7em; */
+}
+
+li::before {
+  content: "•";
+  margin-right: 20px;
+  color: blue; /* or whatever color you prefer */
+}
+
+.scroll-out
+{
+    height: 1000px;
+    /* border: 1px solid red; */
+}
