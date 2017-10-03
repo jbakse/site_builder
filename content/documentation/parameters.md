@@ -20,11 +20,50 @@ this is a test
 @@include('./slides.md')
 :::
 
-::: .callout .yellow
+::: .callout
 # Prompt Yourself
 
 Consider: How did artists use parameters in each work?
 :::
+
+::: .callout .callout-pink
+# Pink Yourself
+Consider: How did artists use parameters in each work?
+:::
+
+
+::: .callout .callout-primary
+callout primary
+:::
+
+::: .callout .callout-secondary
+callout secondary
+:::
+
+::: .callout .callout-success
+callout success
+:::
+
+::: .callout .callout-info
+callout info
+:::
+
+::: .callout .callout-warning
+callout warning
+:::
+
+::: .callout .callout-danger
+callout danger
+:::
+
+::: .callout .callout-light
+callout light
+:::
+
+::: .callout .callout-dark
+callout dark
+:::
+
 
 ---
 ###### 3.2 Slides

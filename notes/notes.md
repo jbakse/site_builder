@@ -1,7 +1,5 @@
 # Todo
-Add in sass.
-
-
+have sass build bootstrap with config
 
 # Features
 
@@ -10,6 +8,7 @@ Layout/Template loading
 Markdown parsing by markdown-it
 TOC generation and scroll spying
 Content -> Content includes.
+Webpack builds modules with sass and javascript
 
 
 # Features - Styles

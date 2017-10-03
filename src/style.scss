@@ -1,3 +1,24 @@
+@import './bootstrap_colors';
+
+
+
+$theme-colors: map-merge((
+    gray: gray,
+  pink: #F00,
+), $theme-colors);
+
+
+
+
+
+
+
+@import './callout/callout';
+@import './bar_callout/bar_callout';
+@import './sidebar/sidebar';
+@import './slides/slides';
+
+
 .container
 {
 }

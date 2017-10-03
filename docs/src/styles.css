@@ -1,4 +1,120 @@
 @charset "UTF-8";
+.callout {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 15px 15px 1px 45px;
+  margin-bottom: 16px;
+  border-radius: 0 0 5px 5px;
+  background: #e6e6e6;
+  border-top: 5px solid #dbdbdb; }
+  .callout h1 {
+    font-size: 1.0rem; }
+  .callout h1 {
+    color: #434343; }
+
+.callout-gray {
+  background: #e6e6e6;
+  border-top: 5px solid #dbdbdb; }
+  .callout-gray h1 {
+    color: #434343; }
+
+.callout-pink {
+  background: #ffcccc;
+  border-top: 5px solid #ffb8b8; }
+  .callout-pink h1 {
+    color: #850000; }
+
+.callout-primary {
+  background: #cce5ff;
+  border-top: 5px solid #b8daff; }
+  .callout-primary h1 {
+    color: #004085; }
+
+.callout-secondary {
+  background: #e7e8ea;
+  border-top: 5px solid #dddfe2; }
+  .callout-secondary h1 {
+    color: #464a4e; }
+
+.callout-success {
+  background: #d4edda;
+  border-top: 5px solid #c3e6cb; }
+  .callout-success h1 {
+    color: #155724; }
+
+.callout-info {
+  background: #d1ecf1;
+  border-top: 5px solid #bee5eb; }
+  .callout-info h1 {
+    color: #0c5460; }
+
+.callout-warning {
+  background: #fff3cd;
+  border-top: 5px solid #ffeeba; }
+  .callout-warning h1 {
+    color: #856404; }
+
+.callout-danger {
+  background: #f8d7da;
+  border-top: 5px solid #f5c6cb; }
+  .callout-danger h1 {
+    color: #721c24; }
+
+.callout-light {
+  background: #fefefe;
+  border-top: 5px solid #fdfdfe; }
+  .callout-light h1 {
+    color: #818182; }
+
+.callout-dark {
+  background: #d6d8d9;
+  border-top: 5px solid #c6c8ca; }
+  .callout-dark h1 {
+    color: #1b1e21; }
+
+.bar-callout {
+  /* border-left: 3px solid blue; */
+  padding-left: 15px;
+  position: relative; }
+
+.bar-callout:before {
+  content: "";
+  position: absolute;
+  /* border: 1px solid red; */
+  background: blue;
+  border-radius: 2px;
+  width: 4px;
+  left: 0;
+  top: 0;
+  bottom: 0; }
+
+.bar-callout strong {
+  color: blue; }
+
+.sidebar-left {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: calc( (100%) / -7 * 2);
+  right: 100%;
+  background-color: green; }
+
+.sidebar-right {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 100%;
+  width: calc(100% / 7 * 3);
+  padding: 15px;
+  background-color: gray; }
+
+.slides {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* outline: 1px dotted rgba(255, 0, 0, 0.3); */
+  margin-left: calc( (100% + 30px) / -7 * 2 - 15px);
+  margin-right: calc((100% + 30px) / -7 * 3 - 15px);
+  background-color: #AAA;
+  /* padding: 15px; */
+  margin-bottom: 16px; }
+
 /* [class^="col"] { outline: 1px dotted rgba(255, 0, 0, 0.3); } */
 .active {
   outline: 1px solid red; }
@@ -47,58 +163,6 @@ li::before {
 .scroll-out {
   height: 1000px;
   /* border: 1px solid red; */ }
-.bar-callout {
-  /* border-left: 3px solid blue; */
-  padding-left: 15px;
-  position: relative; }
-
-.bar-callout:before {
-  content: "";
-  position: absolute;
-  /* border: 1px solid red; */
-  background: blue;
-  border-radius: 2px;
-  width: 4px;
-  left: 0;
-  top: 0;
-  bottom: 0; }
-
-.bar-callout strong {
-  color: blue; }
-.callout {
-  border-top: 5px solid #D8B549;
-  margin-left: -15px;
-  margin-right: -15px;
-  background: #F9F5EA;
-  padding: 15px 15px 1px 45px;
-  margin-bottom: 16px;
-  border-radius: 0 0 5px 5px; }
-
-.callout h1 {
-  font-size: 1.0rem;
-  color: #D8B549; }
-.sidebar-left {
-  background-color: rgba(255, 255, 255, 0.7);
-  position: absolute;
-  left: calc( (100%) / -7 * 2);
-  right: 100%;
-  background-color: green; }
-
-.sidebar-right {
-  background-color: rgba(255, 255, 255, 0.7);
-  position: absolute;
-  left: 100%;
-  width: calc(100% / 7 * 3);
-  padding: 15px;
-  background-color: gray; }
-.slides {
-  background-color: rgba(255, 255, 255, 0.7);
-  /* outline: 1px dotted rgba(255, 0, 0, 0.3); */
-  margin-left: calc( (100% + 30px) / -7 * 2 - 15px);
-  margin-right: calc((100% + 30px) / -7 * 3 - 15px);
-  background-color: #AAA;
-  /* padding: 15px; */
-  margin-bottom: 16px; }
 .test {
   background-color: #FF2;
   cursor: pointer; }

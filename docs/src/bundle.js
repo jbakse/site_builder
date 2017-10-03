@@ -71,25 +71,14 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_scss__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__style_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__bar_callout_bar_callout_scss__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__bar_callout_bar_callout_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__bar_callout_bar_callout_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__callout_callout_scss__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__callout_callout_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__callout_callout_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sidebar_sidebar_scss__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sidebar_sidebar_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__sidebar_sidebar_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__slides_slides_scss__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__slides_slides_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__slides_slides_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__test_test__ = __webpack_require__(11);
-
-
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__test_test__ = __webpack_require__(6);
 
 
 
 console.log("entry.js");
 
 
-Object(__WEBPACK_IMPORTED_MODULE_5__test_test__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_1__test_test__["a" /* default */])();
 
 
 /***/ }),
@@ -99,26 +88,16 @@ Object(__WEBPACK_IMPORTED_MODULE_5__test_test__["a" /* default */])();
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
+/* 2 */,
 /* 3 */,
 /* 4 */,
 /* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = test;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__test_scss__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__test_scss__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__test_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__test_scss__);
 
 
@@ -136,28 +115,7 @@ function attach(){
 }
 
 /***/ }),
-/* 12 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 13 */,
-/* 14 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 15 */,
-/* 16 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 17 */,
-/* 18 */
+/* 7 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
