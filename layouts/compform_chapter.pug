@@ -18,14 +18,14 @@ html(lang="en")
 		
 		title= title
 
-	body
+	body.comp-form
 		.container
 			.row
-				.col-md-2
+				.col-0.col-lg-2.d-none.d-lg-flex.left
 					| placeholder left
-				.col-md-7
-					article
+				.col-12.col-lg-7.content
+					article.comp-form-copy
 						!= contents
 					.scroll-out
-				.col-md-3
+				.col-0.col-lg-3.d-none.d-lg-flex.right
 					| placeholder right

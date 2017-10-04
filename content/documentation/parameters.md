@@ -33,35 +33,48 @@ Consider: How did artists use parameters in each work?
 
 
 ::: .callout .callout-primary
-callout primary
+# callout primary
+Lorem Ipsup!
 :::
 
 ::: .callout .callout-secondary
-callout secondary
+# callout secondary
+Lorem Ipsup!
 :::
 
 ::: .callout .callout-success
-callout success
+# callout success
+Lorem Ipsup!
 :::
 
 ::: .callout .callout-info
-callout info
+# callout info
+Lorem Ipsup!
 :::
 
 ::: .callout .callout-warning
-callout warning
+# callout warning
+Lorem Ipsup!
 :::
 
 ::: .callout .callout-danger
-callout danger
+# callout danger
+Lorem Ipsup!
 :::
 
 ::: .callout .callout-light
-callout light
+# callout light
+Lorem Ipsup!
 :::
 
 ::: .callout .callout-dark
-callout dark
+# callout dark
+Lorem Ipsup!
+:::
+
+::: .callout .callout-accent
+# callout dark
+Lorem Ipsup!
 :::
 
 

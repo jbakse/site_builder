@@ -23,7 +23,7 @@
 
 @each $color, $value in $theme-colors {
   .callout-#{$color} {
-    @include callout-variant(theme-color-level($color, -10), theme-color-level($color, -9), theme-color-level($color, 6));
+    @include callout-variant(theme-color-level($color, -11), theme-color-level($color, -2), theme-color-level($color, 6));
   }
 }
 
