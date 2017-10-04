@@ -13,12 +13,17 @@ layout: layouts/compform_chapter.pug
 Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that are controlled by others.
 
 ::: .test
-this is a test
+# this is a test
 :::
 
-::: .slides
-@@include('./slides.md')
+::: slides
+@@include('./slides.yaml')
 :::
+
+
+
+
+# Prompt Yourself
 
 ::: .callout
 # Prompt Yourself

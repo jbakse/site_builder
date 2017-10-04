@@ -12,13 +12,15 @@ Webpack builds modules with sass and javascript
 
 
 # Features - Styles
-*Callout
-*Collout-side
-*Headers
-*Lists
-*Sidebar Left
-*Sidebar right
-*Slideshow expand left-right
+- Callout
+- Collout-side
+- Headers
+- Lists
+- Sidebar Left
+- Sidebar right
+- Slideshow expand left-right
+- yaml -> slide carousel
+
 
 # Bugs
 x.browser reload sometimes fires early. You need to save twice to see changes.

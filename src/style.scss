@@ -51,9 +51,11 @@ $theme-colors: map-merge(( accent: $accent-color, gray: gray, pink: #F00, ), $th
 
 // [class^="col"] { outline: 1px dotted rgba(255, 0, 0, 0.3); }
 
-
+.left, .right {
+    z-index: -1;
+}
 .active {
-    outline: 1px solid red;
+    // outline: 1px solid red;
 }
 
 hr {
@@ -82,4 +84,15 @@ hr {
     @include full-width;
 }
 
+.slides {
+    background: black;
+    .carousel-inner > .carousel-item {
+        height: 500px;
+    }
 
+    .carousel-inner > .carousel-item > img {
+        position: absolute;
+        max-height: 100%;
+        width: auto;
+    }
+}

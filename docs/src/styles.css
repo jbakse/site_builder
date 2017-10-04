@@ -32,7 +32,8 @@
 .callout {
   margin-left: -15px;
   margin-right: -15px;
-  padding: 15px 15px 1px 45px;
+  padding: 15px 15px 0px 45px;
+  overflow: hidden;
   margin-bottom: 16px;
   border-radius: 0 0 5px 5px;
   background: #e6e6e6;
@@ -153,8 +154,8 @@
       margin-left: calc( (100% + 15px * 2) / -7 * 2 - 15px);
       margin-right: calc( (100% + 15px * 2) / -7 * 3 - 15px); } }
 
-.active {
-  outline: 1px solid red; }
+.left, .right {
+  z-index: -1; }
 
 hr {
   border: 0;
@@ -179,6 +180,15 @@ hr {
   .test {
     margin-left: calc( (100% + 15px * 2) / -7 * 2 - 15px);
     margin-right: calc( (100% + 15px * 2) / -7 * 3 - 15px); } }
+
+.slides {
+  background: black; }
+  .slides .carousel-inner > .carousel-item {
+    height: 500px; }
+  .slides .carousel-inner > .carousel-item > img {
+    position: absolute;
+    max-height: 100%;
+    width: auto; }
 .test {
   background-color: #FF2;
   cursor: pointer; }

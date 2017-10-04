@@ -28,11 +28,11 @@ md.renderer.rules.table_close = function (tokens, idx, options, env, self) {
 };
 
 
+yaml = require('js-yaml');
 
 function higlightSyntax(str, lang) {
     // console.log(lang, highlight_js.getLanguage(lang));
     if (lang && highlight_js.getLanguage(lang)) {
-        console.log("try");
         try {
             return highlight_js.highlight(lang, str).value;
         } catch (__) { }
@@ -47,6 +47,8 @@ module.exports = function markdownToHtml(file) {
 
     result = convertContainers(result);
 
+   
+
     result = md.render(result);
 
     file.contents = new Buffer(result);
@@ -55,7 +57,50 @@ module.exports = function markdownToHtml(file) {
     return;
 }
 
+let components = {
+    slides: slides
+}
 
+let slidesCounter = 0;
+function slides(classes, ids, content) {
+    slidesCounter++;
+
+    console.log("slides!!!!");
+    classes.push("slides");
+    let data = yaml.safeLoad(content);
+
+    let slides = '';
+    let active = 'active';
+    data.forEach((slide)=>{
+        slides += `
+<div class="carousel-item ${active}">
+<img class="d-block" src="${slide.image}" alt="${slide.title}">
+<div class="carousel-caption">
+${slide.comments}
+</div>
+</div>`
+        active = '';
+    })
+
+    content = `
+<div id="carousel-${slidesCounter}" class="carousel slide" data-ride="false">
+  <div class="carousel-inner">
+    ${slides}
+  </div>
+  <a class="carousel-control-prev" href="#carousel-${slidesCounter}" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel-${slidesCounter}" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+`
+
+    return [classes, ids, content];
+
+}
 /**
  * convertContainer(string)
  * 
@@ -70,31 +115,52 @@ module.exports = function markdownToHtml(file) {
  * </div>
  */
 function convertContainers(input) {
-    var match = /^:::(.*)$/mg;
-    result = input.replace(match, function (match, p1) {
+    var match = /\n:::(.*?)\n([\s\S]*?)\n:::/g;
+    console.log("\n\n\nregex");
+   
+    result = input.replace(match, function (match, selector, content) {
+   
         // trim and split on spaces (collapse multiple spaces)
-        parts = p1.trim().split(/ +/);
-
-        // extract classes and ids
+        parts = selector.trim().split(/ +/);
+        
+        
+        // extract classes, ids, requested
         classes = [];
         ids = [];
-        parts.forEach(function (part) {
+        requested_components = [];
+
+        parts.forEach((part)=> {
             if (part.startsWith(".")) {
                 classes.push(part.substr(1));
-            }
-            if (part.startsWith("#")) {
+            } else if (part.startsWith("#")) {
                 ids.push(part.substr(1));
+            } else {
+                requested_components.push(part)
             }
+
         }, this);
 
+        requested_components.forEach((request)=>{
+            request_function = components[request];
+            if (request_function) {
+                [classes, ids, content] = request_function(classes, ids, content);
+            }
+        });
+
+        
+        
+        // export
         classes = classes.join(" ");
         ids = ids.join(" ");
+        
+        
+        return `
+<div id="${ids}" class="${classes}">
 
-        if (p1.trim()) {
-            return `<div id="${ids}" class="${classes}">\n`;
-        } else {
-            return "</div>\n";
-        }
+${content}
+
+</div>
+        `;
     });
     return result;
 }
