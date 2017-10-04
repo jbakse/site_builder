@@ -35,7 +35,8 @@ http://thisdavej.com/build-an-amazing-markdown-editor-using-visual-studio-code-a
 
 [Build your own Markdown Flavour](http://www.broculos.net/2015/12/build-your-own-markdown-flavour-with.html#.WcVuXNOGMUE)
 
-
+[local linking to a library npm package in dev](http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears)
+[another take on npm link](https://medium.com/@the1mills/how-to-test-your-npm-module-without-publishing-it-every-5-minutes-1c4cb4b369be)
 // layout options
 // http://silvenon.com/simple-layouting-with-gulp/
 // gulp-layout gulp-build

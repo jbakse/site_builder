@@ -12,76 +12,17 @@ layout: layouts/compform_chapter.pug
 
 Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that are controlled by others.
 
-::: .test
-# this is a test
-:::
 
 ::: slides
 @@include('./slides.yaml')
 :::
 
 
-
-
-# Prompt Yourself
-
-::: .callout
-# Prompt Yourself
-
-Consider: How did artists use parameters in each work?
-:::
-
-::: .callout .callout-pink
-# Pink Yourself
-Consider: How did artists use parameters in each work?
-:::
-
-
 ::: .callout .callout-primary
-# callout primary
-Lorem Ipsup!
-:::
+# Prompt Yourself
 
-::: .callout .callout-secondary
-# callout secondary
-Lorem Ipsup!
+Consider: How did artists use parameters in each work?
 :::
-
-::: .callout .callout-success
-# callout success
-Lorem Ipsup!
-:::
-
-::: .callout .callout-info
-# callout info
-Lorem Ipsup!
-:::
-
-::: .callout .callout-warning
-# callout warning
-Lorem Ipsup!
-:::
-
-::: .callout .callout-danger
-# callout danger
-Lorem Ipsup!
-:::
-
-::: .callout .callout-light
-# callout light
-Lorem Ipsup!
-:::
-
-::: .callout .callout-dark
-# callout dark
-Lorem Ipsup!
-:::
-
-::: .callout .callout-accent
-# callout dark
-Lorem Ipsup!
-:::
-
 
 ---
 ###### 3.2 Slides
