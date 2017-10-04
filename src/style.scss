@@ -22,7 +22,21 @@ $grid-breakpoints: (
   }
 }
 
+@mixin margin-left-out($cols, $left-cols, $gutter) {
+    margin-left: calc( (100% + #{$gutter} * 2) / -#{$cols} * #{$left-cols} - #{$gutter});
+}
 
+@mixin margin-right-out($cols, $left-cols, $gutter) {
+    margin-right: calc( (100% + #{$gutter} * 2) / -#{$cols} * #{$left-cols} - #{$gutter});
+}
+
+@mixin full-width {
+    @include media-breakpoint-up(lg)
+    {
+        @include margin-left-out(7, 2, 15px);
+        @include margin-right-out(7, 3, 15px);
+    }
+}
 
 @import './bootstrap_colors';
 $accent-color: #5376F5;
@@ -43,8 +57,7 @@ $theme-colors: map-merge(( accent: $accent-color, gray: gray, pink: #F00, ), $th
 }
 
 hr {
-    margin-left: calc( (100% + 30px) / -7 * 2 - 15px);
-    margin-right: calc((100% + 30px) / -7 * 3 - 15px);
+    @include full-width;
     border: 0;
     border-bottom: 1px solid gray;
     margin-top: 100px;
@@ -62,4 +75,11 @@ hr {
         background: rgba(0,0,0,.05);
     }
 }
+
+
+
+.test {
+    @include full-width;
+}
+
 
