@@ -37,6 +37,8 @@ http://thisdavej.com/build-an-amazing-markdown-editor-using-visual-studio-code-a
 
 [local linking to a library npm package in dev](http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears)
 [another take on npm link](https://medium.com/@the1mills/how-to-test-your-npm-module-without-publishing-it-every-5-minutes-1c4cb4b369be)
+
+
 // layout options
 // http://silvenon.com/simple-layouting-with-gulp/
 // gulp-layout gulp-build
@@ -44,3 +46,7 @@ http://thisdavej.com/build-an-amazing-markdown-editor-using-visual-studio-code-a
 
 // gulp layout "like a jekyll"
 //https://github.com/macoshita/gulp-layout
+
+//https://www.html5rocks.com/en/tutorials/speed/script-loading/
+
+// https://github.com/toolness/p5.js-widget/issues/53

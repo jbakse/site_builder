@@ -42,6 +42,13 @@ gulp.task('vendor', function () {
         .pipe(gulp.dest('docs/vendor'));
 });
 
+gulp.task('js_lab_copy', function () {
+    return gulp.src(['js_lab/**/*.*'])
+        .pipe(gulp.dest('docs/js_lab'))
+        .pipe(browserSync.stream());
+});
+
+
 // gulp.task('src_copy', function () {
 //     return gulp.src(['src/**/*.*', '!src/**/*.scss'])
 //         .pipe(gulp.dest('docs/src'))
@@ -95,8 +102,8 @@ gulp.task('src_webpack', function () {
 
 gulp.task('start_watch', function () {
     gulp.watch(['content/**/*.md', 'layouts/**/*.**'], ['markdown']);
-    gulp.watch('vendor/**/*.*', ['vendor']);//.on('change', browserSync.reload);
-    // gulp.watch('src/**/*.*', ['src_copy']);//.on('change', browserSync.reload);
+    gulp.watch('vendor/**/*.*', ['vendor']);
+    gulp.watch('js_lab/**/*.*', ['js_lab_copy']);
     // gulp.watch('src/**/*.scss', ['src_sass']);//.on('change', browserSync.reload);
 });
 
@@ -114,7 +121,7 @@ gulp.task('serve', function () {
 });
 
 
-gulp.task('build', ['markdown', 'vendor', 'src_webpack']);
+gulp.task('build', ['markdown', 'vendor', 'js_lab_copy', 'src_webpack']);
 gulp.task('watch', ['build', 'start_watch']);
 gulp.task('default', ['build', 'serve', 'start_watch']);
 
