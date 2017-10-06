@@ -46,9 +46,6 @@ module.exports = function markdownToHtml(file) {
     var result = file.contents.toString();
 
     result = convertContainers(result);
-
-
-
     result = md.render(result);
 
     file.contents = new Buffer(result);

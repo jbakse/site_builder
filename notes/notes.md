@@ -1,6 +1,8 @@
 # Todo
 
 .cleanup `markdown_builder.js`
+.properly style slideshow
+.disable slideshow autoplay
 
 
 rabbithole?.have sass build bootstrap with config
@@ -13,6 +15,10 @@ Markdown parsing by markdown-it
 TOC generation and scroll spying
 Content -> Content includes.
 Webpack builds modules with sass and javascript
+Slideshow carousels with image and description support
+Live code examples with JS Lab, supports p5, p5+addons, other libs
+
+styling support for themeable components based of bootstrap `.callout .callout-alert`
 
 
 # Features - Styles
