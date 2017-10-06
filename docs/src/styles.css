@@ -154,7 +154,8 @@
       margin-left: calc( (100% + 15px * 2) / -7 * 2 - 15px);
       margin-right: calc( (100% + 15px * 2) / -7 * 3 - 15px); } }
 
-.left, .right {
+.left,
+.right {
   z-index: -1; }
 
 hr {
@@ -189,6 +190,19 @@ hr {
     position: absolute;
     max-height: 100%;
     width: auto; }
+
+div.js-lab {
+  height: 500px; }
+  @media (min-width: 992px) {
+    div.js-lab {
+      margin-left: calc( (100% + 15px * 2) / -7 * 2 - 15px);
+      margin-right: calc( (100% + 15px * 2) / -7 * 3 - 15px); } }
+
+iframe.js-lab {
+  border: none;
+  outline: 1px solid gray;
+  width: 100%;
+  height: 100%; }
 .test {
   background-color: #FF2;
   cursor: pointer; }

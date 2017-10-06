@@ -50,6 +50,7 @@ lab.main = function main() {
 
 
     // pull script name from url get string
+    console.log("script", window.location.search);
     let script_name = window.location.search.substr(1) || "example.js";
 
     // load content of script, inject into editor
@@ -152,6 +153,8 @@ lab_view.takeLibs = function(hrefs, cb) {
         }
         document.head.appendChild(script);
     });
+
+    checkCounts();
 };
 
 lab_view.takeSource = function takeSource(source) {

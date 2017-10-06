@@ -20,10 +20,10 @@ md.use(require('markdown-it-anchor'), {
 });
 
 
-md.renderer.rules.table_open = function (tokens, idx, options, env, self) {
+md.renderer.rules.table_open = function(tokens, idx, options, env, self) {
     return '<table class="table table-responsive">\n';
 };
-md.renderer.rules.table_close = function (tokens, idx, options, env, self) {
+md.renderer.rules.table_close = function(tokens, idx, options, env, self) {
     return '</table>\n';
 };
 
@@ -35,7 +35,7 @@ function higlightSyntax(str, lang) {
     if (lang && highlight_js.getLanguage(lang)) {
         try {
             return highlight_js.highlight(lang, str).value;
-        } catch (__) { }
+        } catch (__) {}
     }
 
     return ''; // use external default escaping
@@ -47,7 +47,7 @@ module.exports = function markdownToHtml(file) {
 
     result = convertContainers(result);
 
-   
+
 
     result = md.render(result);
 
@@ -58,20 +58,22 @@ module.exports = function markdownToHtml(file) {
 }
 
 let components = {
-    slides: slides
+    slides: slides,
+    "js-lab": jslab
 }
 
 let slidesCounter = 0;
+
 function slides(classes, ids, content) {
     slidesCounter++;
 
-    console.log("slides!!!!");
+    // console.log("slides!!!!");
     classes.push("slides");
     let data = yaml.safeLoad(content);
 
     let slides = '';
     let active = 'active';
-    data.forEach((slide)=>{
+    data.forEach((slide) => {
         slides += `
 <div class="carousel-item ${active}">
 <img class="d-block" src="${slide.image}" alt="${slide.title}">
@@ -101,6 +103,21 @@ ${slide.comments}
     return [classes, ids, content];
 
 }
+
+
+
+function jslab(classes, ids, content) {
+    let src = content.trim();
+    content = `
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?${src}">
+</iframe>
+</div>
+`;
+
+    return [classes, ids, content];
+}
+
 /**
  * convertContainer(string)
  * 
@@ -116,20 +133,20 @@ ${slide.comments}
  */
 function convertContainers(input) {
     var match = /\n:::(.*?)\n([\s\S]*?)\n:::/g;
-    console.log("\n\n\nregex");
-   
-    result = input.replace(match, function (match, selector, content) {
-   
+    // console.log("\n\n\nregex");
+
+    result = input.replace(match, function(match, selector, content) {
+
         // trim and split on spaces (collapse multiple spaces)
         parts = selector.trim().split(/ +/);
-        
-        
+
+
         // extract classes, ids, requested
         classes = [];
         ids = [];
         requested_components = [];
 
-        parts.forEach((part)=> {
+        parts.forEach((part) => {
             if (part.startsWith(".")) {
                 classes.push(part.substr(1));
             } else if (part.startsWith("#")) {
@@ -140,20 +157,20 @@ function convertContainers(input) {
 
         }, this);
 
-        requested_components.forEach((request)=>{
+        requested_components.forEach((request) => {
             request_function = components[request];
             if (request_function) {
                 [classes, ids, content] = request_function(classes, ids, content);
             }
         });
 
-        
-        
+
+
         // export
         classes = classes.join(" ");
         ids = ids.join(" ");
-        
-        
+
+
         return `
 <div id="${ids}" class="${classes}">
 

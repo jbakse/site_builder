@@ -2,7 +2,7 @@ var gulp = require('gulp');
 
 // util
 var tap = require('gulp-tap');
-
+var changed = require('gulp-changed');
 // serve
 var browserSync = require('browser-sync').create();
 
@@ -20,8 +20,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var webpack = require('webpack-stream');
 
 markdownToHTML = require('./build_src/markdown_builder');
-gulp.task('markdown', function () {
+gulp.task('markdown', function() {
     return gulp.src('content/**/*.md')
+        .pipe(changed('docs'))
         .pipe(frontMatter())
         .pipe(tap(logFrontMatter))
         .pipe(file_include())
@@ -29,20 +30,25 @@ gulp.task('markdown', function () {
         // .pipe(wrap({ src: 'layouts/main.html' }))
         .pipe(layout((file) => file.frontMatter))
         .pipe(gulp.dest('docs'))
-        .pipe(browserSync.stream());
-    ;
+        .pipe(browserSync.stream());;
 });
 
 function logFrontMatter(file) {
     console.log(file.path, file.frontMatter);
 }
 
-gulp.task('vendor', function () {
+
+gulp.task('copy_content', function() {
+    return gulp.src('content/**/*.*')
+        .pipe(gulp.dest('docs'));
+});
+
+gulp.task('vendor', function() {
     return gulp.src('vendor/**/*.*')
         .pipe(gulp.dest('docs/vendor'));
 });
 
-gulp.task('js_lab_copy', function () {
+gulp.task('copy_js_lab', function() {
     return gulp.src(['js_lab/**/*.*'])
         .pipe(gulp.dest('docs/js_lab'))
         .pipe(browserSync.stream());
@@ -66,30 +72,28 @@ gulp.task('js_lab_copy', function () {
 
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-gulp.task('src_webpack', function () {
+gulp.task('src_webpack', function() {
     return gulp.src('src/entry.js')
         .pipe(webpack({
             watch: true,
             devtool: 'source-map',
             module: {
-                rules: [
-                    {
-                        test: /\.scss$/,
-                        use: ExtractTextPlugin.extract({
-                            fallback: "style-loader",
-                            use: [{
-                                loader: "css-loader"
-                            }, {
-                                loader: "sass-loader"
-                            }]
-                        })
-                    }
-                ]
+                rules: [{
+                    test: /\.scss$/,
+                    use: ExtractTextPlugin.extract({
+                        fallback: "style-loader",
+                        use: [{
+                            loader: "css-loader"
+                        }, {
+                            loader: "sass-loader"
+                        }]
+                    })
+                }]
             },
             plugins: [
                 new ExtractTextPlugin("styles.css"),
             ],
-           
+
             output: {
                 path: __dirname + '/docs', // `dist` is the destination
                 filename: 'bundle.js',
@@ -100,20 +104,21 @@ gulp.task('src_webpack', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('start_watch', function () {
-    gulp.watch(['content/**/*.md', 'layouts/**/*.**'], ['markdown']);
+gulp.task('start_watch', function() {
+    gulp.watch(['content/**/*.md', 'content/**/*.*', 'layouts/**/*.**'], ['markdown']);
     gulp.watch('vendor/**/*.*', ['vendor']);
-    gulp.watch('js_lab/**/*.*', ['js_lab_copy']);
+    gulp.watch('js_lab/**/*.*', ['copy_js_lab']);
+    gulp.watch('content/**/*.*', ['copy_content']);
     // gulp.watch('src/**/*.scss', ['src_sass']);//.on('change', browserSync.reload);
 });
 
-gulp.task('serve', function () {
+gulp.task('serve', function() {
     browserSync.init({
         server: {
             baseDir: "./docs",
         },
         open: false
-    }, function () {
+    }, function() {
         console.log("\n\nServer at http://localhost:3000/");
         // browserSync.reload();
     });
@@ -121,7 +126,7 @@ gulp.task('serve', function () {
 });
 
 
-gulp.task('build', ['markdown', 'vendor', 'js_lab_copy', 'src_webpack']);
+gulp.task('build', ['markdown', 'vendor', 'copy_js_lab', 'copy_content', 'src_webpack']);
 gulp.task('watch', ['build', 'start_watch']);
 gulp.task('default', ['build', 'serve', 'start_watch']);
 
