@@ -1,7 +1,7 @@
 import "./style.scss"
 
 
-console.log("entry.js");
+// console.log("entry.js");
 
-import test from "./test/test"
-test();
+// import test from "./test/test"
+// test();

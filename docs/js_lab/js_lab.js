@@ -50,7 +50,7 @@ lab.main = function main() {
 
 
     // pull script name from url get string
-    console.log("script", window.location.search);
+    // console.log("script", window.location.search);
     let script_name = window.location.search.substr(1) || "example.js";
 
     // load content of script, inject into editor
@@ -133,7 +133,6 @@ lab_view.takeLibs = function(hrefs, cb) {
 
     function checkCounts() {
         if (loaded_count + error_count === hrefs.length) {
-            // console.log("Libraries Loaded");
             cb && cb();
         }
     }
@@ -143,7 +142,6 @@ lab_view.takeLibs = function(hrefs, cb) {
         script.async = false;
         script.onload = () => {
             loaded_count++;
-            // console.log(`Loaded: ${href}`);
             checkCounts();
         };
         script.onerror = () => {
