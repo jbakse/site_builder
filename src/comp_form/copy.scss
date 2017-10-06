@@ -1,47 +1,58 @@
-.comp-form-copy {
+    .comp-form-copy {
 
-    /// headlines
+        /// headlines
+        h1 {
+            font-size: 3rem;
+        }
 
-    h1 {
-        font-size: 3rem;
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: $accent-color;
+            margin-top: 3rem;
+        }
+
+        h4 {
+            font-size: 1.0rem;
+            font-weight: bold;
+            margin-top: 1.5rem;
+        }
+
+        h6 {
+            color: $accent-color;
+        }
+
+
+        /*
+        lists need work, might need to make md generate span wrappers for each li
+        
+        https://stackoverflow.com/questions/4373046/css-control-space-between-bullet-and-li
+        */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+
+
+        ul li::before {
+            content: "•";
+            margin-right: 20px;
+            color: $accent-color;
+            /* or whatever color you prefer */
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+
+        ol li::before {
+            content: "";
+            margin-right: 20px;
+            display: inline-block;
+        }
     }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.25rem;
-        color: $accent-color;
-        margin-top: 3rem;
-    }
-
-    h4 {
-        font-size: 1.0rem;
-        font-weight: bold;
-        margin-top: 1.5rem;
-    }
-
-    h6 {
-        color: $accent-color;
-    }
-
-    /// lists
-
-    ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    }
-
-    li {
-    }
-
-    li::before {
-        content: "•";
-        margin-right: 20px;
-        color: $accent-color; /* or whatever color you prefer */
-    }
-
-
-}

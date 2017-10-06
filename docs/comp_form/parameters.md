@@ -90,11 +90,122 @@ The way that you think about your software system is often very different from t
 - Do they understand how your software works under the hood? Should they?
 
 
-#### Example
-This is an example of how to do code.
 
-```javascript
-param = slider.get();
-param = slider.get();
-param = slider.get();
-```
+
+### Parametric Design
+Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider's height to provide a customized frame.
+
+
+::: .bar-callout .blue
+**Parametricism** is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.
+:::
+
+—[Wikipedia: Parametricism](https://en.wikipedia.org/wiki/Parametricism)
+
+
+
+
+::: .callout .callout-danger
+# Activity: Fictional Machines
+
+Begin designing a user interface for a fictional machine by considering which parameters you would expose.
+
+1. Choose a machine from the list below.
+2. Spend 6 minutes brainstorming possible parameters for your machine.
+3. Choose a user from the list below.
+4. Spend 3 minutes deciding which parameters to expose for your user. Choose exactly 3 parameters.
+5. Spend 3 minutes naming your parameters, and defining the allowed values for each.
+6. Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present. Lorem ipsum damet sol comit ret del toro onk silly newt.
+
+
+#### Machine Types
+
+- A car
+- Planet generator
+- Grocery-shopping bot
+- Internet surveillance front-end
+- Genetic pet builder
+- Love potion mixer Lorem ipsum damet sol comit ret del toro onk silly newt. Lorem ipsum damet sol comit ret del toro onk silly newt.
+
+
+#### Users
+
+- Daily user
+- One-time user
+- A child
+- An [machine type] enthusiast
+- Another machine
+:::
+
+
+
+---
+###### 3.3
+## Globals as Interfaces
+A quick-and-dirty way to make your comp form sketches "tweakable" is to use global variables for your parameters and group them at the top of the script.
+
+- This is very easy to set up.
+- Works particularly well for small one-off sketches that only you will ever use.
+- Choose clear variable names that explain the purpose of each parameter.
+- Use comments to explain the parameter in more detail, document legal value ranges, and suggest good values.
+- Yes, globals are evil. That is part the "dirty" part.
+
+
+::: js-lab
+/comp_form/square.js
+:::
+
+
+
+---
+###### 3.4
+## p5.js Dom Interfaces
+
+The [p5 Dom Library](https://p5js.org/reference/#/libraries/p5.dom) provides functions that allow you create html elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.
+
+- This is more complicated to set up, but still pretty quick.
+- This is a better choice if you want to quickly explore your parameter-space.
+- Label your inputs clearly. Consider your interface carefully.
+- Your controls can also be made in HTML, used in p5 via `select()`
+- You can style your interface with CSS.
+
+
+::: js-lab
+/comp_form/square_slider.js
+:::
+
+
+
+
+---
+###### 3.5
+## Get to Know p5
+
+If you havn't used the following features of p5, take a look. [p5 Reference](https://p5js.org/reference/)
+
+### colorMode()
+Working with color in terms of hue, saturation, and brightness is often much better than RGB. Use `colorMode()` to switch to HSB colors, and to choose your range (0-255, 0-100, 0-1).
+
+### ellipseMode(), rectMode()
+Sometimes the clearest way to draw a ellipse is to specify the bounding box corners. Sometimes the center and width/height makes more sense. Use these functions to switch how `ellipse()` and `rect()` use their arguments.
+
+### push() + pop()
+Normally if you change your drawing state (fill color, stroke weight, etc), it stays changed after you do your drawing. `push()` and `pop()` let you save and restore your state.
+
+
+### lerp(), lerpColor()
+These functions let you interpolate between two values.
+
+### map()
+Use `map()` to remap values from one range to another.
+
+---
+
+::: .callout .callout-success
+# Assignment
+
+## Keep Sketching! 
+
+Continue experimenting with procedurally generated images, this time focusing exposing parameters and exploring the parameter spaces of your sketches. You can mix random and parametric elements, but I suggest doing at least a couple of sketches that are not random at all.
+
+:::

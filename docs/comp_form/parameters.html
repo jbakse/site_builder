@@ -5,7 +5,7 @@
 <h2 id="parameter-examples">Parameter Examples</h2>
 <p>Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that are controlled by others.</p>
 <div id="" class="slides">
-<div id="carousel-4" class="carousel slide" data-ride="false">
+<div id="carousel-27" class="carousel slide" data-ride="false">
   <div class="carousel-inner">
 <div class="carousel-item active">
 <img class="d-block" src="https://static.dezeen.com/uploads/2015/07/dezeen_Galaxy-Soho-by-Zaha-Hadid_ss_b.jpg" alt="Galaxy SOHO">
@@ -20,11 +20,11 @@ Yoko Ono invented the internet!
 </div>
 </div>
   </div>
-  <a class="carousel-control-prev" href="#carousel-4" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carousel-27" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carousel-4" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carousel-27" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -85,10 +85,93 @@ Exposing <strong>less</strong> prevents your users from doing bad things.</p>
 <li>Why will they be using it? What will they be trying to do?</li>
 <li>Do they understand how your software works under the hood? Should they?</li>
 </ul>
-<h4 id="example">Example</h4>
-<p>This is an example of how to do code.</p>
-<pre><code class="language-javascript">param = slider.get();
-param = slider.get();
-param = slider.get();
-</code></pre>
+<h3 id="parametric-design">Parametric Design</h3>
+<p>Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.</p>
+<div id="" class="bar-callout blue">
+<p><strong>Parametricism</strong> is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.</p>
+</div>
+<p>—<a href="https://en.wikipedia.org/wiki/Parametricism">Wikipedia: Parametricism</a></p>
+<div id="" class="callout callout-danger">
+<h1 id="activity-fictional-machines">Activity: Fictional Machines</h1>
+<p>Begin designing a user interface for a fictional machine by considering which parameters you would expose.</p>
+<ol>
+<li>Choose a machine from the list below.</li>
+<li>Spend 6 minutes brainstorming possible parameters for your machine.</li>
+<li>Choose a user from the list below.</li>
+<li>Spend 3 minutes deciding which parameters to expose for your user. Choose exactly 3 parameters.</li>
+<li>Spend 3 minutes naming your parameters, and defining the allowed values for each.</li>
+<li>Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present. Lorem ipsum damet sol comit ret del toro onk silly newt.</li>
+</ol>
+<h4 id="machine-types">Machine Types</h4>
+<ul>
+<li>A car</li>
+<li>Planet generator</li>
+<li>Grocery-shopping bot</li>
+<li>Internet surveillance front-end</li>
+<li>Genetic pet builder</li>
+<li>Love potion mixer Lorem ipsum damet sol comit ret del toro onk silly newt. Lorem ipsum damet sol comit ret del toro onk silly newt.</li>
+</ul>
+<h4 id="users">Users</h4>
+<ul>
+<li>Daily user</li>
+<li>One-time user</li>
+<li>A child</li>
+<li>An [machine type] enthusiast</li>
+<li>Another machine</li>
+</ul>
+</div>
+<hr>
+<h6 id="33">3.3</h6>
+<h2 id="globals-as-interfaces">Globals as Interfaces</h2>
+<p>A quick-and-dirty way to make your comp form sketches “tweakable” is to use global variables for your parameters and group them at the top of the script.</p>
+<ul>
+<li>This is very easy to set up.</li>
+<li>Works particularly well for small one-off sketches that only you will ever use.</li>
+<li>Choose clear variable names that explain the purpose of each parameter.</li>
+<li>Use comments to explain the parameter in more detail, document legal value ranges, and suggest good values.</li>
+<li>Yes, globals are evil. That is part the “dirty” part.</li>
+</ul>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/square.js">
+</iframe>
+</div>
+</div>
+<hr>
+<h6 id="34">3.4</h6>
+<h2 id="p5js-dom-interfaces">p5.js Dom Interfaces</h2>
+<p>The <a href="https://p5js.org/reference/#/libraries/p5.dom">p5 Dom Library</a> provides functions that allow you create html elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.</p>
+<ul>
+<li>This is more complicated to set up, but still pretty quick.</li>
+<li>This is a better choice if you want to quickly explore your parameter-space.</li>
+<li>Label your inputs clearly. Consider your interface carefully.</li>
+<li>Your controls can also be made in HTML, used in p5 via <code>select()</code></li>
+<li>You can style your interface with CSS.</li>
+</ul>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/square_slider.js">
+</iframe>
+</div>
+</div>
+<hr>
+<h6 id="35">3.5</h6>
+<h2 id="get-to-know-p5">Get to Know p5</h2>
+<p>If you havn’t used the following features of p5, take a look. <a href="https://p5js.org/reference/">p5 Reference</a></p>
+<h3 id="colormode">colorMode()</h3>
+<p>Working with color in terms of hue, saturation, and brightness is often much better than RGB. Use <code>colorMode()</code> to switch to HSB colors, and to choose your range (0-255, 0-100, 0-1).</p>
+<h3 id="ellipsemode-rectmode">ellipseMode(), rectMode()</h3>
+<p>Sometimes the clearest way to draw a ellipse is to specify the bounding box corners. Sometimes the center and width/height makes more sense. Use these functions to switch how <code>ellipse()</code> and <code>rect()</code> use their arguments.</p>
+<h3 id="push-pop">push() + pop()</h3>
+<p>Normally if you change your drawing state (fill color, stroke weight, etc), it stays changed after you do your drawing. <code>push()</code> and <code>pop()</code> let you save and restore your state.</p>
+<h3 id="lerp-lerpcolor">lerp(), lerpColor()</h3>
+<p>These functions let you interpolate between two values.</p>
+<h3 id="map">map()</h3>
+<p>Use <code>map()</code> to remap values from one range to another.</p>
+<hr>
+<div id="" class="callout callout-success">
+<h1 id="assignment">Assignment</h1>
+<h2 id="keep-sketching">Keep Sketching!</h2>
+<p>Continue experimenting with procedurally generated images, this time focusing exposing parameters and exploring the parameter spaces of your sketches. You can mix random and parametric elements, but I suggest doing at least a couple of sketches that are not random at all.</p>
+</div>
 </article><div class="scroll-out"></div></div><div class="col-0 col-lg-3 d-none d-lg-flex right">placeholder right</div></div></div></body></html>

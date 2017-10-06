@@ -1,33 +1,38 @@
 @charset "UTF-8";
-.comp-form-copy h1 {
-  font-size: 3rem; }
-
-.comp-form-copy h2 {
-  font-size: 1.5rem; }
-
-.comp-form-copy h3 {
-  font-size: 1.25rem;
-  color: #5376F5;
-  margin-top: 3rem; }
-
-.comp-form-copy h4 {
-  font-size: 1.0rem;
-  font-weight: bold;
-  margin-top: 1.5rem; }
-
-.comp-form-copy h6 {
-  color: #5376F5; }
-
-.comp-form-copy ul {
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-
-.comp-form-copy li::before {
-  content: "\2022";
-  margin-right: 20px;
-  color: #5376F5;
-  /* or whatever color you prefer */ }
+.comp-form-copy {
+  /*
+        lists need work, might need to make md generate span wrappers for each li
+        
+        https://stackoverflow.com/questions/4373046/css-control-space-between-bullet-and-li
+        */ }
+  .comp-form-copy h1 {
+    font-size: 3rem; }
+  .comp-form-copy h2 {
+    font-size: 1.5rem; }
+  .comp-form-copy h3 {
+    font-size: 1.25rem;
+    color: #5376F5;
+    margin-top: 3rem; }
+  .comp-form-copy h4 {
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin-top: 1.5rem; }
+  .comp-form-copy h6 {
+    color: #5376F5; }
+  .comp-form-copy ul {
+    list-style: none;
+    padding: 0; }
+  .comp-form-copy ul li::before {
+    content: "\2022";
+    margin-right: 20px;
+    color: #5376F5;
+    /* or whatever color you prefer */ }
+  .comp-form-copy ol {
+    padding-left: 20px; }
+  .comp-form-copy ol li::before {
+    content: "";
+    margin-right: 20px;
+    display: inline-block; }
 
 .callout {
   margin-left: -15px;

@@ -1,3 +1,16 @@
 {
-
+    "css": {
+        "allowed_file_extensions": [
+            "css",
+            "scss",
+            "sass",
+            "less"
+        ],
+        "end_with_newline": true, // End output with newline
+        "newline_between_rules": true, // Add a new line after every css rule
+        "selector_separator": " ",
+        "selector_separator_newline": true, // Separate selectors with newline or not (e.g. "a,\nbr" or "a, br")
+        "preserve_newlines": true,
+        "max_preserve_newlines": 10
+    }
 }
