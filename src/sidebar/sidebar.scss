@@ -9,9 +9,30 @@
 .sidebar-right {
     background-color: rgba(255, 255, 255, .7);
     position: absolute;
-    
+
     left: 100%;
     width: calc(100% / 7 * 3);
     padding: 15px;
     background-color: gray;
+}
+
+
+.sidebar-right.tool {
+    margin-top: 2rem;
+    background: #EEE;
+    border-radius: 10px;
+
+    text-align: center;
+    padding: 2rem 0;
+
+    p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    h1 {
+        font-size: 1rem;
+        color: $accent;
+        margin-bottom: 0;
+    }
 }

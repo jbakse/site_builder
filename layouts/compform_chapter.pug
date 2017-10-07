@@ -18,14 +18,20 @@ html(lang="en")
 		
 		title= title
 
-	body.comp-form
+	body.comp-form(class= debug?"debug":"")
+		.side-bar
+			//- sidebar
 		.container
+			.row.header
+				//- header
 			.row
 				.col-0.col-lg-2.d-none.d-lg-flex.left
-					| placeholder left
+					//- place-holder-left
 				.col-12.col-lg-7.content
 					article.comp-form-copy
 						!= contents
-					.scroll-out
+					
 				.col-0.col-lg-3.d-none.d-lg-flex.right
-					| placeholder right
+					//- place-holder-right
+
+			.row.scroll-out

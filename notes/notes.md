@@ -34,6 +34,7 @@ styling support for themeable components based of bootstrap `.callout .callout-a
 
 # Bugs
 x.browser reload sometimes fires early. You need to save twice to see changes.
+.markdown watcher and rebuild doesn't work when layouts change because the `changed` filter only rebuilds md files that have changed and doesn't check dependancies like layouts
 
 
 

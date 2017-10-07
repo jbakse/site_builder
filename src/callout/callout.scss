@@ -9,10 +9,9 @@
 .callout {
     margin-left: -15px;
     margin-right: -15px;
-     
+
     padding: 15px 15px 0px 45px;
     overflow: hidden; // prevent chlid margin collapse
-    
     margin-bottom: 16px;
     border-radius: 0 0 5px 5px;
 
@@ -20,14 +19,12 @@
         font-size: 1.0rem;
     }
 
-    @include callout-variant(theme-color-level(gray, -10), theme-color-level(gray, -9), theme-color-level(gray, 6));
+    @include callout-variant(theme-color-level(accent, -10), theme-color-level(accent, -9), theme-color-level(accent, 6));
 }
 
-@each $color, $value in $theme-colors {
-  .callout-#{$color} {
-    @include callout-variant(theme-color-level($color, -11), theme-color-level($color, -2), theme-color-level($color, 6));
-  }
+@each $color,
+$value in $theme-colors {
+    .callout-#{$color} {
+        @include callout-variant(theme-color-level($color, -11), theme-color-level($color, -2), theme-color-level($color, 6));
+    }
 }
-
-
-

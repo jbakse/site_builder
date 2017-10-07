@@ -1,8 +1,64 @@
 @charset "UTF-8";
+body.comp-form {
+  display: flex;
+  flex-wrap: wrap; }
+  body.comp-form .side-bar {
+    display: none; }
+    @media (min-width: 992px) {
+      body.comp-form .side-bar {
+        display: block; } }
+  body.comp-form .container {
+    flex: 1; }
+
+body.comp-form .side-bar {
+  width: 50px;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  background-color: #333; }
+
+.left,
+.right {
+  z-index: -1;
+  visibility: hidden; }
+  .debug .left, .debug
+  .right {
+    visibility: visible; }
+
+body.comp-form .container .header {
+  height: 50px;
+  border-bottom: 4px solid #5376F5; }
+
+.row.scroll-out {
+  height: 1000px; }
+
+.debug .content {
+  background: rgba(0, 0, 0, 0.05); }
+
+body.debug:before {
+  text-align: center;
+  background-color: #444;
+  color: white;
+  font-size: 12px;
+  display: block;
+  width: 100%;
+  content: "xs"; }
+  @media (min-width: 576px) {
+    body.debug:before {
+      content: "sm"; } }
+  @media (min-width: 768px) {
+    body.debug:before {
+      content: "md"; } }
+  @media (min-width: 992px) {
+    body.debug:before {
+      content: "lg"; } }
+  @media (min-width: 1200px) {
+    body.debug:before {
+      content: "xl"; } }
+
 .comp-form-copy {
+  /* headlines */
   /*
         lists need work, might need to make md generate span wrappers for each li
-        
         https://stackoverflow.com/questions/4373046/css-control-space-between-bullet-and-li
         */ }
   .comp-form-copy h1 {
@@ -33,6 +89,14 @@
     content: "";
     margin-right: 20px;
     display: inline-block; }
+  .comp-form-copy hr {
+    border: 0;
+    border-bottom: 1px solid gray;
+    margin-top: 100px; }
+    @media (min-width: 992px) {
+      .comp-form-copy hr {
+        margin-left: calc( (100% + 15px * 2) / -7 * 2 - 15px);
+        margin-right: calc( (100% + 15px * 2) / -7 * 3 - 15px); } }
 
 .callout {
   margin-left: -15px;
@@ -41,30 +105,18 @@
   overflow: hidden;
   margin-bottom: 16px;
   border-radius: 0 0 5px 5px;
-  background: #e6e6e6;
-  border-top: 5px solid #dbdbdb; }
+  background: #dde4fd;
+  border-top: 5px solid #cfd9fc; }
   .callout h1 {
     font-size: 1.0rem; }
   .callout h1 {
-    color: #434343; }
+    color: #2b3d7f; }
 
 .callout-accent {
   background: #eaeffe;
   border-top: 5px solid #6f8cf7; }
   .callout-accent h1 {
     color: #2b3d7f; }
-
-.callout-gray {
-  background: #f0f0f0;
-  border-top: 5px solid #949494; }
-  .callout-gray h1 {
-    color: #434343; }
-
-.callout-pink {
-  background: #ffe0e0;
-  border-top: 5px solid #ff2929; }
-  .callout-pink h1 {
-    color: #850000; }
 
 .callout-primary {
   background: #e0efff;
@@ -148,47 +200,28 @@
   padding: 15px;
   background-color: gray; }
 
+.sidebar-right.tool {
+  margin-top: 2rem;
+  background: #EEE;
+  border-radius: 10px;
+  text-align: center;
+  padding: 2rem 0; }
+  .sidebar-right.tool p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0; }
+  .sidebar-right.tool h1 {
+    font-size: 1rem;
+    color: #5376F5;
+    margin-bottom: 0; }
+
 .slides {
-  background-color: rgba(255, 255, 255, 0.7);
-  background-color: #AAA;
-  margin-bottom: 16px;
-  margin-left: -15px;
-  margin-right: -15px; }
+  background: black;
+  margin-bottom: 16px; }
   @media (min-width: 992px) {
     .slides {
       margin-left: calc( (100% + 15px * 2) / -7 * 2 - 15px);
       margin-right: calc( (100% + 15px * 2) / -7 * 3 - 15px); } }
-
-.left,
-.right {
-  z-index: -1; }
-
-hr {
-  border: 0;
-  border-bottom: 1px solid gray;
-  margin-top: 100px; }
-  @media (min-width: 992px) {
-    hr {
-      margin-left: calc( (100% + 15px * 2) / -7 * 2 - 15px);
-      margin-right: calc( (100% + 15px * 2) / -7 * 3 - 15px); } }
-
-.scroll-out {
-  height: 1000px; }
-
-.content {
-  background: rgba(0, 0, 0, 0.05); }
-
-@media (min-width: 768px) {
-  .container {
-    background: rgba(0, 0, 0, 0.05); } }
-
-@media (min-width: 992px) {
-  .test {
-    margin-left: calc( (100% + 15px * 2) / -7 * 2 - 15px);
-    margin-right: calc( (100% + 15px * 2) / -7 * 3 - 15px); } }
-
-.slides {
-  background: black; }
   .slides .carousel-inner > .carousel-item {
     height: 500px; }
   .slides .carousel-inner > .carousel-item > img {
@@ -196,8 +229,12 @@ hr {
     max-height: 100%;
     width: auto; }
 
+.topic {
+  padding-top: 40px; }
+
 div.js-lab {
-  height: 500px; }
+  height: 500px;
+  outline: 1px solid gray; }
   @media (min-width: 992px) {
     div.js-lab {
       margin-left: calc( (100% + 15px * 2) / -7 * 2 - 15px);
@@ -205,7 +242,6 @@ div.js-lab {
 
 iframe.js-lab {
   border: none;
-  outline: 1px solid gray;
   width: 100%;
   height: 100%; }
 

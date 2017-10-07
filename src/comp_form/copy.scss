@@ -1,6 +1,8 @@
     .comp-form-copy {
 
-        /// headlines
+
+
+        /* headlines */
         h1 {
             font-size: 3rem;
         }
@@ -11,7 +13,7 @@
 
         h3 {
             font-size: 1.25rem;
-            color: $accent-color;
+            color: $accent;
             margin-top: 3rem;
         }
 
@@ -22,13 +24,12 @@
         }
 
         h6 {
-            color: $accent-color;
+            color: $accent;
         }
 
 
         /*
         lists need work, might need to make md generate span wrappers for each li
-        
         https://stackoverflow.com/questions/4373046/css-control-space-between-bullet-and-li
         */
         ul {
@@ -41,7 +42,7 @@
         ul li::before {
             content: "•";
             margin-right: 20px;
-            color: $accent-color;
+            color: $accent;
             /* or whatever color you prefer */
         }
 
@@ -54,5 +55,12 @@
             content: "";
             margin-right: 20px;
             display: inline-block;
+        }
+
+        hr {
+            @include full-width;
+            border: 0;
+            border-bottom: 1px solid gray;
+            margin-top: 100px;
         }
     }

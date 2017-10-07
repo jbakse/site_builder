@@ -1,10 +1,19 @@
 ---
 title: Parameters
 layout: layouts/compform_chapter.pug
+debug: false
 ---
 
+::: .sidebar-right .tool
+# Suggested Medium
+p5.js
+:::
+
+::: .topic
 ###### Topic 3
-# Parameters
+# Parameters!
+:::
+
 
 ---
 ###### 3.1 Slides
