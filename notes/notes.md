@@ -4,6 +4,7 @@
 .properly style slideshow
 .disable slideshow autoplay
 
+.change compiled breakpoints to account for sidebar
 
 rabbithole?.have sass build bootstrap with config
 
