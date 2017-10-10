@@ -86,12 +86,12 @@ module.exports = function markdownToHtml(file) {
 
 /**
  * convertContainer(string)
- * 
+ *
  * Finds lines that look like
  * ::: .warning #e1
  * lorem
  * :::
- * 
+ *
  * Turns them into
  * <div id="e1" class="warning">
  * lorem
@@ -145,7 +145,7 @@ function buildComponent(match, selector, content) {
     ids = ids.join(" ");
 
     return t.trimLines(`
-        <div id="${ids}" class="test ${classes}">
+        <div id="${ids}" class="${classes}">
         \n${content}\n
         </div>`);
 }

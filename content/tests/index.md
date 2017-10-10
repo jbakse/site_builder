@@ -10,3 +10,4 @@ layout: layouts/compform_chapter.pug
 - [callouts](./callouts.html)
 - [toc_scroll](./toc_scroll.html)
 - [JS Lab](./jslab.html)
+- [slide show](./slideshow.html)
