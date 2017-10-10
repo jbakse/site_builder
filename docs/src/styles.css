@@ -252,24 +252,27 @@ body.debug:before {
     width: 100%; }
   .slides .carousel-item {
     height: 32rem;
-    background-color: #777; }
+    background-color: #777;
+    width: 73%; }
   .slides .carousel-item > img {
     position: absolute;
     top: 0;
     left: 0;
     min-width: 100%;
-    height: 32rem; }
+    height: 32rem;
+    object-fit: cover; }
   .slides .carousel-inner {
-    width: 73%;
+    width: 100%;
     float: left; }
   .slides .slide-info {
-    width: 27%;
+    width: 37%;
     height: 27rem;
     background: #f2f2f2;
     float: left;
     padding: 6px;
-    position: relative;
-    top: 5rem; }
+    position: absolute;
+    top: 5rem;
+    left: 100%; }
   .slides .carousel-control-next, .slides .carousel-control-prev {
     position: relative;
     display: inline-block; }

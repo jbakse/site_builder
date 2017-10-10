@@ -24,7 +24,7 @@ module.exports = function slidesBuilder(classes, ids, content) {
         <div class="slide-info">
           <div class="slide-info-middle">
               <hr>
-              <h6>${slide.artist}!</h6>
+              <h6>${slide.artist}</h6>
               <h5>${slide.title}</h5>
            </div>
            <div class="slide-info-bottom">
@@ -46,11 +46,12 @@ module.exports = function slidesBuilder(classes, ids, content) {
 
       <div class="slide-info-top">
         <a class="carousel-control-prev" href="#carousel-${slidesCounter}" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
+
         <a class="carousel-control-next" href="#carousel-${slidesCounter}" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
       </div>`);

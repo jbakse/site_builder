@@ -10,7 +10,7 @@ layout: layouts/compform_chapter.pug
 ::: slides
 
 - slide: slide
-  artist: Zaha Hadid?
+  artist: Zaha Hadid
   title: Galaxy SOHO
   image: https://static.dezeen.com/uploads/2015/07/dezeen_Galaxy-Soho-by-Zaha-Hadid_ss_b.jpg
   comments: >
@@ -28,5 +28,10 @@ layout: layouts/compform_chapter.pug
   links:
     label: Imagine Piece
     href: http://imaginepeace.com/
+
+- slide: slide
+  artist: Google Images
+  title: Test Stretch Image
+  image: http://www.scotlandinprint.co.uk/media/catalog/product/cache/1/image/5000x/040ec09b1e35df139433887a97daa66f/3/2/329-landscape-photos-1.jpg
 
 :::
