@@ -5,3 +5,13 @@ import "./style.scss"
 
 // import test from "./test/test"
 // test();
+
+$(main);
+
+function main() {
+  $('.carousel').carousel({
+    interval: false,
+    wrap: false
+    })
+  $('.carousel').carousel('pause');
+}

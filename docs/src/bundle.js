@@ -79,6 +79,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // import test from "./test/test"
 // test();
 
+$(main);
+
+function main() {
+  $('.carousel').carousel({
+    interval: false,
+    wrap: false
+    })
+  $('.carousel').carousel('pause');
+}
+
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
