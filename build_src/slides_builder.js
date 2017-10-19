@@ -46,12 +46,27 @@ module.exports = function slidesBuilder(classes, ids, content) {
 
       <div class="slide-info-top">
         <a class="carousel-control-prev" href="#carousel-${slidesCounter}" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+          <span class="carousel-prev-icon">
+              <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon id="Page-1-Copy" fill="#3B7CF4" transform="translate(7.500000, 8.659834) rotate(-180.000000) translate(-7.500000, -8.659834) " points="0 17.3196679 15 8.65334717 0 5.68434189e-14"></polygon>
+                </g>
+              </svg>
+          </span>
           <span class="sr-only">Previous</span>
         </a>
 
         <a class="carousel-control-next" href="#carousel-${slidesCounter}" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+
+          <span class="carousel-next-icon-tc">
+            <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <polygon fill="#3B7CF4" points="0 17.3196679 15 8.65334717 0 5.68434189e-14"></polygon>
+              </g>
+            </svg>
+          </span>
           <span class="sr-only">Next</span>
         </a>
       </div>`);
