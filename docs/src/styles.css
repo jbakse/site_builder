@@ -1,3 +1,9 @@
+.comp-form .scroll-out {
+  height: 80vh; }
+
+.comp-form-copy h1 {
+  color: red; }
+
 div.js-lab {
   height: 500px;
   outline: 1px solid gray; }
