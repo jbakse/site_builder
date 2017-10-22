@@ -1,6 +1,6 @@
 ---
 title: Parameters
-layout: layouts/compform_chapter.pug
+layout: layouts/k12_chapter.pug
 debug: false
 ---
 
@@ -11,12 +11,13 @@ p5.js
 
 ::: .topic
 ###### Topic 3
-# Parameters
+# Parameters!
 :::
+
 
 ---
 ###### 3.1 Slides
-## Parameter Examples!
+## Parameter Examples
 
 Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that are controlled by others.
 

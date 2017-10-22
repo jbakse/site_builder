@@ -8,5 +8,6 @@ layout: layouts/compform_chapter.pug
 
 - [tests](tests)
 - [comp_form](comp_form)
+- [k12](k12)
 
 

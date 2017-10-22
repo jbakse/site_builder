@@ -12,16 +12,6 @@ $theme-colors: map-merge(( accent: $accent), $theme-colors);
 // components
 @import './comp_form/layout';
 @import './comp_form/copy';
-@import './callout/callout';
-@import './bar_callout/bar_callout';
-@import './sidebar/sidebar';
-@import './slides/slides';
-
-
-// copy
-.topic {
-    padding-top: 40px; // border: 1px solid red;
-}
 
 
 
