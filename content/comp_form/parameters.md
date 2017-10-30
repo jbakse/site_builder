@@ -1,9 +1,140 @@
 ---
+topic_number: '3'
 title: Parameters
+description: Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
+software: p5.js
+next: Strategy
+next_url: layouts/strategy.html
+previous: Animation
+previous_url: layouts/animation.html
 layout: layouts/compform_chapter.pug
 debug: false
 ---
+## 01<span>Objectives</span>
+- Consider interface design as exposing parameters
+- Practice problem analysis and interface design
+- Practice user-centered design concepts
+- Technical: Exposing Parameters as Globals
+- Technical: Exposing Parameters with HTML Controls
 
+## 02<span>Slides</span>
+Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
+
+**Consider:** How did artists use parameters in each work?
+
+::: slides
+@@include('./slides.yaml')
+:::
+
+::: .activity
+##### Activity
+## The Blue Square
+Imagine a program that generates images, including the one below. What parameters might such a program accept?
+:::
+
+## 03<span>Parameters & Interface Design</span>
+### Interfaces
+An **interface** is the common boundary between two systems. Two of the most important interfaces of software systems are **user interfaces** (UIs) and **application programming interfaces** (APIs).
+- A UI is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. The UI is the primary interface in most applications.
+- An API is the part of a software system that is used by programmers to connect the software with other software systems. The API is the primary interface in most libraries.
+It is common for software to have both a UI and an API. For example twitter provides a user interface for making and reading tweets and an API for integrating twitter into existing systems.
+Abstraction, subway
+
+### Parameters
+Parameters are factors that control what how a system operates. Exposing parameters allows artists and designers to create systems that can be controlled by others. Choosing which parameters to expose is a core concern of software interface design.
+
+#### What to Expose
+- Which parameters should be exposed?
+- Which values should be accepted for each parameter?
+- Which parameters are required, which are optional?
+
+#### Balance
+- Exposing **more** gives your user more control.
+- Exposing **less** gives you more control.
+- Exposing **more** makes your interface harder to understand.
+- Exposing **less** makes your interface easier to understand.
+- Exposing **more** allows your users to do more good things.
+- Exposing **less** prevents your users from doing bad things.
+
+#### Presenting Your interface
+Once you have decided on what to expose via your interface, you must consider how to communicate your interface options to your users.
+- What UI controls will you use for each parameter?
+- What will you label each control?
+- How will you group and order the UI controls?
+- How will you explain the purpose of each parameter?
+
+#### Feedback
+Feedback shows users the impact their actions have on the system. Without feedback, systems are very hard to learn and use.
+In simple cases, showing users the end result of their choices is often enough. In more complex situations, it is often helpful to provide intermediate feedback. For example, if a system will react slowly to user actions, providing immediate confirmation of user input is important. 
+
+#### Parameter Space
+A parameter space is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (yes/no) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. A system that takes just two floating point parameters has 9,223,372,036,854,775,808 (9.2 Quintillion!) states. This is a basically inconceivably large number, but it is quite likely that many of those states would look samey. 
+
+#### Keep Your User In Mind
+The way that you think about your software system is often very different from the way your users think about it.
+
+- Who will be using your software?
+- Why will they be using it? What will they be trying to do?
+- Do they understand how your software works under the hood? Should they?
+
+### Parametric Design
+Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.
+
+::: .definition
+<span>Parametricism</span> is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.
+:::
+
+::: .activity
+##### Activity
+## Fictional Machines
+Begin designing a user interface for a fictional machine by considering which parameters you would expose.
+:::
+
+## 04<span>Globals as Interfaces</span>
+A quick-and-dirty way to make your comp form sketches “tweakable” is to use global variables for your parameters and group them at the top of the script.
+- This is very easy to set up.
+- Works particularly well for small one-off sketches that only you will ever use.
+- Choose clear variable names that explain the purpose of each parameter.
+- Use comments to explain the parameter in more detail, document legal value ranges, and suggest good values.
+- Yes, globals are evil. That is part the “dirty” part.
+
+::: js-lab
+/comp_form/square.js
+:::
+
+## 05<span>p5.js Dom Interfaces
+The p5 Dom Library provides functions that allow you create html elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.
+- This is more complicated to set up, but still pretty quick.
+- This is a better choice if you want to quickly explore your parameter-space.
+- Label your inputs clearly. Consider your interface carefully.
+- Your controls can also be made in HTML, used in p5 via select()
+- You can style your interface with CSS.
+
+## 06<span>Get to Know p5</span>
+If you haven’t used the following features of p5, take a look.
+
+### colorMode()
+Working with color in terms of hue, saturation, and brightness is often much better than RGB. Use colorMode() to switch to HSB colors, and to choose your range (0-255, 0-100, 0-1).
+
+### ellipseMode(), rectMode()
+Sometimes the clearest way to draw a ellipse is to specify the bounding box corners. Sometimes the center and width/height makes more sense. Use these functions to switch how  ellipse()  and  rect()  use their arguments.
+
+### push() + pop()
+Normally if you change your drawing state (fill color, stroke weight, etc), it stays changed after you do your drawing. push() and pop() let you save and restore your state.
+
+### lerp(), lerpColor()
+These functions let you interpolate between two values.
+
+### map()
+Use map() to remap values from one range to another.
+
+::: .activity
+##### Assignment
+## Keep Sketching!
+:::
+
+
+<!--
 ::: .sidebar-right .tool
 # Suggested Medium
 p5.js
@@ -16,16 +147,16 @@ p5.js
 
 ---
 ###### 3.1 Slides
-## Parameter Examples!
+## Parameter Examples
 
 Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that are controlled by others.
 
 
 ::: slides
 @@include('./slides.yaml')
-:::
+::: -->
 
-
+<!--
 ::: .callout .callout-primary
 # Prompt Yourself
 
@@ -212,8 +343,8 @@ Use `map()` to remap values from one range to another.
 ::: .callout .callout-success
 # Assignment
 
-## Keep Sketching! 
+## Keep Sketching!
 
 Continue experimenting with procedurally generated images, this time focusing exposing parameters and exploring the parameter spaces of your sketches. You can mix random and parametric elements, but I suggest doing at least a couple of sketches that are not random at all.
 
-:::
+::: -->

@@ -1,6 +1,9 @@
 doctype html
 html(lang="en")
 	head
+
+		meta(charset="utf-8")
+		
 		//jquery
 		script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js", integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", crossorigin="anonymous")
 		
@@ -14,22 +17,70 @@ html(lang="en")
 		
 		//styles
 		link(rel="stylesheet", href="/src/styles.css")
+		link(rel="stylesheet", href="/src/font-awesome.min.css")
 		script(src="/src/bundle.js")
 		
-		title= title
+		//scripts
+		script(src="/src/scripts.js")
+		
+		title= title + " | Comp Form"
 
 	body.comp-form(class= debug?"debug":"")
-		.container
-			.row.header
-				//- header
-			.row
-				.col-0.col-lg-2.d-none.d-lg-flex.left
-					//- place-holder-left
-				.col-12.col-lg-7.content
-					article.comp-form-copy
-						!= contents
-					
-				.col-0.col-lg-3.d-none.d-lg-flex.right
-					//- place-holder-right
+		
+		.logo
+			svg(width="20px", height="18px", viewbox="0 0 20 18", version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink")
+				defs
+				g#Page-1(stroke="none", stroke-width="1", fill="none", fill-rule="evenodd")
+					g#Desktop(transform="translate(-18.000000, -16.000000)", fill="#000000")
+						g#Compform-Logo(transform="translate(18.000000, 16.000000)")
+							polygon#Triangle-Copy-4(points="15 9 20 18 10 18")
+							polygon#Triangle-Copy-5(points="5 9 10 18 0 18")
+							polygon#Triangle-Copy-6(points="10 0 15 9 5 9")
 
-			.row.scroll-out
+		section.menu-dropdown
+			.wrapper
+
+		section.topic-section
+			header
+				span 
+					| Topic 
+					!= topic_number
+					|: 
+					!= title
+				span
+					a(href=previous_url)
+						i.fa.fa-caret-left.fa-lg
+						!= previous
+				span
+					a(href=next_url)
+						!= next
+						i.fa.fa-caret-right.fa-lg
+					
+			.hero
+				.topic-text
+						h1= title
+							h6 The What
+							hr
+							p= description
+							h6 The How
+							hr
+							h7= software	
+				
+			.wrapper
+				.topic-text
+					!=contents
+		//- 
+		//- .container
+		//- 	.row.header
+		//- 		//- header
+		//- 	.row
+		//- 		.col-0.col-lg-2.d-none.d-lg-flex.left
+		//- 			//- place-holder-left
+		//- 		.col-12.col-lg-7.content
+		//- 			article.comp-form-copy
+		//- 				!= contents
+		//- 			
+		//- 		.col-0.col-lg-3.d-none.d-lg-flex.right
+		//- 			//- place-holder-right
+		//- 
+		//- 	.row.scroll-out
