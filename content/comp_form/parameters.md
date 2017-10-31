@@ -35,8 +35,8 @@ Imagine a program that generates images, including the one below. What parameter
 ## 03<span>Parameters & Interface Design</span>
 ### Interfaces
 An **interface** is the common boundary between two systems. Two of the most important interfaces of software systems are **user interfaces** (UIs) and **application programming interfaces** (APIs).
-- A UI is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. The UI is the primary interface in most applications.
-- An API is the part of a software system that is used by programmers to connect the software with other software systems. The API is the primary interface in most libraries.
+- A **UI** is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. The UI is the primary interface in most applications.
+- An **API** is the part of a software system that is used by programmers to connect the software with other software systems. The API is the primary interface in most libraries.
 It is common for software to have both a UI and an API. For example twitter provides a user interface for making and reading tweets and an API for integrating twitter into existing systems.
 Abstraction, subway
 
@@ -87,7 +87,7 @@ Parametricism
 
 ::: .activity
 ## Fictional Machines
-  Begin designing a user interface for a fictional machine by considering which parameters you would expose.
+  {description} Begin designing a user interface for a fictional machine by considering which parameters you would expose. 
 :::
 
 ## 04<span>Globals as Interfaces</span>
