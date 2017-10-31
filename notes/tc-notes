@@ -1,8 +1,8 @@
 # Talia To-Do
 
-#10/16
+# 10/16
 .make slideshow work (CHECK)
-.clean up slideshow (IN PROG)
+.clean up slideshow (CHECK)
 .stank (In PROG)
 .new chapter (analyze modules) (IN PROG)
 .post P5 bug to github (CHECKish)
@@ -12,3 +12,11 @@
 .Pixel Processing:  https://jagracar.com/sketches/oilPainting.php
 .Parameters: https://jagracar.com/sketches/seaLife.php
 .Noise: http://haptic-data.com/toxiclibsjs/examples/simplex-noise-canvas
+
+# Q for Justin
+- will we ever have code style without preview? (see p5.js Dom Interfaces)
+- different paragraph styles? (see Keep Sketching)
+- quick way to make "codey" word in span without adding class? (see ellipseMode())
+- where to put dropdown menu content?
+- full-width? (see "assignment")
+- put assignments in separate file?

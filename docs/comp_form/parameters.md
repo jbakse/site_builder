@@ -1,5 +1,5 @@
 ---
-topic_number: '3'
+header_title: "Topic 3: Parameters"
 title: Parameters
 description: Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
 software: p5.js
@@ -10,6 +10,7 @@ previous_url: layouts/animation.html
 layout: layouts/compform_chapter.pug
 debug: false
 ---
+
 ## 01<span>Objectives</span>
 - Consider interface design as exposing parameters
 - Practice problem analysis and interface design
@@ -27,7 +28,6 @@ Parameters are factors of a system that are exposed. Exposing parameters allows 
 :::
 
 ::: .activity
-##### Activity
 ## The Blue Square
 Imagine a program that generates images, including the one below. What parameters might such a program accept?
 :::
@@ -80,14 +80,14 @@ The way that you think about your software system is often very different from t
 ### Parametric Design
 Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.
 
-::: .definition
-<span>Parametricism</span> is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.
-:::
+Parametricism
+: is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.
+
+
 
 ::: .activity
-##### Activity
 ## Fictional Machines
-Begin designing a user interface for a fictional machine by considering which parameters you would expose.
+  Begin designing a user interface for a fictional machine by considering which parameters you would expose.
 :::
 
 ## 04<span>Globals as Interfaces</span>
@@ -114,23 +114,28 @@ The p5 Dom Library provides functions that allow you create html elements and us
 If you haven’t used the following features of p5, take a look.
 
 ### colorMode()
-Working with color in terms of hue, saturation, and brightness is often much better than RGB. Use colorMode() to switch to HSB colors, and to choose your range (0-255, 0-100, 0-1).
+Working with color in terms of hue, saturation, and brightness is often much better than RGB. Use `colorMode()`to switch to HSB colors, and to choose your range (0-255, 0-100, 0-1).
 
 ### ellipseMode(), rectMode()
-Sometimes the clearest way to draw a ellipse is to specify the bounding box corners. Sometimes the center and width/height makes more sense. Use these functions to switch how  ellipse()  and  rect()  use their arguments.
+Sometimes the clearest way to draw a ellipse is to specify the bounding box corners. Sometimes the center and width/height makes more sense. Use these functions to switch how `ellipse()` and `rect()` use their arguments.
 
 ### push() + pop()
-Normally if you change your drawing state (fill color, stroke weight, etc), it stays changed after you do your drawing. push() and pop() let you save and restore your state.
+Normally if you change your drawing state (fill color, stroke weight, etc), it stays changed after you do your drawing. `push()` and `pop()` let you save and restore your state.
 
 ### lerp(), lerpColor()
 These functions let you interpolate between two values.
 
 ### map()
-Use map() to remap values from one range to another.
+Use `map()` to remap values from one range to another.
 
-::: .activity
-##### Assignment
+::: .assignment
 ## Keep Sketching!
+
+###### Base
+---
+Continue experimenting with procedurally generated images, this time focusing exposing parameters and exploring the parameter spaces of your sketches. You can mix random and parametric elements, but I suggest doing at least a couple of sketches that are not random at all.
+
+
 :::
 
 

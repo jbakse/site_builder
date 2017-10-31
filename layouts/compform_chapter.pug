@@ -16,6 +16,7 @@ html(lang="en")
 		link(rel="stylesheet", href="/vendor/highlightjs/css/atom-one-dark.css")
 		
 		//styles
+		link(href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Roboto:400,500,700|Overpass+Mono:300", rel="stylesheet")
 		link(rel="stylesheet", href="/src/styles.css")
 		link(rel="stylesheet", href="/src/font-awesome.min.css")
 		script(src="/src/bundle.js")
@@ -43,10 +44,7 @@ html(lang="en")
 		section.topic-section
 			header
 				span 
-					| Topic 
-					!= topic_number
-					|: 
-					!= title
+					!= header_title
 				span
 					a(href=previous_url)
 						i.fa.fa-caret-left.fa-lg
