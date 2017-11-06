@@ -30,6 +30,8 @@ Parameters are factors of a system that are exposed. Exposing parameters allows 
 ::: .activity
 # The Blue Square
 Imagine a program that generates images, including the one below. What parameters might such a program accept?
+
+![alt text](./activities/blue-square.png "Blue Square Activity")
 :::
 
 ## 03<span>Parameters & Interface Design</span>
@@ -88,6 +90,42 @@ Parametricism
 ::: .activity
 # Fictional Machines
   Begin designing a user interface for a fictional machine by considering which parameters you would expose.
+
+  1. Choose a machine from the list below.
+	2. Spend 6 minutes brainstorming possible parameters for your machine.
+	3. Choose a user from the list below.
+	4. Spend 3 minutes deciding which parameters to expose for your user. Choose exactly 3 parameters.
+	5. Spend 3 minutes naming your parameters, and defining the allowed values for each.
+	6. Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present.
+
+## Machine Types
+A car
+
+Planet generator
+
+Grocery-shopping bot
+
+Internet surveillance front-end
+
+Genetic pet builder
+
+Love potion mixer
+
+Users
+
+## Users
+Users 
+
+Daily user
+
+One-time user
+
+A child
+
+An [machine type] enthusiast
+
+Another machine
+
 :::
 
 ## 04<span>Globals as Interfaces</span>
@@ -110,8 +148,40 @@ The p5 Dom Library provides functions that allow you create html elements and us
 - Your controls can also be made in HTML, used in p5 via select()
 - You can style your interface with CSS.
 
+```javascript
+var pos_x_slider, pos_y_slider, size_slider;
+
+function setup() {
+    createCanvas(640, 360);
+    fill(100);
+    noStroke();
+    rectMode(CENTER);
+
+    createP('Horizontal Position');
+    pos_x_slider = createSlider(0, width, width * .5);
+    createP('Vertical Position');
+    pos_y_slider = createSlider(0, height, height * .5);
+    createP('Size');
+    size_slider = createSlider(10, 200, 100);
+}
+
+
+function draw() {
+    background(250);
+
+    var pos_x = pos_x_slider.value();
+    var pos_y = pos_y_slider.value();
+    var size = size_slider.value();
+
+    rect(pos_x, pos_y, size, size);
+}
+```
+
 ## 06<span>Get to Know p5</span>
 If you haven’t used the following features of p5, take a look.
+
+[p5 Reference](https://p5js.org/reference/)
+
 
 ### colorMode()
 Working with color in terms of hue, saturation, and brightness is often much better than RGB. Use `colorMode()`to switch to HSB colors, and to choose your range (0-255, 0-100, 0-1).

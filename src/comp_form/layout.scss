@@ -273,16 +273,35 @@ body hr{
 
   code{
     font-family: OverpassMono-Light;
-    font-size: 16px;
+    font-size: 15px;
     color: #505050;
     letter-spacing: 0.31px;
     line-height: 25px;
     background-color:$warm-light-grey;
   }
 
-  // .js-lab{
-  //   margin-top:40px;
-  // }
+  pre {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+
+  pre code {
+    border: 1px solid #D8D8D8;
+    border-radius: 0;
+    padding: 0;
+    white-space: pre-wrap;
+    background-color: transparent;
+    display: block;
+    overflow-x: auto;
+    background: #F8F8F8;
+    padding: 0.5em;
+    margin-top:20px;
+  }
+
 
   .slideshow{
     width:95vw;
@@ -294,61 +313,56 @@ body hr{
     height:80vh;
   }
 
-  // .activity, .assignment{
-  //   width:100vw;
-  //   position:relative;
-  //   right:25%;
-  //   padding:50px;
-  //   height:80vh;
-  //   border-top:1px solid #D8D8D8;
-  //   border-bottom:1px solid #D8D8D8;
-  //   background-color:$warm-light-grey;
-  //   margin-top:90px;
-  // }
-
   .activity, .assignment{
-    // width:100vw;
-    // position:relative;
-    // right:25%;
-    // padding:50px;
-    // height:80vh;
     border-top:1px solid #D8D8D8;
     border-bottom:1px solid #D8D8D8;
     background-color:$warm-light-grey;
     margin-top:90px;
     padding-top:50px;
     padding-bottom:50px;
+    width: 110vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
   }
 
-  // .assignment h6+hr+p {
-  //   border: 1px solid orange;
-  // }
+  .activity, .assignment {
+    h1, h2, p, ul, ol {
+      width:100%;
+      max-width:768px;
+      margin:0 auto;
+      position:relative;
+      right:96px;
+    }
 
-
-  // .assignment>h2+h6+hr+p {
-  //
-  //   border: 1px solid blue;
-  // }
-
-  // .activity::before, .assignment::before{
-  //   content:" ";
-  //   background-color:$warm-light-grey;
-  //   margin-top:90px;
-  //   padding-top:50px;
-  //   height:100vh;
-  //   width:200vw;
-  //   position:relative;
-  //   left:50vw;
-  //   border-top:1px solid #D8D8D8;
-  //   border-bottom:1px solid #D8D8D8;
-  // }
-
-  .activity h1::before{
-    content: "Activity";
   }
 
-  .assignment h1::before{
-    content: "Assignment";
+  .activity {
+    h1::before{
+      content: "Activity";
+    }
+    p, ol, ul{
+      font-family: MiriamLibre-Bold;
+      font-size: 17px;
+      color: #505050;
+      letter-spacing: 0.31px;
+      line-height: 25px;
+    }
+  }
+
+  .assignment {
+    h1::before{
+      content: "Assignment";
+    }
+    h2:first-of-type+p {
+      font-family: MiriamLibre-Regular;
+      font-size: 20px;
+      color: #505050;
+      letter-spacing: 0.31px;
+      line-height: 32px;
+    }
   }
 
   .activity, .assignment{
@@ -379,11 +393,12 @@ body hr{
        text-align:center;
        width:300px;
        margin:0 auto;
-        font-family: Roboto-Light;
-        font-size: 14px;
-        color: #000000;
-        letter-spacing: 0.31px;
-        line-height: 20px;
+       margin-bottom:65px;
+       font-family: Roboto-Light;
+       font-size: 14px;
+       color: #000000;
+       letter-spacing: 0.31px;
+       line-height: 20px;
      }
 
      h2{
@@ -398,30 +413,9 @@ body hr{
        border-bottom: 0.5px solid #979797;
      }
 
-     h2:first-of-type+p {
-       font-family: MiriamLibre-Regular;
-       font-size: 20px;
-       color: #505050;
-       letter-spacing: 0.31px;
-       line-height: 32px;
-     }
-
-     h5{
-       text-align:center;
-     }
-
-     p.description{
-       text-align:center;
-       width:300px;
-       margin:0 auto;
-     }
-
-     p.bigger{
-      font-family: MiriamLibre-Regular;
-      font-size: 20px;
-      color: #505050;
-      letter-spacing: 0.31px;
-      line-height: 32px;
+     img {
+       height: auto;
+       width: 100%;
      }
 
   }
@@ -434,15 +428,25 @@ body hr{
     letter-spacing: 0.31px;
     line-height: 25px;
   }
+
   li {
     margin-bottom:10px;
   }
 
-  li::before {
+  // ul li{
+  //   position:relative;
+  //   display:block;
+  //   left:30px;
+  // }
+
+  ul li:before {
     content: ".";
-    margin-right: 0.4em;
+    // margin-right: 0.4em;
     position: relative;
-    top: -0.25em;
+    top: -0.1em;
+    font-size: 40px;
+    line-height: 0;
+    right:30px;
   }
 
 

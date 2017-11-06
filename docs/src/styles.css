@@ -222,11 +222,31 @@ body hr {
 
 .topic-section code {
   font-family: OverpassMono-Light;
-  font-size: 16px;
+  font-size: 15px;
   color: #505050;
   letter-spacing: 0.31px;
   line-height: 25px;
   background-color: #F4F3F1; }
+
+.topic-section pre {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: break-all;
+  word-wrap: break-word; }
+
+.topic-section pre code {
+  border: 1px solid #D8D8D8;
+  border-radius: 0;
+  padding: 0;
+  white-space: pre-wrap;
+  background-color: transparent;
+  display: block;
+  overflow-x: auto;
+  background: #F8F8F8;
+  padding: 0.5em;
+  margin-top: 20px; }
 
 .topic-section .slideshow {
   width: 95vw;
@@ -243,13 +263,40 @@ body hr {
   background-color: #F4F3F1;
   margin-top: 90px;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  width: 110vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw; }
+
+.topic-section .activity h1, .topic-section .activity h2, .topic-section .activity p, .topic-section .activity ul, .topic-section .activity ol, .topic-section .assignment h1, .topic-section .assignment h2, .topic-section .assignment p, .topic-section .assignment ul, .topic-section .assignment ol {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  position: relative;
+  right: 96px; }
 
 .topic-section .activity h1::before {
   content: "Activity"; }
 
+.topic-section .activity p, .topic-section .activity ol, .topic-section .activity ul {
+  font-family: MiriamLibre-Bold;
+  font-size: 17px;
+  color: #505050;
+  letter-spacing: 0.31px;
+  line-height: 25px; }
+
 .topic-section .assignment h1::before {
   content: "Assignment"; }
+
+.topic-section .assignment h2:first-of-type + p {
+  font-family: MiriamLibre-Regular;
+  font-size: 20px;
+  color: #505050;
+  letter-spacing: 0.31px;
+  line-height: 32px; }
 
 .topic-section .activity h1, .topic-section .assignment h1 {
   margin-top: 30px;
@@ -276,6 +323,7 @@ body hr {
   text-align: center;
   width: 300px;
   margin: 0 auto;
+  margin-bottom: 65px;
   font-family: Roboto-Light;
   font-size: 14px;
   color: #000000;
@@ -293,27 +341,9 @@ body hr {
   padding-bottom: 3px;
   border-bottom: 0.5px solid #979797; }
 
-.topic-section .activity h2:first-of-type + p, .topic-section .assignment h2:first-of-type + p {
-  font-family: MiriamLibre-Regular;
-  font-size: 20px;
-  color: #505050;
-  letter-spacing: 0.31px;
-  line-height: 32px; }
-
-.topic-section .activity h5, .topic-section .assignment h5 {
-  text-align: center; }
-
-.topic-section .activity p.description, .topic-section .assignment p.description {
-  text-align: center;
-  width: 300px;
-  margin: 0 auto; }
-
-.topic-section .activity p.bigger, .topic-section .assignment p.bigger {
-  font-family: MiriamLibre-Regular;
-  font-size: 20px;
-  color: #505050;
-  letter-spacing: 0.31px;
-  line-height: 32px; }
+.topic-section .activity img, .topic-section .assignment img {
+  height: auto;
+  width: 100%; }
 
 .topic-section ul {
   list-style-type: none;
@@ -326,11 +356,13 @@ body hr {
 .topic-section li {
   margin-bottom: 10px; }
 
-.topic-section li::before {
+.topic-section ul li:before {
   content: ".";
-  margin-right: 0.4em;
   position: relative;
-  top: -0.25em; }
+  top: -0.1em;
+  font-size: 40px;
+  line-height: 0;
+  right: 30px; }
 
 dl {
   background-color: #F4F3F1;
