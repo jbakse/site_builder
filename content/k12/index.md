@@ -1,6 +1,6 @@
 ---
 title: Tests
-layout: layouts/k12_chapter.pug
+layout: layouts/k12.pug
 ---
 
 

@@ -1,0 +1,85 @@
+// .menu-dropdown {
+//     z-index: 500;
+//     background-color: $warm-light-grey;
+//     height: 100vh;
+//     width: 100vw;
+//     position: relative;
+//     top: -150vh;
+//     overflow: scroll;
+//     transition: top 300ms ease-in-out;
+//     -webkit-transition: top 300ms ease-in-out;
+//     /* Safari */
+// }
+// .menu-dropdown.active {
+//     top: 0;
+// }
+// ///////////////////////////
+// /// MENU DROPDOWN
+// .menu-dropdown {
+//     .wrapper {
+//         padding: 95px 70px;
+//         max-width: 1200px;
+//         margin: 0 auto;
+//     }
+//     h1 {
+//         /*Comp Form Logo*/
+//         font-family: 'Miriam Libre';
+//         font-size: 28px;
+//         color: $dark-grey;
+//         letter-spacing: 0.34px;
+//         text-transform: uppercase;
+//     }
+//     h2 {
+//         /*Chapter titles*/
+//         font-family: "Miriam Libre";
+//         font-weight: bold;
+//         font-size: 22px;
+//         color: $dark-grey;
+//         letter-spacing: 0.34px;
+//     }
+//     h3 {
+//         /*"Foundation" , "Exploration" headers*/
+//         font-family: "Miriam Libre";
+//         font-weight: bold;
+//         font-size: 10px;
+//         color: $dark-grey;
+//         letter-spacing: 0.04px;
+//         margin-top: 50px;
+//         margin-bottom: 3px;
+//     }
+//     p {
+//         font-family: "Roboto";
+//         font-weight: 500;
+//         ;
+//         font-size: 11px;
+//         color: $dark-grey;
+//         letter-spacing: -0.06px;
+//         line-height: 16px;
+//     }
+//     .col {
+//         margin-right: 4.5%;
+//         padding-left: 0;
+//         float: left;
+//     }
+//     .chapter-family {
+//         margin-top: 18px;
+//     }
+//     .chapters {
+//         float: left;
+//     }
+//     ul {
+//         list-style-type: none;
+//         padding: 0;
+//         width: 80.5%;
+//     }
+//     ul li {
+//         float: left;
+//         width: 33%;
+//         height: 80px;
+//         padding: 0;
+//         margin: 0;
+//     }
+//     .col-first {
+//         width: 15%;
+//     }
+// }

@@ -23,8 +23,9 @@ var webpack = require('webpack-stream');
 
 markdownToHTML = require('./build_src/markdown_builder');
 gulp.task('markdown', function() {
+    console.log("markdown");
     return gulp.src('content/**/*.md')
-        .pipe(changed('docs'))
+        // .pipe(changed('docs'))
         .pipe(frontMatter())
         .pipe(tap(logFrontMatter))
         .pipe(file_include())
@@ -107,10 +108,10 @@ gulp.task('src_webpack', function() {
 });
 
 gulp.task('start_watch', function() {
-    gulp.watch(['content/**/*.md', 'content/**/*.*', 'layouts/**/*.**'], ['markdown']);
     gulp.watch('vendor/**/*.*', ['vendor']);
     gulp.watch('js_lab/**/*.*', ['copy_js_lab']);
     gulp.watch('content/**/*.*', ['copy_content']);
+    gulp.watch(['content/**/*.md', 'content/**/*.*', 'layouts/**/*.**'], ['markdown']);
     // gulp.watch('src/**/*.scss', ['src_sass']);//.on('change', browserSync.reload);
 });
 

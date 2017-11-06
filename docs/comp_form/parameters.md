@@ -1,7 +1,7 @@
 ---
 header_title: "Topic 3: Parameters"
 title: Parameters
-description: Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
+description: Parameters are factors of a **system** <i>that</i> are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
 software: p5.js
 next: Strategy
 next_url: layouts/strategy.html

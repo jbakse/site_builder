@@ -1,6 +1,6 @@
 ---
 title: Parameters
-layout: layouts/k12_chapter.pug
+layout: layouts/k12.pug
 debug: false
 ---
 

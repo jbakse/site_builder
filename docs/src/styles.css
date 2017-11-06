@@ -1,15 +1,17 @@
-.comp-form .scroll-out {
-  height: 80vh; }
-
-.logo {
+@import url(https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Roboto:400,500,700|Overpass+Mono:300);.comp-form .logo {
   position: fixed;
   z-index: 1000;
   top: 16px;
   left: 18px;
   cursor: pointer; }
 
-b, strong {
-  font-family: Roboto-Medium;
+.comp-form .scroll-out {
+  height: 80vh; }
+
+b,
+strong {
+  font-family: "Roboto";
+  font-weight: 700;
   color: #505050; }
 
 body hr {
@@ -17,91 +19,13 @@ body hr {
   margin: 0;
   margin-top: 0.3rem; }
 
-.menu-dropdown {
-  z-index: 500;
-  background-color: #F4F3F1;
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  top: -150vh;
-  overflow: scroll;
-  transition: top 300ms ease-in-out;
-  -webkit-transition: top 300ms ease-in-out;
-  /* Safari */ }
-
-.menu-dropdown.active {
-  top: 0; }
-
-.menu-dropdown .wrapper {
-  padding: 95px 70px;
-  max-width: 1200px;
-  margin: 0 auto; }
-
-.menu-dropdown h1 {
-  /*Comp Form Logo*/
-  font-family: MiriamLibre-Bold;
-  font-size: 28px;
-  color: #505050;
-  letter-spacing: 0.34px;
-  text-transform: uppercase; }
-
-.menu-dropdown h2 {
-  /*Chapter titles*/
-  font-family: MiriamLibre-Bold;
-  font-size: 22px;
-  color: #505050;
-  letter-spacing: 0.34px; }
-
-.menu-dropdown h3 {
-  /*"Foundation" , "Exploration" headers*/
-  font-family: MiriamLibre-Bold;
-  font-size: 10px;
-  color: #505050;
-  letter-spacing: 0.04px;
-  margin-top: 50px;
-  margin-bottom: 3px; }
-
-.menu-dropdown p {
-  font-family: Roboto-Regular;
-  font-size: 11px;
-  color: #505050;
-  letter-spacing: -0.06px;
-  line-height: 16px; }
-
-.menu-dropdown .col {
-  margin-right: 4.5%;
-  padding-left: 0;
-  float: left; }
-
-.menu-dropdown .chapter-family {
-  margin-top: 18px; }
-
-.menu-dropdown .chapters {
-  float: left; }
-
-.menu-dropdown ul {
-  list-style-type: none;
-  padding: 0;
-  width: 80.5%; }
-
-.menu-dropdown ul li {
-  float: left;
-  width: 33%;
-  height: 80px;
-  padding: 0;
-  margin: 0; }
-
-.menu-dropdown .col-first {
-  width: 15%; }
-
 .topic-section {
   position: absolute;
   top: 0;
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-bottom: 200px;
-  display: none; }
+  padding-bottom: 200px; }
 
 .topic-section header {
   position: absolute;
@@ -124,9 +48,9 @@ body hr {
   width: 48%; }
 
 .topic-section .wrapper {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  width: 100%; }
+  margin: 0 auto; }
 
 .topic-section .topic-text {
   width: 100%;
@@ -140,7 +64,8 @@ body hr {
   top: -180px; }
 
 .topic-section .hero p {
-  font-family: MiriamLibre-Bold;
+  font-family: "Miriam Libre";
+  font-weight: bold;
   font-size: 30px;
   color: #505050;
   letter-spacing: 0.31px;
@@ -149,7 +74,8 @@ body hr {
   margin-bottom: 80px; }
 
 .topic-section h1 {
-  font-family: MiriamLibre-Bold;
+  font-family: 'Miriam Libre';
+  font-weight: bold;
   font-size: 36px;
   color: #505050;
   letter-spacing: 0.56px;
@@ -157,7 +83,8 @@ body hr {
   margin-top: 180px; }
 
 .topic-section h2 {
-  font-family: MiriamLibre-Bold;
+  font-family: "Miriam Libre";
+  font-weight: bold;
   font-size: 25px;
   color: #505050;
   letter-spacing: 0.31px;
@@ -171,7 +98,7 @@ body hr {
   padding-left: 56px; }
 
 .topic-section h3 {
-  font-family: MiriamLibre-Regular;
+  font-family: 'Miriam Libre';
   font-size: 24px;
   color: #505050;
   letter-spacing: 0.31px;
@@ -183,7 +110,8 @@ body hr {
   margin-top: 0px; }
 
 .topic-section h4 {
-  font-family: Roboto-Medium;
+  font-family: "Roboto";
+  font-weight: 700;
   font-size: 16px;
   color: #505050;
   letter-spacing: 0.31px;
@@ -191,14 +119,16 @@ body hr {
   margin-top: 45px; }
 
 .topic-section h5 {
-  font-family: MiriamLibre-Bold;
+  font-family: "Miriam Libre";
+  font-weight: bold;
   font-size: 10px;
   color: #505050;
   letter-spacing: 2.41px;
   text-transform: uppercase; }
 
 .topic-section h6 {
-  font-family: MiriamLibre-Bold;
+  font-family: "Miriam Libre";
+  font-weight: bold;
   font-size: 10px;
   color: #505050;
   letter-spacing: 0.04px;
@@ -206,14 +136,15 @@ body hr {
   margin-bottom: 3px; }
 
 .topic-section h7 {
-  font-family: MiriamLibre-Regular;
+  font-family: 'Miriam Libre';
   font-size: 24px;
   color: #505050;
   letter-spacing: 0.31px;
   line-height: 54px; }
 
 .topic-section p {
-  font-family: Roboto-Light;
+  font-family: "Roboto";
+  font-weight: 400;
   font-size: 16px;
   color: black;
   letter-spacing: 0.31px;
@@ -221,7 +152,7 @@ body hr {
   margin-bottom: 10px; }
 
 .topic-section code {
-  font-family: OverpassMono-Light;
+  font-family: 'Overpass Mono', monospace;
   font-size: 15px;
   color: #505050;
   letter-spacing: 0.31px;
@@ -257,7 +188,8 @@ body hr {
   /*height:485px;*/
   height: 80vh; }
 
-.topic-section .activity, .topic-section .assignment {
+.topic-section .activity,
+.topic-section .assignment {
   border-top: 1px solid #D8D8D8;
   border-bottom: 1px solid #D8D8D8;
   background-color: #F4F3F1;
@@ -271,7 +203,16 @@ body hr {
   margin-left: -50vw;
   margin-right: -50vw; }
 
-.topic-section .activity h1, .topic-section .activity h2, .topic-section .activity p, .topic-section .activity ul, .topic-section .activity ol, .topic-section .assignment h1, .topic-section .assignment h2, .topic-section .assignment p, .topic-section .assignment ul, .topic-section .assignment ol {
+.topic-section .activity h1,
+.topic-section .activity h2,
+.topic-section .activity p,
+.topic-section .activity ul,
+.topic-section .activity ol,
+.topic-section .assignment h1,
+.topic-section .assignment h2,
+.topic-section .assignment p,
+.topic-section .assignment ul,
+.topic-section .assignment ol {
   width: 100%;
   max-width: 768px;
   margin: 0 auto;
@@ -281,8 +222,11 @@ body hr {
 .topic-section .activity h1::before {
   content: "Activity"; }
 
-.topic-section .activity p, .topic-section .activity ol, .topic-section .activity ul {
-  font-family: MiriamLibre-Bold;
+.topic-section .activity p,
+.topic-section .activity ol,
+.topic-section .activity ul {
+  font-family: "Miriam Libre";
+  font-weight: bold;
   font-size: 17px;
   color: #505050;
   letter-spacing: 0.31px;
@@ -292,46 +236,54 @@ body hr {
   content: "Assignment"; }
 
 .topic-section .assignment h2:first-of-type + p {
-  font-family: MiriamLibre-Regular;
+  font-family: 'Miriam Libre';
   font-size: 20px;
   color: #505050;
   letter-spacing: 0.31px;
   line-height: 32px; }
 
-.topic-section .activity h1, .topic-section .assignment h1 {
+.topic-section .activity h1,
+.topic-section .assignment h1 {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
   color: #505050;
-  font-family: MiriamLibre-Bold;
+  font-family: "Miriam Libre";
+  font-weight: bold;
   font-size: 26px;
   color: #505050;
   letter-spacing: 0.37px;
   text-transform: none; }
 
-.topic-section .activity h1::before, .topic-section .assignment h1::before {
+.topic-section .activity h1::before,
+.topic-section .assignment h1::before {
   display: block;
   text-align: center;
-  font-family: MiriamLibre-Bold;
+  font-family: "Miriam Libre";
+  font-weight: bold;
   font-size: 10px;
   color: #505050;
   letter-spacing: 2.41px;
   text-transform: uppercase;
   margin-bottom: 25px; }
 
-.topic-section .activity h1 + p:first-of-type, .topic-section .assignment h1 + p:first-of-type {
+.topic-section .activity h1 + p:first-of-type,
+.topic-section .assignment h1 + p:first-of-type {
   text-align: center;
   width: 300px;
   margin: 0 auto;
   margin-bottom: 65px;
-  font-family: Roboto-Light;
+  font-family: "Roboto";
+  font-weight: 400;
   font-size: 14px;
   color: #000000;
   letter-spacing: 0.31px;
   line-height: 20px; }
 
-.topic-section .activity h2, .topic-section .assignment h2 {
-  font-family: MiriamLibre-Bold;
+.topic-section .activity h2,
+.topic-section .assignment h2 {
+  font-family: "Miriam Libre";
+  font-weight: bold;
   font-size: 10px;
   color: #505050;
   letter-spacing: 0.04px;
@@ -341,13 +293,15 @@ body hr {
   padding-bottom: 3px;
   border-bottom: 0.5px solid #979797; }
 
-.topic-section .activity img, .topic-section .assignment img {
+.topic-section .activity img,
+.topic-section .assignment img {
   height: auto;
   width: 100%; }
 
 .topic-section ul {
   list-style-type: none;
-  font-family: Roboto-Light;
+  font-family: "Roboto";
+  font-weight: 400;
   font-size: 16px;
   color: black;
   letter-spacing: 0.31px;
@@ -373,7 +327,7 @@ dl {
   width: 108%; }
 
 dl dt {
-  font-family: MiriamLibre-Regular;
+  font-family: 'Miriam Libre';
   font-size: 20px;
   color: #505050;
   letter-spacing: 0.31px;
@@ -382,7 +336,8 @@ dl dt {
 
 dl dd {
   display: inline;
-  font-family: Roboto-Light;
+  font-family: "Roboto";
+  font-weight: 400;
   font-size: 16px;
   color: black;
   letter-spacing: 0.31px;
@@ -415,7 +370,7 @@ dl dd {
   .topic-section .topic-text {
     padding: 0 20px 10px 20px; } }
 
-.comp-form-copy h1 {
+.comp-form .copy h1 {
   color: purple; }
 
 div.js-lab {
