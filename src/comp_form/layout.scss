@@ -35,10 +35,18 @@ body hr {
     margin-top: 0.3rem;
 }
 
+.fa-caret-left:before {
+    margin-right: 7px;
+}
+
+.fa-caret-right:before {
+    margin-left: 7px;
+}
+
 
 ///////////////////////////
 /// EACH CHAPTER/TOPIC
-.topic-section {
+.content {
     position: absolute;
     top: 0;
     width: 100%;
@@ -47,7 +55,7 @@ body hr {
     padding-bottom: 200px;
 }
 
-.topic-section {
+.content {
 
     header {
         position: absolute;

@@ -19,7 +19,13 @@ body hr {
   margin: 0;
   margin-top: 0.3rem; }
 
-.topic-section {
+.fa-caret-left:before {
+  margin-right: 7px; }
+
+.fa-caret-right:before {
+  margin-left: 7px; }
+
+.content {
   position: absolute;
   top: 0;
   width: 100%;
@@ -27,7 +33,7 @@ body hr {
   padding: 0;
   padding-bottom: 200px; }
 
-.topic-section header {
+.content header {
   position: absolute;
   font-family: Roboto-Bold;
   font-size: 12px;
@@ -39,31 +45,31 @@ body hr {
   padding: 20px 0 0 0;
   z-index: 100; }
 
-.topic-section header span {
+.content header span {
   display: inline-block;
   width: 17%; }
 
-.topic-section header span:first-child {
+.content header span:first-child {
   margin-left: 16%;
   width: 48%; }
 
-.topic-section .wrapper {
+.content .wrapper {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto; }
 
-.topic-section .topic-text {
+.content .topic-text {
   width: 100%;
   padding: 0 20% 10px 16%; }
 
-.topic-section .hero {
+.content .hero {
   background-color: #F4F3F1;
   padding-top: 180px;
   padding-bottom: 133px;
   position: relative;
   top: -180px; }
 
-.topic-section .hero p {
+.content .hero p {
   font-family: "Miriam Libre";
   font-weight: bold;
   font-size: 30px;
@@ -73,7 +79,7 @@ body hr {
   margin-top: 32px;
   margin-bottom: 80px; }
 
-.topic-section h1 {
+.content h1 {
   font-family: 'Miriam Libre';
   font-weight: bold;
   font-size: 36px;
@@ -82,7 +88,7 @@ body hr {
   text-transform: uppercase;
   margin-top: 180px; }
 
-.topic-section h2 {
+.content h2 {
   font-family: "Miriam Libre";
   font-weight: bold;
   font-size: 25px;
@@ -91,13 +97,13 @@ body hr {
   margin-top: 100px;
   margin-bottom: 24px; }
 
-.topic-section h2:first-child {
+.content h2:first-child {
   margin-top: 0; }
 
-.topic-section h2 span {
+.content h2 span {
   padding-left: 56px; }
 
-.topic-section h3 {
+.content h3 {
   font-family: 'Miriam Libre';
   font-size: 24px;
   color: #505050;
@@ -106,10 +112,10 @@ body hr {
   margin-top: 52px;
   margin-bottom: 15px; }
 
-.topic-section h3.first {
+.content h3.first {
   margin-top: 0px; }
 
-.topic-section h4 {
+.content h4 {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 16px;
@@ -118,7 +124,7 @@ body hr {
   line-height: 25px;
   margin-top: 45px; }
 
-.topic-section h5 {
+.content h5 {
   font-family: "Miriam Libre";
   font-weight: bold;
   font-size: 10px;
@@ -126,7 +132,7 @@ body hr {
   letter-spacing: 2.41px;
   text-transform: uppercase; }
 
-.topic-section h6 {
+.content h6 {
   font-family: "Miriam Libre";
   font-weight: bold;
   font-size: 10px;
@@ -135,14 +141,14 @@ body hr {
   margin-top: 50px;
   margin-bottom: 3px; }
 
-.topic-section h7 {
+.content h7 {
   font-family: 'Miriam Libre';
   font-size: 24px;
   color: #505050;
   letter-spacing: 0.31px;
   line-height: 54px; }
 
-.topic-section p {
+.content p {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 16px;
@@ -151,7 +157,7 @@ body hr {
   line-height: 25px;
   margin-bottom: 10px; }
 
-.topic-section code {
+.content code {
   font-family: 'Overpass Mono', monospace;
   font-size: 15px;
   color: #505050;
@@ -159,7 +165,7 @@ body hr {
   line-height: 25px;
   background-color: #F4F3F1; }
 
-.topic-section pre {
+.content pre {
   display: block;
   margin-bottom: 18px;
   font-size: 14px;
@@ -167,7 +173,7 @@ body hr {
   word-break: break-all;
   word-wrap: break-word; }
 
-.topic-section pre code {
+.content pre code {
   border: 1px solid #D8D8D8;
   border-radius: 0;
   padding: 0;
@@ -179,7 +185,7 @@ body hr {
   padding: 0.5em;
   margin-top: 20px; }
 
-.topic-section .slideshow {
+.content .slideshow {
   width: 95vw;
   margin: 50px 2.5vw 0 2.5vw;
   position: relative;
@@ -188,8 +194,8 @@ body hr {
   /*height:485px;*/
   height: 80vh; }
 
-.topic-section .activity,
-.topic-section .assignment {
+.content .activity,
+.content .assignment {
   border-top: 1px solid #D8D8D8;
   border-bottom: 1px solid #D8D8D8;
   background-color: #F4F3F1;
@@ -203,28 +209,28 @@ body hr {
   margin-left: -50vw;
   margin-right: -50vw; }
 
-.topic-section .activity h1,
-.topic-section .activity h2,
-.topic-section .activity p,
-.topic-section .activity ul,
-.topic-section .activity ol,
-.topic-section .assignment h1,
-.topic-section .assignment h2,
-.topic-section .assignment p,
-.topic-section .assignment ul,
-.topic-section .assignment ol {
+.content .activity h1,
+.content .activity h2,
+.content .activity p,
+.content .activity ul,
+.content .activity ol,
+.content .assignment h1,
+.content .assignment h2,
+.content .assignment p,
+.content .assignment ul,
+.content .assignment ol {
   width: 100%;
   max-width: 768px;
   margin: 0 auto;
   position: relative;
   right: 96px; }
 
-.topic-section .activity h1::before {
+.content .activity h1::before {
   content: "Activity"; }
 
-.topic-section .activity p,
-.topic-section .activity ol,
-.topic-section .activity ul {
+.content .activity p,
+.content .activity ol,
+.content .activity ul {
   font-family: "Miriam Libre";
   font-weight: bold;
   font-size: 17px;
@@ -232,18 +238,18 @@ body hr {
   letter-spacing: 0.31px;
   line-height: 25px; }
 
-.topic-section .assignment h1::before {
+.content .assignment h1::before {
   content: "Assignment"; }
 
-.topic-section .assignment h2:first-of-type + p {
+.content .assignment h2:first-of-type + p {
   font-family: 'Miriam Libre';
   font-size: 20px;
   color: #505050;
   letter-spacing: 0.31px;
   line-height: 32px; }
 
-.topic-section .activity h1,
-.topic-section .assignment h1 {
+.content .activity h1,
+.content .assignment h1 {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
@@ -255,8 +261,8 @@ body hr {
   letter-spacing: 0.37px;
   text-transform: none; }
 
-.topic-section .activity h1::before,
-.topic-section .assignment h1::before {
+.content .activity h1::before,
+.content .assignment h1::before {
   display: block;
   text-align: center;
   font-family: "Miriam Libre";
@@ -267,8 +273,8 @@ body hr {
   text-transform: uppercase;
   margin-bottom: 25px; }
 
-.topic-section .activity h1 + p:first-of-type,
-.topic-section .assignment h1 + p:first-of-type {
+.content .activity h1 + p:first-of-type,
+.content .assignment h1 + p:first-of-type {
   text-align: center;
   width: 300px;
   margin: 0 auto;
@@ -280,8 +286,8 @@ body hr {
   letter-spacing: 0.31px;
   line-height: 20px; }
 
-.topic-section .activity h2,
-.topic-section .assignment h2 {
+.content .activity h2,
+.content .assignment h2 {
   font-family: "Miriam Libre";
   font-weight: bold;
   font-size: 10px;
@@ -293,12 +299,12 @@ body hr {
   padding-bottom: 3px;
   border-bottom: 0.5px solid #979797; }
 
-.topic-section .activity img,
-.topic-section .assignment img {
+.content .activity img,
+.content .assignment img {
   height: auto;
   width: 100%; }
 
-.topic-section ul {
+.content ul {
   list-style-type: none;
   font-family: "Roboto";
   font-weight: 400;
@@ -307,10 +313,10 @@ body hr {
   letter-spacing: 0.31px;
   line-height: 25px; }
 
-.topic-section li {
+.content li {
   margin-bottom: 10px; }
 
-.topic-section ul li:before {
+.content ul li:before {
   content: ".";
   position: relative;
   top: -0.1em;
