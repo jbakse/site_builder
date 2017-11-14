@@ -104,7 +104,7 @@ Begin designing a user interface for a fictional machine by considering which pa
 6. Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present.
 
 ::: .half
-## Machine Types
+#### Machine Types {underline}
 - A car
 - Planet generator
 - Grocery-shopping bot
@@ -115,7 +115,7 @@ Begin designing a user interface for a fictional machine by considering which pa
 /::
 
 ::: .half
-## Users
+#### Users {underline}
 - Users
 - Daily user
 - One-time user
@@ -128,7 +128,9 @@ Begin designing a user interface for a fictional machine by considering which pa
 /::
 
 ## Globals as Interfaces
+
 A quick-and-dirty way to make your comp form sketches “tweakable” is to use global variables for your parameters and group them at the top of the script.
+
 - This is very easy to set up.
 - Works particularly well for small one-off sketches that only you will ever use.
 - Choose clear variable names that explain the purpose of each parameter.
@@ -137,10 +139,12 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 
 ::: js-lab
 /comp_form/square.js
-:::
+/::
 
-## p5.js Do
+## p5.js Dom Interfaces
+
 The p5 Dom Library provides functions that allow you create html elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.
+
 - This is more complicated to set up, but still pretty quick.
 - This is a better choice if you want to quickly explore your parameter-space.
 - Label your inputs clearly. Consider your interface carefully.
@@ -201,6 +205,6 @@ Use `map()` to remap values from one range to another.
 
 @@include('./assignments/parameters.md')
 
-:::
+/::
 
 ## Reference Links

@@ -14,6 +14,10 @@
         clear: both;
     }
 
+    .underline {
+        border-bottom: 1px solid;
+    }
+
     /* half */
     .half {
         box-sizing: border-box;
@@ -51,7 +55,7 @@
     }
 
     /* activity */
-    .activity {
+    .activity, .assignment {
         @include color-band($light-grey, $middle-grey);
         @include clearfix;
 
@@ -94,6 +98,27 @@
             font-size: 14px;
             letter-spacing: 0.31px;
             line-height: 20px;
+        }
+    }
+
+    .assignment {
+        >h2:first-child::before {
+            content: "assigment";
+        }
+
+        >h3 {
+            font-family: "Miriam Libre";
+            font-weight: bold;
+            font-size: 10px;
+            letter-spacing: 0.04px;
+
+            color: $dark-grey;
+
+            padding-bottom: 3px;
+            margin-top: 65px;
+            margin-bottom: 18px;
+
+            border-bottom: 0.5px solid $middle-grey;
         }
     }
 }

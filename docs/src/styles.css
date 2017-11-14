@@ -587,6 +587,8 @@
       margin-right: calc( (100% + 15px * 2) / -8 * 2 - 15px); } }
   .comp-form-copy .clear {
     clear: both; }
+  .comp-form-copy .underline {
+    border-bottom: 1px solid; }
   .comp-form-copy .half {
     box-sizing: border-box;
     width: calc((100% - 15px)/2);
@@ -606,12 +608,12 @@
     margin-right: -15px; }
   .comp-form-copy .callout *:last-child {
     margin-bottom: 0; }
-  .comp-form-copy .activity {
+  .comp-form-copy .activity, .comp-form-copy .assignment {
     position: relative;
     margin-top: 90px;
     padding-top: 50px;
     padding-bottom: 50px; }
-    .comp-form-copy .activity::before {
+    .comp-form-copy .activity::before, .comp-form-copy .assignment::before {
       position: absolute;
       background: #F4F3F1;
       top: 0;
@@ -622,11 +624,11 @@
       content: "";
       border-top: 1px solid #CCC;
       border-bottom: 1px solid #CCC; }
-    .comp-form-copy .activity:after {
+    .comp-form-copy .activity:after, .comp-form-copy .assignment:after {
       content: "";
       display: table;
       clear: both; }
-    .comp-form-copy .activity > h2:first-child {
+    .comp-form-copy .activity > h2:first-child, .comp-form-copy .assignment > h2:first-child {
       margin-top: 0;
       text-align: center;
       color: #505050;
@@ -635,14 +637,14 @@
       font-size: 26px;
       letter-spacing: 0.37px;
       text-transform: none; }
-    .comp-form-copy .activity > h2:first-child::before {
+    .comp-form-copy .activity > h2:first-child::before, .comp-form-copy .assignment > h2:first-child::before {
       content: "activity";
       display: block;
       margin-bottom: 25px;
       font-size: 10px;
       letter-spacing: 2.41px;
       text-transform: uppercase; }
-    .comp-form-copy .activity > h2:first-child + p {
+    .comp-form-copy .activity > h2:first-child + p, .comp-form-copy .assignment > h2:first-child + p {
       text-align: center;
       width: 300px;
       margin: 0 auto;
@@ -652,6 +654,18 @@
       font-size: 14px;
       letter-spacing: 0.31px;
       line-height: 20px; }
+  .comp-form-copy .assignment > h2:first-child::before {
+    content: "assigment"; }
+  .comp-form-copy .assignment > h3 {
+    font-family: "Miriam Libre";
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 0.04px;
+    color: #505050;
+    padding-bottom: 3px;
+    margin-top: 65px;
+    margin-bottom: 18px;
+    border-bottom: 0.5px solid #CCC; }
 
 div.js-lab {
   height: 500px;
