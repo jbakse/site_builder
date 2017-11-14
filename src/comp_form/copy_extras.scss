@@ -49,4 +49,51 @@
     .callout *:last-child {
         margin-bottom: 0;
     }
+
+    /* activity */
+    .activity {
+        @include color-band($light-grey, $middle-grey);
+        @include clearfix;
+
+        margin-top: 90px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        >h2:first-child {
+            margin-top: 0;
+            text-align: center;
+            color: $dark-grey;
+
+            font-family: "Miriam Libre";
+            font-weight: bold;
+            font-size: 26px;
+            letter-spacing: 0.37px;
+
+            text-transform: none;
+        }
+
+        >h2:first-child::before {
+            content: "activity";
+            display: block;
+            margin-bottom: 25px;
+
+            font-size: 10px;
+            letter-spacing: 2.41px;
+
+            text-transform: uppercase;
+        }
+
+        >h2:first-child+p {
+            text-align: center;
+            width: 300px;
+            margin: 0 auto;
+            margin-bottom: 65px;
+
+            font-family: "Roboto";
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 0.31px;
+            line-height: 20px;
+        }
+    }
 }

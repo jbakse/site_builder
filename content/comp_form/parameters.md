@@ -14,30 +14,30 @@ description: Parameters are factors of a system that are exposed. Exposing param
 software: p5.js
 ---
 
-## 01<span>Objectives</span>
+## Objectives
 - Consider interface design as exposing parameters
 - Practice problem analysis and interface design
 - Practice user-centered design concepts
 - Technical: Exposing Parameters as Globals
 - Technical: Exposing Parameters with HTML Controls
 
-## 02<span>Slides</span>
+## Slides
 Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
 
 **Consider:** How did artists use parameters in each work?
 
-::: slides
-@@include('./slides.yaml')
-:::
+ ::: slides
+ @@include('./slides.yaml')
+ :::
 
 ::: .activity
-# The Blue Square
+## The Blue Square
 Imagine a program that generates images, including the one below. What parameters might such a program accept?
 
 ![alt text](./activities/blue-square.png "Blue Square Activity")
-:::
+/::
 
-## 03<span>Parameters & Interface Design</span>
+## Parameters & Interface Design
 ### Interfaces
 An **interface** is the common boundary between two systems. Two of the most important interfaces of software systems are **user interfaces** (UIs) and **application programming interfaces** (APIs).
 - A **UI** is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. The UI is the primary interface in most applications.
@@ -85,53 +85,49 @@ The way that you think about your software system is often very different from t
 ### Parametric Design
 Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.
 
+::: .callout
 Parametricism
 : is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.
-
+/::
 
 
 ::: .activity
-# Fictional Machines
-  Begin designing a user interface for a fictional machine by considering which parameters you would expose.
+## Fictional Machines
 
-  1. Choose a machine from the list below.
-	2. Spend 6 minutes brainstorming possible parameters for your machine.
-	3. Choose a user from the list below.
-	4. Spend 3 minutes deciding which parameters to expose for your user. Choose exactly 3 parameters.
-	5. Spend 3 minutes naming your parameters, and defining the allowed values for each.
-	6. Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present.
+Begin designing a user interface for a fictional machine by considering which parameters you would expose.
 
+1. Choose a machine from the list below.
+2. Spend 6 minutes brainstorming possible parameters for your machine.
+3. Choose a user from the list below.
+4. Spend 3 minutes deciding which parameters to expose for your user. Choose exactly 3 parameters.
+5. Spend 3 minutes naming your parameters, and defining the allowed values for each.
+6. Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present.
+
+::: .half
 ## Machine Types
-A car
+- A car
+- Planet generator
+- Grocery-shopping bot
+- Internet surveillance front-end
+- Genetic pet builder
+- Love potion mixer
+- Users
+/::
 
-Planet generator
-
-Grocery-shopping bot
-
-Internet surveillance front-end
-
-Genetic pet builder
-
-Love potion mixer
-
-Users
-
+::: .half
 ## Users
-Users 
+- Users
+- Daily user
+- One-time user
+- A child
+- An [machine type] enthusiast
+- Another machine
+/::
 
-Daily user
 
-One-time user
+/::
 
-A child
-
-An [machine type] enthusiast
-
-Another machine
-
-:::
-
-## 04<span>Globals as Interfaces</span>
+## Globals as Interfaces
 A quick-and-dirty way to make your comp form sketches “tweakable” is to use global variables for your parameters and group them at the top of the script.
 - This is very easy to set up.
 - Works particularly well for small one-off sketches that only you will ever use.
@@ -143,7 +139,7 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 /comp_form/square.js
 :::
 
-## 05<span>p5.js Dom Interfaces
+## p5.js Do
 The p5 Dom Library provides functions that allow you create html elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.
 - This is more complicated to set up, but still pretty quick.
 - This is a better choice if you want to quickly explore your parameter-space.
@@ -180,7 +176,7 @@ function draw() {
 }
 ```
 
-## 06<span>Get to Know p5</span>
+## Get to Know p5
 If you haven’t used the following features of p5, take a look.
 
 [p5 Reference](https://p5js.org/reference/)
@@ -207,4 +203,4 @@ Use `map()` to remap values from one range to another.
 
 :::
 
-## 07<span>Reference Links</span>
+## Reference Links

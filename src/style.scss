@@ -8,8 +8,8 @@
 
 @mixin full-width {
     @include media-breakpoint-up(md) {
-        @include margin-left-out(10, 1, 15px);
-        @include margin-right-out(10, 1, 15px);
+        @include margin-left-out(8, 2, 15px);
+        @include margin-right-out(8, 2, 15px);
     }
 }
 

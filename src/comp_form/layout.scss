@@ -1,4 +1,4 @@
-@mixin color-band($c: $light-grey) {
+@mixin color-band($c: $light-grey, $b: false) {
     position: relative;
     &::before {
         position: absolute;
@@ -9,6 +9,11 @@
         right: -50vw;
         z-index: -100;
         content: "";
+
+        @if $b {
+            border-top: 1px solid $b;
+            border-bottom: 1px solid $b;
+        }
     }
 }
 
@@ -149,18 +154,7 @@
     #scroll-out {
         background: rgba($debug-blue, .1);
     }
-}
-
-
-
-
-
-
-
-
-
-
-///////////////////////////
+} ///////////////////////////
 /// EACH CHAPTER/TOPIC
 .bad {
     // .content {

@@ -70,14 +70,12 @@ module.exports = function markdownToHtml(file) {
         // get the file contents
         let result = file.contents.toString();
 
-        // process them
+        // process components (twice we allow one level nested)
         result = buildComponents(result);
+        result = buildComponents(result);
+
+        // markdown it
         result = md.render(result);
-
-
-        // result = result.replace(/<li>/g, `<li><div>`);
-        // result = result.replace(/<\/li > /g, `</div></li>`);
-
 
 
 
@@ -111,12 +109,15 @@ module.exports = function markdownToHtml(file) {
  */
 function buildComponents(input) {
 
-    let component_regex = /\n:::(.*?)\n([\s\S]*?)\n:::/g;
+    //    let component_regex = /\n:::(.*?)\n([\s\S]*?)\n:::/g;
+
+    let component_regex = /\n:::(.*?)\n(((?!\n:::)[\s\S])*?)\n\/::/g;
+
     let result = input.replace(component_regex, buildComponent);
     return result;
 
 }
-
+// b((?!f).)*i
 function buildComponent(match, selector, content) {
 
     // trim and split on spaces (collapse multiple spaces)

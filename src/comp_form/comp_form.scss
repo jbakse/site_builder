@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Roboto:300,400|Overpass+Mono:300');
+@import url('https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Roboto:300,500|Overpass+Mono:300');
 
 $debug-blue: #0af;
 $debug-red: #f55;
@@ -7,7 +7,7 @@ $debug-red-transparent: rgba($debug-red, .1);
 
 $black: #000;
 $light-grey: #F4F3F1;
-$middle-grey: #AAA;
+$middle-grey: #CCC;
 $dark-grey: #505050;
 
 $theme-colors: map-merge( ( dark-grey: $dark-grey),

@@ -52,16 +52,16 @@ This is a callout. This is used for a lot of examples on this page.{callout}
 You can use the `.half` util to make columns. 
 
 Just like this.
-:::
+/::
 
 ::: .half
 #### Right Half
 And like this.
-:::
+/::
 
 ::: .clear
 
-:::
+/::
 
 ### Full Width
 

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Roboto:300,400|Overpass+Mono:300);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Roboto:300,500|Overpass+Mono:300);@charset "UTF-8";
 .comp-form {
   overflow-x: hidden; }
   .comp-form #logo {
@@ -60,7 +60,7 @@
       letter-spacing: 0.04px;
       margin-top: 50px;
       padding-bottom: 3px;
-      border-bottom: 1px solid #AAA; }
+      border-bottom: 1px solid #CCC; }
     .comp-form #hero .description {
       font-family: "Miriam Libre";
       font-weight: bold;
@@ -470,7 +470,7 @@
     position: relative; }
   .comp-form-copy blockquote::before {
     content: "";
-    background: #AAA;
+    background: #CCC;
     width: 4px;
     position: absolute;
     top: 0;
@@ -535,7 +535,7 @@
   .comp-form-copy dl > dd {
     margin-bottom: 15px; }
   .comp-form-copy hr {
-    border-top: 1px solid #AAA; }
+    border-top: 1px solid #CCC; }
   .comp-form-copy a, .comp-form-copy a:hover {
     color: inherit;
     padding-bottom: 2px;
@@ -576,14 +576,15 @@
 .comp-form-copy {
   /* util */
   /* half */
-  /* callout */ }
+  /* callout */
+  /* activity */ }
   .comp-form-copy .no-margin {
     margin-left: -15px;
     margin-right: -15px; }
   @media (min-width: 768px) {
     .comp-form-copy .full-width {
-      margin-left: calc( (100% + 15px * 2) / -10 * 1 - 15px);
-      margin-right: calc( (100% + 15px * 2) / -10 * 1 - 15px); } }
+      margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);
+      margin-right: calc( (100% + 15px * 2) / -8 * 2 - 15px); } }
   .comp-form-copy .clear {
     clear: both; }
   .comp-form-copy .half {
@@ -605,14 +606,60 @@
     margin-right: -15px; }
   .comp-form-copy .callout *:last-child {
     margin-bottom: 0; }
+  .comp-form-copy .activity {
+    position: relative;
+    margin-top: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    .comp-form-copy .activity::before {
+      position: absolute;
+      background: #F4F3F1;
+      top: 0;
+      bottom: 0;
+      left: -50vw;
+      right: -50vw;
+      z-index: -100;
+      content: "";
+      border-top: 1px solid #CCC;
+      border-bottom: 1px solid #CCC; }
+    .comp-form-copy .activity:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .comp-form-copy .activity > h2:first-child {
+      margin-top: 0;
+      text-align: center;
+      color: #505050;
+      font-family: "Miriam Libre";
+      font-weight: bold;
+      font-size: 26px;
+      letter-spacing: 0.37px;
+      text-transform: none; }
+    .comp-form-copy .activity > h2:first-child::before {
+      content: "activity";
+      display: block;
+      margin-bottom: 25px;
+      font-size: 10px;
+      letter-spacing: 2.41px;
+      text-transform: uppercase; }
+    .comp-form-copy .activity > h2:first-child + p {
+      text-align: center;
+      width: 300px;
+      margin: 0 auto;
+      margin-bottom: 65px;
+      font-family: "Roboto";
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 0.31px;
+      line-height: 20px; }
 
 div.js-lab {
   height: 500px;
   outline: 1px solid gray; }
   @media (min-width: 768px) {
     div.js-lab {
-      margin-left: calc( (100% + 15px * 2) / -10 * 1 - 15px);
-      margin-right: calc( (100% + 15px * 2) / -10 * 1 - 15px); } }
+      margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);
+      margin-right: calc( (100% + 15px * 2) / -8 * 2 - 15px); } }
 
 iframe.js-lab {
   border: none;
