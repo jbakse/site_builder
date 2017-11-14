@@ -5,11 +5,18 @@
 // custom utilities
 @import './layout_utilities';
 
-// additional theme colors
-// $accent: #5376F5;
-// $theme-colors: map-merge(( accent: $accent), $theme-colors);
-// components
+
+@mixin full-width {
+    @include media-breakpoint-up(md) {
+        @include margin-left-out(10, 1, 15px);
+        @include margin-right-out(10, 1, 15px);
+    }
+}
+
+
+
 @import './comp_form/comp_form';
+
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: Markdown
 layout: layouts/compform_chapter.pug
-debug: false
+debug: true
 
 header_title: "Special: Markdown"
 next: TBD
@@ -9,7 +9,7 @@ next_url: layouts/tbd.html
 previous: TBD
 previous_url: layouts/tbd.html
 
-hero_title: Markdown + More
+hero_title: Markdown
 description: Basic Markdown and other markup features for general copyrighting.
 software: markdown-it, custom
 ---
@@ -114,6 +114,15 @@ Definition lists are provided by the `markdown-it` extension `markdown-it-deflis
   - Apple
 
 
+##  Tables
+
+Column 1    | Column 2
+---         | ----
+1           | 2
+A           | B
+
+
+
 ## Images
 
 Images are *also* fun. This is an image.
@@ -129,6 +138,9 @@ Images are *also* fun. This is an image.
 
 #### Large Image [no-margin]
 ![sierpinski](images/sierpinski_large.png){no-margin}
+
+#### Large Image [full-width]
+![sierpinski](images/sierpinski_large.png){full-width scale}
 
 #### 2 Large Images
 ![sierpinski](images/sierpinski_large.png)
@@ -151,8 +163,6 @@ Images are *also* fun. This is an image.
 
 ---
 
-
-
 ## Inline-Styles
 
 - You can have *italic*.
@@ -167,52 +177,8 @@ Links are fun. This is a [link to google](http://www.google.com). Raw links work
 
 
 
-## Speical: Tables
-
-Column 1    | Column 2
----         | ----
-1           | 2
-A           | B
 
 
 
 
 
-
-
-
-
-
-
-## Special: Special Sections
-
-::: #example-1 .callout
-You can wrap a special section in a div with an id and class.
-
-This isn't standard markup, or even `markdown-it`; this is part of `site builder`.
-:::
-
-These let you do some neat tricks like columns!
-
-::: .half
-### Left Half
-You can use the `.half` util to make columns.
-:::
-
-::: .half
-### Right Half
-Like this.
-:::
-
-::: .clear
-
-:::
-
-## Special: Add a Class
-
-You can add a class to a thing (a paragraph or list or something) using `markdown-it-classy`.{callout}
-
-
-## Inline HTML
-
-<div class="callout">If you can't get the markdown to do what you want, you can <em>always</em> just use html.</div>

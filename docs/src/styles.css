@@ -421,9 +421,7 @@
   /* dl */
   /* hr */
   /* links */
-  /* images */
-  /* util */
-  /* special */ }
+  /* images */ }
   .comp-form-copy h2 {
     font-family: "Miriam Libre";
     font-weight: bold;
@@ -574,36 +572,47 @@
   .comp-form-copy .three-up img:nth-child(3n - 2),
   .comp-form-copy .three-up img:nth-child(3n - 1) {
     margin-right: 10px; }
+
+.comp-form-copy {
+  /* util */
+  /* half */
+  /* callout */ }
   .comp-form-copy .no-margin {
     margin-left: -15px;
     margin-right: -15px; }
+  @media (min-width: 768px) {
+    .comp-form-copy .full-width {
+      margin-left: calc( (100% + 15px * 2) / -10 * 1 - 15px);
+      margin-right: calc( (100% + 15px * 2) / -10 * 1 - 15px); } }
+  .comp-form-copy .clear {
+    clear: both; }
   .comp-form-copy .half {
     box-sizing: border-box;
-    width: 49%;
+    width: calc((100% - 15px)/2);
     display: block;
-    float: left; }
-    .comp-form-copy .half:after {
-      content: "";
-      display: table;
-      clear: both; }
-  .comp-form-copy .clear {
+    float: left;
+    margin-right: 15px; }
+  .comp-form-copy .half + .half {
+    margin-right: 0; }
+  .comp-form-copy .half + .half + * {
     clear: both; }
   .comp-form-copy .callout {
     padding: 15px;
-    margin-left: -15px;
-    margin-right: -15px;
     background: #F4F3F1;
     margin-bottom: 10px; }
+  .comp-form-copy .callout:not(.full-width) {
+    margin-left: -15px;
+    margin-right: -15px; }
   .comp-form-copy .callout *:last-child {
     margin-bottom: 0; }
 
 div.js-lab {
   height: 500px;
   outline: 1px solid gray; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     div.js-lab {
-      margin-left: calc( (100% + 15px * 2) / -7 * 2 - 15px);
-      margin-right: calc( (100% + 15px * 2) / -7 * 3 - 15px); } }
+      margin-left: calc( (100% + 15px * 2) / -10 * 1 - 15px);
+      margin-right: calc( (100% + 15px * 2) / -10 * 1 - 15px); } }
 
 iframe.js-lab {
   border: none;

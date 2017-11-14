@@ -1,0 +1,52 @@
+.comp-form-copy {
+
+    /* util */
+    .no-margin {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .full-width {
+        @include full-width;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    /* half */
+    .half {
+        box-sizing: border-box;
+        width: calc((100% - 15px)/2);
+
+        display: block;
+        float: left;
+        margin-right: 15px;
+    }
+
+    .half+.half {
+        margin-right: 0;
+    }
+
+    .half+.half+* {
+        clear: both;
+    }
+
+
+    /* callout */
+    .callout {
+        padding: 15px;
+
+        background: $light-grey;
+        margin-bottom: 10px;
+    }
+
+    .callout:not(.full-width) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .callout *:last-child {
+        margin-bottom: 0;
+    }
+}
