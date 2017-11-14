@@ -1,7 +1,22 @@
-.comp-form {
-    .copy {
-        h1 {
-            color: purple;
-        }
+.comp-form-copy {
+    .purple {
+        color: purple;
+    }
+
+    .callout {
+        border: 1px dotted orange;
+    }
+
+    .half {
+        width: 50%;
+        float: left;
+    }
+
+
+    counter-reset: h2s;
+    >h2::before {
+        counter-increment: h2s;
+        content: counter(h2s, decimal-leading-zero);
+        padding-right: 2em;
     }
 }

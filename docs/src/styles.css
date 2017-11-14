@@ -376,8 +376,19 @@ dl dd {
   .topic-section .topic-text {
     padding: 0 20px 10px 20px; } }
 
-.comp-form .copy h1 {
-  color: purple; }
+.comp-form-copy {
+  counter-reset: h2s; }
+  .comp-form-copy .purple {
+    color: purple; }
+  .comp-form-copy .callout {
+    border: 1px dotted orange; }
+  .comp-form-copy .half {
+    width: 50%;
+    float: left; }
+  .comp-form-copy > h2::before {
+    counter-increment: h2s;
+    content: counter(h2s, decimal-leading-zero);
+    padding-right: 2em; }
 
 div.js-lab {
   height: 500px;

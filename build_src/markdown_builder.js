@@ -34,6 +34,8 @@ md.use(require('markdown-it-deflist'));
 md.use(require('markdown-it-anchor'), {
     permalink: false
 });
+md.use(require('markdown-it-classy'));
+
 
 // customize MarkdownIt markup
 md.renderer.rules.table_open = function(tokens, idx, options, env, self) {
@@ -145,7 +147,7 @@ function buildComponent(match, selector, content) {
     ids = ids.join(" ");
 
     return t.trimLines(`
-        <div id="${ids}" class="${classes}">
-        \n${content}\n
-        </div>`);
+<div id="${ids}" class="${classes}">
+\n${content}\n
+</div>`);
 }
