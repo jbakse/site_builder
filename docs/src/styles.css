@@ -589,16 +589,17 @@
     clear: both; }
   .comp-form-copy .underline {
     border-bottom: 1px solid; }
-  .comp-form-copy .half {
-    box-sizing: border-box;
-    width: calc((100% - 15px)/2);
-    display: block;
-    float: left;
-    margin-right: 15px; }
-  .comp-form-copy .half + .half {
-    margin-right: 0; }
-  .comp-form-copy .half + .half + * {
-    clear: both; }
+  @media (min-width: 576px) {
+    .comp-form-copy .half {
+      box-sizing: border-box;
+      width: calc((100% - 15px)/2);
+      display: block;
+      float: left;
+      margin-right: 15px; }
+    .comp-form-copy .half + .half {
+      margin-right: 0; }
+    .comp-form-copy .half + .half + * {
+      clear: both; } }
   .comp-form-copy .callout {
     padding: 15px;
     background: #F4F3F1;

@@ -19,21 +19,24 @@
     }
 
     /* half */
-    .half {
-        box-sizing: border-box;
-        width: calc((100% - 15px)/2);
+    @include media-breakpoint-up(sm) {
 
-        display: block;
-        float: left;
-        margin-right: 15px;
-    }
+        .half {
+            box-sizing: border-box;
+            width: calc((100% - 15px)/2);
 
-    .half+.half {
-        margin-right: 0;
-    }
+            display: block;
+            float: left;
+            margin-right: 15px;
+        }
 
-    .half+.half+* {
-        clear: both;
+        .half+.half {
+            margin-right: 0;
+        }
+
+        .half+.half+* {
+            clear: both;
+        }
     }
 
 
