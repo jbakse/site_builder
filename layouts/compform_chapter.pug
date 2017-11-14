@@ -28,41 +28,31 @@ html(lang="en")
 
 	body.comp-form(class= debug?"debug":"")
 		
-		#logo
-			svg(width="20px", height="18px", viewbox="0 0 20 18", version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink")
-				defs
-				g#Page-1(stroke="none", stroke-width="1", fill="none", fill-rule="evenodd")
-					g#Desktop(transform="translate(-18.000000, -16.000000)", fill="#000000")
-						g#Compform-Logo(transform="translate(18.000000, 16.000000)")
-							polygon#Triangle-Copy-4(points="15 9 20 18 10 18")
-							polygon#Triangle-Copy-5(points="5 9 10 18 0 18")
-							polygon#Triangle-Copy-6(points="10 0 15 9 5 9")
-
-		#chapter-menu
-			.wrapper
+		include ./_logo.pug
 
 		.content
-			header
-				span 
-					!= header_title
-				span
-					a(href=previous_url)
-						i.fa.fa-caret-left.fa-lg
-						!= previous
-				span
-					a(href=next_url)
-						!= next
-						i.fa.fa-caret-right.fa-lg
-					
-			.hero
-				.topic-text
-						h1= title
-							h6 The What
-							hr
-							p #{description}
-							h6 The How
-							hr
-							h7= software	
+			if header_title
+				header
+					span 
+						!= header_title
+					span
+						a(href=previous_url)
+							i.fa.fa-caret-left.fa-lg
+							!= previous
+					span
+						a(href=next_url)
+							!= next
+							i.fa.fa-caret-right.fa-lg
+			if hero_title		
+				.hero
+					.topic-text
+							h1= hero_title
+								h6 The What
+								hr
+								p #{description}
+								h6 The How
+								hr
+								h7= software	
 				
 			.copy
 				.topic-text.comp-form-copy

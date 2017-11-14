@@ -2,15 +2,18 @@
 
 $warm-light-grey: #F4F3F1;
 $dark-grey: #505050;
+#logo {
+    position: fixed;
+    z-index: 1000;
+    top: 16px;
+    left: 18px;
+    cursor: pointer;
+}
+
+
 
 .comp-form {
-    .logo {
-        position: fixed;
-        z-index: 1000;
-        top: 16px;
-        left: 18px;
-        cursor: pointer;
-    }
+
 
 
 

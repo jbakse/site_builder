@@ -1,14 +1,17 @@
 ---
-header_title: "Topic 3: Parameters"
 title: Parameters
-description: Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
-software: p5.js
+layout: layouts/compform_chapter.pug
+debug: false
+
+header_title: "Topic 3: Parameters"
 next: Strategy
 next_url: layouts/strategy.html
 previous: Animation
 previous_url: layouts/animation.html
-layout: layouts/compform_chapter.pug
-debug: false
+
+hero_title: Parameters
+description: Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
+software: p5.js
 ---
 
 ## 01<span>Objectives</span>
