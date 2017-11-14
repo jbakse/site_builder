@@ -1,7 +1,7 @@
 ---
 title: Markdown
 layout: layouts/compform_chapter.pug
-debug: true
+debug: false
 
 header_title: "Special: Markdown"
 next: TBD
@@ -28,6 +28,10 @@ Break up major sections into subsections with h3.
 
 H4s are good for titling lists, etc. Try not to need deeper levels than this.
 
+##### this is an h5
+
+Don't use these!
+ 
 
 ## Paragraphs
 
@@ -53,10 +57,17 @@ Annonymous{attrib}
 </div>
 ```
 
+```html
+<p>
+Paragraphs are easy. They look just like this, because this is just a paragraph. Nothing to it, easy-peasy. I'm gonna write that twice! Paragraphs are easy. They look just like this, because this is just a paragraph. Nothing to it, easy-peasy.
+</p>
+```
+
 ```javascript
 function someJavascript() {};
 ```
 
+Inline `code` works too.
 
 
 
@@ -72,7 +83,7 @@ function someJavascript() {};
 ### Number List
 1. I am a list item
 2. I am another item
-2. I am the last item
+2. I am the last item. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
 
 ### Definition List
 
@@ -86,15 +97,60 @@ Definition lists are provided by the `markdown-it` extension `markdown-it-deflis
 
 ### Complex Lists
 
-- I am a list item with multiple paragraphs
+- I am a list item with multiple paragraphs!
 
-  I'm the other paragraph
+  I'm the other paragraph!
+
+  I'm a third paragraph.
 
 - I am another item
 
   > I've got a blockquote in me!
 
 - I am the last item
+
+- I've got a nested list
+  - Bear
+  - Apple
+
+
+## Images
+
+Images are *also* fun. This is an image.
+
+#### Large Image
+![sierpinski](images/sierpinski_large.png)
+
+#### Small Image
+![sierpinski](images/sierpinski_small.png)
+
+#### Small Image [scale pixel]
+![sierpinski](images/sierpinski_small.png){scale pixel}
+
+#### Large Image [no-margin]
+![sierpinski](images/sierpinski_large.png){no-margin}
+
+#### 2 Large Images
+![sierpinski](images/sierpinski_large.png)
+![sierpinski](images/sierpinski_large.png)
+
+#### 4 Large Images [two-up]
+![sierpinski](images/sierpinski_large.png)
+![sierpinski](images/sierpinski_large.png)
+![sierpinski](images/sierpinski_large.png)
+![sierpinski](images/sierpinski_large.png){two-up}
+
+#### 3 Large Images [three-up no-margin]
+![sierpinski](images/sierpinski_large.png)
+![sierpinski](images/sierpinski_large.png)
+![sierpinski](images/sierpinski_large.png){three-up no-margin}
+
+
+
+## Horizontal Rules
+
+---
+
 
 
 ## Inline-Styles
@@ -104,9 +160,14 @@ Definition lists are provided by the `markdown-it` extension `markdown-it-deflis
 - They can have ~~strike through~~.
 - You can have `inline code`. 
 
+## Links
+
+Links are fun. This is a [link to google](http://www.google.com). Raw links work too: http://www.google.com.
 
 
-## Tables
+
+
+## Speical: Tables
 
 Column 1    | Column 2
 ---         | ----
@@ -120,20 +181,7 @@ A           | B
 
 
 
-## Horizontal Rules
 
----
-
-## Links
-
-Links are fun. This is a [link to google](http://www.google.com). Raw links work too: http://www.google.com.
-
-
-## Images
-
-Images are *also* fun. This is an image.
-
-![sierpinski](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Sierpinski_triangle_evolution.svg/1024px-Sierpinski_triangle_evolution.svg.png)
 
 
 ## Special: Special Sections
@@ -148,23 +196,21 @@ These let you do some neat tricks like columns!
 
 ::: .half
 ### Left Half
-- Apple
-- Bear
-- Car
+You can use the `.half` util to make columns.
 :::
 
 ::: .half
 ### Right Half
-- Zeebra
-- Yellow
-- War
+Like this.
 :::
 
+::: .clear
+
+:::
 
 ## Special: Add a Class
 
-You can add a class to a thing (a paragraph or list or something) using the `markdown-it-classy`.
-{purple}
+You can add a class to a thing (a paragraph or list or something) using `markdown-it-classy`.{callout}
 
 
 ## Inline HTML

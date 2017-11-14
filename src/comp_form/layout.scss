@@ -1,4 +1,21 @@
+@mixin color-band($c: $light-grey) {
+    position: relative;
+    &::before {
+        position: absolute;
+        background: $c;
+        top: 0;
+        bottom: 0;
+        left: -50vw;
+        right: -50vw;
+        z-index: -100;
+        content: "";
+    }
+}
+
+
 .comp-form {
+    overflow-x: hidden;
+
     #logo {
         position: fixed;
         z-index: 1000;
@@ -7,7 +24,11 @@
         cursor: pointer;
     }
 
+
     #top-nav {
+        @include color-band($light-grey);
+
+
         font-family: "Roboto";
         font-weight: bold;
         font-size: 12px;
@@ -28,8 +49,11 @@
         }
     }
 
+
     #hero {
-        background-color: $light-grey;
+
+        @include color-band($light-grey);
+
         padding-bottom: 133px;
 
         h1 {
@@ -49,7 +73,7 @@
             letter-spacing: 0.04px;
             margin-top: 50px;
             padding-bottom: 3px;
-            border-bottom: 1px solid rgba($dark-grey, .5);
+            border-bottom: 1px solid $middle-grey; //rgba($dark-grey, .5);
         }
         .description {
             font-family: "Miriam Libre";
@@ -77,6 +101,10 @@
     }
 }
 
+.band {
+    border: 1px solid red;
+}
+
 
 
 .debug {
@@ -87,9 +115,15 @@
         outline: 1px dotted $debug-red;
     }
 
-    .container:before {
+    &:before {
+        z-index: 1000;
         position: absolute;
         left: 0;
+        top: 0;
+        background: $debug-blue;
+        color: white;
+        padding: 3px;
+        font-size: 8px;
 
         @media (min-width: breakpoint-min('xs')) {
             content: "xs";

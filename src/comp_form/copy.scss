@@ -1,17 +1,22 @@
 .comp-form-copy {
-    .purple {
-        color: purple;
-    }
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.31px;
+    line-height: 25px;
 
-    .callout {
-        border: 1px dotted orange;
-    }
 
-    .half {
-        width: 50%;
-        float: left;
-    }
 
+    /* headers */
+    h2 {
+        font-family: "Miriam Libre";
+        font-weight: bold;
+        font-size: 25px;
+        color: $dark-grey;
+        letter-spacing: 0.31px;
+        margin-top: 100px;
+        margin-bottom: 24px;
+    }
 
     counter-reset: h2s;
     >h2::before {
@@ -20,17 +25,268 @@
         padding-right: 2em;
     }
 
+    h3 {
+        font-family: 'Miriam Libre';
+        font-size: 24px;
+        color: $dark-grey;
+        letter-spacing: 0.31px;
+        line-height: 25px;
+        margin-top: 52px;
+        margin-bottom: 15px;
+    }
 
-    b,
-    strong {
+    h4,
+    h5,
+    h6 {
+        margin-top: 45px;
+
         font-family: "Roboto";
         font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.31px;
+        line-height: 25px;
+
         color: $dark-grey;
     }
 
-    body hr {
-        border: 0.5px solid #979797;
-        margin: 0;
-        margin-top: 0.3rem;
+    /* blocks */
+    /* paragraphs */
+    p {
+        margin-bottom: 10px;
+
+        font-family: "Roboto";
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.31px;
+        line-height: 25px;
+    }
+
+    /* blockquote */
+    blockquote {
+        margin-bottom: 10px;
+
+        font-family: "Roboto";
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.31px;
+        line-height: 25px;
+        margin-left: 15px;
+        position: relative;
+    }
+    blockquote::before {
+        content: "";
+        background: $middle-grey;
+        width: 4px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -15px;
+        border-radius: 3px;
+    }
+    .attrib {
+        font-style: italic;
+    }
+    .attrib::before {
+        content: "—";
+    }
+
+    /* code */
+    code {
+        font-family: 'Overpass Mono', monospace;
+        color: $black;
+        background-color: $light-grey;
+
+        border-radius: 0;
+    }
+
+    pre {
+        margin-left: -15px;
+        margin-right: -15px;
+        /* border: 1px solid $middle-grey; */
+        background-color: $light-grey;
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    pre code {
+        line-height: 1.5;
+        padding: 0;
+        overflow-x: visible;
+    }
+
+    /* ul, ol */
+    ul,
+    ol {
+        list-style-type: none;
+        padding-left: 50px;
+
+
+        font-family: "Roboto";
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.31px;
+        line-height: 25px;
+
+        color: black;
+    }
+
+    ul>li,
+    ol>li {
+        .debug & {
+            background-color: $debug-red-transparent;
+        }
+        margin-bottom: 10px;
+    }
+
+    ul>li:before,
+    ol>li:before {
+
+        .debug & {
+            background-color: $debug-red-transparent;
+        }
+
+        position: absolute;
+        margin-left: -50px;
+        margin-right: 30px;
+        width: 30px;
+        text-align: right;
+    }
+
+    ul>li:before {
+        content: "•";
+    }
+
+    ol {
+        counter-reset: ollis;
+    }
+
+    ol>li::before {
+        counter-increment: ollis;
+        content: counter(ollis, decimal-leading-zero); // margin-right: 30px;
+    }
+
+
+    /* dl */
+    dl {
+        // padding-left: 50px;
+    }
+    dl>dt {
+        // font-size: 14px;
+        font-weight: 400;
+    }
+    dl>dd {
+        margin-bottom: 15px;
+    }
+
+
+    /* hr */
+    hr {
+        border-top: 1px solid $middle-grey;
+    }
+
+    /* links */
+    a, a:hover {
+        color: inherit;
+        padding-bottom: 2px;
+        border-bottom: 1px solid;
+        text-decoration: none;
+    }
+    a:hover {
+        background-color: $light-grey;
+    }
+
+
+    /* images */
+    img {
+        display: block; // margin-bottom: 15px;
+        max-width: 100%; // border: 10px solid $dark-grey;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    .scale img {
+        width: 100%;
+    }
+
+    .pixel img {
+        image-rendering: pixelated;
+    }
+
+    .two-up {
+        @include clearfix;
+    }
+    .two-up img {
+        width: calc(50% - 5px);
+        float: left;
+    }
+    .two-up img:nth-child(2n - 1) {
+        margin-right: 10px;
+    }
+
+    .three-up {
+        @include clearfix;
+    }
+    .three-up img {
+        width: calc((100% - 20px) / 3);
+        float: left;
+    }
+    .three-up img:nth-child(3n - 2),
+    .three-up img:nth-child(3n - 1) {
+        margin-right: 10px;
+    }
+
+
+    /* util */
+    .no-margin {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .half {
+
+        box-sizing: border-box;
+        width: 49%;
+        display: block;
+        float: left;
+        @include clearfix;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    /* special */
+    .callout {
+        padding: 15px;
+        margin-left: -15px;
+        margin-right: -15px;
+        background: $light-grey;
+        margin-bottom: 10px;
+    }
+    .callout *:last-child {
+        margin-bottom: 0;
     }
 }
+
+// .purple {
+//     color: purple;
+// }
+// .callout {
+//     border: 1px dotted orange;
+// }
+// .half {
+//     width: 50%;
+//     float: left;
+// }
+// b,
+// strong {
+//     font-family: "Roboto";
+//     font-weight: 700;
+//     color: $dark-grey;
+// }
+// body hr {
+//     border: 0.5px solid #979797;
+//     margin: 0;
+//     margin-top: 0.3rem;
+// }

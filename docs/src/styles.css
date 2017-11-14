@@ -1,65 +1,87 @@
-@import url(https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Roboto:400,500,700|Overpass+Mono:300);.comp-form #logo {
-  position: fixed;
-  z-index: 1000;
-  top: 16px;
-  left: 18px;
-  cursor: pointer; }
-
-.comp-form #top-nav {
-  font-family: "Roboto";
-  font-weight: bold;
-  font-size: 12px;
-  color: #505050;
-  letter-spacing: 0.23px;
-  padding-top: 20px; }
-  .comp-form #top-nav .buttons {
-    float: right; }
-  .comp-form #top-nav .previous {
-    margin-right: 5em; }
-  .comp-form #top-nav .previous i {
-    margin-right: 7px; }
-  .comp-form #top-nav .next i {
-    margin-left: 7px; }
-
-.comp-form #hero {
-  background-color: #F4F3F1;
-  padding-bottom: 133px; }
-  .comp-form #hero h1 {
-    font-family: 'Miriam Libre';
+@import url(https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Roboto:300,400|Overpass+Mono:300);@charset "UTF-8";
+.comp-form {
+  overflow-x: hidden; }
+  .comp-form #logo {
+    position: fixed;
+    z-index: 1000;
+    top: 16px;
+    left: 18px;
+    cursor: pointer; }
+  .comp-form #top-nav {
+    position: relative;
+    font-family: "Roboto";
     font-weight: bold;
-    font-size: 36px;
+    font-size: 12px;
     color: #505050;
-    letter-spacing: 0.56px;
-    text-transform: uppercase;
-    margin-top: 180px; }
-  .comp-form #hero h6 {
-    font-family: "Miriam Libre";
-    font-weight: bold;
-    font-size: 10px;
-    color: #505050;
-    letter-spacing: 0.04px;
-    margin-top: 50px;
-    padding-bottom: 3px;
-    border-bottom: 1px solid rgba(80, 80, 80, 0.5); }
-  .comp-form #hero .description {
-    font-family: "Miriam Libre";
-    font-weight: bold;
-    font-size: 30px;
-    color: #505050;
-    letter-spacing: 0.31px;
-    line-height: 54px;
-    margin-top: 32px;
-    margin-bottom: 80px; }
-  .comp-form #hero .software {
-    font-family: 'Miriam Libre';
-    font-weight: light;
-    font-size: 24px;
-    color: #505050;
-    letter-spacing: 0.31px;
-    line-height: 54px; }
+    letter-spacing: 0.23px;
+    padding-top: 20px; }
+    .comp-form #top-nav::before {
+      position: absolute;
+      background: #F4F3F1;
+      top: 0;
+      bottom: 0;
+      left: -50vw;
+      right: -50vw;
+      z-index: -100;
+      content: ""; }
+    .comp-form #top-nav .buttons {
+      float: right; }
+    .comp-form #top-nav .previous {
+      margin-right: 5em; }
+    .comp-form #top-nav .previous i {
+      margin-right: 7px; }
+    .comp-form #top-nav .next i {
+      margin-left: 7px; }
+  .comp-form #hero {
+    position: relative;
+    padding-bottom: 133px; }
+    .comp-form #hero::before {
+      position: absolute;
+      background: #F4F3F1;
+      top: 0;
+      bottom: 0;
+      left: -50vw;
+      right: -50vw;
+      z-index: -100;
+      content: ""; }
+    .comp-form #hero h1 {
+      font-family: 'Miriam Libre';
+      font-weight: bold;
+      font-size: 36px;
+      color: #505050;
+      letter-spacing: 0.56px;
+      text-transform: uppercase;
+      margin-top: 180px; }
+    .comp-form #hero h6 {
+      font-family: "Miriam Libre";
+      font-weight: bold;
+      font-size: 10px;
+      color: #505050;
+      letter-spacing: 0.04px;
+      margin-top: 50px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #AAA; }
+    .comp-form #hero .description {
+      font-family: "Miriam Libre";
+      font-weight: bold;
+      font-size: 30px;
+      color: #505050;
+      letter-spacing: 0.31px;
+      line-height: 54px;
+      margin-top: 32px;
+      margin-bottom: 80px; }
+    .comp-form #hero .software {
+      font-family: 'Miriam Libre';
+      font-weight: light;
+      font-size: 24px;
+      color: #505050;
+      letter-spacing: 0.31px;
+      line-height: 54px; }
+  .comp-form #scroll-out {
+    height: 80vh; }
 
-.comp-form #scroll-out {
-  height: 80vh; }
+.band {
+  border: 1px solid red; }
 
 .debug .container {
   outline: 1px dotted #0af; }
@@ -67,23 +89,29 @@
 .debug div[class^="col-"] {
   outline: 1px dotted #f55; }
 
-.debug .container:before {
+.debug:before {
+  z-index: 1000;
   position: absolute;
-  left: 0; }
+  left: 0;
+  top: 0;
+  background: #0af;
+  color: white;
+  padding: 3px;
+  font-size: 8px; }
   @media (min-width: null) {
-    .debug .container:before {
+    .debug:before {
       content: "xs"; } }
   @media (min-width: 576px) {
-    .debug .container:before {
+    .debug:before {
       content: "sm"; } }
   @media (min-width: 768px) {
-    .debug .container:before {
+    .debug:before {
       content: "md"; } }
   @media (min-width: 992px) {
-    .debug .container:before {
+    .debug:before {
       content: "lg"; } }
   @media (min-width: 1200px) {
-    .debug .container:before {
+    .debug:before {
       content: "xl"; } }
 
 .debug #scroll-out {
@@ -376,6 +404,198 @@
     width: 85%; }
   .bad .topic-section .topic-text {
     padding: 0 20px 10px 20px; } }
+
+.comp-form-copy {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.31px;
+  line-height: 25px;
+  /* headers */
+  counter-reset: h2s;
+  /* blocks */
+  /* paragraphs */
+  /* blockquote */
+  /* code */
+  /* ul, ol */
+  /* dl */
+  /* hr */
+  /* links */
+  /* images */
+  /* util */
+  /* special */ }
+  .comp-form-copy h2 {
+    font-family: "Miriam Libre";
+    font-weight: bold;
+    font-size: 25px;
+    color: #505050;
+    letter-spacing: 0.31px;
+    margin-top: 100px;
+    margin-bottom: 24px; }
+  .comp-form-copy > h2::before {
+    counter-increment: h2s;
+    content: counter(h2s, decimal-leading-zero);
+    padding-right: 2em; }
+  .comp-form-copy h3 {
+    font-family: 'Miriam Libre';
+    font-size: 24px;
+    color: #505050;
+    letter-spacing: 0.31px;
+    line-height: 25px;
+    margin-top: 52px;
+    margin-bottom: 15px; }
+  .comp-form-copy h4,
+  .comp-form-copy h5,
+  .comp-form-copy h6 {
+    margin-top: 45px;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.31px;
+    line-height: 25px;
+    color: #505050; }
+  .comp-form-copy p {
+    margin-bottom: 10px;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.31px;
+    line-height: 25px; }
+  .comp-form-copy blockquote {
+    margin-bottom: 10px;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.31px;
+    line-height: 25px;
+    margin-left: 15px;
+    position: relative; }
+  .comp-form-copy blockquote::before {
+    content: "";
+    background: #AAA;
+    width: 4px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -15px;
+    border-radius: 3px; }
+  .comp-form-copy .attrib {
+    font-style: italic; }
+  .comp-form-copy .attrib::before {
+    content: "\2014"; }
+  .comp-form-copy code {
+    font-family: 'Overpass Mono', monospace;
+    color: #000;
+    background-color: #F4F3F1;
+    border-radius: 0; }
+  .comp-form-copy pre {
+    margin-left: -15px;
+    margin-right: -15px;
+    /* border: 1px solid $middle-grey; */
+    background-color: #F4F3F1;
+    padding: 15px;
+    overflow-x: auto; }
+  .comp-form-copy pre code {
+    line-height: 1.5;
+    padding: 0;
+    overflow-x: visible; }
+  .comp-form-copy ul,
+  .comp-form-copy ol {
+    list-style-type: none;
+    padding-left: 50px;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.31px;
+    line-height: 25px;
+    color: black; }
+  .comp-form-copy ul > li,
+  .comp-form-copy ol > li {
+    margin-bottom: 10px; }
+    .debug .comp-form-copy ul > li, .debug
+    .comp-form-copy ol > li {
+      background-color: rgba(255, 85, 85, 0.1); }
+  .comp-form-copy ul > li:before,
+  .comp-form-copy ol > li:before {
+    position: absolute;
+    margin-left: -50px;
+    margin-right: 30px;
+    width: 30px;
+    text-align: right; }
+    .debug .comp-form-copy ul > li:before, .debug
+    .comp-form-copy ol > li:before {
+      background-color: rgba(255, 85, 85, 0.1); }
+  .comp-form-copy ul > li:before {
+    content: "\2022"; }
+  .comp-form-copy ol {
+    counter-reset: ollis; }
+  .comp-form-copy ol > li::before {
+    counter-increment: ollis;
+    content: counter(ollis, decimal-leading-zero); }
+  .comp-form-copy dl > dt {
+    font-weight: 400; }
+  .comp-form-copy dl > dd {
+    margin-bottom: 15px; }
+  .comp-form-copy hr {
+    border-top: 1px solid #AAA; }
+  .comp-form-copy a, .comp-form-copy a:hover {
+    color: inherit;
+    padding-bottom: 2px;
+    border-bottom: 1px solid;
+    text-decoration: none; }
+  .comp-form-copy a:hover {
+    background-color: #F4F3F1; }
+  .comp-form-copy img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px; }
+  .comp-form-copy .scale img {
+    width: 100%; }
+  .comp-form-copy .pixel img {
+    image-rendering: pixelated; }
+  .comp-form-copy .two-up:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .comp-form-copy .two-up img {
+    width: calc(50% - 5px);
+    float: left; }
+  .comp-form-copy .two-up img:nth-child(2n - 1) {
+    margin-right: 10px; }
+  .comp-form-copy .three-up:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .comp-form-copy .three-up img {
+    width: calc((100% - 20px) / 3);
+    float: left; }
+  .comp-form-copy .three-up img:nth-child(3n - 2),
+  .comp-form-copy .three-up img:nth-child(3n - 1) {
+    margin-right: 10px; }
+  .comp-form-copy .no-margin {
+    margin-left: -15px;
+    margin-right: -15px; }
+  .comp-form-copy .half {
+    box-sizing: border-box;
+    width: 49%;
+    display: block;
+    float: left; }
+    .comp-form-copy .half:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .comp-form-copy .clear {
+    clear: both; }
+  .comp-form-copy .callout {
+    padding: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    background: #F4F3F1;
+    margin-bottom: 10px; }
+  .comp-form-copy .callout *:last-child {
+    margin-bottom: 0; }
 
 div.js-lab {
   height: 500px;

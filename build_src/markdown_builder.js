@@ -36,6 +36,7 @@ md.use(require('markdown-it-anchor'), {
 });
 md.use(require('markdown-it-classy'));
 
+console.log("rules", md.renderer.rules);
 
 // customize MarkdownIt markup
 md.renderer.rules.table_open = function(tokens, idx, options, env, self) {
@@ -46,6 +47,8 @@ md.renderer.rules.table_close = function(tokens, idx, options, env, self) {
     self;
     return '</table>\n';
 };
+
+
 
 // syntax highlighter
 function higlightSyntax(str, lang) {
@@ -70,6 +73,13 @@ module.exports = function markdownToHtml(file) {
         // process them
         result = buildComponents(result);
         result = md.render(result);
+
+
+        // result = result.replace(/<li>/g, `<li><div>`);
+        // result = result.replace(/<\/li > /g, `</div></li>`);
+
+
+
 
         // update the file object
         file.contents = new Buffer(result);
