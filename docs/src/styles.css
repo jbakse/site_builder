@@ -1,94 +1,104 @@
-@import url(https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Roboto:400,500,700|Overpass+Mono:300);#logo {
+@import url(https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Roboto:400,500,700|Overpass+Mono:300);.comp-form #logo {
   position: fixed;
   z-index: 1000;
   top: 16px;
   left: 18px;
   cursor: pointer; }
 
-.comp-form .scroll-out {
-  height: 80vh; }
-
-b,
-strong {
+.comp-form #top-nav {
   font-family: "Roboto";
-  font-weight: 700;
-  color: #505050; }
-
-body hr {
-  border: 0.5px solid #979797;
-  margin: 0;
-  margin-top: 0.3rem; }
-
-.fa-caret-left:before {
-  margin-right: 7px; }
-
-.fa-caret-right:before {
-  margin-left: 7px; }
-
-.content {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 200px; }
-
-.content header {
-  position: absolute;
-  font-family: Roboto-Bold;
+  font-weight: bold;
   font-size: 12px;
   color: #505050;
   letter-spacing: 0.23px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0 0 0;
-  z-index: 100; }
+  padding-top: 20px; }
+  .comp-form #top-nav .buttons {
+    float: right; }
+  .comp-form #top-nav .previous {
+    margin-right: 5em; }
+  .comp-form #top-nav .previous i {
+    margin-right: 7px; }
+  .comp-form #top-nav .next i {
+    margin-left: 7px; }
 
-.content header span {
-  display: inline-block;
-  width: 17%; }
+.comp-form #hero {
+  background-color: #F4F3F1;
+  padding-bottom: 133px; }
+  .comp-form #hero h1 {
+    font-family: 'Miriam Libre';
+    font-weight: bold;
+    font-size: 36px;
+    color: #505050;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    margin-top: 180px; }
+  .comp-form #hero h6 {
+    font-family: "Miriam Libre";
+    font-weight: bold;
+    font-size: 10px;
+    color: #505050;
+    letter-spacing: 0.04px;
+    margin-top: 50px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(80, 80, 80, 0.5); }
+  .comp-form #hero .description {
+    font-family: "Miriam Libre";
+    font-weight: bold;
+    font-size: 30px;
+    color: #505050;
+    letter-spacing: 0.31px;
+    line-height: 54px;
+    margin-top: 32px;
+    margin-bottom: 80px; }
+  .comp-form #hero .software {
+    font-family: 'Miriam Libre';
+    font-weight: light;
+    font-size: 24px;
+    color: #505050;
+    letter-spacing: 0.31px;
+    line-height: 54px; }
 
-.content header span:first-child {
-  margin-left: 16%;
-  width: 48%; }
+.comp-form #scroll-out {
+  height: 80vh; }
 
-.content .wrapper {
+.debug .container {
+  outline: 1px dotted #0af; }
+
+.debug div[class^="col-"] {
+  outline: 1px dotted #f55; }
+
+.debug .container:before {
+  position: absolute;
+  left: 0; }
+  @media (min-width: null) {
+    .debug .container:before {
+      content: "xs"; } }
+  @media (min-width: 576px) {
+    .debug .container:before {
+      content: "sm"; } }
+  @media (min-width: 768px) {
+    .debug .container:before {
+      content: "md"; } }
+  @media (min-width: 992px) {
+    .debug .container:before {
+      content: "lg"; } }
+  @media (min-width: 1200px) {
+    .debug .container:before {
+      content: "xl"; } }
+
+.debug #scroll-out {
+  background: rgba(0, 170, 255, 0.1); }
+
+.bad .content .wrapper {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto; }
 
-.content .topic-text {
+.bad .content .topic-text {
   width: 100%;
   padding: 0 20% 10px 16%; }
 
-.content .hero {
-  background-color: #F4F3F1;
-  padding-top: 180px;
-  padding-bottom: 133px;
-  position: relative;
-  top: -180px; }
-
-.content .hero p {
-  font-family: "Miriam Libre";
-  font-weight: bold;
-  font-size: 30px;
-  color: #505050;
-  letter-spacing: 0.31px;
-  line-height: 54px;
-  margin-top: 32px;
-  margin-bottom: 80px; }
-
-.content h1 {
-  font-family: 'Miriam Libre';
-  font-weight: bold;
-  font-size: 36px;
-  color: #505050;
-  letter-spacing: 0.56px;
-  text-transform: uppercase;
-  margin-top: 180px; }
-
-.content h2 {
+.bad .content h2 {
   font-family: "Miriam Libre";
   font-weight: bold;
   font-size: 25px;
@@ -97,13 +107,13 @@ body hr {
   margin-top: 100px;
   margin-bottom: 24px; }
 
-.content h2:first-child {
+.bad .content h2:first-child {
   margin-top: 0; }
 
-.content h2 span {
+.bad .content h2 span {
   padding-left: 56px; }
 
-.content h3 {
+.bad .content h3 {
   font-family: 'Miriam Libre';
   font-size: 24px;
   color: #505050;
@@ -112,10 +122,10 @@ body hr {
   margin-top: 52px;
   margin-bottom: 15px; }
 
-.content h3.first {
+.bad .content h3.first {
   margin-top: 0px; }
 
-.content h4 {
+.bad .content h4 {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 16px;
@@ -124,7 +134,7 @@ body hr {
   line-height: 25px;
   margin-top: 45px; }
 
-.content h5 {
+.bad .content h5 {
   font-family: "Miriam Libre";
   font-weight: bold;
   font-size: 10px;
@@ -132,23 +142,14 @@ body hr {
   letter-spacing: 2.41px;
   text-transform: uppercase; }
 
-.content h6 {
-  font-family: "Miriam Libre";
-  font-weight: bold;
-  font-size: 10px;
-  color: #505050;
-  letter-spacing: 0.04px;
-  margin-top: 50px;
-  margin-bottom: 3px; }
-
-.content h7 {
+.bad .content h7 {
   font-family: 'Miriam Libre';
   font-size: 24px;
   color: #505050;
   letter-spacing: 0.31px;
   line-height: 54px; }
 
-.content p {
+.bad .content p {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 16px;
@@ -157,7 +158,7 @@ body hr {
   line-height: 25px;
   margin-bottom: 10px; }
 
-.content code {
+.bad .content code {
   font-family: 'Overpass Mono', monospace;
   font-size: 15px;
   color: #505050;
@@ -165,7 +166,7 @@ body hr {
   line-height: 25px;
   background-color: #F4F3F1; }
 
-.content pre {
+.bad .content pre {
   display: block;
   margin-bottom: 18px;
   font-size: 14px;
@@ -173,7 +174,7 @@ body hr {
   word-break: break-all;
   word-wrap: break-word; }
 
-.content pre code {
+.bad .content pre code {
   border: 1px solid #D8D8D8;
   border-radius: 0;
   padding: 0;
@@ -185,7 +186,7 @@ body hr {
   padding: 0.5em;
   margin-top: 20px; }
 
-.content .slideshow {
+.bad .content .slideshow {
   width: 95vw;
   margin: 50px 2.5vw 0 2.5vw;
   position: relative;
@@ -194,8 +195,8 @@ body hr {
   /*height:485px;*/
   height: 80vh; }
 
-.content .activity,
-.content .assignment {
+.bad .content .activity,
+.bad .content .assignment {
   border-top: 1px solid #D8D8D8;
   border-bottom: 1px solid #D8D8D8;
   background-color: #F4F3F1;
@@ -209,28 +210,28 @@ body hr {
   margin-left: -50vw;
   margin-right: -50vw; }
 
-.content .activity h1,
-.content .activity h2,
-.content .activity p,
-.content .activity ul,
-.content .activity ol,
-.content .assignment h1,
-.content .assignment h2,
-.content .assignment p,
-.content .assignment ul,
-.content .assignment ol {
+.bad .content .activity h1,
+.bad .content .activity h2,
+.bad .content .activity p,
+.bad .content .activity ul,
+.bad .content .activity ol,
+.bad .content .assignment h1,
+.bad .content .assignment h2,
+.bad .content .assignment p,
+.bad .content .assignment ul,
+.bad .content .assignment ol {
   width: 100%;
   max-width: 768px;
   margin: 0 auto;
   position: relative;
   right: 96px; }
 
-.content .activity h1::before {
+.bad .content .activity h1::before {
   content: "Activity"; }
 
-.content .activity p,
-.content .activity ol,
-.content .activity ul {
+.bad .content .activity p,
+.bad .content .activity ol,
+.bad .content .activity ul {
   font-family: "Miriam Libre";
   font-weight: bold;
   font-size: 17px;
@@ -238,18 +239,18 @@ body hr {
   letter-spacing: 0.31px;
   line-height: 25px; }
 
-.content .assignment h1::before {
+.bad .content .assignment h1::before {
   content: "Assignment"; }
 
-.content .assignment h2:first-of-type + p {
+.bad .content .assignment h2:first-of-type + p {
   font-family: 'Miriam Libre';
   font-size: 20px;
   color: #505050;
   letter-spacing: 0.31px;
   line-height: 32px; }
 
-.content .activity h1,
-.content .assignment h1 {
+.bad .content .activity h1,
+.bad .content .assignment h1 {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
@@ -261,8 +262,8 @@ body hr {
   letter-spacing: 0.37px;
   text-transform: none; }
 
-.content .activity h1::before,
-.content .assignment h1::before {
+.bad .content .activity h1::before,
+.bad .content .assignment h1::before {
   display: block;
   text-align: center;
   font-family: "Miriam Libre";
@@ -273,8 +274,8 @@ body hr {
   text-transform: uppercase;
   margin-bottom: 25px; }
 
-.content .activity h1 + p:first-of-type,
-.content .assignment h1 + p:first-of-type {
+.bad .content .activity h1 + p:first-of-type,
+.bad .content .assignment h1 + p:first-of-type {
   text-align: center;
   width: 300px;
   margin: 0 auto;
@@ -286,8 +287,8 @@ body hr {
   letter-spacing: 0.31px;
   line-height: 20px; }
 
-.content .activity h2,
-.content .assignment h2 {
+.bad .content .activity h2,
+.bad .content .assignment h2 {
   font-family: "Miriam Libre";
   font-weight: bold;
   font-size: 10px;
@@ -299,12 +300,12 @@ body hr {
   padding-bottom: 3px;
   border-bottom: 0.5px solid #979797; }
 
-.content .activity img,
-.content .assignment img {
+.bad .content .activity img,
+.bad .content .assignment img {
   height: auto;
   width: 100%; }
 
-.content ul {
+.bad .content ul {
   list-style-type: none;
   font-family: "Roboto";
   font-weight: 400;
@@ -313,10 +314,10 @@ body hr {
   letter-spacing: 0.31px;
   line-height: 25px; }
 
-.content li {
+.bad .content li {
   margin-bottom: 10px; }
 
-.content ul li:before {
+.bad .content ul li:before {
   content: ".";
   position: relative;
   top: -0.1em;
@@ -324,7 +325,7 @@ body hr {
   line-height: 0;
   right: 30px; }
 
-dl {
+.bad dl {
   background-color: #F4F3F1;
   position: relative;
   left: -20px;
@@ -332,7 +333,7 @@ dl {
   margin-top: 45px;
   width: 108%; }
 
-dl dt {
+.bad dl dt {
   font-family: 'Miriam Libre';
   font-size: 20px;
   color: #505050;
@@ -340,7 +341,7 @@ dl dt {
   line-height: 25px;
   display: inline-block; }
 
-dl dd {
+.bad dl dd {
   display: inline;
   font-family: "Roboto";
   font-weight: 400;
@@ -351,44 +352,30 @@ dl dd {
   margin-bottom: 10px; }
 
 @media only screen and (max-width: 900px) {
-  .menu-dropdown ul li {
+  .bad .menu-dropdown ul li {
     width: 50%; }
-  .topic-section .topic-text {
+  .bad .topic-section .topic-text {
     padding: 0 50px 10px 40px; }
-  .topic-section .slideshow {
+  .bad .topic-section .slideshow {
     margin: inherit;
     position: inherit;
     right: inherit;
     width: 100%; } }
 
 @media only screen and (max-width: 670px) {
-  .menu-dropdown .col-first {
+  .bad .menu-dropdown .col-first {
     width: 70%;
     margin-bottom: 25px; }
-  .menu-dropdown .chapters {
+  .bad .menu-dropdown .chapters {
     width: 100%; } }
 
 @media only screen and (max-width: 500px) {
-  .menu-dropdown ul li {
+  .bad .menu-dropdown ul li {
     width: 100%; }
-  .menu-dropdown .col-first {
+  .bad .menu-dropdown .col-first {
     width: 85%; }
-  .topic-section .topic-text {
+  .bad .topic-section .topic-text {
     padding: 0 20px 10px 20px; } }
-
-.comp-form-copy {
-  counter-reset: h2s; }
-  .comp-form-copy .purple {
-    color: purple; }
-  .comp-form-copy .callout {
-    border: 1px dotted orange; }
-  .comp-form-copy .half {
-    width: 50%;
-    float: left; }
-  .comp-form-copy > h2::before {
-    counter-increment: h2s;
-    content: counter(h2s, decimal-leading-zero);
-    padding-right: 2em; }
 
 div.js-lab {
   height: 500px;

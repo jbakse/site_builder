@@ -29,35 +29,40 @@ html(lang="en")
 	body.comp-form(class= debug?"debug":"")
 		
 		include ./_logo.pug
-
-		.content
-			if header_title
-				header
-					span 
-						!= header_title
-					span
-						a(href=previous_url)
-							i.fa.fa-caret-left.fa-lg
-							!= previous
-					span
-						a(href=next_url)
-							!= next
-							i.fa.fa-caret-right.fa-lg
+		if header_title
+			header#top-nav.container
+				.row.justify-content-md-center
+					.col-md-10
+						span 
+							!= header_title
+						.buttons
+							a.previous(href=previous_url)
+								i.fa.fa-caret-left.fa-lg
+								!= previous
+						
+							a.next(href=next_url)
+								!= next
+								i.fa.fa-caret-right.fa-lg
+		#content
 			if hero_title		
-				.hero
-					.topic-text
+				#hero.container
+					.row.justify-content-md-center
+						.col-md-10
 							h1= hero_title
-								h6 The What
-								hr
-								p #{description}
-								h6 The How
-								hr
-								h7= software	
+							h6 The What
+							p.description #{description}
+							h6 The How
+							p.software #{software}
 				
-			.copy
-				.topic-text.comp-form-copy
-					!=contents
-				.scroll-out
+			#copy.comp-form-copy.container
+				.row.justify-content-md-center
+					.col-md-10
+						!=contents
+			
+			#scroll-out.container
+		
+		
+		
 		//- 
 		//- .container
 		//- 	.row.header

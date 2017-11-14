@@ -6,12 +6,11 @@
 @import './layout_utilities';
 
 // additional theme colors
-$accent: #5376F5;
-$theme-colors: map-merge(( accent: $accent), $theme-colors);
-
+// $accent: #5376F5;
+// $theme-colors: map-merge(( accent: $accent), $theme-colors);
 // components
-@import './comp_form/layout';
-@import './comp_form/copy';
+@import './comp_form/comp_form';
+
 
 
 

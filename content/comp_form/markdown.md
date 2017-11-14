@@ -1,14 +1,17 @@
 ---
-header_title: "Special: Markdown"
 title: Markdown
-description: Basic Markdown and other markup features for general copyrighting.
-software: markdown-it, custom
+layout: layouts/compform_chapter.pug
+debug: true
+
+header_title: "Special: Markdown"
 next: TBD
 next_url: layouts/tbd.html
 previous: TBD
 previous_url: layouts/tbd.html
-layout: layouts/compform_chapter.pug
-debug: true
+
+hero_title: Markdown + More
+description: Basic Markdown and other markup features for general copyrighting.
+software: markdown-it, custom
 ---
 
 ## Headers
