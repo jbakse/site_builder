@@ -587,8 +587,8 @@
 .comp-form-copy {
   /* util */
   /* half */
-  /* sidebars */
   /* links */
+  /* links-sidebar */
   /* callout */
   /* activity */ }
   .comp-form-copy .no-margin {
@@ -598,13 +598,17 @@
     .comp-form-copy .full-width {
       margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);
       margin-right: calc( (100% + 15px * 2) / -8 * 2 - 15px); } }
-  .comp-form-copy .clear {
-    clear: both; }
   .comp-form-copy .underline {
-    border-bottom: 1px solid; }
+    border-bottom: 1px solid #CCC; }
   .comp-form-copy .bigger {
     font-family: "Miriam Libre";
     font-size: 1.2em; }
+  .comp-form-copy .columns:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .comp-form-copy .clear {
+    clear: both; }
   @media (min-width: 576px) {
     .comp-form-copy .half {
       box-sizing: border-box;
@@ -616,38 +620,38 @@
       margin-right: 0; }
     .comp-form-copy .half + .half + * {
       clear: both; } }
-  .comp-form-copy .sidebar-right {
+  .comp-form-copy .links > p > a {
+    border: 1px solid #CCC;
+    padding: 5px 10px;
+    display: block;
+    width: max-content; }
+  .comp-form-copy .links-sidebar {
     box-sizing: border-box;
     margin-bottom: 15px; }
-    .comp-form-copy .sidebar-right:after {
+    .comp-form-copy .links-sidebar:after {
       content: "";
       display: table;
       clear: both; }
-  .comp-form-copy .sidebar-right > p {
+  .comp-form-copy .links-sidebar > p {
     float: left;
     margin-right: 15px; }
-    .comp-form-copy .sidebar-right > p:hover {
+    .comp-form-copy .links-sidebar > p:hover {
       background-color: #F4F3F1; }
-  .comp-form-copy .sidebar-right > p > a {
+  .comp-form-copy .links-sidebar > p > a {
     border: 1px solid #CCC;
     padding: 5px 10px;
     display: block;
     text-overflow: ellipsis;
     word-wrap: break-word;
     hyphens: auto; }
-  .comp-form-copy .sidebar-right > *:last-child {
+  .comp-form-copy .links-sidebar > *:last-child {
     margin-bottom: 0; }
-  .comp-form-copy .links > p > a {
-    border: 1px solid #CCC;
-    padding: 5px 10px;
-    display: block;
-    width: max-content; }
   @media (min-width: 768px) {
-    .comp-form-copy .sidebar-right {
+    .comp-form-copy .links-sidebar {
       position: absolute;
       left: calc(100% + 15px);
       width: calc(100% / 8 * 2 - 15px); }
-    .comp-form-copy .sidebar-right > p {
+    .comp-form-copy .links-sidebar > p {
       float: none;
       margin-right: 0; } }
   .comp-form-copy .callout {

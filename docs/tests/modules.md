@@ -20,24 +20,45 @@ software: markdown-it, custom
 This is a callout.{callout}
 
 
-## Sidebar
+## Links
 
-::: .sidebar-right
+::: .links
+    [Wikipedia:Parametricism](https://en.wikipedia.org/wiki/Parametricism)
+
+    [Test Source:Parametricism](https://en.wikipedia.org/wiki/Parametricism)
+/::
+
+Use links to format a list of links
+
+## Links Sidebar
+
+::: .links-sidebar
     [Wikipedia:<br/>Paramet&shy;ricism](https://en.wikipedia.org/wiki/Parametricism)
 
     [Test Source:<br/>Paramet&shy;ricism](https://en.wikipedia.org/wiki/Parametricism)
 /::
 
-Use `.sidebar-right` to float links off to the right. Put the sidebar content before the content it should be next too.
+Use `.links-sidebar` to float links off to the right. Put the sidebar content before the content it should be next too.
 
 
-## Bigger
 
-You can put `.bigger` on a paragraph. {bigger}
+## Columns + Half
 
-Then it will be bigger.
+You can use the `.half` util to make columns. 
 
-## Underline
+::: .columns
 
-You can put underline on things. {underline}
+::: .half
+#### Left Half {underline}
+Just like this.
+/::
+
+::: .half
+#### Right Half {underline}
+And like this.
+/::
+
+/::
+
+
 

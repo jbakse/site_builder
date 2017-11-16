@@ -95,7 +95,7 @@ The way that you think about your software system is often very different from t
 ### Parametric Design
 Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.
 
-::: .sidebar-right
+::: .links-sidebar
     [Wikipedia:<br/>Paramet&shy;ricism](https://en.wikipedia.org/wiki/Parametricism)
 /::
 
@@ -197,7 +197,7 @@ function draw() {
 
 ## Get to Know p5
 
-::: .sidebar-right
+::: .links-sidebar
 [p5: Reference](https://p5js.org/reference/)
 /::
 

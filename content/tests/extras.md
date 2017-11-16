@@ -26,7 +26,7 @@ You can wrap multiple blocks into a div with an id and class.
 This isn't standard markup, or even `markdown-it`; this is custom code for `site builder`.
 
 These three paragraphs are wrapped in `.callout`
-:::
+/::
 
 
 ### Use Classy
@@ -41,27 +41,25 @@ You can add a class to a thing (a paragraph or list or something) using `markdow
 
 ## Helper Classes
 
-### Callout
 
-This is a callout. This is used for a lot of examples on this page.{callout}
+### Bigger
 
-### Half
+You can put `.bigger` on a paragraph. {bigger}
 
-::: .half
-#### Left Half
-You can use the `.half` util to make columns. 
+Then it will be bigger.
 
-Just like this.
-/::
+### Underline
 
-::: .half
-#### Right Half
-And like this.
-/::
+You can put underline on blocks. {underline}
 
-::: .clear
 
-/::
+
+
+
+### No Margin
+
+You can go `no-margin`. This is mostly for images.{no-margin}
+
 
 ### Full Width
 
