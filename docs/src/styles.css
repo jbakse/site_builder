@@ -438,15 +438,13 @@
       margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);
       margin-right: calc( (100% + 15px * 2) / -8 * 2 - 15px); } }
 
-.comp-form-copy .slides {
-  transition: all 1s;
-  height: 500px; }
-
-.comp-form-copy .short .slides {
-  height: 300px; }
-
-.comp-form-copy .tall .slides {
-  height: 700px; }
+@media (min-width: 768px) {
+  .comp-form-copy .slides {
+    height: 500px; }
+  .comp-form-copy .short .slides {
+    height: 300px; }
+  .comp-form-copy .tall .slides {
+    height: 700px; } }
 
 .comp-form-copy .slides .carousel-item {
   height: 100%; }
@@ -454,14 +452,34 @@
 .comp-form-copy .slides .slide {
   height: 100%;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background: #F4F3F1; }
 
 .comp-form-copy .slide-image {
   width: calc(100%/12 * 8);
-  background: #F4F3F1;
   padding: 15px; }
   .debug .comp-form-copy .slide-image {
     border: 1px dotted #0af; }
+
+.comp-form-copy .slide-info {
+  width: calc(100%/12 * 4);
+  padding: 15px; }
+  .debug .comp-form-copy .slide-info {
+    border: 1px dotted #0af; }
+
+@media (max-width: 767px) {
+  .comp-form-copy .slides .slide {
+    flex-direction: column; }
+  .comp-form-copy .slide-image {
+    width: 100%;
+    height: 400px; }
+  .comp-form-copy .slide-info {
+    min-height: 250px;
+    width: 100%; }
+  .comp-form-copy .slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; } }
 
 .comp-form-copy .slide-image img {
   display: block;
@@ -473,13 +491,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover; }
-
-.comp-form-copy .slide-info {
-  width: calc(100%/12 * 4);
-  background: #F4F3F1;
-  padding: 15px; }
-  .debug .comp-form-copy .slide-info {
-    border: 1px dotted #0af; }
 
 .comp-form-copy .slide-info .artist {
   font-size: .8em; }
