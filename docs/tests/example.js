@@ -8,5 +8,6 @@ function draw() {
     background(50);
     fill(255, 0, 0);
     noStroke();
-    ellipse(200, 200, 200, 200);
+    ellipse(random(190, 210), 200, 200, 200);
+    //console.log("test");
 }

@@ -722,8 +722,7 @@
     border-bottom: 0.5px solid #CCC; }
 
 div.js-lab {
-  height: 500px;
-  outline: 1px solid gray; }
+  height: 500px; }
   @media (min-width: 768px) {
     div.js-lab {
       margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);

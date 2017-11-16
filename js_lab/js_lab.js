@@ -66,10 +66,11 @@ lab.main = function main() {
     // install iframe:onload listener that injects new code into preview after it is reloaded by lab.inject
     $('#preview').on('load', function() {
 
-        let bootstrap = `\nif (typeof p5 !== 'undefined') {new p5();}`;
-        let source = editor.getValue();
         let frame = $('#preview')[0];
         if (frame.contentWindow.lab_view) {
+            let source = editor.getValue();
+
+
             // regex matches "// require (url)"
             let require_regex = /^\/\/ ?require (.*?)$/gm;
 
@@ -81,11 +82,17 @@ lab.main = function main() {
 
             // load libs then code
             frame.contentWindow.lab_view.takeLibs(lib_hrefs, () => {
-                frame.contentWindow.lab_view.takeSource(source + bootstrap);
+                frame.contentWindow.lab_view.takeSource(source);
+
+                let bootstrap = `\nif (typeof p5 !== 'undefined') {new p5();}`;
+                frame.contentWindow.lab_view.takeSource(bootstrap);
+
+                frame.contentWindow.lab_view.show();
             });
         }
     });
 
+    $(window.parent).on('scroll', lab.scroll);
 
     // install editor:onchange listener to reload code after edit
     if (lab.settings.autorefresh) {
@@ -95,21 +102,69 @@ lab.main = function main() {
     }
 
     // initial inject
-    lab.inject();
+    lab.scroll();
 }
+
 
 
 // inject riggers a reload of the preview iframe, clearing state
 // onload listener will inject code
 lab.inject = function inject() {
     let frame = $('#preview')[0];
-    frame.contentWindow.location.replace("js_lab_view.html");
+    let f_visible = check_frame_visible();
+    if (f_visible) {
+        // console.log("inject");
+        frame.contentWindow.location.replace("/js_lab/js_lab_view.html");
+    }
 };
+
+
+lab.was_frame_visible = false;
+lab.scroll = function scroll() {
+    // console.log("scroll");
+    let is_frame_visible = check_frame_visible();
+    if (!lab.was_frame_visible && is_frame_visible) {
+        lab.show();
+    }
+    if (lab.was_frame_visible && !is_frame_visible) {
+        lab.hide();
+    }
+
+    $("body").toggleClass("visible", is_frame_visible);
+
+    lab.was_frame_visible = is_frame_visible;
+}
+
+lab.hide = function hide() {
+    // console.log("hide");
+    let frame = $('#preview')[0];
+    frame.contentWindow.location.replace("about:blank");
+}
+
+lab.show = function show() {
+    // console.log("show");
+    lab.inject();
+}
 
 // debounced version
 lab.debounced_inject = lab.debounce(lab.inject, 500);
 
 
+function check_frame_visible() {
+
+    let w = $(window.parent);
+    let f = $(window.frameElement);
+
+    let window_top = w.scrollTop();
+    let window_bottom = window_top + w.height();
+
+    let frame_top = f.offset().top;
+    let frame_bottom = frame_top + f.height();
+
+    let is_frame_partially_visible = (frame_bottom > window_top && frame_top < window_bottom);
+    let is_frame_fully_visible = (frame_top > window_top && frame_bottom < window_bottom);
+    return is_frame_partially_visible;
+}
 
 
 
@@ -191,3 +246,7 @@ lab_view.appendConsole = function appendConsole() {
     line.append(args.join(", "));
     lab_view.console_div.append(line);
 };
+
+lab_view.show = function show() {
+    $(".cover").removeClass("visible");
+}

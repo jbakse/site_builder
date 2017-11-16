@@ -4,11 +4,14 @@ layout: layouts/compform_chapter.pug
 ---
 
 
-# JS Lab
+## JS Lab
 
----
-## Basic Usage
+
+<!-- <div style="height: 1000px; border: 1px dotted gray;"></div> -->
+
 ::: js-lab
 /tests/example.js
-:::
+/::
+
+<!-- <div style="height: 1000px; border: 1px dotted gray;"></div> -->
 
