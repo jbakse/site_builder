@@ -6,12 +6,14 @@ layout: layouts/compform_chapter.pug
 
 ## JS Lab
 
+JS Lab runs live-editable js projects in a frame.
 
-<!-- <div style="height: 1000px; border: 1px dotted gray;"></div> -->
+- live editable previews
+- loads js libraries listed as top comments
+- loads/unloads code as the frame scrolls into view.
 
 ::: js-lab
 /tests/example.js
 /::
 
-<!-- <div style="height: 1000px; border: 1px dotted gray;"></div> -->
 
