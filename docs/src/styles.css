@@ -430,10 +430,13 @@
     margin-bottom: 18px;
     border-bottom: 0.5px solid #CCC; }
 
-@media (min-width: 768px) {
-  .comp-form-copy .slides-wrap {
-    margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);
-    margin-right: calc( (100% + 15px * 2) / -8 * 2 - 15px); } }
+.comp-form-copy .slides-wrap {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  @media (min-width: 768px) {
+    .comp-form-copy .slides-wrap {
+      margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);
+      margin-right: calc( (100% + 15px * 2) / -8 * 2 - 15px); } }
 
 .comp-form-copy .slides {
   transition: all 1s;

@@ -2,6 +2,8 @@
 
     .slides-wrap {
         @include full-width;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .slides {
