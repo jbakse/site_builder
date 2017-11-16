@@ -1,13 +1,13 @@
 ---
-title: TOC
+title: Site Builder
 layout: layouts/compform_chapter.pug
 ---
 
 
-# Site Builder
+## Site Builder
 
-- [tests](tests)
+- [comp_form_tests](tests)
 - [comp_form](comp_form)
-- [k12](k12)
+
 
 

@@ -1,7 +1,7 @@
 ## Keep Sketching!
 
 ### Base
-Continue experimenting with procedurally generated images, this time focusing exposing parameters and exploring the parameter spaces of your sketches. You can mix random and parametric elements, but I suggest doing at least a couple of sketches that are not random at all.
+Continue experimenting with procedurally generated images, this time focusing exposing parameters and exploring the parameter spaces of your sketches. You can mix random and parametric elements, but I suggest doing at least a couple of sketches that are not random at all.{bigger}
 
 ### Challenge
 Build a face generating tool. This tool will create an image of a face that can be adjusted by the user with sliders and other inputs.

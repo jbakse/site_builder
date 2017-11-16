@@ -16,9 +16,9 @@ software: markdown-it, custom
 
 
 
-## Classing Content 
+## Classing up Content 
 
-### Sections
+### Use Sections
 
 ::: #example-1 .callout
 You can wrap multiple blocks into a div with an id and class.
@@ -29,7 +29,7 @@ These three paragraphs are wrapped in `.callout`
 :::
 
 
-### Add a Class with Classy
+### Use Classy
 
 You can add a class to a thing (a paragraph or list or something) using `markdown-it-classy`.{callout}
 
@@ -66,3 +66,10 @@ And like this.
 ### Full Width
 
 You can go `fullwidth`. This is mostly for images, and big widgets.{full-width callout}
+
+
+## Include
+
+You can break up page into multiple files using ``@@include()``
+
+@@include('./inc_content.md')

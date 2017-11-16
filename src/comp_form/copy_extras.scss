@@ -18,16 +18,21 @@
         border-bottom: 1px solid;
     }
 
+    .bigger {
+        font-family: "Miriam Libre";
+        font-size: 1.2em;
+    }
+
     /* half */
     @include media-breakpoint-up(sm) {
 
         .half {
             box-sizing: border-box;
-            width: calc((100% - 15px)/2);
+            width: calc((100% - 30px)/2);
 
             display: block;
             float: left;
-            margin-right: 15px;
+            margin-right: 30px;
         }
 
         .half+.half {
@@ -38,6 +43,66 @@
             clear: both;
         }
     }
+
+    /* sidebars */
+    .sidebar-right {
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        @include clearfix;
+    }
+    .sidebar-right>p,
+    {
+
+        float: left;
+        margin-right: 15px;
+
+        &:hover {
+            background-color: $light-grey;
+        }
+    }
+
+    .sidebar-right>p>a,
+    {
+
+        border: 1px solid $middle-grey;
+        padding: 5px 10px;
+        display: block;
+
+
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .sidebar-right>*:last-child {
+        margin-bottom: 0;
+    }
+
+    /* links */
+    .links>p>a {
+        border: 1px solid $middle-grey;
+        padding: 5px 10px;
+        display: block;
+        width: max-content;
+    }
+
+
+
+    @include media-breakpoint-up(md) {
+        .sidebar-right {
+
+            position: absolute;
+            left: calc(100% + 15px);
+            width: calc(100% / 8 * 2 - 15px);
+        }
+        .sidebar-right>p {
+            float: none;
+            margin-right: 0;
+        }
+    }
+
+
+
 
 
     /* callout */
@@ -93,8 +158,8 @@
         >h2:first-child+p {
             text-align: center;
             width: 300px;
-            margin: 0 auto;
-            margin-bottom: 65px;
+            margin: 35px auto 65px auto;
+
 
             font-family: "Roboto";
             font-weight: 300;

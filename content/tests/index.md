@@ -4,10 +4,10 @@ layout: layouts/compform_chapter.pug
 ---
 
 
-# Tests
+## Tests
 
 - [markdown](./markdown.html)
-- [callouts](./callouts.html)
-- [toc_scroll](./toc_scroll.html)
+- [extras](./extras.html)
+- [modules](./modules.html)
 - [JS Lab](./jslab.html)
 - [slide show](./slideshow.html)

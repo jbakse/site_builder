@@ -5,9 +5,9 @@ debug: false
 
 header_title: "Topic 3: Parameters"
 next: Strategy
-next_url: layouts/strategy.html
-previous: Animation
-previous_url: layouts/animation.html
+next_url: ../strategy
+previous: Strategy
+previous_url: ../strategy
 
 hero_title: Parameters
 description: Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
@@ -34,7 +34,7 @@ Parameters are factors of a system that are exposed. Exposing parameters allows 
 ## The Blue Square
 Imagine a program that generates images, including the one below. What parameters might such a program accept?
 
-![alt text](./activities/blue-square.png "Blue Square Activity")
+![A Blue Square](./blue-square.png "A Blue Square"){scale full-width}
 /::
 
 ## Parameters & Interface Design
@@ -54,12 +54,22 @@ Parameters are factors that control what how a system operates. Exposing paramet
 - Which parameters are required, which are optional?
 
 #### Balance
+::: .half
 - Exposing **more** gives your user more control.
-- Exposing **less** gives you more control.
 - Exposing **more** makes your interface harder to understand.
-- Exposing **less** makes your interface easier to understand.
 - Exposing **more** allows your users to do more good things.
+/::
+
+::: .half
+- Exposing **less** gives you more control.
+- Exposing **less** makes your interface easier to understand.
 - Exposing **less** prevents your users from doing bad things.
+/::
+
+::: .clear
+
+/::
+
 
 #### Presenting Your interface
 Once you have decided on what to expose via your interface, you must consider how to communicate your interface options to your users.
@@ -70,10 +80,10 @@ Once you have decided on what to expose via your interface, you must consider ho
 
 #### Feedback
 Feedback shows users the impact their actions have on the system. Without feedback, systems are very hard to learn and use.
-In simple cases, showing users the end result of their choices is often enough. In more complex situations, it is often helpful to provide intermediate feedback. For example, if a system will react slowly to user actions, providing immediate confirmation of user input is important. 
+In simple cases, showing users the end result of their choices is often enough. In more complex situations, it is often helpful to provide intermediate feedback. For example, if a system will react slowly to user actions, providing immediate confirmation of user input is important.
 
 #### Parameter Space
-A parameter space is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (yes/no) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. A system that takes just two floating point parameters has 9,223,372,036,854,775,808 (9.2 Quintillion!) states. This is a basically inconceivably large number, but it is quite likely that many of those states would look samey. 
+A parameter space is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (yes/no) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. A system that takes just two floating point parameters has 9,223,372,036,854,775,808 (9.2 Quintillion!) states. This is a basically inconceivably large number, but it is quite likely that many of those states would look samey.
 
 #### Keep Your User In Mind
 The way that you think about your software system is often very different from the way your users think about it.
@@ -85,10 +95,15 @@ The way that you think about your software system is often very different from t
 ### Parametric Design
 Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.
 
+::: .sidebar-right
+    [Wikipedia:<br/>Paramet&shy;ricism](https://en.wikipedia.org/wiki/Parametricism)
+/::
+
 ::: .callout
 Parametricism
 : is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.
 /::
+
 
 
 ::: .activity
@@ -181,9 +196,12 @@ function draw() {
 ```
 
 ## Get to Know p5
-If you haven’t used the following features of p5, take a look.
 
-[p5 Reference](https://p5js.org/reference/)
+::: .sidebar-right
+[p5: Reference](https://p5js.org/reference/)
+/::
+
+If you haven’t used the following features of p5, take a look.
 
 
 ### colorMode()
@@ -203,8 +221,18 @@ Use `map()` to remap values from one range to another.
 
 ::: .assignment
 
-@@include('./assignments/parameters.md')
+@@include('./assignment.md')
 
 /::
 
 ## Reference Links
+
+
+::: .links
+[p5: Reference](https://p5js.org/reference/)
+
+[Wikipedia: Parametricism](https://en.wikipedia.org/wiki/Parametricism)
+
+[Wikipedia: Inner-platform effect](https://en.wikipedia.org/wiki/Inner-platform_effect)
+
+/::

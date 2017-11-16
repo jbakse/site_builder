@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Parameters | Comp Form</title></head><body class="comp-form"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span> Topic 3: Parameters</span><div class="buttons"><a class="previous" href="../strategy"><i class="fa fa-caret-left fa-lg"></i>Strategy</a><a class="next" href="../strategy">Strategy<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Parameters</h1><h6>The What</h6><p class="description">Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.</p><h6>The How</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="objectives">Objectives</h2>
+<ul>
+<li>Consider interface design as exposing parameters</li>
+<li>Practice problem analysis and interface design</li>
+<li>Practice user-centered design concepts</li>
+<li>Technical: Exposing Parameters as Globals</li>
+<li>Technical: Exposing Parameters with HTML Controls</li>
+</ul>
+<h2 id="slides">Slides</h2>
+<p>Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.</p>
+<p><strong>Consider:</strong> How did artists use parameters in each work?</p>
+<p>::: slides</p>
+<ul>
+<li>
+<p>artist: Zaha Hadid
+title: Galaxy SOHO
+image: <a href="https://static.dezeen.com/uploads/2015/07/dezeen_Galaxy-Soho-by-Zaha-Hadid_ss_b.jpg">https://static.dezeen.com/uploads/2015/07/dezeen_Galaxy-Soho-by-Zaha-Hadid_ss_b.jpg</a>
+comments: &gt;
+I don’t know the question but, Zaha Hadid is the answer.
+links:
+label: Zaha Hadid Studio
+href: <a href="http://www.zaha-hadid.com/">http://www.zaha-hadid.com/</a></p>
+</li>
+<li>
+<p>artist: Yoko Ono
+title: Cut Piece
+image: <a href="http://www.phaidon.com/resource/onocutpiece11.jpg">http://www.phaidon.com/resource/onocutpiece11.jpg</a>
+comments: &gt;
+Yoko Ono invented the internet!
+links:
+label: Imagine Piece
+href: <a href="http://imaginepeace.com/">http://imaginepeace.com/</a></p>
+</li>
+</ul>
+<p>:::</p>
+<div id="" class="activity">
+<h2 id="the-blue-square">The Blue Square</h2>
+<p>Imagine a program that generates images, including the one below. What parameters might such a program accept?</p>
+<p class="scale full-width"><img src="./blue-square.png" alt="A Blue Square" title="A Blue Square"></p>
+</div>
+<h2 id="parameters-interface-design">Parameters &amp; Interface Design</h2>
+<h3 id="interfaces">Interfaces</h3>
+<p>An <strong>interface</strong> is the common boundary between two systems. Two of the most important interfaces of software systems are <strong>user interfaces</strong> (UIs) and <strong>application programming interfaces</strong> (APIs).</p>
+<ul>
+<li>A <strong>UI</strong> is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. The UI is the primary interface in most applications.</li>
+<li>An <strong>API</strong> is the part of a software system that is used by programmers to connect the software with other software systems. The API is the primary interface in most libraries.
+It is common for software to have both a UI and an API. For example twitter provides a user interface for making and reading tweets and an API for integrating twitter into existing systems.
+Abstraction, subway</li>
+</ul>
+<h3 id="parameters">Parameters</h3>
+<p>Parameters are factors that control what how a system operates. Exposing parameters allows artists and designers to create systems that can be controlled by others. Choosing which parameters to expose is a core concern of software interface design.</p>
+<h4 id="what-to-expose">What to Expose</h4>
+<ul>
+<li>Which parameters should be exposed?</li>
+<li>Which values should be accepted for each parameter?</li>
+<li>Which parameters are required, which are optional?</li>
+</ul>
+<h4 id="balance">Balance</h4>
+<div id="" class="half">
+<ul>
+<li>Exposing <strong>more</strong> gives your user more control.</li>
+<li>Exposing <strong>more</strong> makes your interface harder to understand.</li>
+<li>Exposing <strong>more</strong> allows your users to do more good things.</li>
+</ul>
+</div>
+<div id="" class="half">
+<ul>
+<li>Exposing <strong>less</strong> gives you more control.</li>
+<li>Exposing <strong>less</strong> makes your interface easier to understand.</li>
+<li>Exposing <strong>less</strong> prevents your users from doing bad things.</li>
+</ul>
+</div>
+<div id="" class="clear">
+</div>
+<h4 id="presenting-your-interface">Presenting Your interface</h4>
+<p>Once you have decided on what to expose via your interface, you must consider how to communicate your interface options to your users.</p>
+<ul>
+<li>What UI controls will you use for each parameter?</li>
+<li>What will you label each control?</li>
+<li>How will you group and order the UI controls?</li>
+<li>How will you explain the purpose of each parameter?</li>
+</ul>
+<h4 id="feedback">Feedback</h4>
+<p>Feedback shows users the impact their actions have on the system. Without feedback, systems are very hard to learn and use.
+In simple cases, showing users the end result of their choices is often enough. In more complex situations, it is often helpful to provide intermediate feedback. For example, if a system will react slowly to user actions, providing immediate confirmation of user input is important.</p>
+<h4 id="parameter-space">Parameter Space</h4>
+<p>A parameter space is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (yes/no) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. A system that takes just two floating point parameters has 9,223,372,036,854,775,808 (9.2 Quintillion!) states. This is a basically inconceivably large number, but it is quite likely that many of those states would look samey.</p>
+<h4 id="keep-your-user-in-mind">Keep Your User In Mind</h4>
+<p>The way that you think about your software system is often very different from the way your users think about it.</p>
+<ul>
+<li>Who will be using your software?</li>
+<li>Why will they be using it? What will they be trying to do?</li>
+<li>Do they understand how your software works under the hood? Should they?</li>
+</ul>
+<h3 id="parametric-design">Parametric Design</h3>
+<p>Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.</p>
+<div id="" class="sidebar-right">
+<p><a href="https://en.wikipedia.org/wiki/Parametricism">Wikipedia:<br/>Paramet­ricism</a></p>
+</div>
+<div id="" class="callout">
+<dl>
+<dt>Parametricism</dt>
+<dd>is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.</dd>
+</dl>
+</div>
+<div id="" class="activity">
+<h2 id="fictional-machines">Fictional Machines</h2>
+<p>Begin designing a user interface for a fictional machine by considering which parameters you would expose.</p>
+<ol>
+<li>Choose a machine from the list below.</li>
+<li>Spend 6 minutes brainstorming possible parameters for your machine.</li>
+<li>Choose a user from the list below.</li>
+<li>Spend 3 minutes deciding which parameters to expose for your user. Choose exactly 3 parameters.</li>
+<li>Spend 3 minutes naming your parameters, and defining the allowed values for each.</li>
+<li>Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present.</li>
+</ol>
+<div id="" class="half">
+<h4 id="machine-types" class="underline">Machine Types</h4>
+<ul>
+<li>A car</li>
+<li>Planet generator</li>
+<li>Grocery-shopping bot</li>
+<li>Internet surveillance front-end</li>
+<li>Genetic pet builder</li>
+<li>Love potion mixer</li>
+<li>Users</li>
+</ul>
+</div>
+<div id="" class="half">
+<h4 id="users" class="underline">Users</h4>
+<ul>
+<li>Users</li>
+<li>Daily user</li>
+<li>One-time user</li>
+<li>A child</li>
+<li>An [machine type] enthusiast</li>
+<li>Another machine</li>
+</ul>
+</div>
+</div>
+<h2 id="globals-as-interfaces">Globals as Interfaces</h2>
+<p>A quick-and-dirty way to make your comp form sketches “tweakable” is to use global variables for your parameters and group them at the top of the script.</p>
+<ul>
+<li>This is very easy to set up.</li>
+<li>Works particularly well for small one-off sketches that only you will ever use.</li>
+<li>Choose clear variable names that explain the purpose of each parameter.</li>
+<li>Use comments to explain the parameter in more detail, document legal value ranges, and suggest good values.</li>
+<li>Yes, globals are evil. That is part the “dirty” part.</li>
+</ul>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/square.js">
+</iframe>
+</div>
+</div>
+<h2 id="p5js-dom-interfaces">p5.js Dom Interfaces</h2>
+<p>The p5 Dom Library provides functions that allow you create html elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.</p>
+<ul>
+<li>This is more complicated to set up, but still pretty quick.</li>
+<li>This is a better choice if you want to quickly explore your parameter-space.</li>
+<li>Label your inputs clearly. Consider your interface carefully.</li>
+<li>Your controls can also be made in HTML, used in p5 via select()</li>
+<li>You can style your interface with CSS.</li>
+</ul>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> pos_x_slider, pos_y_slider, size_slider;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+    createCanvas(<span class="hljs-number">640</span>, <span class="hljs-number">360</span>);
+    fill(<span class="hljs-number">100</span>);
+    noStroke();
+    rectMode(CENTER);
+
+    createP(<span class="hljs-string">'Horizontal Position'</span>);
+    pos_x_slider = createSlider(<span class="hljs-number">0</span>, width, width * <span class="hljs-number">.5</span>);
+    createP(<span class="hljs-string">'Vertical Position'</span>);
+    pos_y_slider = createSlider(<span class="hljs-number">0</span>, height, height * <span class="hljs-number">.5</span>);
+    createP(<span class="hljs-string">'Size'</span>);
+    size_slider = createSlider(<span class="hljs-number">10</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>);
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+    background(<span class="hljs-number">250</span>);
+
+    <span class="hljs-keyword">var</span> pos_x = pos_x_slider.value();
+    <span class="hljs-keyword">var</span> pos_y = pos_y_slider.value();
+    <span class="hljs-keyword">var</span> size = size_slider.value();
+
+    rect(pos_x, pos_y, size, size);
+}
+</code></pre>
+<h2 id="get-to-know-p5">Get to Know p5</h2>
+<div id="" class="sidebar-right">
+<p><a href="https://p5js.org/reference/">p5: Reference</a></p>
+</div>
+<p>If you haven’t used the following features of p5, take a look.</p>
+<h3 id="colormode">colorMode()</h3>
+<p>Working with color in terms of hue, saturation, and brightness is often much better than RGB. Use <code>colorMode()</code>to switch to HSB colors, and to choose your range (0-255, 0-100, 0-1).</p>
+<h3 id="ellipsemode-rectmode">ellipseMode(), rectMode()</h3>
+<p>Sometimes the clearest way to draw a ellipse is to specify the bounding box corners. Sometimes the center and width/height makes more sense. Use these functions to switch how <code>ellipse()</code> and <code>rect()</code> use their arguments.</p>
+<h3 id="push-pop">push() + pop()</h3>
+<p>Normally if you change your drawing state (fill color, stroke weight, etc), it stays changed after you do your drawing. <code>push()</code> and <code>pop()</code> let you save and restore your state.</p>
+<h3 id="lerp-lerpcolor">lerp(), lerpColor()</h3>
+<p>These functions let you interpolate between two values.</p>
+<h3 id="map">map()</h3>
+<p>Use <code>map()</code> to remap values from one range to another.</p>
+<div id="" class="assignment">
+<h2 id="keep-sketching">Keep Sketching!</h2>
+<h3 id="base">Base</h3>
+<p class="bigger">Continue experimenting with procedurally generated images, this time focusing exposing parameters and exploring the parameter spaces of your sketches. You can mix random and parametric elements, but I suggest doing at least a couple of sketches that are not random at all.</p>
+<h3 id="challenge">Challenge</h3>
+<p>Build a face generating tool. This tool will create an image of a face that can be adjusted by the user with sliders and other inputs.</p>
+<ul>
+<li>Don’t use the built in shape drawing commands like rect and ellipse. Build your face from hand-drawn or photographic images.</li>
+<li>Make your resulting images look as seamless and cohesive as possible.</li>
+<li>Inputs can range from straight-forward (eye color, nose size) to complex (anger, lighting).</li>
+</ul>
+<h3 id="special-assignment">Special Assignment</h3>
+<p>Later in this class I will ask you to create special sketches using equipment available to you through The New School. If you haven’t used the following equipment before, you should sign up for orientations. Be ready to use this equipment by the sixth week of classes.</p>
+<ul>
+<li>Laser Cutter</li>
+<li>3D Printers</li>
+<li>Large Format Printers/Plotters</li>
+<li>CNC Mills (optional)</li>
+</ul>
+</div>
+<h2 id="reference-links">Reference Links</h2>
+<div id="" class="links">
+<p><a href="https://p5js.org/reference/">p5: Reference</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Parametricism">Wikipedia: Parametricism</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Inner-platform_effect">Wikipedia: Inner-platform effect</a></p>
+</div></div></div></div><div class="container" id="scroll-out"></div></div></body></html>

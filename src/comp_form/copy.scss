@@ -8,21 +8,24 @@
 
 
     /* headers */
-    h2 {
+    >h2 {
         font-family: "Miriam Libre";
         font-weight: bold;
         font-size: 25px;
+        line-height: 1.5;
         color: $dark-grey;
         letter-spacing: 0.31px;
         margin-top: 100px;
         margin-bottom: 24px;
+        padding-left: 3em;
     }
 
     counter-reset: h2s;
     >h2::before {
         counter-increment: h2s;
         content: counter(h2s, decimal-leading-zero);
-        padding-right: 2em;
+        position: absolute;
+        margin-left: -3em;
     }
 
     h3 {
@@ -41,7 +44,7 @@
         margin-top: 45px;
 
         font-family: "Roboto";
-        font-weight: 700;
+        font-weight: 500;
         font-size: 16px;
         letter-spacing: 0.31px;
         line-height: 25px;
@@ -58,7 +61,7 @@
         font-weight: 300;
         font-size: 16px;
         letter-spacing: 0.31px;
-        line-height: 25px;
+        line-height: calc(25 / 16);
     }
 
     /* blockquote */
@@ -128,6 +131,9 @@
         line-height: 25px;
 
         color: black;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     ul>li,
