@@ -4,8 +4,8 @@
   comments: >
     I don't know the question but, Zaha Hadid is the answer.
   links:
-    label: Zaha Hadid Studio
-    href: http://www.zaha-hadid.com/
+    - label: Zaha Hadid Studio
+      href: http://www.zaha-hadid.com/
 
 - artist: Yoko Ono
   title: Cut Piece
@@ -13,5 +13,5 @@
   comments: >
     Yoko Ono invented the internet!
   links:
-    label: Imagine Piece
-    href: http://imaginepeace.com/
+    - label: Imagine Piece
+      href: http://imaginepeace.com/

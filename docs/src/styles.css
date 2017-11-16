@@ -86,9 +86,6 @@
   .comp-form #scroll-out {
     height: 80vh; }
 
-.band {
-  border: 1px solid red; }
-
 .debug .container {
   outline: 1px dotted #0af; }
 
@@ -122,294 +119,6 @@
 
 .debug #scroll-out {
   background: rgba(0, 170, 255, 0.1); }
-
-.bad .content .wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; }
-
-.bad .content .topic-text {
-  width: 100%;
-  padding: 0 20% 10px 16%; }
-
-.bad .content h2 {
-  font-family: "Miriam Libre";
-  font-weight: bold;
-  font-size: 25px;
-  color: #505050;
-  letter-spacing: 0.31px;
-  margin-top: 100px;
-  margin-bottom: 24px; }
-
-.bad .content h2:first-child {
-  margin-top: 0; }
-
-.bad .content h2 span {
-  padding-left: 56px; }
-
-.bad .content h3 {
-  font-family: 'Miriam Libre';
-  font-size: 24px;
-  color: #505050;
-  letter-spacing: 0.31px;
-  line-height: 25px;
-  margin-top: 52px;
-  margin-bottom: 15px; }
-
-.bad .content h3.first {
-  margin-top: 0px; }
-
-.bad .content h4 {
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 16px;
-  color: #505050;
-  letter-spacing: 0.31px;
-  line-height: 25px;
-  margin-top: 45px; }
-
-.bad .content h5 {
-  font-family: "Miriam Libre";
-  font-weight: bold;
-  font-size: 10px;
-  color: #505050;
-  letter-spacing: 2.41px;
-  text-transform: uppercase; }
-
-.bad .content h7 {
-  font-family: 'Miriam Libre';
-  font-size: 24px;
-  color: #505050;
-  letter-spacing: 0.31px;
-  line-height: 54px; }
-
-.bad .content p {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 16px;
-  color: black;
-  letter-spacing: 0.31px;
-  line-height: 25px;
-  margin-bottom: 10px; }
-
-.bad .content code {
-  font-family: 'Overpass Mono', monospace;
-  font-size: 15px;
-  color: #505050;
-  letter-spacing: 0.31px;
-  line-height: 25px;
-  background-color: #F4F3F1; }
-
-.bad .content pre {
-  display: block;
-  margin-bottom: 18px;
-  font-size: 14px;
-  line-height: 1.5;
-  word-break: break-all;
-  word-wrap: break-word; }
-
-.bad .content pre code {
-  border: 1px solid #D8D8D8;
-  border-radius: 0;
-  padding: 0;
-  white-space: pre-wrap;
-  background-color: transparent;
-  display: block;
-  overflow-x: auto;
-  background: #F8F8F8;
-  padding: 0.5em;
-  margin-top: 20px; }
-
-.bad .content .slideshow {
-  width: 95vw;
-  margin: 50px 2.5vw 0 2.5vw;
-  position: relative;
-  right: 25%;
-  background-color: #F4F3F1;
-  /*height:485px;*/
-  height: 80vh; }
-
-.bad .content .activity,
-.bad .content .assignment {
-  border-top: 1px solid #D8D8D8;
-  border-bottom: 1px solid #D8D8D8;
-  background-color: #F4F3F1;
-  margin-top: 90px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  width: 110vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw; }
-
-.bad .content .activity h1,
-.bad .content .activity h2,
-.bad .content .activity p,
-.bad .content .activity ul,
-.bad .content .activity ol,
-.bad .content .assignment h1,
-.bad .content .assignment h2,
-.bad .content .assignment p,
-.bad .content .assignment ul,
-.bad .content .assignment ol {
-  width: 100%;
-  max-width: 768px;
-  margin: 0 auto;
-  position: relative;
-  right: 96px; }
-
-.bad .content .activity h1::before {
-  content: "Activity"; }
-
-.bad .content .activity p,
-.bad .content .activity ol,
-.bad .content .activity ul {
-  font-family: "Miriam Libre";
-  font-weight: bold;
-  font-size: 17px;
-  color: #505050;
-  letter-spacing: 0.31px;
-  line-height: 25px; }
-
-.bad .content .assignment h1::before {
-  content: "Assignment"; }
-
-.bad .content .assignment h2:first-of-type + p {
-  font-family: 'Miriam Libre';
-  font-size: 20px;
-  color: #505050;
-  letter-spacing: 0.31px;
-  line-height: 32px; }
-
-.bad .content .activity h1,
-.bad .content .assignment h1 {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-  color: #505050;
-  font-family: "Miriam Libre";
-  font-weight: bold;
-  font-size: 26px;
-  color: #505050;
-  letter-spacing: 0.37px;
-  text-transform: none; }
-
-.bad .content .activity h1::before,
-.bad .content .assignment h1::before {
-  display: block;
-  text-align: center;
-  font-family: "Miriam Libre";
-  font-weight: bold;
-  font-size: 10px;
-  color: #505050;
-  letter-spacing: 2.41px;
-  text-transform: uppercase;
-  margin-bottom: 25px; }
-
-.bad .content .activity h1 + p:first-of-type,
-.bad .content .assignment h1 + p:first-of-type {
-  text-align: center;
-  width: 300px;
-  margin: 0 auto;
-  margin-bottom: 65px;
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 14px;
-  color: #000000;
-  letter-spacing: 0.31px;
-  line-height: 20px; }
-
-.bad .content .activity h2,
-.bad .content .assignment h2 {
-  font-family: "Miriam Libre";
-  font-weight: bold;
-  font-size: 10px;
-  color: #505050;
-  letter-spacing: 0.04px;
-  margin-top: 65px;
-  margin-bottom: 18px;
-  width: 100%;
-  padding-bottom: 3px;
-  border-bottom: 0.5px solid #979797; }
-
-.bad .content .activity img,
-.bad .content .assignment img {
-  height: auto;
-  width: 100%; }
-
-.bad .content ul {
-  list-style-type: none;
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 16px;
-  color: black;
-  letter-spacing: 0.31px;
-  line-height: 25px; }
-
-.bad .content li {
-  margin-bottom: 10px; }
-
-.bad .content ul li:before {
-  content: ".";
-  position: relative;
-  top: -0.1em;
-  font-size: 40px;
-  line-height: 0;
-  right: 30px; }
-
-.bad dl {
-  background-color: #F4F3F1;
-  position: relative;
-  left: -20px;
-  padding: 20px;
-  margin-top: 45px;
-  width: 108%; }
-
-.bad dl dt {
-  font-family: 'Miriam Libre';
-  font-size: 20px;
-  color: #505050;
-  letter-spacing: 0.31px;
-  line-height: 25px;
-  display: inline-block; }
-
-.bad dl dd {
-  display: inline;
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 16px;
-  color: black;
-  letter-spacing: 0.31px;
-  line-height: 25px;
-  margin-bottom: 10px; }
-
-@media only screen and (max-width: 900px) {
-  .bad .menu-dropdown ul li {
-    width: 50%; }
-  .bad .topic-section .topic-text {
-    padding: 0 50px 10px 40px; }
-  .bad .topic-section .slideshow {
-    margin: inherit;
-    position: inherit;
-    right: inherit;
-    width: 100%; } }
-
-@media only screen and (max-width: 670px) {
-  .bad .menu-dropdown .col-first {
-    width: 70%;
-    margin-bottom: 25px; }
-  .bad .menu-dropdown .chapters {
-    width: 100%; } }
-
-@media only screen and (max-width: 500px) {
-  .bad .menu-dropdown ul li {
-    width: 100%; }
-  .bad .menu-dropdown .col-first {
-    width: 85%; }
-  .bad .topic-section .topic-text {
-    padding: 0 20px 10px 20px; } }
 
 .comp-form-copy {
   font-family: "Roboto";
@@ -720,6 +429,91 @@
     margin-top: 65px;
     margin-bottom: 18px;
     border-bottom: 0.5px solid #CCC; }
+
+@media (min-width: 768px) {
+  .comp-form-copy .slides-wrap {
+    margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);
+    margin-right: calc( (100% + 15px * 2) / -8 * 2 - 15px); } }
+
+.comp-form-copy .slides {
+  transition: all 1s;
+  height: 500px; }
+
+.comp-form-copy .short .slides {
+  height: 300px; }
+
+.comp-form-copy .tall .slides {
+  height: 700px; }
+
+.comp-form-copy .slides .carousel-item {
+  height: 100%; }
+
+.comp-form-copy .slides .slide {
+  height: 100%;
+  display: flex;
+  justify-content: space-between; }
+
+.comp-form-copy .slide-image {
+  width: calc(100%/12 * 8);
+  background: #F4F3F1;
+  padding: 15px; }
+  .debug .comp-form-copy .slide-image {
+    border: 1px dotted #0af; }
+
+.comp-form-copy .slide-image img {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%; }
+
+.comp-form-copy .cover .slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.comp-form-copy .slide-info {
+  width: calc(100%/12 * 4);
+  background: #F4F3F1;
+  padding: 15px; }
+  .debug .comp-form-copy .slide-info {
+    border: 1px dotted #0af; }
+
+.comp-form-copy .slide-info .artist {
+  font-size: .8em; }
+
+.comp-form-copy .slide-info .title {
+  font-family: 'Miriam Libre';
+  font-size: 24px;
+  letter-spacing: 0.31px;
+  line-height: 25px;
+  font-weight: 300;
+  color: #505050; }
+
+.comp-form-copy .slide-info .comments {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.comp-form-copy .slide-info-bottom a {
+  display: block;
+  width: max-content;
+  margin-bottom: 10px; }
+
+.comp-form-copy .slide-info-top {
+  height: 40px;
+  position: absolute;
+  width: 100%;
+  bottom: 0; }
+
+.comp-form-copy .carousel-control-prev {
+  left: calc(100%/12*8); }
+
+.comp-form-copy .carousel-control-prev,
+.comp-form-copy .carousel-control-next,
+.comp-form-copy .carousel-control-prev:hover,
+.comp-form-copy .carousel-control-next:hover {
+  background: none;
+  border-bottom: none;
+  width: 50px; }
 
 div.js-lab {
   height: 500px; }

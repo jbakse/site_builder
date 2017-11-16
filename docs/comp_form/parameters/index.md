@@ -26,9 +26,9 @@ Parameters are factors of a system that are exposed. Exposing parameters allows 
 
 **Consider:** How did artists use parameters in each work?
 
- ::: slides
- @@include('./slides.yaml')
- :::
+::: slides
+@@include('./slides.yaml')
+/::
 
 ::: .activity
 ## The Blue Square
