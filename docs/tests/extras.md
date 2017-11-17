@@ -1,7 +1,7 @@
 ---
 title: Extras
 layout: layouts/compform_chapter.pug
-debug: true
+debug: false
 
 header_title: "Special: Extra"
 next: TBD
@@ -14,6 +14,8 @@ description: Some special extras you can use from markdown.
 software: markdown-it, custom
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<script src="./mess.js"></script>
 
 
 ## Classing up Content 
