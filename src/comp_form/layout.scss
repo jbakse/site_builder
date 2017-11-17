@@ -15,7 +15,15 @@
             border-bottom: 1px solid $b;
         }
     }
+
+    @include media-breakpoint-down(xs) {
+        &::before {
+            left: 0;
+            right: 0;
+        }
+    }
 }
+
 
 
 .comp-form {
@@ -62,7 +70,6 @@
     #hero {
 
         @include color-band($light-grey, $middle-grey);
-
         &::before {
             border-top: none;
         }

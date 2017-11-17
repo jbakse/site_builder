@@ -24,6 +24,10 @@
       right: -50vw;
       z-index: -100;
       content: ""; }
+    @media (max-width: 575px) {
+      .comp-form #top-nav::before {
+        left: 0;
+        right: 0; } }
     .comp-form #top-nav .buttons {
       float: right; }
     .comp-form #top-nav .previous {
@@ -48,6 +52,10 @@
       content: "";
       border-top: 1px solid #CCC;
       border-bottom: 1px solid #CCC; }
+    @media (max-width: 575px) {
+      .comp-form #hero::before {
+        left: 0;
+        right: 0; } }
     .comp-form #hero::before {
       border-top: none; }
     .comp-form #hero h1 {
@@ -388,6 +396,10 @@
       content: "";
       border-top: 1px solid #CCC;
       border-bottom: 1px solid #CCC; }
+    @media (max-width: 575px) {
+      .comp-form-copy .activity::before, .comp-form-copy .assignment::before {
+        left: 0;
+        right: 0; } }
     .comp-form-copy .activity:after, .comp-form-copy .assignment:after {
       content: "";
       display: table;
