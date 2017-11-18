@@ -15,7 +15,8 @@ software: markdown-it, custom
 ---
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
-<script src="./mess.js"></script>
+<script src="../mess.js"></script>
+<script src="./extra_mess.js"></script>
 
 
 ## Classing up Content 
@@ -29,6 +30,8 @@ This isn't standard markup, or even `markdown-it`; this is custom code for `site
 
 These three paragraphs are wrapped in `.callout`
 /::
+
+[test](#)
 
 
 ### Use Classy
