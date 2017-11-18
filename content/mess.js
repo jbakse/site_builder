@@ -89,6 +89,8 @@ function start_scroll() {
     // console.log("start_scroll");
     mess_private.scroll_start_time = performance.now();
     mess_private.should_draw = true;
+
+    $("body").addClass("mess");
 }
 
 function scroll() {
@@ -100,4 +102,5 @@ function stop_scroll() {
     // console.log("stop_scroll");
     mess_private.should_draw = false;
     clear && clear();
+    $("body").removeClass("mess");
 }
