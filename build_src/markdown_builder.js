@@ -36,7 +36,7 @@ md.use(require('markdown-it-anchor'), {
 });
 md.use(require('markdown-it-classy'));
 
-console.log("rules", md.renderer.rules);
+// console.log("rules", md.renderer.rules);
 
 // customize MarkdownIt markup
 md.renderer.rules.table_open = function(tokens, idx, options, env, self) {

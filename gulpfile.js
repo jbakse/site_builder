@@ -27,7 +27,7 @@ gulp.task('markdown', function() {
     return gulp.src('content/**/*.md')
         // .pipe(changed('docs'))
         .pipe(frontMatter())
-        .pipe(tap(logFrontMatter))
+        // .pipe(tap(logFrontMatter))
         .pipe(file_include())
         .pipe(tap(markdownToHTML))
         // .pipe(wrap({ src: 'layouts/main.html' }))

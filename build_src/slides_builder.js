@@ -12,7 +12,7 @@ module.exports = function slidesBuilder(classes, ids, content) {
 
 
 
-    console.log("Data", data);
+    // console.log("Data", data);
 
     // build slides markup
     let slides = '';
