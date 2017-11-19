@@ -3,8 +3,22 @@
 */
 
 .js-lab {
+    margin: 0;
+
+    position: absolute;
     height: 100%;
+    width: 100%;
 }
+
+@media (max-width: 576px) {
+
+    .js-lab {
+        background: pink;
+    }
+}
+
+
+
 
 .js-lab #editor-wrap {
     position: absolute;
@@ -117,6 +131,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* /////////////////////////////////////////
 /// Lab View
 */
@@ -187,6 +213,20 @@ body.js-lab-view {
     opacity: 0;
     transition: all .3s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
