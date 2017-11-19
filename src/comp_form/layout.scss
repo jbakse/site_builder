@@ -33,7 +33,7 @@
         position: fixed;
         z-index: 1000;
         top: 16px;
-        left: 18px;
+        left: 16px;
         cursor: pointer;
     }
 
@@ -46,8 +46,15 @@
         font-weight: bold;
         font-size: 12px;
         color: $dark-grey;
-        letter-spacing: 0.23px; // margin: 0 auto;
-        padding-top: 20px; // z-index: 100;
+        letter-spacing: 0.23px;
+        padding-top: 20px;
+
+
+
+
+
+
+        .title {}
         .buttons {
             float: right;
         }
@@ -64,6 +71,10 @@
         a {
             color: inherit;
         }
+
+        @include media-breakpoint-down(xs) {
+            display: none;
+        }
     }
 
 
@@ -77,6 +88,7 @@
         padding-bottom: 133px;
 
 
+
         h1 {
             font-family: 'Miriam Libre';
             font-weight: bold;
@@ -85,7 +97,12 @@
             letter-spacing: 0.56px;
             text-transform: uppercase;
             margin-top: 180px;
+            @include media-breakpoint-down(xs) {
+                margin-top: 90px;
+            }
         }
+
+
         h6 {
             font-family: "Miriam Libre";
             font-weight: bold;

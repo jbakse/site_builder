@@ -4,10 +4,10 @@ layout: layouts/compform_chapter.pug
 debug: false
 
 header_title: "Special: Extra"
-next: TBD
-next_url: layouts/tbd.html
-previous: TBD
-previous_url: layouts/tbd.html
+previous: markdown
+previous_url: ./markdown.html
+next: modules
+next_url: ./modules.html
 
 hero_title: Extras
 description: Some special extras you can use from markdown.
