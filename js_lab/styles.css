@@ -8,35 +8,74 @@
     position: absolute;
     height: 100%;
     width: 100%;
+
+    /* background: #CCF; */
+    display: flex;
+    justify-content: space-between;
 }
+
+.js-lab #editor-wrap {
+    background-color: #F4F3F1;
+
+    width: calc(50% - 15px);
+    height: 100%;
+    position: relative;
+}
+
+
+.js-lab #preview-wrap {
+    background-color: #F4F3F1;
+
+    width: calc(50% - 15px);
+    height: 100%;
+    position: relative;
+}
+
+
 
 @media (max-width: 576px) {
 
     .js-lab {
-        background: pink;
+        /* background: pink; */
+        flex-direction: column-reverse;
+    }
+
+    .js-lab #editor-wrap {
+
+        height: calc(60%);
+        width: 100%;
+    }
+
+
+    .js-lab #preview-wrap {
+
+        height: calc(40%);
+        width: 100%;
     }
 }
 
 
 
 
-.js-lab #editor-wrap {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: calc(50% - 15px);
-    line-height: 20px !important;
-    background-color: #F4F3F1;
-}
+
+
+
 
 .js-lab #editor {
+    line-height: 20px !important;
     background-color: #F4F3F1;
     position: absolute;
     top: 10px;
     bottom: 30px;
     left: 0;
     right: 0;
+}
+
+@media (max-width: 576px) {
+    .js-lab #editor {
+
+        bottom: 10px;
+    }
 }
 
 
@@ -58,7 +97,7 @@
     box-sizing: border-box;
     bottom: 0;
     left: 0;
-    width: calc(50% - 15px);
+    width: 100%;
 
     padding: 5px 10px;
     background-color: #F4F3F1;
@@ -71,16 +110,28 @@
     border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
+@media (max-width: 576px) {
+    .js-lab #reminder {
+        display: none;
+    }
+}
+
+
+
 
 .js-lab #preview {
-    border: none;
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: calc(50% - 15px);
-    right: 0;
     background-color: #F4F3F1;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    border: none;
 }
+
+
 
 
 .js-lab ::-webkit-scrollbar-track {
@@ -91,6 +142,7 @@
 .js-lab ::-webkit-scrollbar {
 
     height: 6px;
+    width: 6px;
 }
 
 .js-lab ::-webkit-scrollbar-thumb {
@@ -98,6 +150,57 @@
     border-radius: 10px;
     background-color: gray;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -153,12 +256,21 @@
 body.js-lab-view {
     padding: 0;
     margin: 0;
+    height: 100%;
 }
 
 .js-lab-view canvas {
     max-width: 100% !important;
     height: auto !important;
 }
+
+@media (max-width: 576px) {
+    .js-lab-view canvas {
+        max-height: 100% !important;
+        width: auto !important;
+    }
+}
+
 
 .js-lab-view div.lab-console {
     /*border: 1px solid red;*/
@@ -213,6 +325,57 @@ body.js-lab-view {
     opacity: 0;
     transition: all .3s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

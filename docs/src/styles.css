@@ -576,6 +576,9 @@ div.js-lab {
     div.js-lab {
       margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);
       margin-right: calc( (100% + 15px * 2) / -8 * 2 - 15px); } }
+  @media (max-width: 767px) {
+    div.js-lab {
+      height: 80vh; } }
 
 iframe.js-lab {
   border: none;
