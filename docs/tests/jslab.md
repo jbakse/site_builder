@@ -1,7 +1,7 @@
 ---
 title: JS Lab
 layout: layouts/compform_chapter.pug
-debug: true
+debug: false
 ---
 
 
