@@ -10,6 +10,11 @@ $light-grey: #F4F3F1;
 $middle-grey: #CCC;
 $dark-grey: #505050;
 
+
+// $light-grey: #F0F2F6;
+$dark-grey: #000;
+
+
 $theme-colors: map-merge( ( dark-grey: $dark-grey),
 $theme-colors);
 

@@ -12,7 +12,7 @@
     font-family: "Roboto";
     font-weight: bold;
     font-size: 12px;
-    color: #505050;
+    color: #000;
     letter-spacing: 0.23px;
     padding-top: 20px; }
     .comp-form #top-nav::before {
@@ -65,7 +65,7 @@
       font-family: 'Miriam Libre';
       font-weight: bold;
       font-size: 36px;
-      color: #505050;
+      color: #000;
       letter-spacing: 0.56px;
       text-transform: uppercase;
       margin-top: 180px; }
@@ -76,7 +76,7 @@
       font-family: "Miriam Libre";
       font-weight: bold;
       font-size: 10px;
-      color: #505050;
+      color: #000;
       letter-spacing: 0.04px;
       margin-top: 50px;
       padding-bottom: 3px;
@@ -85,7 +85,7 @@
       font-family: "Miriam Libre";
       font-weight: bold;
       font-size: 30px;
-      color: #505050;
+      color: #000;
       letter-spacing: 0.31px;
       line-height: 54px;
       margin-top: 32px;
@@ -94,7 +94,7 @@
       font-family: 'Miriam Libre';
       font-weight: light;
       font-size: 24px;
-      color: #505050;
+      color: #000;
       letter-spacing: 0.31px;
       line-height: 54px; }
   .comp-form #scroll-out {
@@ -142,7 +142,7 @@
   font-weight: bold;
   font-size: 25px;
   line-height: 1.5;
-  color: #505050;
+  color: #000;
   letter-spacing: 0.31px;
   margin-top: 100px;
   margin-bottom: 24px;
@@ -170,7 +170,7 @@
 
 .comp-form-toc .row > a,
 .comp-form-toc .row > a:hover {
-  color: #505050;
+  color: #000;
   text-decoration: none;
   font-size: 12px;
   margin-bottom: 25px; }
@@ -220,7 +220,7 @@
     font-weight: bold;
     font-size: 25px;
     line-height: 1.5;
-    color: #505050;
+    color: #000;
     letter-spacing: 0.31px;
     margin-top: 100px;
     margin-bottom: 24px;
@@ -233,7 +233,7 @@
   .comp-form-copy h3 {
     font-family: 'Miriam Libre';
     font-size: 24px;
-    color: #505050;
+    color: #000;
     letter-spacing: 0.31px;
     line-height: 25px;
     margin-top: 52px;
@@ -247,7 +247,7 @@
     font-size: 16px;
     letter-spacing: 0.31px;
     line-height: 25px;
-    color: #505050; }
+    color: #000; }
   .comp-form-copy p {
     margin-bottom: 10px;
     font-family: "Roboto";
@@ -486,7 +486,7 @@
     .comp-form-copy .activity > h2:first-child, .comp-form-copy .assignment > h2:first-child {
       margin-top: 0;
       text-align: center;
-      color: #505050;
+      color: #000;
       font-family: "Miriam Libre";
       font-weight: bold;
       font-size: 26px;
@@ -515,7 +515,7 @@
     font-weight: bold;
     font-size: 10px;
     letter-spacing: 0.04px;
-    color: #505050;
+    color: #000;
     padding-bottom: 3px;
     margin-top: 65px;
     margin-bottom: 18px;
@@ -592,7 +592,7 @@
   letter-spacing: 0.31px;
   line-height: 25px;
   font-weight: 300;
-  color: #505050; }
+  color: #000; }
 
 .comp-form-copy .slide-info .comments {
   margin-top: 30px;
