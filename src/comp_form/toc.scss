@@ -50,6 +50,16 @@
         margin-bottom: 25px;
     }
 
+
+    .row>a[data-ready="false"],
+    .row>a[data-ready="false"]:hover {
+        color: $middle-grey;
+        text-decoration: none;
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+
     .row>a:hover h3 {
         border-bottom: 1px solid;
     }

@@ -246,6 +246,7 @@
 
 
 
+
 /* /////////////////////////////////////////
 /// Lab View
 */
@@ -315,6 +316,8 @@ body.js-lab-view {
     font-family: monospace;
     background-color: #F4F3F1;
     color: #AAA;
+
+    pointer-events: none;
 }
 
 .cover.visible {
@@ -325,6 +328,7 @@ body.js-lab-view {
     opacity: 0;
     transition: all .3s;
 }
+
 
 
 

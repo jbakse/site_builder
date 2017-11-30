@@ -25,6 +25,21 @@ General principles, practices, and building blocks useful for all procedural gen
 <div class="col-12 col-md-9">
 <div class="row">
 
+<a class="col-6 col-md-4" data-ready="false" href="./introduciton">
+
+### Introduction
+p5.js
+
+</a>
+
+<a class="col-6 col-md-4" data-ready="false" href="./procedures">
+
+### Procedures
+p5.js
+
+</a>
+
+
 <a class="col-6 col-md-4" href="./parameters">
 
 ### Parameters
@@ -32,9 +47,25 @@ p5.js
 
 </a>
 
-<a class="col-6 col-md-4" href="./strategy">
 
-### Strategy
+<a class="col-6 col-md-4" data-ready="false" href="./random">
+
+### Random Values
+p5.js
+
+</a>
+
+
+<a class="col-6 col-md-4" data-ready="false" href="./noise">
+
+### Noise
+p5.js
+
+</a>
+
+<a class="col-6 col-md-4" data-ready="false" href="./strategy">
+
+### Placement Strategies
 p5.js
 
 </a>
@@ -62,35 +93,24 @@ Independent explorations of specific procedural generation tools, languages, med
 <div class="col-12 col-md-9">
 <div class="row">
 
-<a class="col-6 col-md-4" href="./#">
 
-### Animation
-p5.js
 
-</a>
-
-<a class="col-6 col-md-4" href="./#">
+<a class="col-6 col-md-4" data-ready="false" href="./#">
 
 ### Processing Pixels
 p5.js
 
 </a>
 
-<a class="col-6 col-md-4" href="./#">
+<a class="col-6 col-md-4" data-ready="false" href="./#">
 
 ### Turtle Graphics
 p5.js + custom library
 
 </a>
 
-<a class="col-6 col-md-4" href="./#">
 
-### Realtime Video
-Vuo
-
-</a>
-
-<a class="col-6 col-md-4" href="./#">
+<a class="col-6 col-md-4" data-ready="false" href="./#">
 
 ### Vector Data
 paper.js
@@ -98,15 +118,23 @@ paper.js
 </a>
 
 
-<a class="col-6 col-md-4" href="./#">
+<a class="col-6 col-md-4" data-ready="false" href="./#">
 
-### Generating Text
-js+html
+### Animation
+p5.js
 
 </a>
 
 
-<a class="col-6 col-md-4" href="./#">
+<a class="col-6 col-md-4" data-ready="false" href="./#">
+
+### Generating Text
+javascript + html
+
+</a>
+
+
+<a class="col-6 col-md-4" data-ready="false" href="./#">
 
 ### Comp Sound
 p5.js + p5.sound
@@ -114,7 +142,7 @@ p5.js + p5.sound
 </a>
 
 
-<a class="col-6 col-md-4" href="./#">
+<a class="col-6 col-md-4" data-ready="false" href="./#">
 
 ### 3D Forms
 OpenSCAD
@@ -122,10 +150,20 @@ OpenSCAD
 </a>
 
 
-<a class="col-6 col-md-4" href="./#">
+<a class="col-6 col-md-4" data-ready="false" href="./#">
 
 ### Microgames
 p5.js + p5.play
+
+</a>
+
+
+
+
+<a class="col-6 col-md-4" data-ready="false" href="./#">
+
+### Realtime Video
+Vuo
 
 </a>
 

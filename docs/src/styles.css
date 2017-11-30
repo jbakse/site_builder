@@ -175,6 +175,13 @@
   font-size: 12px;
   margin-bottom: 25px; }
 
+.comp-form-toc .row > a[data-ready="false"],
+.comp-form-toc .row > a[data-ready="false"]:hover {
+  color: #CCC;
+  text-decoration: none;
+  font-size: 12px;
+  margin-bottom: 25px; }
+
 .comp-form-toc .row > a:hover h3 {
   border-bottom: 1px solid; }
 

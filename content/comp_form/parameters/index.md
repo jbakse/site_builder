@@ -10,25 +10,23 @@ previous: Strategy
 previous_url: ../strategy
 
 hero_title: Parameters
-description: Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
-software: p5.js
+description: Expose parameters to make your procedural systems easier to control, adjust, and use.
+software: p5.js + p5.dom
 ---
 
-## Objectives
+## Learning Objectives
 - Consider interface design as exposing parameters
 - Practice problem analysis and interface design
 - Practice user-centered design concepts
-- Technical: Exposing Parameters as Globals
-- Technical: Exposing Parameters with HTML Controls
+- Technical: Exposing parameters as global variables
+- Technical: Exposing parameters with HTML controls
 
-## Slides
-Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
 
-**Consider:** How did artists use parameters in each work?
+## Parameters
+One of the most powerful and rewarding aspects of working with procedural generation is exploring what it can make. Programming a maze generator will probably take longer than simply drawing a maze by hand but, once made, you can quickly explore hundreds of maze variations. Often this leads to new ideas and aesthetics to pursue further. 
 
-::: slides
-@@include('./slides.yaml')
-/::
+Take time to indentify useful parameters, consider their possible values, and expose them in a way that encourages this exploration. Doing so will lead to better code under the hood, better user experience, and better results.
+
 
 ::: .activity
 ## The Blue Square
@@ -36,6 +34,15 @@ Imagine a program that generates images, including the one below. What parameter
 
 ![A Blue Square](./blue-square.png "A Blue Square"){scale full-width}
 /::
+
+
+## Slides
+
+::: slides
+@@include('./slides.yaml')
+/::
+
+
 
 ## Parameters & Interface Design
 ### Interfaces
@@ -153,7 +160,7 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 - Yes, globals are evil. That is part the “dirty” part.
 
 ::: js-lab
-/comp_form/square.js
+/comp_form/parameters/square.js
 /::
 
 ## p5.js Dom Interfaces
@@ -166,6 +173,12 @@ The p5 Dom Library provides functions that allow you create html elements and us
 - Your controls can also be made in HTML, used in p5 via select()
 - You can style your interface with CSS.
 
+
+::: js-lab
+/comp_form/parameters/square_slider.js
+/::
+
+<!-- 
 ```javascript
 var pos_x_slider, pos_y_slider, size_slider;
 
@@ -193,7 +206,7 @@ function draw() {
 
     rect(pos_x, pos_y, size, size);
 }
-```
+``` -->
 
 ## Get to Know p5
 
