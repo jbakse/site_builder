@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300');
+
+
+
+
+
+
+
+
+
+
 /* /////////////////////////////////////////
 /// Lab
 */
@@ -68,7 +79,7 @@
     top: 10px;
     bottom: 30px;
     left: 0;
-    right: 0;
+    right: 5px;
 }
 
 @media (max-width: 576px) {
@@ -148,8 +159,29 @@
 .js-lab ::-webkit-scrollbar-thumb {
 
     border-radius: 10px;
-    background-color: gray;
+    background-color: #CCC;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -523,6 +555,36 @@ body.js-lab-view {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#editor.ace_editor {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 14.4px;
+    color: #000;
+}
+
+
+
+
+.ace_scroller {
+
+    bottom: 0 !important;
+    right: 0 !important;
+}
 
 
 

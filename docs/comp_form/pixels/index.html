@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Pixel Data | Comp Form</title></head><body class="comp-form"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Pixel Data</span><div class="buttons"><a class="previous" href="../strategy"><i class="fa fa-caret-left fa-lg"></i>Strategy</a><a class="next" href="../strategy">Strategy<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Pixel Data</h1><h6>The What</h6><p class="description">Internally, computers often represent images as a list of pixel values. Accessing, processing, and generating pixel data directly allows you to explore a variety of low-level techniques.</p><h6>The How</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Understand how raster image data is represented in memory.</li>
+<li>Explore image generation and image processing.</li>
+<li>Explore using an image as a data input.</li>
+<li>Technical: Using p5’s <code>get()</code> and <code>set()</code> function to read and write pixel values.</li>
+<li>Technical: Using p5’s <code>pixel[]</code> array to work with pixel data directly.</li>
+</ul>
+<h2 id="raster-images">Raster Images</h2>
+<h3 id="rasterization">Rasterization</h3>
+<h3 id="raster-vs-vector-images">Raster vs Vector Images</h3>
+<p>[How raster images are stored in memory]</p>
+<p>[Not just about scalability. Scalability is the most often mentioned difference between raster and vector images, but other differences exist as well. Because vector images are described at a higher level—shapes instead of pixels—they are also easier to distort, recolor, change the stroke, etc. Not all images can be reasonably described as a collection of shapes. Photographic images, in particular, have too much detail to store as a collection of shapes. Similarly, some types of effects that consume or produce pixel-level detail require raster data]</p>
+<h2 id="writing-pixel-data">Writing Pixel Data</h2>
+<h3 id="a-basic-example">A Basic Example</h3>
+<p>The p5.js library provides two ways to read and write image pixel data. First,you can use <code>get()</code> and <code>set()</code> which are a bit easier but slower. Second you can access the <code>pixels[]</code> array directly, which is faster but requires some math to find the address of the pixel you want to work with.</p>
+<p>This example uses <code>set()</code> to create some random pixel data.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/pixels/sketches/basic_pixels.js">
+</iframe>
+</div>
+</div>
+<p>Let’s look at the code in depth.</p>
+<dl>
+<dt>Line 10</dt>
+<dd>Use <code>createImage()</code> to create a new, empty image in memory. We can draw this image just like an image lowed from a <code>.jpg</code> or <code>.gif</code>.</dd>
+<dt>Line 11</dt>
+<dd>Use <code>loadPixels()</code> to tell p5 that we want to access the pixels of the image for reading or writing. You must call <code>loadPixels()</code> before using <code>set()</code>, <code>get()</code>, or the <code>pixels[]</code> array.</dd>
+<dt>Lines 13</dt>
+<dd>Set up a nested loop. The inner content of the loop will be run once for every pixel.</dd>
+<dt>Line 15</dt>
+<dd>Use the <code>color()</code> function to create a color value, which is assigned to <code>c</code>. Color values hold the R, G, B, and A values of a color. The color function takes into account the current <code>colorMode()</code>.</dd>
+<dt>Line 16</dt>
+<dd>Use <code>set()</code> to set the color of the pixel at <code>x, y</code>.</dd>
+<dt>Line 20</dt>
+<dd>Use <code>updatePixels()</code> to tell p5 we are done accessing the pixels of the image.</dd>
+<dt>Line 22</dt>
+<dd>Use <code>noSmooth()</code> to tell p5 not to smooth the image when we scale it; we want it pixelated. This Photoshop’s ‘nearest neighbor’ scaling method.</dd>
+<dt>Line 23</dt>
+<dd>Draw the image, filling the canvas so we can clearly see each pixel.</dd>
+</dl>
+<h2 id="a-gradient-example">A Gradient Example</h2>
+<p>This example has the same structure as the first one, but draws a gradient pixel-by-pixel.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/pixels/sketches/basic_pixels_2.js">
+</iframe>
+</div>
+</div>
+<dl>
+<dt>Line 15</dt>
+<dd>Instead of choosing a color at random, this example calculates a color based on the current <code>x</code> and <code>y</code> position of the pixel being set.</dd>
+</dl>
+<h2 id="a-third-example">A Third Example</h2>
+<p>The first two examples use a nested loop to set a value for every pixel in the image. This pattern often used in pixel generating and processing scripts, but not always. This example places red pixels at random places on the image.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/pixels/sketches/basic_pixels_3.js">
+</iframe>
+</div>
+</div>
+<div id="" class="assignment">
+<h2 id="keep-sketching">Keep Sketching!</h2>
+<h3 id="base">Base</h3>
+<p class="bigger">Explore working with image pixel data directly. This week, most of your posts should be still images. You might also consider creating animations. Since p5 pixel access is slow, this technique will pair well with pre-rendering.</p>
+<p>Post <strong>at least one</strong> sketch <strong>for each</strong> of the following:</p>
+<ol>
+<li>Generate an image from scratch: pixel by pixel. Don’t call any high level drawing function like <code>ellipse()</code> or <code>rect()</code>.</li>
+<li>Load an image and process its pixels. Show the result.</li>
+<li>Use an image as an input source to control a drawing. Don’t show the original image, just the output.</li>
+</ol>
+<h3 id="challenge">Challenge</h3>
+<p>Create a pixel Ouroboros.
+Create code that processes an image. Feed the result back into your code and process it again. What happens after several generations?</p>
+<p>Post your source image, the result after one generation, and the result after several generations. Alternately, capture 90 generations as frames and post as a video.</p>
+</div>
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>

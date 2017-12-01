@@ -95,9 +95,9 @@ Independent explorations of specific procedural generation tools, languages, med
 
 
 
-<a class="col-6 col-md-4" data-ready="false" href="./#">
+<a class="col-6 col-md-4" data-ready="true" href="./pixels">
 
-### Processing Pixels
+### Pixel Data
 p5.js
 
 </a>

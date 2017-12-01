@@ -93,15 +93,14 @@ Imagine a program that draws a square, like the one below. What parameters might
 /::
 
 
-## Slides
+
+
+## Parameters & Interface Design
 
 ::: slides .!short
 @@include('./slides.yaml')
 /::
 
-
-
-## Parameters & Interface Design
 
 ### Interfaces
 When thinking about software we often define the **interface** as the part of the application that is _visible to_ and _manipulated by_ the user. I think it is better consider the interface as the common boundry, or overlap, between two systems.
