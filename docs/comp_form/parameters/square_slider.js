@@ -1,7 +1,7 @@
 // require https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js
 // require https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/addons/p5.dom.js
 
-var pos_x_slider, pos_y_slider, size_slider;
+var pos_x_slider, pos_y_slider, size_slider, color_picker;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight * .5);
@@ -18,11 +18,15 @@ function setup() {
 
     createP('Size');
     size_slider = createSlider(10, 200, 100);
+
+    createP('Color');
+    color_picker = createInput("#648EDE", "color");
 }
 
 
 function draw() {
     background(250);
+    fill(color_picker.value());
     var pos_x = pos_x_slider.value();
     var pos_y = pos_y_slider.value();
     var size = size_slider.value();

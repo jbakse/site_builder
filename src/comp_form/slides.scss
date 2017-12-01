@@ -99,17 +99,33 @@
 
 
 
+    .slide-info-middle,
+    .slide-info-bottom {
+
+        border-top: 1px solid $middle-grey;
+        padding-top: 10px;
+    }
+
+    .slide-info-middle {
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+
+
     .slide-info .artist {
-        font-size: .8em;
+
+        font-size: 1em;
+        font-weight: 400;
+        margin-bottom: 1em;
     }
 
     .slide-info .title {
         font-family: 'Miriam Libre';
-        font-size: 24px;
+        font-size: 20px;
         letter-spacing: 0.31px;
         line-height: 25px;
-        font-weight: 300;
-        color: $dark-grey;
+        font-weight: 200;
+        color: lighten($dark-grey, 40);
     }
 
     .slide-info .comments {
@@ -121,20 +137,34 @@
     .slide-info-bottom a {
         display: block;
         width: max-content;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        font-size: .9em;
+        padding-bottom: 0;
+        line-height: 1;
     }
 
     .slide-info-top {
-
-        height: 40px;
+        // border: 1px solid red;
         position: absolute;
-        width: 100%;
-        bottom: 0;
+        top: 15px;
+        right: 0;
+        height: 40px;
+        left: calc(100%/12*8);
     }
 
     .carousel-control-prev {
-        left: calc(100%/12*8);
+        left: 0px;
     }
+    .carousel-control-next {
+        left: 40px;
+    }
+
+    .slide-info-top {
+        polygon {
+            fill: $dark-grey;
+        }
+    }
+
 
     .carousel-control-prev,
     .carousel-control-next,

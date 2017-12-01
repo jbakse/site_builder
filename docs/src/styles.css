@@ -289,13 +289,22 @@
     color: #000;
     background-color: #F4F3F1;
     border-radius: 0; }
+  .comp-form-copy .bad > pre {
+    border: 1px solid #cc9999;
+    background: #ffeeee; }
+  .comp-form-copy .bad > pre code {
+    background-color: transparent; }
+  .comp-form-copy .good > pre {
+    border: 1px solid #99cc99; }
   .comp-form-copy pre {
     margin-left: -15px;
     margin-right: -15px;
     /* border: 1px solid $middle-grey; */
     background-color: #F4F3F1;
     padding: 15px;
-    overflow-x: auto; }
+    overflow-x: auto;
+    margin-top: 15px;
+    margin-bottom: 15px; }
   .comp-form-copy pre code {
     line-height: 1.5;
     padding: 0;
@@ -590,16 +599,27 @@
   height: 100%;
   object-fit: cover; }
 
+.comp-form-copy .slide-info-middle,
+.comp-form-copy .slide-info-bottom {
+  border-top: 1px solid #CCC;
+  padding-top: 10px; }
+
+.comp-form-copy .slide-info-middle {
+  margin-top: 40px;
+  margin-bottom: 80px; }
+
 .comp-form-copy .slide-info .artist {
-  font-size: .8em; }
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 1em; }
 
 .comp-form-copy .slide-info .title {
   font-family: 'Miriam Libre';
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 0.31px;
   line-height: 25px;
-  font-weight: 300;
-  color: #000; }
+  font-weight: 200;
+  color: #666666; }
 
 .comp-form-copy .slide-info .comments {
   margin-top: 30px;
@@ -608,16 +628,26 @@
 .comp-form-copy .slide-info-bottom a {
   display: block;
   width: max-content;
-  margin-bottom: 10px; }
+  margin-bottom: 15px;
+  font-size: .9em;
+  padding-bottom: 0;
+  line-height: 1; }
 
 .comp-form-copy .slide-info-top {
-  height: 40px;
   position: absolute;
-  width: 100%;
-  bottom: 0; }
+  top: 15px;
+  right: 0;
+  height: 40px;
+  left: calc(100%/12*8); }
 
 .comp-form-copy .carousel-control-prev {
-  left: calc(100%/12*8); }
+  left: 0px; }
+
+.comp-form-copy .carousel-control-next {
+  left: 40px; }
+
+.comp-form-copy .slide-info-top polygon {
+  fill: #000; }
 
 .comp-form-copy .carousel-control-prev,
 .comp-form-copy .carousel-control-next,

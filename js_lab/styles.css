@@ -247,6 +247,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 /* /////////////////////////////////////////
 /// Lab View
 */
@@ -328,6 +337,20 @@ body.js-lab-view {
     opacity: 0;
     transition: all .3s;
 }
+
+
+.js-lab-view p {
+    font-size: 12px;
+    margin-bottom: .25em;
+}
+
+
+
+
+
+
+
+
 
 
 

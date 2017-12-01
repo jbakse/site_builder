@@ -102,6 +102,22 @@
         border-radius: 0;
     }
 
+    .bad>pre {
+        border: 1px solid $red;
+        background: $light-red;
+    }
+
+
+    .bad>pre code {
+        background-color: transparent;
+    }
+
+
+    .good>pre {
+        border: 1px solid $green;
+    }
+
+
     pre {
         margin-left: -15px;
         margin-right: -15px;
@@ -109,6 +125,8 @@
         background-color: $light-grey;
         padding: 15px;
         overflow-x: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     pre code {
