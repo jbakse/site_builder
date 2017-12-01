@@ -63,7 +63,7 @@ p5.js
 
 </a>
 
-<a class="col-6 col-md-4" data-ready="false" href="./strategy">
+<a class="col-6 col-md-4" data-ready="true" href="./strategy">
 
 ### Placement Strategies
 p5.js

@@ -210,7 +210,7 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 - Choose clear variable names that explain the purpose of each parameter.
 - Use comments to explain the parameter in more detail, document legal value ranges, and suggest good values.
 - This approach slows down exploration, because you still need to re-run your sketch after each change.
-- Yes, [global variables are evil].(https://stackoverflow.com/questions/19158339/why-are-global-variables-evil). If your language supports constants, it is a good idea to use them instead of variables.
+- Yes, [global variables are evil](https://stackoverflow.com/questions/19158339/why-are-global-variables-evil). If your language supports constants, it is a good idea to use them instead of variables.
 
 ::: js-lab
 /comp_form/parameters/square.js
