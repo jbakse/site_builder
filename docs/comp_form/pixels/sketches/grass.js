@@ -1,4 +1,4 @@
-// require https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js
+// require https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js
 
 // draws some grass with density driven by a luminance map image
 
@@ -33,11 +33,17 @@ function draw() {
     for (x = 0; x < 640; x++) {
         for (y = 0; y < 320; y++) {
 
+            // slow
+            // this is _really_ slow, it might crash your browser
+            // var pixelRed = red(testImage.get(x, y));
+
+            // quick
+            var pixelRed = red(getQuick(testImage, x, y));
 
             // even quicker...
+            // since we don't need the other colors, grab the red value directly
             // var pixelRed = testImage.pixels[(y * 640 + x) * 4];
 
-            var pixelRed = red(getQuick(testImage, x, y));
 
             // pick a random value and compare it pixelRed
             // for example:
@@ -45,7 +51,7 @@ function draw() {
             // if pixelRed is 255, we'll always draw
             // if pixelRed is 127, we'll draw 50% of the time
             if (random(255) < pixelRed) {
-                grass(x, y);
+                drawGrassBlade(x, y);
             }
         }
     }
@@ -57,7 +63,7 @@ function draw() {
     noLoop();
 }
 
-function grass(x, y) {
+function drawGrassBlade(x, y) {
 
     var bladeHeight = min(
         random(1, 20), random(1, 20), random(1, 20),

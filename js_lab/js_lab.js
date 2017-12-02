@@ -248,7 +248,7 @@ lab_view.setupConsole = function setupConsole() {
 lab_view.appendConsole = function appendConsole() {
     let line = $("<div>");
     let args = [].slice.call(arguments);
-    line.append(args.join(", "));
+    line.append(args.join(" "));
     lab_view.console_div.append(line);
 };
 

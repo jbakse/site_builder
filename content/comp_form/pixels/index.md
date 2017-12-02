@@ -263,6 +263,13 @@ All in 15 Minutes   | Hot Dang!
 ## Advanced Topics
 
 
+### The Canvas + Pixel Density
+When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a 2x resolution canvas when running on a high-dpi (retina) display. You can call `pixelDensity(1)` to disable this feature. If you don't, you'll need to take into account the density when calculating a position in the `pixels[]` array.
+
+The examples on this page work with the pixels of images instead of the canvas to avoid this issue altogether.
+
+
+
 ### Performance
 
 The built-in p5 `someImage.get(x, y)` function gets the RGBA values of a pixel in an image. As noted in the [reference](https://p5js.org/reference/#/p5/get), the get call is slower than accessing the values in the `someImage.pixels[]` array directly. In fact, `get()` can be 1000s of times slower. Under the hood, `get()` reads the colors of every pixel in the image before returning the value you request.
@@ -307,22 +314,28 @@ img.loadPixels();
 c = getQuick(img, x, y);
 ```
 
+The following example compares the performance of using `get()` and `getQuick()` to read and invert the color value of a small image.
 
-### The Canvas + Pixel Density
-When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a 2x resolution canvas when running on a high-dpi (retina) display. You can call `pixelDensity(1)` to disable this feature. If you don't, you'll need to take into account the density when calculating a position in the `pixels[]` array.
+::: js-lab
+/comp_form/pixels/sketches/performance.js
+/::
 
-The examples on this page work with the pixels of images instead of the canvas to avoid this issue altogether.
+
 
 
 ## Study Example
 
+This example uses an image as an input to control the density and placement of drawn grass.
 
-![cf.png](./sketches/cf.png)
+#### Input Image
+![cf.png](./sketches/cf.png){scale}
 
 
 ::: js-lab
 /comp_form/pixels/sketches/grass.js
 /::
+
+
 
 
 
@@ -354,3 +367,11 @@ Post your source image, the result after one generation, and the result after se
 /::
 
 
+## Misc Links
+
+
+::: .links
+[Reaction Diffusion in Photoshop](https://vimeo.com/61154654)
+[Factorio](http://store.steampowered.com/app/427520/)
+[Icon Machine](http://brianmacintosh.com/iconmachine/)
+/::

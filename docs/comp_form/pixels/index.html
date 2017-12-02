@@ -228,6 +228,9 @@
 </ol>
 </div>
 <h2 id="advanced-topics">Advanced Topics</h2>
+<h3 id="the-canvas-pixel-density">The Canvas + Pixel Density</h3>
+<p>When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a 2x resolution canvas when running on a high-dpi (retina) display. You can call <code>pixelDensity(1)</code> to disable this feature. If you don’t, you’ll need to take into account the density when calculating a position in the <code>pixels[]</code> array.</p>
+<p>The examples on this page work with the pixels of images instead of the canvas to avoid this issue altogether.</p>
 <h3 id="performance">Performance</h3>
 <p>The built-in p5 <code>someImage.get(x, y)</code> function gets the RGBA values of a pixel in an image. As noted in the <a href="https://p5js.org/reference/#/p5/get">reference</a>, the get call is slower than accessing the values in the <code>someImage.pixels[]</code> array directly. In fact, <code>get()</code> can be 1000s of times slower. Under the hood, <code>get()</code> reads the colors of every pixel in the image before returning the value you request.</p>
 <p>We can get much faster results by loading the pixel values <strong>once</strong> with <code>loadPixels()</code>, and then reading from the <code>pixels[]</code> array directly.</p>
@@ -260,11 +263,17 @@ img.loadPixels();
 <span class="hljs-comment">// in loop</span>
 c = getQuick(img, x, y);
 </code></pre>
-<h3 id="the-canvas-pixel-density">The Canvas + Pixel Density</h3>
-<p>When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a 2x resolution canvas when running on a high-dpi (retina) display. You can call <code>pixelDensity(1)</code> to disable this feature. If you don’t, you’ll need to take into account the density when calculating a position in the <code>pixels[]</code> array.</p>
-<p>The examples on this page work with the pixels of images instead of the canvas to avoid this issue altogether.</p>
+<p>The following example compares the performance of using <code>get()</code> and <code>getQuick()</code> to read and invert the color value of a small image.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/pixels/sketches/performance.js">
+</iframe>
+</div>
+</div>
 <h2 id="study-example">Study Example</h2>
-<p><img src="./sketches/cf.png" alt="cf.png"></p>
+<p>This example uses an image as an input to control the density and placement of drawn grass.</p>
+<h4 id="input-image">Input Image</h4>
+<p class="scale"><img src="./sketches/cf.png" alt="cf.png"></p>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/pixels/sketches/grass.js">
@@ -286,4 +295,9 @@ c = getQuick(img, x, y);
 Create code that processes an image. Feed the result back into your code and process it again. What happens after several generations?</p>
 <p>Post your source image, the result after one generation, and the result after several generations. Alternately, capture 90 generations as frames and post as a video.</p>
 </div>
-</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
+<h2 id="misc-links">Misc Links</h2>
+<div id="" class="links">
+<p><a href="https://vimeo.com/61154654">Reaction Diffusion in Photoshop</a>
+<a href="http://store.steampowered.com/app/427520/">Factorio</a>
+<a href="http://brianmacintosh.com/iconmachine/">Icon Machine</a></p>
+</div></div></div></div><div class="container" id="scroll-out"></div></div></body></html>

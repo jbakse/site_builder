@@ -17,8 +17,6 @@ function draw() {
     fill(200, 50, 50);
     noStroke();
 
-
-
     for (var y = 0; y < worldImage.height; y++) {
         for (var x = 0; x < worldImage.width; x++) {
             var in_color = worldImage.get(x, y);
