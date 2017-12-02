@@ -184,6 +184,12 @@
         counter-reset: ollis;
     }
 
+
+    ol.continue {
+        counter-reset: none;
+    }
+
+
     ol>li::before {
         counter-increment: ollis;
         content: counter(ollis, decimal-leading-zero); // margin-right: 30px;

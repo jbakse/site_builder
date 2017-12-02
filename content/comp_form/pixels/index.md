@@ -55,7 +55,7 @@ Line 10
 Line 11
 : Use `loadPixels()` to tell p5 that we want to access the pixels of the image for reading or writing. You must call `loadPixels()` before using `set()`, `get()`, or the `pixels[]` array.
 
-Lines 13
+Line 13
 : Set up a nested loop. The inner content of the loop will be run once for every pixel.
 
 Line 15
@@ -74,7 +74,7 @@ Line 23
 : Draw the image, filling the canvas so we can clearly see each pixel.
 
 
-## A Gradient Example
+### Gradient Example
 
 This example has the same structure as the first one, but draws a gradient pixel-by-pixel.
 
@@ -87,7 +87,7 @@ Line 15
 : Instead of choosing a color at random, this example calculates a color based on the current `x` and `y` position of the pixel being set.
 
 
-## A Third Example
+### A Third Example
 
 The first two examples use a nested loop to set a value for every pixel in the image. This pattern often used in pixel generating and processing scripts, but not always. This example places red pixels at random places on the image.
 
@@ -95,8 +95,234 @@ The first two examples use a nested loop to set a value for every pixel in the i
 /comp_form/pixels/sketches/basic_pixels_3.js
 /::
 
+::: .activity
+## In-class Challenge One
+
+Explore using p5's pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. <br/> Don't skip any.
+
+Time | Comment
+--- | ---
+< 13 in 20 Minutes | You need to put in some extra work<br/> to strengthen your programming understanding.
+13 in 20 Minutes | Good.
+All in 20 Minutes   | Great.
+All in 15 Minutes   | Hot Dang!
 
 
+### Modify the Basic Example
+1. Change the image resolution to `20x20`
+2. Change the image resolution to `500x500`
+3. Change the image resolution back to `10x10`
+4. Make each pixel a random shade of blue.
+5. Make each pixel a random shade of gray.
+
+### Modify the Gradient Example
+6. Make a horizontal black to blue gradient.
+7. Make a vertical green to black gradient.
+8. Make a horizontal white to blue gradient.
+9. Make a vertical rainbow gradient. Tip: `colorMode()`
+10. Create an inset square with a gradient, surrounded by randomly colored pixels.
+{continue}
+
+### Modify the Third Example
+11. Change the image resolution to `50x50`, adjust scatter to fill.
+12. Instead of drawing single pixels, draw little `+` marks at random locations.
+13. Make each `+` a random color.
+{continue}
+
+### Challenging Challenges
+14. Color each pixel with `noise()` to visualize its values.
+15. Make a radial gradient from black to red. Tip: `dist()`
+16. Create a diagonal gradient.
+17. Use `sin()` to create a repeating black to red to black color wave.
+18. Create a `128x128` image and set the blue value of each pixel to `(y&x) * 16`
+{continue}
+
+/::
+
+
+
+
+
+
+## Reading Pixel Data
+
+
+The p5.js library also allows you to read pixel data, so you can process images or use images a inputs. These examples use this low-res black-and-white image of Earth.
+
+<img class="scale pixel" style="image-rendering: pixelated; height: 120px;" src="sketches/world.png" />
+
+
+### Read Pixels Example 1
+
+This example loads the image of Earth, loops over its pixels, and multiplies each pixels color with a random color.
+
+::: js-lab
+/comp_form/pixels/sketches/read_pixels.js
+/::
+
+
+
+#### First we need to load an image to read pixel data from.
+
+Line 3
+: Declare a variable to hold our image.
+
+Line 5
+: The `preload()` function. Use this function to load assets. p5.js will wait until all assets are loaded before calling `setup()` and `draw()`
+
+Line 6
+: Load the image.
+
+#### With our image loaded we can process the pixels.
+
+
+Line 18
+: Set up a nested loop to cover every pixel.
+
+Line 20 
+: Use `get()` to load the color data of the current pixel. `get()` returns an array like `[255, 0, 0, 255]` with components for red, green, blue, and alpha.
+
+Lines 22, 23, 24
+: Read the red, blue, and green parts of the color.
+
+Line 25
+: Create the new color for the pixel by multiplying the current color values with a random 0-1 value.
+
+Line 27
+: Change the pixel to our new color.
+
+Line 28
+: Uses `updatePixels()` to tell the image there has been an update. We didn't need to do this in every pass through the loop when we were just setting pixels, but here we mix `set()` and `get()`. p5.js requires calling `updatePixels()` anytime we switch from setting to getting or drawing.
+
+
+### Read Pixels Example 2
+
+This example compares each pixel to the one below it. If the upper pixel is darker, it is changed to magenta.
+
+::: js-lab
+/comp_form/pixels/sketches/read_pixels_2.js
+/::
+
+
+
+### Image as Input Example
+
+This example doesn't draw the image at all. Instead, the image is used as an input that controls where the red ellipses are drawn. Using images an inputs is a powerful technique that allows you to mix manual art and procedurally generated content.
+
+::: js-lab
+/comp_form/pixels/sketches/read_pixels_3.js
+/::
+
+
+
+
+::: .activity
+
+## In-class Challenge Two
+
+Explore using p5's pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. <br/> Don't skip any.
+
+Time | Comment
+--- | ---
+< 10 in 20 Minutes | You need to put in some extra work<br/> to strengthen your programming understanding.
+10 in 20 Minutes | Good.
+All in 20 Minutes   | Great.
+All in 15 Minutes   | Hot Dang!
+
+### Modify Example 1
+1. Colorize the white pixels with a vertical black to red gradient.
+2. Colorize the black pixels with a vertical black to green gradient.
+3. Feed the program you made above a grayscale or color image (under 100x100). <br/> You'll have to do this in your own editor, and you'll need a local server.
+
+<img src="sketches/world_100.png" style="image-rendering: pixelated;">
+
+
+### Modify Example 2
+4. Change the color comparison to `>`.
+5. Change the color comparison to `!=`.
+6. Change `out_color` to an average of the two color samples.
+7. Feed the program you made above the grayscale earth image above.
+{continue}
+
+### Modify Example 3
+8. Invert the drawing, so that circles appear where the input pixels are black.
+9. Feed the program you made above the grayscale earth image above.
+10. Use lightness to drive the circle sizes.
+{continue}
+
+### Challenging Challenges
+11. Start with the original Example 2 code, without your changes. Set `out_color` to the average of `this_color` and `below_color`.
+12. Change `worldImage.set(x, y, out_color);` to `worldImage.set(x, y+1, out_color);`.
+13. Remove the conditional statement (keep its contents).
+{continue}
+
+/::
+
+
+
+## Advanced Topics
+
+
+### Performance
+
+The built-in p5 `someImage.get(x, y)` function gets the RGBA values of a pixel in an image. As noted in the [reference](https://p5js.org/reference/#/p5/get), the get call is slower than accessing the values in the `someImage.pixels[]` array directly. In fact, `get()` can be 1000s of times slower. Under the hood, `get()` reads the colors of every pixel in the image before returning the value you request.
+
+We can get much faster results by loading the pixel values **once** with `loadPixels()`, and then reading from the `pixels[]` array directly.
+
+The `getQuick()` funciton below reads a pixels color value from an image's `pixels[]` array. You must call `loadPixels()` before calling this funciton.
+
+```javascript
+// find the RGBA values of the pixel at x, y in the img's pixels array
+// use instead of p5s built in .get(x,y), for much better performance (more than 1000x better in many cases)
+// see: http://p5js.org/reference/#/p5/pixels[]
+// we don't need to worry about screen pixel density here, because we are not reading from the screen
+
+function getQuick(img, x, y) {
+
+	var i = (y * img.width + x) * 4;
+	return [
+		testImage.pixels[i],
+		testImage.pixels[i+1],
+		testImage.pixels[i+2],
+		testImage.pixels[i+3],
+	];
+}
+```
+
+Copy the `getQuick()` function above into your sketch. You can then replace a built in p5 `get` call with a call to `getQuick`:
+
+
+#### Using `get()`
+```javascript
+// in loop
+c = img.get(x, y);
+```
+
+#### Using `getQuick()`
+```javascript
+// before loop
+img.loadPixels();
+
+// in loop
+c = getQuick(img, x, y);
+```
+
+
+### The Canvas + Pixel Density
+When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a 2x resolution canvas when running on a high-dpi (retina) display. You can call `pixelDensity(1)` to disable this feature. If you don't, you'll need to take into account the density when calculating a position in the `pixels[]` array.
+
+The examples on this page work with the pixels of images instead of the canvas to avoid this issue altogether.
+
+
+## Study Example
+
+
+![cf.png](./sketches/cf.png)
+
+
+::: js-lab
+/comp_form/pixels/sketches/grass.js
+/::
 
 
 
