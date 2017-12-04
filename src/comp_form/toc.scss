@@ -1,0 +1,99 @@
+.comp-form.toc {
+    background-color: $light-grey;
+}
+
+
+.comp-form-toc {
+
+    h1 {
+        font-family: "Miriam Libre";
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 1.5;
+        color: $dark-grey;
+        letter-spacing: 0.31px;
+        margin-top: 100px;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-family: "Miriam Libre";
+        font-weight: bold;
+        font-size: 10px;
+        letter-spacing: 0.04px;
+
+        color: inherit;
+
+        padding-bottom: 3px;
+        margin-top: 65px;
+        margin-bottom: 8px;
+
+        border-bottom: 0.5px solid $middle-grey;
+    }
+
+    h3 {
+        font-family: "Miriam Libre";
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+        color: inherit;
+        letter-spacing: 0.31px;
+        border-bottom: 1px solid transparent;
+    }
+
+    .row>a,
+    .row>a:hover {
+        color: $dark-grey;
+        text-decoration: none;
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+
+    .row>a[data-ready="false"],
+    .row>a[data-ready="false"]:hover {
+        color: $middle-grey;
+        text-decoration: none;
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+
+    .row>a:hover h3 {
+        border-bottom: 1px solid;
+    }
+
+
+
+
+    .overview {
+
+        margin-bottom: 10px;
+
+        font-family: "Roboto";
+        font-weight: 300;
+        font-size: 14px;
+        letter-spacing: 0.31px;
+        line-height: calc(25 / 16);
+
+        padding-right: 30px;
+
+        margin-bottom: 3em;
+    }
+
+    .intro {
+
+        margin-bottom: 10px;
+
+        font-family: "Roboto";
+        font-weight: 300;
+        font-size: 18px;
+        letter-spacing: 0.31px;
+        line-height: calc(25 / 16);
+
+        padding-right: 30px;
+
+        margin-bottom: 3em;
+    }
+}

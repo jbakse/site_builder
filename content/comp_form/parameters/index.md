@@ -10,48 +10,115 @@ previous: Strategy
 previous_url: ../strategy
 
 hero_title: Parameters
-description: Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
-software: p5.js
+description: Expose parameters to make your procedural systems easier to control, adjust, and use.
+software: p5.js + p5.dom
 ---
 
-## Objectives
+## Learning Objectives
 - Consider interface design as exposing parameters
 - Practice problem analysis and interface design
 - Practice user-centered design concepts
-- Technical: Exposing Parameters as Globals
-- Technical: Exposing Parameters with HTML Controls
+- Technical: Exposing parameters as global variables
+- Technical: Exposing parameters with HTML controls
 
-## Slides
-Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.
 
-**Consider:** How did artists use parameters in each work?
+## Parameters
+One of the most powerful and rewarding aspects of writing procedural generation code is exploring what it can make. Programming a maze generator will probably take longer than simply drawing a maze by hand, but with the generator you can quickly explore hundreds of maze variations. Often this leads to new ideas and aesthetics to pursue further. 
 
-::: slides
-@@include('./slides.yaml')
+::: .links-sidebar
+[Wikipedia:<br/>Parameter Space](https://en.wikipedia.org/wiki/Parameter_space)
 /::
+
+You explore the range of a procedural genertion system by changing the values of its parameters and seeing what happens. Early on you might tweak parameters directly, by changing [hard-coded](https://en.wikipedia.org/wiki/Hard_coding) values directly in the source.
+
+It is almost always worth taking time to indentify useful parameters in your code, consider their possible values, and expose them in a way that encourages exploration. Doing so will lead to better code under the hood, better user experience, and better results.
+
+### Better Code
+Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that becomes increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. Exposing parameters helps to organize the code by seperating configuration and implementation. It also makes the code easier to read by changing "magic numbers" into named values that better explain their purpose.
+
+The following line of code is pulled from a program that displays animated messages. This line calculates an offset used in an animated transition. The original has several magic numbers: `40`, `3`, `.5`, and `80` and had become hard to reason about and change.
+
+::: .bad
+```javascript
+// original version
+offset = (40 * transitionPercent) + (transitionPercent * sin(i + 3 * .5) * 80);
+```
+/::
+
+
+This revised version is better. The magic numbers are now named values that can be adjusted elsewhere in the code and the overall expression is simpler. Notably, this code doesn't do _exactly_ the same thing as the orignal version. That is okay. Some of the complexity in the original was left over from an early approach and no longer needed for transition effect. By considering the code as a system and its parameters, this was made easier to spot and fix.
+
+::: .good
+```javascript
+// revised version
+offset = transitionPercent * sin(angle + phase) * amplitude;
+```
+/::
+
+### Better User Experience
+Exploring the parameter space of a system by tweaking hard-coded values doesn't work very well. Tweaking hard-coded values is slow—the project has to be re-built and re-run after each change—which discurages exploration. Also, the slow feedback cycle makes it harder to understand the effects of each change. Tweaking hard-coded values is also unclear. Which values should you change for particular effects? Do you need to change the value in multiple places? Will chaning a particular value just break things? Exposing the values as parameters makes it the code easier to document, understand, and use.
+
+### Better Results
+Well-parameterized code is easier and faster to read and maintain. When you can explore the parameter space more quickly, you can explore it more thoroughly, finding interesting possibilities, ideas, and aesthetics to explore further. 
+
+
+
+
+### Parameter Space
+A parameter space is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (yes/no) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. A system that takes just two floating point parameters has 18,446,744,073,709,551,616	(18.4 Quintillion!) states. This is an inconceivably large number, but it is quite likely that many of those states would look very similar.
+
+[Combinatorial Explosion](https://en.wikipedia.org/wiki/Combinatorial_explosion)
+[Illustration? Flow for these two sections?]
+
+### Parametric Design
+Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.
+
+::: .links-sidebar
+    [Wikipedia:<br/>Paramet&shy;ricism](https://en.wikipedia.org/wiki/Parametricism)
+/::
+
+::: .callout
+Parametricism
+: is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.
+/::
+
+
+
 
 ::: .activity
 ## The Blue Square
-Imagine a program that generates images, including the one below. What parameters might such a program accept?
+Imagine a program that draws a square, like the one below. What parameters might such a program accept?
 
 ![A Blue Square](./blue-square.png "A Blue Square"){scale full-width}
 /::
 
+
+
+
 ## Parameters & Interface Design
+
+::: slides .!short
+@@include('./slides.yaml')
+/::
+
+
 ### Interfaces
-An **interface** is the common boundary between two systems. Two of the most important interfaces of software systems are **user interfaces** (UIs) and **application programming interfaces** (APIs).
-- A **UI** is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. The UI is the primary interface in most applications.
-- An **API** is the part of a software system that is used by programmers to connect the software with other software systems. The API is the primary interface in most libraries.
+When thinking about software we often define the **interface** as the part of the application that is _visible to_ and _manipulated by_ the user. I think it is better consider the interface as the common boundry, or overlap, between two systems.
+
+Two of the most important interfaces of software systems are **user interfaces** (UIs) and **application programming interfaces** (APIs).
+
+- The **UI** is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. It overlaps with the user and is designed around capabilities and nature of both the software and the user. The UI is the primary interface in most applications.
+
+- The **API** is the part of a software system that is used by programmers to connect it with other software systems. A well designed API considers both the software system itself and how other software systems will want to use it. It The API is the primary interface in most libraries.
+
 It is common for software to have both a UI and an API. For example twitter provides a user interface for making and reading tweets and an API for integrating twitter into existing systems.
-Abstraction, subway
 
-### Parameters
-Parameters are factors that control what how a system operates. Exposing parameters allows artists and designers to create systems that can be controlled by others. Choosing which parameters to expose is a core concern of software interface design.
+### Exposing Parameters
+Exposing parameters allows artists and designers to create systems that can be controlled by others—and themselves—more easily. Choosing which parameters to expose is a core concern of software interface design. When choosing, consider the following:
 
-#### What to Expose
 - Which parameters should be exposed?
-- Which values should be accepted for each parameter?
 - Which parameters are required, which are optional?
+- Which values should be accepted for each parameter?
 
 #### Balance
 ::: .half
@@ -72,18 +139,17 @@ Parameters are factors that control what how a system operates. Exposing paramet
 
 
 #### Presenting Your interface
-Once you have decided on what to expose via your interface, you must consider how to communicate your interface options to your users.
+Once you have decided on what to expose via your interface, you must consider how to communicate your interface options to your users:
+
+- What will you name each parameter?
 - What UI controls will you use for each parameter?
-- What will you label each control?
 - How will you group and order the UI controls?
 - How will you explain the purpose of each parameter?
 
 #### Feedback
-Feedback shows users the impact their actions have on the system. Without feedback, systems are very hard to learn and use.
-In simple cases, showing users the end result of their choices is often enough. In more complex situations, it is often helpful to provide intermediate feedback. For example, if a system will react slowly to user actions, providing immediate confirmation of user input is important.
+Feedback shows users the impact their actions have on the system. Without feedback, systems are very hard to learn and use. With clear and responsive feedback, even systems which are difficult to describe can often be intuitively understood.
 
-#### Parameter Space
-A parameter space is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (yes/no) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. A system that takes just two floating point parameters has 9,223,372,036,854,775,808 (9.2 Quintillion!) states. This is a basically inconceivably large number, but it is quite likely that many of those states would look samey.
+In simple cases, showing users the end result of their choices after each change is often enough. In more complex situations, it is often helpful to provide intermediate feedback. Many procedural systems are too complex to provide realtime feedback. For systems that take a long time to calculate, providing immediate confirmation of user input is important. Sometimes it can be very helpful to provide a low quality preview as well.
 
 #### Keep Your User In Mind
 The way that you think about your software system is often very different from the way your users think about it.
@@ -92,18 +158,7 @@ The way that you think about your software system is often very different from t
 - Why will they be using it? What will they be trying to do?
 - Do they understand how your software works under the hood? Should they?
 
-### Parametric Design
-Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.
-
-::: .links-sidebar
-    [Wikipedia:<br/>Paramet&shy;ricism](https://en.wikipedia.org/wiki/Parametricism)
-/::
-
-::: .callout
-Parametricism
-: is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.
-/::
-
+[ADD SLIDE HERE "what you make, what you design"]
 
 
 ::: .activity
@@ -142,7 +197,10 @@ Begin designing a user interface for a fictional machine by considering which pa
 
 /::
 
-## Globals as Interfaces
+
+## Parameters + p5
+
+### Globals as Interfaces
 
 A quick-and-dirty way to make your comp form sketches “tweakable” is to use global variables for your parameters and group them at the top of the script.
 
@@ -150,74 +208,28 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 - Works particularly well for small one-off sketches that only you will ever use.
 - Choose clear variable names that explain the purpose of each parameter.
 - Use comments to explain the parameter in more detail, document legal value ranges, and suggest good values.
-- Yes, globals are evil. That is part the “dirty” part.
+- This approach slows down exploration, because you still need to re-run your sketch after each change.
+- Yes, [global variables are evil](https://stackoverflow.com/questions/19158339/why-are-global-variables-evil). If your language supports constants, it is a good idea to use them instead of variables.
 
 ::: js-lab
-/comp_form/square.js
+/comp_form/parameters/square.js
 /::
 
-## p5.js Dom Interfaces
+### HTML Interfaces with p5.dom.js
 
-The p5 Dom Library provides functions that allow you create html elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.
+The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides functions that allow you create HTML elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.
 
 - This is more complicated to set up, but still pretty quick.
 - This is a better choice if you want to quickly explore your parameter-space.
 - Label your inputs clearly. Consider your interface carefully.
-- Your controls can also be made in HTML, used in p5 via select()
+- Your controls can also be made in HTML, used in p5 via `select()`
 - You can style your interface with CSS.
 
-```javascript
-var pos_x_slider, pos_y_slider, size_slider;
 
-function setup() {
-    createCanvas(640, 360);
-    fill(100);
-    noStroke();
-    rectMode(CENTER);
-
-    createP('Horizontal Position');
-    pos_x_slider = createSlider(0, width, width * .5);
-    createP('Vertical Position');
-    pos_y_slider = createSlider(0, height, height * .5);
-    createP('Size');
-    size_slider = createSlider(10, 200, 100);
-}
-
-
-function draw() {
-    background(250);
-
-    var pos_x = pos_x_slider.value();
-    var pos_y = pos_y_slider.value();
-    var size = size_slider.value();
-
-    rect(pos_x, pos_y, size, size);
-}
-```
-
-## Get to Know p5
-
-::: .links-sidebar
-[p5: Reference](https://p5js.org/reference/)
+::: js-lab
+/comp_form/parameters/square_slider.js
 /::
 
-If you haven’t used the following features of p5, take a look.
-
-
-### colorMode()
-Working with color in terms of hue, saturation, and brightness is often much better than RGB. Use `colorMode()`to switch to HSB colors, and to choose your range (0-255, 0-100, 0-1).
-
-### ellipseMode(), rectMode()
-Sometimes the clearest way to draw a ellipse is to specify the bounding box corners. Sometimes the center and width/height makes more sense. Use these functions to switch how `ellipse()` and `rect()` use their arguments.
-
-### push() + pop()
-Normally if you change your drawing state (fill color, stroke weight, etc), it stays changed after you do your drawing. `push()` and `pop()` let you save and restore your state.
-
-### lerp(), lerpColor()
-These functions let you interpolate between two values.
-
-### map()
-Use `map()` to remap values from one range to another.
 
 ::: .assignment
 

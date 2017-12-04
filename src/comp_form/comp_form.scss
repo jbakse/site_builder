@@ -9,6 +9,14 @@ $black: #000;
 $light-grey: #F4F3F1;
 $middle-grey: #CCC;
 $dark-grey: #505050;
+$red: #cc9999;
+$light-red: #ffeeee;
+
+$green: #99cc99;
+
+// $light-grey: #F0F2F6;
+$dark-grey: #000;
+
 
 $theme-colors: map-merge( ( dark-grey: $dark-grey),
 $theme-colors);
@@ -22,6 +30,7 @@ $theme-colors);
 
 
 @import './layout';
+@import './toc';
 @import './copy';
 @import './copy_extras';
 @import './slides';
@@ -29,8 +38,29 @@ $theme-colors);
 
 canvas.mess {
     position: fixed;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
+    z-index: -1;
+    pointer-events: none;
+
+
+
+
+    /* mix-blend-mode: multiply; */
+    /* border: 1px solid red; */
+}
+
+
+.comp-form-copy {
+    div.js-lab {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }

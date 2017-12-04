@@ -155,6 +155,11 @@ function check_frame_visible() {
     let w = $(window.parent);
     let f = $(window.frameElement);
 
+    // if we are not in a frame, then we are visible
+    if (f.length === 0) {
+        return true;
+    }
+
     let window_top = w.scrollTop();
     let window_bottom = window_top + w.height();
 
@@ -243,7 +248,7 @@ lab_view.setupConsole = function setupConsole() {
 lab_view.appendConsole = function appendConsole() {
     let line = $("<div>");
     let args = [].slice.call(arguments);
-    line.append(args.join(", "));
+    line.append(args.join(" "));
     lab_view.console_div.append(line);
 };
 
