@@ -1,12 +1,10 @@
 # Todo
 
-.cleanup `markdown_builder.js`
+.clean up jsbin css, match to ``` code examples
 .properly style slideshow
 .disable slideshow autoplay
+.cleanup `markdown_builder.js`
 
-.change compiled breakpoints to account for sidebar
-
-rabbithole?.have sass build bootstrap with config
 
 # Features
 
@@ -23,18 +21,9 @@ styling support for themeable components based of bootstrap `.callout .callout-a
 
 
 # Features - Styles
-- Callout
-- Collout-side
-- Headers
-- Lists
-- Sidebar Left
-- Sidebar right
-- Slideshow expand left-right
-- yaml -> slide carousel
-
 
 # Bugs
-x.browser reload sometimes fires early. You need to save twice to see changes.
+.browser reload sometimes fires early. You need to save twice to see changes.
 .markdown watcher and rebuild doesn't work when layouts change because the `changed` filter only rebuilds md files that have changed and doesn't check dependancies like layouts
 
 
