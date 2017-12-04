@@ -23,18 +23,27 @@ software: p5.js + p5.dom
 
 
 ## Parameters
+
+[bring up blue square as "engage" moment?]
+[engage, focus study, practice]
+
 One of the most powerful and rewarding aspects of writing procedural generation code is exploring what it can make. Programming a maze generator will probably take longer than simply drawing a maze by hand, but with the generator you can quickly explore hundreds of maze variations. Often this leads to new ideas and aesthetics to pursue further. 
 
-::: .links-sidebar
-[Wikipedia:<br/>Parameter Space](https://en.wikipedia.org/wiki/Parameter_space)
-/::
+[useful automate tedious vs artist control]
+
+
+### Benefits
+
+
 
 You explore the range of a procedural genertion system by changing the values of its parameters and seeing what happens. Early on you might tweak parameters directly, by changing [hard-coded](https://en.wikipedia.org/wiki/Hard_coding) values directly in the source.
 
-It is almost always worth taking time to indentify useful parameters in your code, consider their possible values, and expose them in a way that encourages exploration. Doing so will lead to better code under the hood, better user experience, and better results.
+It is almost always worth taking time to indentify useful parameters in your code, consider their possible values, and expose them in a way that encourages exploration. Doing so will lead to **better code** under the hood, **better user experiences**, and **better results**.
 
-### Better Code
-Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that becomes increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. Exposing parameters helps to organize the code by seperating configuration and implementation. It also makes the code easier to read by changing "magic numbers" into named values that better explain their purpose.
+#### Better Code
+Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that becomes increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. **Exposing parameters helps to organize the code by seperating configuration and implementation.** It also makes the code **easier to read** by changing "magic numbers" into named values that better explain their purpose.
+
+#### ?
 
 The following line of code is pulled from a program that displays animated messages. This line calculates an offset used in an animated transition. The original has several magic numbers: `40`, `3`, `.5`, and `80` and had become hard to reason about and change.
 
@@ -55,17 +64,27 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 ```
 /::
 
-### Better User Experience
+#### Better User Experience
+[set up better, currently starting with the negative example]
+[false economy]
+[you are your own main user]
 Exploring the parameter space of a system by tweaking hard-coded values doesn't work very well. Tweaking hard-coded values is slow—the project has to be re-built and re-run after each change—which discurages exploration. Also, the slow feedback cycle makes it harder to understand the effects of each change. Tweaking hard-coded values is also unclear. Which values should you change for particular effects? Do you need to change the value in multiple places? Will chaning a particular value just break things? Exposing the values as parameters makes it the code easier to document, understand, and use.
 
-### Better Results
+#### Better Results
 Well-parameterized code is easier and faster to read and maintain. When you can explore the parameter space more quickly, you can explore it more thoroughly, finding interesting possibilities, ideas, and aesthetics to explore further. 
 
 
 
 
 ### Parameter Space
+
+::: .links-sidebar
+[Wikipedia:<br/>Parameter Space](https://en.wikipedia.org/wiki/Parameter_space)
+/::
+
 A parameter space is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (yes/no) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. A system that takes just two floating point parameters has 18,446,744,073,709,551,616	(18.4 Quintillion!) states. This is an inconceivably large number, but it is quite likely that many of those states would look very similar.
+
+[explain why this section is here]
 
 [Combinatorial Explosion](https://en.wikipedia.org/wiki/Combinatorial_explosion)
 [Illustration? Flow for these two sections?]

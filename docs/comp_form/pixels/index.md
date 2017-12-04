@@ -10,7 +10,9 @@ previous: Strategy
 previous_url: ../strategy
 
 hero_title: Pixel Data
-description: Internally, computers often represent images as a list of pixel values. Accessing, processing, and generating pixel data directly allows you to explore a variety of low-level techniques.
+old_description: Internally, computers often represent images as a array of pixel values. Accessing, processing, and generating pixel data directly allows you to explore a variety of low-level techniques.
+
+description: Access pixel values directly to process and generate images.
 software: p5.js
 ---
 
@@ -24,15 +26,28 @@ software: p5.js
 
 ## Raster Images
 
+### The pixel array
+
+
+[diagram]
+[get and set are slow, really slow, and why]
+
+
 ### Rasterization
+[p5 rasterizes high-level descriptions to pixel values as you go (immediate mode?)]
+[vector images are rasterized before they are shown]
 
 ### Raster vs Vector Images
 
 [How raster images are stored in memory]
 
-[Not just about scalability. Scalability is the most often mentioned difference between raster and vector images, but other differences exist as well. Because vector images are described at a higher level—shapes instead of pixels—they are also easier to distort, recolor, change the stroke, etc. Not all images can be reasonably described as a collection of shapes. Photographic images, in particular, have too much detail to store as a collection of shapes. Similarly, some types of effects that consume or produce pixel-level detail require raster data] 
+[Not just about scalability. Scalability is the most often mentioned difference between raster and vector images, but other differences exist as well. Because vector images are described at a higher level—shapes instead of pixels—they are also easier to distort, recolor, change the stroke, etc. Not all images can be reasonably described as a collection of shapes. Photographic images, in particular, have too much detail to store as a collection of shapes. Similarly, some types of effects that consume or produce pixel-level detail require raster data, more information about what the images is made of, rather than what it looks like now] 
+
+[slide show]
 
 ## Writing Pixel Data
+
+[intro?]
 
 ### A Basic Example
 
@@ -87,9 +102,9 @@ Line 15
 : Instead of choosing a color at random, this example calculates a color based on the current `x` and `y` position of the pixel being set.
 
 
-### A Third Example
+### Random Access Example
 
-The first two examples use a nested loop to set a value for every pixel in the image. This pattern often used in pixel generating and processing scripts, but not always. This example places red pixels at random places on the image.
+The first two examples use a nested loop to set a value for every pixel in the image; it visits every pixel in a sequential order. That pattern is commonly used in pixel generating and processing scripts, but not always. This example places red pixels at random places on the image.
 
 ::: js-lab
 /comp_form/pixels/sketches/basic_pixels_3.js
@@ -123,7 +138,7 @@ All in 15 Minutes   | Hot Dang!
 10. Create an inset square with a gradient, surrounded by randomly colored pixels.
 {continue}
 
-### Modify the Third Example
+### Modify the Random Access Example
 11. Change the image resolution to `50x50`, adjust scatter to fill.
 12. Instead of drawing single pixels, draw little `+` marks at random locations.
 13. Make each `+` a random color.
