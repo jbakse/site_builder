@@ -1,12 +1,8 @@
-- artist: Zaha Hadid
-  title: Galaxy SOHO
-  image: http://images.adsttc.com/media/images/5285/1f2b/e8e4/4e52/4b00/01ab/slideshow/HAC_photo_by_Iwan_Baan_(2).jpg?1384455904
+- artist: Jean Arp
+  title: Collage with Squares Arranged According to the Laws of Chance — 1917
+  image: ./slides/arp.jpg
   comments: >
   links:
-    - label: Zaha Hadid Studio
-      href: http://www.zaha-hadid.com/
-    - label: "Wikipedia: Parametricism"
-      href: https://en.wikipedia.org/wiki/Parametricism
 
 # - artist: Kuva.io
 #   title: Hair
@@ -17,19 +13,30 @@
 #       href: https://www.kuva.io/hair-simulation/
 
 
-- artist: MakeHuman Community
-  title: MakeHuman
-  image: http://upload.wikimedia.org/wikipedia/commons/c/c7/Makehuman_1_0_alpha8_rc_screenshot.png
+- artist: James Paterson (Presstube)
+  title: Page 0 (Detail) — 2004
+  image: ./slides/presstube.png
   links:
-    - label: "Makehuman"
-      href: http://www.makehuman.org/
+    - label: "Page 0"
+      href: http://presstube.com/project.php?id=217
+    - label: "Presstube Old Site"
+      href: http://presstube.com/projects.php?pt_pp=18&&pp=all
 
-- artist: Droftarts
-  title: Parametric Pulley
-  image: ./slides/pulley.png
+
+- artist: Joshua Davis (Praystation)
+  title: Misc, 1
+  image: ./slides/praystation_1.jpg
   links:
-    - label: "Parametric Pulley"
-      href: http://www.thingiverse.com/apps/customizer/run?thing_id=16627&code=65885a90cc68e3e23b0b36718f8b4242
+    - label: "Artist's Site"
+      href: https://joshuadavis.com/
+
+
+- artist: Joshua Davis (Praystation)
+  title: Misc, 2
+  image: ./slides/praystation_2.png
+  links:
+    - label: "Artist's Site"
+      href: https://joshuadavis.com/
 
 - artist: mataflop
   title: modulator
