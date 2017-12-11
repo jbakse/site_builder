@@ -14,7 +14,7 @@
 <li>Which aspects were controlled by the artist?</li>
 </ul>
 <div id="" class="!short slides-wrap slideInfos">
-<div id="carousel-310" class="carousel slide" data-ride="carousel">
+<div id="carousel-129" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner slides" role="listbox">
 <div class="carousel-item active">
 <div class="slide">
@@ -136,7 +136,7 @@
 </div>
 </div>
 <div class="slide-info-top">
-<a class="carousel-control-prev" href="#carousel-310" role="button" data-slide="prev">
+<a class="carousel-control-prev" href="#carousel-129" role="button" data-slide="prev">
 <span class="carousel-prev-icon">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs></defs>
@@ -147,7 +147,7 @@
 </span>
 <span class="sr-only">Previous</span>
 </a>
-<a class="carousel-control-next" href="#carousel-310" role="button" data-slide="next">
+<a class="carousel-control-next" href="#carousel-129" role="button" data-slide="next">
 <span class="carousel-next-icon-tc">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs></defs>
@@ -174,38 +174,37 @@
 <p><a href="https://p5js.org/">p5.js Website</a></p>
 <p><a href="http://pucd2035-e-f15.github.io/class_notes/">Justin’s Creative Computing Class</a></p>
 <h2 id="the-methodical-application-of-chance">The Methodical Application of Chance</h2>
-<div id="" class="activity">
+<div id="" class="assignment">
 <h2 id="2d6-vs-1d12-chart">2d6 vs 1d12 Chart</h2>
 <p>Compare the outcomes of rolling 2 6-sided dice to rolling 1 12-sided die.</p>
 <h3 id="one">One</h3>
-<p>Roll two six-sided dice 50 times.
+<p class="bigger">Roll two six-sided dice 50 times.
 Plot sums.</p>
 <h3 id="two">Two</h3>
-<p>Roll two twelve-sided dice 50 times.
+<p class="bigger">Roll two twelve-sided dice 50 times.
 Plot sums.</p>
 </div>
 <h3 id="generating-random-numbers">Generating Random Numbers</h3>
-<p>Plain Javascript provides <code>Math.random()</code> to generate a random number.</p>
+<p>Plain Javascript provides <code>Math.random()</code> to generate a random number.
+[[move to bottom of section]]</p>
 <p>Processing provides the <code>random()</code> for generating random numbers. Without any parameters, <code>random()</code> generates a random number between 0 and 1 (not including the 1). You can pass parameters to control the range of the number. The numbers produced by random are pretty close to evenly distributed.</p>
-<div id="" class="">
 <pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"random()"</span>);        <span class="hljs-comment">// random()</span>
-<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.45...</span>
-<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.12...</span>
-<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.37...</span>
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"random()"</span>);        <span class="hljs-comment">// random()</span>
+	<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.45...</span>
+	<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.12...</span>
+	<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.37...</span>
 
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"random(10)"</span>);      <span class="hljs-comment">// random(10)</span>
-<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">10</span>));        <span class="hljs-comment">// 4.89...</span>
-<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">10</span>));        <span class="hljs-comment">// 1.20...</span>
-<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">10</span>));        <span class="hljs-comment">// 6.99...</span>
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"random(10)"</span>);      <span class="hljs-comment">// random(10)</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">10</span>));        <span class="hljs-comment">// 4.89...</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">10</span>));        <span class="hljs-comment">// 1.20...</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">10</span>));        <span class="hljs-comment">// 6.99...</span>
 
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"random(20, 30)"</span>);  <span class="hljs-comment">// random(20, 30)</span>
-<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">20</span>, <span class="hljs-number">30</span>));    <span class="hljs-comment">// 21.96...</span>
-<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">20</span>, <span class="hljs-number">30</span>));    <span class="hljs-comment">// 20.56...</span>
-<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">20</span>, <span class="hljs-number">30</span>));    <span class="hljs-comment">// 22.36...</span>
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"random(20, 30)"</span>);  <span class="hljs-comment">// random(20, 30)</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">20</span>, <span class="hljs-number">30</span>));    <span class="hljs-comment">// 21.96...</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">20</span>, <span class="hljs-number">30</span>));    <span class="hljs-comment">// 20.56...</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">20</span>, <span class="hljs-number">30</span>));    <span class="hljs-comment">// 22.36...</span>
 }
 </code></pre>
-</div>
 <h4 id="specifying-a-range">Specifying a Range</h4>
 <p>If you want your numbers evenly distributed over a range, <code>random()</code> works as-is.</p>
 <div id="" class="">
@@ -237,23 +236,35 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 <p>Often even distribution isn’t what you really want. Often you want to <strong>bias</strong> the results towards the low-end, high-end or middle. Simple averaging and the <code>min()</code> and <code>max()</code> functions can help with this.</p>
 <h4 id="even-distribution">Even Distribution:</h4>
 <p><code>random(1,11)</code></p>
-<p class="scale full-width"><a href="./blue-square.png" title="A Blue Square">test</a></p>
+<div id="" class="callout">
+<p class="scale"><img src="./even.svg" alt="even distribution"></p>
+</div>
 <h4 id="low-bias-distribution">Low Bias Distribution:</h4>
 <p><code>min(random(10), random(10))</code>
 Taking the lowest of two or more random numbers will bias the result toward the low-end.</p>
-<p class="scale full-width"><a href="./blue-square.png" title="A Blue Square">test</a></p>
+<div id="" class="callout">
+<p class="scale"><img src="./low_bias.svg" alt="even distribution"></p>
+</div>
 <p>The more random numbers you use, the stronger the bias: <code>min(random(10), random(10), random(10), random(10))</code></p>
-<p class="scale full-width"><a href="./blue-square.png" title="A Blue Square">test</a></p>
+<div id="" class="callout">
+<p class="scale"><img src="./low_bias2.svg" alt="even distribution"></p>
+</div>
 <h4 id="high-bias-distribution">High Bias Distribution:</h4>
 <p><code>max(random(10), random(10))</code></p>
-<p class="scale full-width"><a href="./blue-square.png" title="A Blue Square">test</a></p>
-<h4 id="middle-bias-distribution">Middle Bias Distribution:</h4>
+<div id="" class="callout">
+<p class="scale"><img src="./high_bias.svg" alt="even distribution"></p>
+</div>
+#### Middle Bias Distribution:
 <p><code>(random(1,11) + random(1,11)) / 2</code></p>
-<p class="scale full-width"><a href="./blue-square.png" title="A Blue Square">test</a></p>
+<div id="" class="callout">
+<p class="scale"><img src="./middle_bias.svg" alt="even distribution"></p>
+</div>
 <h4 id="normal-distribution">Normal Distribution:</h4>
 <p><code>(random(1,11) + random(1,11) + random(1,11)) / 3</code>
 If you generate several random numbers and average them, the result gets close to normal (bell curve) distribution.</p>
-<p class="scale full-width"><a href="./blue-square.png" title="A Blue Square">test</a></p>
+<div id="" class="callout">
+<p class="scale"><img src="./normal.svg" alt="even distribution"></p>
+</div>
 <p>P5 also provides the <code>randomGausian()</code> function for generating numbers with normal distribution. With <code>randomGausian</code> the possible values are not clamped to a range, extreme outliers are just really rare.</p>
 <h4 id="more-info">More Info</h4>
 <p><a href="http://anydice.com/">Anydice</a></p>
@@ -363,7 +374,7 @@ Imagine a program that draws a square, like the one below. What parameters might
 <div id="" class="!short slides-wrap slideInfos">
 
 
-<div id="carousel-311" class="carousel slide" data-ride="carousel">
+<div id="carousel-130" class="carousel slide" data-ride="carousel">
 
 <div class="carousel-inner slides" role="listbox">
 
@@ -503,7 +514,7 @@ Imagine a program that draws a square, like the one below. What parameters might
 </div>
 
 <div class="slide-info-top">
-<a class="carousel-control-prev" href="#carousel-311" role="button" data-slide="prev">
+<a class="carousel-control-prev" href="#carousel-130" role="button" data-slide="prev">
 <span class="carousel-prev-icon">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs></defs>
@@ -515,7 +526,7 @@ Imagine a program that draws a square, like the one below. What parameters might
 <span class="sr-only">Previous</span>
 </a>
 
-<a class="carousel-control-next" href="#carousel-311" role="button" data-slide="next">
+<a class="carousel-control-next" href="#carousel-130" role="button" data-slide="next">
 
 <span class="carousel-next-icon-tc">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

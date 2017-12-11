@@ -54,30 +54,33 @@ If you have never worked with Processing or p5, you’ll need to do some reading
 
 ## The Methodical Application of Chance
 
-::: .activity
+::: .assignment
 ## 2d6 vs 1d12 Chart
 Compare the outcomes of rolling 2 6-sided dice to rolling 1 12-sided die.
+
 ### One
 Roll two six-sided dice 50 times.
-Plot sums.
+Plot sums.{bigger}
+
 ### Two
 Roll two twelve-sided dice 50 times.
-Plot sums.
+Plot sums.{bigger}
 
 /::
 
 ### Generating Random Numbers
 
 Plain Javascript provides `Math.random()` to generate a random number.
+[[move to bottom of section]]
 
 Processing provides the `random()` for generating random numbers. Without any parameters, `random()` generates a random number between 0 and 1 (not including the 1). You can pass parameters to control the range of the number. The numbers produced by random are pretty close to evenly distributed.
 
-:::
+
 ```javascript
 function setup() {
-	   console.log("random()");        // random()
-	   console.log(random());          // 0.45...
-		 console.log(random());          // 0.12...
+	console.log("random()");        // random()
+	console.log(random());          // 0.45...
+	console.log(random());          // 0.12...
 	console.log(random());          // 0.37...
 
 	console.log("random(10)");      // random(10)
@@ -91,7 +94,6 @@ function setup() {
 	console.log(random(20, 30));    // 22.36...
 }
 ```
-/::
 
 
 #### Specifying a Range
@@ -140,37 +142,51 @@ Often even distribution isn’t what you really want. Often you want to **bias**
 
 `random(1,11)`
 
-[test](./blue-square.png "A Blue Square"){scale full-width}
+::: .callout
+![even distribution](./even.svg){scale}
+/::
+
 
 #### Low Bias Distribution:
 
 `min(random(10), random(10))`
 Taking the lowest of two or more random numbers will bias the result toward the low-end.
 
-[test](./blue-square.png "A Blue Square"){scale full-width}
+::: .callout
+![even distribution](./low_bias.svg){scale}
+/::
 
 The more random numbers you use, the stronger the bias: `min(random(10), random(10), random(10), random(10))`
 
-[test](./blue-square.png "A Blue Square"){scale full-width}
+::: .callout
+![even distribution](./low_bias2.svg){scale}
+/::
+
 
 #### High Bias Distribution:
 
 `max(random(10), random(10))`
 
-[test](./blue-square.png "A Blue Square"){scale full-width}
-
+::: .callout
+![even distribution](./high_bias.svg){scale}
+/::
 #### Middle Bias Distribution:
 
 `(random(1,11) + random(1,11)) / 2`
 
-[test](./blue-square.png "A Blue Square"){scale full-width}
+::: .callout
+![even distribution](./middle_bias.svg){scale}
+/::
+
 
 #### Normal Distribution:
 
 `(random(1,11) + random(1,11) + random(1,11)) / 3`
 If you generate several random numbers and average them, the result gets close to normal (bell curve) distribution.
 
-[test](./blue-square.png "A Blue Square"){scale full-width}
+::: .callout
+![even distribution](./normal.svg){scale}
+/::
 
 P5 also provides the `randomGausian()` function for generating numbers with normal distribution. With `randomGausian` the possible values are not clamped to a range, extreme outliers are just really rare.
 
