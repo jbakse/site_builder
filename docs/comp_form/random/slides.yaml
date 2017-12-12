@@ -1,0 +1,60 @@
+- artist: Jean Arp
+  title: Collage with Squares Arranged According to the Laws of Chance — 1917
+  image: ./slides/arp.jpg
+  comments: >
+  links:
+
+# - artist: Kuva.io
+#   title: Hair
+#   image: ./slides/hair.png
+#   comments: >
+#   links:
+#     - label: "Kuva.io: Hair"
+#       href: https://www.kuva.io/hair-simulation/
+
+
+- artist: James Paterson (Presstube)
+  title: Page 0 (Detail) — 2004
+  image: ./slides/presstube.png
+  links:
+    - label: "Page 0"
+      href: http://presstube.com/project.php?id=217
+    - label: "Presstube Old Site"
+      href: http://presstube.com/projects.php?pt_pp=18&&pp=all
+
+
+- artist: Joshua Davis (Praystation)
+  title: Misc, 1
+  image: ./slides/praystation_1.jpg
+  links:
+    - label: "Artist's Site"
+      href: https://joshuadavis.com/
+
+
+- artist: Joshua Davis (Praystation)
+  title: Misc, 2
+  image: ./slides/praystation_2.png
+  links:
+    - label: "Artist's Site"
+      href: https://joshuadavis.com/
+
+- artist: mataflop
+  title: modulator
+  image: ./slides/modulator.png
+  links:
+    - label: "modulator"
+      href: http://www.metaflop.com/modulator/font/pQkUOJOPk8
+
+- artist: Greg Schomburg
+  title: Gregfont
+  image: ./slides/gregfont.png
+  links:
+    - label: "Gregfont"
+      href: http://gregschomburg.com/gregfont/
+
+- artist: Plastaq Software
+  title: elsy
+  image: ./slides/elsy.png
+  links:
+    - label: elsy
+      href: http://www.plastaq.com/elsy/

@@ -1,0 +1,742 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Random | Comp Form</title></head><body class="comp-form"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Topic 4: Random Values</span><div class="buttons"><a class="previous" href="../parameters"><i class="fa fa-caret-left fa-lg"></i>Parameters</a><a class="next" href="../noise">Noise<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Random Values</h1><h6>The What</h6><p class="description">Randomness occurs frequently in nature. Gaining control over its generation is therefore paramount to achieving natural-appearing procedural graphics.</p><h6>The How</h6><p class="software">p5.js + p5.dom</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Technical: Gain familiarity with the p5.js library</li>
+<li>Understand the <code>random()</code> function and using it to bias outcomes</li>
+<li>Be able to identify what random bias looks like</li>
+<li>Gain an understanding of pseudorandom values and what makes it predictable</li>
+<li>Technical: Introduction to Git and Github</li>
+</ul>
+<p>[the above section Talia fabricated, it wasn’t on the original. It may require revisiting]</p>
+<h2 id="procedurally-generated-images">Procedurally Generated Images</h2>
+<h4 id="consider">Consider:</h4>
+<ul>
+<li>Which aspects of each work were influenced by chance?</li>
+<li>Which aspects were controlled by the artist?</li>
+</ul>
+<div id="" class="!short slides-wrap slideInfos">
+<div id="carousel-129" class="carousel slide" data-ride="carousel">
+<div class="carousel-inner slides" role="listbox">
+<div class="carousel-item active">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/arp.jpg" alt="Collage with Squares Arranged According to the Laws of Chance — 1917">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Jean Arp</div>
+<div class="title">Collage with Squares Arranged According to the Laws of Chance — 1917</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/presstube.png" alt="Page 0 (Detail) — 2004">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">James Paterson (Presstube)</div>
+<div class="title">Page 0 (Detail) — 2004</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="http://presstube.com/project.php?id=217">Page 0</a><a href="http://presstube.com/projects.php?pt_pp=18&&pp=all">Presstube Old Site</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/praystation_1.jpg" alt="Misc, 1">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Joshua Davis (Praystation)</div>
+<div class="title">Misc, 1</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="https://joshuadavis.com/">Artist's Site</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/praystation_2.png" alt="Misc, 2">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Joshua Davis (Praystation)</div>
+<div class="title">Misc, 2</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="https://joshuadavis.com/">Artist's Site</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/modulator.png" alt="modulator">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">mataflop</div>
+<div class="title">modulator</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="http://www.metaflop.com/modulator/font/pQkUOJOPk8">modulator</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/gregfont.png" alt="Gregfont">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Greg Schomburg</div>
+<div class="title">Gregfont</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="http://gregschomburg.com/gregfont/">Gregfont</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/elsy.png" alt="elsy">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Plastaq Software</div>
+<div class="title">elsy</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="http://www.plastaq.com/elsy/">elsy</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-info-top">
+<a class="carousel-control-prev" href="#carousel-129" role="button" data-slide="prev">
+<span class="carousel-prev-icon">
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs></defs>
+<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<polygon id="Page-1-Copy" fill="#3B7CF4" transform="translate(7.500000, 8.659834) rotate(-180.000000) translate(-7.500000, -8.659834) " points="0 17.3196679 15 8.65334717 0 5.68434189e-14"></polygon>
+</g>
+</svg>
+</span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carousel-129" role="button" data-slide="next">
+<span class="carousel-next-icon-tc">
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs></defs>
+<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<polygon fill="#3B7CF4" points="0 17.3196679 15 8.65334717 0 5.68434189e-14"></polygon>
+</g>
+</svg>
+</span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+</div>
+<h2 id="what-p5-is">What p5 is</h2>
+<p>From the p5js homepage:</p>
+<div id="" class="callout">
+<dl>
+<dt>p5.js</dt>
+<dd>is a JavaScript library that starts with the original goal of Processing, to make coding accessible for artists, designers, educators, and beginners, and reinterprets this for today’s web.</dd>
+</dl>
+</div>
+<p>P5 is a javascript library for making drawings and animations. It makes getting set up and working faster and provides simple functions for common tasks. It also allows for a more imperative programming style, similar to Processing.</p>
+<p>If you have never worked with Processing or p5, you’ll need to do some reading and learning on your own. Here are some resources to get you started quickly:</p>
+<p><a href="https://p5js.org/">p5.js Website</a></p>
+<p><a href="http://pucd2035-e-f15.github.io/class_notes/">Justin’s Creative Computing Class</a></p>
+<h2 id="the-methodical-application-of-chance">The Methodical Application of Chance</h2>
+<div id="" class="assignment">
+<h2 id="2d6-vs-1d12-chart">2d6 vs 1d12 Chart</h2>
+<p>Compare the outcomes of rolling 2 6-sided dice to rolling 1 12-sided die.</p>
+<h3 id="one">One</h3>
+<p class="bigger">Roll two six-sided dice 50 times.
+Plot sums.</p>
+<h3 id="two">Two</h3>
+<p class="bigger">Roll two twelve-sided dice 50 times.
+Plot sums.</p>
+</div>
+<h3 id="generating-random-numbers">Generating Random Numbers</h3>
+<p>Plain Javascript provides <code>Math.random()</code> to generate a random number.
+[[move to bottom of section]]</p>
+<p>Processing provides the <code>random()</code> for generating random numbers. Without any parameters, <code>random()</code> generates a random number between 0 and 1 (not including the 1). You can pass parameters to control the range of the number. The numbers produced by random are pretty close to evenly distributed.</p>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"random()"</span>);        <span class="hljs-comment">// random()</span>
+	<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.45...</span>
+	<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.12...</span>
+	<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.37...</span>
+
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"random(10)"</span>);      <span class="hljs-comment">// random(10)</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">10</span>));        <span class="hljs-comment">// 4.89...</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">10</span>));        <span class="hljs-comment">// 1.20...</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">10</span>));        <span class="hljs-comment">// 6.99...</span>
+
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"random(20, 30)"</span>);  <span class="hljs-comment">// random(20, 30)</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">20</span>, <span class="hljs-number">30</span>));    <span class="hljs-comment">// 21.96...</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">20</span>, <span class="hljs-number">30</span>));    <span class="hljs-comment">// 20.56...</span>
+	<span class="hljs-built_in">console</span>.log(random(<span class="hljs-number">20</span>, <span class="hljs-number">30</span>));    <span class="hljs-comment">// 22.36...</span>
+}
+</code></pre>
+<h4 id="specifying-a-range">Specifying a Range</h4>
+<p>If you want your numbers evenly distributed over a range, <code>random()</code> works as-is.</p>
+<div id="" class="">
+<pre><code class="language-javascript">random(<span class="hljs-number">0</span>,<span class="hljs-number">10</span>); <span class="hljs-comment">// even distribution between 0 and 10</span>
+random(<span class="hljs-number">10</span>,<span class="hljs-number">15</span>); <span class="hljs-comment">// even distribution between 10 and 15</span>
+</code></pre>
+</div>
+<p>In some libraries, the <code>random</code> function doesn’t take parameters and always gives you a value between 0 and 1. If you want a different range, you can scale and offset the value yourself:</p>
+<div id="" class="">
+<pre><code class="language-javascript">random() * range + start
+random() * <span class="hljs-number">5</span> + <span class="hljs-number">10</span> <span class="hljs-comment">// even distribution between 10 and 15</span>
+</code></pre>
+</div>
+<h4 id="random-integers">Random Integers</h4>
+<p>The <code>random()</code> function returns floating point values, but sometimes you want just whole numbers (integers). The floor() function will round a number down, chopping off the decimal part.</p>
+<div id="" class="">
+<pre><code class="language-javascript"><span class="hljs-comment">// roll a standard die</span>
+floor(random(<span class="hljs-number">0</span>,<span class="hljs-number">6</span>)) + <span class="hljs-number">1</span>
+<span class="hljs-comment">// or</span>
+floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">7</span>))
+
+<span class="hljs-comment">// this won't quite work. why?</span>
+floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</span>))
+</code></pre>
+</div>
+<p>The p5 library also has a <code>round()</code> function that rounds a number to the nearest integer. Using <code>round()</code> instead of <code>floor()</code> in the example above will cause incorrect results: <code>1</code> will get picked half as often as it should, and <code>7</code> will sometimes get picked and should not.</p>
+<h3 id="biased-distribution">Biased Distribution</h3>
+<p>The examples above will produce results evenly distributed across their range.</p>
+<p>Often even distribution isn’t what you really want. Often you want to <strong>bias</strong> the results towards the low-end, high-end or middle. Simple averaging and the <code>min()</code> and <code>max()</code> functions can help with this.</p>
+<h4 id="even-distribution">Even Distribution:</h4>
+<p><code>random(1,11)</code></p>
+<div id="" class="callout">
+<p class="scale"><img src="./even.svg" alt="even distribution"></p>
+</div>
+<h4 id="low-bias-distribution">Low Bias Distribution:</h4>
+<p><code>min(random(10), random(10))</code>
+Taking the lowest of two or more random numbers will bias the result toward the low-end.</p>
+<div id="" class="callout">
+<p class="scale"><img src="./low_bias.svg" alt="even distribution"></p>
+</div>
+<p>The more random numbers you use, the stronger the bias: <code>min(random(10), random(10), random(10), random(10))</code></p>
+<div id="" class="callout">
+<p class="scale"><img src="./low_bias2.svg" alt="even distribution"></p>
+</div>
+<h4 id="high-bias-distribution">High Bias Distribution:</h4>
+<p><code>max(random(10), random(10))</code></p>
+<div id="" class="callout">
+<p class="scale"><img src="./high_bias.svg" alt="even distribution"></p>
+</div>
+#### Middle Bias Distribution:
+<p><code>(random(1,11) + random(1,11)) / 2</code></p>
+<div id="" class="callout">
+<p class="scale"><img src="./middle_bias.svg" alt="even distribution"></p>
+</div>
+<h4 id="normal-distribution">Normal Distribution:</h4>
+<p><code>(random(1,11) + random(1,11) + random(1,11)) / 3</code>
+If you generate several random numbers and average them, the result gets close to normal (bell curve) distribution.</p>
+<div id="" class="callout">
+<p class="scale"><img src="./normal.svg" alt="even distribution"></p>
+</div>
+<p>P5 also provides the <code>randomGausian()</code> function for generating numbers with normal distribution. With <code>randomGausian</code> the possible values are not clamped to a range, extreme outliers are just really rare.</p>
+<h4 id="more-info">More Info</h4>
+<p><a href="http://anydice.com/">Anydice</a></p>
+<p><a href="http://anydice.com/articles/three-basic-distributions/">Anydice: Three Basic Distributions</a></p>
+<p><a href="https://www.redblobgames.com/articles/probability/damage-rolls.html">Redblob Post</a></p>
+<h2 id="dice-vs-decks">Dice vs. Decks</h2>
+<p>If you roll a die a few times you might get the same value more than once, and it might take a long time before a particular value pops up.</p>
+<p>If you roll a normal die six times, it is unlikely that you’ll get all six values without repeats (only happens 1.5% of the time).</p>
+<p>Also, it wouldn’t really be odd to not roll any 1’s (happens about 33% of the time). In fact, you can be pretty sure that at least one number won’t pop up in six rolls (98.5% sure).</p>
+<p>A deck of cards works differently. When you pull cards from a shuffled deck, you get a value in a random order, but you avoid duplicates, and you can make sure you tour all the values eventually.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/parameters/square.js">
+</iframe>
+</div>
+</div>
+<!--
+
+#### Better Code
+Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that becomes increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. **Exposing parameters helps to organize the code by seperating configuration and implementation.** It also makes the code **easier to read** by changing "magic numbers" into named values that better explain their purpose.
+
+#### ?
+
+The following line of code is pulled from a program that displays animated messages. This line calculates an offset used in an animated transition. The original has several magic numbers: `40`, `3`, `.5`, and `80` and had become hard to reason about and change.
+
+<div id="" class="bad">
+
+```javascript
+// original version
+offset = (40 * transitionPercent) + (transitionPercent * sin(i + 3 * .5) * 80);
+```
+
+</div>
+
+
+This revised version is better. The magic numbers are now named values that can be adjusted elsewhere in the code and the overall expression is simpler. Notably, this code doesn't do _exactly_ the same thing as the orignal version. That is okay. Some of the complexity in the original was left over from an early approach and no longer needed for transition effect. By considering the code as a system and its parameters, this was made easier to spot and fix.
+
+<div id="" class="good">
+
+```javascript
+// revised version
+offset = transitionPercent * sin(angle + phase) * amplitude;
+```
+
+</div>
+
+#### Better User Experience
+[set up better, currently starting with the negative example]
+[false economy]
+[you are your own main user]
+Exploring the parameter space of a system by tweaking hard-coded values doesn't work very well. Tweaking hard-coded values is slow—the project has to be re-built and re-run after each change—which discurages exploration. Also, the slow feedback cycle makes it harder to understand the effects of each change. Tweaking hard-coded values is also unclear. Which values should you change for particular effects? Do you need to change the value in multiple places? Will chaning a particular value just break things? Exposing the values as parameters makes it the code easier to document, understand, and use.
+
+#### Better Results
+Well-parameterized code is easier and faster to read and maintain. When you can explore the parameter space more quickly, you can explore it more thoroughly, finding interesting possibilities, ideas, and aesthetics to explore further.
+
+
+
+
+### Parameter Space
+
+<div id="" class="links-sidebar">
+
+[Wikipedia:<br/>Parameter Space](https://en.wikipedia.org/wiki/Parameter_space)
+
+</div>
+
+A parameter space is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (yes/no) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. A system that takes just two floating point parameters has 18,446,744,073,709,551,616	(18.4 Quintillion!) states. This is an inconceivably large number, but it is quite likely that many of those states would look very similar.
+
+[explain why this section is here]
+
+[Combinatorial Explosion](https://en.wikipedia.org/wiki/Combinatorial_explosion)
+[Illustration? Flow for these two sections?]
+
+### Parametric Design
+Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.
+
+<div id="" class="links-sidebar">
+
+[Wikipedia:<br/>Paramet&shy;ricism](https://en.wikipedia.org/wiki/Parametricism)
+
+</div>
+
+<div id="" class="callout">
+
+Parametricism
+: is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.
+
+</div>
+
+
+
+
+<div id="" class="activity">
+
+## The Blue Square
+Imagine a program that draws a square, like the one below. What parameters might such a program accept?
+
+![A Blue Square](./blue-square.png "A Blue Square"){scale full-width}
+
+</div>
+
+
+
+
+## Parameters & Interface Design
+
+<div id="" class="!short slides-wrap slideInfos">
+
+
+<div id="carousel-130" class="carousel slide" data-ride="carousel">
+
+<div class="carousel-inner slides" role="listbox">
+
+<div class="carousel-item active">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/arp.jpg" alt="Collage with Squares Arranged According to the Laws of Chance — 1917">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+
+<div class="artist">Jean Arp</div>
+<div class="title">Collage with Squares Arranged According to the Laws of Chance — 1917</div>
+<div class="comments"></div>
+
+</div>
+<div class="slide-info-bottom">
+
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/presstube.png" alt="Page 0 (Detail) — 2004">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+
+<div class="artist">James Paterson (Presstube)</div>
+<div class="title">Page 0 (Detail) — 2004</div>
+<div class="comments"></div>
+
+</div>
+<div class="slide-info-bottom">
+<a href="http://presstube.com/project.php?id=217">Page 0</a><a href="http://presstube.com/projects.php?pt_pp=18&&pp=all">Presstube Old Site</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/praystation_1.jpg" alt="Misc, 1">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+
+<div class="artist">Joshua Davis (Praystation)</div>
+<div class="title">Misc, 1</div>
+<div class="comments"></div>
+
+</div>
+<div class="slide-info-bottom">
+<a href="https://joshuadavis.com/">Artist's Site</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/praystation_2.png" alt="Misc, 2">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+
+<div class="artist">Joshua Davis (Praystation)</div>
+<div class="title">Misc, 2</div>
+<div class="comments"></div>
+
+</div>
+<div class="slide-info-bottom">
+<a href="https://joshuadavis.com/">Artist's Site</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/modulator.png" alt="modulator">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+
+<div class="artist">mataflop</div>
+<div class="title">modulator</div>
+<div class="comments"></div>
+
+</div>
+<div class="slide-info-bottom">
+<a href="http://www.metaflop.com/modulator/font/pQkUOJOPk8">modulator</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/gregfont.png" alt="Gregfont">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+
+<div class="artist">Greg Schomburg</div>
+<div class="title">Gregfont</div>
+<div class="comments"></div>
+
+</div>
+<div class="slide-info-bottom">
+<a href="http://gregschomburg.com/gregfont/">Gregfont</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="./slides/elsy.png" alt="elsy">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+
+<div class="artist">Plastaq Software</div>
+<div class="title">elsy</div>
+<div class="comments"></div>
+
+</div>
+<div class="slide-info-bottom">
+<a href="http://www.plastaq.com/elsy/">elsy</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="slide-info-top">
+<a class="carousel-control-prev" href="#carousel-130" role="button" data-slide="prev">
+<span class="carousel-prev-icon">
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs></defs>
+<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<polygon id="Page-1-Copy" fill="#3B7CF4" transform="translate(7.500000, 8.659834) rotate(-180.000000) translate(-7.500000, -8.659834) " points="0 17.3196679 15 8.65334717 0 5.68434189e-14"></polygon>
+</g>
+</svg>
+</span>
+<span class="sr-only">Previous</span>
+</a>
+
+<a class="carousel-control-next" href="#carousel-130" role="button" data-slide="next">
+
+<span class="carousel-next-icon-tc">
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs></defs>
+<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<polygon fill="#3B7CF4" points="0 17.3196679 15 8.65334717 0 5.68434189e-14"></polygon>
+</g>
+</svg>
+</span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+
+</div>
+
+
+### Interfaces
+When thinking about software we often define the **interface** as the part of the application that is _visible to_ and _manipulated by_ the user. I think it is better consider the interface as the common boundry, or overlap, between two systems.
+
+Two of the most important interfaces of software systems are **user interfaces** (UIs) and **application programming interfaces** (APIs).
+
+- The **UI** is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. It overlaps with the user and is designed around capabilities and nature of both the software and the user. The UI is the primary interface in most applications.
+
+- The **API** is the part of a software system that is used by programmers to connect it with other software systems. A well designed API considers both the software system itself and how other software systems will want to use it. It The API is the primary interface in most libraries.
+
+It is common for software to have both a UI and an API. For example twitter provides a user interface for making and reading tweets and an API for integrating twitter into existing systems.
+
+### Exposing Parameters
+Exposing parameters allows artists and designers to create systems that can be controlled by others—and themselves—more easily. Choosing which parameters to expose is a core concern of software interface design. When choosing, consider the following:
+
+- Which parameters should be exposed?
+- Which parameters are required, which are optional?
+- Which values should be accepted for each parameter?
+
+#### Balance
+<div id="" class="half">
+
+- Exposing **more** gives your user more control.
+- Exposing **more** makes your interface harder to understand.
+- Exposing **more** allows your users to do more good things.
+
+</div>
+
+<div id="" class="half">
+
+- Exposing **less** gives you more control.
+- Exposing **less** makes your interface easier to understand.
+- Exposing **less** prevents your users from doing bad things.
+
+</div>
+
+<div id="" class="clear">
+
+
+
+</div>
+
+
+#### Presenting Your interface
+Once you have decided on what to expose via your interface, you must consider how to communicate your interface options to your users:
+
+- What will you name each parameter?
+- What UI controls will you use for each parameter?
+- How will you group and order the UI controls?
+- How will you explain the purpose of each parameter?
+
+#### Feedback
+Feedback shows users the impact their actions have on the system. Without feedback, systems are very hard to learn and use. With clear and responsive feedback, even systems which are difficult to describe can often be intuitively understood.
+
+In simple cases, showing users the end result of their choices after each change is often enough. In more complex situations, it is often helpful to provide intermediate feedback. Many procedural systems are too complex to provide realtime feedback. For systems that take a long time to calculate, providing immediate confirmation of user input is important. Sometimes it can be very helpful to provide a low quality preview as well.
+
+#### Keep Your User In Mind
+The way that you think about your software system is often very different from the way your users think about it.
+
+- Who will be using your software?
+- Why will they be using it? What will they be trying to do?
+- Do they understand how your software works under the hood? Should they?
+
+[ADD SLIDE HERE "what you make, what you design"]
+
+
+<div id="" class="activity">
+
+## Fictional Machines
+
+Begin designing a user interface for a fictional machine by considering which parameters you would expose.
+
+1. Choose a machine from the list below.
+2. Spend 6 minutes brainstorming possible parameters for your machine.
+3. Choose a user from the list below.
+4. Spend 3 minutes deciding which parameters to expose for your user. Choose exactly 3 parameters.
+5. Spend 3 minutes naming your parameters, and defining the allowed values for each.
+6. Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present.
+
+<div id="" class="half">
+
+#### Machine Types {underline}
+- A car
+- Planet generator
+- Grocery-shopping bot
+- Internet surveillance front-end
+- Genetic pet builder
+- Love potion mixer
+- Users
+
+</div>
+
+<div id="" class="half">
+
+#### Users {underline}
+- Users
+- Daily user
+- One-time user
+- A child
+- An [machine type] enthusiast
+- Another machine
+
+</div>
+
+
+
+</div>
+
+
+## Parameters + p5
+
+### Globals as Interfaces
+
+A quick-and-dirty way to make your comp form sketches “tweakable” is to use global variables for your parameters and group them at the top of the script.
+
+- This is very easy to set up.
+- Works particularly well for small one-off sketches that only you will ever use.
+- Choose clear variable names that explain the purpose of each parameter.
+- Use comments to explain the parameter in more detail, document legal value ranges, and suggest good values.
+- This approach slows down exploration, because you still need to re-run your sketch after each change.
+- Yes, [global variables are evil](https://stackoverflow.com/questions/19158339/why-are-global-variables-evil). If your language supports constants, it is a good idea to use them instead of variables.
+
+<div id="" class="">
+
+
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/parameters/square.js">
+</iframe>
+</div>
+
+
+</div>
+
+### HTML Interfaces with p5.dom.js
+
+The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides functions that allow you create HTML elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.
+
+- This is more complicated to set up, but still pretty quick.
+- This is a better choice if you want to quickly explore your parameter-space.
+- Label your inputs clearly. Consider your interface carefully.
+- Your controls can also be made in HTML, used in p5 via `select()`
+- You can style your interface with CSS.
+
+
+<div id="" class="">
+
+
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/parameters/square_slider.js">
+</iframe>
+</div>
+
+
+</div>
+
+
+<div id="" class="assignment">
+
+
+## Keep Sketching!
+
+### Base
+Continue experimenting with procedurally generated images, this time focus on exposing parameters and exploring the parameter spaces of your sketches. You can mix random and parametric elements, but I suggest doing at least a couple of sketches that are not random at all.{bigger}
+
+### Challenge: Face Generator
+Build a face generating tool. This tool will create an image of a face that can be adjusted by the user with sliders and other inputs.
+
+- Don’t use the built in shape drawing commands like rect and ellipse. Build your face from hand-drawn or photographic images.
+- Make your resulting images look as seamless and cohesive as possible.
+- Inputs can range from straight-forward (eye color, nose size) to complex (anger, lighting).
+
+### Special Assignment
+Later in this class I will ask you to create special sketches using equipment available to you through The New School. If you haven’t used the following equipment before, you should sign up for orientations. Be ready to use this equipment by the sixth week of classes.
+
+- Laser Cutter
+- 3D Printers
+- Large Format Printers/Plotters
+- CNC Mills (optional)
+
+
+
+</div>
+
+## Reference Links
+
+
+<div id="" class="links">
+
+[p5: Reference](https://p5js.org/reference/)
+
+[Wikipedia: Parametricism](https://en.wikipedia.org/wiki/Parametricism)
+
+[Wikipedia: Inner-platform effect](https://en.wikipedia.org/wiki/Inner-platform_effect)
+
+
+</div> -->
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
