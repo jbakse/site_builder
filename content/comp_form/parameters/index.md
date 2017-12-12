@@ -14,8 +14,14 @@ description: Expose parameters to make your procedural systems easier to control
 software: p5.js + p5.dom
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<script src="../../mess.js"></script>
+<script src="./parameters_mess.js"></script>
+
+
+
 ## Learning Objectives
-- Consider interface design as exposing parameters
+- Consider the relationship of parameters and interface design
 - Practice problem analysis and interface design
 - Practice user-centered design concepts
 - Technical: Exposing parameters as global variables
@@ -24,54 +30,22 @@ software: p5.js + p5.dom
 
 ## Parameters
 
-[bring up blue square as "engage" moment?]
-[engage, focus study, practice]
+One of the most powerful and rewarding aspects of writing a procedural generation system is exploring what it can make. The initial investment of time spent coding is repaid by the ability to iterate easily and quickly. Many procedural systems can produce endless variations and can be pushed to suprising extremes. Exploring the range of the system leads to new ideas to build and aesthetics to explore.
 
-One of the most powerful and rewarding aspects of writing procedural generation code is exploring what it can make. Programming a maze generator will probably take longer than simply drawing a maze by hand, but with the generator you can quickly explore hundreds of maze variations. Often this leads to new ideas and aesthetics to pursue further. 
-
-[useful automate tedious vs artist control]
-
-
-### Benefits
-
-
-
-You explore the range of a procedural genertion system by changing the values of its parameters and seeing what happens. Early on you might tweak parameters directly, by changing [hard-coded](https://en.wikipedia.org/wiki/Hard_coding) values directly in the source.
-
-It is almost always worth taking time to indentify useful parameters in your code, consider their possible values, and expose them in a way that encourages exploration. Doing so will lead to **better code** under the hood, **better user experiences**, and **better results**.
-
-#### Better Code
-Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that becomes increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. **Exposing parameters helps to organize the code by seperating configuration and implementation.** It also makes the code **easier to read** by changing "magic numbers" into named values that better explain their purpose.
-
-#### ?
-
-The following line of code is pulled from a program that displays animated messages. This line calculates an offset used in an animated transition. The original has several magic numbers: `40`, `3`, `.5`, and `80` and had become hard to reason about and change.
-
-::: .bad
-```javascript
-// original version
-offset = (40 * transitionPercent) + (transitionPercent * sin(i + 3 * .5) * 80);
-```
+::: .links-sidebar
+[Wikipedia:<br/>Parameter](https://en.wikipedia.org/wiki/Parameter#Computing)
 /::
 
 
-This revised version is better. The magic numbers are now named values that can be adjusted elsewhere in the code and the overall expression is simpler. Notably, this code doesn't do _exactly_ the same thing as the orignal version. That is okay. Some of the complexity in the original was left over from an early approach and no longer needed for transition effect. By considering the code as a system and its parameters, this was made easier to spot and fix.
+Procedural generators can provide enormous creative leverage, allowing expressive artistic control while automating much of the work. This control is afforded by exposing **parameters**. Parameters are adjustable values that influence the internal behavior of a system. Chaning the parameters 
 
-::: .good
-```javascript
-// revised version
-offset = transitionPercent * sin(angle + phase) * amplitude;
-```
+
+::: .activity
+## The Blue Square
+Imagine a program that draws squares like the one below. What parameters might such a program accept?
+
+![A Blue Square](./blue-square.png "A Blue Square"){scale full-width}
 /::
-
-#### Better User Experience
-[set up better, currently starting with the negative example]
-[false economy]
-[you are your own main user]
-Exploring the parameter space of a system by tweaking hard-coded values doesn't work very well. Tweaking hard-coded values is slow—the project has to be re-built and re-run after each change—which discurages exploration. Also, the slow feedback cycle makes it harder to understand the effects of each change. Tweaking hard-coded values is also unclear. Which values should you change for particular effects? Do you need to change the value in multiple places? Will chaning a particular value just break things? Exposing the values as parameters makes it the code easier to document, understand, and use.
-
-#### Better Results
-Well-parameterized code is easier and faster to read and maintain. When you can explore the parameter space more quickly, you can explore it more thoroughly, finding interesting possibilities, ideas, and aesthetics to explore further. 
 
 
 
@@ -80,36 +54,96 @@ Well-parameterized code is easier and faster to read and maintain. When you can 
 
 ::: .links-sidebar
 [Wikipedia:<br/>Parameter Space](https://en.wikipedia.org/wiki/Parameter_space)
+
+[Wikipedia:<br/>Combinatorial Explosion](https://en.wikipedia.org/wiki/Combinatorial_explosion)
 /::
 
-A parameter space is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (yes/no) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. A system that takes just two floating point parameters has 18,446,744,073,709,551,616	(18.4 Quintillion!) states. This is an inconceivably large number, but it is quite likely that many of those states would look very similar.
+A **parameter space** is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (true/false) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. This rapid growth is refered to as **Combinatorial Explosion**.
 
-[explain why this section is here]
+When changes to input parameters map to interesting changes in output, combinatorial explosion drives the power of procedural systems. Consider a program that generates faces by choosing from 4 options for each of these traits: hair style, hair color, eye color, eye shape, nose shape, mouth shape, face shape, and skin tone. Such a system can generate `4^8` or `65,536` distinct faces. If the system supported two more similar traits that number of outputs grows to `1,048,576`!
 
-[Combinatorial Explosion](https://en.wikipedia.org/wiki/Combinatorial_explosion)
-[Illustration? Flow for these two sections?]
+Sometimes different parameter values have minimal impact on the final output. When this happens a system's output can feel monotonous, uninteresting, and "samey". A system that takes just two floating point parameters has `18,446,744,073,709,551,616` (18.4 Quintillion!) states. This is an inconceivably large number, but it is quite likely that many of those states would look very similar.
+
+When creating interfaces for procedural systems, focus on exposing parameters that allow for _interesting_ variation.
+
 
 ### Parametric Design
-Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.
 
 ::: .links-sidebar
-    [Wikipedia:<br/>Paramet&shy;ricism](https://en.wikipedia.org/wiki/Parametricism)
+[Wikipedia:<br/>Parametric Design](https://en.wikipedia.org/wiki/Parametric_design)
 /::
 
-::: .callout
-Parametricism
-: is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.
+**Parametric Design** is a design approach where designs are built as systems with output that can be customized by adjusting parameters. For example a parametric design for a bicycle might accept a parameter for the rider’s height and provide a customized frame to suit.
+
+An interesting aspect of parametric designs is that they explicity embed **design intent**, rather than just the **design result**. 
+
+
+
+
+### Benefits
+
+::: .links-sidebar
+[Wikipedia:<br/>Hard-Coding](https://en.wikipedia.org/wiki/Hard_coding)
 /::
 
+You explore the range of a procedural genertion system by changing the values of its parameters and seeing what happens. In simple sketches you might tweak parameters directly, by changing [hard-coded](https://en.wikipedia.org/wiki/Hard_coding) values directly in the source.
 
+It is almost always worth taking time to indentify useful parameters in your code, consider their possible values, and expose them in a way that encourages exploration. Doing so will lead to **better code**, **better user experiences**, and **better results**.
 
+#### Better Code
 
-::: .activity
-## The Blue Square
-Imagine a program that draws a square, like the one below. What parameters might such a program accept?
-
-![A Blue Square](./blue-square.png "A Blue Square"){scale full-width}
+::: .links-sidebar
+[Wikipedia:<br/>Magic Number](https://en.wikipedia.org/wiki/Magic_number_(programming))
 /::
+
+Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that becomes increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. **Exposing parameters helps to organize the code by seperating configuration and implementation.** It also makes the code **easier to read and reason about** by changing [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)) into named values that better explain their purpose. Exposing parameters isn't always about creating an end-user GUI. Exposing parameters as arguments to well-factored functions can make your code much easier to read, expand, and maintain.
+
+#### Better User Experience
+
+Exploring the parameter space of a system by tweaking hard-coded values doesn't work very well. Tweaking hard-coded values is slow—the project has to be re-built and re-run after each change—which discurages exploration. Also, a slow feedback cycle makes it harder to understand the effects of each change. Tweaking hard-coded values in the code is also unclear and error-prone. Which values should you change for particular effects? Do you need to change the value in multiple places? Will chaning a particular value just break things? 
+
+Exposing key values in your program as parameters makes them easier to document, understand, and use. These benefits of a good interface usually far outweigh the time required to implement it.
+
+#### Better Results
+When you can explore the parameter space of your procedural systems more quickly, you can explore it more thoroughly, finding interesting possibilities, ideas, and aesthetics to explore further. 
+
+[[expand]]
+
+#### An Example
+
+The following code has been adapted from a real program that displays animated messages. 
+
+::: .bad
+```javascript
+// original version
+offset = (40 * transitionPercent) + (transitionPercent * sin(i + 3 * .5) * 80);
+```
+/::
+
+It calculates an offset used in an animated transition. The original has several magic numbers: `40`, `3`, `.5`, and `80` and had become hard to reason about and change.
+
+This revised version is better.
+
+::: .good
+```javascript
+// revised version
+offset = transitionPercent * sin(angle + phase) * amplitude;
+```
+/::
+
+The main expression is now much clearer. It contain fewer terms and is better organized. The magic numbers have been replaced with named values which are easier to understand. Because they are variables, they can be set elsewhere in the code, or exposed as function arguments. 
+ 
+Notably, this code doesn't do _exactly_ the same thing as the orignal version. Some of the complexity in the original was left over from an early approach and no longer needed. Considering the code as a system and identifying and naming its parameters made it easy to spot and fix the unneeded complexity.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -177,7 +211,7 @@ The way that you think about your software system is often very different from t
 - Why will they be using it? What will they be trying to do?
 - Do they understand how your software works under the hood? Should they?
 
-[ADD SLIDE HERE "what you make, what you design"]
+[[ADD SLIDE HERE "what you make, what you design"]]
 
 
 ::: .activity
@@ -236,6 +270,11 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 
 ### HTML Interfaces with p5.dom.js
 
+::: .links-sidebar
+[p5.js DOM Library](https://p5js.org/reference/#/libraries/p5.dom)
+/::
+
+
 The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides functions that allow you create HTML elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.
 
 - This is more complicated to set up, but still pretty quick.
@@ -267,3 +306,5 @@ The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides fun
 [Wikipedia: Inner-platform effect](https://en.wikipedia.org/wiki/Inner-platform_effect)
 
 /::
+
+
