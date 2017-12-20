@@ -1,8 +1,8 @@
 mess_settings.time_after_scroll = 1000;
 
 let settings = {
-    amplitude: 40,
-    frequency: .005
+    spin: .01,
+
 }
 
 let shapes = [];
@@ -11,7 +11,7 @@ function mess_setup() {
     colorMode(HSB, 1);
     rectMode(CENTER);
 
-    for (n = 0; n < 100; n++) {
+    for (n = 0; n < 10000; n++) {
         shapes.push({
             x: random(1),
             y: random(1)
@@ -19,7 +19,7 @@ function mess_setup() {
         });
     }
 
-    console.log(shapes);
+
 }
 
 function mess_draw() {
@@ -28,10 +28,10 @@ function mess_draw() {
     fade = Math.min(fade, 1);
 
 
-    fill(255, 255, 255);
+    fill(255, 255, 255, fade);
     noStroke();
 
-    console.log("Draw");
+    translate(0, -mess_info.scroll_y);
 
     for (n = 0; n < shapes.length; n++) {
         let s = shapes[n];
@@ -41,7 +41,9 @@ function mess_draw() {
         let y = s.y * mess_info.document_height;
 
         translate(x, y);
-        rect(0, 0, 100, 100);
+        rotate(mess_info.scroll_y * settings.spin);
+
+        rect(0, 0, 20, 20);
         pop();
     }
 

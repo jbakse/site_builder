@@ -14,9 +14,9 @@ description: Expose parameters to make your procedural systems easier to control
 software: p5.js + p5.dom
 ---
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
 <script src="../../mess.js"></script>
-<script src="./parameters_mess.js"></script>
+<script src="./parameters_mess.js"></script> -->
 
 
 
@@ -30,7 +30,7 @@ software: p5.js + p5.dom
 
 ## Parameters
 
-One of the most powerful and rewarding aspects of writing a procedural generation system is exploring what it can make. The initial investment of time spent coding is repaid by the ability to iterate easily and quickly. Many procedural systems can produce endless variations and can be pushed to suprising extremes. Exploring the range of the system leads to new ideas to build and aesthetics to explore.
+One of the most powerful and rewarding aspects of writing a procedural generation system is exploring what it can make. The initial investment of time spent coding is repaid by the ability to iterate easily and quickly. Many procedural systems can produce endless variations and can be pushed to surprising extremes. Exploring the range of the system leads to new ideas to build and aesthetics to explore.
 
 ::: .links-sidebar
 [Wikipedia:<br/>Parameter](https://en.wikipedia.org/wiki/Parameter#Computing)
