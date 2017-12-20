@@ -166,6 +166,9 @@ Two of the most important interfaces of software systems are **user interfaces**
 
 It is common for software to have both a UI and an API. For example twitter provides a user interface for making and reading tweets and an API for integrating twitter into existing systems.
 
+[[really call out that you design an interface for funcitons/classes, that interfaces are an idea in code not just user interfaces]]
+
+
 ### Exposing Parameters
 Exposing parameters allows artists and designers to create systems that can be controlled by others—and themselves—more easily. Choosing which parameters to expose is a core concern of software interface design. When choosing, consider the following:
 

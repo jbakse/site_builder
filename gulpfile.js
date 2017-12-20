@@ -42,7 +42,7 @@ function logFrontMatter(file) {
 
 
 gulp.task('copy_content', function() {
-    return gulp.src('content/**/*.*')
+    return gulp.src(['content/**/*.*', 'content/**/CNAME'])
         .pipe(gulp.dest('docs'));
 });
 
