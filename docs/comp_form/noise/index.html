@@ -1,0 +1,358 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Noise | Comp Form</title></head><body class="comp-form"><a href="/comp_form/"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div></a><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Noise</span><div class="buttons"><a class="previous" href="../strategies"><i class="fa fa-caret-left fa-lg"></i>Strategies</a><a class="next" href="../random">Random Values<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Noise</h1><h6>The What</h6><p class="description">Make Some Noise</p><h6>The How</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><p>[[ initial port ]]
+[[ needs top level arrangement ]]
+[[ needs some additional content, notes below ]]
+[[ needs in class challenge ]]</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>What the <code>noise()</code> function does.</li>
+<li>When and how to use <code>noise()</code></li>
+<li>Qualities of Noise (Frequency, Amplitude, Smoothing, Layering, Dimensions)</li>
+</ul>
+<h2 id="noise">Noise</h2>
+<p>[[start with a different image, maybe a grid of squares that look the same, and rewrite about adding varience]</p>
+<p class="scale full-width"><img src="images/square.png" alt="blue square"></p>
+<p>Consider the code you would write to draw a colored square. Your code would require several values: horizontal position, vertical position, width, height, the RGB values.</p>
+<p>Where do those values come from?</p>
+<table class="table table-responsive">
+<thead>
+<tr>
+<th>Source</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hard Coded</td>
+<td>You want specific control of the value.</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>You want to be able to control the value from a larger context.</td>
+</tr>
+<tr>
+<td><code>random()</code></td>
+<td>You want random variation.</td>
+</tr>
+<tr>
+<td><code>noise(x)</code></td>
+<td>You want controlled variation.</td>
+</tr>
+</tbody>
+</table>
+<p>[[make a section about Random vs Varied, and how you shouldn’t immediately reach for random when you want variation, and how noise is often better than random, really, a lot.]]</p>
+<p>[[Make Combinations its own section, mixing approaches is powerful.]]</p>
+<p>Often you use these in combination:
+<code>width = 100 + random(-10, 10);</code></p>
+<p>Using <code>random()</code> is a good way to add variation to a value. The <code>noise(x)</code> can often offer variation with greater control and consistency.</p>
+<h3 id="random">Random()</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/sketch_random/sketch.js">
+</iframe>
+</div>
+</div>
+<h3 id="noisex">Noise(x)</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/sketch_noise/sketch.js">
+</iframe>
+</div>
+</div>
+<p>[[these example need discussion, point out the critical differences]]
+[[these examples don’t need the code to show, and need better presentation of the DOM UI]]</p>
+<h2 id="benefits-of-noise">Benefits of Noise</h2>
+<h3 id="noise-is-coherent">Noise is Coherent</h3>
+<p>The <code>noise(x)</code> function returns values sampled from Perlin Noise. Perlin Noise provides random values that are aesthetically arranged (<a href="https://developer.nvidia.com/gpugems/GPUGems/gpugems_ch05.html">band limited and visually isotropic</a>) in space. These values are a useful basis for many applications that require natural-feeling variation.</p>
+<p>[[needs an english translation “noise that looks good”, probably drop the term coherent, as I can’t find a good cite for this sense of the word]</p>
+<h3 id="noise-is-repeatable">Noise is Repeatable</h3>
+<p>Repeated variation is easy with <code>noise(x)</code>: every time you call <code>noise(x)</code> with a particular argument, you get the same value back. This is often very useful. For example, in an animation you often need variation to be consistent from frame to frame.</p>
+<ul>
+<li><code>random()</code> requires no arguments and returns a different random value every time</li>
+<li><code>noise(x)</code> requires an argument and returns the same random value <em>for that argument</em> every time</li>
+</ul>
+<p>This difference is a core reason why <code>noise(x)</code> is so useful. This difference takes some getting used to, and learning what to pass in for <code>x</code> takes some practice.</p>
+<p>[[make it clear that you don’t have to get repeats, because you can change your <em>inputs</em> to get different <em>outputs</em>. if you want the values to change over time, you can make time part of the input]]</p>
+<h3 id="noise-is-controllable">Noise is Controllable</h3>
+<p>By controlling what you pass to <code>noise(x)</code>, you can control the frequency of the values returned. This can be used to control how quickly values vary in space and time. Like <code>random()</code> values, you can scale and shift the values from <code>noise(x)</code> to the range you need. You can also adjust the character of <code>noise(x)</code> using <code>noiseDetail()</code>.</p>
+<p>[[make it clear that you can’t control frequency with random, well not without post filtering]]</p>
+<h3 id="1d-noise-example">1D Noise Example</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/sketch_1D_noise/sketch.js">
+</iframe>
+</div>
+</div>
+<div id="" class="activity">
+<h2 id="building-1d-noise">Building 1D Noise</h2>
+<p>How does the <code>noise(x)</code> function work? Explore the underlying concepts by building a simplified noise function with pencil and paper.</p>
+<ul>
+<li>Review the Linear Congruential Generator worksheet.</li>
+<li>Complete the Linear Congruential Generator (Noise) worksheet.</li>
+<li>Graph the results on the 1D Noise Worksheet.</li>
+</ul>
+<p>[[add worksheet downloads]]</p>
+</div>
+<h3 id="1d-2d-3d-noise">1D, 2D, + 3D Noise</h3>
+<p><code>noise(x)</code>
+<img src="images/noise_1d.png" alt="noise_1d"></p>
+<p><code>noise(x, y)</code>
+<img src="images/noise_2d.png" alt="noise_2d"></p>
+<p><code>noise(x, y, z)</code>
+<img src="images/noise_3d.png" alt="noise_3d"></p>
+<p>[[something about patents! something about other noise funcitons!]]</p>
+<h3 id="qualities-of-noise">Qualities of Noise</h3>
+<ul>
+<li>Smoothing</li>
+<li>Layering/Octaves/Detail</li>
+<li>Frequency</li>
+<li>Dimensions</li>
+</ul>
+<p>[[this needs some support copy]]</p>
+<h2 id="working-with-noise">Working with Noise</h2>
+<h3 id="calling-the-noise-function">Calling the Noise Function</h3>
+<p>The <code>noise()</code> funciton takes up to three parameters: <code>noise(x,y,z)</code> allowing you to request values arranged in a three dimensional “cloud” of psuedo-random values.</p>
+<p>When you call <code>noise(x)</code> you have to pass in at least one coordinate. This represents the location of the value to return. Choose your coordinates based on how you want the value to vary. You can pass in <code>frameCount</code> or <code>millis()</code> to get values that change over time. You can pass in XYZ coordinates to get values that change over space.</p>
+<h3 id="controlling-the-frequency">Controlling the Frequency</h3>
+<p>You can control the frequency of returned values by scaling the values you pass in for <code>x</code>, <code>y</code>, and <code>z</code>.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// get a value that changes over time</span>
+n = noise(frameCount); 
+
+<span class="hljs-comment">// get a value that changes over time slowly</span>
+n = noise(frameCount * <span class="hljs-number">.1</span>); 
+
+<span class="hljs-comment">// get a value that changes over time quickly</span>
+n = noise(frameCount * <span class="hljs-number">10</span>); 
+
+</code></pre>
+<h3 id="controlling-the-amplitude-and-range">Controlling the Amplitude and Range</h3>
+<p>The <code>noise(x)</code> function returns values in the range of 0 to 1. Use multiplication and addition to shift this range to the range you need.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// scale values to sit between 10 and 20;</span>
+n = noise(frameCount) * <span class="hljs-number">10</span> + <span class="hljs-number">10</span>; 
+</code></pre>
+<p>You could also use <code>map()</code>:</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// get values from 0 to 1</span>
+n = noise(frameCount); 
+<span class="hljs-comment">// map to 10 to 20</span>
+n = map(n, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>);  
+</code></pre>
+<h3 id="controlling-the-detail">Controlling the Detail</h3>
+<div id="" class="links-sidebar">
+<p><a href="https://p5js.org/reference/#/p5/noiseDetail">p5:<br/>noiseDetail()</a></p>
+</div>
+<p>The <code>noiseDetail()</code>  function allows you to control the “roughness” or “detail” of the noise returned.</p>
+<h3 id="controlling-the-seed">Controlling the Seed</h3>
+<div id="" class="links-sidebar">
+<p><a href="https://p5js.org/reference/#/p5/noiseSeed">p5:<br/>noiseSeed()</a></p>
+</div>
+<p>By default, every time you restart your sketch the noise pattern will be different. The <code>noiseSeed()</code> allows you to manually set the noise pattern seed.</p>
+<h2 id="study-examples">Study Examples</h2>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/study_2D.js">
+</iframe>
+</div>
+</div>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/grass.js">
+</iframe>
+</div>
+</div>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/skyline.js">
+</iframe>
+</div>
+</div>
+<h2 id="slides">Slides</h2>
+<div id="" class="!short cover slides-wrap slideInfos">
+<div id="carousel-141" class="carousel slide" data-ride="carousel">
+<div class="carousel-inner slides" role="listbox">
+<div class="carousel-item active">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="https://www.csee.umbc.edu/~olano/s2001c24/imgs/lightcycles.jpeg" alt="Perlin Noise for Tron">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Ken Perlin</div>
+<div class="title">Perlin Noise for Tron</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="https://www.csee.umbc.edu/~olano/s2001c24/ch02.html">Ken Perlin on Procedural Textures</a><a href="http://www.imdb.com/title/tt0084827/">IMDB: Tron (1982)</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="https://www.clicktorelease.com/blog/vertex-displacement-webgl-glsl-perlin-noise-three-js/add-some-colour-movement.jpg" alt="Fireball Tutorial">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Jaume Sanchez Elias</div>
+<div class="title">Fireball Tutorial</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js">Fireball Tutorial</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="http://3.bp.blogspot.com/-aROavndlrvw/T5JZl_-fMwI/AAAAAAAAAgQ/AdJp5pJP5dI/s320/rend6.png" alt="Wood Tutorial">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Shiny Dynamics</div>
+<div class="title">Wood Tutorial</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="http://shiny-dynamics.blogspot.com/2012/04/blender-wood-texture-part-2.html">Wood Tutorial</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="http://www.thinkboxsoftware.com/storage/krakatoa-support-images/krakatoa15_cloudsmodeling_kcm_density1_render.png" alt="Cloud Tutorial">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Thinkbox Software</div>
+<div class="title">Cloud Tutorial</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="http://www.thinkboxsoftware.com/krak-clouds-modelling/">Cloud Tutorial</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="http://www.redblobgames.com/maps/terrain-from-noise/images/topdemo-3d.png" alt="Displacement Terrain">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Redbox Games</div>
+<div class="title">Displacement Terrain</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="http://www.redblobgames.com/maps/terrain-from-noise/">Terrain Tutorial</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="https://img.youtube.com/vi/jB0vBmiTr6o/hqdefault.jpg" alt="Elevated 4K Demo">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">RGBA + TBC</div>
+<div class="title">Elevated 4K Demo</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="https://www.youtube.com/watch?v=jB0vBmiTr6o&t=131s">Elevated 4k</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="https://i.vimeocdn.com/video/194454318.webp?mw=1920&mh=1080&q=70" alt="Open CL Perlin Particles">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Eddie Lee</div>
+<div class="title">Open CL Perlin Particles</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="https://vimeo.com/29074357">OpenCL Perlin Particles</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-info-top">
+<a class="carousel-control-prev" href="#carousel-141" role="button" data-slide="prev">
+<span class="carousel-prev-icon">
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs></defs>
+<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<polygon id="Page-1-Copy" fill="#3B7CF4" transform="translate(7.500000, 8.659834) rotate(-180.000000) translate(-7.500000, -8.659834) " points="0 17.3196679 15 8.65334717 0 5.68434189e-14"></polygon>
+</g>
+</svg>
+</span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carousel-141" role="button" data-slide="next">
+<span class="carousel-next-icon-tc">
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs></defs>
+<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<polygon fill="#3B7CF4" points="0 17.3196679 15 8.65334717 0 5.68434189e-14"></polygon>
+</g>
+</svg>
+</span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+</div>
+<div id="" class="assignment">
+<h2 id="keep-sketching">Keep Sketching!</h2>
+<h3 id="base">Base</h3>
+<p>This week, focus on using the <code>noise()</code> function. Use <code>noise()</code> in a variety of ways. Use 1D, 2D, and 3D noise. Try using high, mid, and low frequency noise. Try using noise to control different things: position, size, color, rotation, etc. Think about tile graphics, <code>random()</code>, and parameters while you work. Consider combining these concepts with <code>noise()</code>.</p>
+<h3 id="challenge-treasure-map">Challenge: Treasure Map</h3>
+<p>Make a program that generates treasure maps.</p>
+<h4 id="your-maps-should">Your maps should</h4>
+<ul>
+<li>Describe the geography of a fictional territory</li>
+<li>Mark the location of the treasure</li>
+<li>Include a path to the treasure from a reference point (optional)</li>
+<li>Be expressed in a cohesive style</li>
+</ul>
+<h4 id="things-to-consider">Things to consider</h4>
+<ul>
+<li>Where is you treasure? On a tropical island? A farm? In a warehouse?</li>
+<li>What style is your map? Is it old and beaten? Sci-fi?</li>
+<li>Does your map include labels? What do they say?</li>
+<li>Can you make a believable, natural geography? Should you?</li>
+<li>What terrain features might you include? Rivers? Mountains? Hills? Boxes?</li>
+<li>It is okay if your map takes seconds, or even minutes to generate. Does allow you to do something different?</li>
+<li>A map can represent many things, it doesn’t necessarily need to represent geography.</li>
+</ul>
+<h4 id="when-posting-your-map">When posting your map</h4>
+<ul>
+<li>Include three maps generated by your program.</li>
+<li>Each map should be shown as an image, not video.</li>
+<li>Consider posting a first run at this challenge early, and then revisiting towards the end of the week with a second post.</li>
+</ul>
+</div>
+<h2 id="reference-links">Reference Links</h2>
+<div id="" class="links">
+<p><a href="https://in.pinterest.com/explore/perlin-noise/">Pinterest: Perlin Noise</a>
+<a href="http://www.novastructura.net/">Novastructura</a>
+<a href="https://thebookofshaders.com/11/">Book of Shaders: Noise</a>
+<a href="https://www.youtube.com/watch?v=ikwNrFvnL3g">Shiffman 2DNoise</a>
+<a href="http://devmag.org.za/2009/04/25/perlin-noise/">Dev.mag How to use Perlin Noise in your Games</a>
+<a href="http://mrl.nyu.edu/~perlin/doc/oscar.html">Perlin on his Award</a>
+<a href="http://www.inear.se/2010/04/ridged-perlin-noise/">Inear</a>
+<a href="https://cmaher.github.io/posts/working-with-simplex-noise/">Simplex Noise</a>
+<a href="http://http.developer.nvidia.com/GPUGems/gpugems_ch05.html">GPU Gems Improved Perlin Noise</a></p>
+</div></div></div></div><div class="container" id="scroll-out"></div></div></body></html>

@@ -214,8 +214,10 @@ The way that you think about your software system is often very different from t
 - Why will they be using it? What will they be trying to do?
 - Do they understand how your software works under the hood? Should they?
 
-[[ADD SLIDE HERE "what you make, what you design"]]
+#### Design Your User Experience
+When designing, step back and focus on the relationship of your project and your user. You only have direct control of what you make, but you should be considering the impact of your decisions on user. 
 
+![what_you_design](what_you_design-01.svg)
 
 ::: .activity
 ## Fictional Machines

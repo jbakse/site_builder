@@ -21,7 +21,10 @@ software: p5.js + p5.dom
 - Gain an understanding of pseudorandom values and what makes it predictable
 - Technical: Introduction to Git and Github
 
-[the above section Talia fabricated, it wasn't on the original. It may require revisiting]
+[[the above section Talia fabricated, it wasn't on the original. It may require revisiting]]
+[[ this was entered in by Talia, needs review]]
+[[ this page only has the first 70% ported]]
+
 
 ## Procedurally Generated Images
 

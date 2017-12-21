@@ -26,8 +26,8 @@ html(lang="en")
 		title= title + " | Comp Form"
 
 	body.comp-form(class= debug?"debug":"")
-		
-		include ./_logo.pug
+		a(href="/comp_form/")
+			include ./_logo.pug
 		if header_title
 			header#top-nav.container
 				.row.justify-content-md-center

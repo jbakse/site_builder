@@ -1,0 +1,61 @@
+- artist: Ken Perlin
+  title: Perlin Noise for Tron
+  image: https://www.csee.umbc.edu/~olano/s2001c24/imgs/lightcycles.jpeg
+  comments: >
+  links:
+    - label: Ken Perlin on Procedural Textures
+      href: https://www.csee.umbc.edu/~olano/s2001c24/ch02.html
+    - label: "IMDB: Tron (1982)"
+      href: http://www.imdb.com/title/tt0084827/
+
+
+- artist: Jaume Sanchez Elias
+  title: Fireball Tutorial
+  image: https://www.clicktorelease.com/blog/vertex-displacement-webgl-glsl-perlin-noise-three-js/add-some-colour-movement.jpg
+  comments: >
+  links:
+    - label: Fireball Tutorial
+      href: https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js
+
+
+- artist: Shiny Dynamics
+  title: Wood Tutorial
+  image: http://3.bp.blogspot.com/-aROavndlrvw/T5JZl_-fMwI/AAAAAAAAAgQ/AdJp5pJP5dI/s320/rend6.png
+  comments: >
+  links:
+    - label: Wood Tutorial
+      href: http://shiny-dynamics.blogspot.com/2012/04/blender-wood-texture-part-2.html
+
+
+- artist: Thinkbox Software
+  title: Cloud Tutorial
+  image: http://www.thinkboxsoftware.com/storage/krakatoa-support-images/krakatoa15_cloudsmodeling_kcm_density1_render.png
+  comments: >
+  links:
+    - label: Cloud Tutorial
+      href: http://www.thinkboxsoftware.com/krak-clouds-modelling/
+
+    
+- artist: Redbox Games
+  title: Displacement Terrain
+  image: http://www.redblobgames.com/maps/terrain-from-noise/images/topdemo-3d.png
+  comments: >
+  links:
+    - label: Terrain Tutorial
+      href: http://www.redblobgames.com/maps/terrain-from-noise/
+
+- artist: RGBA + TBC
+  title: Elevated 4K Demo
+  image: https://img.youtube.com/vi/jB0vBmiTr6o/hqdefault.jpg
+  comments: >
+  links:
+    - label: Elevated 4k
+      href: https://www.youtube.com/watch?v=jB0vBmiTr6o&t=131s
+
+- artist: Eddie Lee
+  title: Open CL Perlin Particles
+  image: https://i.vimeocdn.com/video/194454318.webp?mw=1920&mh=1080&q=70
+  comments: >
+  links:
+    - label: OpenCL Perlin Particles
+      href: https://vimeo.com/29074357

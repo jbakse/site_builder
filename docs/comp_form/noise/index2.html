@@ -1,0 +1,189 @@
+<h1 id="homework-review">Homework Review</h1>
+<ul>
+<li>Choose a work that did something unexpected with parameters. Discuss.</li>
+<li>Choose a work that you 1) like and 2) don’t know how how it was made. Describe what you see.</li>
+<li>Choose a work that combined elements from a previous week with parameters. Discuss.</li>
+<li>Who had the widest “apparent” parameter space?</li>
+<li>The challenge is still not a competition, but who won?</li>
+</ul>
+<h4 id="todays-groups">Today’s Groups</h4>
+<ul>
+<li>Jonathan, Sanie</li>
+<li>Jennifer, Talia</li>
+<li>Danielle, Sachi, Kim</li>
+<li>Amber, Dorothy, Gabriel</li>
+<li>Bateel, Jane, Enayet</li>
+</ul>
+<!-- #### Parameter Recap -->
+<h1 id="todays-learning-objectives">Today’s Learning Objectives</h1>
+<ul>
+<li>What the <code>noise()</code> function does.</li>
+<li>When and how to use <code>noise()</code></li>
+<li>Qualities of Noise (Frequency, Amplitude, Smoothing, Layering, Dimensions)</li>
+</ul>
+<h1 id="noise">Noise</h1>
+<p><img src="images/square.png" alt="blue square"></p>
+<p>Consider the code you would write to draw a colored square. Your code would require several values: horizontal position, vertical position, width, height, the RGB values.</p>
+<p>Where do those values come from?</p>
+<table class="table table-responsive">
+<thead>
+<tr>
+<th>Source</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hard Coded</td>
+<td>You want specific control of the value.</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>You want to be able to control the value from a larger context.</td>
+</tr>
+<tr>
+<td><code>random()</code></td>
+<td>You want random variation.</td>
+</tr>
+<tr>
+<td><code>noise(x)</code></td>
+<td>You want controlled variation.</td>
+</tr>
+</tbody>
+</table>
+<p>Often you use these in combination:
+<code>width = 100 + random(-10, 10);</code></p>
+<p>Using <code>random()</code> is a good way to add variation to a value. The <code>noise(x)</code> can often offer variation with greater control and consistency.</p>
+<h4 id="random">Random()</h4>
+<div class="sketch" style="width: 100%; height: 300px;">
+<iframe class="figure"  src="./sketches/sketch_random/index.html"></iframe>
+</div>
+<h4 id="noisex">Noise(x)</h4>
+<div class="sketch" style="width: 100%; height: 300px;">
+<iframe class="figure"  src="./sketches/sketch_noise/index.html"></iframe>
+</div>
+<h2 id="benefits-of-noise">Benefits of Noise</h2>
+<h3 id="noise-is-coherent">Noise is Coherent</h3>
+<p>The <code>noise(x)</code> function returns values sampled from Perlin Noise. Perlin Noise provides random values that are aesthetically arranged (<a href="https://developer.nvidia.com/gpugems/GPUGems/gpugems_ch05.html">band limited and visually isotropic</a>) in space. These values are a useful basis for many applications that require natural-feeling variation.</p>
+<h3 id="noise-is-repeatable">Noise is Repeatable</h3>
+<p>Repeated variation is easy with <code>noise(x)</code>: every time you call <code>noise(x)</code> with a particular argument, you get the same value back. This is often very useful. For example, in an animation you often need variation to be consistent from frame to frame.</p>
+<ul>
+<li><code>random()</code> requires no arguments and returns a different random value every time</li>
+<li><code>noise(x)</code> requires an argument and returns the same random value every time</li>
+<li>This difference takes some getting used to, and learning what to pass in for <code>x</code> takes some practice.</li>
+<li>This difference is a core reason why <code>noise(x)</code> is so useful.</li>
+</ul>
+<h3 id="noise-is-controllable">Noise is Controllable</h3>
+<p>By controlling what you pass to <code>noise(x)</code>, you can control the frequency of the random values returned. This can be used to control how quickly values vary in space and time. Like <code>random()</code> values, you can scale and shift the values from <code>noise(x)</code> to the range you need. You can also adjust the character of <code>noise(x)</code> using <code>noiseDetail()</code>.</p>
+<h1 id="1d-noise">1D Noise</h1>
+<div class="sketch" style="width: 100%; height: 300px;">
+<iframe class="figure" height="300" src="./sketches/sketch_1D_noise/index.html"></iframe>
+</div>
+<h2 id="activity-building-1d-noise">Activity: Building 1D Noise</h2>
+<ul>
+<li>Review the Linear Congruential Generator worksheet.</li>
+<li>Complete the Linear Congruential Generator (Noise) worksheet.</li>
+<li>Graph the results on the 1D Noise Worksheet.</li>
+</ul>
+<h1 id="2d-3d-noise">2D + 3D Noise</h1>
+<p><code>noise(x)</code>
+<img src="images/noise_1d.png" alt="noise_1d"></p>
+<p><code>noise(x, y)</code>
+<img src="images/noise_2d.png" alt="noise_2d"></p>
+<p><code>noise(x, y, z)</code>
+<img src="images/noise_3d.png" alt="noise_3d"></p>
+<h1 id="working-with-noise">Working with Noise</h1>
+<h2 id="calling-the-noise-function">Calling the Noise Function</h2>
+<p>When you call <code>noise(x)</code> you have to pass in an <code>x</code> value. This x value is the location in the Perlin Noise of the value to return. Choose <code>x</code> based on how you want the value to vary. You can pass in <code>frameCount</code> or <code>millis()</code> to get values that change over time.
+<code>noise()</code> actually takes up to three parameters: <code>noise(x,y,z)</code> allowing you to receive values arranged in three dimensions (see below).</p>
+<h2 id="controlling-the-frequency">Controlling the Frequency</h2>
+<p>You can control how quickly returned values will vary over time and space by scaling the value you pass in for <code>x</code>.</p>
+<pre><code>n = noise(frameCount); // get a value that changes over time
+n = noise(frameCount * .1); // get a value that changes over time slowly
+n = noise(frameCount * 10); // get a value that changes over time quickly
+</code></pre>
+<h2 id="controlling-the-amplitude-and-range">Controlling the Amplitude and Range</h2>
+<p>The <code>noise(x)</code> function returns values in the range of 0 to 1. Use multiplication and addition to shift this range to the range you need.</p>
+<pre><code>n = noise(frameCount) * 10 + 10; // values between 10 and 20;
+</code></pre>
+<p>You could also use <code>map()</code>:</p>
+<pre><code>n = noise(frameCount); // 0 -&gt; 1
+n = map(n, 0, 1, 10, 20);  // map to 10 -&gt; 20
+</code></pre>
+<h2 id="controlling-the-detail">Controlling the Detail</h2>
+<p>The <code>noiseDetail()</code>  function allows you to control the “roughness” or “detail” of the noise returned. See: <a href="https://p5js.org/reference/#/p5/noiseDetail">p5 reference</a></p>
+<h2 id="controlling-the-seed">Controlling the Seed</h2>
+<p>By default, every time you restart your sketch the noise pattern will be different. The <code>noiseSeed()</code> allows you to manually set the noise pattern seed. See: <a href="https://p5js.org/reference/#/p5/noiseSeed">p5 reference</a></p>
+<h2 id="study-examples">Study Examples</h2>
+<p><a href="./study_2D.js" class="p5_example show-lab show-lab-link hidden">Study 2D</a>
+<a href="https://jsbin.com/hecibem/edit?js,output">JSBin</a></p>
+<p><a href="./grass.js" class="p5_example show-lab show-lab-link hidden">Study Grass</a>
+<a href="https://jsbin.com/jupihot/3/edit?js,output">JSBin</a></p>
+<p><a href="./skyline.js" class="p5_example show-lab show-lab-link hidden">Skyline</a></p>
+<h1 id="noise-applications">Noise Applications</h1>
+<h2 id="tron">Tron</h2>
+<p><img src="https://www.csee.umbc.edu/~olano/s2001c24/imgs/lightcycles.jpeg" alt="Tron">
+<a href="https://www.csee.umbc.edu/~olano/s2001c24/ch02.html">Ken Perlin on Procedural Textures</a></p>
+<h2 id="procedural-textures">Procedural Textures</h2>
+<p><img src="https://www.clicktorelease.com/blog/vertex-displacement-webgl-glsl-perlin-noise-three-js/add-some-colour-movement.jpg" alt="Fireball">
+<a href="https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js">clicktorelease.com: Fireball</a>
+<img src="http://3.bp.blogspot.com/-aROavndlrvw/T5JZl_-fMwI/AAAAAAAAAgQ/AdJp5pJP5dI/s320/rend6.png" alt="Wood">
+<a href="http://shiny-dynamics.blogspot.com/2012/04/blender-wood-texture-part-2.html">Shiny Dynamics: Blender Wood</a>
+<img src="http://modo.docs.thefoundry.co.uk/modo/701/help/images/shade_render/EmodoTex/marble_noise.png" alt="Marble">
+<a href="http://modo.docs.thefoundry.co.uk/modo/701/help/images/shade_render/EmodoTex/marble_noise.png">Modo: Marble</a></p>
+<h2 id="procedural-shapes">Procedural Shapes</h2>
+<p><img src="http://www.thinkboxsoftware.com/storage/krakatoa-support-images/krakatoa15_cloudsmodeling_kcm_density1_render.png" alt="Clouds">
+<a href="http://www.thinkboxsoftware.com/krak-clouds-modelling/">Clouds</a></p>
+<p><img src="http://www.redblobgames.com/maps/terrain-from-noise/images/topdemo-3d.png" alt="Terrain">
+<a href="http://www.redblobgames.com/maps/terrain-from-noise/">Displacement Terrain</a></p>
+<div class="sketch" style="width: 100%; height: 500px; position: relative;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jB0vBmiTr6o" frameborder="0" allowfullscreen></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=jB0vBmiTr6o&amp;t=131s">Elevated 4K!</a></p>
+<h2 id="forces">Forces</h2>
+<div class="sketch" style="width: 100%; height: 500px; position: relative;">
+<iframe src="https://player.vimeo.com/video/29074357" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/29074357">OpenCL Perlin Particles</a> from <a href="https://vimeo.com/eddietree">Eddie Lee</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+</div>
+<p><a href="https://vimeo.com/29074357">Open CL Perlin Particles</a></p>
+<!-- # Noise Examples -->
+<h1 id="assignment">Assignment</h1>
+<p>Keep Sketching! This week, focus on using the <code>noise()</code> function. Use <code>noise()</code> in a variety of ways. Use 1D, 2D, and 3D noise. Try using high, mid, and low frequency noise. Try using noise to control different things: position, size, color, rotation, etc. Think about tile graphics, <code>random()</code>, and parameters while you work. Consider combining these concepts with <code>noise()</code>.</p>
+<h2 id="special-assignment">Special Assignment</h2>
+<p>Don’t forget to sign up for orientations for the Laser Cutter and 3D printer.</p>
+<h2 id="challenge">Challenge</h2>
+<p>Make a program that generates treasure maps.</p>
+<p>Your maps should:</p>
+<ul>
+<li>Describe the geography of a fictional territory</li>
+<li>Mark the location of the treasure</li>
+<li>Include a path to the treasure from a reference point</li>
+<li>Be expressed in a cohesive style</li>
+</ul>
+<p>Things to consider:</p>
+<ul>
+<li>Where is you treasure? On a tropical island? A farm? In a warehouse?</li>
+<li>What style is your map?</li>
+<li>Does your map include labels? What do they say?</li>
+<li>Can you make a believable, natural geography? Should you?</li>
+<li>What terrain features might you include? Rivers? Mountains? Hills? Boxes?</li>
+<li>It is okay if your map takes seconds, or even minutes to generate. Does allow you to do something different?</li>
+</ul>
+<p>When posting your map:</p>
+<ul>
+<li>Include three maps generated by your program.</li>
+<li>Each map should be shown as an image, not video.</li>
+<li>Consider posting a first run at this challenge early, and then revisiting towards the end of the week with a second post.</li>
+</ul>
+<h1 id="miscellaneous-links">Miscellaneous Links</h1>
+<ul>
+<li><a href="https://in.pinterest.com/explore/perlin-noise/">Pinterest: Perlin Noise</a></li>
+<li><a href="http://www.novastructura.net/">Novastructura</a></li>
+<li><a href="https://thebookofshaders.com/11/">Book of Shaders: Noise</a></li>
+<li><a href="https://www.youtube.com/watch?v=ikwNrFvnL3g">Shiffman 2DNoise</a></li>
+<li><a href="http://devmag.org.za/2009/04/25/perlin-noise/">Dev.mag How to use Perlin Noise in your Games</a></li>
+<li><a href="http://mrl.nyu.edu/~perlin/doc/oscar.html">Perlin on his Award</a></li>
+<li><a href="http://www.inear.se/2010/04/ridged-perlin-noise/">Inear</a></li>
+<li><a href="https://cmaher.github.io/posts/working-with-simplex-noise/">Simplex Noise</a></li>
+<li><a href="http://http.developer.nvidia.com/GPUGems/gpugems_ch05.html">GPU Gems Improved Perlin Noise</a></li>
+</ul>
