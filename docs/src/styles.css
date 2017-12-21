@@ -408,6 +408,8 @@
   .comp-form-copy .bigger {
     font-family: "Miriam Libre";
     font-size: 1.2em; }
+  .comp-form-copy .center {
+    text-align: center; }
   .comp-form-copy .columns:after {
     content: "";
     display: table;
@@ -528,18 +530,18 @@
       line-height: 20px; }
     .comp-form-copy .activity code, .comp-form-copy .assignment code {
       background-color: rgba(0, 0, 0, 0.1); }
+    .comp-form-copy .activity > h3, .comp-form-copy .assignment > h3 {
+      font-family: "Miriam Libre";
+      font-weight: bold;
+      font-size: 10px;
+      letter-spacing: 0.04px;
+      color: #000;
+      padding-bottom: 3px;
+      margin-top: 65px;
+      margin-bottom: 18px;
+      border-bottom: 0.5px solid #CCC; }
   .comp-form-copy .assignment > h2:first-child::before {
     content: "assigment"; }
-  .comp-form-copy .assignment > h3 {
-    font-family: "Miriam Libre";
-    font-weight: bold;
-    font-size: 10px;
-    letter-spacing: 0.04px;
-    color: #000;
-    padding-bottom: 3px;
-    margin-top: 65px;
-    margin-bottom: 18px;
-    border-bottom: 0.5px solid #CCC; }
 
 .comp-form-copy .slides-wrap {
   margin-top: 30px;

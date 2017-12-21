@@ -1,14 +1,28 @@
 # Meta Data
 - Lets get rid of the number in the titles
 
+
+# markdown_builder.js
+- trimlines is eating whitespace in code parts... we don't want to trim whitespace in there, but generally do want to trim it elsewhere? hmm
+
 # Type formatting
-use bold (and italics) in the copy to improve variety and scanability
+- use bold (and italics) in the copy to improve variety and scanability
+
+- no colons on headers
 
 # Lesson Plans
 - I made lesson plans for several of these classes in '17.
 - Make more lesson plans
 - Format them consistently
 - Make the accessible through site
+
+# File Org
+- chapter
+  - sketches
+  - slides
+  - figures
+  index.md
+  ...included yaml and md
 
 # Top Level Headers
 - Rearrange content to make the best use of numbered/top level headers

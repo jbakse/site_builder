@@ -53,6 +53,13 @@ You can put `.bigger` on a paragraph. {bigger}
 
 Then it will be bigger.
 
+
+### Center
+
+You can put `.center` on a paragraph. {center}
+
+Then it will be centered.
+
 ### Underline
 
 You can put underline on blocks. {underline}

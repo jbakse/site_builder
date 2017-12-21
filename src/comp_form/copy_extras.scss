@@ -19,6 +19,10 @@
         font-size: 1.2em;
     }
 
+    .center {
+        text-align: center;
+    }
+
     /* half */
     .columns {
         @include clearfix;
@@ -185,12 +189,7 @@
         code {
             background-color: rgba(0, 0, 0, .1);
         }
-    }
 
-    .assignment {
-        >h2:first-child::before {
-            content: "assigment";
-        }
 
         >h3 {
             font-family: "Miriam Libre";
@@ -205,6 +204,12 @@
             margin-bottom: 18px;
 
             border-bottom: 0.5px solid $middle-grey;
+        }
+    }
+
+    .assignment {
+        >h2:first-child::before {
+            content: "assigment";
         }
     }
 }
