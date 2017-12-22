@@ -103,6 +103,10 @@
         border-radius: 0;
     }
 
+    p code {
+        // display: inline-block;
+        // margin-bottom: 4px;
+    }
     .bad>pre {
         border: 1px solid $red;
         background: $light-red;
@@ -233,7 +237,7 @@
         max-width: 100%; // border: 10px solid $dark-grey;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
 
     .scale img {

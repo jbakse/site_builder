@@ -1,6 +1,8 @@
 # Meta Data
 - Lets get rid of the number in the titles
 
+# system
+- next/prev links should be omitted if false
 
 # markdown_builder.js
 - trimlines is eating whitespace in code parts... we don't want to trim whitespace in there, but generally do want to trim it elsewhere? hmm
@@ -15,6 +17,10 @@
 - Make more lesson plans
 - Format them consistently
 - Make the accessible through site
+- lesson plans in the header?
+- maybe lesson plans have the schedule, and the class specific info (like teams, etc?)
+
+
 
 # File Org
 - chapter
@@ -28,6 +34,7 @@
 - Rearrange content to make the best use of numbered/top level headers
 
 # Content Notes
+- hero header: change "the what" "the how" to something better
 - Make bottom links better. Also some content rules. How many? Should they have descriptions? What content (see also, examples, tutorials, dan?)
 - Too many Wikipedia links.
   Parameters has way to many, for example. Find better/more varied sources. Maybe even just cut down the references.

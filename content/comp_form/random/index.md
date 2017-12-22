@@ -38,23 +38,7 @@ software: p5.js + p5.dom
 
 
 [[ move this into a p5 chapter? maybe not. maybe make a p5 chapter, keep this, and add a link to chapter also?]]
-
-## What p5 is
-
-From the p5js homepage:
-
-::: .callout
-p5.js
-: is a JavaScript library that starts with the original goal of Processing, to make coding accessible for artists, designers, educators, and beginners, and reinterprets this for today’s web.
-/::
-
-P5 is a javascript library for making drawings and animations. It makes getting set up and working faster and provides simple functions for common tasks. It also allows for a more imperative programming style, similar to Processing.
-
-If you have never worked with Processing or p5, you’ll need to do some reading and learning on your own. Here are some resources to get you started quickly:
-
-[p5.js Website](https://p5js.org/)
-
-[Justin's Creative Computing Class](http://pucd2035-e-f15.github.io/class_notes/)
+[[ link to p5? ]]
 
 
 ## The Methodical Application of Chance
