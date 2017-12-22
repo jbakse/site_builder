@@ -25,7 +25,7 @@ General principles, practices, and building blocks useful for all procedural gen
 <div class="col-12 col-md-9">
 <div class="row">
 
-<a class="col-6 col-md-4" data-ready="false" href="./introduciton">
+<a class="col-6 col-md-4" data-ready="true" href="./introduction">
 
 ### Introduction
 p5.js
@@ -92,6 +92,13 @@ Independent explorations of specific procedural generation tools, languages, med
 <!-- Inner -->
 <div class="col-12 col-md-9">
 <div class="row">
+
+<a class="col-6 col-md-4" data-ready="true" href="./tiles">
+
+### Tile Maps
+pencil + paper
+
+</a>
 
 
 

@@ -38,10 +38,10 @@ debug: false
 /::
 
 
-### Cover
+### Cover + Contain
 
 Use `.cover` to make the image cover the available area.
-
+Use `.contain` to make the image expand to fit the available area.
 ::: slides .cover
 
 - slide: slide

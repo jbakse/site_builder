@@ -259,7 +259,7 @@
     margin-bottom: 10px;
     font-family: "Roboto";
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1em;
     letter-spacing: 0.31px;
     line-height: calc(25 / 16); }
   .comp-form-copy blockquote {
@@ -281,7 +281,8 @@
     left: -15px;
     border-radius: 3px; }
   .comp-form-copy .attrib {
-    font-style: italic; }
+    font-style: italic;
+    margin-bottom: 20px; }
   .comp-form-copy .attrib::before {
     content: "\2014"; }
   .comp-form-copy code {
@@ -408,6 +409,9 @@
   .comp-form-copy .bigger {
     font-family: "Miriam Libre";
     font-size: 1.2em; }
+  .comp-form-copy .biggest {
+    font-family: "Miriam Libre";
+    font-size: 1.5em; }
   .comp-form-copy .center {
     text-align: center; }
   .comp-form-copy .columns:after {
@@ -579,6 +583,12 @@
   padding: 15px; }
   .debug .comp-form-copy .slide-info {
     border: 1px dotted #0af; }
+
+.comp-form-copy .contain .slide-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 0 0; }
 
 @media (max-width: 767px) {
   .comp-form-copy .slides .slide {

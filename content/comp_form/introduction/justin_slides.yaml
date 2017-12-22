@@ -1,0 +1,31 @@
+- artist: Justin Bakse
+  title: Village Study, 2015
+  image: http://justinbakse.com/v2/new_york/paper_worlds/images/village_1.jpg
+  comments: Procedurally generated lasercut paper experiement which grew out of an early Comp Form example. 
+  links:
+
+- artist: Justin Bakse + Greg Schomburg
+  title: The Raven, 2013
+  image: http://justinbakse.com/preview_2/new_york/raven/images/drawing.jpg
+  comments: Excerpt from Edgar Allen Poe's <i>The Raven</i> ploted on scroll motif by home-made drawing machine.
+  links:
+    - label: Project Page
+      href: http://justinbakse.com/preview_2/new_york/raven/
+
+- artist: Justin Bakse
+  title: Fell the Window Out, 2001
+  comments: Shown is an initial study from a perfromance+sculpture hybrid about memory and loss.
+  image: http://justinbakse.com/preview_2/minneapolis/fell_the_window_out/images/setup.420.jpg
+
+- artist: Justin Bakse
+  title: Parametric Desk, 2015
+  comments: Desk fabricated from design built in CombScript, a custom declaritive language for vector designs.
+  image: http://justinbakse.com/preview_2/new_york/combscript/images/top_2.jpg
+  links:
+    - label: CombScript
+      href: http://combscript.justinbakse.com
+
+- artist: Justin Bakse
+  title: Point Cloud, 2013
+  comments: Direct visualization of point cloud data provided by a Kinect v1.
+  image: http://justinbakse.com/preview_2/new_york/misc/images/kinect_greg.png
