@@ -20,13 +20,6 @@ software: p5.js + p5.dom
 
 
 
-## Learning Objectives
-- Consider the relationship of parameters and interface design
-- Practice problem analysis and interface design
-- Practice user-centered design concepts
-- Technical: Exposing parameters as global variables
-- Technical: Exposing parameters with HTML controls
-
 
 ## Parameters
 
@@ -293,12 +286,16 @@ The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides fun
 /comp_form/parameters/square_slider.js
 /::
 
+[[ challenges! ]]
 
 ::: .assignment
 
 @@include('./assignment.md')
 
 /::
+
+
+[[ homework review questions ]]
 
 ## Reference Links
 

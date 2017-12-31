@@ -546,6 +546,9 @@
       border-bottom: 0.5px solid #CCC; }
   .comp-form-copy .assignment > h2:first-child::before {
     content: "assigment"; }
+  .comp-form-copy .assignment .js-lab, .comp-form-copy .activity .js-lab {
+    background: #CCC;
+    padding: 10px; }
 
 .comp-form-copy .slides-wrap {
   margin-top: 30px;

@@ -86,6 +86,9 @@ We'll run through these steps to get up and running with the template together i
 
 [[ 2 or 3 very basic examples that show the drawing api, maybe one of them is a little more complicated, procedrual coolness ]]
 
+[[ challenges? ]]
+
+
 
 ## What Git and Github Are
 
@@ -98,3 +101,6 @@ Normally, you use the Git software through its command line interface. If you ar
 
 ### Getting Started with Git and Github
 [[ just a little info?]]
+
+
+

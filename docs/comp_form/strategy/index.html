@@ -1,5 +1,239 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Strategy | Comp Form</title></head><body class="comp-form"><a href="/comp_form/"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div></a><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Topic 5: Strategy</span><div class="buttons"><a class="previous" href="../parameters"><i class="fa fa-caret-left fa-lg"></i>Parameters</a><a class="next" href="../parameters">Parameters<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Placement Strategies</h1><h6>The What</h6><p class="description">Placing a set of point on a rectangle is a common task in procedural graphics. Depending on your approach, your can determine how planned, chatoic, random, natural, or mechanical the placement feels.</p><h6>The How</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="objectives">Objectives</h2>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Strategy | Comp Form</title></head><body class="comp-form"><a href="/comp_form/"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div></a><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Topic 5: Strategy</span><div class="buttons"><a class="previous" href="../parameters"><i class="fa fa-caret-left fa-lg"></i>Parameters</a><a class="next" href="../parameters">Parameters<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Placement Strategies</h1><h6>The What</h6><p class="description">Placing a set of point on a rectangle is a common task in procedural graphics. Depending on your approach, your can determine how planned, chatoic, random, natural, or mechanical the placement feels.</p><h6>The How</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><p>[[ This needs a high level organization pass maybe something like ]]
+[[ General introduction to strategic thinking ]]
+[[ Description of the problem space (populting points on a square) ]]
+[[ Some examples of this problem in practice (games, nature photos, etc) ]]
+[[ An overview of the strategiy 1 place 2 move, and place and move tactics ]]
+[[ place tactics ]]
+[[ move tactics ]]</p>
+<p>[[ !! update graphics ]]</p>
+<h2 id="computational-form-strategies">Computational Form Strategies</h2>
+<p>So far we’ve been looking at low-level, tactical topics like how to use <code>random()</code> and <code>noise()</code>. Achieving specific, complex results requires looking at problems from at a higher level. You must first have a clear understanding of the result you would like to achieve, and then begin to plan a series of steps to reach your goal.</p>
+<p>[[ (Analyze, Identify Patterns, Compose Solution) borrow list from assignment ]]</p>
+<div id="" class="activity">
+<h2 id="points-on-a-square">Points on a Square</h2>
+<p>Consider the image below. How might you make something like this?</p>
+<p class="scale full-width"><img src="figures/strategies/tighten_relax.png" alt="tighten_relax"></p>
+</div>
+<h3 id="building-a-toolbox">Building a Toolbox</h3>
+<p>As you work in computational form you will find than many problems can be solved using the same techniques composed in different ways. Hopefully you are already seeing that the techniques we have already discussed are building-blocks that can be used to create a wide array of forms. As we explore other tools and media we will see common themes come up again and again.</p>
+<p>There are many strategies and patterns widely used procedural generation. Some of the more complex ones have earned their own names: pseudo-random number generation, noise sampling, brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We’ve explored some of these already and will touch on others in the course of this class, but you don’t need to know all of these techniques to build interesting things. In this chapter we’ll be looking at how conceptually simple steps can be combined in different ways to get different effects.</p>
+<h2 id="populating-a-square">Populating a Square</h2>
+<p>[[ clean this up ]]</p>
+<p>Today, we will be looking at a single problem domain: placing points on a square. There are countless strategies we might use to place the points depending on the look we want to achieve.</p>
+<p>Study each example above:</p>
 <ul>
-<li>Strategize</li>
+<li>How does each example compare to the others?</li>
+<li>What characteristics could be used to group similar examples?</li>
+<li>What kind of plan might you try to achieve each example?</li>
 </ul>
-</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
+<table class="table table-responsive">
+<thead>
+<tr>
+<th>Place</th>
+<th>Move</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random</td>
+<td>Random</td>
+</tr>
+<tr>
+<td>Noise</td>
+<td>Noise</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>Relaxation</td>
+</tr>
+<tr>
+<td>Cull</td>
+<td>Noise Cull</td>
+</tr>
+<tr>
+<td>Tile</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<div id="" class="callout full-width">
+<p class="scale"><img src="figures/pp_tall.png" alt="overview"></p>
+</div>
+<h2 id="placing-the-points">Placing the Points</h2>
+<p>[[ intro to placing]]</p>
+<h3 id="random-placement">Random Placement</h3>
+<p>Place each point at a random location on the square.</p>
+<pre><code>x = random() * width;
+y = random() * height;
+</code></pre>
+<p>This is a quick, effective, and straight forward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.</p>
+<h3 id="grid-placement">Grid Placement</h3>
+<p>Place points on grid squares. One way to do this is a nested loop. This approach guarantees a perfectly even distribution.</p>
+<pre><code>for (row = 0; row &lt; grid_rows; row++) {
+	for (col = 0; col &lt; grid_cols; col++) {
+		x = (row + .5) / grid_rows * w;
+		y = (col + .5) / grid_cols * h;
+        ...
+	}
+}
+</code></pre>
+<h3 id="noise-placement">Noise Placement</h3>
+<p>Place each point at a location determined by a noise lookup.</p>
+<ul>
+<li>Because noise is center biased, the results will center biased.</li>
+<li>Each dot will be placed near the last as the values change in the noise cloud.</li>
+<li>This technique allows you some control over the proximity of successive points.</li>
+</ul>
+<pre><code>// loop with _i_
+x = noise(i * frequency, 0) * w;
+y = noise(i * frequency, 1000) * h;
+</code></pre>
+<h3 id="cull-placement">Cull Placement</h3>
+<p>Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points.</p>
+<p class="scale full-width"><img src="figures/place_cull_explained.png" alt="place_cull_explained"></p>
+<p>[[ basically unoptimized version of poison disc sampling ]]</p>
+<h3 id="stamp-placement">Stamp Placement</h3>
+<p>Create hand-made (or generated) arrangements of points. Copy these arrangements onto different locations on the square.</p>
+<ul>
+<li>Use this technique or one like it to combine hand-made and procedural design.</li>
+</ul>
+<p class="scale full-width"><img src="figures/tile_explained.png" alt="tile_explained"></p>
+<h2 id="moving-the-points">Moving the Points</h2>
+<h3 id="random-displacement">Random Displacement</h3>
+<p>Given a set of points, offset the location of each point a random amount. This can be used to roughen up a rigid arrangement like grid placement produces.</p>
+<pre><code>x = x + random() * width;
+y = y + random() * height;
+</code></pre>
+<h3 id="noise-displacement">Noise Displacement</h3>
+<p>Displace each point at by an amount determined by a noise lookup.</p>
+<ul>
+<li>This technique allows for nice control over the frequency of displacement.</li>
+<li>Can be used to create wave-like effects.</li>
+</ul>
+<pre><code>x = x + noise(i * frequency, 0) * w;
+y = x + noise(i * frequency, 1000) * h;
+</code></pre>
+<h3 id="relaxation-displacement">Relaxation Displacement</h3>
+<p>Find pairs of points that are near each other. Move them towards or away from each other a small amount. This technique is often applied several times in a row with small movements. This avoids the problem of pushing a point away from one, but then into another.</p>
+<ul>
+<li>This technique can be used to push points apart to some minimum distance.</li>
+<li>This technique can also be used to pull points together if they are near each other.</li>
+<li>This technique simulates attractive or repulsive forces acting on the points and can be used to loosely simulate natural phenomenon.</li>
+</ul>
+<p class="scale full-width"><img src="figures/relax_explained.png" alt="relax_explained"></p>
+<h3 id="noise-culling">Noise Culling</h3>
+<p>Sample noise based on the location of the point. Use the sampled value to determine if the point should be culled (discarded).</p>
+<p class="scale full-width"><img src="figures/noise_cull_explained.png" alt="noise_cull_explained"></p>
+<p>::: .activity</p>
+<h2 id="match">Match</h2>
+<p>[[ Match activity ]]
+://</p>
+<h2 id="point-placing-demo">Point Placing Demo</h2>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/strategy/sketches/point_place.js">
+</iframe>
+</div>
+</div>
+<!-- [Point Placing Demo](https://jsbin.com/telipu/edit?js,output) -->
+<h2 id="properties-of-pcg-system">Properties of PCG System</h2>
+<p>When designing a procedural generation system there are several properties to consider. The following properties are borrowed from <a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCGBook: Chapter 1</a></p>
+<h3 id="speed">Speed</h3>
+<ul>
+<li>How fast does your program need to run?</li>
+<li>Is it okay if takes a very long time to complete?</li>
+<li>Many times a faster running program is harder to code and understand.</li>
+<li>A frame of VR content needs to be rendered in under 10ms, and a short pre-rendered animation may take days to render.</li>
+</ul>
+<h3 id="reliability">Reliability</h3>
+<ul>
+<li>Does your program need to produce a good result every time?</li>
+<li>Are results shown directly to your audience, or will you have the opportunity to edit?</li>
+</ul>
+<h3 id="controllability">Controllability</h3>
+<ul>
+<li>Does your program expose any user parameters?</li>
+<li>Do you want explore the parameter space manually?</li>
+<li>Do you want to have tight control over the results or should everything work automatically?</li>
+</ul>
+<h3 id="expressivity-and-diversity">Expressivity and Diversity</h3>
+<ul>
+<li>How much apparent range does your system have?</li>
+<li>Does everything look same-y?</li>
+<li>Is it okay for your output to be completely wild or does it need to satisfy some constraints?</li>
+<li>If you are exposing parameters, do they allow for meaningful control?</li>
+</ul>
+<h3 id="creativity-and-believability">Creativity and Believability</h3>
+<ul>
+<li>Do you want your results to look natural or hand-made?</li>
+<li>Is it okay for them to look “computer-y”?</li>
+<li>If your system is generating variations on something that already exists, how closely do you want to copy the original?</li>
+</ul>
+<h3 id="repeatability">Repeatability</h3>
+<ul>
+<li>Do you need the ability to generate the same result more than once?</li>
+</ul>
+<div id="" class="assignment">
+<h2 id="challenge-sketch">Challenge + Sketch!</h2>
+<h3 id="base">Base</h3>
+<p>This is the last week of the “Foundation” unit. Look back at the topics covered so far: tile systems, using random, user parameters, using noise, and now thinking strategically.</p>
+<p>Begin by completing the challenges for this week.  Completing this week’s challenges will result in two posts. <strong>This week the challenges are required.</strong></p>
+<p>Then keep sketching! For the remaining three posts, I encourage you to build a single, more complex sketch and post work in progress as you go.</p>
+<h3 id="required-challenge-1-dots-a-b-x">Required Challenge 1: Dots A -&gt; B -&gt; X</h3>
+<ul>
+<li><strong>Analyze</strong> the challenge, clearly describe what the sketch does.</li>
+<li><strong>Strategize</strong> how you would achieve the same effect.</li>
+<li><strong>Study</strong> the provided starting code.</li>
+<li><strong>Recreate</strong> the challenge as closely as you can. You may use the starting code, or start from scratch.</li>
+<li><strong>Extend</strong> the example to create a unique sketch. Try to make something no one else will.</li>
+<li><strong>Post</strong> your finished sketch.</li>
+</ul>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/strategy/sketches/dot_challenge/sketch.js">
+</iframe>
+</div>
+</div>
+<p>[[ hide code above ]]</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/strategy/sketches/dot_challenge_start.js">
+</iframe>
+</div>
+</div>
+<h3 id="required-challenge-2-line-a-b-x">Required Challenge 2: Line A -&gt; B -&gt; X</h3>
+<p>Same as above: Analyze, Strategize, Study, Recreate, Extend, Post</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/strategy/sketches/line_challenge/sketch.js">
+</iframe>
+</div>
+</div>
+<p>[[ hide code above ]]</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/strategy/sketches/line_challenge_start.js">
+</iframe>
+</div>
+</div>
+</div>
+<div id="" class="assignment">
+<h2 id="reading-watch-play">Reading + Watch + Play</h2>
+<h3 id="read">Read</h3>
+<p><a href="http://pcgbook.com/">Procedural Content Generation in Games</a> is a collection of research in the field of procedural game content. It covers many interesting topics including dungeon+maze generation, fractals, L-systems, generating rules/mechanics, and mixing proc-gen and human-authored content.</p>
+<p><a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCG Book, Chapter 1</a></p>
+<h3 id="watch">Watch</h3>
+<p><a href="https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw">Game Maker’s Toolkit</a> is a Youtube channel that features high-quality video essays on game design.</p>
+<p><a href="https://www.youtube.com/watch?v=Uqk5Zf0tw3o">GMT: Spelunky</a></p>
+<h3 id="play">Play</h3>
+<p>If you want to play Spelunky—optional but highly recommended—original version (not the HD Remake) is free.</p>
+<p><a href="http://spelunkyworld.com/original.html">PC</a> or <a href="https://forums.tigsource.com/index.php?topic=28467.0">Mac</a></p>
+</div>
+<h1 id="related-links">Related Links</h1>
+<div id="" class="links">
+<p><a href="http://davideprati.com/">Palm Generator</a>
+<a href="https://bl.ocks.org/mbostock/19168c663618b7f07158">bl.ocks.org Poison-Disc</a>
+<a href="https://bl.ocks.org/mbostock/dbb02448b0f93e4c82c3">bl.ocks.org Poisson-Disc II</a>
+<a href="http://devmag.org.za/2009/05/03/poisson-disk-sampling/">Devmag.org Poisson Disk</a>
+<a href="https://www.jasondavies.com/maps/random-points/">Points on a Sphere</a></p>
+</div></div></div></div><div class="container" id="scroll-out"></div></div></body></html>

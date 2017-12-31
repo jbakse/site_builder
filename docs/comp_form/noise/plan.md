@@ -1,38 +1,42 @@
-# Welcome Music
+---
+title: Noise
+layout: layouts/compform_plain.pug
+debug: false
+---
 
-# Materials
-Team Generator, 1D Noise Worksheet
+## Materials
+1D Noise Worksheet
 
-# Learning Objectives
-- What a noise function is.
-- Why noise is useful.
-- Noise vs. Random
-- Historical and Current Importance of (Perlin) Noise in Procedural Generation
-- Qualities of Noise (Smoothing, Layering, Frequency, Energy, Dimensions)
-- How to use noise in projects. (Sampling, Input Scaling, Output Scaling)
+## Learning Objectives
+- What the `noise()` function does.
+- When, why, and how to use `noise()`
+- Sampling, mapping, and controlling `noise()`
+- Using `noise()` vs using `random()`
+- Importance of Perlin Noise in Procedural Generation
+- Qualities of Noise (Frequency, Amplitude, Smoothing, Layering, Dimensions)
+
+## Schedule
+Time    | ESA               | Activity
+---     | ---               | ---
+3:50    | Review+Engage     | Homework Review
+4:10    | Engage            | Homework Introduction + Guess Topics
+4:20    | Engage            | Discussion: compare `random()` + `noise()`
+4:40    | Study             | Lecture: `random()` vs. `noise()`
+4:50    | Apply             | Activity: Building 1D Noise
+5:10    | Break             | Break
+
+5:20    | Study             | Lecture: Working with Noise
+5:50    | Study             | Study Examples
+6:00    | Apply             | In-class Challenges
+6:20    | Study             | Slides
+
+[[ challenges? ]]
 
 
 
+## Class Notes
+::: .links
+[Noise](./index.html)
+/::
 
-# Noise in Photoshop
 
-
-
-# Activities
-Open: 1D Noise Worksheet
-
-# Schedule
-
-Time    | Type      |Activity
----     | ---       |---
-3:50    | review    | Homework Review
-4:10    | study     | Noise Lecture
-4:30    |           | 1D Noise
-4:30    | engage    | Activity: Building 1D Noise
-4:50    | study     | 2D, 3D Noise
-        |             Qualities of Noise (Smoothing, Layering, Frequency, Energy, Dimensions)
-5:10    |           | Break
-5:20    | study     | Working with Noise
-5:30    | engage    | Coding Challenge?
-6:10    | study     | Noise Applications (PSD Demo)?
-        | study     | Noise Examples

@@ -107,6 +107,8 @@ I am Justin Bakse. I am an assistant professor of interaction design at Parsons.
 @@include('./justin_slides.yaml')
 /::
 
+[[ change up slides a bit, maybe no kinect cloud thing? ]]
+
 ### Class Format + Homework
 
 This class focuses on exploration. Each class introduces a new topic or tool, usually with an in-class workshop. Throughout the week you will be expected to create daily sketches/experiments related to that topic. 

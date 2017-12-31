@@ -220,4 +220,11 @@
             content: "assigment";
         }
     }
+
+    .assignment, .activity {
+        .js-lab {
+            background: #CCC;
+            padding: 10px; // border: 10px solid #CCC;
+        }
+    }
 }

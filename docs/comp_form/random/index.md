@@ -14,15 +14,10 @@ description: Randomness occurs frequently in nature. Gaining control over its ge
 software: p5.js + p5.dom
 ---
 
-## Learning Objectives
-- Technical: Gain familiarity with the p5.js library
-- Understand the `random()` function and using it to bias outcomes
-- Be able to identify what random bias looks like
-- Gain an understanding of pseudorandom values and what makes it predictable
-- Technical: Introduction to Git and Github
+
 
 [[the above section Talia fabricated, it wasn't on the original. It may require revisiting]]
-[[ this was entered in by Talia, needs review]]
+
 [[ this page only has the first 70% ported]]
 
 
@@ -473,7 +468,7 @@ Javascript does not provide any way for you to set the seed used by `Math.random
 
 
 ::: .activity
-## Pencil and Paper LCG
+## Pencil + Paper LCG
 Explore how an LCG works by generating pseudorandom values by hand.
 
 
@@ -531,6 +526,7 @@ Kasimir Malevich, Mark Rothko, Piet Modrian, Anni Albers all worked with basic s
 
 /::
 
+[[ review questions ]]
 
 ## Related Links
 

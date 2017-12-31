@@ -20,10 +20,7 @@ software: p5.js
 [[ needs some additional content, notes below ]]
 [[ needs in class challenge ]]
 
-## Learning Objectives
-- What the `noise()` function does.
-- When and how to use `noise()`
-- Qualities of Noise (Frequency, Amplitude, Smoothing, Layering, Dimensions)
+[[ show noise in photoshop! ]]
 
 
 
@@ -216,6 +213,7 @@ By default, every time you restart your sketch the noise pattern will be differe
 /comp_form/noise/sketches/skyline.js
 /::
 
+[[ in class challenges ]]
 
 ##  Slides
 
@@ -262,6 +260,7 @@ Make a program that generates treasure maps.
 
 /::
 
+[[ assignment questions ]]
 
 ## Reference Links
 
