@@ -32,11 +32,11 @@ So far we've been looking at low-level, tactical topics like how to use `random(
 
 [[ (Analyze, Identify Patterns, Compose Solution) borrow list from assignment ]]
 
-::: .activity
+::: .discussion
 ## Points on a Square
 Consider the image below. How might you make something like this?
 
-![tighten_relax](figures/strategies/tighten_relax.png){scale full-width}
+![tighten_relax](figures/strategies/tighten_relax.png){scale}
 /::
 
 
@@ -125,16 +125,22 @@ y = noise(i * frequency, 1000) * h;
 ### Cull Placement
 Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points.
 
-![place_cull_explained](figures/place_cull_explained.png){scale full-width}
+![cull placement 1](figures/cull_placement_1.svg)
+![cull placement 2](figures/cull_placement_2.svg)
+![cull placement 3](figures/cull_placement_3.svg){three-up no-margin}
+
+
 
 [[ basically unoptimized version of poison disc sampling ]]
 
 ### Stamp Placement
-Create hand-made (or generated) arrangements of points. Copy these arrangements onto different locations on the square.
+Create pre-defined arrangements of points by hand or generatively. Copy these arrangements onto different locations.
 
-- Use this technique or one like it to combine hand-made and procedural design.
+This technique is allow mixing of hand-made and procedural design.
 
-![tile_explained](figures/tile_explained.png){scale full-width}
+![tile placement 1](figures/tile_1.svg)
+![tile placement 2](figures/tile_2.svg)
+![tile placement 3](figures/tile_3.svg){three-up no-margin}
 
 
 ## Moving the Points
@@ -168,19 +174,31 @@ Find pairs of points that are near each other. Move them towards or away from ea
 - This technique can also be used to pull points together if they are near each other.
 - This technique simulates attractive or repulsive forces acting on the points and can be used to loosely simulate natural phenomenon.
 
-![relax_explained](figures/relax_explained.png){scale full-width}
+
+![relax displacement 1](figures/relax_1.svg)
+![relax displacement 2](figures/relax_2.svg)
+![relax displacement 3](figures/relax_3.svg){three-up no-margin}
+
+
 
 ### Noise Culling
 
 Sample noise based on the location of the point. Use the sampled value to determine if the point should be culled (discarded).
 
-![noise_cull_explained](figures/noise_cull_explained.png){scale full-width}
+
+![noise cull 1](figures/noise_cull_1.svg)
+![noise cull 2](figures/noise_cull_2.svg)
+![noise cull 3](figures/noise_cull_3.svg){three-up no-margin}
+
+In the example above points are removed if the corresponding noise value is too low (dark). This results in patches or islands of dots. 
+
+
 
 
 ::: .activity
 ## Match
 [[ Match activity ]]
-://
+/::
 
 ## Point Placing Demo
 ::: js-lab
@@ -313,7 +331,7 @@ If you want to play Spelunky—optional but highly recommended—original versio
 /::
 
 
-# Related Links
+## Related Links
 ::: .links
 [Palm Generator](http://davideprati.com/)
 [bl.ocks.org Poison-Disc](https://bl.ocks.org/mbostock/19168c663618b7f07158)

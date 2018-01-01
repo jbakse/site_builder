@@ -9,10 +9,10 @@
 <h2 id="computational-form-strategies">Computational Form Strategies</h2>
 <p>So far we’ve been looking at low-level, tactical topics like how to use <code>random()</code> and <code>noise()</code>. Achieving specific, complex results requires looking at problems from at a higher level. You must first have a clear understanding of the result you would like to achieve, and then begin to plan a series of steps to reach your goal.</p>
 <p>[[ (Analyze, Identify Patterns, Compose Solution) borrow list from assignment ]]</p>
-<div id="" class="activity">
+<div id="" class="discussion">
 <h2 id="points-on-a-square">Points on a Square</h2>
 <p>Consider the image below. How might you make something like this?</p>
-<p class="scale full-width"><img src="figures/strategies/tighten_relax.png" alt="tighten_relax"></p>
+<p class="scale"><img src="figures/strategies/tighten_relax.png" alt="tighten_relax"></p>
 </div>
 <h3 id="building-a-toolbox">Building a Toolbox</h3>
 <p>As you work in computational form you will find than many problems can be solved using the same techniques composed in different ways. Hopefully you are already seeing that the techniques we have already discussed are building-blocks that can be used to create a wide array of forms. As we explore other tools and media we will see common themes come up again and again.</p>
@@ -90,14 +90,16 @@ y = noise(i * frequency, 1000) * h;
 </code></pre>
 <h3 id="cull-placement">Cull Placement</h3>
 <p>Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points.</p>
-<p class="scale full-width"><img src="figures/place_cull_explained.png" alt="place_cull_explained"></p>
+<p class="three-up no-margin"><img src="figures/cull_placement_1.svg" alt="cull placement 1">
+<img src="figures/cull_placement_2.svg" alt="cull placement 2">
+<img src="figures/cull_placement_3.svg" alt="cull placement 3"></p>
 <p>[[ basically unoptimized version of poison disc sampling ]]</p>
 <h3 id="stamp-placement">Stamp Placement</h3>
-<p>Create hand-made (or generated) arrangements of points. Copy these arrangements onto different locations on the square.</p>
-<ul>
-<li>Use this technique or one like it to combine hand-made and procedural design.</li>
-</ul>
-<p class="scale full-width"><img src="figures/tile_explained.png" alt="tile_explained"></p>
+<p>Create pre-defined arrangements of points by hand or generatively. Copy these arrangements onto different locations.</p>
+<p>This technique is allow mixing of hand-made and procedural design.</p>
+<p class="three-up no-margin"><img src="figures/tile_1.svg" alt="tile placement 1">
+<img src="figures/tile_2.svg" alt="tile placement 2">
+<img src="figures/tile_3.svg" alt="tile placement 3"></p>
 <h2 id="moving-the-points">Moving the Points</h2>
 <h3 id="random-displacement">Random Displacement</h3>
 <p>Given a set of points, offset the location of each point a random amount. This can be used to roughen up a rigid arrangement like grid placement produces.</p>
@@ -120,14 +122,19 @@ y = x + noise(i * frequency, 1000) * h;
 <li>This technique can also be used to pull points together if they are near each other.</li>
 <li>This technique simulates attractive or repulsive forces acting on the points and can be used to loosely simulate natural phenomenon.</li>
 </ul>
-<p class="scale full-width"><img src="figures/relax_explained.png" alt="relax_explained"></p>
+<p class="three-up no-margin"><img src="figures/relax_1.svg" alt="relax displacement 1">
+<img src="figures/relax_2.svg" alt="relax displacement 2">
+<img src="figures/relax_3.svg" alt="relax displacement 3"></p>
 <h3 id="noise-culling">Noise Culling</h3>
 <p>Sample noise based on the location of the point. Use the sampled value to determine if the point should be culled (discarded).</p>
-<p class="scale full-width"><img src="figures/noise_cull_explained.png" alt="noise_cull_explained"></p>
-<p>::: .activity</p>
+<p class="three-up no-margin"><img src="figures/noise_cull_1.svg" alt="noise cull 1">
+<img src="figures/noise_cull_2.svg" alt="noise cull 2">
+<img src="figures/noise_cull_3.svg" alt="noise cull 3"></p>
+<p>In the example above points are removed if the corresponding noise value is too low (dark). This results in patches or islands of dots.</p>
+<div id="" class="activity">
 <h2 id="match">Match</h2>
-<p>[[ Match activity ]]
-://</p>
+<p>[[ Match activity ]]</p>
+</div>
 <h2 id="point-placing-demo">Point Placing Demo</h2>
 <div id="" class="">
 <div class="js-lab">
@@ -229,7 +236,7 @@ y = x + noise(i * frequency, 1000) * h;
 <p>If you want to play Spelunky—optional but highly recommended—original version (not the HD Remake) is free.</p>
 <p><a href="http://spelunkyworld.com/original.html">PC</a> or <a href="https://forums.tigsource.com/index.php?topic=28467.0">Mac</a></p>
 </div>
-<h1 id="related-links">Related Links</h1>
+<h2 id="related-links">Related Links</h2>
 <div id="" class="links">
 <p><a href="http://davideprati.com/">Palm Generator</a>
 <a href="https://bl.ocks.org/mbostock/19168c663618b7f07158">bl.ocks.org Poison-Disc</a>

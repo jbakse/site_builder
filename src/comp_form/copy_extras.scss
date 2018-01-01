@@ -149,7 +149,7 @@
     }
 
     /* activity */
-    .activity, .assignment {
+    .activity, .assignment, .discussion {
         @include color-band($light-grey, $middle-grey);
         @include clearfix;
 
@@ -213,18 +213,21 @@
 
             border-bottom: 0.5px solid $middle-grey;
         }
+        .js-lab {
+            background: #CCC;
+            padding: 10px; // border: 10px solid #CCC;
+        }
     }
 
     .assignment {
         >h2:first-child::before {
-            content: "assigment";
+            content: "assignment";
         }
     }
 
-    .assignment, .activity {
-        .js-lab {
-            background: #CCC;
-            padding: 10px; // border: 10px solid #CCC;
+    .discussion {
+        >h2:first-child::before {
+            content: "discussion";
         }
     }
 }

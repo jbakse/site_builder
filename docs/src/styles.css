@@ -483,12 +483,12 @@
     margin-right: -15px; }
   .comp-form-copy .callout *:last-child {
     margin-bottom: 0; }
-  .comp-form-copy .activity, .comp-form-copy .assignment {
+  .comp-form-copy .activity, .comp-form-copy .assignment, .comp-form-copy .discussion {
     position: relative;
     margin-top: 90px;
     padding-top: 50px;
     padding-bottom: 50px; }
-    .comp-form-copy .activity::before, .comp-form-copy .assignment::before {
+    .comp-form-copy .activity::before, .comp-form-copy .assignment::before, .comp-form-copy .discussion::before {
       position: absolute;
       background: #F4F3F1;
       top: 0;
@@ -500,14 +500,14 @@
       border-top: 1px solid #CCC;
       border-bottom: 1px solid #CCC; }
     @media (max-width: 575px) {
-      .comp-form-copy .activity::before, .comp-form-copy .assignment::before {
+      .comp-form-copy .activity::before, .comp-form-copy .assignment::before, .comp-form-copy .discussion::before {
         left: 0;
         right: 0; } }
-    .comp-form-copy .activity:after, .comp-form-copy .assignment:after {
+    .comp-form-copy .activity:after, .comp-form-copy .assignment:after, .comp-form-copy .discussion:after {
       content: "";
       display: table;
       clear: both; }
-    .comp-form-copy .activity > h2:first-child, .comp-form-copy .assignment > h2:first-child {
+    .comp-form-copy .activity > h2:first-child, .comp-form-copy .assignment > h2:first-child, .comp-form-copy .discussion > h2:first-child {
       margin-top: 0;
       text-align: center;
       color: #000;
@@ -516,14 +516,14 @@
       font-size: 26px;
       letter-spacing: 0.37px;
       text-transform: none; }
-    .comp-form-copy .activity > h2:first-child::before, .comp-form-copy .assignment > h2:first-child::before {
+    .comp-form-copy .activity > h2:first-child::before, .comp-form-copy .assignment > h2:first-child::before, .comp-form-copy .discussion > h2:first-child::before {
       content: "activity";
       display: block;
       margin-bottom: 25px;
       font-size: 10px;
       letter-spacing: 2.41px;
       text-transform: uppercase; }
-    .comp-form-copy .activity > h2:first-child + p, .comp-form-copy .assignment > h2:first-child + p {
+    .comp-form-copy .activity > h2:first-child + p, .comp-form-copy .assignment > h2:first-child + p, .comp-form-copy .discussion > h2:first-child + p {
       text-align: center;
       width: 300px;
       margin: 35px auto 65px auto;
@@ -532,9 +532,9 @@
       font-size: 14px;
       letter-spacing: 0.31px;
       line-height: 20px; }
-    .comp-form-copy .activity code, .comp-form-copy .assignment code {
+    .comp-form-copy .activity code, .comp-form-copy .assignment code, .comp-form-copy .discussion code {
       background-color: rgba(0, 0, 0, 0.1); }
-    .comp-form-copy .activity > h3, .comp-form-copy .assignment > h3 {
+    .comp-form-copy .activity > h3, .comp-form-copy .assignment > h3, .comp-form-copy .discussion > h3 {
       font-family: "Miriam Libre";
       font-weight: bold;
       font-size: 10px;
@@ -544,11 +544,13 @@
       margin-top: 65px;
       margin-bottom: 18px;
       border-bottom: 0.5px solid #CCC; }
+    .comp-form-copy .activity .js-lab, .comp-form-copy .assignment .js-lab, .comp-form-copy .discussion .js-lab {
+      background: #CCC;
+      padding: 10px; }
   .comp-form-copy .assignment > h2:first-child::before {
-    content: "assigment"; }
-  .comp-form-copy .assignment .js-lab, .comp-form-copy .activity .js-lab {
-    background: #CCC;
-    padding: 10px; }
+    content: "assignment"; }
+  .comp-form-copy .discussion > h2:first-child::before {
+    content: "discussion"; }
 
 .comp-form-copy .slides-wrap {
   margin-top: 30px;
