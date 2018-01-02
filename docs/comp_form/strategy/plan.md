@@ -4,17 +4,19 @@ layout: layouts/compform_plain.pug
 debug: false
 ---
 
-## Materials
+## Week 5, Strategies {plain}
+
+### Materials
 
 
-## Learning Objectives
+### Learning Objectives
 - Practice analyzing form in detail
 - Practice developing strategies for procedural generation
 - Practice reverse engineering procedural generation approaches
 - Introduce some common methods for aesthetically arranging points on a plane.
 
 
-## Schedule
+### Schedule
 Time    | ESA               | Activity
 ---     | ---               | ---
 3:50    | Review+Engage     | Homework Review
@@ -31,7 +33,7 @@ Time    | ESA               | Activity
 
 ::: .assignment
 
-## Special Assignment
+### Special Assignment
 Don't forget to sign up for orientations for the Laser Cutter and 3D printer. <br/> **You must complete orientations for the Laser Cutter and 3D Printer before spring break!**
 
 /::

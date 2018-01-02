@@ -237,6 +237,10 @@
     content: counter(h2s, decimal-leading-zero);
     position: absolute;
     margin-left: -3em; }
+  .comp-form-copy > h2.plain {
+    padding-left: 0; }
+  .comp-form-copy > h2.plain::before {
+    content: none; }
   .comp-form-copy h3 {
     font-family: 'Miriam Libre';
     font-size: 24px;

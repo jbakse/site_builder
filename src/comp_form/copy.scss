@@ -28,6 +28,13 @@
         margin-left: -3em;
     }
 
+    >h2.plain {
+        padding-left: 0;
+    }
+    >h2.plain::before {
+        content: none;
+    }
+
     h3 {
         font-family: 'Miriam Libre';
         font-size: 24px;

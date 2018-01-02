@@ -4,11 +4,13 @@ layout: layouts/compform_plain.pug
 debug: false
 ---
 
-## Materials
+## Week 2, Parameters {plain}
+
+### Materials
 Workshop Decks: `Machine Types`, `User Types`
 
 
-## Learning Objectives
+### Learning Objectives
 - Consider the relationship of parameters and interface design
 - Practice problem analysis and interface design
 - Practice user-centered design concepts
@@ -17,7 +19,7 @@ Workshop Decks: `Machine Types`, `User Types`
 - Technical: Exposing parameters with HTML controls
 
 
-## Schedule
+### Schedule
 Time    | ESA           | Activity
 ---     | ---           | ---
 3:50    | Review+Engage | Homework Review
@@ -31,7 +33,7 @@ Time    | ESA           | Activity
 6:00    | Activate      | In-class Challenges
 
 
-## Class Notes
+### Class Notes
 ::: .links
 [Parameters](./index.html)
 /::

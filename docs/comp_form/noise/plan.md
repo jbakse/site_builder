@@ -4,10 +4,13 @@ layout: layouts/compform_plain.pug
 debug: false
 ---
 
-## Materials
+
+## Week 4, Noise {plain}
+
+### Materials
 1D Noise Worksheet
 
-## Learning Objectives
+### Learning Objectives
 - What the `noise()` function does.
 - When, why, and how to use `noise()`
 - Sampling, mapping, and controlling `noise()`
@@ -15,7 +18,7 @@ debug: false
 - Importance of Perlin Noise in Procedural Generation
 - Qualities of Noise (Frequency, Amplitude, Smoothing, Layering, Dimensions)
 
-## Schedule
+### Schedule
 Time    | ESA               | Activity
 ---     | ---               | ---
 3:50    | Review+Engage     | Homework Review
@@ -34,7 +37,7 @@ Time    | ESA               | Activity
 
 
 
-## Class Notes
+### Class Notes
 ::: .links
 [Noise](./index.html)
 /::

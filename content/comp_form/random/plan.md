@@ -4,10 +4,12 @@ layout: layouts/compform_plain.pug
 debug: false
 ---
 
-## Materials
+## Week 3, Random Values {plain}
+
+### Materials
 Dice, Dice Charts, Team Generator
 
-## Learning Objectives
+### Learning Objectives
 - Use the `random()` function
 - Map and bias random values
 - Select and implement appropriate strategies for randomization
@@ -17,7 +19,7 @@ Dice, Dice Charts, Team Generator
 - Technical: Introduction to Git and Github
 
 
-## Schedule
+### Schedule
 Time    | ESA               | Activity
 ---     | ---               | ---
 3:50    | Review+Engage     | Homework Review
@@ -35,7 +37,7 @@ Time    | ESA               | Activity
 
 
 
-## Class Notes
+### Class Notes
 ::: .links
 [Random](./index.html)
 [Hello, p5!](../p5/index.html)

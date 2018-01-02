@@ -13,24 +13,22 @@ hero_title: Placement Strategies
 description: Placing a set of point on a rectangle is a common task in procedural graphics. Depending on your approach, your can determine how planned, chatoic, random, natural, or mechanical the placement feels.
 software: p5.js
 ---
-[[ This needs a high level organization pass maybe something like ]]
-[[ General introduction to strategic thinking ]]
-[[ Description of the problem space (populting points on a square) ]]
-[[ Some examples of this problem in practice (games, nature photos, etc) ]]
-[[ An overview of the strategiy 1 place 2 move, and place and move tactics ]]
-[[ place tactics ]]
-[[ move tactics ]]
 
-
-[[ !! update graphics ]]
 
 
 ## Computational Form Strategies
 
-So far we've been looking at low-level, tactical topics like how to use `random()` and `noise()`. Achieving specific, complex results requires looking at problems from at a higher level. You must first have a clear understanding of the result you would like to achieve, and then begin to plan a series of steps to reach your goal.
+So far we've been looking at low-level topics like how to use `random()` and `noise()` to get specific results. As our goals grow more complex, we need to look at problems from at a much higher level. To create more complex systems you must first have a clear understanding of the result you would like to achieve, be able to break the problem down into smaller sub-problems, and then plan a series of steps to reach your goal.
+
+### Building a Toolbox
+
+Many problems can be solved using the same techniques composed in different ways.The techniques we have already discussed are building-blocks that can be used in a wide array problems. As we explore other tools and media we will see many common themes and techniques emerge. 
+
+Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We've explored some of these already and will touch on others in the course of this class, but you don't need to know all of these techniques to build interesting things.
+
+In this chapter we'll be looking at how conceptually simple steps can be combined in different ways to get different effects.
 
 
-[[ (Analyze, Identify Patterns, Compose Solution) borrow list from assignment ]]
 
 ::: .discussion
 ## Points on a Square
@@ -43,47 +41,42 @@ Consider the image below. How might you make something like this?
 
 
 
-### Building a Toolbox
-
-As you work in computational form you will find than many problems can be solved using the same techniques composed in different ways. Hopefully you are already seeing that the techniques we have already discussed are building-blocks that can be used to create a wide array of forms. As we explore other tools and media we will see common themes come up again and again.
-
-There are many strategies and patterns widely used procedural generation. Some of the more complex ones have earned their own names: pseudo-random number generation, noise sampling, brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We've explored some of these already and will touch on others in the course of this class, but you don't need to know all of these techniques to build interesting things. In this chapter we'll be looking at how conceptually simple steps can be combined in different ways to get different effects.
-
 ## Populating a Square
 
-[[ clean this up ]]
+Most of this chapter will be focus on a single problem area: arranging points on a square. This problem area shows up all the time: placing trees on an island, putting beads of water on glass, adding scratches to a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups. Beads of water shouldn't touch each other. Scratches are more likely on raised, exposed parts of the ship.
 
-Today, we will be looking at a single problem domain: placing points on a square. There are countless strategies we might use to place the points depending on the look we want to achieve.
+In this chapter we will look at tactics for placing and moving points and how to compose those tactics into larger strategies to achieve a wide variety of looks.
 
 
-Study each example above:
+
+[[ Some examples of this problem in practice (games, nature photos, etc) ]]
+
+
+::: .activity
+
+## What's the Difference?
+
+Analyze each of the examples below, carefully consider their similarities and differences.
+
 - How does each example compare to the others?
 - What characteristics could be used to group similar examples?
-- What kind of plan might you try to achieve each example?
+- What applications might each placement pattern have?
 
-
-Place   | Move
----     | ---
-Random  | Random
-Noise   | Noise
-Grid    | Relaxation
-Cull    | Noise Cull
-Tile    | &nbsp;
-
-
-::: .callout .full-width
 ![overview](figures/pp_tall.png){scale}
+
+[[ download activity materials ]]
+
 /::
 
 
 
 
 
-## Placing the Points
+### Placing the Points
 
-[[ intro to placing]]
+If we want points arranged on a square, we've got to start by creating some points and assigning them initial positions. There are many, many ways to go about this; here are five relatively simple, but powerful, tactics. I've given each of these tactics a name here, but these are not widely used names.
 
-### Random Placement
+#### Random Placement
 Place each point at a random location on the square.
 
 ```
@@ -94,7 +87,7 @@ y = random() * height;
 This is a quick, effective, and straight forward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.
 
 
-### Grid Placement
+#### Grid Placement
 Place points on grid squares. One way to do this is a nested loop. This approach guarantees a perfectly even distribution.
 
 ```
@@ -108,7 +101,7 @@ for (row = 0; row < grid_rows; row++) {
 ```
 
 
-### Noise Placement
+#### Noise Placement
 Place each point at a location determined by a noise lookup.
 
 - Because noise is center biased, the results will center biased.
@@ -122,31 +115,36 @@ y = noise(i * frequency, 1000) * h;
 ```
 
 
-### Cull Placement
-Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points.
+#### Cull Placement
+Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points. In the example below, three points already exist and a fourth is being considered. Three possible values are shown. One is too close and one is to far, so they are rejected. The third location is okay, and a fourth point at that location is added.
 
 ![cull placement 1](figures/cull_placement_1.svg)
 ![cull placement 2](figures/cull_placement_2.svg)
 ![cull placement 3](figures/cull_placement_3.svg){three-up no-margin}
 
+::: .links-sidebar
+[Jason Davies:<br/>Poisson-Disc Sampling](https://www.jasondavies.com/poisson-disc/)
+/::
+
+This tactic is essentially unoptimized poison-disc sampling. Poison-disc sampling is great when you need evenly distributed points without pattern artifacts.
 
 
-[[ basically unoptimized version of poison disc sampling ]]
 
-### Stamp Placement
+#### Stamp Placement
 Create pre-defined arrangements of points by hand or generatively. Copy these arrangements onto different locations.
 
 This technique is allow mixing of hand-made and procedural design.
 
-![tile placement 1](figures/tile_1.svg)
-![tile placement 2](figures/tile_2.svg)
-![tile placement 3](figures/tile_3.svg){three-up no-margin}
+![stamp placement 1](figures/tile_1.svg)
+![stamp placement 2](figures/tile_2.svg)
+![stamp placement 3](figures/tile_3.svg){three-up no-margin}
 
 
-## Moving the Points
+### Moving the Points
 
+These tactics can be used to move existing points. Many effects can be created by combining these with the placement techniques above.
 
-### Random Displacement
+#### Random Displacement
 Given a set of points, offset the location of each point a random amount. This can be used to roughen up a rigid arrangement like grid placement produces.
 
 ```
@@ -154,7 +152,7 @@ x = x + random() * width;
 y = y + random() * height;
 ```
 
-### Noise Displacement
+#### Noise Displacement
 
 Displace each point at by an amount determined by a noise lookup.
 
@@ -166,7 +164,7 @@ x = x + noise(i * frequency, 0) * w;
 y = x + noise(i * frequency, 1000) * h;
 ```
 
-### Relaxation Displacement
+#### Relaxation Displacement
 
 Find pairs of points that are near each other. Move them towards or away from each other a small amount. This technique is often applied several times in a row with small movements. This avoids the problem of pushing a point away from one, but then into another.
 
@@ -181,7 +179,7 @@ Find pairs of points that are near each other. Move them towards or away from ea
 
 
 
-### Noise Culling
+#### Noise Culling
 
 Sample noise based on the location of the point. Use the sampled value to determine if the point should be culled (discarded).
 
@@ -197,10 +195,24 @@ In the example above points are removed if the corresponding noise value is too 
 
 ::: .activity
 ## Match
-[[ Match activity ]]
+
+What tactics might have been used to get each result below?
+
+Place   | Move
+---     | ---
+Random  | Random
+Noise   | Noise
+Grid    | Relaxation
+Cull    | Noise Cull
+Stamp    | &nbsp;
+
+![overview](figures/pp_tall.png){scale}
+
+[[ activity materials download ]]
+
 /::
 
-## Point Placing Demo
+### Point Placing Demo
 ::: js-lab
 /comp_form/strategy/sketches/point_place.js
 /::
@@ -313,20 +325,24 @@ Same as above: Analyze, Strategize, Study, Recreate, Extend, Post
 ### Read
 [Procedural Content Generation in Games](http://pcgbook.com/) is a collection of research in the field of procedural game content. It covers many interesting topics including dungeon+maze generation, fractals, L-systems, generating rules/mechanics, and mixing proc-gen and human-authored content.
 
+::: .links
 [PCG Book, Chapter 1](http://pcgbook.com/wp-content/uploads/chapter01.pdf)
-
+/::
 
 ### Watch
 [Game Maker's Toolkit](https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw) is a Youtube channel that features high-quality video essays on game design.
 
+::: .links
 [GMT: Spelunky](https://www.youtube.com/watch?v=Uqk5Zf0tw3o)
-
+/::
 
 ### Play
 If you want to play Spelunky—optional but highly recommended—original version (not the HD Remake) is free.
 
-[PC](http://spelunkyworld.com/original.html) or [Mac](https://forums.tigsource.com/index.php?topic=28467.0)
-
+::: .links
+[PC Download](http://spelunkyworld.com/original.html)
+[Mac Download](https://forums.tigsource.com/index.php?topic=28467.0)
+/::
 
 /::
 

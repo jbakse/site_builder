@@ -12,6 +12,8 @@ previous_url: false
 hero_title: Introduction
 description: Using a computer to explore aesthetics is a powerful creative process. This class explores a variety of tools and techniques for creating algorithmic images, generative art, parametric designs, and procedurally generating content. 
 software: p5.js + p5.dom
+
+plan: true
 ---
 
 
@@ -43,8 +45,6 @@ There are many reasons artists and designers employ algorithmic methods, some im
 
 
 
-[[add comments]]
-
 ### What Computational Form is Not
 
 While we use computer programming throughout this class, it is important to understand that procedural generation doesn't require a computer. Procedural generation is about defining instructions that create form. Computers are very useful tools for carrying out these instructions, but artists have also built systems that rely on humans or purpose-built machines instead. Many of the works included in the slideshow above embody principles of computation and instruction without using computers.
@@ -71,10 +71,15 @@ Please take out a sheet of paper and pen and follow these instructions:
 
 Yes, these instructions will go on forever. I'll interrupt you in a minute.
 
+::: .links
+[stand-alone instructions](./sierpinski.html)
+
 [[ worksheet download ]]
 /::
 
-[[sierpinski activity, stand alone also?]]
+/::
+
+
 
 
 
@@ -107,7 +112,7 @@ I am Justin Bakse. I am an assistant professor of interaction design at Parsons.
 @@include('./justin_slides.yaml')
 /::
 
-[[ change up slides a bit, maybe no kinect cloud thing? ]]
+
 
 ### Class Format + Homework
 
@@ -227,13 +232,14 @@ Please review the [syllabus here](../syllabus.html).
 ### The Class Sketch Blog
 
 Our class sketch blog will host your daily experiments and links to content of interest to the class.
+
 [[ link to this and past sketch blogs ]]
 
-::: .activity
+<!-- ::: .activity
 
 ## Class Introductions
 
 [[introduce each other]]
 
-/::
+/:: -->
 

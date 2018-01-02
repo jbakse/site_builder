@@ -17,7 +17,7 @@ var strategies;
 var strat_i = 0;
 
 function setup() {
-    createCanvas(CANVAS_SIZE, CANVAS_SIZE);
+    createCanvas(CANVAS_SIZE, CANVAS_SIZE * .75);
     noFill();
     stroke(255);
     ellipseMode(CENTER);
@@ -168,7 +168,7 @@ function buildStrategies() {
 
 function draw() {
     // clear the background
-    background(0, 0, 0);
+    background(60);
 
     randomSeed(1);
     noiseSeed(2);
@@ -215,7 +215,9 @@ function drawPoints(points) {
         var y = points[i].y;
 
         // draw an ellipse at point
-        ellipse(x, y, 10, 10);
+        // noStroke();
+        // fill(255);
+        ellipse(x, y, 6, 6);
     }
 }
 

@@ -1,6 +1,7 @@
 - artist: Desmond Paul Henry
   title: Untitled, 1962
   image: http://desmondhenry.com/media/1015/bombsight-computer-02.jpg
+  comments: Desmond Paul Henry modified WW2 analogue computers to create drawing machines.
   links:
     - label: Artist's Site
       href: http://www.desmondhenry.com/
@@ -8,6 +9,7 @@
 - artist: Desmond Paul Henry
   title: Untitled, 1962
   image: https://farm9.staticflickr.com/8243/8560060448_27d951d0ac_k.jpg
+  comments: 
   links:
     - label: Artist's Site
       href: http://www.desmondhenry.com/
@@ -15,6 +17,7 @@
 - artist: Golan Levin
   title: Floccular Portraits, 1999
   image: http://www.flong.com/storage/images/projects/floccugraph_2.jpg
+  comments: These portraits are created by drawing "filaments" that seek the light or dark areas of a photo data-source.
   links:
     - label: Floccular Portraits on Artist's Site
       href: http://www.flong.com/projects/floccugraph/
@@ -22,6 +25,7 @@
 - artist: Craig Reynols
   title: Boids Simulation, 1986
   image: http://www.red3d.com/cwr/boids/images/flocking_around_19.gif
+  comments: Craig Reynolds <i>Boids</i> paper was presented at SIGGRAPH in 1986. In this program animation <b>emerges</b> from the application of basic rules.
   links:
     - label: Video
       href: https://www.youtube.com/embed/86iQiV3-3IA
@@ -29,23 +33,25 @@
 - artist: Sol Lewitt
   title: "Wall Drawing #122"
   image: https://trendland.com/wp-content/uploads/2015/10/sol-lewiit-lines-arcs-3-800x491.jpg
+  comments: Sol Lewitt's work is often delivered to galleries as instructions to be executed by local teams.
   links:
     - label: Mass MOCA Sol Lewitt Retrospective
       href: http://massmoca.org/sol-lewitt/
 
-- artist: Giuseppe Randazzo
-  title: Transmutation, 2012
-  image: http://www.novastructura.net/wp/wp-content/uploads/2013/07/transmutations_frame-08731.jpg
-  links:
-    - label: Video
-      href: https://vimeo.com/45941313
-    - label: Transmutation on Artist's Site
-      href: http://www.novastructura.net/wp/works/transmutation01/
+# - artist: Giuseppe Randazzo
+#   title: Transmutation, 2012
+#   image: http://www.novastructura.net/wp/wp-content/uploads/2013/07/transmutations_frame-08731.jpg
+#   links:
+#     - label: Video
+#       href: https://vimeo.com/45941313
+#     - label: Transmutation on Artist's Site
+#       href: http://www.novastructura.net/wp/works/transmutation01/
 
 
 - artist: Yoko Ono
   title: Voice Piece for Soprano, 1961
   image: http://iberia.music.coocan.jp/top/yoko_ono_scream.gif
+  comments: Yoko Ono's "instruction pieces" are intended to be seen, considered, and performed by the audience.
   links:
     - label: Voice Piece for Soprano @ Moma
       href: http://www.nytimes.com/2010/07/02/arts/design/02contemporary.html
@@ -62,6 +68,7 @@
 - artist: Nervous System
   title: Kinematics Dress 6, 2015
   image: http://n-e-r-v-o-u-s.com/projects/i.php?/000/976/Test-337,xlarge.2x.1441893095.jpg
+  comments: Design studio Nervous System uses computation and 3d printing to explore fashion aesthetics.
   links:
     - label: n-e-r-v-o-u-s.com
       href: http://n-e-r-v-o-u-s.com/
@@ -79,12 +86,14 @@
 - artist: Markus "Notch" Persson
   title: Minecraft, 2009
   image: http://static.planetminecraft.com/files/resource_media/screenshot/1245/Minecraft-2_4091491_lrg.jpg
+  comments: Minecraft drops players into a procedurally generated world on which they can build.
   links:
     - label: minecraft.net
       href: https://minecraft.net/
 
 - artist: Tarn Adams and Zach Adams
   title: Dwarf Fortress, 2006
+  comments: Dwarf Fortress is an uncomprimizing game created entirely by Tarn and Zach Adams. Dwarf fortress procedurally generates and simulates the game world in crazy detail.
   image: http://images.eurogamer.net/2013/articles/a/1/5/5/2/4/0/0/eurogamer-ign5y9.jpg
   links:
     - label: Dwarf Fortress Site
@@ -93,6 +102,7 @@
 - artist: Hello Games
   title: No Man's Sky, 2016
   image: http://cdn0.vox-cdn.com/assets/4646823/no-mans-sky-gallery-04.jpg
+  comments: An (overly) ambitious title that uses procedural generation to create a galaxy of planets, each with their own geology and ecosystems. The games initial relase was seen as disapointing my many, as if failed to deliver on some heavily-promoted features.
   links:
     - label: Infinite Worlds Trailer
       href: https://www.youtube.com/watch?v=iKcumrtWzDk

@@ -65,7 +65,7 @@ p5.js
 
 <a class="col-6 col-md-4" data-ready="true" href="./strategy">
 
-### Placement Strategies
+### Strategy
 p5.js
 
 </a>
@@ -252,3 +252,13 @@ Show some slides.
 <!-- /Outer -->
 
 
+
+# Computational Form Spring 2018 Schedule
+
+Lesson Plan                                             | Topics                        
+---                                                     | ---                           
+[Week 1, January 26](introduction/plan.html)            | [Introduction](introduction), [Tile Graphics](tiles)
+[Week 2, February 2](parameters/plan.html)              | [Parameters](parameters)
+[Week 3, February 9](random/plan.html)                  | [Random Values](random)
+[Week 3, February 16](noise/plan.html)                  | [Noise](noise)
+[Week 4, February 23](strategy/plan.html)             | [Strategy](stragegy)

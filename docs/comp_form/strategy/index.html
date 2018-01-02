@@ -1,31 +1,108 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Strategy | Comp Form</title></head><body class="comp-form"><a href="/comp_form/"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div></a><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Topic 5: Strategy</span><div class="buttons"><a class="previous" href="../parameters"><i class="fa fa-caret-left fa-lg"></i>Parameters</a><a class="next" href="../parameters">Parameters<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Placement Strategies</h1><h6>The What</h6><p class="description">Placing a set of point on a rectangle is a common task in procedural graphics. Depending on your approach, your can determine how planned, chatoic, random, natural, or mechanical the placement feels.</p><h6>The How</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><p>[[ This needs a high level organization pass maybe something like ]]
-[[ General introduction to strategic thinking ]]
-[[ Description of the problem space (populting points on a square) ]]
-[[ Some examples of this problem in practice (games, nature photos, etc) ]]
-[[ An overview of the strategiy 1 place 2 move, and place and move tactics ]]
-[[ place tactics ]]
-[[ move tactics ]]</p>
-<p>[[ !! update graphics ]]</p>
-<h2 id="computational-form-strategies">Computational Form Strategies</h2>
-<p>So far we’ve been looking at low-level, tactical topics like how to use <code>random()</code> and <code>noise()</code>. Achieving specific, complex results requires looking at problems from at a higher level. You must first have a clear understanding of the result you would like to achieve, and then begin to plan a series of steps to reach your goal.</p>
-<p>[[ (Analyze, Identify Patterns, Compose Solution) borrow list from assignment ]]</p>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Strategy | Comp Form</title></head><body class="comp-form"><a href="/comp_form/"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div></a><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Topic 5: Strategy</span><div class="buttons"><a class="previous" href="../parameters"><i class="fa fa-caret-left fa-lg"></i>Parameters</a><a class="next" href="../parameters">Parameters<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Placement Strategies</h1><h6>Overview</h6><p class="description">Placing a set of point on a rectangle is a common task in procedural graphics. Depending on your approach, your can determine how planned, chatoic, random, natural, or mechanical the placement feels.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="computational-form-strategies">Computational Form Strategies</h2>
+<p>So far we’ve been looking at low-level topics like how to use <code>random()</code> and <code>noise()</code> to get specific results. As our goals grow more complex, we need to look at problems from at a much higher level. To create more complex systems you must first have a clear understanding of the result you would like to achieve, be able to break the problem down into smaller sub-problems, and then plan a series of steps to reach your goal.</p>
+<h3 id="building-a-toolbox">Building a Toolbox</h3>
+<p>Many problems can be solved using the same techniques composed in different ways.The techniques we have already discussed are building-blocks that can be used in a wide array problems. As we explore other tools and media we will see many common themes and techniques emerge.</p>
+<p>Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We’ve explored some of these already and will touch on others in the course of this class, but you don’t need to know all of these techniques to build interesting things.</p>
+<p>In this chapter we’ll be looking at how conceptually simple steps can be combined in different ways to get different effects.</p>
 <div id="" class="discussion">
 <h2 id="points-on-a-square">Points on a Square</h2>
 <p>Consider the image below. How might you make something like this?</p>
 <p class="scale"><img src="figures/strategies/tighten_relax.png" alt="tighten_relax"></p>
 </div>
-<h3 id="building-a-toolbox">Building a Toolbox</h3>
-<p>As you work in computational form you will find than many problems can be solved using the same techniques composed in different ways. Hopefully you are already seeing that the techniques we have already discussed are building-blocks that can be used to create a wide array of forms. As we explore other tools and media we will see common themes come up again and again.</p>
-<p>There are many strategies and patterns widely used procedural generation. Some of the more complex ones have earned their own names: pseudo-random number generation, noise sampling, brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We’ve explored some of these already and will touch on others in the course of this class, but you don’t need to know all of these techniques to build interesting things. In this chapter we’ll be looking at how conceptually simple steps can be combined in different ways to get different effects.</p>
 <h2 id="populating-a-square">Populating a Square</h2>
-<p>[[ clean this up ]]</p>
-<p>Today, we will be looking at a single problem domain: placing points on a square. There are countless strategies we might use to place the points depending on the look we want to achieve.</p>
-<p>Study each example above:</p>
+<p>Most of this chapter will be focus on a single problem area: arranging points on a square. This problem area shows up all the time: placing trees on an island, putting beads of water on glass, adding scratches to a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups. Beads of water shouldn’t touch each other. Scratches are more likely on raised, exposed parts of the ship.</p>
+<p>In this chapter we will look at tactics for placing and moving points and how to compose those tactics into larger strategies to achieve a wide variety of looks.</p>
+<p>[[ Some examples of this problem in practice (games, nature photos, etc) ]]</p>
+<div id="" class="activity">
+<h2 id="whats-the-difference">What’s the Difference?</h2>
+<p>Analyze each of the examples below, carefully consider their similarities and differences.</p>
 <ul>
 <li>How does each example compare to the others?</li>
 <li>What characteristics could be used to group similar examples?</li>
-<li>What kind of plan might you try to achieve each example?</li>
+<li>What applications might each placement pattern have?</li>
 </ul>
+<p class="scale"><img src="figures/pp_tall.png" alt="overview"></p>
+<p>[[ download activity materials ]]</p>
+</div>
+<h3 id="placing-the-points">Placing the Points</h3>
+<p>If we want points arranged on a square, we’ve got to start by creating some points and assigning them initial positions. There are many, many ways to go about this; here are five relatively simple, but powerful, tactics. I’ve given each of these tactics a name here, but these are not widely used names.</p>
+<h4 id="random-placement">Random Placement</h4>
+<p>Place each point at a random location on the square.</p>
+<pre><code>x = random() * width;
+y = random() * height;
+</code></pre>
+<p>This is a quick, effective, and straight forward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.</p>
+<h4 id="grid-placement">Grid Placement</h4>
+<p>Place points on grid squares. One way to do this is a nested loop. This approach guarantees a perfectly even distribution.</p>
+<pre><code>for (row = 0; row &lt; grid_rows; row++) {
+	for (col = 0; col &lt; grid_cols; col++) {
+		x = (row + .5) / grid_rows * w;
+		y = (col + .5) / grid_cols * h;
+        ...
+	}
+}
+</code></pre>
+<h4 id="noise-placement">Noise Placement</h4>
+<p>Place each point at a location determined by a noise lookup.</p>
+<ul>
+<li>Because noise is center biased, the results will center biased.</li>
+<li>Each dot will be placed near the last as the values change in the noise cloud.</li>
+<li>This technique allows you some control over the proximity of successive points.</li>
+</ul>
+<pre><code>// loop with _i_
+x = noise(i * frequency, 0) * w;
+y = noise(i * frequency, 1000) * h;
+</code></pre>
+<h4 id="cull-placement">Cull Placement</h4>
+<p>Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points. In the example below, three points already exist and a fourth is being considered. Three possible values are shown. One is too close and one is to far, so they are rejected. The third location is okay, and a fourth point at that location is added.</p>
+<p class="three-up no-margin"><img src="figures/cull_placement_1.svg" alt="cull placement 1">
+<img src="figures/cull_placement_2.svg" alt="cull placement 2">
+<img src="figures/cull_placement_3.svg" alt="cull placement 3"></p>
+<div id="" class="links-sidebar">
+<p><a href="https://www.jasondavies.com/poisson-disc/">Jason Davies:<br/>Poisson-Disc Sampling</a></p>
+</div>
+<p>This tactic is essentially unoptimized poison-disc sampling. Poison-disc sampling is great when you need evenly distributed points without pattern artifacts.</p>
+<h4 id="stamp-placement">Stamp Placement</h4>
+<p>Create pre-defined arrangements of points by hand or generatively. Copy these arrangements onto different locations.</p>
+<p>This technique is allow mixing of hand-made and procedural design.</p>
+<p class="three-up no-margin"><img src="figures/tile_1.svg" alt="stamp placement 1">
+<img src="figures/tile_2.svg" alt="stamp placement 2">
+<img src="figures/tile_3.svg" alt="stamp placement 3"></p>
+<h3 id="moving-the-points">Moving the Points</h3>
+<p>These tactics can be used to move existing points. Many effects can be created by combining these with the placement techniques above.</p>
+<h4 id="random-displacement">Random Displacement</h4>
+<p>Given a set of points, offset the location of each point a random amount. This can be used to roughen up a rigid arrangement like grid placement produces.</p>
+<pre><code>x = x + random() * width;
+y = y + random() * height;
+</code></pre>
+<h4 id="noise-displacement">Noise Displacement</h4>
+<p>Displace each point at by an amount determined by a noise lookup.</p>
+<ul>
+<li>This technique allows for nice control over the frequency of displacement.</li>
+<li>Can be used to create wave-like effects.</li>
+</ul>
+<pre><code>x = x + noise(i * frequency, 0) * w;
+y = x + noise(i * frequency, 1000) * h;
+</code></pre>
+<h4 id="relaxation-displacement">Relaxation Displacement</h4>
+<p>Find pairs of points that are near each other. Move them towards or away from each other a small amount. This technique is often applied several times in a row with small movements. This avoids the problem of pushing a point away from one, but then into another.</p>
+<ul>
+<li>This technique can be used to push points apart to some minimum distance.</li>
+<li>This technique can also be used to pull points together if they are near each other.</li>
+<li>This technique simulates attractive or repulsive forces acting on the points and can be used to loosely simulate natural phenomenon.</li>
+</ul>
+<p class="three-up no-margin"><img src="figures/relax_1.svg" alt="relax displacement 1">
+<img src="figures/relax_2.svg" alt="relax displacement 2">
+<img src="figures/relax_3.svg" alt="relax displacement 3"></p>
+<h4 id="noise-culling">Noise Culling</h4>
+<p>Sample noise based on the location of the point. Use the sampled value to determine if the point should be culled (discarded).</p>
+<p class="three-up no-margin"><img src="figures/noise_cull_1.svg" alt="noise cull 1">
+<img src="figures/noise_cull_2.svg" alt="noise cull 2">
+<img src="figures/noise_cull_3.svg" alt="noise cull 3"></p>
+<p>In the example above points are removed if the corresponding noise value is too low (dark). This results in patches or islands of dots.</p>
+<div id="" class="activity">
+<h2 id="match">Match</h2>
+<p>What tactics might have been used to get each result below?</p>
 <table class="table table-responsive">
 <thead>
 <tr>
@@ -51,91 +128,15 @@
 <td>Noise Cull</td>
 </tr>
 <tr>
-<td>Tile</td>
+<td>Stamp</td>
 <td> </td>
 </tr>
 </tbody>
 </table>
-<div id="" class="callout full-width">
 <p class="scale"><img src="figures/pp_tall.png" alt="overview"></p>
+<p>[[ activity materials download ]]</p>
 </div>
-<h2 id="placing-the-points">Placing the Points</h2>
-<p>[[ intro to placing]]</p>
-<h3 id="random-placement">Random Placement</h3>
-<p>Place each point at a random location on the square.</p>
-<pre><code>x = random() * width;
-y = random() * height;
-</code></pre>
-<p>This is a quick, effective, and straight forward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.</p>
-<h3 id="grid-placement">Grid Placement</h3>
-<p>Place points on grid squares. One way to do this is a nested loop. This approach guarantees a perfectly even distribution.</p>
-<pre><code>for (row = 0; row &lt; grid_rows; row++) {
-	for (col = 0; col &lt; grid_cols; col++) {
-		x = (row + .5) / grid_rows * w;
-		y = (col + .5) / grid_cols * h;
-        ...
-	}
-}
-</code></pre>
-<h3 id="noise-placement">Noise Placement</h3>
-<p>Place each point at a location determined by a noise lookup.</p>
-<ul>
-<li>Because noise is center biased, the results will center biased.</li>
-<li>Each dot will be placed near the last as the values change in the noise cloud.</li>
-<li>This technique allows you some control over the proximity of successive points.</li>
-</ul>
-<pre><code>// loop with _i_
-x = noise(i * frequency, 0) * w;
-y = noise(i * frequency, 1000) * h;
-</code></pre>
-<h3 id="cull-placement">Cull Placement</h3>
-<p>Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points.</p>
-<p class="three-up no-margin"><img src="figures/cull_placement_1.svg" alt="cull placement 1">
-<img src="figures/cull_placement_2.svg" alt="cull placement 2">
-<img src="figures/cull_placement_3.svg" alt="cull placement 3"></p>
-<p>[[ basically unoptimized version of poison disc sampling ]]</p>
-<h3 id="stamp-placement">Stamp Placement</h3>
-<p>Create pre-defined arrangements of points by hand or generatively. Copy these arrangements onto different locations.</p>
-<p>This technique is allow mixing of hand-made and procedural design.</p>
-<p class="three-up no-margin"><img src="figures/tile_1.svg" alt="tile placement 1">
-<img src="figures/tile_2.svg" alt="tile placement 2">
-<img src="figures/tile_3.svg" alt="tile placement 3"></p>
-<h2 id="moving-the-points">Moving the Points</h2>
-<h3 id="random-displacement">Random Displacement</h3>
-<p>Given a set of points, offset the location of each point a random amount. This can be used to roughen up a rigid arrangement like grid placement produces.</p>
-<pre><code>x = x + random() * width;
-y = y + random() * height;
-</code></pre>
-<h3 id="noise-displacement">Noise Displacement</h3>
-<p>Displace each point at by an amount determined by a noise lookup.</p>
-<ul>
-<li>This technique allows for nice control over the frequency of displacement.</li>
-<li>Can be used to create wave-like effects.</li>
-</ul>
-<pre><code>x = x + noise(i * frequency, 0) * w;
-y = x + noise(i * frequency, 1000) * h;
-</code></pre>
-<h3 id="relaxation-displacement">Relaxation Displacement</h3>
-<p>Find pairs of points that are near each other. Move them towards or away from each other a small amount. This technique is often applied several times in a row with small movements. This avoids the problem of pushing a point away from one, but then into another.</p>
-<ul>
-<li>This technique can be used to push points apart to some minimum distance.</li>
-<li>This technique can also be used to pull points together if they are near each other.</li>
-<li>This technique simulates attractive or repulsive forces acting on the points and can be used to loosely simulate natural phenomenon.</li>
-</ul>
-<p class="three-up no-margin"><img src="figures/relax_1.svg" alt="relax displacement 1">
-<img src="figures/relax_2.svg" alt="relax displacement 2">
-<img src="figures/relax_3.svg" alt="relax displacement 3"></p>
-<h3 id="noise-culling">Noise Culling</h3>
-<p>Sample noise based on the location of the point. Use the sampled value to determine if the point should be culled (discarded).</p>
-<p class="three-up no-margin"><img src="figures/noise_cull_1.svg" alt="noise cull 1">
-<img src="figures/noise_cull_2.svg" alt="noise cull 2">
-<img src="figures/noise_cull_3.svg" alt="noise cull 3"></p>
-<p>In the example above points are removed if the corresponding noise value is too low (dark). This results in patches or islands of dots.</p>
-<div id="" class="activity">
-<h2 id="match">Match</h2>
-<p>[[ Match activity ]]</p>
-</div>
-<h2 id="point-placing-demo">Point Placing Demo</h2>
+<h3 id="point-placing-demo">Point Placing Demo</h3>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/strategy/sketches/point_place.js">
@@ -228,13 +229,20 @@ y = x + noise(i * frequency, 1000) * h;
 <h2 id="reading-watch-play">Reading + Watch + Play</h2>
 <h3 id="read">Read</h3>
 <p><a href="http://pcgbook.com/">Procedural Content Generation in Games</a> is a collection of research in the field of procedural game content. It covers many interesting topics including dungeon+maze generation, fractals, L-systems, generating rules/mechanics, and mixing proc-gen and human-authored content.</p>
+<div id="" class="links">
 <p><a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCG Book, Chapter 1</a></p>
+</div>
 <h3 id="watch">Watch</h3>
 <p><a href="https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw">Game Maker’s Toolkit</a> is a Youtube channel that features high-quality video essays on game design.</p>
+<div id="" class="links">
 <p><a href="https://www.youtube.com/watch?v=Uqk5Zf0tw3o">GMT: Spelunky</a></p>
+</div>
 <h3 id="play">Play</h3>
 <p>If you want to play Spelunky—optional but highly recommended—original version (not the HD Remake) is free.</p>
-<p><a href="http://spelunkyworld.com/original.html">PC</a> or <a href="https://forums.tigsource.com/index.php?topic=28467.0">Mac</a></p>
+<div id="" class="links">
+<p><a href="http://spelunkyworld.com/original.html">PC Download</a>
+<a href="https://forums.tigsource.com/index.php?topic=28467.0">Mac Download</a></p>
+</div>
 </div>
 <h2 id="related-links">Related Links</h2>
 <div id="" class="links">

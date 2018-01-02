@@ -14,6 +14,9 @@
 - use bold (and italics) in the copy to improve variety and scanability
 - no colons on headers
 - Make bottom links better. Also some content rules. How many? Should they have descriptions? What content (see also, examples, tutorials, dan?)
+  - Probably make a .boxed class that you can throw on a link to put it in a box. like [a](b/c){boxed}
+  - Bottom Links need to be more like a <dl> with link:desc
+
 - Too many Wikipedia links.
   Parameters has way to many, for example. Find better/more varied sources. Maybe even just cut down the references.
 
@@ -104,6 +107,7 @@
 
 ## JSLab
 - needs a full-screen mode
+- needs a hidden code mode (just run the sketch)
 
 
 
