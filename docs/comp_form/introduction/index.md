@@ -4,8 +4,8 @@ layout: layouts/compform_chapter.pug
 debug: false
 
 header_title: "Introduction"
-next: Procedures
-next_url: ../procedures
+next: Random Values
+next_url: ../random
 previous: false
 previous_url: false
 

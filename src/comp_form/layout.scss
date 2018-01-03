@@ -9,17 +9,15 @@
         right: -50vw;
         z-index: -100;
         content: "";
-
         @if $b {
             border-top: 1px solid $b;
             border-bottom: 1px solid $b;
         }
     }
-
     @include media-breakpoint-down(xs) {
         &::before {
-            left: 0;
-            right: 0;
+            left: -30px;
+            right: -30px;
         }
     }
 }

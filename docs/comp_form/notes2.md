@@ -3,11 +3,9 @@
 # Content
 
 ## Meta Data
-- Lets get rid of the number in the titles
 
 ## Template + Style
-- hero header: change "the what" "the how" to something better
-- On mobile the activities need to be full bleed.
+
 
 ## Copy Style
 - TOP LEVEL HEADERS Rearrange content to make the best use of numbered/top level headers
@@ -23,7 +21,7 @@
 ## Assignment Review Questions
 - all of them
 
-## In-class Challenges 
+## In-class Challenges
 - all of them
 
 ## Mess
@@ -44,7 +42,7 @@
   - Intro
   - Parameters
   - Random Values
-  - Noise 
+  - Noise
 
 ## File Org
 - chapter
@@ -104,11 +102,11 @@
 
 ## markdown_builder.js
 - trimlines is eating whitespace in code parts... we don't want to trim whitespace in there, but generally do want to trim it elsewhere? hmm
+- is it console logging a big message that pollutes the console?
 
 ## JSLab
 - needs a full-screen mode
 - needs a hidden code mode (just run the sketch)
-
 
 
 

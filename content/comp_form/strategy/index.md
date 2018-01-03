@@ -3,14 +3,14 @@ title: Strategy
 layout: layouts/compform_chapter.pug
 debug: false
 
-header_title: "Topic 5: Strategy"
-next: Parameters
-next_url: ../parameters
-previous: Parameters
-previous_url: ../parameters
+header_title: Strategy
+next: Noise
+next_url: ../noise
+previous: false
+previous_url: false
 
-hero_title: Placement Strategies
-description: Placing a set of point on a rectangle is a common task in procedural graphics. Depending on your approach, your can determine how planned, chatoic, random, natural, or mechanical the placement feels.
+hero_title: Strategy
+description: Building complex procedural generation systems requires analyzing your problem and creating a strategy for solving it.
 software: p5.js
 ---
 
@@ -43,7 +43,8 @@ Consider the image below. How might you make something like this?
 
 ## Populating a Square
 
-Most of this chapter will be focus on a single problem area: arranging points on a square. This problem area shows up all the time: placing trees on an island, putting beads of water on glass, adding scratches to a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups. Beads of water shouldn't touch each other. Scratches are more likely on raised, exposed parts of the ship.
+Most of this chapter will be focus on a single problem area: arranging points on a square. This problem area shows up all the time: placing trees on an island, putting beads of water on glass, adding scratches to a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups. Beads of water shouldn't touch each other. Scratches are more likely on raised, exposed parts of the ship. Each situation has different requirements, and depending on your approach, your can determine how planned, chatoic, random, natural, or mechanical the placement feels.
+
 
 In this chapter we will look at tactics for placing and moving points and how to compose those tactics into larger strategies to achieve a wide variety of looks.
 

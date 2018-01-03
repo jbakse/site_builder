@@ -3,14 +3,14 @@ title: Noise
 layout: layouts/compform_chapter.pug
 debug: false
 
-header_title: "Noise"
-next: Random Values
-next_url: ../random
+header_title: Noise
+next: Parameters
+next_url: ../parameters
 previous: Strategies
 previous_url: ../strategies
 
 hero_title: Noise
-description: Noise is better than random.
+description: Noise provides a flexible, powerful, and aesthetic source of random values.
 software: p5.js
 
 ---

@@ -26,8 +26,8 @@
       content: ""; }
     @media (max-width: 575px) {
       .comp-form #top-nav::before {
-        left: 0;
-        right: 0; } }
+        left: -30px;
+        right: -30px; } }
     .comp-form #top-nav .buttons {
       float: right; }
     .comp-form #top-nav .previous {
@@ -57,8 +57,8 @@
       border-bottom: 1px solid #CCC; }
     @media (max-width: 575px) {
       .comp-form #hero::before {
-        left: 0;
-        right: 0; } }
+        left: -30px;
+        right: -30px; } }
     .comp-form #hero::before {
       border-top: none; }
     .comp-form #hero h1 {
@@ -522,8 +522,8 @@
       border-bottom: 1px solid #CCC; }
     @media (max-width: 575px) {
       .comp-form-copy .activity::before, .comp-form-copy .assignment::before, .comp-form-copy .discussion::before {
-        left: 0;
-        right: 0; } }
+        left: -30px;
+        right: -30px; } }
     .comp-form-copy .activity:after, .comp-form-copy .assignment:after, .comp-form-copy .discussion:after {
       content: "";
       display: table;

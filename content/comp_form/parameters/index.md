@@ -3,11 +3,11 @@ title: Parameters
 layout: layouts/compform_chapter.pug
 debug: false
 
-header_title: "Topic 3: Parameters"
-next: Strategy
-next_url: ../strategy
-previous: Strategy
-previous_url: ../strategy
+header_title: Parameters
+next: Random Values
+next_url: ../random
+previous: Noise
+previous_url: ../noise
 
 hero_title: Parameters
 description: Expose parameters to make your procedural systems easier to control, adjust, and use.
