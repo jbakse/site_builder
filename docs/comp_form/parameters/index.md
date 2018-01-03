@@ -4,10 +4,10 @@ layout: layouts/compform_chapter.pug
 debug: false
 
 header_title: Parameters
-next: Random Values
-next_url: ../random
-previous: Noise
-previous_url: ../noise
+previous: Random Values
+previous_url: ../random
+next: Noise
+next_url: ../noise
 
 hero_title: Parameters
 description: Expose parameters to make your procedural systems easier to control, adjust, and use.
@@ -316,13 +316,9 @@ Build a face generating tool. This tool will create an image of a face that can 
 ## Reference Links
 
 
-::: .links
+
 [p5: Reference](https://p5js.org/reference/)
+: Documentation on the p5 API.
 
-[Wikipedia: Parametricism](https://en.wikipedia.org/wiki/Parametricism)
-
-[Wikipedia: Inner-platform effect](https://en.wikipedia.org/wiki/Inner-platform_effect)
-
-/::
 
 

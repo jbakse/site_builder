@@ -18,3 +18,7 @@ JS Lab runs live-editable js projects in a frame.
 /::
 
 
+::: js-lab
+/tests/example.js
+/::
+

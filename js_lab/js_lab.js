@@ -52,6 +52,13 @@ lab.main = function main() {
     // pull script name from url get string
     // console.log("script", window.location.search);
     let script_name = window.location.search.substr(1) || "example.js";
+    $('#maxamize').attr("href", window.location);
+    $('#maxamize').attr("target", "_top");
+    if (!inIframe()) {
+        $('#maxamize').hide();
+    }
+
+
 
     // load content of script, inject into editor
     let jqxhr = $.ajax({
@@ -254,4 +261,14 @@ lab_view.appendConsole = function appendConsole() {
 
 lab_view.show = function show() {
     $(".cover").removeClass("visible");
+}
+
+
+
+function inIframe() {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
 }

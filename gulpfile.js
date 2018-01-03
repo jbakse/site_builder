@@ -23,11 +23,11 @@ var webpack = require('webpack-stream');
 
 markdownToHTML = require('./build_src/markdown_builder');
 gulp.task('markdown', function() {
-    console.log("markdown");
+    // console.log("markdown");
     return gulp.src('content/**/*.md')
         // .pipe(changed('docs'))
         .pipe(frontMatter())
-        // .pipe(tap(logFrontMatter))
+        .pipe(tap(setFileOptions))
         .pipe(file_include())
         .pipe(tap(markdownToHTML))
         // .pipe(wrap({ src: 'layouts/main.html' }))
@@ -36,8 +36,10 @@ gulp.task('markdown', function() {
         .pipe(browserSync.stream());;
 });
 
-function logFrontMatter(file) {
-    console.log(file.path, file.frontMatter);
+function setFileOptions(file) {
+    // console.log("setFileOptions");
+    file.frontMatter.debug = false;
+    // console.log(file.path, file.frontMatter);
 }
 
 

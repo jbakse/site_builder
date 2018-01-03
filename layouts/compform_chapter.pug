@@ -35,13 +35,15 @@ html(lang="en")
 						span.title
 							!= header_title
 						.buttons
-							a.previous(href=previous_url)
-								i.fa.fa-caret-left.fa-lg
-								!= previous
-						
-							a.next(href=next_url)
-								!= next
-								i.fa.fa-caret-right.fa-lg
+							if previous
+								a.previous(href=previous_url)
+									i.fa.fa-caret-left.fa-lg
+									!= previous
+
+							if next
+								a.next(href=next_url)
+									!= next
+									i.fa.fa-caret-right.fa-lg
 		#content
 			if hero_title
 				#hero.container

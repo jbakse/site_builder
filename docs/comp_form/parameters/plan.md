@@ -45,6 +45,4 @@ Later in this class I will ask you to create special sketches using equipment av
 /::
 
 ### Class Notes
-::: .links
-[Parameters](./index.html)
-/::
+[Parameters](./index.html){boxed right}

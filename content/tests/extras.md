@@ -83,3 +83,29 @@ You can go `fullwidth`. This is mostly for images, and big widgets.{full-width c
 You can break up page into multiple files using ``@@include()``
 
 @@include('./inc_content.md')
+
+
+## Code
+
+```javascript
+while(i++ < 10) {
+    console.log("Hi");
+}
+```
+
+::: .bad
+```javascript
+while(i++ < 10) {
+    // something bad
+}
+```
+/::
+
+::: .good
+```javascript
+while(i++ < 10) {
+    // something good
+}
+```
+/::
+

@@ -19,6 +19,13 @@
 
 
 
+
+
+
+
+
+
+
 /* /////////////////////////////////////////
 /// Lab
 */
@@ -131,6 +138,20 @@
     border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
+.js-lab #maxamize {
+    color: inherit;
+}
+
+
+/* .js-lab #maxamize {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+} */
+
 @media (max-width: 576px) {
     .js-lab #reminder {
         display: none;
@@ -171,6 +192,13 @@
     border-radius: 10px;
     background-color: #CCC;
 }
+
+
+
+
+
+
+
 
 
 
@@ -614,6 +642,13 @@ body.js-lab-view {
     bottom: 0 !important;
     right: 0 !important;
 }
+
+
+
+
+
+
+
 
 
 

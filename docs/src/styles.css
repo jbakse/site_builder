@@ -452,11 +452,21 @@
       margin-right: 0; }
     .comp-form-copy .half + .half + * {
       clear: both; } }
-  .comp-form-copy .links > p > a {
+  .comp-form-copy .boxed a {
     border: 1px solid #CCC;
     padding: 5px 10px;
     display: block;
-    width: max-content; }
+    width: max-content;
+    margin-bottom: 10px; }
+  .comp-form-copy .boxed.download a:before,
+  .comp-form-copy .boxed.down a:before {
+    content: "\F063";
+    font-family: FontAwesome;
+    margin-right: .5em; }
+  .comp-form-copy .boxed.right a:before {
+    content: "\F061";
+    font-family: FontAwesome;
+    margin-right: .5em; }
   .comp-form-copy .links-sidebar {
     box-sizing: border-box;
     margin-bottom: 15px; }

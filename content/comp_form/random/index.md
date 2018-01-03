@@ -4,10 +4,10 @@ layout: layouts/compform_chapter.pug
 debug: false
 
 header_title: Random Values
-next: Parameters
-next_url: ../parameters
 previous: Introduction
 previous_url: ../introduction
+next: Parameters
+next_url: ../parameters
 
 hero_title: Random Values
 description: Procedural Generation systems often employ random values their main source of variety. Understanding how to generate, bias, and map random values is key to controlling the aesthetics of their output.
@@ -528,11 +528,11 @@ Kasimir Malevich, Mark Rothko, Piet Modrian, Anni Albers all worked with basic s
 
 [[ review questions ]]
 
-## Related Links
+## Reference Links
 
-::: .links
-[Mozart Dice](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel)
-[Mozart Dice 2](http://sunsite.univie.ac.at/Mozart/dice/)
-[Mozart Dice 3](https://www.youtube.com/watch?v=nFVmh9WNnDw)
-[Creative Computing Week 2 Random Drawings](http://pucd2035-e-f15.github.io/class_notes/week_2/class_work.html)
-/::
+
+[Mozart's Musikalisches Würfelspiel](http://sunsite.univie.ac.at/Mozart/dice/)
+: Essay on Mozart's 1787 musical dice game. This webpage is from 1995!
+
+[Wikipedia: Musikalisches Würfelspiel](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel)
+: More info on musical dice games.

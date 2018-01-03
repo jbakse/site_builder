@@ -385,8 +385,7 @@ Post your source image, the result after one generation, and the result after se
 ## Misc Links
 
 
-::: .links
-[Reaction Diffusion in Photoshop](https://vimeo.com/61154654)
-[Factorio](http://store.steampowered.com/app/427520/)
-[Icon Machine](http://brianmacintosh.com/iconmachine/)
-/::
+
+[Reaction Diffusion in Photoshop](https://vimeo.com/61154654){boxed right}
+[Factorio](http://store.steampowered.com/app/427520/){boxed right}
+[Icon Machine](http://brianmacintosh.com/iconmachine/){boxed right}

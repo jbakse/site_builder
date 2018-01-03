@@ -63,12 +63,40 @@
 
 
     /* links */
-    .links>p>a {
+    // .links>p>a,
+    // {
+    //     border: 1px solid $middle-grey;
+    //     padding: 5px 10px;
+    //     display: block;
+    //     width: max-content;
+    // }
+    .boxed a {
         border: 1px solid $middle-grey;
         padding: 5px 10px;
         display: block;
         width: max-content;
+        margin-bottom: 10px;
     }
+
+    .boxed.download a:before,
+    .boxed.down a:before {
+        content: "\f063";
+        font-family: FontAwesome;
+        margin-right: .5em;
+    }
+
+    .boxed.right a:before {
+        content: "\f061";
+        font-family: FontAwesome;
+        margin-right: .5em;
+    }
+
+
+
+
+
+
+
 
 
 

@@ -1,3 +1,16 @@
+Review sub folder notes files
+
+#####################
+# Research Assistance
+
+- General copy editing
+- Find, add link and footer references.
+- Code style cleanup
+  - var to let
+- Humble Bundle download rumble
+
+
+
 
 #####################
 # Content
@@ -8,15 +21,15 @@
 
 
 ## Copy Style
-- TOP LEVEL HEADERS Rearrange content to make the best use of numbered/top level headers
 - use bold (and italics) in the copy to improve variety and scanability
-- no colons on headers
-- Make bottom links better. Also some content rules. How many? Should they have descriptions? What content (see also, examples, tutorials, dan?)
-  - Probably make a .boxed class that you can throw on a link to put it in a box. like [a](b/c){boxed}
-  - Bottom Links need to be more like a <dl> with link:desc
 
-- Too many Wikipedia links.
-  Parameters has way to many, for example. Find better/more varied sources. Maybe even just cut down the references.
+- References
+  - Find more, better, and more varied sources. 
+  - Too many Wikipedia links. Parameters has way to many, for example.
+  - Parameters might have too many side-bar references.
+  - Consider placement of references between sidebar and bottom.
+  - Should sidebar sources be repeated on bottom?
+
 
 ## Assignment Review Questions
 - all of them
@@ -24,25 +37,22 @@
 ## In-class Challenges
 - all of them
 
+## Worksheets
+- all of them
+
 ## Mess
-- Need Messes
+- new plan for messes? maybe just don't attempt to scroll them
+- all of them
 
 ## Lesson Plans
-- I made lesson plans for several of these classes in '17.
-- Make more lesson plans
-- Format them consistently
-- Make the accessible through site
-- lesson plans in the header?
-- are they all formatted the same (title case)
-- using Engage, Study, Activate Terminalogy for all?
-- Do i use "Activity:" and "Lecture:" and "Discussion:" consistently?
-- maybe lesson plans have the schedule, and the class specific info (like teams, etc?)
+- Review lesson plan format, apply to all
+  - using Engage, Study, Activate for all?
+  - Do i use "Activity:" and "Lecture:" and "Discussion:" consistently?
+- Lesson plans take on additional content
+  - team assignments
+  - special assignments
+  - class specific notes/dates
 - make a T-15 minute entry for the song of the day, video of the day, etc.
-- Need a Link to the Plans, each chapter? a single list? both?
-  - Intro
-  - Parameters
-  - Random Values
-  - Noise
 
 ## File Org
 - chapter
@@ -53,29 +63,34 @@
   ...included yaml and md
 
 
-
-## Front Page Links
-- Sketch Blog
-- Syllabus
-- Global Book/Resource/Site list? Maybe.
-- Class Notes Github? Nah.
+## Front page
+- Chapters
+- Class Calender/Lesson Plans
+- Links
+  - Sketch Blog
+  - Syllabus
+  - Global Book/Resource/Site list? Maybe.
+  - Class Notes Github? Nah.
 
 ## Page Priorities
 - Pre-class Message
   - What to bring, be on time, what to watch ahead of time, etc.
-  - Every Frame a Painting (talk about understanding the media, and taking advantage of its unique qualities, maybe the one visual comedy hot fuzz director)
-  - Mark Brown?
-  - Two Minute Papers?
+  - Assignment 0: Watch
+    - Every Frame a Painting (talk about understanding the media, and taking advantage of its unique qualities, maybe the one visual comedy hot fuzz director)
+    - Mark Brown? Maybe spelunky one?
+    - Two Minute Papers? which one though?
 
 
 - Foundation Weeks
   - 1 Introduction
-  - Tile Maps
-  - Hello, p5!
   - 2 Parameters (order?)
   - 3 Random Values (order?)
   - 4 Noise
   - 5 Placement Strategies
+
+  - Tile Maps
+  - Hello, p5!
+  - Hello, Git + Github?
 
 - Exploration Weeks
   - 6 Pixel Data
@@ -89,25 +104,32 @@
   - 14 Microgames
   - 15 Post-mortem Party
 
-- Accessory
-  - Hello, p5
-  - Hello, Git + Github?
+
+  
 
 
 #####################
 # Publishing System
 
 ## Template
-- next/prev links should be omitted if false
+- new header logo with another cut out triangle?
 
 ## markdown_builder.js
-- trimlines is eating whitespace in code parts... we don't want to trim whitespace in there, but generally do want to trim it elsewhere? hmm
-- is it console logging a big message that pollutes the console?
+
 
 ## JSLab
-- needs a full-screen mode
 - needs a hidden code mode (just run the sketch)
 
+## Styles
+
+
+
+
+#####################
+## QA Concerns
+
+- i took out trimlines on the ::: /:: blocks. any regressions?
+- added debug=false to gulp-layout options to suppress pug console bart. any regressions?
 
 
 #####################

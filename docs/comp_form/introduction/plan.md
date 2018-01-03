@@ -32,7 +32,6 @@ Time    | ESA       | Activity
 6:15    | Activate  | Set up Sketch Blog Accounts + Post
 
 ### Class Notes
-::: .links
-[Introduction](./index.html)
-[Tile Sets](../tiles/index.html)
-/::
+
+[Introduction](./index.html){boxed right}
+[Tile Sets](../tiles/index.html){boxed right}

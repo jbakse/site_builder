@@ -172,7 +172,6 @@ Design a full alphabet using a single tile set. Post an image that shows your fo
 
 ## Related Links
 
-::: .links
 [Maze Generation](http://www.jamisbuck.org/mazes/)
 [Wang Tiles](https://en.wikipedia.org/wiki/Wang_tile)
 [Stagecast - Wang Tile Maze Design](http://www.cr31.co.uk/stagecast/wang/intro.html)
@@ -183,4 +182,4 @@ Design a full alphabet using a single tile set. Post an image that shows your fo
 [Explained Visually](http://setosa.io/ev/)
 [Brian Eno - Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies)
 [Oblique Strategies Online](http://stoney.sb.org/eno/oblique.html)
-/::
+

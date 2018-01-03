@@ -4,10 +4,10 @@ layout: layouts/compform_chapter.pug
 debug: false
 
 header_title: Strategy
-next: Noise
-next_url: ../noise
-previous: false
-previous_url: false
+previous: Noise
+previous_url: ../noise
+next: false
+next_url: false
 
 hero_title: Strategy
 description: Building complex procedural generation systems requires analyzing your problem and creating a strategy for solving it.
@@ -80,7 +80,7 @@ If we want points arranged on a square, we've got to start by creating some poin
 #### Random Placement
 Place each point at a random location on the square.
 
-```
+```javascript
 x = random() * width;
 y = random() * height;
 ```
@@ -91,7 +91,7 @@ This is a quick, effective, and straight forward way to lay points down. In theo
 #### Grid Placement
 Place points on grid squares. One way to do this is a nested loop. This approach guarantees a perfectly even distribution.
 
-```
+```javascript
 for (row = 0; row < grid_rows; row++) {
 	for (col = 0; col < grid_cols; col++) {
 		x = (row + .5) / grid_rows * w;
@@ -109,7 +109,7 @@ Place each point at a location determined by a noise lookup.
 - Each dot will be placed near the last as the values change in the noise cloud.
 - This technique allows you some control over the proximity of successive points.
 
-```
+```javascript
 // loop with _i_
 x = noise(i * frequency, 0) * w;
 y = noise(i * frequency, 1000) * h;
@@ -148,7 +148,7 @@ These tactics can be used to move existing points. Many effects can be created b
 #### Random Displacement
 Given a set of points, offset the location of each point a random amount. This can be used to roughen up a rigid arrangement like grid placement produces.
 
-```
+```javascript
 x = x + random() * width;
 y = y + random() * height;
 ```
@@ -160,7 +160,7 @@ Displace each point at by an amount determined by a noise lookup.
 - This technique allows for nice control over the frequency of displacement.
 - Can be used to create wave-like effects.
 
-```
+```javascript
 x = x + noise(i * frequency, 0) * w;
 y = x + noise(i * frequency, 1000) * h;
 ```
@@ -326,33 +326,31 @@ Same as above: Analyze, Strategize, Study, Recreate, Extend, Post
 ### Read
 [Procedural Content Generation in Games](http://pcgbook.com/) is a collection of research in the field of procedural game content. It covers many interesting topics including dungeon+maze generation, fractals, L-systems, generating rules/mechanics, and mixing proc-gen and human-authored content.
 
-::: .links
-[PCG Book, Chapter 1](http://pcgbook.com/wp-content/uploads/chapter01.pdf)
-/::
+[PCG Book, Chapter 1](http://pcgbook.com/wp-content/uploads/chapter01.pdf){boxed right}
 
 ### Watch
 [Game Maker's Toolkit](https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw) is a Youtube channel that features high-quality video essays on game design.
 
-::: .links
-[GMT: Spelunky](https://www.youtube.com/watch?v=Uqk5Zf0tw3o)
-/::
+[GMT: Spelunky](https://www.youtube.com/watch?v=Uqk5Zf0tw3o){boxed right}
 
 ### Play
 If you want to play Spelunky—optional but highly recommended—original version (not the HD Remake) is free.
 
-::: .links
-[PC Download](http://spelunkyworld.com/original.html)
-[Mac Download](https://forums.tigsource.com/index.php?topic=28467.0)
-/::
+[For PC](http://spelunkyworld.com/original.html){boxed right}
+[For Mac](https://forums.tigsource.com/index.php?topic=28467.0){boxed right}
 
 /::
 
 
-## Related Links
-::: .links
-[Palm Generator](http://davideprati.com/)
-[bl.ocks.org Poison-Disc](https://bl.ocks.org/mbostock/19168c663618b7f07158)
-[bl.ocks.org Poisson-Disc II](https://bl.ocks.org/mbostock/dbb02448b0f93e4c82c3)
-[Devmag.org Poisson Disk](http://devmag.org.za/2009/05/03/poisson-disk-sampling/)
-[Points on a Sphere](https://www.jasondavies.com/maps/random-points/)
-/::
+## Reference Links
+
+
+[bl.ocks.org: Poisson-Disc](https://bl.ocks.org/mbostock/19168c663618b7f07158), [Poisson-Disc II](https://bl.ocks.org/mbostock/dbb02448b0f93e4c82c3)
+: Poisson Disc description, visual explanation, and sample code by Mike Bostock.
+
+[Devmag.org: Poisson Disk Sampling](http://devmag.org.za/2009/05/03/poisson-disk-sampling/)
+: Longer article on implementing and applying Poisson Disk Sampling
+
+[Random Points on a Sphere](https://www.jasondavies.com/maps/random-points/)
+: Nice, interactive demo of three strategies for placing points on a sphere.
+

@@ -4,10 +4,10 @@ layout: layouts/compform_chapter.pug
 debug: false
 
 header_title: "Introduction"
-next: Random Values
-next_url: ../random
 previous: false
 previous_url: false
+next: Random Values
+next_url: ../random
 
 hero_title: Introduction
 description: Using a computer to explore aesthetics is a powerful creative process. This class explores a variety of tools and techniques for creating algorithmic images, generative art, parametric designs, and procedurally generating content. 
@@ -69,11 +69,10 @@ Please take out a sheet of paper and pen and follow these instructions:
 
 Yes, these instructions will go on forever. I'll interrupt you in a minute.
 
-::: .links
-[stand-alone instructions](./sierpinski.html)
+[stand-alone instructions](./sierpinski.html){boxed right}
 
 [[ worksheet download ]]
-/::
+
 
 /::
 

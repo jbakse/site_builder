@@ -38,8 +38,6 @@ Time    | ESA               | Activity
 
 
 ### Class Notes
-::: .links
-[Noise](./index.html)
-/::
+[Noise](./index.html) {boxed right}
 
 

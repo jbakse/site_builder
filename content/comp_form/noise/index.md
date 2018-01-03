@@ -4,10 +4,10 @@ layout: layouts/compform_chapter.pug
 debug: false
 
 header_title: Noise
-next: Parameters
-next_url: ../parameters
-previous: Strategies
-previous_url: ../strategies
+previous: Parameters
+previous_url: ../parameters
+next: Strategies
+next_url: ../strategy
 
 hero_title: Noise
 description: Noise provides a flexible, powerful, and aesthetic source of random values.
@@ -291,16 +291,21 @@ Make a program that generates treasure maps.
 ## Reference Links
 
 
-::: .links
+
 
 [Pinterest: Perlin Noise](https://in.pinterest.com/explore/perlin-noise/)
-[Novastructura](http://www.novastructura.net/)
-[Book of Shaders: Noise](https://thebookofshaders.com/11/)
-[Shiffman 2DNoise](https://www.youtube.com/watch?v=ikwNrFvnL3g)
-[Dev.mag How to use Perlin Noise in your Games](http://devmag.org.za/2009/04/25/perlin-noise/)
-[Perlin on his Award](http://mrl.nyu.edu/~perlin/doc/oscar.html)
-[Inear](http://www.inear.se/2010/04/ridged-perlin-noise/)
-[Simplex Noise](https://cmaher.github.io/posts/working-with-simplex-noise/)
-[GPU Gems Improved Perlin Noise](http://http.developer.nvidia.com/GPUGems/gpugems_ch05.html)
+: Active Pinterest search for *Perlin Noise Art*
 
-/::
+[Book of Shaders: Noise](https://thebookofshaders.com/11/)
+: Chapter on using Noise in GLSL shaders from the excellent *The Book of Shaders*.
+
+[Shiffman: 2D Noise](https://www.youtube.com/watch?v=ikwNrFvnL3g)
+: [Daniel Shiffman's](http://shiffman.net/about/) video on 2D Perlin Noise 
+
+
+[Ken Perlin: Noise and Turbulence](http://mrl.nyu.edu/~perlin/doc/oscar.html)
+: Comments on Perlin Noise direct from the source, including the code.
+
+[GPU Gems: Improved Perlin Noise](https://developer.nvidia.com/gpugems/GPUGems/gpugems_ch05.html)
+: Ken Perlin details an improved implementation of Perlin Noise for [GPU Gems](https://developer.nvidia.com/gpugems/GPUGems/gpugems_pref01.html)
+

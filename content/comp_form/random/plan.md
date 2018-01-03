@@ -38,7 +38,6 @@ Time    | ESA               | Activity
 
 
 ### Class Notes
-::: .links
-[Random](./index.html)
-[Hello, p5!](../p5/index.html)
-/::
+
+[Random](./index.html){boxed right}
+[Hello, p5!](../p5/index.html){boxed right}

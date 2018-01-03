@@ -157,8 +157,11 @@ function buildComponent(match, selector, content) {
     classes = classes.join(" ");
     ids = ids.join(" ");
 
-    return t.trimLines(`
-<div id="${ids}" class="${classes}">
-\n${content}\n
-</div>`);
+    return `
+<div id="${ids}" class="${classes}">\n\n${content}\n\n</div>`;
+
+    //     return t.dedent(`
+    // <div id="${ids}" class="${classes}">\n
+    // ${content}\n
+    // </div>`);
 }

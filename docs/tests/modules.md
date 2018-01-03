@@ -20,22 +20,25 @@ software: markdown-it, custom
 This is a callout.{callout}
 
 
-## Links
+## Boxed Links
 
-::: .links
-    [Wikipedia:Parametricism](https://en.wikipedia.org/wiki/Parametricism)
+[Test Source: Parametricism](#){boxed}
 
-    [Test Source:Parametricism](https://en.wikipedia.org/wiki/Parametricism)
-/::
+.boxed
+
+
+[Test Download](#){boxed download}
+
+.boxed.download
 
 Use links to format a list of links
 
 ## Links Sidebar
 
 ::: .links-sidebar
-    [Wikipedia:<br/>Paramet&shy;ricism](https://en.wikipedia.org/wiki/Parametricism)
+[Wikipedia:<br/>Paramet&shy;ricism](#)
 
-    [Test Source:<br/>Paramet&shy;ricism](https://en.wikipedia.org/wiki/Parametricism)
+[Test Source:<br/>Paramet&shy;ricism](#)
 /::
 
 Use `.links-sidebar` to float links off to the right. Put the sidebar content before the content it should be next too.
