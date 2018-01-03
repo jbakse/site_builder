@@ -137,3 +137,4 @@
 - Shifman other book?
 - Getting Started with Processing
 - Getting Started with p5
+https://thebookofshaders.com/11/

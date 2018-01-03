@@ -10,29 +10,69 @@ previous: Strategies
 previous_url: ../strategies
 
 hero_title: Noise
-description: Make Some Noise
+description: Noise is better than random.
 software: p5.js
 
 ---
 
-[[ initial port ]]
-[[ needs top level arrangement ]]
-[[ needs some additional content, notes below ]]
-[[ needs in class challenge ]]
-
-[[ show noise in photoshop! ]]
 
 
 
 ## Noise
 
-[[start with a different image, maybe a grid of squares that look the same, and rewrite about adding varience]
+Random values are extremely common and important in procedural generation. They are also hard to work with. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly distributed values. If we want *related* or *repeatable* random values we have to do extra work.
 
-![blue square](images/square.png){scale full-width}
+Noise functions are often a better source of random values. 
 
-Consider the code you would write to draw a colored square. Your code would require several values: horizontal position, vertical position, width, height, the RGB values.
+There are several common noise functions, each with different characteristics. The most widely known noise function is probably [Perlin noise](https://en.wikipedia.org/wiki/Perlin_noise), developed by Ken Perlin while working on visual effects for the amazing 1982 motion picture [*Tron*](http://www.imdb.com/title/tt0084827/). Ken later developed a similar and faster version called [simplex noise](https://en.wikipedia.org/wiki/Simplex_noise). Other noise functions include [Worley noise](https://en.wikipedia.org/wiki/Worley_noise), developed by Steven Worley, and the simpler [value noise](https://en.wikipedia.org/wiki/Value_noise).
 
-Where do those values come from?
+
+::: .three-up
+
+![Perlin Noise](https://upload.wikimedia.org/wikipedia/commons/d/da/Perlin_noise.jpg)
+Perlin Noise{figure}
+
+![Worely Noise](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Worley.jpg/400px-Worley.jpg)
+Worely Noise{figure}
+
+![Value Noise](https://upload.wikimedia.org/wikipedia/commons/b/bc/Value_noise_2D.png)
+Value Noise{figure}
+
+/::
+
+
+Noise functions provide a "cloud" of random values that can be used in a wide variety of ways. Noise functions are very frequently used in procedural texture generation and terrain generation. More generally, noise functions can be thought of as a lookup-table of pre-generated random values and used in place of `random()` in many cases.
+
+
+::: slides .!short .cover
+@@include('./slides.yaml')
+/::
+
+
+
+
+<!-- ::: .discussion
+
+# Blue Squares
+
+
+
+/:: -->
+
+
+## Using Noise
+
+::: .callout
+![blue square](figures/grid.svg){scale}
+/::
+
+Consider the code you would write to draw the blue squares above. You need to provide several values for each square: horizontal position, vertical position, width, height, and color.
+
+Where do those values come from? They could come from a few places.
+
+
+
+
 
 Source          | Purpose
 ---             | ---
@@ -41,14 +81,8 @@ Parameters      | You want to be able to control the value from a larger context
 `random()`      | You want random variation.
 `noise(x)`      | You want controlled variation.
 
-[[make a section about Random vs Varied, and how you shouldn't immediately reach for random when you want variation, and how noise is often better than random, really, a lot.]]
+Now suppose we wanted to add variation to the size of the squares. Both `random()` and `noise()` would allow us to do that, but `noise()` provides much more control. With `random()` the sizes of the boxes won't be related at all. With `noise()` we can control how quickly the size changes horizontally, vertically, and over time. If we sample a small area of the noise function the variation will be subtle and gradual. If our samples are far apart the variation will be be drastic and unpredictable and look a lot like `random()`.
 
-[[Make Combinations its own section, mixing approaches is powerful.]]
-
-Often you use these in combination:
-`width = 100 + random(-10, 10);`
-
-Using `random()` is a good way to add variation to a value. The `noise(x)` can often offer variation with greater control and consistency.
 
 ### Random()
 
@@ -65,8 +99,15 @@ Using `random()` is a good way to add variation to a value. The `noise(x)` can o
 /::
 
 
-[[these example need discussion, point out the critical differences]]
-[[these examples don't need the code to show, and need better presentation of the DOM UI]]
+Consider the two examples above, one uses `random()` and one uses `noise()`.
+
+random()                        | noise()
+---                             | ---
+Its easy to control the range of values provided by `random()`.             | It is also easy with `noise()`.
+The values provided by `random()` are independent an unrelated. The circles change size at high frequency and with no transition.        | The values provided by `noise()` are arranged spatially. The frequency of size changes is more easily controlled.
+Achieving repeatable results with `randomSeed()` applies globally. You can have to freeze the big circle and the circle line together. | Achieving repeatable results with `noise()` is more flexible. You can freeze the circle line without changing the behavior of the big circle.
+good        | great
+
 
 
 
@@ -74,27 +115,23 @@ Using `random()` is a good way to add variation to a value. The `noise(x)` can o
 
 ## Benefits of Noise
 
-### Noise is Coherent
-The `noise(x)` function returns values sampled from Perlin Noise. Perlin Noise provides random values that are aesthetically arranged ([band limited and visually isotropic](https://developer.nvidia.com/gpugems/GPUGems/gpugems_ch05.html)) in space. These values are a useful basis for many applications that require natural-feeling variation.
+### Noise Looks Good
+The `noise(x)` function returns values sampled from Perlin Noise. Perlin Noise provides random values that are aesthetically arranged. The variation in perlin noise is band limited—its variation is even, with out flat or noisy areas—and visually isotropic—it looks the same at different rotations. These characteristics make it a useful basis for many applications that require natural-feeling variation.
 
-[[needs an english translation "noise that looks good", probably drop the term coherent, as I can't find a good cite for this sense of the word]
 
 ### Noise is Repeatable
-Repeated variation is easy with `noise(x)`: every time you call `noise(x)` with a particular argument, you get the same value back. This is often very useful. For example, in an animation you often need variation to be consistent from frame to frame.
+Repeated variation is easy with `noise(x)`: every time you call `noise(x)` with a particular argument, you get the same value back. This is often very useful. For example, in an animation you often need a value to stay the same from frame to frame.
 
 - `random()` requires no arguments and returns a different random value every time
 - `noise(x)` requires an argument and returns the same random value _for that argument_ every time
 
 This difference is a core reason why `noise(x)` is so useful. This difference takes some getting used to, and learning what to pass in for `x` takes some practice.
 
-[[make it clear that you don't have to get repeats, because you can change your _inputs_ to get different _outputs_. if you want the values to change over time, you can make time part of the input]]
-
-
 ### Noise is Controllable
 By controlling what you pass to `noise(x)`, you can control the frequency of the values returned. This can be used to control how quickly values vary in space and time. Like `random()` values, you can scale and shift the values from `noise(x)` to the range you need. You can also adjust the character of `noise(x)` using `noiseDetail()`.
 
 
-[[make it clear that you can't control frequency with random, well not without post filtering]]
+
 
 ### 1D Noise Example
 ::: js-lab
@@ -115,24 +152,16 @@ How does the `noise(x)` function work? Explore the underlying concepts by buildi
 ### 1D, 2D, + 3D Noise
 
 `noise(x)`
-![noise_1d](images/noise_1d.png)
+![noise_1d](figures/noise_1d.png)
 
 `noise(x, y)`
-![noise_2d](images/noise_2d.png)
+![noise_2d](figures/noise_2d.png)
 
 `noise(x, y, z)`
-![noise_3d](images/noise_3d.png)
-
-[[something about patents! something about other noise funcitons!]]
+![noise_3d](figures/noise_3d.png)
 
 
-### Qualities of Noise
-- Smoothing
-- Layering/Octaves/Detail
-- Frequency
-- Dimensions
 
-[[this needs some support copy]]
 
 
 
@@ -142,9 +171,11 @@ How does the `noise(x)` function work? Explore the underlying concepts by buildi
 
 ### Calling the Noise Function
 
-The `noise()` funciton takes up to three parameters: `noise(x,y,z)` allowing you to request values arranged in a three dimensional "cloud" of psuedo-random values.
+The `noise()` function takes up to three parameters: `noise(x,y,z)` allowing you to request values arranged in a three dimensional "cloud" of pseudo-random values.
 
-When you call `noise(x)` you have to pass in at least one coordinate. This represents the location of the value to return. Choose your coordinates based on how you want the value to vary. You can pass in `frameCount` or `millis()` to get values that change over time. You can pass in XYZ coordinates to get values that change over space.
+When you call `noise(x)` you have to pass in at least one parameter. This parameter specifies the location in the cloud of the value to return. You can think about `noise(x)` as a lookup-table: `noise(1)` provides one value in the table and `noise(2)` provides another. 
+
+Choosing appropriate parameter values takes some getting used to. You can pass in `frameCount` or `millis()` to get values that change over time. You can pass in XYZ coordinates to get values that change over space. These are very common cases, but really you can pass values from any range into `noise()` and it will provide random values in return.
 
 
 ### Controlling the Frequency
@@ -154,16 +185,16 @@ You can control the frequency of returned values by scaling the values you pass 
 // get a value that changes over time
 n = noise(frameCount); 
 
-// get a value that changes over time slowly
+// get a value that changes over time more slowly
 n = noise(frameCount * .1); 
 
-// get a value that changes over time quickly
+// get a value that changes over time more quickly
 n = noise(frameCount * 10); 
 
 ```
 
 ### Controlling the Amplitude and Range
-The `noise(x)` function returns values in the range of 0 to 1. Use multiplication and addition to shift this range to the range you need.
+The `noise(x)` function returns values in the range of 0 to 1. Use multiplication and addition to shift this range to the range you need. Be aware that while `random()` provides evenly distributed values, `noise()` values are biased towards the middle.
 
 ```javascript
 // scale values to sit between 10 and 20;
@@ -215,11 +246,6 @@ By default, every time you restart your sketch the noise pattern will be differe
 
 [[ in class challenges ]]
 
-##  Slides
-
-::: slides .!short .cover
-@@include('./slides.yaml')
-/::
 
 
 ::: .assignment

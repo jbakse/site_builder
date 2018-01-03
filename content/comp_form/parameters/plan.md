@@ -32,6 +32,17 @@ Time    | ESA           | Activity
 5:30    | Study         | Globals and Sliders Lecture
 6:00    | Activate      | In-class Challenges
 
+::: .assignment
+
+### Special Assignment
+Later in this class I will ask you to create special sketches using equipment available to you through The New School. If you haven’t used the following equipment before, you should sign up for orientations. Be ready to use this equipment by the sixth week of classes.
+
+- Laser Cutter
+- 3D Printers
+- Large Format Printers/Plotters
+- CNC Mills (optional)
+
+/::
 
 ### Class Notes
 ::: .links

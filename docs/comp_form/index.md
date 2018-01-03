@@ -39,6 +39,13 @@ p5.js
 
 </a>
 
+<a class="col-6 col-md-4" data-ready="true" href="./random">
+
+### Random Values
+p5.js
+
+</a>
+
 
 <a class="col-6 col-md-4" href="./parameters">
 
@@ -48,12 +55,7 @@ p5.js
 </a>
 
 
-<a class="col-6 col-md-4" data-ready="true" href="./random">
 
-### Random Values
-p5.js
-
-</a>
 
 
 <a class="col-6 col-md-4" data-ready="true" href="./noise">

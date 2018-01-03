@@ -1,13 +1,14 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Random | Comp Form</title></head><body class="comp-form"><a href="/comp_form/"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div></a><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Topic 4: Random Values</span><div class="buttons"><a class="previous" href="../parameters"><i class="fa fa-caret-left fa-lg"></i>Parameters</a><a class="next" href="../noise">Noise<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Random Values</h1><h6>Overview</h6><p class="description">Randomness occurs frequently in nature. Gaining control over its generation is therefore paramount to achieving natural-appearing procedural graphics.</p><h6>Tools</h6><p class="software">p5.js + p5.dom</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><p>[[the above section Talia fabricated, it wasn’t on the original. It may require revisiting]]</p>
-<p>[[ this page only has the first 70% ported]]</p>
-<h2 id="procedurally-generated-images">Procedurally Generated Images</h2>
-<h4 id="consider">Consider:</h4>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Random | Comp Form</title></head><body class="comp-form"><a href="/comp_form/"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div></a><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Topic 4: Random Values</span><div class="buttons"><a class="previous" href="../parameters"><i class="fa fa-caret-left fa-lg"></i>Parameters</a><a class="next" href="../noise">Noise<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Random Values</h1><h6>Overview</h6><p class="description">Procedural Generation systems often employ random values their main source of variety. Understanding how to generate, bias, and map random values is key to controlling the aesthetics of their output.</p><h6>Tools</h6><p class="software">p5.js + p5.dom</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="random-values">Random Values</h2>
+<p>We use the word <em>random</em> to mean a variety of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety.</p>
+<p>Artists began working with randomness and chance long before the invention of computers. These artists must decide how much control of the final piece to maintain, and what aspects of each piece to leave to chance.</p>
+<p>The long-titled, 18th century composition <em>Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition</em>, <a href="https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel">which may have been written</a> by Mozart uses chance to select and sequence pre-composed musical phrases. By placing rules on selection and ordering of the phrases, the system ensures that each variation makes musical sense.</p>
+<p>Consider the works below:</p>
 <ul>
 <li>Which aspects of each work were influenced by chance?</li>
 <li>Which aspects were controlled by the artist?</li>
 </ul>
 <div id="" class="!short slides-wrap slideInfos">
-<div id="carousel-207" class="carousel slide" data-ride="carousel">
+<div id="carousel-839" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner slides" role="listbox">
 <div class="carousel-item active">
 <div class="slide">
@@ -21,6 +22,40 @@
 <div class="comments"></div>
 </div>
 <div class="slide-info-bottom">
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="https://www.moma.org/media/W1siZiIsIjEzODY0NSJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=21b081fc5058286d" alt="3 Standard Stoppages — 1913">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Marcel Duchamp</div>
+<div class="title">3 Standard Stoppages — 1913</div>
+<div class="comments"></div>
+</div>
+<div class="slide-info-bottom">
+<a href="https://www.moma.org/collection/works/78990">Moma: 3 Standard Stoppages</a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item ">
+<div class="slide">
+<div class="slide-image">
+<img class="d-block" src="https://upload.wikimedia.org/wikipedia/commons/1/17/Rogue_Screen_Shot_CAR.PNG" alt="Rouge - 1980">
+</div>
+<div class="slide-info">
+<div class="slide-info-middle">
+<div class="artist">Micheal Toy and Glenn Wichman</div>
+<div class="title">Rouge - 1980</div>
+<div class="comments"><i>Rouge</i> was an genre-inspiring fantasy game with procedurally generated dungeons.</div>
+</div>
+<div class="slide-info-bottom">
+<a href="https://en.wikipedia.org/wiki/Rogue_(video_game)">Wikipedia: Rogue</a><a href="https://en.wikipedia.org/wiki/Roguelike">Wikipedia: Roguelike</a>
 </div>
 </div>
 </div>
@@ -59,77 +94,9 @@
 </div>
 </div>
 </div>
-<div class="carousel-item ">
-<div class="slide">
-<div class="slide-image">
-<img class="d-block" src="./slides/praystation_2.png" alt="Misc, 2">
-</div>
-<div class="slide-info">
-<div class="slide-info-middle">
-<div class="artist">Joshua Davis (Praystation)</div>
-<div class="title">Misc, 2</div>
-<div class="comments"></div>
-</div>
-<div class="slide-info-bottom">
-<a href="https://joshuadavis.com/">Artist's Site</a>
-</div>
-</div>
-</div>
-</div>
-<div class="carousel-item ">
-<div class="slide">
-<div class="slide-image">
-<img class="d-block" src="./slides/modulator.png" alt="modulator">
-</div>
-<div class="slide-info">
-<div class="slide-info-middle">
-<div class="artist">mataflop</div>
-<div class="title">modulator</div>
-<div class="comments"></div>
-</div>
-<div class="slide-info-bottom">
-<a href="http://www.metaflop.com/modulator/font/pQkUOJOPk8">modulator</a>
-</div>
-</div>
-</div>
-</div>
-<div class="carousel-item ">
-<div class="slide">
-<div class="slide-image">
-<img class="d-block" src="./slides/gregfont.png" alt="Gregfont">
-</div>
-<div class="slide-info">
-<div class="slide-info-middle">
-<div class="artist">Greg Schomburg</div>
-<div class="title">Gregfont</div>
-<div class="comments"></div>
-</div>
-<div class="slide-info-bottom">
-<a href="http://gregschomburg.com/gregfont/">Gregfont</a>
-</div>
-</div>
-</div>
-</div>
-<div class="carousel-item ">
-<div class="slide">
-<div class="slide-image">
-<img class="d-block" src="./slides/elsy.png" alt="elsy">
-</div>
-<div class="slide-info">
-<div class="slide-info-middle">
-<div class="artist">Plastaq Software</div>
-<div class="title">elsy</div>
-<div class="comments"></div>
-</div>
-<div class="slide-info-bottom">
-<a href="http://www.plastaq.com/elsy/">elsy</a>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="slide-info-top">
-<a class="carousel-control-prev" href="#carousel-207" role="button" data-slide="prev">
+<a class="carousel-control-prev" href="#carousel-839" role="button" data-slide="prev">
 <span class="carousel-prev-icon">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs></defs>
@@ -140,7 +107,7 @@
 </span>
 <span class="sr-only">Previous</span>
 </a>
-<a class="carousel-control-next" href="#carousel-207" role="button" data-slide="next">
+<a class="carousel-control-next" href="#carousel-839" role="button" data-slide="next">
 <span class="carousel-next-icon-tc">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs></defs>
@@ -154,9 +121,8 @@
 </div>
 </div>
 </div>
-<p>[[ move this into a p5 chapter? maybe not. maybe make a p5 chapter, keep this, and add a link to chapter also?]]
-[[ link to p5? ]]</p>
 <h2 id="the-methodical-application-of-chance">The Methodical Application of Chance</h2>
+<p>Using random values in your procedural system doesn’t mean your results must be haphazard, uncontrolled, or unorganized. While individual random values are unpredictable, you can use these values to create a coherent cumulative effect.</p>
 <div id="" class="activity">
 <h2 id="2d6-vs-1d12-chart">2d6 vs 1d12 Chart</h2>
 <p>Compare the outcomes of rolling 2 6-sided dice to rolling 1 12-sided die.</p>
@@ -291,7 +257,7 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 <p><a href="http://anydice.com/">Anydice Dice Calculator</a></p>
 <p><a href="http://anydice.com/articles/three-basic-distributions/">Anydice: Three Basic Distributions</a></p>
 <p><a href="https://www.redblobgames.com/articles/probability/damage-rolls.html">Redblob: Damage Rolls</a></p>
-<h2 id="dice-vs-decks">Dice vs. Decks</h2>
+<h3 id="dice-vs-decks">Dice vs. Decks</h3>
 <p>When you roll a <strong>die</strong>, you get <strong>random values</strong>. You <strong>might get the same value more than once</strong>, and it <strong>might take a long time to get a particular value</strong>.</p>
 <p>If you roll a normal die six times, it is unlikely—<em>about a 1.5% chance</em>—that you’ll get all six values without repeats. You have a pretty good chance—<em>about 33%</em>–of not rolling any 1s. You can be pretty sure—<em>98.5% sure</em>—that at least one number won’t appear in six rolls.</p>
 <p>A <strong>deck of cards</strong> works differently. When you pull cards from deck, you don’t get random values. You get <strong>values in a random order</strong>. You avoid duplicates, and you know you will have toured all the values when you reach the end of the deck.</p>
@@ -347,7 +313,7 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
     <span class="hljs-keyword">return</span> v;
 }
 </code></pre>
-<h2 id="random-choices">Random Choices</h2>
+<h3 id="random-choices">Random Choices</h3>
 <p>If you want your code to make a decision at random, you can combine <code>random()</code> with a conditional—<code>if</code>—statement.</p>
 <pre><code class="language-javascript"><span class="hljs-comment">// do something only half the time</span>
 <span class="hljs-keyword">if</span> (random() &lt; <span class="hljs-number">.5</span>) {

@@ -221,6 +221,7 @@
   /* dl */
   /* hr */
   /* links */
+  /* tables */
   /* images */ }
   .comp-form-copy > h2 {
     font-family: "Miriam Libre";
@@ -364,6 +365,10 @@
     text-decoration: none; }
   .comp-form-copy a:hover {
     background-color: #F4F3F1; }
+  .comp-form-copy .table {
+    font-size: .85em; }
+  .comp-form-copy .table th {
+    border-top: none; }
   .comp-form-copy img {
     display: block;
     max-width: 100%;
@@ -383,15 +388,27 @@
     float: left; }
   .comp-form-copy .two-up img:nth-child(2n - 1) {
     margin-right: 10px; }
-  .comp-form-copy .three-up:after {
-    content: "";
-    display: table;
-    clear: both; }
+  .comp-form-copy .three-up {
+    margin-top: 1em; }
+    .comp-form-copy .three-up:after {
+      content: "";
+      display: table;
+      clear: both; }
   .comp-form-copy .three-up img {
     width: calc((100% - 20px) / 3);
     float: left; }
   .comp-form-copy .three-up img:nth-child(3n - 2),
   .comp-form-copy .three-up img:nth-child(3n - 1) {
+    margin-right: 10px; }
+  .comp-form-copy .three-up .figure {
+    width: calc((100% - 20px) / 3);
+    float: left;
+    font-size: .75em; }
+    .comp-form-copy .three-up .figure img {
+      width: 100%;
+      margin-bottom: 0; }
+  .comp-form-copy .three-up .figure:nth-child(3n - 2),
+  .comp-form-copy .three-up .figure:nth-child(3n - 1) {
     margin-right: 10px; }
 
 .comp-form-copy {

@@ -1,168 +1,18 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Noise | Comp Form</title></head><body class="comp-form"><a href="/comp_form/"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div></a><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Noise</span><div class="buttons"><a class="previous" href="../strategies"><i class="fa fa-caret-left fa-lg"></i>Strategies</a><a class="next" href="../random">Random Values<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Noise</h1><h6>Overview</h6><p class="description">Make Some Noise</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><p>[[ initial port ]]
-[[ needs top level arrangement ]]
-[[ needs some additional content, notes below ]]
-[[ needs in class challenge ]]</p>
-<p>[[ show noise in photoshop! ]]</p>
-<h2 id="noise">Noise</h2>
-<p>[[start with a different image, maybe a grid of squares that look the same, and rewrite about adding varience]</p>
-<p class="scale full-width"><img src="images/square.png" alt="blue square"></p>
-<p>Consider the code you would write to draw a colored square. Your code would require several values: horizontal position, vertical position, width, height, the RGB values.</p>
-<p>Where do those values come from?</p>
-<table class="table table-responsive">
-<thead>
-<tr>
-<th>Source</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Hard Coded</td>
-<td>You want specific control of the value.</td>
-</tr>
-<tr>
-<td>Parameters</td>
-<td>You want to be able to control the value from a larger context.</td>
-</tr>
-<tr>
-<td><code>random()</code></td>
-<td>You want random variation.</td>
-</tr>
-<tr>
-<td><code>noise(x)</code></td>
-<td>You want controlled variation.</td>
-</tr>
-</tbody>
-</table>
-<p>[[make a section about Random vs Varied, and how you shouldn’t immediately reach for random when you want variation, and how noise is often better than random, really, a lot.]]</p>
-<p>[[Make Combinations its own section, mixing approaches is powerful.]]</p>
-<p>Often you use these in combination:
-<code>width = 100 + random(-10, 10);</code></p>
-<p>Using <code>random()</code> is a good way to add variation to a value. The <code>noise(x)</code> can often offer variation with greater control and consistency.</p>
-<h3 id="random">Random()</h3>
-<div id="" class="">
-<div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/sketch_random/sketch.js">
-</iframe>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Noise | Comp Form</title></head><body class="comp-form"><a href="/comp_form/"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div></a><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Noise</span><div class="buttons"><a class="previous" href="../strategies"><i class="fa fa-caret-left fa-lg"></i>Strategies</a><a class="next" href="../random">Random Values<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Noise</h1><h6>Overview</h6><p class="description">Noise is better than random.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="noise">Noise</h2>
+<p>Random values are extremely common and important in procedural generation. They are also hard to work with. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly distributed values. If we want <em>related</em> or <em>repeatable</em> random values we have to do extra work.</p>
+<p>Noise functions are often a better source of random values.</p>
+<p>There are several common noise functions, each with different characteristics. The most widely known noise function is probably <a href="https://en.wikipedia.org/wiki/Perlin_noise">Perlin noise</a>, developed by Ken Perlin while working on visual effects for the amazing 1982 motion picture <a href="http://www.imdb.com/title/tt0084827/"><em>Tron</em></a>. Ken later developed a similar and faster version called <a href="https://en.wikipedia.org/wiki/Simplex_noise">simplex noise</a>. Other noise functions include <a href="https://en.wikipedia.org/wiki/Worley_noise">Worley noise</a>, developed by Steven Worley, and the simpler <a href="https://en.wikipedia.org/wiki/Value_noise">value noise</a>.</p>
+<div id="" class="three-up">
+<p class="figure"><img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Perlin_noise.jpg" alt="Perlin Noise">
+Perlin Noise</p>
+<p class="figure"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Worley.jpg/400px-Worley.jpg" alt="Worely Noise">
+Worely Noise</p>
+<p class="figure"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Value_noise_2D.png" alt="Value Noise">
+Value Noise</p>
 </div>
-</div>
-<h3 id="noisex">Noise(x)</h3>
-<div id="" class="">
-<div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/sketch_noise/sketch.js">
-</iframe>
-</div>
-</div>
-<p>[[these example need discussion, point out the critical differences]]
-[[these examples don’t need the code to show, and need better presentation of the DOM UI]]</p>
-<h2 id="benefits-of-noise">Benefits of Noise</h2>
-<h3 id="noise-is-coherent">Noise is Coherent</h3>
-<p>The <code>noise(x)</code> function returns values sampled from Perlin Noise. Perlin Noise provides random values that are aesthetically arranged (<a href="https://developer.nvidia.com/gpugems/GPUGems/gpugems_ch05.html">band limited and visually isotropic</a>) in space. These values are a useful basis for many applications that require natural-feeling variation.</p>
-<p>[[needs an english translation “noise that looks good”, probably drop the term coherent, as I can’t find a good cite for this sense of the word]</p>
-<h3 id="noise-is-repeatable">Noise is Repeatable</h3>
-<p>Repeated variation is easy with <code>noise(x)</code>: every time you call <code>noise(x)</code> with a particular argument, you get the same value back. This is often very useful. For example, in an animation you often need variation to be consistent from frame to frame.</p>
-<ul>
-<li><code>random()</code> requires no arguments and returns a different random value every time</li>
-<li><code>noise(x)</code> requires an argument and returns the same random value <em>for that argument</em> every time</li>
-</ul>
-<p>This difference is a core reason why <code>noise(x)</code> is so useful. This difference takes some getting used to, and learning what to pass in for <code>x</code> takes some practice.</p>
-<p>[[make it clear that you don’t have to get repeats, because you can change your <em>inputs</em> to get different <em>outputs</em>. if you want the values to change over time, you can make time part of the input]]</p>
-<h3 id="noise-is-controllable">Noise is Controllable</h3>
-<p>By controlling what you pass to <code>noise(x)</code>, you can control the frequency of the values returned. This can be used to control how quickly values vary in space and time. Like <code>random()</code> values, you can scale and shift the values from <code>noise(x)</code> to the range you need. You can also adjust the character of <code>noise(x)</code> using <code>noiseDetail()</code>.</p>
-<p>[[make it clear that you can’t control frequency with random, well not without post filtering]]</p>
-<h3 id="1d-noise-example">1D Noise Example</h3>
-<div id="" class="">
-<div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/sketch_1D_noise/sketch.js">
-</iframe>
-</div>
-</div>
-<div id="" class="activity">
-<h2 id="building-1d-noise">Building 1D Noise</h2>
-<p>How does the <code>noise(x)</code> function work? Explore the underlying concepts by building a simplified noise function with pencil and paper.</p>
-<ul>
-<li>Review the Linear Congruential Generator worksheet.</li>
-<li>Complete the Linear Congruential Generator (Noise) worksheet.</li>
-<li>Graph the results on the 1D Noise Worksheet.</li>
-</ul>
-<p>[[add worksheet downloads]]</p>
-</div>
-<h3 id="1d-2d-3d-noise">1D, 2D, + 3D Noise</h3>
-<p><code>noise(x)</code>
-<img src="images/noise_1d.png" alt="noise_1d"></p>
-<p><code>noise(x, y)</code>
-<img src="images/noise_2d.png" alt="noise_2d"></p>
-<p><code>noise(x, y, z)</code>
-<img src="images/noise_3d.png" alt="noise_3d"></p>
-<p>[[something about patents! something about other noise funcitons!]]</p>
-<h3 id="qualities-of-noise">Qualities of Noise</h3>
-<ul>
-<li>Smoothing</li>
-<li>Layering/Octaves/Detail</li>
-<li>Frequency</li>
-<li>Dimensions</li>
-</ul>
-<p>[[this needs some support copy]]</p>
-<h2 id="working-with-noise">Working with Noise</h2>
-<h3 id="calling-the-noise-function">Calling the Noise Function</h3>
-<p>The <code>noise()</code> funciton takes up to three parameters: <code>noise(x,y,z)</code> allowing you to request values arranged in a three dimensional “cloud” of psuedo-random values.</p>
-<p>When you call <code>noise(x)</code> you have to pass in at least one coordinate. This represents the location of the value to return. Choose your coordinates based on how you want the value to vary. You can pass in <code>frameCount</code> or <code>millis()</code> to get values that change over time. You can pass in XYZ coordinates to get values that change over space.</p>
-<h3 id="controlling-the-frequency">Controlling the Frequency</h3>
-<p>You can control the frequency of returned values by scaling the values you pass in for <code>x</code>, <code>y</code>, and <code>z</code>.</p>
-<pre><code class="language-javascript"><span class="hljs-comment">// get a value that changes over time</span>
-n = noise(frameCount); 
-
-<span class="hljs-comment">// get a value that changes over time slowly</span>
-n = noise(frameCount * <span class="hljs-number">.1</span>); 
-
-<span class="hljs-comment">// get a value that changes over time quickly</span>
-n = noise(frameCount * <span class="hljs-number">10</span>); 
-
-</code></pre>
-<h3 id="controlling-the-amplitude-and-range">Controlling the Amplitude and Range</h3>
-<p>The <code>noise(x)</code> function returns values in the range of 0 to 1. Use multiplication and addition to shift this range to the range you need.</p>
-<pre><code class="language-javascript"><span class="hljs-comment">// scale values to sit between 10 and 20;</span>
-n = noise(frameCount) * <span class="hljs-number">10</span> + <span class="hljs-number">10</span>; 
-</code></pre>
-<p>You could also use <code>map()</code>:</p>
-<pre><code class="language-javascript"><span class="hljs-comment">// get values from 0 to 1</span>
-n = noise(frameCount); 
-<span class="hljs-comment">// map to 10 to 20</span>
-n = map(n, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>);  
-</code></pre>
-<h3 id="controlling-the-detail">Controlling the Detail</h3>
-<div id="" class="links-sidebar">
-<p><a href="https://p5js.org/reference/#/p5/noiseDetail">p5:<br/>noiseDetail()</a></p>
-</div>
-<p>The <code>noiseDetail()</code>  function allows you to control the “roughness” or “detail” of the noise returned.</p>
-<h3 id="controlling-the-seed">Controlling the Seed</h3>
-<div id="" class="links-sidebar">
-<p><a href="https://p5js.org/reference/#/p5/noiseSeed">p5:<br/>noiseSeed()</a></p>
-</div>
-<p>By default, every time you restart your sketch the noise pattern will be different. The <code>noiseSeed()</code> allows you to manually set the noise pattern seed.</p>
-<h2 id="study-examples">Study Examples</h2>
-<div id="" class="">
-<div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/study_2D.js">
-</iframe>
-</div>
-</div>
-<div id="" class="">
-<div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/grass.js">
-</iframe>
-</div>
-</div>
-<div id="" class="">
-<div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/skyline.js">
-</iframe>
-</div>
-</div>
-<p>[[ in class challenges ]]</p>
-<h2 id="slides">Slides</h2>
+<p>Noise functions provide a “cloud” of random values that can be used in a wide variety of ways. Noise functions are very frequently used in procedural texture generation and terrain generation. More generally, noise functions can be thought of as a lookup-table of pre-generated random values and used in place of <code>random()</code> in many cases.</p>
 <div id="" class="!short cover slides-wrap slideInfos">
-<div id="carousel-205" class="carousel slide" data-ride="carousel">
+<div id="carousel-837" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner slides" role="listbox">
 <div class="carousel-item active">
 <div class="slide">
@@ -285,7 +135,7 @@ n = map(n, <span class="hljs-number">0</span>, <span class="hljs-number">1</span
 </div>
 </div>
 <div class="slide-info-top">
-<a class="carousel-control-prev" href="#carousel-205" role="button" data-slide="prev">
+<a class="carousel-control-prev" href="#carousel-837" role="button" data-slide="prev">
 <span class="carousel-prev-icon">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs></defs>
@@ -296,7 +146,7 @@ n = map(n, <span class="hljs-number">0</span>, <span class="hljs-number">1</span
 </span>
 <span class="sr-only">Previous</span>
 </a>
-<a class="carousel-control-next" href="#carousel-205" role="button" data-slide="next">
+<a class="carousel-control-next" href="#carousel-837" role="button" data-slide="next">
 <span class="carousel-next-icon-tc">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs></defs>
@@ -310,6 +160,181 @@ n = map(n, <span class="hljs-number">0</span>, <span class="hljs-number">1</span
 </div>
 </div>
 </div>
+<!-- ::: .discussion
+
+# Blue Squares
+
+
+
+/:: -->
+<h2 id="using-noise">Using Noise</h2>
+<div id="" class="callout">
+<p class="scale"><img src="figures/grid.svg" alt="blue square"></p>
+</div>
+<p>Consider the code you would write to draw the blue squares above. You need to provide several values for each square: horizontal position, vertical position, width, height, and color.</p>
+<p>Where do those values come from? They could come from a few places.</p>
+<table class="table table-responsive">
+<thead>
+<tr>
+<th>Source</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hard Coded</td>
+<td>You want specific control of the value.</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>You want to be able to control the value from a larger context.</td>
+</tr>
+<tr>
+<td><code>random()</code></td>
+<td>You want random variation.</td>
+</tr>
+<tr>
+<td><code>noise(x)</code></td>
+<td>You want controlled variation.</td>
+</tr>
+</tbody>
+</table>
+<p>Now suppose we wanted to add variation to the size of the squares. Both <code>random()</code> and <code>noise()</code> would allow us to do that, but <code>noise()</code> provides much more control. With <code>random()</code> the sizes of the boxes won’t be related at all. With <code>noise()</code> we can control how quickly the size changes horizontally, vertically, and over time. If we sample a small area of the noise function the variation will be subtle and gradual. If our samples are far apart the variation will be be drastic and unpredictable and look a lot like <code>random()</code>.</p>
+<h3 id="random">Random()</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/sketch_random/sketch.js">
+</iframe>
+</div>
+</div>
+<h3 id="noisex">Noise(x)</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/sketch_noise/sketch.js">
+</iframe>
+</div>
+</div>
+<p>Consider the two examples above, one uses <code>random()</code> and one uses <code>noise()</code>.</p>
+<table class="table table-responsive">
+<thead>
+<tr>
+<th>random()</th>
+<th>noise()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Its easy to control the range of values provided by <code>random()</code>.</td>
+<td>It is also easy with <code>noise()</code>.</td>
+</tr>
+<tr>
+<td>The values provided by <code>random()</code> are independent an unrelated. The circles change size at high frequency and with no transition.</td>
+<td>The values provided by <code>noise()</code> are arranged spatially. The frequency of size changes is more easily controlled.</td>
+</tr>
+<tr>
+<td>Achieving repeatable results with <code>randomSeed()</code> applies globally. You can have to freeze the big circle and the circle line together.</td>
+<td>Achieving repeatable results with <code>noise()</code> is more flexible. You can freeze the circle line without changing the behavior of the big circle.</td>
+</tr>
+<tr>
+<td>good</td>
+<td>great</td>
+</tr>
+</tbody>
+</table>
+<h2 id="benefits-of-noise">Benefits of Noise</h2>
+<h3 id="noise-looks-good">Noise Looks Good</h3>
+<p>The <code>noise(x)</code> function returns values sampled from Perlin Noise. Perlin Noise provides random values that are aesthetically arranged. The variation in perlin noise is band limited—its variation is even, with out flat or noisy areas—and visually isotropic—it looks the same at different rotations. These characteristics make it a useful basis for many applications that require natural-feeling variation.</p>
+<h3 id="noise-is-repeatable">Noise is Repeatable</h3>
+<p>Repeated variation is easy with <code>noise(x)</code>: every time you call <code>noise(x)</code> with a particular argument, you get the same value back. This is often very useful. For example, in an animation you often need a value to stay the same from frame to frame.</p>
+<ul>
+<li><code>random()</code> requires no arguments and returns a different random value every time</li>
+<li><code>noise(x)</code> requires an argument and returns the same random value <em>for that argument</em> every time</li>
+</ul>
+<p>This difference is a core reason why <code>noise(x)</code> is so useful. This difference takes some getting used to, and learning what to pass in for <code>x</code> takes some practice.</p>
+<h3 id="noise-is-controllable">Noise is Controllable</h3>
+<p>By controlling what you pass to <code>noise(x)</code>, you can control the frequency of the values returned. This can be used to control how quickly values vary in space and time. Like <code>random()</code> values, you can scale and shift the values from <code>noise(x)</code> to the range you need. You can also adjust the character of <code>noise(x)</code> using <code>noiseDetail()</code>.</p>
+<h3 id="1d-noise-example">1D Noise Example</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/sketch_1D_noise/sketch.js">
+</iframe>
+</div>
+</div>
+<div id="" class="activity">
+<h2 id="building-1d-noise">Building 1D Noise</h2>
+<p>How does the <code>noise(x)</code> function work? Explore the underlying concepts by building a simplified noise function with pencil and paper.</p>
+<ul>
+<li>Review the Linear Congruential Generator worksheet.</li>
+<li>Complete the Linear Congruential Generator (Noise) worksheet.</li>
+<li>Graph the results on the 1D Noise Worksheet.</li>
+</ul>
+<p>[[add worksheet downloads]]</p>
+</div>
+<h3 id="1d-2d-3d-noise">1D, 2D, + 3D Noise</h3>
+<p><code>noise(x)</code>
+<img src="figures/noise_1d.png" alt="noise_1d"></p>
+<p><code>noise(x, y)</code>
+<img src="figures/noise_2d.png" alt="noise_2d"></p>
+<p><code>noise(x, y, z)</code>
+<img src="figures/noise_3d.png" alt="noise_3d"></p>
+<h2 id="working-with-noise">Working with Noise</h2>
+<h3 id="calling-the-noise-function">Calling the Noise Function</h3>
+<p>The <code>noise()</code> function takes up to three parameters: <code>noise(x,y,z)</code> allowing you to request values arranged in a three dimensional “cloud” of pseudo-random values.</p>
+<p>When you call <code>noise(x)</code> you have to pass in at least one parameter. This parameter specifies the location in the cloud of the value to return. You can think about <code>noise(x)</code> as a lookup-table: <code>noise(1)</code> provides one value in the table and <code>noise(2)</code> provides another.</p>
+<p>Choosing appropriate parameter values takes some getting used to. You can pass in <code>frameCount</code> or <code>millis()</code> to get values that change over time. You can pass in XYZ coordinates to get values that change over space. These are very common cases, but really you can pass values from any range into <code>noise()</code> and it will provide random values in return.</p>
+<h3 id="controlling-the-frequency">Controlling the Frequency</h3>
+<p>You can control the frequency of returned values by scaling the values you pass in for <code>x</code>, <code>y</code>, and <code>z</code>.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// get a value that changes over time</span>
+n = noise(frameCount); 
+
+<span class="hljs-comment">// get a value that changes over time more slowly</span>
+n = noise(frameCount * <span class="hljs-number">.1</span>); 
+
+<span class="hljs-comment">// get a value that changes over time more quickly</span>
+n = noise(frameCount * <span class="hljs-number">10</span>); 
+
+</code></pre>
+<h3 id="controlling-the-amplitude-and-range">Controlling the Amplitude and Range</h3>
+<p>The <code>noise(x)</code> function returns values in the range of 0 to 1. Use multiplication and addition to shift this range to the range you need. Be aware that while <code>random()</code> provides evenly distributed values, <code>noise()</code> values are biased towards the middle.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// scale values to sit between 10 and 20;</span>
+n = noise(frameCount) * <span class="hljs-number">10</span> + <span class="hljs-number">10</span>; 
+</code></pre>
+<p>You could also use <code>map()</code>:</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// get values from 0 to 1</span>
+n = noise(frameCount); 
+<span class="hljs-comment">// map to 10 to 20</span>
+n = map(n, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>);  
+</code></pre>
+<h3 id="controlling-the-detail">Controlling the Detail</h3>
+<div id="" class="links-sidebar">
+<p><a href="https://p5js.org/reference/#/p5/noiseDetail">p5:<br/>noiseDetail()</a></p>
+</div>
+<p>The <code>noiseDetail()</code>  function allows you to control the “roughness” or “detail” of the noise returned.</p>
+<h3 id="controlling-the-seed">Controlling the Seed</h3>
+<div id="" class="links-sidebar">
+<p><a href="https://p5js.org/reference/#/p5/noiseSeed">p5:<br/>noiseSeed()</a></p>
+</div>
+<p>By default, every time you restart your sketch the noise pattern will be different. The <code>noiseSeed()</code> allows you to manually set the noise pattern seed.</p>
+<h2 id="study-examples">Study Examples</h2>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/study_2D.js">
+</iframe>
+</div>
+</div>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/grass.js">
+</iframe>
+</div>
+</div>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/noise/sketches/skyline.js">
+</iframe>
+</div>
+</div>
+<p>[[ in class challenges ]]</p>
 <div id="" class="assignment">
 <h2 id="keep-sketching">Keep Sketching!</h2>
 <h3 id="base">Base</h3>

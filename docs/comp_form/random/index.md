@@ -10,20 +10,21 @@ previous: Parameters
 previous_url: ../parameters
 
 hero_title: Random Values
-description: Randomness occurs frequently in nature. Gaining control over its generation is therefore paramount to achieving natural-appearing procedural graphics.
+description: Procedural Generation systems often employ random values their main source of variety. Understanding how to generate, bias, and map random values is key to controlling the aesthetics of their output.
 software: p5.js + p5.dom
 ---
 
+## Random Values
+
+We use the word *random* to mean a variety of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety. 
+
+Artists began working with randomness and chance long before the invention of computers. These artists must decide how much control of the final piece to maintain, and what aspects of each piece to leave to chance. 
+
+The long-titled, 18th century composition *Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition*, [which may have been written](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) by Mozart uses chance to select and sequence pre-composed musical phrases. By placing rules on selection and ordering of the phrases, the system ensures that each variation makes musical sense.
 
 
-[[the above section Talia fabricated, it wasn't on the original. It may require revisiting]]
+Consider the works below:
 
-[[ this page only has the first 70% ported]]
-
-
-## Procedurally Generated Images
-
-#### Consider:
 - Which aspects of each work were influenced by chance?
 - Which aspects were controlled by the artist?
 
@@ -32,11 +33,10 @@ software: p5.js + p5.dom
 /::
 
 
-[[ move this into a p5 chapter? maybe not. maybe make a p5 chapter, keep this, and add a link to chapter also?]]
-[[ link to p5? ]]
-
 
 ## The Methodical Application of Chance
+
+Using random values in your procedural system doesn't mean your results must be haphazard, uncontrolled, or unorganized. While individual random values are unpredictable, you can use these values to create a coherent cumulative effect.
 
 ::: .activity
 ## 2d6 vs 1d12 Chart
@@ -255,7 +255,7 @@ If you generate several random numbers and average them, the result gets close t
 [Redblob: Damage Rolls](https://www.redblobgames.com/articles/probability/damage-rolls.html)
 
 
-## Dice vs. Decks
+### Dice vs. Decks
 
 When you roll a **die**, you get **random values**. You **might get the same value more than once**, and it **might take a long time to get a particular value**.
 
@@ -320,7 +320,7 @@ function valueFromDeck() {
 
 
 
-## Random Choices
+### Random Choices
 
 If you want your code to make a decision at random, you can combine `random()` with a conditional—`if`—statement.
 

@@ -33,11 +33,11 @@ One of the most powerful and rewarding aspects of writing a procedural generatio
 Procedural generators can provide enormous creative leverage, allowing expressive artistic control while automating much of the work. This control is afforded by exposing **parameters**. Parameters are adjustable values that influence the internal behavior of a system. Chaning the parameters 
 
 
-::: .activity
+::: .discussion
 ## The Blue Square
 Imagine a program that draws squares like the one below. What parameters might such a program accept?
 
-![A Blue Square](./blue-square.png "A Blue Square"){scale full-width}
+![A Blue Square](./figures/blue-square.png "A Blue Square"){scale full-width}
 /::
 
 
@@ -51,9 +51,12 @@ Imagine a program that draws squares like the one below. What parameters might s
 [Wikipedia:<br/>Combinatorial Explosion](https://en.wikipedia.org/wiki/Combinatorial_explosion)
 /::
 
-A **parameter space** is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (true/false) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. This rapid growth is refered to as **Combinatorial Explosion**.
+A **parameter space** is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (true/false) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. This rapid growth is referred to as **Combinatorial Explosion**.
 
 When changes to input parameters map to interesting changes in output, combinatorial explosion drives the power of procedural systems. Consider a program that generates faces by choosing from 4 options for each of these traits: hair style, hair color, eye color, eye shape, nose shape, mouth shape, face shape, and skin tone. Such a system can generate `4^8` or `65,536` distinct faces. If the system supported two more similar traits that number of outputs grows to `1,048,576`!
+
+### Samey-ness
+Combinatorial explosion does not guarantee variety.
 
 Sometimes different parameter values have minimal impact on the final output. When this happens a system's output can feel monotonous, uninteresting, and "samey". A system that takes just two floating point parameters has `18,446,744,073,709,551,616` (18.4 Quintillion!) states. This is an inconceivably large number, but it is quite likely that many of those states would look very similar.
 
@@ -73,7 +76,7 @@ An interesting aspect of parametric designs is that they explicity embed **desig
 
 
 
-### Benefits
+### Benefits of Parameterization
 
 ::: .links-sidebar
 [Wikipedia:<br/>Hard-Coding](https://en.wikipedia.org/wiki/Hard_coding)
@@ -89,20 +92,21 @@ It is almost always worth taking time to indentify useful parameters in your cod
 [Wikipedia:<br/>Magic Number](https://en.wikipedia.org/wiki/Magic_number_(programming))
 /::
 
-Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that becomes increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. **Exposing parameters helps to organize the code by seperating configuration and implementation.** It also makes the code **easier to read and reason about** by changing [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)) into named values that better explain their purpose. Exposing parameters isn't always about creating an end-user GUI. Exposing parameters as arguments to well-factored functions can make your code much easier to read, expand, and maintain.
+Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that becomes increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. **Exposing parameters helps to organize the code by separating configuration and implementation.** It also makes the code **easier to read and reason about** by changing [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)) into named values that better explain their purpose. Exposing parameters isn't always about creating an end-user GUI. Exposing parameters as arguments to well-factored functions can make your code much easier to read, expand, and maintain.
 
 #### Better User Experience
 
-Exploring the parameter space of a system by tweaking hard-coded values doesn't work very well. Tweaking hard-coded values is slow—the project has to be re-built and re-run after each change—which discurages exploration. Also, a slow feedback cycle makes it harder to understand the effects of each change. Tweaking hard-coded values in the code is also unclear and error-prone. Which values should you change for particular effects? Do you need to change the value in multiple places? Will chaning a particular value just break things? 
+Exploring the parameter space of a system by tweaking hard-coded values doesn't work very well. Tweaking hard-coded values is slow—the project has to be re-built and re-run after each change—which discourages exploration. Also, a slow feedback cycle makes it harder to understand the effects of each change. Tweaking hard-coded values in the code is also unclear and error-prone. Which values should you change for particular effects? Do you need to change the value in multiple places? Will changing a particular value just break things? 
 
 Exposing key values in your program as parameters makes them easier to document, understand, and use. These benefits of a good interface usually far outweigh the time required to implement it.
 
 #### Better Results
-When you can explore the parameter space of your procedural systems more quickly, you can explore it more thoroughly, finding interesting possibilities, ideas, and aesthetics to explore further. 
+When you can explore the parameter space of your procedural systems more quickly, you can explore it more thoroughly, finding interesting possibilities, ideas, and aesthetics to explore further.
 
-[[expand]]
+On small projects—projects that you don't plan on sharing—it is often tempting to skip the time needed to clean up code, factor out parameters, and create a better UI. This is often a [false economy](https://en.wikipedia.org/wiki/False_economy). An up-front investment of time is usually quickly repaid.
 
-#### An Example
+
+### An Example
 
 The following code has been adapted from a real program that displays animated messages. 
 
@@ -210,7 +214,7 @@ The way that you think about your software system is often very different from t
 #### Design Your User Experience
 When designing, step back and focus on the relationship of your project and your user. You only have direct control of what you make, but you should be considering the impact of your decisions on user. 
 
-![what_you_design](what_you_design-01.svg)
+![what_you_design](figures/what_you_design-01.svg)
 
 ::: .activity
 ## Fictional Machines
@@ -263,7 +267,7 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 - Yes, [global variables are evil](https://stackoverflow.com/questions/19158339/why-are-global-variables-evil). If your language supports constants, it is a good idea to use them instead of variables.
 
 ::: js-lab
-/comp_form/parameters/square.js
+/comp_form/parameters/sketches/square.js
 /::
 
 ### HTML Interfaces with p5.dom.js
@@ -283,14 +287,26 @@ The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides fun
 
 
 ::: js-lab
-/comp_form/parameters/square_slider.js
+/comp_form/parameters/sketches/square_slider.js
 /::
 
 [[ challenges! ]]
 
 ::: .assignment
 
-@@include('./assignment.md')
+## Keep Sketching!
+
+### Base
+Continue experimenting with procedurally generated images, this time focus on exposing parameters and exploring the parameter spaces of your sketches. You can mix random and parametric elements, but I suggest doing at least a couple of sketches that are not random at all.{bigger}
+
+### Challenge: Face Generator
+Build a face generating tool. This tool will create an image of a face that can be adjusted by the user with sliders and other inputs.
+
+- Don’t use the built in shape drawing commands like rect and ellipse. Build your face from hand-drawn or photographic images.
+- Make your resulting images look as seamless and cohesive as possible.
+- Inputs can range from straight-forward (eye color, nose size) to complex (anger, lighting).
+
+
 
 /::
 

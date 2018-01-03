@@ -7,18 +7,20 @@
 <p><a href="https://en.wikipedia.org/wiki/Parameter#Computing">Wikipedia:<br/>Parameter</a></p>
 </div>
 <p>Procedural generators can provide enormous creative leverage, allowing expressive artistic control while automating much of the work. This control is afforded by exposing <strong>parameters</strong>. Parameters are adjustable values that influence the internal behavior of a system. Chaning the parameters</p>
-<div id="" class="activity">
+<div id="" class="discussion">
 <h2 id="the-blue-square">The Blue Square</h2>
 <p>Imagine a program that draws squares like the one below. What parameters might such a program accept?</p>
-<p class="scale full-width"><img src="./blue-square.png" alt="A Blue Square" title="A Blue Square"></p>
+<p class="scale full-width"><img src="./figures/blue-square.png" alt="A Blue Square" title="A Blue Square"></p>
 </div>
 <h3 id="parameter-space">Parameter Space</h3>
 <div id="" class="links-sidebar">
 <p><a href="https://en.wikipedia.org/wiki/Parameter_space">Wikipedia:<br/>Parameter Space</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Combinatorial_explosion">Wikipedia:<br/>Combinatorial Explosion</a></p>
 </div>
-<p>A <strong>parameter space</strong> is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (true/false) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. This rapid growth is refered to as <strong>Combinatorial Explosion</strong>.</p>
+<p>A <strong>parameter space</strong> is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (true/false) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. This rapid growth is referred to as <strong>Combinatorial Explosion</strong>.</p>
 <p>When changes to input parameters map to interesting changes in output, combinatorial explosion drives the power of procedural systems. Consider a program that generates faces by choosing from 4 options for each of these traits: hair style, hair color, eye color, eye shape, nose shape, mouth shape, face shape, and skin tone. Such a system can generate <code>4^8</code> or <code>65,536</code> distinct faces. If the system supported two more similar traits that number of outputs grows to <code>1,048,576</code>!</p>
+<h3 id="samey-ness">Samey-ness</h3>
+<p>Combinatorial explosion does not guarantee variety.</p>
 <p>Sometimes different parameter values have minimal impact on the final output. When this happens a system’s output can feel monotonous, uninteresting, and “samey”. A system that takes just two floating point parameters has <code>18,446,744,073,709,551,616</code> (18.4 Quintillion!) states. This is an inconceivably large number, but it is quite likely that many of those states would look very similar.</p>
 <p>When creating interfaces for procedural systems, focus on exposing parameters that allow for <em>interesting</em> variation.</p>
 <h3 id="parametric-design">Parametric Design</h3>
@@ -27,7 +29,7 @@
 </div>
 <p><strong>Parametric Design</strong> is a design approach where designs are built as systems with output that can be customized by adjusting parameters. For example a parametric design for a bicycle might accept a parameter for the rider’s height and provide a customized frame to suit.</p>
 <p>An interesting aspect of parametric designs is that they explicity embed <strong>design intent</strong>, rather than just the <strong>design result</strong>.</p>
-<h3 id="benefits">Benefits</h3>
+<h3 id="benefits-of-parameterization">Benefits of Parameterization</h3>
 <div id="" class="links-sidebar">
 <p><a href="https://en.wikipedia.org/wiki/Hard_coding">Wikipedia:<br/>Hard-Coding</a></p>
 </div>
@@ -37,14 +39,14 @@
 <div id="" class="links-sidebar">
 <p><a href="https://en.wikipedia.org/wiki/Magic_number_(programming)">Wikipedia:<br/>Magic Number</a></p>
 </div>
-<p>Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that becomes increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. <strong>Exposing parameters helps to organize the code by seperating configuration and implementation.</strong> It also makes the code <strong>easier to read and reason about</strong> by changing <a href="https://en.wikipedia.org/wiki/Magic_number_(programming)">magic numbers</a> into named values that better explain their purpose. Exposing parameters isn’t always about creating an end-user GUI. Exposing parameters as arguments to well-factored functions can make your code much easier to read, expand, and maintain.</p>
+<p>Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that becomes increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. <strong>Exposing parameters helps to organize the code by separating configuration and implementation.</strong> It also makes the code <strong>easier to read and reason about</strong> by changing <a href="https://en.wikipedia.org/wiki/Magic_number_(programming)">magic numbers</a> into named values that better explain their purpose. Exposing parameters isn’t always about creating an end-user GUI. Exposing parameters as arguments to well-factored functions can make your code much easier to read, expand, and maintain.</p>
 <h4 id="better-user-experience">Better User Experience</h4>
-<p>Exploring the parameter space of a system by tweaking hard-coded values doesn’t work very well. Tweaking hard-coded values is slow—the project has to be re-built and re-run after each change—which discurages exploration. Also, a slow feedback cycle makes it harder to understand the effects of each change. Tweaking hard-coded values in the code is also unclear and error-prone. Which values should you change for particular effects? Do you need to change the value in multiple places? Will chaning a particular value just break things?</p>
+<p>Exploring the parameter space of a system by tweaking hard-coded values doesn’t work very well. Tweaking hard-coded values is slow—the project has to be re-built and re-run after each change—which discourages exploration. Also, a slow feedback cycle makes it harder to understand the effects of each change. Tweaking hard-coded values in the code is also unclear and error-prone. Which values should you change for particular effects? Do you need to change the value in multiple places? Will changing a particular value just break things?</p>
 <p>Exposing key values in your program as parameters makes them easier to document, understand, and use. These benefits of a good interface usually far outweigh the time required to implement it.</p>
 <h4 id="better-results">Better Results</h4>
 <p>When you can explore the parameter space of your procedural systems more quickly, you can explore it more thoroughly, finding interesting possibilities, ideas, and aesthetics to explore further.</p>
-<p>[[expand]]</p>
-<h4 id="an-example">An Example</h4>
+<p>On small projects—projects that you don’t plan on sharing—it is often tempting to skip the time needed to clean up code, factor out parameters, and create a better UI. This is often a <a href="https://en.wikipedia.org/wiki/False_economy">false economy</a>. An up-front investment of time is usually quickly repaid.</p>
+<h3 id="an-example">An Example</h3>
 <p>The following code has been adapted from a real program that displays animated messages.</p>
 <div id="" class="bad">
 <pre><code class="language-javascript"><span class="hljs-comment">// original version</span>
@@ -62,7 +64,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 <p>Notably, this code doesn’t do <em>exactly</em> the same thing as the orignal version. Some of the complexity in the original was left over from an early approach and no longer needed. Considering the code as a system and identifying and naming its parameters made it easy to spot and fix the unneeded complexity.</p>
 <h2 id="parameters-interface-design">Parameters &amp; Interface Design</h2>
 <div id="" class="!short slides-wrap slideInfos">
-<div id="carousel-206" class="carousel slide" data-ride="carousel">
+<div id="carousel-838" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner slides" role="listbox">
 <div class="carousel-item active">
 <div class="slide">
@@ -168,7 +170,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 </div>
 </div>
 <div class="slide-info-top">
-<a class="carousel-control-prev" href="#carousel-206" role="button" data-slide="prev">
+<a class="carousel-control-prev" href="#carousel-838" role="button" data-slide="prev">
 <span class="carousel-prev-icon">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs></defs>
@@ -179,7 +181,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 </span>
 <span class="sr-only">Previous</span>
 </a>
-<a class="carousel-control-next" href="#carousel-206" role="button" data-slide="next">
+<a class="carousel-control-next" href="#carousel-838" role="button" data-slide="next">
 <span class="carousel-next-icon-tc">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs></defs>
@@ -250,7 +252,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 </ul>
 <h4 id="design-your-user-experience">Design Your User Experience</h4>
 <p>When designing, step back and focus on the relationship of your project and your user. You only have direct control of what you make, but you should be considering the impact of your decisions on user.</p>
-<p><img src="what_you_design-01.svg" alt="what_you_design"></p>
+<p><img src="figures/what_you_design-01.svg" alt="what_you_design"></p>
 <div id="" class="activity">
 <h2 id="fictional-machines">Fictional Machines</h2>
 <p>Begin designing a user interface for a fictional machine by considering which parameters you would expose.</p>
@@ -299,7 +301,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 </ul>
 <div id="" class="">
 <div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/parameters/square.js">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/parameters/sketches/square.js">
 </iframe>
 </div>
 </div>
@@ -317,7 +319,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 </ul>
 <div id="" class="">
 <div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/parameters/square_slider.js">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/parameters/sketches/square_slider.js">
 </iframe>
 </div>
 </div>
@@ -332,14 +334,6 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 <li>Don’t use the built in shape drawing commands like rect and ellipse. Build your face from hand-drawn or photographic images.</li>
 <li>Make your resulting images look as seamless and cohesive as possible.</li>
 <li>Inputs can range from straight-forward (eye color, nose size) to complex (anger, lighting).</li>
-</ul>
-<h3 id="special-assignment">Special Assignment</h3>
-<p>Later in this class I will ask you to create special sketches using equipment available to you through The New School. If you haven’t used the following equipment before, you should sign up for orientations. Be ready to use this equipment by the sixth week of classes.</p>
-<ul>
-<li>Laser Cutter</li>
-<li>3D Printers</li>
-<li>Large Format Printers/Plotters</li>
-<li>CNC Mills (optional)</li>
 </ul>
 </div>
 <p>[[ homework review questions ]]</p>

@@ -9,6 +9,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* /////////////////////////////////////////
 /// Lab
 */
@@ -288,6 +298,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* /////////////////////////////////////////
 /// Lab View
 */
@@ -371,10 +391,19 @@ body.js-lab-view {
 }
 
 
-.js-lab-view p {
+.js-lab-view p,
+.js-lab-view label {
+
     font-size: 12px;
     margin-bottom: .25em;
 }
+
+body.js-lab-view {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
 
 
 
@@ -585,6 +614,16 @@ body.js-lab-view {
     bottom: 0 !important;
     right: 0 !important;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

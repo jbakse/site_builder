@@ -1,8 +1,18 @@
+
 - artist: Jean Arp
   title: Collage with Squares Arranged According to the Laws of Chance — 1917
   image: ./slides/arp.jpg
   comments: >
   links:
+
+
+- artist: Marcel Duchamp
+  title: 3 Standard Stoppages — 1913
+  image: https://www.moma.org/media/W1siZiIsIjEzODY0NSJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=21b081fc5058286d
+  comments:
+  links:
+    - label: "Moma: 3 Standard Stoppages"
+      href: https://www.moma.org/collection/works/78990
 
 # - artist: Kuva.io
 #   title: Hair
@@ -12,6 +22,16 @@
 #     - label: "Kuva.io: Hair"
 #       href: https://www.kuva.io/hair-simulation/
 
+
+- artist: Micheal Toy and Glenn Wichman
+  title: Rouge - 1980
+  image: https://upload.wikimedia.org/wikipedia/commons/1/17/Rogue_Screen_Shot_CAR.PNG
+  comments: <i>Rouge</i> was an genre-inspiring fantasy game with procedurally generated dungeons.
+  links:
+    - label: "Wikipedia: Rogue"
+      href: https://en.wikipedia.org/wiki/Rogue_(video_game)
+    - label: "Wikipedia: Roguelike"
+      href: https://en.wikipedia.org/wiki/Roguelike
 
 - artist: James Paterson (Presstube)
   title: Page 0 (Detail) — 2004
@@ -31,30 +51,30 @@
       href: https://joshuadavis.com/
 
 
-- artist: Joshua Davis (Praystation)
-  title: Misc, 2
-  image: ./slides/praystation_2.png
-  links:
-    - label: "Artist's Site"
-      href: https://joshuadavis.com/
+# - artist: Joshua Davis (Praystation)
+#   title: Misc, 2
+#   image: ./slides/praystation_2.png
+#   links:
+#     - label: "Artist's Site"
+#       href: https://joshuadavis.com/
 
-- artist: mataflop
-  title: modulator
-  image: ./slides/modulator.png
-  links:
-    - label: "modulator"
-      href: http://www.metaflop.com/modulator/font/pQkUOJOPk8
+# - artist: mataflop
+#   title: modulator
+#   image: ./slides/modulator.png
+#   links:
+#     - label: "modulator"
+#       href: http://www.metaflop.com/modulator/font/pQkUOJOPk8
 
-- artist: Greg Schomburg
-  title: Gregfont
-  image: ./slides/gregfont.png
-  links:
-    - label: "Gregfont"
-      href: http://gregschomburg.com/gregfont/
+# - artist: Greg Schomburg
+#   title: Gregfont
+#   image: ./slides/schomberg_1.png
+#   links:
+#     - label: "Gregfont"
+#       href: http://gregschomburg.com/gregfont/
 
-- artist: Plastaq Software
-  title: elsy
-  image: ./slides/elsy.png
-  links:
-    - label: elsy
-      href: http://www.plastaq.com/elsy/
+# - artist: Plastaq Software
+#   title: elsy
+#   image: ./slides/elsy.png
+#   links:
+#     - label: elsy
+#       href: http://www.plastaq.com/elsy/

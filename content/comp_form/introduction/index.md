@@ -12,8 +12,6 @@ previous_url: false
 hero_title: Introduction
 description: Using a computer to explore aesthetics is a powerful creative process. This class explores a variety of tools and techniques for creating algorithmic images, generative art, parametric designs, and procedurally generating content. 
 software: p5.js + p5.dom
-
-plan: true
 ---
 
 
