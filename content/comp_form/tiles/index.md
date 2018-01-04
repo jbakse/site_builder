@@ -4,17 +4,17 @@ layout: layouts/compform_chapter.pug
 debug: false
 
 header_title: "Tile Maps"
-next: Pixel Data
-next_url: ../pixels
 previous: false
 previous_url: false
+next: Hello, p5!
+next_url: ../p5
 
 hero_title: Tile Maps
-description: Map the Planet! 
+description: Tile mapping—creating images by arranging small graphic tiles—is a widely popular technique with a range of technical and artistic benefits.
 software: p5.js + p5.dom
 ---
 
-## Tiles Sets + Maps
+## Tile Maps + Sets
 
 [[
 introduction
@@ -26,14 +26,17 @@ tiles used in videogames
 memory conservation, hardware support
 show tile based design/games slideshow 
 ]]
-
+[Unity: Tilemaps](https://docs.unity3d.com/Manual/Tilemap.html)
+: Documentation on using Unity's built in tile mapping features.
 
 
 ::: slides .contain
 @@include('./slides.yaml')
 /::
 
-## [[Title]]
+[[ edit slides, go heavier on games, take out reduncancies ]]
+
+## Designing Tile Sets
 
 [[intro]]
 [[descriptions below could use a once-over, and _slight_ ellaboration ]]
@@ -86,7 +89,7 @@ A wide variety of looks can be created.
 
 ![multi_comp_form](./figures/multi_comp_form.png){scale full-width pixel}
 
-See also: [Wang Tiles](https://en.wikipedia.org/wiki/Wang_tile)
+Examples above were generated with [this tile mapping tool from cr31](http://www.cr31.co.uk/stagecast/wang/stage.html).
 
 ### Corner-matched Tile Sets
 
@@ -155,12 +158,12 @@ Daily exercise:
 2. Use the tile set to create a design.
 3. Screengrab or photograph your work and post to the class sketch blog with the hashtag `#tiles`.
 
-Explore a different idea every day, if you need some ideas consider using one of the `following` as a prompt. If you use one of these prompts, include it in your blog post. 
+Explore a different idea every day. If you need some ideas, consider using one of the following prompts. If you use one of these prompts, include it in your blog post. 
 
-`#paper` `#pixels` `#vectors` `#typography` `#self-portrait` `#3d` `#hexagons` `#triangles` `#photocopier` `#big` `#huge` `#edge` `#corner` `#pattern` `#trade` `#teamwork` `#stamps` `#scissors` `#make-things-that-make-things` 
+`paper` `pixels` `vectors` `typography` `self-portrait` `3d` `hexagons` `triangles` `photocopier` `big` `huge` `edge` `corner` `pattern` `trade` `teamwork` `stamps` `scissors` `make-things-that-make-things` 
 
 
-[[are tags still a thing?]]
+
 
 
 ### Challenge: Alphabet
@@ -172,14 +175,12 @@ Design a full alphabet using a single tile set. Post an image that shows your fo
 
 ## Related Links
 
-[Maze Generation](http://www.jamisbuck.org/mazes/)
-[Wang Tiles](https://en.wikipedia.org/wiki/Wang_tile)
-[Stagecast - Wang Tile Maze Design](http://www.cr31.co.uk/stagecast/wang/intro.html)
-[Greg Schomburg - Two Minute Posters](http://designergroupies.com/twominuteposters/)
-[Immaculate Heart College Art Department Rules](https://www.brainpickings.org/2012/08/10/10-rules-for-students-and-teachers-john-cage-corita-kent/)
-[Redblob's Links](http://www-cs-students.stanford.edu/~amitp/gameprog.html#tiles)
-[What Makes Mathmatics Hard to Learn](http://web.media.mit.edu/~minsky/OLPC-1.html)
-[Explained Visually](http://setosa.io/ev/)
-[Brian Eno - Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies)
-[Oblique Strategies Online](http://stoney.sb.org/eno/oblique.html)
+[cr31: Wang Tile Maze Design](http://www.cr31.co.uk/stagecast/wang/intro.html)
+: An absolutely **excellent** resource with lots of information on tile sets, tile maps, and wang titles.
+
+[Jamis BuckMaze Generation](http://www.jamisbuck.org/mazes/)
+: Many—*many*—maze generator algorithms complete with step-by-step visualizations from the author of *Mazes for Programmers*.
+
+[Redblob Games: Tile Map Links](http://www-cs-students.stanford.edu/~amitp/gameprog.html#tiles)
+: Amit Patel at Red Blob writes great essays on game-programming concepts. Here are his links to tile-map related articles.
 

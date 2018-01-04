@@ -231,20 +231,59 @@ By default, every time you restart your sketch the noise pattern will be differe
 
 
 ## Study Examples
+The following study examples demonstrate different ways of using noise to get different looks and effects. Some of these examples are similar to the examples in the [Random Values](../random) chapter. Carefully study each example to understand how they work. Several of the examples offer different approaches which can be commented in and out to compare their results.
 
+### Mapping Noise
 ::: js-lab
 /comp_form/noise/sketches/study_2D.js
 /::
 
+### Grass
 ::: js-lab
 /comp_form/noise/sketches/grass.js
 /::
 
+### Skyline
 ::: js-lab
 /comp_form/noise/sketches/skyline.js
 /::
 
-[[ in class challenges ]]
+
+::: .activity
+## In-class Challenge
+
+Explore using parameters by completing the following challenges in order. <br/> Don't skip any.
+
+
+Time | Comment
+--- | ---
+< 7 in 20 Minutes | You need to put in some extra work to strengthen your understanding of these topics.
+7 in 20 Minutes | Good.
+All 9 in 20 Minutes   | Great.
+
+
+### Modify the Mapping Noise Example
+1. This example shows several ways of mapping noise. Comment in and out each example, and compare the results.
+
+### Modify the Grass Example
+1. Study the code and get a general idea of how it works.
+2. Line 28 has two magic constants: `.01` and `.001`. Try changing the first constant to `.1`. What happens? What happens when you change it to `1`?
+3. Set the first constant back to `.01`. Change the second constant to `.01`. What happens?
+{continue}
+
+### Modify the Skyline Example
+1. This example has two global parameters: `amplitude` and `frequency`. Change the values of these parameters to get a feel for how they effect the output. What happens when you use a very small value for frequency, such as `.001`?
+2. On line 23, what would happen if you changed `noise(x * frequency)` to `noise(x * frequency, frameCount)`? Make the change. Is that what you expected?
+3. Your last change should have caused the bar heights to animate very quickly. Slow down the rate of change.
+{continue}
+
+### Challenging Challenges
+1. Add flowers to some of the blades of grass.
+2. Add water towers to some of the buildings.
+{continue}
+
+
+/::
 
 
 
@@ -286,7 +325,7 @@ Make a program that generates treasure maps.
 
 /::
 
-[[ assignment questions ]]
+
 
 ## Reference Links
 

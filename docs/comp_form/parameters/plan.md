@@ -32,7 +32,24 @@ Time    | ESA           | Activity
 5:30    | Study         | Globals and Sliders Lecture
 6:00    | Activate      | In-class Challenges
 
+
+### Random Review Questions
+
+In your assigned team, choose 1 or 2 sketches from the past week and use them to illustrate your answer to your team's question.
+
+Group   | Question
+---     | ---
+1       | When working with random values, does an artist give up control or authorship?
+2       | Choose a sketch that you believe demonstrates the use of biased random values. What kind of bias do you think was used?
+3       | Can computational generated work feel "natural"?
+4       | Choose a work that combines procedural and non-procedural elements well. What works about this piece?
+5       | The challenge is not a competition. But who won?
+
+
 ::: .assignment
+
+
+
 
 ### Special Assignment
 Later in this class I will ask you to create special sketches using equipment available to you through The New School. If you haven’t used the following equipment before, you should sign up for orientations. Be ready to use this equipment by the sixth week of classes.

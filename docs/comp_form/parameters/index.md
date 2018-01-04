@@ -290,7 +290,38 @@ The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides fun
 /comp_form/parameters/sketches/square_slider.js
 /::
 
-[[ challenges! ]]
+::: .activity
+## In-class Challenge
+
+Explore using parameters by completing the following challenges in order. <br/> Don't skip any.
+
+
+Time | Comment
+--- | ---
+< 6 in 20 Minutes | You need to put in some extra work to strengthen your understanding of these topics.
+6 in 20 Minutes | Good.
+All 10 in 20 Minutes   | Great.
+
+
+### Modify the Globals as Interface Example
+1. Make each square a different randomly-chosen size.
+2. Add global variable parameter to control the minimum and maximum size of the squares.
+3. Add a white stroke to the squares.
+4. Add a global variable parameter to control the width of the stroke.
+
+### Modify the HTML Interfaces Example
+1. Add a slider to control the vertical position of the square.
+2. Add a color picker to control the background color of the sketch.
+{continue}
+
+### Challenging Challenges
+1. Globals as Interface: Make the code draw boxes of two randomly-chosen sizes: large and small.
+2. Add parameters to control the small size, large size, and percentage chance of drawing large or small.
+3. HTML Interfaces: Instead of drawing the square, draw a "target". The target should be made up of evenly spaced concentric circles. Draw enough circles to reach the parameterized size.
+{continue}
+
+
+/::
 
 ::: .assignment
 
@@ -311,7 +342,7 @@ Build a face generating tool. This tool will create an image of a face that can 
 /::
 
 
-[[ homework review questions ]]
+
 
 ## Reference Links
 

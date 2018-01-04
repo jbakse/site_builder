@@ -4,9 +4,9 @@ Review sub folder notes files
 # Research Assistance
 
 - General copy editing
-- Find, add link and footer references.
+- Find, add link and footer references (see: content / references)
 - Code style cleanup
-  - var to let
+  - `var` to `let`
 - Humble Bundle download rumble
 
 
@@ -18,17 +18,19 @@ Review sub folder notes files
 ## Meta Data
 
 ## Template + Style
+js-lab selection background color hard to see
 
+
+## References
+- Find more, better, and more varied sources. 
+- Too many Wikipedia links. Parameters has way to many, for example.
+- Parameters might have too many side-bar references.
+- Consider placement of references between sidebar and bottom.
+- Should sidebar sources be repeated on bottom?
+- Change "Reference Links" to "Suggested Reading"?
 
 ## Copy Style
 - use bold (and italics) in the copy to improve variety and scanability
-
-- References
-  - Find more, better, and more varied sources. 
-  - Too many Wikipedia links. Parameters has way to many, for example.
-  - Parameters might have too many side-bar references.
-  - Consider placement of references between sidebar and bottom.
-  - Should sidebar sources be repeated on bottom?
 
 
 ## Assignment Review Questions
@@ -158,3 +160,17 @@ Review sub folder notes files
 - Getting Started with Processing
 - Getting Started with p5
 https://thebookofshaders.com/11/
+
+
+
+
+Links that need homes:
+
+[Greg Schomburg - Two Minute Posters](http://designergroupies.com/twominuteposters/)
+[Immaculate Heart College Art Department Rules](https://www.brainpickings.org/2012/08/10/10-rules-for-students-and-teachers-john-cage-corita-kent/)
+
+[What Makes Mathmatics Hard to Learn](http://web.media.mit.edu/~minsky/OLPC-1.html)
+[Explained Visually](http://setosa.io/ev/)
+[Brian Eno - Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies)
+[Oblique Strategies Online](http://stoney.sb.org/eno/oblique.html)
+

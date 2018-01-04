@@ -220,6 +220,11 @@ That said, this class offers a good deal of flexibility. If you are not sure if 
 - Be early + ready.
 - Bring your computer, a sketchbook, a pencil, and a pen.
 
+### Original Work
+All the work you submit for this class should be your own. For the most part you should create all the code, images, and writing used in your sketches yourself. In some cases it might make sense to incorporate something you didn't make yourself, like a code library.
+
+**If your work builds on or includes anyone else's work, make sure you cite it and give them credit!**
+
 
 ### Syllabus Review
 Please review the [syllabus here](../syllabus.html).

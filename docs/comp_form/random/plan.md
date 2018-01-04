@@ -33,8 +33,18 @@ Time    | ESA               | Activity
 5:40    | Engage + Activate | Activity: Pencil + Paper LCG   
 6:00    | Study             | Hello, p5!
 
-[[ challenges? ]]
 
+### Tile Review Questions
+
+In your assigned team, choose 1 or 2 sketches from the past week and use them to illustrate your answer to your team's question.
+
+Group   | Question
+---     | ---
+1       | How does working within constraints support creativity?
+2       | Considering the tile set as a tool, how do tools impact authorship?
+3       | Do you consider these images to be procedurally generated?
+4       | Choose a project that presents an interesting direction for further design inquiry. Suggest possible variations on this project.
+5       | Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project?
 
 
 ### Class Notes

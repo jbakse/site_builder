@@ -479,6 +479,7 @@ Explore how an LCG works by generating pseudorandom values by hand.
 
 ## Study Examples
 
+The following study examples demonstrate different ways to bias and map random values to get different looks and effects. Carefully study each example to understand how they work. Several of the examples offer different approaches which can be commented in and out to compare their results.
 
 ### Skyline
 ::: js-lab
@@ -509,7 +510,39 @@ Explore how an LCG works by generating pseudorandom values by hand.
 /::
 
 
-[[ workshop skipped here, should be its own page on setting up p5 ]]
+::: .activity
+## In-class Challenge
+
+Explore the study examples above by completing the following challenges in order. <br/> Don't skip any.
+
+
+Time | Comment
+--- | ---
+< 6 in 20 Minutes | You need to put in some extra work to strengthen your understanding of these topics.
+6 in 20 Minutes | Good.
+All 10 in 20 Minutes   | Great.
+
+
+### Modify the Small Multiples Example
+1. Change the background color to dark grey.
+2. Change the circle color to white.
+3. Draw each circle draw with a randomly-chosen color.
+
+### Modify the Grass Example
+1. Make the grass taller.
+2. Make the grass green.
+3. Make the grass messier.
+{continue}
+
+### Challenging Challenges
+1. Modify the small multiples example so that each row is a randomly-chosen color.
+2. Modify the small multiples example so that each column is randomly-chosen color.
+3. Modify the grass example so that each blade of grass is a different, randomly-chosen shade of green.
+4. Modify the grass example so that short grass is darker.
+{continue}
+
+
+/::
 
 
 
@@ -526,7 +559,7 @@ Kasimir Malevich, Mark Rothko, Piet Modrian, Anni Albers all worked with basic s
 
 /::
 
-[[ review questions ]]
+
 
 ## Reference Links
 

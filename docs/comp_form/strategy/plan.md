@@ -30,6 +30,21 @@ Time    | ESA               | Activity
 6:10    | Engage            | Analyze + Plan for Homework Challenges
 
 
+### Noise Review Questions
+
+In your assigned team, choose 1 or 2 sketches from the past week and use them to illustrate your answer to your team's question.
+
+Group   | Question
+---     | ---
+1       | Choose a work that combined elements from a previous week with noise. Discuss.
+2       | Choose a common theme that has appeared in several pieces. Discuss the theme.
+3       | Perlin Noise is often used to simulate natural forms. Choose a work that demonstrates this. Discuss.
+4       | Choose a work that you 1) like and 2) are unsure how it was made. Describe what you see.
+5       | The challenge is still not a competition. But who won?
+
+
+
+
 
 ::: .assignment
 
