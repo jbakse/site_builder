@@ -26,6 +26,8 @@
 
 
 
+
+
 /* /////////////////////////////////////////
 /// Lab
 */
@@ -143,6 +145,8 @@
 }
 
 
+
+
 /* .js-lab #maxamize {
     position: absolute;
     box-sizing: border-box;
@@ -203,139 +207,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* /////////////////////////////////////////
 /// Lab View
 */
@@ -347,6 +218,7 @@ body.js-lab-view {
     padding: 0;
     margin: 0;
     height: 100%;
+    background-color: #F4F3F1;
 }
 
 .js-lab-view canvas {
@@ -642,6 +514,8 @@ body.js-lab-view {
     bottom: 0 !important;
     right: 0 !important;
 }
+
+
 
 
 

@@ -8,14 +8,18 @@ var amplitude_slider;
 var time_slider;
 
 var startX = 50;
-var startY = 350;
-var endX = 350;
+var startY = 250;
+var endX = 450;
 var endY = 50;
+
+
+
+
 
 var t = 0;
 
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(500, 300);
 
 
     createP('Frequency');

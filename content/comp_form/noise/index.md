@@ -142,11 +142,19 @@ By controlling what you pass to `noise(x)`, you can control the frequency of the
 ## Building 1D Noise
 How does the `noise(x)` function work? Explore the underlying concepts by building a simplified noise function with pencil&nbsp;and&nbsp;paper.
 
-- Review the Linear Congruential Generator worksheet.
-- Complete the Linear Congruential Generator (Noise) worksheet.
-- Graph the results on the 1D Noise Worksheet.
 
-[[add worksheet downloads]]
+### Instructions
+- Roll 1d12 for each square on the sheet and plot the value on the graph.
+- Connect the plotted points with straight lines or a smooth curve.
+- According to your hand-made noise function, what is the value of `noise(3)`, `noise(4)`, and `noise(6.5)`?
+
+<p class="boxed download">
+    <a href="../handouts/1d_noise_graph.svg" download>1d_noise_graph.svg</a>
+</p>
+
+
+
+
 /::
 
 ### 1D, 2D, + 3D Noise

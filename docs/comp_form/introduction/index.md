@@ -71,9 +71,6 @@ Yes, these instructions will go on forever. I'll interrupt you in a minute.
 
 [stand-alone instructions](./sierpinski.html){boxed right}
 
-[[ worksheet download ]]
-
-
 /::
 
 
@@ -229,7 +226,7 @@ All the work you submit for this class should be your own. For the most part you
 ### Syllabus Review
 Please review the [syllabus here](../syllabus.html).
 
-[[needs syllabus]]
+[[ needs syllabus]]
 
 ### The Class Sketch Blog
 
@@ -241,7 +238,7 @@ Our class sketch blog will host your daily experiments and links to content of i
 
 ## Class Introductions
 
-[[introduce each other]]
+[[ introduce each other]]
 
 /:: -->
 

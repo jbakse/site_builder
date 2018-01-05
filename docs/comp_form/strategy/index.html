@@ -12,7 +12,7 @@
 <h2 id="populating-a-square">Populating a Square</h2>
 <p>Most of this chapter will be focus on a single problem area: arranging points on a square. This problem area shows up all the time: placing trees on an island, putting beads of water on glass, adding scratches to a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups. Beads of water shouldn’t touch each other. Scratches are more likely on raised, exposed parts of the ship. Each situation has different requirements, and depending on your approach, your can determine how planned, chatoic, random, natural, or mechanical the placement feels.</p>
 <p>In this chapter we will look at tactics for placing and moving points and how to compose those tactics into larger strategies to achieve a wide variety of looks.</p>
-<p>[[ Some examples of this problem in practice (games, nature photos, etc) ]]</p>
+<p>[[ Some examples of this problem in practice (games, nature photos, etc) (don’t starve!) ]]</p>
 <div id="" class="activity">
 <h2 id="whats-the-difference">What’s the Difference?</h2>
 <p>Analyze each of the examples below, carefully consider their similarities and differences.</p>
@@ -22,7 +22,9 @@
 <li>What applications might each placement pattern have?</li>
 </ul>
 <p class="scale"><img src="figures/pp_tall.png" alt="overview"></p>
-<p>[[ download activity materials ]]</p>
+<p class="boxed download">
+    <a href="../handouts/strategy_workshop.ai" download>strategy_workshop.ai</a>
+</p>
 </div>
 <h3 id="placing-the-points">Placing the Points</h3>
 <p>If we want points arranged on a square, we’ve got to start by creating some points and assigning them initial positions. There are many, many ways to go about this; here are five relatively simple, but powerful, tactics. I’ve given each of these tactics a name here, but these are not widely used names.</p>
@@ -101,7 +103,7 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 <img src="figures/noise_cull_3.svg" alt="noise cull 3"></p>
 <p>In the example above points are removed if the corresponding noise value is too low (dark). This results in patches or islands of dots.</p>
 <div id="" class="activity">
-<h2 id="match">Match</h2>
+<h2 id="tactics-match">Tactics Match</h2>
 <p>What tactics might have been used to get each result below?</p>
 <table class="table table-responsive">
 <thead>
@@ -134,7 +136,9 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 </tbody>
 </table>
 <p class="scale"><img src="figures/pp_tall.png" alt="overview"></p>
-<p>[[ activity materials download ]]</p>
+<p class="boxed download">
+    <a href="../handouts/strategy_workshop.ai" download>strategy_workshop.ai</a>
+</p>
 </div>
 <h3 id="point-placing-demo">Point Placing Demo</h3>
 <div id="" class="">
@@ -196,13 +200,14 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 <li><strong>Extend</strong> the example to create a unique sketch. Try to make something no one else will.</li>
 <li><strong>Post</strong> your finished sketch.</li>
 </ul>
+<p><code>Challenge Goal</code></p>
 <div id="" class="">
-<div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/strategy/sketches/dot_challenge/sketch.js">
+<div class="js-show">
+<iframe class="js-show" src="/js_lab/js_show.html?/comp_form/strategy/sketches/dot_challenge/sketch.js">
 </iframe>
 </div>
 </div>
-<p>[[ hide code above ]]</p>
+<p><code>Challenge Start Code</code></p>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/strategy/sketches/dot_challenge_start.js">
@@ -211,13 +216,15 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 </div>
 <h3 id="required-challenge-2-line-a-b-x">Required Challenge 2: Line A -&gt; B -&gt; X</h3>
 <p>Same as above: Analyze, Strategize, Study, Recreate, Extend, Post</p>
+<p><code>Challenge Goal</code></p>
 <div id="" class="">
-<div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/strategy/sketches/line_challenge/sketch.js">
+<div class="js-show">
+<iframe class="js-show" src="/js_lab/js_show.html?/comp_form/strategy/sketches/line_challenge/sketch.js">
 </iframe>
 </div>
 </div>
-<p>[[ hide code above ]]</p>
+<br/>
+<p><code>Challenge Start Code</code></p>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/comp_form/strategy/sketches/line_challenge_start.js">

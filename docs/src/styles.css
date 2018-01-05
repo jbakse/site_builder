@@ -727,17 +727,21 @@ canvas.mess {
   margin-top: 30px;
   margin-bottom: 30px; }
 
-div.js-lab {
+@media (min-width: 768px) {
+  div.js-lab {
+    margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);
+    margin-right: calc( (100% + 15px * 2) / -8 * 2 - 15px); } }
+
+div.js-lab,
+div.js-show {
   height: 500px; }
-  @media (min-width: 768px) {
-    div.js-lab {
-      margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);
-      margin-right: calc( (100% + 15px * 2) / -8 * 2 - 15px); } }
   @media (max-width: 767px) {
-    div.js-lab {
+    div.js-lab,
+    div.js-show {
       height: 80vh; } }
 
-iframe.js-lab {
+iframe.js-lab,
+iframe.js-show {
   border: none;
   width: 100%;
   height: 100%; }

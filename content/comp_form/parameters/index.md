@@ -153,7 +153,7 @@ Notably, this code doesn't do _exactly_ the same thing as the orignal version. S
 
 
 ### Interfaces
-When thinking about software we often define the **interface** as the part of the application that is _visible to_ and _manipulated by_ the user. I think it is better consider the interface as the common boundry, or overlap, between two systems.
+When thinking about software we often define the **interface** as the part of the application that is _visible to_ and _manipulated by_ the user. I think it is better consider the interface as the common boundary, or overlap, between two systems. Interfaces are shaped by the qualities of both systems.
 
 Two of the most important interfaces of software systems are **user interfaces** (UIs) and **application programming interfaces** (APIs).
 
@@ -163,7 +163,6 @@ Two of the most important interfaces of software systems are **user interfaces**
 
 It is common for software to have both a UI and an API. For example twitter provides a user interface for making and reading tweets and an API for integrating twitter into existing systems.
 
-[[really call out that you design an interface for funcitons/classes, that interfaces are an idea in code not just user interfaces]]
 
 
 ### Exposing Parameters

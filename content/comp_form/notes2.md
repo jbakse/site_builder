@@ -7,7 +7,7 @@ Review sub folder notes files
 - Find, add link and footer references (see: content / references)
 - Code style cleanup
   - `var` to `let`
-- Humble Bundle download rumble
+
 
 
 
@@ -34,13 +34,18 @@ js-lab selection background color hard to see
 
 
 ## Assignment Review Questions
-- all of them
+- x.foundation
+- exploration
 
 ## In-class Challenges
-- all of them
+- x.foundation
+- exploration
 
 ## Worksheets
-- all of them
+- x.foundation
+- foundation_accessories
+- exploration
+
 
 ## Mess
 - new plan for messes? maybe just don't attempt to scroll them
@@ -120,7 +125,8 @@ js-lab selection background color hard to see
 
 
 ## JSLab
-- needs a hidden code mode (just run the sketch)
+- x.needs a hidden code mode (just run the sketch)
+- .hidden code mode is just js-show, it doesn't do onScroll load unload, but that might be needed later
 
 ## Styles
 

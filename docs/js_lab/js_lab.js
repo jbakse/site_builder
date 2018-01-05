@@ -50,8 +50,9 @@ lab.main = function main() {
 
 
     // pull script name from url get string
-    // console.log("script", window.location.search);
     let script_name = window.location.search.substr(1) || "example.js";
+
+    // create the "maxamize" link to open the lab as its own page
     $('#maxamize').attr("href", window.location);
     $('#maxamize').attr("target", "_top");
     if (!inIframe()) {
@@ -114,7 +115,7 @@ lab.main = function main() {
 
 
 
-// inject riggers a reload of the preview iframe, clearing state
+// inject triggers a reload of the preview iframe, clearing state
 // onload listener will inject code
 lab.inject = function inject() {
     let frame = $('#preview')[0];
@@ -271,4 +272,49 @@ function inIframe() {
     } catch (e) {
         return true;
     }
+}
+
+
+
+//////////////////////////////////////////
+/// Show - Code for a view that just shows the sketch with no code/editing
+
+
+let show = {};
+
+show.main = function main() {
+
+    console.log("hello, world");
+    let script_name = window.location.search.substr(1) || "example.js";
+
+
+    let jqxhr = $.ajax({
+        url: script_name,
+        success: function(source) {
+            show.inject(source);
+        },
+        dataType: "text"
+    });
+};
+
+
+show.inject = function(source) {
+    // regex matches "// require (url)"
+    let require_regex = /^\/\/ ?require (.*?)$/gm;
+
+    // collect requested libs
+    let lib_hrefs = [];
+    while (match_info = require_regex.exec(source)) {
+        lib_hrefs.push(match_info[1]);
+    }
+
+    // load libs then code
+    lab_view.takeLibs(lib_hrefs, () => {
+        lab_view.takeSource(source);
+
+        let bootstrap = `\nif (typeof p5 !== 'undefined') {new p5();}`;
+        lab_view.takeSource(bootstrap);
+
+        // lab_view.show();
+    });
 }

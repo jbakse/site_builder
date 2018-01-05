@@ -50,7 +50,10 @@ Plot the sums.{bigger}
 Roll a twelve-sided dice 50 times.<br/>
 Plot the values.{bigger}
 
-[[ link to worksheet ]]
+<p class="boxed download">
+    <a href="../handouts/dice_chart.svg" download>dice_chart.svg</a>
+</p>
+
 /::
 
 
@@ -469,10 +472,17 @@ Javascript does not provide any way for you to set the seed used by `Math.random
 
 ::: .activity
 ## Pencil + Paper LCG
-Explore how an LCG works by generating pseudorandom values by hand.
+Explore how an Linear Congruential Generator works by generating pseudo-random values by hand.
+
+### Instructions
+1. Enter your assigned seed in the top box.
+2. Follow the arrows, perform the indicated operations, and put each result in the following box.
 
 
-[[ link to worksheet ]]
+<p class="boxed download">
+    <a href="../handouts/lcg_random.svg" download>lcg_random.svg</a>
+</p>
+
 /::
 
 

@@ -15,6 +15,7 @@ let t = require('./template_util.js');
 let components = {
     "slides": require('./slides_builder'),
     "js-lab": require('./jslab_builder'),
+    "js-show": require('./jsshow_builder'),
 }
 
 // configure MarkdownIt

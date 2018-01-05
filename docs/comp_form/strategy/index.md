@@ -50,7 +50,7 @@ In this chapter we will look at tactics for placing and moving points and how to
 
 
 
-[[ Some examples of this problem in practice (games, nature photos, etc) ]]
+[[ Some examples of this problem in practice (games, nature photos, etc) (don't starve!) ]]
 
 
 ::: .activity
@@ -65,7 +65,9 @@ Analyze each of the examples below, carefully consider their similarities and di
 
 ![overview](figures/pp_tall.png){scale}
 
-[[ download activity materials ]]
+<p class="boxed download">
+    <a href="../handouts/strategy_workshop.ai" download>strategy_workshop.ai</a>
+</p>
 
 /::
 
@@ -195,7 +197,7 @@ In the example above points are removed if the corresponding noise value is too 
 
 
 ::: .activity
-## Match
+## Tactics Match
 
 What tactics might have been used to get each result below?
 
@@ -209,7 +211,9 @@ Stamp    | &nbsp;
 
 ![overview](figures/pp_tall.png){scale}
 
-[[ activity materials download ]]
+<p class="boxed download">
+    <a href="../handouts/strategy_workshop.ai" download>strategy_workshop.ai</a>
+</p>
 
 /::
 
@@ -281,14 +285,12 @@ Then keep sketching! For the remaining three posts, I encourage you to build a s
 - **Extend** the example to create a unique sketch. Try to make something no one else will.
 - **Post** your finished sketch.
 
-
-::: js-lab
+`Challenge Goal`
+::: js-show
 /comp_form/strategy/sketches/dot_challenge/sketch.js
 /::
 
-[[ hide code above ]]
-
-
+`Challenge Start Code`
 ::: js-lab
 /comp_form/strategy/sketches/dot_challenge_start.js
 /::
@@ -299,12 +301,16 @@ Then keep sketching! For the remaining three posts, I encourage you to build a s
 
 Same as above: Analyze, Strategize, Study, Recreate, Extend, Post
 
-::: js-lab
+
+`Challenge Goal`
+::: js-show
 /comp_form/strategy/sketches/line_challenge/sketch.js
 /::
 
-[[ hide code above ]]
+<br/>
 
+
+`Challenge Start Code`
 ::: js-lab
 /comp_form/strategy/sketches/line_challenge_start.js
 /::
