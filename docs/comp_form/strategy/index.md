@@ -350,6 +350,8 @@ If you want to play Spelunky—optional but highly recommended—original versio
 
 ## Reference Links
 
+[How (and Why) Spelunky Makes its Own Levels | Game Maker's Toolkit](https://www.youtube.com/watch?v=Uqk5Zf0tw3o)
+
 
 [bl.ocks.org: Poisson-Disc](https://bl.ocks.org/mbostock/19168c663618b7f07158), [Poisson-Disc II](https://bl.ocks.org/mbostock/dbb02448b0f93e4c82c3)
 : Poisson Disc description, visual explanation, and sample code by Mike Bostock.

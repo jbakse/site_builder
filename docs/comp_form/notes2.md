@@ -15,6 +15,10 @@ Review sub folder notes files
 #####################
 # Content
 
+
+FAVICON
+
+
 ## Meta Data
 
 ## Template + Style

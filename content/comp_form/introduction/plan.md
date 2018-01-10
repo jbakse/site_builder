@@ -31,6 +31,17 @@ Time    | ESA       | Activity
 5:45    | Activate  | Tile Sets Workshop
 6:15    | Activate  | Set up Sketch Blog Accounts + Post
 
+
+<!-- ::: .activity
+
+## Class Introductions
+
+
+/:: -->
+
+
+
+
 ### Class Notes
 
 [Introduction](./index.html){boxed right}

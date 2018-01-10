@@ -234,11 +234,3 @@ Our class sketch blog will host your daily experiments and links to content of i
 
 [[ link to this and past sketch blogs ]]
 
-<!-- ::: .activity
-
-## Class Introductions
-
-[[ introduce each other]]
-
-/:: -->
-
