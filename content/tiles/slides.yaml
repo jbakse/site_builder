@@ -1,54 +1,51 @@
 - artist: Josef Albers
   title: Bauhaus Lettering Set, 1926-31
   image: https://s-media-cache-ak0.pinimg.com/736x/a1/51/42/a15142d6be1048869220f180720e8e67.jpg
-  comments: >
+  comments: Josef Albers was a highly inflential artist, designer, and educator. First a student and then faculty at the Bauhaus, his color theory work is a primary influence design pedagogy.
   links:
+    - label: The Josef & Anni Albers Founation
+      href: http://www.albersfoundation.org/
+    - label: "MoMA: Bauhaus Lettering Set"
+      href: http://www.moma.org/collection/works/2724
+    - label: "MoMA: Joseph Albers"
+      href: http://www.moma.org/collection/artists/97?locale=en
 
 
 - artist: Josef Albers
   title: Bauhaus Lettering Set, 1926-31
   image:  http://www.moma.org/media/W1siZiIsIjY2NzIwIl0sWyJwIiwiY29udmVydCIsIi1yZXNpemUgMTI4MHgxMjgwXHUwMDNFIl1d.jpg?sha=73f0e9c465058815
-  comments: >
+  comments: Alber's Bauhaus Lettering Set is a modularly constructed alphabet composed from 10 pieces (top row).
   links:
-    - label: Piece @ Moma
+    - label: The Josef & Anni Albers Founation
+      href: http://www.albersfoundation.org/
+    - label: "MoMA: Bauhaus Lettering Set"
       href: http://www.moma.org/collection/works/2724
-    - label: Joseph Albers @ Moma
+    - label: "MoMA: Joseph Albers"
       href: http://www.moma.org/collection/artists/97?locale=en
 
 
 - artist: Anni Albers
-  title:
+  title: 
   image: http://www.moma.org/media/W1siZiIsIjIyMTY4MSJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDIwMDB4MjAwMFx1MDAzRSJdXQ.jpg?sha=00147c0b3abde9d0
-  comments: >
+  comments: Anni Albers was a prominent and influential textile artist and educator.
   links:
     - label: The Josef & Anni Albers Founation
       href: http://www.albersfoundation.org/
-    - label: MOMA
+    - label: "MoMA: Anni Albers"
       href: http://www.moma.org/collection/artists/96?=undefined&page=1
 
 
-- artist: Pauline Gorelov
-  title:
-  image: http://www.paulinegorelov.com/media/filter/l/img/hyperstructurewhite_modulartile_paulinegorelov_02.jpg
+- artist: Mahan, Iran
+  title: Shrine of Shah Nematollah Vali
+  image: https://upload.wikimedia.org/wikipedia/commons/0/0d/Shah_Nematollah_Vali_Shrine_08.jpg
   comments: >
+    Islamic design builds on a rich variety of grid systems and tessellation patterns.
+    <br/>
+    <br/>
+    Photo by anaareh saaveh (mahan11) <a href="http://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons
   links:
-
-- artist: Pauline Gorelov
-  title:
-  image: http://www.paulinegorelov.com/media/filter/l/img/braindead01_modularstickers_paulinegorelov.jpg
-  comments: >
-  links:
-    - label: Artist's Site
-      href: http://www.paulinegorelov.com/
-
-
-- artist: Chris Clark
-  title:
-  image: https://farm3.staticflickr.com/2649/4138406110_f5c0df1e2a_z.jpg?zz=1
-  comments: >
-  links:
-    - label: Artist's Site
-      href: http://www.chris-clarke.co.uk/
+    - label: Shah Nematollah Vali Shrine
+      href: https://en.wikipedia.org/wiki/Shah_Nematollah_Vali_Shrine
 
 
 - artist: Jessica Svendsen - Yale Architecture Lecture Series Poster - 2015
@@ -58,56 +55,107 @@
   links:
     - label: Artist's Site
       href: http://jessicasvendsen.com/
-    - lavel: 100 Days with Josef Müller-Brockmann
+    - label: "100 Days with Josef Müller-Brockmann"
       href: http://jessicasvendsen.com/100-Days-with-Josef-Muller-Brockmann
 
-- artist: We Are Plural
-  title:
-  image: http://weareplural.com/wp-content/uploads/2010/02/typeforce_2.jpg
-  comments: >
-  links:
-    - label: Artist's Site
-      href: http://weareplural.com/work/typeforce-01/2/
 
+- artist: Sunsoft
+  title: Batman (NES)
+  image: ./slides/batman.png
+  comments: Batman has some of the best visuals of any game released for the NES. Every title uses just 4 colors chosen from the NES's 64 color palette.
+  links:    
+    - label: Batman Tile Maps
+      href: http://www.vgmaps.com/Atlas/NES/index.htm#B
+    - label: "Wikipedia: Batman"
+      href: https://en.wikipedia.org/wiki/Batman:_The_Video_Game
+    - label: "Pixel Art Discussion"
+      href: https://pixelation.org/index.php?topic=9173.0
 
-- artist: Nintendo
-  title: "The Legend of Zela: A Link to the Past"
-  image: http://www.zeldadungeon.net/Zelda03/Walkthrough/03/002.png
-  comments: >
-  links:
 
 - artist: Nintendo
   title: Advanced Wars
   image: http://flyingkirbypub.net/Weekly/Zeron/Maps/Machiavellianism.png
-  comments: >
+  comments: This GBA and DS series features tactical battle on an overtly grid-based map. More than an aesthetic choice, the grid is key to the rules of the game. 
   links:
 
-- artist: Darryl Brown
-  title:
-  image: http://1.bp.blogspot.com/-6j9iTMENSbA/TwveinllLkI/AAAAAAAABcs/rbmhK3YoRNk/s1600/ThankYouCards2.jpg
-  comments: >
+- artist: Yacht Club Games
+  title: Shovel Knight
+  image: http://yachtclubgames.com/wp-content/uploads/2014/06/screen_07.png
+  comments: Shovel Knight is an excellent retro platformer with an art style that carefully embraced the hardware limitations of the 8-bit era.
   links:
-    - label: Artist's Site
-      href: http://darryldesigns.blogspot.com/2012/01/handmade-modular-type.html
+    - label: Shovel Knight
+      href: http://yachtclubgames.com/shovel-knight/
 
 
-- artist: Unknown
-  title:
-  image: http://56.media.tumblr.com/22cbad261bbd62e3a35fadb0a36f25b7/tumblr_mhh86bOfQE1qa8awvo1_500.jpg
-  comments: >
-  links:
 
-- artist: Unknown
-  title:
-  image: https://s-media-cache-ak0.pinimg.com/736x/10/08/b9/1008b9eb526e8cc41ee77a6c416b4167.jpg
-  comments: >
-  links:
+# - artist: Pauline Gorelov
+#   title:
+#   image: http://www.paulinegorelov.com/media/filter/l/img/hyperstructurewhite_modulartile_paulinegorelov_02.jpg
+#   comments: >
+ 
 
-- artist: Unknown
-  title:
-  image: http://previews.123rf.com/images/claranatoli/claranatoli0701/claranatoli070100082/709614-Traditional-ancient-ceramics-Valencia-Spain-Stock-Photo-spanish-tile.jpg
-  comments: >
-  links:
+# - artist: Pauline Gorelov
+#   title:
+#   image: http://www.paulinegorelov.com/media/filter/l/img/braindead01_modularstickers_paulinegorelov.jpg
+#   comments: >
+#   links:
+#     - label: Artist's Site
+#       href: http://www.paulinegorelov.com/
+
+
+# - artist: Chris Clark
+#   title:
+#   image: https://farm3.staticflickr.com/2649/4138406110_f5c0df1e2a_z.jpg?zz=1
+#   comments: >
+#   links:
+#     - label: Artist's Site
+#       href: http://www.chris-clarke.co.uk/
+
+
+
+
+# - artist: We Are Plural
+#   title:
+#   image: http://weareplural.com/wp-content/uploads/2010/02/typeforce_2.jpg
+#   comments: >
+#   links:
+#     - label: Artist's Site
+#       href: http://weareplural.com/work/typeforce-01/2/
+
+# - artist: Nintendo
+#   title: "The Legend of Zela: A Link to the Past"
+#   image: http://www.zeldadungeon.net/Zelda03/Walkthrough/03/002.png
+#   comments: >
+#   links:
+
+
+
+# - artist: Darryl Brown
+#   title:
+#   image: http://1.bp.blogspot.com/-6j9iTMENSbA/TwveinllLkI/AAAAAAAABcs/rbmhK3YoRNk/s1600/ThankYouCards2.jpg
+#   comments: >
+#   links:
+#     - label: Artist's Site
+#       href: http://darryldesigns.blogspot.com/2012/01/handmade-modular-type.html
+
+
+# - artist: Unknown
+#   title:
+#   image: http://56.media.tumblr.com/22cbad261bbd62e3a35fadb0a36f25b7/tumblr_mhh86bOfQE1qa8awvo1_500.jpg
+#   comments: >
+#   links:
+
+# - artist: Unknown
+#   title:
+#   image: https://s-media-cache-ak0.pinimg.com/736x/10/08/b9/1008b9eb526e8cc41ee77a6c416b4167.jpg
+#   comments: >
+#   links:
+
+# - artist: Unknown
+#   title:
+#   image: http://previews.123rf.com/images/claranatoli/claranatoli0701/claranatoli070100082/709614-Traditional-ancient-ceramics-Valencia-Spain-Stock-Photo-spanish-tile.jpg
+#   comments: >
+#   links:
 
 - artist: Adomas Bruzga
   title: Things

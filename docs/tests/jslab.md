@@ -22,6 +22,6 @@ JS Lab runs live-editable js projects in a frame.
 
 `:::js-show`
 ::: js-show
-/comp_form/parameters/sketches/square_slider.js
+/parameters/sketches/square_slider.js
 /::
 

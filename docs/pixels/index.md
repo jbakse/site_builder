@@ -56,7 +56,7 @@ The p5.js library provides two ways to read and write image pixel data. First,yo
 This example uses `set()` to create some random pixel data.
 
 ::: js-lab
-/comp_form/pixels/sketches/basic_pixels.js
+/pixels/sketches/basic_pixels.js
 /::
 
 
@@ -94,7 +94,7 @@ Line 23
 This example has the same structure as the first one, but draws a gradient pixel-by-pixel.
 
 ::: js-lab
-/comp_form/pixels/sketches/basic_pixels_2.js
+/pixels/sketches/basic_pixels_2.js
 /::
 
 
@@ -107,7 +107,7 @@ Line 15
 The first two examples use a nested loop to set a value for every pixel in the image; it visits every pixel in a sequential order. That pattern is commonly used in pixel generating and processing scripts, but not always. This example places red pixels at random places on the image.
 
 ::: js-lab
-/comp_form/pixels/sketches/basic_pixels_3.js
+/pixels/sketches/basic_pixels_3.js
 /::
 
 ::: .activity
@@ -172,7 +172,7 @@ The p5.js library also allows you to read pixel data, so you can process images 
 This example loads the image of Earth, loops over its pixels, and multiplies each pixels color with a random color.
 
 ::: js-lab
-/comp_form/pixels/sketches/read_pixels.js
+/pixels/sketches/read_pixels.js
 /::
 
 
@@ -215,7 +215,7 @@ Line 28
 This example compares each pixel to the one below it. If the upper pixel is darker, it is changed to magenta.
 
 ::: js-lab
-/comp_form/pixels/sketches/read_pixels_2.js
+/pixels/sketches/read_pixels_2.js
 /::
 
 
@@ -225,7 +225,7 @@ This example compares each pixel to the one below it. If the upper pixel is dark
 This example doesn't draw the image at all. Instead, the image is used as an input that controls where the red ellipses are drawn. Using images an inputs is a powerful technique that allows you to mix manual art and procedurally generated content.
 
 ::: js-lab
-/comp_form/pixels/sketches/read_pixels_3.js
+/pixels/sketches/read_pixels_3.js
 /::
 
 
@@ -332,7 +332,7 @@ c = getQuick(img, x, y);
 The following example compares the performance of using `get()` and `getQuick()` to read and invert the color value of a small image.
 
 ::: js-lab
-/comp_form/pixels/sketches/performance.js
+/pixels/sketches/performance.js
 /::
 
 
@@ -347,7 +347,7 @@ This example uses an image as an input to control the density and placement of d
 
 
 ::: js-lab
-/comp_form/pixels/sketches/grass.js
+/pixels/sketches/grass.js
 /::
 
 

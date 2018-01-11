@@ -161,7 +161,7 @@ A quick-and-dirty way to make your comp form sketches "tweakable" is to use glob
 
 
 ::: js-lab
-/comp_form/square.js
+/square.js
 :::
 
 
@@ -180,7 +180,7 @@ The [p5 Dom Library](https://p5js.org/reference/#/libraries/p5.dom) provides fun
 
 
 ::: js-lab
-/comp_form/square_slider.js
+/square_slider.js
 :::
 
 

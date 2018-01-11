@@ -3,7 +3,7 @@
 var worldImage;
 
 function preload() {
-    worldImage = loadImage("/comp_form/pixels/sketches/world.png");
+    worldImage = loadImage("/pixels/sketches/world.png");
 }
 
 function setup() {

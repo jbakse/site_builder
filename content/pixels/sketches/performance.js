@@ -4,7 +4,7 @@
 var testImage;
 
 function preload() {
-    testImage = loadImage("/comp_form/pixels/sketches/world_100.png");
+    testImage = loadImage("/pixels/sketches/world_100.png");
     noLoop();
 }
 

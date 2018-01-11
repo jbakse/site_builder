@@ -88,14 +88,14 @@ Now suppose we wanted to add variation to the size of the squares. Both `random(
 
 
 ::: js-lab
-/comp_form/noise/sketches/sketch_random/sketch.js
+/noise/sketches/sketch_random/sketch.js
 /::
 
 
 ### Noise(x)
 
 ::: js-lab
-/comp_form/noise/sketches/sketch_noise/sketch.js
+/noise/sketches/sketch_noise/sketch.js
 /::
 
 
@@ -135,7 +135,7 @@ By controlling what you pass to `noise(x)`, you can control the frequency of the
 
 ### 1D Noise Example
 ::: js-lab
-/comp_form/noise/sketches/sketch_1D_noise/sketch.js
+/noise/sketches/sketch_1D_noise/sketch.js
 /::
 
 ::: .activity
@@ -243,17 +243,17 @@ The following study examples demonstrate different ways of using noise to get di
 
 ### Mapping Noise
 ::: js-lab
-/comp_form/noise/sketches/study_2D.js
+/noise/sketches/study_2D.js
 /::
 
 ### Grass
 ::: js-lab
-/comp_form/noise/sketches/grass.js
+/noise/sketches/grass.js
 /::
 
 ### Skyline
 ::: js-lab
-/comp_form/noise/sketches/skyline.js
+/noise/sketches/skyline.js
 /::
 
 

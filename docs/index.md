@@ -4,13 +4,12 @@ layout: layouts/compform_toc.pug
 debug: false
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<script src="./index_mess.js"></script>
+
+
 
 # Comp Form
-
-
-
-
-
 
 ## Foundation
 

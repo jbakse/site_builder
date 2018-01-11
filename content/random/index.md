@@ -268,12 +268,12 @@ A **deck of cards** works differently. When you pull cards from deck, you don't 
 
 #### Dice Visualizer
 ::: js-lab
-/comp_form/random/sketches/dice.js
+/random/sketches/dice.js
 /::
 
 #### Deck Visualizer
 ::: js-lab
-/comp_form/random/sketches/cards.js
+/random/sketches/cards.js
 /::
 
 
@@ -437,7 +437,7 @@ A common method to create pseudorandom values is a [Linear Congruential Generato
 LCGs begin with an initial value called the **seed**, then use multipliction, addition, modulus (remainder after division) to derive a new, seemingly random value. Below is a very basic implementation of LCGs so you can see how they work.
 
 ::: js-lab
-/comp_form/random/sketches/random_lcg.js
+/random/sketches/random_lcg.js
 /::
 
 For our purposes, it is not really important to understand exactly how the generator works. 
@@ -454,7 +454,7 @@ For our purposes, it is not really important to understand exactly how the gener
 P5 provides `randomSeed()` to set the **seed** used by `random()`. Once you have set the seed, the sequence of values produced by random will always be the same.
 
 ::: js-lab
-/comp_form/random/sketches/seed.js
+/random/sketches/seed.js
 /::
 
 Using the seed, you can use random values in your code, but get the same results each time you run your program. This can be a useful feature in many programs and can help with debugging problems.
@@ -493,30 +493,30 @@ The following study examples demonstrate different ways to bias and map random v
 
 ### Skyline
 ::: js-lab
-/comp_form/random/sketches/skyline.js
+/random/sketches/skyline.js
 /::
 
 
 ### Small Multiples
 ::: js-lab
-/comp_form/random/sketches/small_mult.js
+/random/sketches/small_mult.js
 /::
 
 ### Grass
 ::: js-lab
-/comp_form/random/sketches/grass.js
+/random/sketches/grass.js
 /::
 
 ### Brownian Motion
 ::: js-lab
-/comp_form/random/sketches/brownian.js
+/random/sketches/brownian.js
 /::
 
 [Wikipedia: Brownian Motion](https://en.wikipedia.org/wiki/Brownian_motion)
 
 ### Horizon
 ::: js-lab
-/comp_form/random/sketches/horizon.js
+/random/sketches/horizon.js
 /::
 
 

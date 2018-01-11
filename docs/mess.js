@@ -79,6 +79,7 @@ $(window).on("resize", (e) => {
         console.log(windowWidth);
         resizeCanvas && resizeCanvas(windowWidth, windowHeight);
         $(mess_private.p5_canvas.canvas).attr("style", "");
+        mess_resize && mess_resize();
     }, 100);
 
 });

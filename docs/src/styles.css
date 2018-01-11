@@ -177,7 +177,7 @@
 
 .comp-form-toc .row > a[data-ready="false"],
 .comp-form-toc .row > a[data-ready="false"]:hover {
-  color: #CCC;
+  color: #888;
   text-decoration: none;
   font-size: 12px;
   margin-bottom: 25px; }
@@ -383,7 +383,8 @@
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    margin-top: 20px; }
   .comp-form-copy .scale img {
     width: 100%; }
   .comp-form-copy .pixel img {
@@ -418,6 +419,15 @@
       margin-bottom: 0; }
   .comp-form-copy .three-up .figure:nth-child(3n - 2),
   .comp-form-copy .three-up .figure:nth-child(3n - 1) {
+    margin-right: 10px; }
+  .comp-form-copy .two-up .figure {
+    width: calc((100% - 20px) / 2);
+    float: left;
+    font-size: .75em; }
+    .comp-form-copy .two-up .figure img {
+      width: 100%;
+      margin-bottom: 0; }
+  .comp-form-copy .two-up .figure:nth-child(2n - 1) {
     margin-right: 10px; }
 
 .comp-form-copy {

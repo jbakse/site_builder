@@ -43,14 +43,13 @@ Consider the image below. How might you make something like this?
 
 ## Populating a Square
 
-Most of this chapter will be focus on a single problem area: arranging points on a square. This problem area shows up all the time: placing trees on an island, putting beads of water on glass, adding scratches to a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups. Beads of water shouldn't touch each other. Scratches are more likely on raised, exposed parts of the ship. Each situation has different requirements, and depending on your approach, your can determine how planned, chatoic, random, natural, or mechanical the placement feels.
+Most of this chapter will be focus on a single problem area: arranging points on a square. This problem area shows up all the time: placing trees on an island, putting beads of water on glass, adding scratches to a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas. Beads of water shouldn't overlap. Scratches are more likely on raised, exposed parts of the ship. Each situation has different requirements, and depending on your approach, your can determine how planned, chaotic, random, natural, or mechanical the placement feels.
 
 
-In this chapter we will look at tactics for placing and moving points and how to compose those tactics into larger strategies to achieve a wide variety of looks.
+::: slides .!short
+@@include('./slides.yaml')
+/::
 
-
-
-[[ Some examples of this problem in practice (games, nature photos, etc) (don't starve!) ]]
 
 
 ::: .activity
@@ -219,7 +218,7 @@ Stamp    | &nbsp;
 
 ### Point Placing Demo
 ::: js-lab
-/comp_form/strategy/sketches/point_place.js
+/strategy/sketches/point_place.js
 /::
 
 
@@ -287,12 +286,12 @@ Then keep sketching! For the remaining three posts, I encourage you to build a s
 
 `Challenge Goal`
 ::: js-show
-/comp_form/strategy/sketches/dot_challenge/sketch.js
+/strategy/sketches/dot_challenge/sketch.js
 /::
 
 `Challenge Start Code`
 ::: js-lab
-/comp_form/strategy/sketches/dot_challenge_start.js
+/strategy/sketches/dot_challenge_start.js
 /::
 
 
@@ -304,7 +303,7 @@ Same as above: Analyze, Strategize, Study, Recreate, Extend, Post
 
 `Challenge Goal`
 ::: js-show
-/comp_form/strategy/sketches/line_challenge/sketch.js
+/strategy/sketches/line_challenge/sketch.js
 /::
 
 <br/>
@@ -312,7 +311,7 @@ Same as above: Analyze, Strategize, Study, Recreate, Extend, Post
 
 `Challenge Start Code`
 ::: js-lab
-/comp_form/strategy/sketches/line_challenge_start.js
+/strategy/sketches/line_challenge_start.js
 /::
 
 
@@ -350,8 +349,11 @@ If you want to play Spelunky—optional but highly recommended—original versio
 
 ## Reference Links
 
-[How (and Why) Spelunky Makes its Own Levels | Game Maker's Toolkit](https://www.youtube.com/watch?v=Uqk5Zf0tw3o)
+[Game Maker's Toolkit: How (and Why) Spelunky Makes its Own Levels](https://www.youtube.com/watch?v=Uqk5Zf0tw3o)
+: Overview of the Spelunky level generator from a technical and critical perspective.
 
+[Darius Kazemi: Spelunky Mod](http://tinysubversions.com/spelunkyGen/)
+: Darius kazemi has created a mod of the original Spelunky that runs in the browser and visualizes level generation.
 
 [bl.ocks.org: Poisson-Disc](https://bl.ocks.org/mbostock/19168c663618b7f07158), [Poisson-Disc II](https://bl.ocks.org/mbostock/dbb02448b0f93e4c82c3)
 : Poisson Disc description, visual explanation, and sample code by Mike Bostock.
@@ -361,4 +363,7 @@ If you want to play Spelunky—optional but highly recommended—original versio
 
 [Random Points on a Sphere](https://www.jasondavies.com/maps/random-points/)
 : Nice, interactive demo of three strategies for placing points on a sphere.
+
+
+[Leena's Inception Overworld Overview](http://bytten-studio.com/devlog/2014/09/08/overworld-overview-part-1/)
 

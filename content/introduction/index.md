@@ -226,11 +226,10 @@ All the work you submit for this class should be your own. For the most part you
 ### Syllabus Review
 Please review the [syllabus here](../syllabus.html).
 
-[[ needs syllabus]]
 
 ### The Class Sketch Blog
 
 Our class sketch blog will host your daily experiments and links to content of interest to the class.
 
-[[ link to this and past sketch blogs ]]
+[2018 Sketch Blog](http://sketches2018.compform.net){boxed right}
 

@@ -266,7 +266,7 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 - Yes, [global variables are evil](https://stackoverflow.com/questions/19158339/why-are-global-variables-evil). If your language supports constants, it is a good idea to use them instead of variables.
 
 ::: js-lab
-/comp_form/parameters/sketches/square.js
+/parameters/sketches/square.js
 /::
 
 ### HTML Interfaces with p5.dom.js
@@ -286,7 +286,7 @@ The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides fun
 
 
 ::: js-lab
-/comp_form/parameters/sketches/square_slider.js
+/parameters/sketches/square_slider.js
 /::
 
 ::: .activity

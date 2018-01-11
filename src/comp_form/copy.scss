@@ -266,6 +266,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
+        margin-top: 20px;
     }
 
     .scale img {
@@ -316,6 +317,21 @@
 
     .three-up .figure:nth-child(3n - 2),
     .three-up .figure:nth-child(3n - 1) {
+        margin-right: 10px;
+    }
+
+
+    .two-up .figure {
+        width: calc((100% - 20px) / 2);
+        float: left;
+        font-size: .75em;
+        img {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    .two-up .figure:nth-child(2n - 1) {
         margin-right: 10px;
     }
 }
