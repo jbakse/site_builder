@@ -160,18 +160,24 @@
 - artist: Adomas Bruzga
   title: Things
   image: ./slides/adomas-bruzga-16.jpg
-  comments: >
+  comments: Adomas Bruzga used edge-matched tiles, themselves made on grids, to create this poster for Comp Form '16. Adomas also used a tile-based approach to design the *Virtue* speculative identity.
   links:
+    - label: Artist's Website
+      href: http://www.adomasbruzga.com/
 
-- artist: Dorthy Cruz
+- artist: Dorothy Cruz
   title: You
   image: ./slides/dorthy-cruz-17.png
-  comments: >
+  comments: Dorothy Cruz used an isometric grid for this poster in Comp Form '17.
   links:
+    - label: Artist's Website
+      href: http://wwww.dorothycruz.com/
 
 - artist: Talia Cotton
   title: Go For It
   image: ./slides/talia-cotton-17.png
-  comments: >
+  comments: Talia created a 3D tileset for this poster in Comp Form '17.
   links:
+    - label: Artist's Website
+      href: http://taliacotton.com/
 
