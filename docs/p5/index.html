@@ -1,72 +1,196 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Hello, p5! | Comp Form</title></head><body class="comp-form"><a href="/"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div></a><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Hello, p5!</span><div class="buttons"><a class="previous" href="../tiles"><i class="fa fa-caret-left fa-lg"></i>Tile Maps</a><a class="next" href="../pixels">Pixels<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Hello, p5!</h1><h6>Overview</h6><p class="description">P5 intro</p><h6>Tools</h6><p class="software">p5.js + p5.dom</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><p>[[ talk about why this chapter exists: p5 is used in all of the foundation chapters, and several others]]
-[[ p5 vs Processing]]</p>
-<h2 id="what-p5-is">What p5 is</h2>
-<p>From the p5js homepage:</p>
-<div id="" class="callout">
-<dl>
-<dt>p5.js</dt>
-<dd>is a JavaScript library that starts with the original goal of Processing, to make coding accessible for artists, designers, educators, and beginners, and reinterprets this for today’s web.</dd>
-</dl>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Hello, p5! | Comp Form</title></head><body class="comp-form"><a href="/"><div id="logo"><svg width="20px" height="18px" viewbox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Desktop" transform="translate(-18.000000, -16.000000)" fill="#000000"><g id="Compform-Logo" transform="translate(18.000000, 16.000000)"><polygon id="Triangle-Copy-4" points="15 9 20 18 10 18"></polygon><polygon id="Triangle-Copy-5" points="5 9 10 18 0 18"></polygon><polygon id="Triangle-Copy-6" points="10 0 15 9 5 9"></polygon></g></g></g></svg></div></a><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Hello, p5!</span><div class="buttons"><a class="previous" href="../tiles"><i class="fa fa-caret-left fa-lg"></i>Tile Maps</a><a class="next" href="../pixels">Pixels<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Hello, p5!</h1><h6>Overview</h6><p class="description">P5 intro</p><h6>Tools</h6><p class="software">p5.js + p5.dom</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="processing-and-p5js">Processing and p5.js</h2>
+<p>There are many live, working code examples throught this site. Many of these examples use <strong>p5.js</strong>, a Javascript version of <strong>Processing</strong>. This chapter introduces p5.js, which is a great tool building quick creative-coding sketches for the web.</p>
+<h3 id="processing">Processing</h3>
+<div id="" class="links-sidebar">
+<p><a href="https://processing.org/">Processing</a></p>
+<p><a href="http://reas.com/">Casey Reas</a></p>
+<p><a href="http://benfry.com/">Benjamin Fry</a></p>
+<p><a href="http://shiffman.net/">Daniel Shiffman</a></p>
 </div>
-<p>P5 is a javascript library for making drawings and animations. It makes getting set up and working faster and provides simple functions for common tasks. It also allows for a more imperative programming style, similar to Processing.</p>
-<p>If you have never worked with Processing or p5, you’ll need to do some reading and learning on your own. Here are some resources to get you started quickly:</p>
-<p><a href="https://p5js.org/">p5.js Website</a></p>
-<p><a href="http://pucd2035-e-f15.github.io/class_notes/">Justin’s Creative Computing Class</a></p>
-<p>[[ beef up a p5 resources section, important websites + books ]]</p>
-<p>[[ slideshow of cool p5 + processing projects]]</p>
+<p><a href="https://processing.org/">Processing</a> is a programming language created for visual artists learning to make creative coding projects. It was created in 2001 by MIT Media Lab alumni and creative coders <a href="http://reas.com/">Casey Reas</a> and <a href="http://benfry.com/">Benjamin Fry</a>. The project is now also let by <a href="http://shiffman.net/">Daniel Shiffman</a>, who has published a number of popular books and video tutorials on creating art with Processing.</p>
+<p>Processing combines a simple programming environment and a programming language to create an low friction entry point for creative computing. Processing provides a basic but powerful <a href="https://processing.org/reference/">drawing API</a>, and has libraries for other common applications like sound and networking.</p>
+<h3 id="p5js">p5.js</h3>
+<div id="" class="links-sidebar">
+<p><a href="https://p5js.org/">p5.js</a></p>
+<p><a href="http://lauren-mccarthy.com/">Lauren McCarthy</a></p>
+</div>
+<p><a href="https://p5js.org/">p5.js</a> was created by artist <a href="http://lauren-mccarthy.com/">Lauren McCarthy</a> to brings the Processing API and spirit to Javascript and the web. Working in p5.js is very similar to working in Processing, with the benefit that p5.js sketches work in any modern browser.</p>
+<h3 id="learning-processing-and-p5js">Learning Processing and p5.js</h3>
+<p>Processing and p5.js are both widely popular open-source projects with large, active communities. They are both well documented as well. You can start with either language, you don’t need to know Processing to learn p5.js.</p>
+<table class="table table-responsive">
+<thead>
+<tr>
+<th>Site</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://processing.org/">Processing</a></td>
+<td>Processing Homepage</td>
+</tr>
+<tr>
+<td><a href="https://processing.org/reference/">Reference</a></td>
+<td>The Processing core API Documentation</td>
+</tr>
+<tr>
+<td><a href="https://processing.org/tutorials/">Tutorials</a></td>
+<td>Official Processing tutorials</td>
+</tr>
+<tr>
+<td><a href="https://p5js.org/">p5.js</a></td>
+<td>pt.js Homepage</td>
+</tr>
+<tr>
+<td><a href="https://p5js.org/reference/">p5.js Reference</a></td>
+<td>The p5.js core API Documentation</td>
+</tr>
+<tr>
+<td><a href="https://p5js.org/learn/">p5.js Tutorials</a></td>
+<td>Official p5.js tutorials</td>
+</tr>
+<tr>
+<td><a href="http://shiffman.net/videos/">Shiffman’s Videos</a></td>
+<td>Dan Shiffman has a full range of video tutorials for p5.js and creative code.</td>
+</tr>
+<tr>
+<td><a href="https://www.khanacademy.org/computing/computer-programming/programming">Khan Academy<br/> JS Drawing &amp; Animation</a></td>
+<td>Complete, free course on drawing with code using p5.js.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="a-p5js-example-sketch">A p5.js Example Sketch</h3>
+<p>This sketch draws a very simple house. You can try changing or adding to the house by editing the code below. You’ll need to hit cmd/ctrl-s to update the code after you make changes.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/p5/sketches/house.js">
+</iframe>
+</div>
+</div>
+<h2 id="sketching-locally">Sketching Locally</h2>
+<p>You can try out p5.js in the editor above, but to start making your own sketches you’ll want a better setup. The most common way to work with p5.js is to use a local editor and browser. You will probably need a local web server too, because Chrome won’t let your code do certain things unless it comes from a server.</p>
 <h3 id="recommended-tools">Recommended Tools</h3>
-<ul>
-<li><a href="https://desktop.github.com/">Github Desktop for Mac</a></li>
-<li><a href="https://www.google.com/chrome/browser/desktop/">Google Chrome</a></li>
-<li><a href="https://atom.io/">Atom</a>
-<ul>
-<li>Atom Package: jsformat</li>
-<li>Atom Package: linter</li>
-<li>Atom Package: linter-jshint</li>
-<li>Atom Package: atom-live-server</li>
-</ul>
-</li>
-</ul>
-<p>[[need to check out the new github app, sigh]]</p>
-<h2 id="getting-started-sketching-in-p5">Getting Started Sketching in p5</h2>
-<p>For the first few weeks, we’ll be using p5 for our sketches. Rather than create a separate project repo for each sketch, keep your sketches organized on one repo. I’ve created a template project for your sketches.</p>
-<p>We’ll run through these steps to get up and running with the template together in class.</p>
-<ul>
+<dl>
+<dt class="boxed right"><a href="https://www.google.com/chrome/browser/desktop/">Google Chrome</a></dt>
+<dd>You can use any modern browser. I tend to use Google Chrome because I like its developer tools. In Chrome, be sure to open the Javascript console with <code>command-option-j</code>. If you have problems in your code, chrome will report errors in the console.</dd>
+<dt class="boxed right"><a href="https://atom.io/">Atom</a></dt>
+<dd>Atom is a free text editor from Github. It works pretty good for quick p5.js sketches, especially if you install a few add-on packages. I recommend installing and using these.</dd>
+</dl>
+<table class="table table-responsive">
+<thead>
+<tr>
+<th>Package</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jsformat</td>
+<td>Consistently formats the spacing and indenting of your code. Well formatted code is much easier to read and work with.</td>
+</tr>
+<tr>
+<td>linter</td>
+<td>Base package that looks for and reports mistakes in your code.</td>
+</tr>
+<tr>
+<td>linter-jshint</td>
+<td>Language linter for javascript</td>
+</tr>
+<tr>
+<td>atom-live-server</td>
+<td>Provides a simple webserver right from Atom, complete with live reload.</td>
+</tr>
+</tbody>
+</table>
+<p>Lately, I’ve also been using <a href="https://code.visualstudio.com/">VS Code</a> with similar packages. You can use any text editor you wish.</p>
+<h3 id="creating-a-p5js-project">Creating a p5.js Project</h3>
+<p>To create a p5.js Project from scratch you need to do a few things.</p>
+<ol>
+<li>Install a text editor and browser.</li>
+<li>Download the p5.js library.</li>
+<li>Create an <code>.html</code> file that includes the p5.js library.</li>
+<li>Write a sketch in Javascript. The script will be included either in <code>&lt;script&gt;</code> tags with your <code>.html</code> file or in a seperate <code>.js</code> file.</li>
+<li>Load the <code>.html</code> file in a browser to see it run.</li>
+</ol>
+<div id="" class="links-sidebar">
+<p><a href="https://p5js.org/get-started/">p5.js:<br/> Get Started</a></p>
+</div>
+<p>This process is detailed in the <a href="https://p5js.org/get-started/">p5.js Get Started guide</a>.</p>
+<h3 id="tips">Tips</h3>
+<ol>
 <li>
-<p>Starting a New Project</p>
-<ul>
-<li>Create a Github Account / Log Into Github</li>
-<li>Create a Repo on Github</li>
-<li>Clone the Repo to Your Computer, With Github for Mac</li>
-<li>Add/Modify A <code>README.md</code> File</li>
-<li>Commit the Files</li>
-<li>Push Your Commits</li>
-<li>Check <code>github.com</code> to confirm your <code>README.md</code> synced.</li>
-</ul>
+<p>Always Read your Error Messages</p>
+<p>Once you are up and running be sure to open the Javascript console to see error messages and debugging information. In Chrome you can open the console with the <code>View » Developer » JavaScript Console</code> menu or by pressing <code>command-option-j</code>. When something goes wrong with your code, Chrome tries to help by providing error messages in the console. Sometimes these messages are not very clear, but they are always more helpful than nothing.</p>
+<p>Keep the console open all of the time.</p>
 </li>
 <li>
-<p>Use the Class p5 Sketches Template</p>
-<ul>
-<li>Download —<strong>Don’t Fork</strong>— the Template</li>
-<li>Add the Files to Your Project</li>
-<li>Verify the Starter Sketches Work</li>
-<li>Commit and Push</li>
-</ul>
+<p>Run a Local Server</p>
+<p>You are going to need a local server. As soon as you start working with images or other network resources, Chrome is going to require that your code be served via <code>http</code> instead of the local file system. The <code>atom-live-server</code> package for Atom provides a super easy-to-use and simple web server you can start right from within Atom.</p>
 </li>
 <li>
-<p>Duplicate a template sketch</p>
+<p>Use Live Reload</p>
+<p>It is important to break down your problem into small steps and try them out one by one. It is a good idea to reload your sketch after each small change, so you will be reloading very often. Manual reloading requires saving, switching to the browser, and reloading. The <code>atom-live-server</code> provides live reloading: it will tell the browser to reload every time you save. This keeps you in your editor and speeds up your workflow.</p>
 </li>
 <li>
-<p>Start Sketching!</p>
+<p>Use a Code Formatter</p>
+<p>When your code is well formatted it is easier to read and it is easier to spot mistakes. A code formatter will keep your code consistently formated completely automatically, giving you this benefit without any extra effort.</p>
 </li>
-</ul>
-<h3 id="some-basic-examples">Some Basic Examples</h3>
-<p>[[ 2 or 3 very basic examples that show the drawing api, maybe one of them is a little more complicated, procedrual coolness ]]</p>
-<p>[[ challenges? ]]</p>
-<h2 id="what-git-and-github-are">What Git and Github Are</h2>
-<p><a href="http://git-scm.com/">Git</a> is a version control system. As you work on a project it will grow and change. Git keeps track of the changes you make to the files in your project, keeping a valuable history. With version control, you can review changes to a file over time and you can revert a single file or entire project to an earlier version if (when) something goes wrong. Git also provides powerful tools for sharing your work with others and merging the work of teammates.</p>
-<p><a href="http://www.github.com">Github</a> is a service that hosts software projects that use Git. Github builds on Git, adding features for collaborative coding such as bug tracking and code reviews. Github hosts a huge array of open-source and private projects and libraries.</p>
-<p>Normally, you use the Git software through its command line interface. If you are not comfortable using the command line, you won’t be comfortable using Git in this way. <a href="https://desktop.github.com/">Github Desktop</a> is a simple graphical user interface for Git, with added integration with Github. Github desktop isn’t as powerful as the command line interface, but it can cover the basic workflows we’ll use in class.</p>
-<h3 id="getting-started-with-git-and-github">Getting Started with Git and Github</h3>
-<p>[[ just a little info?]]</p>
-</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
+</ol>
+<!-- 
+### The Comp Form p5.js Template Project
+
+
+## Getting Started Sketching in p5
+
+For the first few weeks, we'll be using p5 for our sketches. Rather than create a separate project repo for each sketch, keep your sketches organized in one repo. I've created a template project for your sketches.
+
+We'll run through these steps to get up and running with the template together in class.
+
+- Starting a New Project
+  - Create a Github Account / Log Into Github
+  - Create a Repo on Github
+  - Clone the Repo to Your Computer, With Github for Mac
+  - Add/Modify A `README.md` File
+  - Commit the Files
+  - Push Your Commits
+  - Check `github.com` to confirm your `README.md` synced.
+
+
+- Use the Class p5 Sketches Template
+  - Download —**Don't Fork**— the Template
+  - Add the Files to Your Project
+  - Verify the Starter Sketches Work
+  - Commit and Push
+
+- Duplicate a template sketch
+
+- Start Sketching!
+
+
+
+
+### Some Basic Examples
+
+[[ 2 or 3 very basic examples that show the drawing api, maybe one of them is a little more complicated, procedrual coolness ]]
+
+[[ challenges? ]]
+
+
+
+## What Git and Github Are
+
+- [Github Desktop for Mac](https://desktop.github.com/)
+
+[Git](http://git-scm.com/) is a version control system. As you work on a project it will grow and change. Git keeps track of the changes you make to the files in your project, keeping a valuable history. With version control, you can review changes to a file over time and you can revert a single file or entire project to an earlier version if (when) something goes wrong. Git also provides powerful tools for sharing your work with others and merging the work of teammates.
+
+[Github](http://www.github.com) is a service that hosts software projects that use Git. Github builds on Git, adding features for collaborative coding such as bug tracking and code reviews. Github hosts a huge array of open-source and private projects and libraries.
+
+Normally, you use the Git software through its command line interface. If you are not comfortable using the command line, you won't be comfortable using Git in this way. [Github Desktop](https://desktop.github.com/) is a simple graphical user interface for Git, with added integration with Github. Github desktop isn't as powerful as the command line interface, but it can cover the basic workflows we'll use in class.
+
+
+### Getting Started with Git and Github
+[[ just a little info?]]
+ -->
+<style>
+td:first-child { width : 25% }
+</style></div></div></div><div class="container" id="scroll-out"></div></div></body></html>
