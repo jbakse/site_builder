@@ -10,7 +10,7 @@ previous: Tile Maps
 previous_url: ../tiles
 
 hero_title: Hello, p5!
-description: P5 intro
+description: Many of the examples on this site use p5.js, a Javascript creative coding based on Processing.
 software: p5.js + p5.dom
 ---
 

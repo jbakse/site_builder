@@ -66,7 +66,7 @@ p5.js
 
 <a class="col-6 col-md-4" data-ready="true" href="./strategy">
 
-### Strategy
+### Strategies
 p5.js
 
 </a>

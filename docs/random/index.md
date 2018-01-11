@@ -10,7 +10,7 @@ next: Parameters
 next_url: ../parameters
 
 hero_title: Random Values
-description: Procedural Generation systems often employ random values their main source of variety. Understanding how to generate, bias, and map random values is key to controlling the aesthetics of their output.
+description: Procedural Generation systems often employ random values as their main source of variety. Understanding how to generate, bias, map, and control random values is key to controlling the aesthetics of these systems.
 software: p5.js + p5.dom
 ---
 

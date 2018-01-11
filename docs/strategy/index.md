@@ -1,16 +1,16 @@
 ---
-title: Strategy
+title: Strategies
 layout: layouts/compform_chapter.pug
 debug: false
 
-header_title: Strategy
+header_title: Strategies
 previous: Noise
 previous_url: ../noise
 next: false
 next_url: false
 
-hero_title: Strategy
-description: Building complex procedural generation systems requires analyzing your problem and creating a strategy for solving it.
+hero_title: Point Placing Strategies
+description: Building a complex procedural generation system requires analyzing your problem and creating a strategy for solving it. Explore tactics and strategies for placing points on a square.
 software: p5.js
 ---
 
