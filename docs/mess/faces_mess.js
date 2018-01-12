@@ -1,5 +1,6 @@
-let face_parts;
+let p5_canvas;
 
+let face_parts;
 let grid_width = 32;
 let grid_height = 32;
 let bases = 0;
@@ -213,7 +214,7 @@ function mouseMoved() {
     updateTimers();
 }
 
-function mousePressed() {
+function mouseClicked() {
     updateTimers();
 }
 
