@@ -87,7 +87,7 @@ function setup() {
         options: hair_colors.length
     }
 
-
+    resetSpinners();
 
     noSmooth();
     noStroke();
