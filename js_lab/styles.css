@@ -28,6 +28,10 @@
 
 
 
+
+
+
+
 /* /////////////////////////////////////////
 /// Lab
 */
@@ -109,6 +113,11 @@
 }
 
 
+.js-lab #editor .ace_selection {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+
 .js-lab #editor .ace_gutter {
     background-color: #F4F3F1;
 }
@@ -118,7 +127,7 @@
 }
 
 .js-lab #editor .ace_active-line {
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .02);
 }
 
 
@@ -143,6 +152,10 @@
 .js-lab #maxamize {
     color: inherit;
 }
+
+
+
+
 
 
 
@@ -196,6 +209,10 @@
     border-radius: 10px;
     background-color: #CCC;
 }
+
+
+
+
 
 
 
@@ -502,7 +519,7 @@ body.js-lab-view {
 
 #editor.ace_editor {
     font-family: 'Overpass Mono', monospace;
-    font-size: 14.4px;
+    font-size: 14px;
     color: #000;
 }
 
@@ -514,6 +531,10 @@ body.js-lab-view {
     bottom: 0 !important;
     right: 0 !important;
 }
+
+
+
+
 
 
 

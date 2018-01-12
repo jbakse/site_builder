@@ -15,7 +15,8 @@ software: p5.js
 
 ---
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<script src="../mess/noise_mess_3.js"></script>
 
 
 ## Noise
@@ -356,3 +357,5 @@ Make a program that generates treasure maps.
 [GPU Gems: Improved Perlin Noise](https://developer.nvidia.com/gpugems/GPUGems/gpugems_ch05.html)
 : Ken Perlin details an improved implementation of Perlin Noise for [GPU Gems](https://developer.nvidia.com/gpugems/GPUGems/gpugems_pref01.html)
 
+[Lecture: Juicing your Cameras With Math](https://www.youtube.com/watch?v=tu-Qe66AvtY)
+: GDC talk on making cameras cooler. At 11:40 he discusses the benefits of using Perlin noise instead of RNG for camera shake.

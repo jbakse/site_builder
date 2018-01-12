@@ -16,13 +16,11 @@ Review sub folder notes files
 # Content
 
 
-FAVICON
 
 
 ## Meta Data
 
 ## Template + Style
-js-lab selection background color hard to see
 
 
 ## References
@@ -66,22 +64,22 @@ js-lab selection background color hard to see
 - make a T-15 minute entry for the song of the day, video of the day, etc.
 
 ## File Org
-- chapter
-  - sketches
-  - slides
-  - figures
-  index.md
-  ...included yaml and md
-
+- x.organize
+  - chapter
+    - sketches
+    - slides
+    - figures
+    index.md
+    ...included yaml and md
 
 ## Front page
-- Chapters
-- Class Calender/Lesson Plans
+- x.Chapters
+- x.Class Calender/Lesson Plans
 - Links
-  - Sketch Blog
-  - Syllabus
+  - x.Sketch Blog
+  - x.Syllabus
   - Global Book/Resource/Site list? Maybe.
-  - Class Notes Github? Nah.
+  - n.Class Notes Github? Nah.
 
 ## Page Priorities
 - Pre-class Message
@@ -123,7 +121,6 @@ js-lab selection background color hard to see
 # Publishing System
 
 ## Template
-- new header logo with another cut out triangle?
 
 ## markdown_builder.js
 
@@ -188,3 +185,6 @@ https://benedikt-bitterli.me/index.html
 
 
 Chiptune Radio Spotify
+
+
+http://ctrl500.com/tech/handcrafted-feel-dungeon-generation-unexplored-explores-cyclic-dungeon-generation/

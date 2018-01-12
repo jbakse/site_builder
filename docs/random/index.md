@@ -14,6 +14,10 @@ description: Procedural Generation systems often employ random values as their m
 software: p5.js + p5.dom
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<script src="../mess/faces_mess.js"></script>
+
+
 ## Random Values
 
 We use the word *random* to mean a variety of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety. 
