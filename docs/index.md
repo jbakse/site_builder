@@ -87,7 +87,7 @@ p5.js
 <div class="row">
 
 <div class="col-8 col-md-3 overview">
-Independent explorations of specific procedural generation tools, languages, media, and themes.
+Independent chapters exploring specific procedural generation tools, languages, media, and themes.
 </div>
 
 <!-- Inner -->

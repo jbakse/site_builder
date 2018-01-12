@@ -3,6 +3,10 @@ html(lang="en")
 	head
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+
+		link(rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32")
+		link(rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16")
+
 		// jquery
 		script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js", integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", crossorigin="anonymous")
 
@@ -27,8 +31,9 @@ html(lang="en")
 
 	body.comp-form(class= debug?"debug":"")
 
-		a(href="/")
-			include ./_logo.pug
+		#logo
+			a(href="/")
+				include ./_logo.svg
 
 		#content
 			#copy.container.comp-form-copy
