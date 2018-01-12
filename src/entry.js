@@ -9,7 +9,18 @@ function main() {
         wrap: false
     })
     $('.carousel').carousel('pause');
+
+
 }
+
+// $(window).on("load", () => {
+//     console.log("activate labs");
+
+//     $("iframe[data-src]").each(function() {
+//         $(this).attr("src", $(this).attr("data-src"));
+//     });
+
+// });
 
 
 // $(document).ready(function() {

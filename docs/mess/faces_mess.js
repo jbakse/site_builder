@@ -219,6 +219,9 @@ function mouseClicked() {
 }
 
 function updateTimers() {
+    if (!p5_canvas) {
+        return;
+    }
     $(p5_canvas.canvas).removeClass("hide");
     clearTimeout(hide_timeout);
     clearTimeout(clear_timeout);
