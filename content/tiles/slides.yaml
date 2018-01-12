@@ -1,7 +1,7 @@
 - artist: Josef Albers
   title: Bauhaus Lettering Set, 1926-31
   image: https://s-media-cache-ak0.pinimg.com/736x/a1/51/42/a15142d6be1048869220f180720e8e67.jpg
-  comments: Josef Albers was a highly inflential artist, designer, and educator. First a student and then faculty at the Bauhaus, his color theory work is a primary influence design pedagogy.
+  comments: Josef Albers was a highly inflential artist, designer, and educator. First a student and then faculty at the Bauhaus, his color theory work is a primary influence of design pedagogy.
   links:
     - label: The Josef & Anni Albers Founation
       href: http://www.albersfoundation.org/
@@ -62,7 +62,7 @@
 - artist: Sunsoft
   title: Batman (NES)
   image: ./slides/batman.png
-  comments: Batman has some of the best visuals of any game released for the NES. Every title uses just 4 colors chosen from the NES's 64 color palette.
+  comments: Batman exhbits some of the best visuals found on the NES. Every tile uses just 4 colors chosen from the NES's 64 color palette.
   links:    
     - label: Batman Tile Maps
       href: http://www.vgmaps.com/Atlas/NES/index.htm#B
@@ -81,7 +81,7 @@
 - artist: Yacht Club Games
   title: Shovel Knight
   image: http://yachtclubgames.com/wp-content/uploads/2014/06/screen_07.png
-  comments: Shovel Knight is an excellent retro platformer with an art style that carefully embraced the hardware limitations of the 8-bit era.
+  comments: Shovel Knight is an excellent retro platformer with an art style that carefully embraces the hardware limitations of the 8-bit era.
   links:
     - label: Shovel Knight
       href: http://yachtclubgames.com/shovel-knight/

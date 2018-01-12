@@ -16,9 +16,9 @@ software: p5.js + p5.dom
 
 ## Tile Maps + Sets
 
-Artists and designers have worked with modular motifs arranged in grids throughout history. This approach affords a variety of aesthetic and practical benefits. Repetition on a grid leads to patterns with natural visual rhythm and concord wile allowing for variety and complexity. Practically, this method allows templates and molds to facilitate mass production of the individual units, which can be arranged contextually on-site. This approach also allows the creative work to be split up: a single artist creates the graphic system, and local craftsmen can apply the system.
+Artists and designers have worked with modular motifs arranged on grids throughout history. This approach affords a variety of aesthetic and practical benefits. Repetition on a grid leads to patterns with natural visual rhythm and concord while allowing for variety and complexity. Practically, this method allows templates and molds to facilitate mass production of the individual units, which can be arranged contextually on-site. This approach also allows the creative work to be split up: a single artist creates the graphic system, and local craftsmen apply it.
 
-You will find examples of this approach in many media including masonry and tile, textiles, font design, and video games. Tile maps and sets were extremely widely used in the 8-bit and 16-bit video game era. Hardware limitation imposed strict limits on designers who took advantage of hardware tile support to push the media forward. Today's games do not face the same hardware restrictions but modular graphic system are still an important tool for artists. Support for tile maps is built into many contemporary game engines, including [Unity](https://docs.unity3d.com/Manual/Tilemap.html).
+You will find examples of this approach in many media including masonry and tile, textiles, font design, and video games. Tile maps and sets were widely used in the 8-bit and 16-bit video game era. Hardware limitation imposed strict limits on designers who took advantage of hardware tile support to push the media forward. Today's games do not face the same hardware restrictions but modular graphic systems are still an important tool for artists. Support for tile maps is built into many contemporary game engines, including [Unity](https://docs.unity3d.com/Manual/Tilemap.html).
 
 
 
