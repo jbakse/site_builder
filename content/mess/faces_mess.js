@@ -210,7 +210,7 @@ let hide_timeout = null;
 let clear_timeout = null;
 
 function mouseMoved() {
-    updateTimers(1000);
+    updateTimers(2000);
 }
 
 

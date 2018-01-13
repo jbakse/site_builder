@@ -27,9 +27,11 @@ function draw() {
     }
 
     // draw flakes
-    flakes.forEach((f) => {
-        f.draw();
-    });
+    var index = flakes.length - 1;
+    while (index >= 0) {
+        flakes[index].draw();
+        index--;
+    }
 }
 
 

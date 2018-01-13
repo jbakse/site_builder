@@ -249,3 +249,7 @@ Design a full alphabet using a single tile set. Post an image that shows your fo
 
 [Breaking the NES for Shovel Knight](https://www.gamasutra.com/blogs/DavidDAngelo/20140625/219383/Breaking_the_NES_for_Shovel_Knight.php)
 : Shovel Knight is an amazing retro platformer from [Yacht Club Games](http://yachtclubgames.com/). Developer David D'Angelo discusses how the Nintendo's specific technical limitations and abilities influenced Shovel Knight's design.
+
+
+[The 8-bit Guy: How "oldschool" graphics worked]
+: Overview of the hardware limitation and creative solutions of early pixel grapihcs.
