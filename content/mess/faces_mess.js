@@ -180,9 +180,8 @@ function drawFace(x, y, r, w, h) {
     tint(hair_colors[traits.hair_colors.value]);
     drawTile(face_parts, 0, 0, w, h, traits.hairs.value, hairs);
     drawTile(face_parts, 0, 0, w, h, traits.beards.value, beards);
-
-
     drawTile(face_parts, 0, 0, w, h, traits.accents.value, accents);
+
     noTint();
 }
 
@@ -210,7 +209,7 @@ let hide_timeout = null;
 let clear_timeout = null;
 
 function mouseMoved() {
-    updateTimers(2000);
+    updateTimers(1000);
 }
 
 
