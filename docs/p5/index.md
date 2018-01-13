@@ -14,6 +14,10 @@ description: Many of the examples on this site use p5.js, a Javascript creative 
 software: p5.js + p5.dom
 ---
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<script src="../mess/flakes_mess.js"></script>
+
 ## Processing and p5.js
 
 There are many live, working code examples throught this site. Many of these examples use **p5.js**, a Javascript version of **Processing**. This chapter introduces p5.js, which is a great tool building quick creative-coding sketches for the web.

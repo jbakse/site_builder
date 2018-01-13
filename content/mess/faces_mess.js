@@ -27,8 +27,6 @@ let r = 0;
 
 function preload() {
     face_parts = loadImage("/mess/face_parts.png");
-
-
 }
 
 function setup() {
@@ -139,6 +137,7 @@ function draw() {
 
 function mousePressed() {
     resetSpinners();
+    updateTimers(4000);
 }
 
 function resetSpinners() {
@@ -211,14 +210,12 @@ let hide_timeout = null;
 let clear_timeout = null;
 
 function mouseMoved() {
-    updateTimers();
+    updateTimers(1000);
 }
 
-function mouseClicked() {
-    updateTimers();
-}
 
-function updateTimers() {
+
+function updateTimers(ms) {
     if (!p5_canvas) {
         return;
     }
@@ -227,9 +224,9 @@ function updateTimers() {
     clearTimeout(clear_timeout);
     hide_timeout = setTimeout(() => {
         $(p5_canvas.canvas).addClass("hide");
-    }, 1000);
+    }, ms);
 
     clear_timeout = setTimeout(() => {
         clear();
-    }, 2100);
+    }, ms + 1100);
 }

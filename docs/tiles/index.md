@@ -13,6 +13,8 @@ hero_title: Tile Maps
 description: Tile mapping—creating images by arranging small graphic tiles—is a widely popular technique with a range of technical and artistic benefits.
 software: p5.js + p5.dom
 ---
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<script src="../mess/truchent_mess.js"></script>
 
 ## Tile Maps + Sets
 
