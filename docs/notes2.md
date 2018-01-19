@@ -206,3 +206,6 @@ http://aphall.com/2017/12/advent-10/
 
 MS Makecode
 https://makecode.com/_eeaWky7sofAY
+
+Derek Yu Finishing a Game
+http://makegames.tumblr.com/post/1136623767/finishing-a-game

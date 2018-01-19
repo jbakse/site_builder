@@ -175,6 +175,23 @@
   font-size: 12px;
   margin-bottom: 25px; }
 
+.comp-form-toc h3 a {
+  color: black; }
+
+.comp-form-toc h3 a:hover {
+  border-bottom: 1px soild black; }
+
+.comp-form-toc a:hover {
+  text-decoration: none; }
+
+.comp-form-toc .table a {
+  color: black;
+  border-bottom: 1px solid black; }
+
+.comp-form-toc .table a[href="#"] {
+  color: black;
+  border-bottom: none; }
+
 .comp-form-toc .row > a[data-ready="false"],
 .comp-form-toc .row > a[data-ready="false"]:hover {
   color: #888;
