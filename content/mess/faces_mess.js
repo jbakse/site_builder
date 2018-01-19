@@ -1,4 +1,5 @@
 let p5_canvas;
+let hidden = false;
 
 let face_parts;
 let grid_width = 32;
@@ -116,6 +117,7 @@ function setup() {
 
 
 function draw() {
+
     if (mouseX == 0 && mouseY == 0) {
         return;
     }
@@ -210,6 +212,7 @@ let clear_timeout = null;
 
 function mouseMoved() {
     updateTimers(1000);
+
 }
 
 
@@ -218,14 +221,19 @@ function updateTimers(ms) {
     if (!p5_canvas) {
         return;
     }
+
     $(p5_canvas.canvas).removeClass("hide");
+    hidden = false;
+    loop();
+
     clearTimeout(hide_timeout);
     clearTimeout(clear_timeout);
     hide_timeout = setTimeout(() => {
         $(p5_canvas.canvas).addClass("hide");
     }, ms);
-
     clear_timeout = setTimeout(() => {
         clear();
+        hidden = true;
+        noLoop();
     }, ms + 1100);
 }

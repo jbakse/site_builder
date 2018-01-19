@@ -5,9 +5,39 @@
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Parameters</span><div class="buttons"><a class="previous" href="../random"><i class="fa fa-caret-left fa-lg"></i>Random Values</a><a class="next" href="../noise">Noise<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Parameters</h1><h6>Overview</h6><p class="description">Expose parameters to make your procedural systems easier to control, adjust, and use.</p><h6>Tools</h6><p class="software">p5.js + p5.dom</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
-<script src="../../mess.js"></script>
-<script src="./parameters_mess.js"></script> -->
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Parameters</span><div class="buttons"><a class="previous" href="../random"><i class="fa fa-caret-left fa-lg"></i>Random Values</a><a class="next" href="../noise">Noise<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Parameters</h1><h6>Overview</h6><p class="description">Expose parameters to make your procedural systems easier to control, adjust, and use.</p><h6>Tools</h6><p class="software">p5.js + p5.dom</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/addons/p5.dom.js"></script>
+<script src="/mess/rocket_mess.js"></script>
+<style>
+
+.mess-controls {
+            font-family: Monaco;
+            font-size: 10px;
+            position: fixed;
+            top: 100px;
+            padding: 10px;
+            z-index: 1000;
+            background-color: #FF0;
+            mix-blend-mode: multiply;
+        }
+
+        .mess-controls p {
+            margin-top: 2em;
+            margin-bottom: 0;
+        }
+
+        .mess-controls {
+            opacity: 1;
+            transition: opacity .25s;
+        }
+
+        .mess-controls.hide {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+
+</style>
 <h2 id="parameters">Parameters</h2>
 <p>One of the most powerful and rewarding aspects of writing a procedural generation system is exploring what it can make. The initial investment of time spent coding is repaid by the ability to iterate easily and quickly. Many procedural systems can produce endless variations and can be pushed to surprising extremes. Exploring the range of the system leads to new ideas to build and aesthetics to explore.</p>
 <div id="" class="links-sidebar">
@@ -71,7 +101,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 <p>Notably, this code doesn’t do <em>exactly</em> the same thing as the orignal version. Some of the complexity in the original was left over from an early approach and no longer needed. Considering the code as a system and identifying and naming its parameters made it easy to spot and fix the unneeded complexity.</p>
 <h2 id="parameters-interface-design">Parameters &amp; Interface Design</h2>
 <div id="" class="!short slides-wrap slideInfos">
-<div id="carousel-2101" class="carousel slide" data-ride="carousel">
+<div id="carousel-1777" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner slides" role="listbox">
 <div class="carousel-item active">
 <div class="slide">
@@ -177,7 +207,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 </div>
 </div>
 <div class="slide-info-top">
-<a class="carousel-control-prev" href="#carousel-2101" role="button" data-slide="prev">
+<a class="carousel-control-prev" href="#carousel-1777" role="button" data-slide="prev">
 <span class="carousel-prev-icon">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs></defs>
@@ -188,7 +218,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 </span>
 <span class="sr-only">Previous</span>
 </a>
-<a class="carousel-control-next" href="#carousel-2101" role="button" data-slide="next">
+<a class="carousel-control-next" href="#carousel-1777" role="button" data-slide="next">
 <span class="carousel-next-icon-tc">
 <svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs></defs>
@@ -389,5 +419,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 <dl>
 <dt><a href="https://p5js.org/reference/">p5: Reference</a></dt>
 <dd>Documentation on the p5 API.</dd>
+<dt><a href="https://github.com/dataarts/dat.gui">dat.gui</a></dt>
+<dd>Popular, lightweight, tool for quickly making nice looking, quick interfaces like <a href="http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage">this one</a>.</dd>
 </dl>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>

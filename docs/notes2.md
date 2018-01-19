@@ -188,3 +188,21 @@ Chiptune Radio Spotify
 
 
 http://ctrl500.com/tech/handcrafted-feel-dungeon-generation-unexplored-explores-cyclic-dungeon-generation/
+
+
+
+COOL  OPENSCAD THING
+https://libfive.com/studio/
+
+
+Compose Megaman Music
+https://www.youtube.com/watch?v=JknOdnEtwxs
+
+
+
+http://aphall.com/2017/12/advent-25/
+http://aphall.com/2017/12/advent-10/
+
+
+MS Makecode
+https://makecode.com/_eeaWky7sofAY
