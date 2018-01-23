@@ -9,6 +9,7 @@ function preload() {
 }
 
 function setup() {
+    pixelDensity(1);
     p5_canvas = createCanvas(windowWidth, windowHeight);
     $(p5_canvas.canvas).addClass("mess");
     $(p5_canvas.canvas).addClass("hide");

@@ -209,3 +209,6 @@ https://makecode.com/_eeaWky7sofAY
 
 Derek Yu Finishing a Game
 http://makegames.tumblr.com/post/1136623767/finishing-a-game
+
+300 Mechanics
+http://www.squidi.net/three/index.php

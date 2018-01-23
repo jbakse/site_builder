@@ -32,6 +32,10 @@ Time    | ESA       | Activity
 6:15    | Activate  | Set up Sketch Blog Accounts + Post
 
 
+### Announcements
+
+Graduate extra assignment.
+
 <!-- ::: .activity
 
 ## Class Introductions
