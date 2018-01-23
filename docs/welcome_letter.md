@@ -1,6 +1,7 @@
 Hello All!
 
-Welcome to Computational Form, I'm looking forward to meeting you all (and seeing some of you again)!
+Welcome to Computational Form, I'm looking forward to meeting you all (and seeing some of you again).
+
 
 # Bookmark this Site
 The class website is http://compform.net
@@ -13,9 +14,8 @@ Well, not much homework. Please read the syllabus and watch the videos mentioned
 
 # Read the Syllabus
 The Syllabus is on the class website. Read it now!
-
 **Bring three questions about the syllabus, typed on paper, to the first class.**
-
+**These will count toward your "participation" grade! This can be an easy "A" or easy "0" to kick off your semester.**
 
 # Be on Time
 The short version of my attendance policy:
