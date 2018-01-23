@@ -7,6 +7,7 @@ let in_scale = .01;
 let out_scale = 100;
 
 function setup() {
+    pixelDensity(1);
     p5_canvas = createCanvas(windowWidth, windowHeight);
     $(p5_canvas.canvas).addClass("mess");
     $(p5_canvas.canvas).addClass("hide");

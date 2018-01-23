@@ -51,6 +51,32 @@
     }
 
 
+    h3 a {
+        color: black;
+    }
+
+    h3 a:hover {
+        border-bottom: 1px soild black;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .table a {
+
+        color: black;
+        border-bottom: 1px solid black;
+    }
+
+    .table a[href="#"] {
+
+        color: black;
+        border-bottom: none;
+    }
+
+
+
     .row>a[data-ready="false"],
     .row>a[data-ready="false"]:hover {
         color: #888;

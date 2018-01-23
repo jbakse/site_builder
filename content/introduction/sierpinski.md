@@ -2,6 +2,7 @@
 title: Sierpinski
 layout: layouts/compform_plain.pug
 debug: false
+hide_logo: true
 ---
 
 

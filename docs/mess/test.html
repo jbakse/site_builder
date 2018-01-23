@@ -4,9 +4,37 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
-    <script src="./flakes_mess.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/addons/p5.dom.js"></script>
+
+    <script src="./strat_mess.js"></script>
 
     <style>
+        .mess-controls {
+            font-family: Monaco;
+            font-size: 10px;
+            position: fixed;
+            top: 100px;
+            padding: 10px;
+            z-index: 1000;
+            /* background-color: #FF0;
+            mix-blend-mode: multiply; */
+        }
+
+        .mess-controls p {
+            margin-top: 2em;
+            margin-bottom: 0;
+        }
+
+        .mess-controls {
+            opacity: 1;
+            transition: opacity .25s;
+        }
+
+        .mess-controls.hide {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
         canvas.mess {
             position: fixed;
             margin: 0;

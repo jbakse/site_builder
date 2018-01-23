@@ -14,11 +14,40 @@ description: Expose parameters to make your procedural systems easier to control
 software: p5.js + p5.dom
 ---
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
-<script src="../../mess.js"></script>
-<script src="./parameters_mess.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/addons/p5.dom.js"></script>
+<script src="/mess/rocket_mess.js"></script>
+
+<style>
+
+.mess-controls {
+            font-family: Monaco;
+            font-size: 10px;
+            position: fixed;
+            top: 100px;
+            padding: 10px;
+            z-index: 1000;
+            background-color: #FF0;
+            mix-blend-mode: multiply;
+        }
+
+        .mess-controls p {
+            margin-top: 2em;
+            margin-bottom: 0;
+        }
+
+        .mess-controls {
+            opacity: 1;
+            transition: opacity .25s;
+        }
+
+        .mess-controls.hide {
+            opacity: 0;
+            transition: opacity 1s;
+        }
 
 
+</style>
 
 
 ## Parameters
@@ -352,3 +381,5 @@ Build a face generating tool. This tool will create an image of a face that can 
 
 
 
+[dat.gui](https://github.com/dataarts/dat.gui)
+: Popular, lightweight, tool for quickly making nice looking, quick interfaces like [this one](http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage).

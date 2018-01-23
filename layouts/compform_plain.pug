@@ -30,10 +30,10 @@ html(lang="en")
 		title= title + " | Comp Form"
 
 	body.comp-form(class= debug?"debug":"")
-
-		#logo
-			a(href="/")
-				include ./_logo.svg
+		if !hide_logo
+			#logo
+				a(href="/")
+					include ./_logo.svg
 
 		#content
 			#copy.container.comp-form-copy

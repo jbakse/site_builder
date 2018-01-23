@@ -14,15 +14,34 @@ description: Building a complex procedural generation system requires analyzing 
 software: p5.js
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<script src="/mess/strat_mess.js"></script>
+
+
 
 
 ## Computational Form Strategies
 
-So far we've been looking at low-level topics like how to use `random()` and `noise()` to get specific results. As our goals grow more complex, we need to look at problems from at a much higher level. To create more complex systems you must first have a clear understanding of the result you would like to achieve, be able to break the problem down into smaller sub-problems, and then plan a series of steps to reach your goal.
+So far we've been looking at low-level topics like how to use `random()` and `noise()` to get specific results. As our goals grow **more complex**, we need to look at problems from at a much **higher level**. To create more complex systems you must develop a clear understanding of the result you would like to achieve, break the task down into smaller sub-tasks, and then implement the sub-tasks in code. In short you need to have a plan—a strategy—before you start coding.
+
+::: .callout
+
+Intermediate programming students often hear this advice:
+
+> Break you complex problem into smaller parts, and solve those parts.
+
+In practice, its tricker than that. It's hard to understand a complex problem and it's hard to break complex problem down. With experience you will be able to tackle larger and more varied problems, but even very experienced programmers work on systems they can't understand and break-down at first.
+
+When the program you want to make is too complex to understand well enough to break down you still have an option for getting started: make a simpler program. For example, imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You can begin to break it down into sub-tasks—keyboard controlled paddles, animated ball, scoreboards, etc—but it is hard to plan all those pieces at once. Before you start implementing each piece, you won't know the details, and without the details its hard to make pieces that fit together. So start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the little square move to the right. Don't worry about the paddles, or the score yet. Make the square bounce when it hits the side. Then make it move diagonally, and make sure it bounces off all the sides.
+
+You might make make dozens incremental working programs as you get the basic ball working. As you do, you will gain a clear understanding of details you need to see how that piece will work with the others. As you start to bring in other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. You can expect to run into some dead-ends and back track. This might have been avoided if you had made a complete plan in the beginning, but *in the beginning, you didn't know enough to make a complete plan*. This reason this strategy works is simple: instead of trying to do something you can't, you try to do something you can. 
+
+
+/::
 
 ### Building a Toolbox
 
-Many problems can be solved using the same techniques composed in different ways.The techniques we have already discussed are building-blocks that can be used in a wide array problems. As we explore other tools and media we will see many common themes and techniques emerge. 
+Many problems can be solved using the same techniques composed in different ways. The techniques we have already discussed are building-blocks that can be used in a wide array problems. As you explore other tools and media you will see many common themes and techniques emerge. 
 
 Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We've explored some of these already and will touch on others in the course of this class, but you don't need to know all of these techniques to build interesting things.
 
@@ -41,10 +60,13 @@ Consider the image below. How might you make something like this?
 
 
 
-## Populating a Square
+## Where Should I Put Things?
 
-Most of this chapter will be focus on a single problem area: arranging points on a square. This problem area shows up all the time: placing trees on an island, putting beads of water on glass, adding scratches to a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas. Beads of water shouldn't overlap. Scratches are more likely on raised, exposed parts of the ship. Each situation has different requirements, and depending on your approach, your can determine how planned, chaotic, random, natural, or mechanical the placement feels.
+Many procedural systems have to answer a fundamental question: *Where should I put things?*. 
 
+This problem area shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches to a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don't tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn't overlap because when beads of water touch the join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, your can determine how planned, chaotic, random, natural, or mechanical the placement feels.
+
+Most of this chapter will address this problem area by exploring a simple example: arranging points on a square. 
 
 ::: slides .!short
 @@include('./slides.yaml')
