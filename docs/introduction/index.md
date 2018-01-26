@@ -54,7 +54,7 @@ While we use computer programming throughout this class, it is important to unde
 
 Draw a Sierpinski Triangle with pencil&nbsp;and&nbsp;paper.
 
-The [Sierpinski Triangle](http://en.wikipedia.org/wiki/Sierpinski_triangle) is a fractal. It is **infinitely detailed** and **self-similar**. There are many, many ways to generate a Sierpinski Triangle. The amazing [sierpinski triangle page to end most Sierpinski triangle pages](http://www.oftenpaper.net/sierpinski.htm) details many of them. Here is another.
+The [Sierpinski Triangle](http://en.wikipedia.org/wiki/Sierpinski_triangle) is a fractal. It is **infinitely detailed** and **self-similar**. There are many, many ways to generate a Sierpinski Triangle. The amazing [Sierpinski triangle page to end most Sierpinski triangle pages](http://www.oftenpaper.net/sierpinski.htm) details many of them. Here is another.
 
 ### Instructions
 
@@ -62,7 +62,7 @@ Please take out a sheet of paper and pen and follow these instructions:
 
 1. Draw an up-pointing equilateral triangle that fills most of the page.
 2. Lightly mark the midpoint of each line of that triangle.
-3. Draw straight lines connecting each of those marks. This forms four new triangles: three that point up, one that points down.
+3. Draw straight lines connecting each of those marks. This forms **four** new triangles: **three** that point up, **one** that points down.
 4. Choose any empty, up-pointing triangle on the page.
 5. Go to instruction 2.
 
@@ -116,6 +116,14 @@ This class focuses on exploration. Each class introduces a new topic or tool, us
 
 ![This not That](figures/this_not_that.png){full-width}
 
+
+### MFA Writing Assignment
+
+As noted in the Syllabus, students in the MFA program must complete one extra assignment. BFA students are encouraged to also complete this assignment for extra credit. 
+
+In short this assignment is to choose a topic for further exploration, build a somewhat larger project, and write up a case study for the project. This assignment is intended to be flexibile, so feel free to propose your own spin.
+
+You can complete this assignment at any time durring the semester. I suggest turning this in around midterms. Please discuss your general plan for your project with me before starting.
 
 ### Notes on Daily Sketching
 Your goal **each day** should be to explore a different aspect of the weekly theme. Ideally, you will spend **1 to 2 hours on an idea**, resulting in an image or other artifact. Each day you will work on **different ideas**, possibly informed by something you did earlier in the week or class.
@@ -212,7 +220,7 @@ Coming into this class, you should:
 
 That said, this class offers a good deal of flexibility. If you are not sure if you are ready for this class, please speak with me today to make a plan.
 
-### Every Day
+### Every Class
 
 - Be early + ready.
 - Bring your computer, a sketchbook, a pencil, and a pen.

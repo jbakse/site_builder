@@ -768,6 +768,9 @@ canvas.hide {
   margin-top: 30px;
   margin-bottom: 30px; }
 
+table.table-responsive {
+  display: table; }
+
 @media (min-width: 768px) {
   div.js-lab {
     margin-left: calc( (100% + 15px * 2) / -8 * 2 - 15px);
