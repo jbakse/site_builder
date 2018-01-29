@@ -29,7 +29,7 @@ This is a class about computational form, algorithmic images, generative art, pa
 
 We will make things that make things.{bigger}
 
-There are many reasons artists and designers employ algorithmic methods, some important ones include:
+There are many reasons artists and designers employ algorithmic methods. Some important ones include:
 
 - exploring new aesthetic
 - automating complex tasks
