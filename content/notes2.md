@@ -212,3 +212,8 @@ http://makegames.tumblr.com/post/1136623767/finishing-a-game
 
 300 Mechanics
 http://www.squidi.net/three/index.php
+
+
+
+Random Noise and Procedural Generation (2D Terain explained)
+https://unwttng.com/how-does-procedural-generation-work-random-noise

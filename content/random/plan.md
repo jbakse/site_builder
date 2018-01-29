@@ -18,6 +18,10 @@ Dice, Dice Charts, Team Generator
 - Technical: Introduction the p5.js library
 - Technical: Introduction to Git and Github
 
+### Announcements
+
+- Did you cite your classmates tiles? 
+
 
 ### Schedule
 Time    | ESA               | Activity
@@ -35,6 +39,8 @@ Time    | ESA               | Activity
 
 
 ### Tile Review Questions
+
+[[ Introduce the tagging system ]]
 
 In your assigned team, choose 1 or 2 sketches from the past week and use them to illustrate your answer to your team's question.
 
