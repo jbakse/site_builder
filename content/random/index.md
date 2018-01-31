@@ -20,9 +20,8 @@ software: p5.js + p5.dom
 
 ## Random Values
 
-We use the word *random* to mean a variety of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety. 
+We use the word *random* to mean an assortment of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety. 
 
-Artists began working with randomness and chance long before the invention of computers. These artists must decide how much control of the final piece to maintain, and what aspects of each piece to leave to chance. 
 Artists began working with randomness and chance long before the invention of computers. Then, as now, artists had to decide how much control to maintain within a piece, and what aspects of each piece to leave to chance. 
 
 The 18th-century composition *Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition*, [which may have been written](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) by Mozart, uses chance to select and sequence pre-composed musical phrases. By placing rules on selection and ordering of the phrases, the system ensures that each variation makes musical sense.
@@ -98,7 +97,7 @@ Math.floor(Math.random()*6) + 1;
 
 Be careful when generating integers: it is easy to get results that are slightly off. `Math.floor()` rounds down to the nearest integer, so you need to have values that go *above* the highest integer you want returned. 
 
-Using `Math.round()` instead of `Math.floor()` can lead to unevenly distributed results. Using `round()` instead of `floor()` in the example below causes incorrect results: `1` will get picked half as often as it should be, and `7` will sometimes get picked though it should not be.
+Using `Math.round()` instead of `Math.floor()` can lead to unevenly distributed results. Using `round()` instead of `floor()` in the example below causes incorrect results: `1` will get picked half as often as it should, and `7` will sometimes get picked though it should not.
 
 
 ::: .bad
