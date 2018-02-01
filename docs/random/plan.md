@@ -24,22 +24,23 @@ Six- and Twelve-sided Dice, Dice Worksheet, LCG Worksheet
 
 
 ### Schedule
-| Time | ESA               | Type       | Activity                                           |
-| ---- | ----------------- | ---------- | -------------------------------------------------- |
-| Pre  | Fun               | -          | Music                                              |
-| 3:50 | Engage            | Activity   | Homework Tagging                                   |
-| 4:00 | Review            | Discussion | Homework Review Questions                          |
-| 4:30 | Engage            | -          | Homework Introduction + Guess Topics to Whiteboard |
-| 4:40 | Engage+Study      | -          | Slides + Discussion                                |
-| 4:30 | Engage + Activate | -          | Activity: 2d6 vs 1d12 Dice Chart                   |
-| 4:45 | Study             | -          | The Methodical Application of Chance               |
-| 5:00 | Activate          | -          | Activity: Skyline Tactic Match                     |
-| 5:15 | Break             | -          | Break                                              |
-| 5:25 | Study             | -          | Psuedo-random vs Random                            |
-| 5:40 | Engage + Activate | -          | Activity: Pencil + Paper LCG                       |
-| 6:00 | Study             | -          | Hello, p5!                                         |
+| Time | ESA      | Type       | Activity                                           |
+| ---- | -------- | ---------- | -------------------------------------------------- |
+| Pre  | Fun      | -          | Music                                              |
+| 3:50 | Engage   | Activity   | Homework Tagging                                   |
+| 4:00 | Review   | Discussion | Homework Review Questions                          |
+| 4:30 | Engage   | Discussion | Homework Introduction + Guess Topics to Whiteboard |
+| 4:40 | Study    | Lecture    | Intro + Slides                                     |
+| 4:50 | Engage   | Activity   | 2d6 vs 1d12 Dice Chart                             |
+| 5:00 | Study    | Lecture    | The Methodical Application of Chance               |
+| 5:20 | Activate | Discussion | Skyline Tactic Match                               |
+| 5:25 | Break    | -          | Break                                              |
+| 5:35 | Study    | Lecture    | Pseudorandom vs Random                             |
+| 5:45 | Activate | Activity   | Pencil + Paper LCG                                 |
+| 6:00 | Activate | Lecture    | Study Example                                      |
+| 6:10 | Activate | Coding     | In-class Challenges                                |
 
-Lecture
+
 
 ::: .activity
 ## Homework Review
