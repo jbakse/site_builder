@@ -251,5 +251,5 @@ Design a full alphabet using a single tile set. Post an image that shows your fo
 : Shovel Knight is an amazing retro platformer from [Yacht Club Games](http://yachtclubgames.com/). Developer David D'Angelo discusses how the Nintendo's specific technical limitations and abilities influenced Shovel Knight's design.
 
 
-[The 8-bit Guy: How "oldschool" graphics worked]
+[The 8-bit Guy: How "oldschool" graphics worked](https://www.youtube.com/watch?v=Tfh0ytz8S0k)
 : Overview of the hardware limitation and creative solutions of early pixel grapihcs.

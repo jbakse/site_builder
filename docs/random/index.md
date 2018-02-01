@@ -10,7 +10,7 @@ next: Parameters
 next_url: ../parameters
 
 hero_title: Random Values
-description: Procedural Generation systems often employ random values as their main source of variety. Understanding how to generate, bias, map, and control random values is key to controlling the aesthetics of these systems.
+description: Procedural generation systems often employ random values as their main source of variety. Understanding how to generate, bias, map, and control random values is key to controlling the aesthetics of these systems.
 software: p5.js + p5.dom
 ---
 
@@ -20,11 +20,11 @@ software: p5.js + p5.dom
 
 ## Random Values
 
-We use the word *random* to mean a variety of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety. 
+We use the word *random* to mean an assortment of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety. 
 
-Artists began working with randomness and chance long before the invention of computers. These artists must decide how much control of the final piece to maintain, and what aspects of each piece to leave to chance. 
+Artists began working with randomness and chance long before the invention of computers. Then, as now, artists had to decide how much control to maintain within a piece, and what aspects of each piece to leave to chance. 
 
-The long-titled, 18th century composition *Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition*, [which may have been written](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) by Mozart uses chance to select and sequence pre-composed musical phrases. By placing rules on selection and ordering of the phrases, the system ensures that each variation makes musical sense.
+The 18th-century composition *Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition*, [which may have been written](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) by Mozart, uses chance to select and sequence pre-composed musical phrases. By placing rules on selection and ordering of the phrases, the system ensures that each variation makes musical sense.
 
 
 Consider the works below:
@@ -51,7 +51,7 @@ Roll two six-sided dice 50 times.<br/>
 Plot the sums.{bigger}
 
 ### Chart Two
-Roll a twelve-sided dice 50 times.<br/>
+Roll a twelve-sided die 50 times.<br/>
 Plot the values.{bigger}
 
 <p class="boxed download">
@@ -95,9 +95,9 @@ The `Math.random()` function returns floating point values, but sometimes you wa
 Math.floor(Math.random()*6) + 1;
 ```
 
-Be careful when generating integers, it is easy to get results that are slightly off. `Math.floor()` rounds down to the nearest integer, so you need to have values that go *above* the highest integer you want returned. 
+Be careful when generating integers: it is easy to get results that are slightly off. `Math.floor()` rounds down to the nearest integer, so you need to have values that go *above* the highest integer you want returned. 
 
-Also, using `Math.round()` instead of `Math.floor()` can make lead to unevenly distributed results. Using `round()` instead of `floor()` in the example below causes incorrect results: `1` will get picked half as often as it should, and `7` will sometimes get picked and should not.
+Using `Math.round()` instead of `Math.floor()` can lead to unevenly distributed results. Using `round()` instead of `floor()` in the example below causes incorrect results: `1` will get picked half as often as it should, and `7` will sometimes get picked though it should not.
 
 
 ::: .bad
@@ -123,7 +123,7 @@ console.log(random());          // 0.12...
 console.log(random());          // 0.37...
 ```
 
-P5's `random()` function also accepts optional parameters to control the range of the number, so you don't have to do it yourself. 
+P5's `random()` function accepts optional parameters to control the range of the number, so you don't have to do it yourself. 
 
 ```
 console.log("random(10)");      // random(10) -> range [0, 10)
@@ -159,7 +159,7 @@ floor(random(1,6))
 ### Biased Distribution
 The examples above will produce results evenly distributed across their range.
 
-Often even distribution isn’t what you really want. Often you want to **bias** the results towards the low-end, high-end, or middle. Simple averaging and the `min()` and `max()` functions can help with this.
+Often even distribution isn’t what you really want. Often you want to **bias** the results towards the low end, high end, or middle. Simple averaging and the `min()` and `max()` functions can help with this.
 
 #### Even Distribution
 
@@ -175,7 +175,7 @@ random(1,11)
 
 #### Low Bias Distribution
 
-Taking the lowest of two or more random numbers will bias the result toward the low-end.
+Taking the lowest of two or more random numbers will bias the result toward the low end.
 
 ```javascript
 min(random(10), random(10))
@@ -200,7 +200,7 @@ min(random(10), random(10), random(10), random(10))
 
 #### High Bias Distribution
 
-Taking the highest of two or more random numbers will bias the result toward the high-end.
+Taking the highest of two or more random numbers will bias the result toward the high end.
 
 ```javascript
 max(random(10), random(10))
@@ -214,7 +214,7 @@ max(random(10), random(10))
 
 #### Middle Bias Distribution
 
-Averaging two or more random numbers will bias the resulttoward the middle.
+Averaging two or more random numbers will bias the result toward the middle.
 
 ```javascript
 (random(1,11) + random(1,11)) / 2
@@ -246,11 +246,11 @@ If you generate several random numbers and average them, the result gets close t
 
 
 ::: .links-sidebar
-[P5:<br/> `randomGausian()`](https://p5js.org/reference/#/p5/randomGaussian)
+[P5:<br/> `randomGaussian()`](https://p5js.org/reference/#/p5/randomGaussian)
 /::
 
 ::: .callout
-**Note:** P5 also provides the `randomGausian()` function for generating numbers with a true normal distribution. With `randomGausian()` the possible values are not clamped to a range, extreme outliers are just really rare.
+**Note:** P5 also provides the `randomGaussian()` function for generating numbers with a true normal distribution. With `randomGaussian()` the possible values are not clamped to a range; extreme outliers are just really rare.
 /::
 
 
@@ -268,7 +268,7 @@ When you roll a **die**, you get **random values**. You **might get the same val
 
 If you roll a normal die six times, it is unlikely—*about a 1.5% chance*—that you’ll get all six values without repeats. You have a pretty good chance—*about 33%*–of not rolling any 1s. You can be pretty sure—*98.5% sure*—that at least one number won’t appear in six rolls. 
 
-A **deck of cards** works differently. When you pull cards from deck, you don't get random values. You get **values in a random order**. You avoid duplicates, and you know you will have toured all the values when you reach the end of the deck.
+A **deck of cards** works differently. When you pull cards from a deck, you don't get random values. You get **values in a random order**. You avoid duplicates, and you know you will have toured all the values when you reach the end of the deck.
 
 #### Dice Visualizer
 ::: js-lab
@@ -288,7 +288,7 @@ A **deck of cards** works differently. When you pull cards from deck, you don't 
 [P5:<br/> `shuffle()`](https://p5js.org/reference/#/p5/shuffle)
 /::
 
-p5 provides the `shuffle()` function to randomly reorder and array. Using shuffle we can simulate shuffling a deck, pulling values from it, and reshuffling when we run out.
+p5 provides the `shuffle()` function to randomly reorder an array. Using shuffle we can simulate shuffling a deck, pulling values from it, and reshuffling when we run out.
 
 ```javascript
 // create an array to hold the possible values
@@ -376,7 +376,7 @@ if (r < 20) {
 }
 ```
 
-A common mistake when following this pattern is calling random multiple times. If you are making 1 choice between several options, you only want to call `random()` once.
+A common mistake when following this pattern is calling random multiple times. If you are making one choice between several options, you only want to call `random()` once.
 
 **Remember: 1 choice, 1 `random()`**
 
@@ -403,7 +403,7 @@ if (random(100) < 20) {
 ::: .activity
 
 ## Skyline Tactic Match
-Study the example city skylines below. Each skyline was made usinga different tactic for picking random values. <br/> Match each skyline to the tactic.
+Study the example city skylines below. Each skyline was made using a different tactic for picking random values. <br/> Match each skyline to its corresponding tactic.
 
 ### Tactics
 Pure Random, Low Bias, Normal Bias, High Bias, Deck{bigger}
@@ -423,7 +423,7 @@ Pure Random, Low Bias, Normal Bias, High Bias, Deck{bigger}
 
 - Which tactic is the "best"?
 - When would you choose to use different types of bias? 
-- Where is each type of biases found in the world?
+- Where is each type of bias found in the world?
 
 /::
 
@@ -438,13 +438,13 @@ So how can `random()` produce a random value? Technically, it can't. It can prod
 
 A common method to create pseudorandom values is a [Linear Congruential Generator](https://en.wikipedia.org/wiki/Linear_congruential_generator).
 
-LCGs begin with an initial value called the **seed**, then use multipliction, addition, modulus (remainder after division) to derive a new, seemingly random value. Below is a very basic implementation of LCGs so you can see how they work.
+LCGs begin with an initial value called the **seed**, then use multiplication, addition, and modulus (remainder after division) to derive a new, seemingly random value. Below is a very basic implementation of an LCG so you can see how they work.
 
 ::: js-lab
 /random/sketches/random_lcg.js
 /::
 
-For our purposes, it is not really important to understand exactly how the generator works. 
+For our purposes, it is not important to understand exactly how the generator works. 
 
 **It is important to understand that the sequence of `random()` numbers is perfectly predictable, if you know the seed.**
 
@@ -493,7 +493,7 @@ Explore how an Linear Congruential Generator works by generating pseudo-random v
 
 ## Study Examples
 
-The following study examples demonstrate different ways to bias and map random values to get different looks and effects. Carefully study each example to understand how they work. Several of the examples offer different approaches which can be commented in and out to compare their results.
+The following study examples demonstrate different ways to bias and map random values to get different looks and effects. Carefully study each example to understand how it works. Several of the examples offer different approaches which can be commented in and out to compare their results.
 
 ### Skyline
 ::: js-lab
@@ -540,7 +540,7 @@ All 10 in 20 Minutes   | Great.
 ### Modify the Small Multiples Example
 1. Change the background color to dark grey.
 2. Change the circle color to white.
-3. Draw each circle draw with a randomly-chosen color.
+3. Draw each circle filled with a randomly-chosen color.
 
 ### Modify the Grass Example
 1. Make the grass taller.
@@ -569,7 +569,7 @@ Experiment with procedurally generating images using `random()`. Explore each of
 
 
 ### Challenge: Master Study
-Kasimir Malevich, Mark Rothko, Piet Modrian, Anni Albers all worked with basic shapes, color, and natural media. Create a sketch that generates new works in the style of one of these artists. Pay particular attention to the subtleties and textures of your chosen artist's work. How closely can you recreate these subtleties?
+Kasimir Malevich, Mark Rothko, Piet Modrian, and Anni Albers all worked with basic shapes, color, and natural media. Create a sketch that generates new works in the style of one of these artists. Pay particular attention to the subtleties and textures of your chosen artist's work. How closely can you recreate these subtleties?
 
 /::
 

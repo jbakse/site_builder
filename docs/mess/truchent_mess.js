@@ -15,6 +15,7 @@ function preload() {
 }
 
 function setup() {
+    pixelDensity(1);
     p5_canvas = createCanvas(windowWidth, windowHeight);
     $(p5_canvas.canvas).addClass("mess");
     $(p5_canvas.canvas).addClass("hide");
@@ -37,12 +38,12 @@ function draw() {
     c = ++c % 1000;
 
     // build tinted version of the tiles
-    const tinted1 = createGraphics(128, 128);
+    const tinted1 = createGraphics(64, 64);
     tinted1.colorMode(HSB, 1000);
     tinted1.tint(c, 1000, 1000);
     tinted1.image(tile1, 0, 0, 64, 64);
 
-    const tinted2 = createGraphics(128, 128);
+    const tinted2 = createGraphics(64, 64);
     tinted2.colorMode(HSB, 1000);
     tinted2.tint(c, 1000, 1000);
     tinted2.image(tile2, 0, 0, 64, 64);
