@@ -13,46 +13,60 @@ Dice, Dice Charts, Team Generator
 - Use the `random()` function
 - Map and bias random values
 - Select and implement appropriate strategies for randomization
-- Identify what random bias looks like
-- Understand of pseudorandom values
-- Technical: Introduction the p5.js library
-- Technical: Introduction to Git and Github
+- Identify what random biases looks like
+- Understand what pseudorandom values are
+
 
 ### Announcements
 
-- Did you cite your classmates tiles? 
+- 
+- We begin Using p5.js this week. If you are not familiar with it let me know.
 
 
 ### Schedule
-Time    | ESA               | Activity
----     | ---               | ---
-3:50    | Review+Engage     | Homework Review
-4:10    | Engage            | Homework Introduction + Guess Topics
-4:20    | Engage+Study      | Slides + Discussion
-4:30    | Engage + Activate | Activity: 2d6 vs 1d12 Dice Chart
-4:45    | Study             | The Methodical Application of Chance
-5:00    | Activate          | Activity: Skyline Tactic Match
-5:15    | Break             | Break
-5:25    | Study             | Psuedo-random vs Random
-5:40    | Engage + Activate | Activity: Pencil + Paper LCG   
-6:00    | Study             | Hello, p5!
+| Time | ESA               | Type       | Activity                                           |
+| ---- | ----------------- | ---------- | -------------------------------------------------- |
+| Pre  | Fun               | -          | Music                                              |
+| 3:50 | Engage            | Activity   | Homework Tagging                                   |
+| 4:00 | Review            | Discussion | Homework Review Questions                          |
+| 4:30 | Engage            | -          | Homework Introduction + Guess Topics to Whiteboard |
+| 4:40 | Engage+Study      | -          | Slides + Discussion                                |
+| 4:30 | Engage + Activate | -          | Activity: 2d6 vs 1d12 Dice Chart                   |
+| 4:45 | Study             | -          | The Methodical Application of Chance               |
+| 5:00 | Activate          | -          | Activity: Skyline Tactic Match                     |
+| 5:15 | Break             | -          | Break                                              |
+| 5:25 | Study             | -          | Psuedo-random vs Random                            |
+| 5:40 | Engage + Activate | -          | Activity: Pencil + Paper LCG                       |
+| 6:00 | Study             | -          | Hello, p5!                                         |
 
-
+Lecture
 ### Tile Review Questions
 
-[[ Introduce the tagging system ]]
+1. Did you cite your classmates tiles?
+2. You can now tag sketches with: 🤓😂😍. 
+3. You can format your sketch comments with markdown.
 
+
+**indvidually, 5 minutes**
+Scroll through this weeks homework and tag posts as you like.
+
+**groups, 5 minutes**
 In your assigned team, choose 1 or 2 sketches from the past week and use them to illustrate your answer to your team's question.
 
-Group   | Question
----     | ---
-1       | How does working within constraints support creativity?
-2       | Considering the tile set as a tool, how do tools impact authorship?
-3       | Do you consider these images to be procedurally generated?
-4       | Choose a project that presents an interesting direction for further design inquiry. Suggest possible variations on this project.
-5       | Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project?
+**class, 6x3 minutes**
+Share your chosen sketch, comment on it and summarize your discussion.
 
 
+| Group | Question                                                                                                                                                                     |
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Xia, Patricia, Dahee <br/>How does working within constraints support creativity?                                                                                            |
+| 2     | Bella, Leah, Carla <br/>Considering the tile set as a tool, how do tools impact authorship?                                                                                  |
+| 3     | Aakanksha, Julian, Xu <br/>Choose a sketch you feel should be tagged 🤓. Explain why.                                                                                        |
+| 4     | Alyssa, Ting, Jack <br/>Choose a sketch you feel should be tagged 😂. Explain why.                                                                                           |
+| 5     | Madison, Earl, Patrick <br/>Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project? |
+| 6     | Rik, Kirsten, Mario <br>Choose a sketch you feel should be tagged 😍. Explain why.                                                                                           |
+
+<!-- Choose a project that presents an interesting direction for further design inquiry. Suggest possible variations on this project. -->
 ### Class Notes
 
 [Random](./index.html){boxed right}
