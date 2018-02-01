@@ -212,3 +212,10 @@ http://makegames.tumblr.com/post/1136623767/finishing-a-game
 
 300 Mechanics
 http://www.squidi.net/three/index.php
+
+
+Five Seconds of Donkey Kong
+https://www.michaelfogleman.com/plotter/
+
+https://www.michaelfogleman.com/projects/#allrgb
+
