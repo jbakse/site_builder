@@ -40,13 +40,17 @@ Six- and Twelve-sided Dice, Dice Worksheet, LCG Worksheet
 | 6:00 | Study             | -          | Hello, p5!                                         |
 
 Lecture
+
+::: .activity
+## Homework Review
+
 ### Tile Review Questions
 
 1. Did you cite your classmates tiles?
 2. You can now tag sketches with 🤓😂😍. 
 3. You can format your sketch comments with markdown.
 
-
+### Plan
 *indvidually, 5 minutes*
 
 Scroll through this weeks homework and tag posts as you like.
@@ -60,6 +64,9 @@ In your assigned team, choose 1 or 2 sketches from the past week and use them to
 Share your chosen sketch, comment on it and summarize your discussion.
 
 
+### Groups
+
+::: .headless
 | Group | Question                                                                                                                                                                     |
 | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1     | Xia, Patricia, Dahee <br/>How does working within constraints support creativity?                                                                                            |
@@ -68,9 +75,29 @@ Share your chosen sketch, comment on it and summarize your discussion.
 | 4     | Alyssa, Ting, Jack <br/>Choose a sketch you feel should be tagged 😂. Explain why.                                                                                           |
 | 5     | Madison, Earl, Patrick <br/>Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project? |
 | 6     | Rik, Kirsten, Mario <br>Choose a sketch you feel should be tagged 😍. Explain why.                                                                                           |
+/::
 
+
+<!-- 1. *Xia, Patricia, Dahee* <br/>How does working within constraints support creativity?
+2. *Bella, Leah, Carla* <br/>Considering the tile set as a tool, how do tools impact authorship?
+3. *Aakanksha, Julian, Xu* <br/>Choose a sketch you feel should be tagged 🤓. Explain why.
+4. *Alyssa, Ting, Jack* <br/>Choose a sketch you feel should be tagged 😂. Explain why.
+5. *Madison, Earl, Patrick* <br/>Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project?
+6. *Rik, Kirsten, Mario* <br>Choose a sketch you feel should be tagged 😍. Explain why. -->
+
+
+/::
 <!-- Choose a project that presents an interesting direction for further design inquiry. Suggest possible variations on this project. -->
+
+
 ### Class Notes
 
 [Random](./index.html){boxed right}
 [Hello, p5!](../p5/index.html){boxed right}
+
+
+<style> 
+    .headless thead {
+        display: none;
+    }
+</style>
