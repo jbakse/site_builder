@@ -7,7 +7,7 @@ debug: false
 ## Week 3, Random Values {plain}
 
 ### Materials
-Dice, Dice Charts, Team Generator
+Six- and Twelve-sided Dice, Dice Worksheet, LCG Worksheet
 
 ### Learning Objectives
 - Use the `random()` function

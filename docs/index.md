@@ -31,7 +31,7 @@ p5.js
 
 </a>
 
-<a class="col-6 col-md-4" data-ready="false" href="./procedures">
+<a class="col-6 col-md-4" data-ready="false" href="#">
 
 ### Procedures
 p5.js
