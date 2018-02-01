@@ -7,14 +7,14 @@ debug: false
 ## Week 3, Random Values {plain}
 
 ### Materials
-Dice, Dice Charts, Team Generator
+Six- and Twelve-sided Dice, Dice Worksheet, LCG Worksheet
 
 ### Learning Objectives
 - Use the `random()` function
 - Map and bias random values
 - Select and implement appropriate strategies for randomization
-- Identify what random bias looks like
-- Understand of pseudorandom values
+- Identify what random biases looks like
+- Understand pseudorandom values
 - Technical: Introduction the p5.js library
 - Technical: Introduction to Git and Github
 

@@ -217,3 +217,6 @@ http://www.squidi.net/three/index.php
 
 Random Noise and Procedural Generation (2D Terain explained)
 https://unwttng.com/how-does-procedural-generation-work-random-noise
+
+
+alleatoric / aleatory
