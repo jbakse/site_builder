@@ -43,17 +43,20 @@ Lecture
 ### Tile Review Questions
 
 1. Did you cite your classmates tiles?
-2. You can now tag sketches with: 🤓😂😍. 
+2. You can now tag sketches with 🤓😂😍. 
 3. You can format your sketch comments with markdown.
 
 
-**indvidually, 5 minutes**
+*indvidually, 5 minutes*
+
 Scroll through this weeks homework and tag posts as you like.
 
-**groups, 5 minutes**
+*groups, 5 minutes*
+
 In your assigned team, choose 1 or 2 sketches from the past week and use them to illustrate your answer to your team's question.
 
-**class, 6x3 minutes**
+*class, 6x3 minutes*
+
 Share your chosen sketch, comment on it and summarize your discussion.
 
 
