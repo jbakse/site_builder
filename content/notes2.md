@@ -216,7 +216,6 @@ http://makegames.tumblr.com/post/1136623767/finishing-a-game
 http://www.squidi.net/three/index.php
 
 
-<<<<<<< HEAD
 Five Seconds of Donkey Kong
 https://www.michaelfogleman.com/plotter/
 
@@ -225,8 +224,6 @@ https://www.michaelfogleman.com/projects/#allrgb
 
 How generative music works
 http://teropa.info/loop/#/title
-=======
 
 Random Noise and Procedural Generation (2D Terain explained)
 https://unwttng.com/how-does-procedural-generation-work-random-noise
->>>>>>> b74875e14f40299dca1626235dcce70e7f976b72
