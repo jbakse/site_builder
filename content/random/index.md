@@ -22,7 +22,7 @@ software: p5.js + p5.dom
 
 We use the word *random* to mean an assortment of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety. 
 
-Artists began working with randomness and chance long before the invention of computers. Then, as now, artists had to decide how much control to maintain within a piece, and what aspects of each piece to leave to chance. 
+Artists began working with randomness and chance long before the invention of computers. Then, as now, artists had to decide what aspects to control within a piece, and what aspects to leave to chance. 
 
 The 18th-century composition *Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition*, [which may have been written](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) by Mozart, uses chance to select and sequence pre-composed musical phrases. By placing rules on selection and ordering of the phrases, the system ensures that each variation makes musical sense.
 
@@ -97,7 +97,7 @@ Math.floor(Math.random()*6) + 1;
 
 Be careful when generating integers: it is easy to get results that are slightly off. `Math.floor()` rounds down to the nearest integer, so you need to have values that go *above* the highest integer you want returned. 
 
-Using `Math.round()` instead of `Math.floor()` can lead to unevenly distributed results. Using `round()` instead of `floor()` in the example below causes incorrect results: `1` will get picked half as often as it should, and `7` will sometimes get picked though it should not.
+Using `Math.round()` instead of `Math.floor()` can lead to unevenly distributed results. In the example below, `1` will get picked half as often as it should, and `7` will sometimes get picked though it should not.
 
 
 ::: .bad
@@ -232,7 +232,7 @@ Averaging two or more random numbers will bias the result toward the middle.
 [Wikipedia:<br/> Normal Distribution](https://en.wikipedia.org/wiki/Normal_distribution)
 /::
 
-If you generate several random numbers and average them, the result gets close to **normal distribution**. Normal distribution, or Gaussian distribution, is the "bell curve" distribution which is often found in natural systems.
+If you generate several random numbers and average them, the results get close to **normal distribution**. Normal distribution, or Gaussian distribution, is the "bell curve" distribution which is often found in natural systems.
 
 ```javascript
 (random(1,11) + random(1,11) + random(1,11)) / 3
@@ -266,7 +266,7 @@ If you generate several random numbers and average them, the result gets close t
 
 When you roll a **die**, you get **random values**. You **might get the same value more than once**, and it **might take a long time to get a particular value**.
 
-If you roll a normal die six times, it is unlikely—*about a 1.5% chance*—that you’ll get all six values without repeats. You have a pretty good chance—*about 33%*–of not rolling any 1s. You can be pretty sure—*98.5% sure*—that at least one number won’t appear in six rolls. 
+If you roll a normal die six times, it is unlikely—*about a 1.5% chance*—that you’ll get all six values without repeats. You have a pretty good chance—*about 33%*–of not rolling any 1s. You can be pretty sure—*98.5% sure*—that at least one number won’t have appeared after six rolls. 
 
 A **deck of cards** works differently. When you pull cards from a deck, you don't get random values. You get **values in a random order**. You avoid duplicates, and you know you will have toured all the values when you reach the end of the deck.
 
@@ -461,7 +461,7 @@ P5 provides `randomSeed()` to set the **seed** used by `random()`. Once you have
 /random/sketches/seed.js
 /::
 
-Using the seed, you can use random values in your code, but get the same results each time you run your program. This can be a useful feature in many programs and can help with debugging problems.
+By setting a seed you can use random values in your code, but get the same results each time you run your program. This can be a useful feature in many programs and can help with debugging problems.
 
 Be careful when relying on the seed to get random but repeatable results. There are at least two common ways for things to get messed up.
 
@@ -493,7 +493,7 @@ Explore how an Linear Congruential Generator works by generating pseudo-random v
 
 ## Study Examples
 
-The following study examples demonstrate different ways to bias and map random values to get different looks and effects. Carefully study each example to understand how it works. Several of the examples offer different approaches which can be commented in and out to compare their results.
+The following study examples demonstrate different ways to bias and map random values to get different looks and effects. Carefully study each example to understand how it works. Several of the examples offer varied approaches which can be commented in and out to compare their results.
 
 ### Skyline
 ::: js-lab
@@ -550,9 +550,9 @@ All 10 in 20 Minutes   | Great.
 
 ### Challenging Challenges
 1. Modify the small multiples example so that each row is a randomly-chosen color.
-2. Modify the small multiples example so that each column is randomly-chosen color.
+2. Modify the small multiples example so that each column is a randomly-chosen color.
 3. Modify the grass example so that each blade of grass is a different, randomly-chosen shade of green.
-4. Modify the grass example so that short grass is darker.
+4. Modify the grass example so that the short grass is darker.
 {continue}
 
 
