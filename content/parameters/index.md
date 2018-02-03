@@ -52,7 +52,7 @@ software: p5.js + p5.dom
 
 ## Parameters
 
-One of the most powerful and rewarding aspects of writing a procedural generation system is exploring what it can make. The initial investment of time spent coding is repaid by the ability to iterate easily and quickly. Many procedural systems can produce endless variations and can be pushed to surprising extremes. Exploring the range of the system leads to new ideas to build and aesthetics to explore.
+One of the most powerful and rewarding aspects of writing a procedural generation system is exploring what it can make. The initial investment of time spent coding is repaid by the ability to iterate easily and quickly. Many procedural systems can produce endless variations and can be pushed to surprising extremes. Exploring the range of the system reveals new ideas to build and aesthetics to explore.
 
 ::: .links-sidebar
 [Wikipedia:<br/>Parameter](https://en.wikipedia.org/wiki/Parameter#Computing)
@@ -100,7 +100,7 @@ When creating interfaces for procedural systems, focus on exposing parameters th
 
 **Parametric Design** is a design approach where designs are built as systems with output that can be customized by adjusting parameters. For example a parametric design for a bicycle might accept a parameter for the rider’s height and provide a customized frame to suit.
 
-An interesting aspect of parametric designs is that they explicity embed **design intent**, rather than just the **design result**. 
+An interesting aspect of parametric designs is that they explicitly embed **design intent**, rather than just the **design result**. 
 
 
 
@@ -121,18 +121,18 @@ It is almost always worth taking time to identify useful parameters in your code
 [Wikipedia:<br/>Magic Number](https://en.wikipedia.org/wiki/Magic_number_(programming))
 /::
 
-Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that becomes increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. **Exposing parameters helps to organize the code by separating configuration and implementation.** It also makes the code **easier to read and reason about** by changing [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)) into named values that better explain their purpose. Exposing parameters isn't always about creating an end-user GUI. Exposing parameters as arguments to well-factored functions can make your code much easier to read, expand, and maintain.
+Procedural generation code often grows organically and iteratively: tweak some code, run it to see what it builds, then tweak again. This leads to code that is increasingly disorganized, hard to read, and hard to change. Often the values that are tweaked the most are good candidates for exposing as parameters. **Exposing parameters helps to organize the code by separating configuration and implementation.** It also makes the code **easier to read and reason about** by changing [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)) into named values that better explain their purpose. Exposing parameters isn't always about creating an end-user GUI. Exposing parameters as arguments to well-factored functions can make your code much easier to read, expand, and maintain.
 
 #### Better User Experience
 
-Exploring the parameter space of a system by tweaking hard-coded values doesn't work very well. Tweaking hard-coded values is slow—the project has to be re-built and re-run after each change—which discourages exploration. Also, a slow feedback cycle makes it harder to understand the effects of each change. Tweaking hard-coded values in the code is also unclear and error-prone. Which values should you change for particular effects? Do you need to change the value in multiple places? Will changing a particular value just break things? 
+Exploring the parameter space of a system by tweaking hard-coded values doesn't work very well. Tweaking hard-coded values is slow—the project has to be re-built and re-run after each change—which discourages exploration. Also, a slow feedback cycle makes it harder to understand the effects of each change. Tweaking hard-coded values in the code is unclear and error-prone. Which values should you change for particular effects? Do you need to change the value in multiple places? Will changing a particular value just break things? 
 
 Exposing key values in your program as parameters makes them easier to document, understand, and use. These benefits of a good interface usually far outweigh the time required to implement it.
 
 #### Better Results
 When you can explore the parameter space of your procedural systems more quickly, you can explore it more thoroughly, finding interesting possibilities, ideas, and aesthetics to explore further.
 
-On small projects—projects that you don't plan on sharing—it is often tempting to skip the time needed to clean up code, factor out parameters, and create a better UI. This is often a [false economy](https://en.wikipedia.org/wiki/False_economy). An up-front investment of time is usually quickly repaid.
+On small projects—projects that you don't plan on sharing—it is tempting to skip the time needed to clean up code, factor out parameters, and create a better UI. This is often a [false economy](https://en.wikipedia.org/wiki/False_economy). An up-front investment of time is usually quickly repaid.
 
 
 ### An Example
@@ -157,9 +157,9 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 ```
 /::
 
-The main expression is now much clearer. It contain fewer terms and is better organized. The magic numbers have been replaced with named values which are easier to understand. Because they are variables, they can be set elsewhere in the code, or exposed as function arguments. 
+The main expression is now much clearer. It contains fewer terms and is better organized. The magic numbers have been replaced with named values which are easier to understand. Because they are variables, they can be set elsewhere in the code, or exposed as function arguments. 
  
-Notably, this code doesn't do _exactly_ the same thing as the original version. Some of the complexity in the original was left over from an earlier approach and no longer needed. Considering the code as a system and identifying and naming its parameters made it easy to spot and fix the unneeded complexity.
+Notably, this code doesn't do _exactly_ the same thing as the original version. Some of the complexity in the original was left over from an earlier approach and no longer needed. Considering the code as a system and identifying and naming its parameters made the unneeded complexity easy to spot and fix.
 
 
 
@@ -186,7 +186,7 @@ When thinking about software we often define the **interface** as the part of th
 
 Two of the most important interfaces of software systems are **user interfaces** (UIs) and **application programming interfaces** (APIs).
 
-- The **UI** is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. It overlaps with the user and is designed around capabilities and nature of both the software and the user. The UI is the primary interface in most applications.
+- The **UI** is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. It overlaps with the user and is designed around the capabilities and nature of both the software and the user. The UI is the primary interface in most applications.
 
 - The **API** is the part of a software system that is used by programmers to connect it with other software systems. A well-designed API considers both the software system itself and how other software systems will want to use it. The API is the primary interface in most libraries.
 
@@ -198,7 +198,7 @@ It is common for software to have both a UI and an API. For example, twitter pro
 Exposing parameters allows artists and designers to create systems that can be controlled by others—and themselves—more easily. Choosing which parameters to expose is a core concern of software interface design. When choosing, consider the following:
 
 - Which parameters should be exposed?
-- Which parameters are required, which are optional?
+- Which parameters are required, and which are optional?
 - Which values should be accepted for each parameter?
 
 #### Balance
@@ -230,7 +230,7 @@ Once you have decided what to expose via your interface, you must consider how t
 #### Feedback
 Feedback shows users the impact their actions have on the system. Without feedback, systems are very hard to learn and use. With clear and responsive feedback, even systems that are difficult to describe can often be intuitively understood.
 
-In simple cases, showing users the end result of their choices after each change is often enough. In more complex situations, it is often helpful to provide intermediate feedback. Many procedural systems are too complex to provide realtime feedback. For systems that take a long time to calculate, providing immediate confirmation of user input is important. Sometimes it can be very helpful to provide a low quality preview as well.
+In simple cases, showing users the end result of their choices after each change may be enough. In more complex situations, it is often helpful to provide intermediate feedback. Many procedural systems are too complex to provide realtime feedback. For systems that take a long time to calculate, providing immediate confirmation of user input is important. Sometimes it can be very helpful to provide a low-quality preview as well.
 
 #### Keep Your User In Mind
 The way that you think about your software system is often very different from the way your users think about it.
@@ -253,7 +253,7 @@ Begin designing a user interface for a fictional machine by considering which pa
 2. Spend 6 minutes brainstorming possible parameters for your machine.
 3. Choose a user from the list below.
 4. Spend 3 minutes deciding which parameters to expose for your user. Choose exactly 3 parameters.
-5. Spend 3 minutes naming your parameters, and defining the allowed values for each.
+5. Spend 3 minutes naming your parameters and defining the allowed values for each.
 6. Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present.
 
 ::: .half
@@ -285,14 +285,12 @@ Begin designing a user interface for a fictional machine by considering which pa
 
 ### Globals as Interfaces
 
-A quick-and-dirty way to make your comp form sketches “tweakable” is to use global variables for your parameters and group them at the top of the script.
+A quick-and-dirty way to make your comp form sketches “tweakable” is to use global variables for your parameters and group them at the top of the script. This is very easy to set up, and works particularly well for small one-off sketches that only you will ever use. However, this approach slows down exploration, because you still need to re-run your sketch after each change.
 
-- This is very easy to set up.
-- Works particularly well for small one-off sketches that only you will ever use.
 - Choose clear variable names that explain the purpose of each parameter.
 - Use comments to explain the parameter in more detail, document legal value ranges, and suggest good values.
-- This approach slows down exploration, because you still need to re-run your sketch after each change.
-- Yes, [global variables are evil](https://stackoverflow.com/questions/19158339/why-are-global-variables-evil). If your language supports constants, it is a good idea to use them instead of variables.
+- Use constants instead of variables, if your language supports them. 
+- Keep in mind that [global variables are evil](https://stackoverflow.com/questions/19158339/why-are-global-variables-evil).
 
 ::: js-lab
 /parameters/sketches/square.js
@@ -305,13 +303,12 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 /::
 
 
-The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides functions that allow you create HTML elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.
+The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides functions that allow you create HTML elements and user interface controls. This is more complicated to set up, but still pretty quick. It is a much better choice if you want anyone else to adjust your parameters. This approach allows you to quickly explore your parameter space.
 
-- This is more complicated to set up, but still pretty quick.
-- This is a better choice if you want to quickly explore your parameter-space.
-- Label your inputs clearly. Consider your interface carefully.
-- Your controls can also be made in HTML, used in p5 via `select()`
-- You can style your interface with CSS.
+- Label your inputs clearly. 
+- Consider your interface carefully.
+- Use `select()` in p5 if you want to make your controls in HTML. 
+- Consider styling your interface with CSS.
 
 
 ::: js-lab
