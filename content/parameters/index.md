@@ -59,7 +59,7 @@ One of the most powerful and rewarding aspects of writing a procedural generatio
 /::
 
 
-Procedural generators can provide enormous creative leverage, allowing expressive artistic control while automating much of the work. This control is afforded by exposing **parameters**. Parameters are adjustable values that influence the internal behavior of a system. Changing the parameters 
+Procedural generators can provide enormous creative leverage, allowing expressive artistic control while automating much of the work. This control is afforded by exposing **parameters**. Parameters are adjustable values that influence the internal behavior of a system.
 
 
 ::: .discussion
@@ -264,12 +264,10 @@ Begin designing a user interface for a fictional machine by considering which pa
 - Internet surveillance front-end
 - Genetic pet builder
 - Love potion mixer
-- Users
 /::
 
 ::: .half
 #### Users {underline}
-- Users
 - Daily user
 - One-time user
 - A child
@@ -289,8 +287,7 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 
 - Choose clear variable names that explain the purpose of each parameter.
 - Use comments to explain the parameter in more detail, document legal value ranges, and suggest good values.
-- Use constants instead of variables, if your language supports them. 
-- Keep in mind that [global variables are evil](https://stackoverflow.com/questions/19158339/why-are-global-variables-evil).
+- Keep in mind that [global variables are evil](https://stackoverflow.com/questions/19158339/why-are-global-variables-evil). Use constants instead of variables, if your language supports them. If your language doesn't support true constants use a naming convention, such as all caps, to indicate that a value shouldn't be changed.
 
 ::: js-lab
 /parameters/sketches/square.js
@@ -303,7 +300,7 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 /::
 
 
-The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides functions that allow you create HTML elements and user interface controls. This is more complicated to set up, but still pretty quick. It is a much better choice if you want anyone else to adjust your parameters. This approach allows you to quickly explore your parameter space.
+The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides functions that allow you create HTML elements and user interface controls. This is more complicated to set up, but still pretty quick. It is a much better choice if you want anyone else to adjust your parameters. You should consider this approach even for projects only you will use; it allows you to explore your parameter space without having to reload your sketch.
 
 - Label your inputs clearly. 
 - Consider your interface carefully.
@@ -339,11 +336,15 @@ All 10 in 20 Minutes   | Great.
 2. Add a color picker to control the background color of the sketch.
 {continue}
 
-### Challenging Challenges
-1. Globals as Interface: Make the code draw boxes of two randomly-chosen sizes: large and small.
+### Challenging Challenges: Globals as Interface
+1. Draw the squares in two sizes: small and large. Randomly choose which size for each square.
 2. Add parameters to control the small size, large size, and percentage chance of drawing large or small.
-3. HTML Interfaces: Instead of drawing the square, draw a "target". The target should be made up of evenly-spaced concentric circles. Draw enough circles to reach the parameterized size.
 {continue}
+
+### Challenging Challenges: HTML Interfaces
+1. Instead of drawing the square, draw a "target" of white and red rings. Draw more rings to make a bigger target.
+{continue}
+
 
 
 /::

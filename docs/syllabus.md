@@ -54,27 +54,29 @@ Students will post their daily sketches to the class sketch blog. While students
 ### Course Outline
 The following outlines the main topics to be presented in each class. This may be adjusted during the semester.
 
+Each week follows a similar format: an introduction and discussion of the the weekly theme followed by an in-class workshop to explore the theory and technology chosen to support the theme. Students will participate in group discussions and hands-on activities each week.
+
 
 Class                                                   | Topics                        
 ---                                                     | ---                           
 **Foundation**                                         | &nbsp;
-[Week 1, January 26](introduction/plan.html)            | [Introduction](introduction), [Tile Graphics](tiles)
-[Week 2, February 2](random/plan.html)                  | [Random Values](random)
-[Week 3, February 9](parameters/plan.html)              | [Parameters](parameters)
-[Week 4, February 16](noise/plan.html)                  | [Noise](noise)
-[Week 5, February 23](strategy/plan.html)               | [Strategy](strategy)
+[Week 1, January 26](introduction/plan.html)            | [Introduction](introduction), [Tile Graphics](tiles), pencil + paper
+[Week 2, February 2](random/plan.html)                  | [Random Values](random), p5.js
+[Week 3, February 9](parameters/plan.html)              | [Parameters](parameters), p5.js
+[Week 4, February 16](noise/plan.html)                  | [Noise](noise), p5.js
+[Week 5, February 23](strategy/plan.html)               | [Strategy](strategy), p5.js
 **Exploration**                                         | &nbsp;
-[Week 6, March 2](#)                                    | [Pixel Data](*)
-[Week 7, March 9](#)                                    | [Turtle Graphics](*)
-[Week 8, March 16](#)                                   | [Vector Data](*)
+[Week 6, March 2](#)                                    | [Pixel Data](*), p5.js
+[Week 7, March 9](#)                                    | [Turtle Graphics](*), javascript
+[Week 8, March 16](#)                                   | [Vector Data](*), paper.js
 ~~Week 9, March 23~~                                     | Spring Break
-[Week 10, March 30](#)                                   | [Animation](*)
-[Week 11, April 6](#)                                   | [Generating Text](*)
-[Week 12, April 13](#)                                  | [Generating Sound](*)
-[Week 13, April 20](#)                                  | [3D Forms](*)
-[Week 14, April 27](#)                                  | [Microgames](*)
-[Week 15, May 4](#)                                     | [TBD](*)
-[Week 16, May 11](#)                                    | [Postmortem Party](*)
+[Week 10, March 30](#)                                   | [Animation](*), p5.js
+[Week 11, April 6](#)                                   | [Generating Text](*), javascript
+[Week 12, April 13](#)                                  | [Generating Sound](*), p5.js
+[Week 13, April 20](#)                                  | [3D Forms](*), OpenScad
+[Week 14, April 27](#)                                  | [Microgames](*), play.p5.js
+[Week 15, May 4](#)                                     | [TBD](*), node-based or reactive programming 
+[Week 16, May 11](#)                                    | [Postmortem Party](*), pencil + paper
 
 
 

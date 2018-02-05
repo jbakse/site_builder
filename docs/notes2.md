@@ -230,3 +230,8 @@ https://unwttng.com/how-does-procedural-generation-work-random-noise
 
 
 alleatoric / aleatory
+
+
+Sighack: My Explorations with Generative Art
+Manohar Vanga
+sighack.com
