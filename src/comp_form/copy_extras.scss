@@ -107,7 +107,7 @@
         @include clearfix;
     }
     .links-sidebar>p,
-    {
+        {
 
         float: left;
         margin-right: 15px;
@@ -118,7 +118,7 @@
     }
 
     .links-sidebar>p>a,
-    {
+        {
 
         border: 1px solid $middle-grey;
         padding: 5px 10px;
@@ -151,7 +151,8 @@
     /* callout */
     .callout {
         padding: 15px;
-        margin-bottom: 10px;
+        margin-top: 2em;
+        margin-bottom: 2em;
         position: relative;
         &:before {
             content: "";
@@ -174,6 +175,11 @@
 
     .callout *:last-child {
         margin-bottom: 0;
+    }
+
+    .callout h3 {
+        margin-top: 0;
+
     }
 
     /* activity */

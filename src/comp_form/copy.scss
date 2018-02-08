@@ -305,6 +305,16 @@
         margin-right: 10px;
     }
 
+    .figure {
+        font-size: .75em;
+        img {
+            width: 100%;
+            margin-bottom: 0;
+        }
+        margin-bottom: 2em;
+
+
+    }
     .three-up .figure {
         width: calc((100% - 20px) / 3);
         float: left;
