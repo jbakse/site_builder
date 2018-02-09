@@ -12,8 +12,9 @@ let t = require('./template_util.js');
 // key should be the name of the component used in markdown
 // value should be the function that will build the component
 
+let slides = require('./slides_builder');
 let components = {
-    "slides": require('./slides_builder'),
+    "slides": slides.builder,
     "js-lab": require('./jslab_builder'),
     "js-show": require('./jsshow_builder'),
 }
@@ -27,7 +28,7 @@ let md = new MarkdownIt({
     linkify: true,
     typographer: true,
     quotes: '“”‘’',
-    highlight: higlightSyntax
+    highlight: highlightSyntax
 });
 
 // include MarkdownIt extensions
@@ -52,7 +53,7 @@ md.renderer.rules.table_close = function(tokens, idx, options, env, self) {
 
 
 // syntax highlighter
-function higlightSyntax(str, lang) {
+function highlightSyntax(str, lang) {
     if (lang && highlight_js.getLanguage(lang)) {
         try {
             return highlight_js.highlight(lang, str).value;
@@ -66,6 +67,7 @@ function higlightSyntax(str, lang) {
 
 // process markdown -> html
 module.exports = function markdownToHtml(file) {
+    slides.init();
     try {
 
         // get the file contents

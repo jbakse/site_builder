@@ -4,7 +4,11 @@ let t = require('./template_util.js');
 // slides counter used to provide unique id to each carousel
 let slidesCounter = 0;
 
-module.exports = function slidesBuilder(classes, ids, content) {
+function init() {
+    slidesCounter = 0;
+}
+
+function slidesBuilder(classes, ids, content) {
     slidesCounter++;
 
     // parse data
@@ -91,4 +95,10 @@ module.exports = function slidesBuilder(classes, ids, content) {
     classes.push("slides-wrap");
     classes.push("slideInfos");
     return [classes, ids, content];
+}
+
+
+module.exports = {
+    builder: slidesBuilder,
+    init: init
 }
