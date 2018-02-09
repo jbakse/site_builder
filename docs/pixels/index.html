@@ -5,16 +5,26 @@
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Pixel Data</span><div class="buttons"><a class="previous" href="../strategy"><i class="fa fa-caret-left fa-lg"></i>Strategy</a><a class="next" href="../strategy">Strategy<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Pixel Data</h1><h6>Overview</h6><p class="description">Access pixel values directly to process and generate images.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="learning-objectives">Learning Objectives</h2>
-<ul>
-<li>Understand how raster image data is represented in memory.</li>
-<li>Explore image generation and image processing.</li>
-<li>Explore using an image as a data input.</li>
-<li>Technical: Using p5’s <code>get()</code> and <code>set()</code> function to read and write pixel values.</li>
-<li>Technical: Using p5’s <code>pixel[]</code> array to work with pixel data directly.</li>
-</ul>
-<h2 id="raster-images">Raster Images</h2>
-<h3 id="the-pixel-array">The pixel array</h3>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Pixel Data</span><div class="buttons"><a class="previous" href="../strategy"><i class="fa fa-caret-left fa-lg"></i>Strategy</a><a class="next" href="../strategy">Strategy<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Pixel Data</h1><h6>Overview</h6><p class="description">Access pixel values directly to process and generate images.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="pixel-data">Pixel Data</h2>
+<p>Today, most computers use color displays that produce images using a grid of pixels. By lighting up pixels in the grid detailed pictures can be formed. Because these pixels are very close together, the image appears continuous. Conceptually, each pixel is made up of three sub-pixels—red, green, and blue—though the actual hardware may use a different pattern. Because our eyes can only directly perceive red, green, and blue, the screen can reproduce most of the colors we are capable of seeing.</p>
+<p class="figure"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/XO_screen_01_Pengo.jpg" alt="Pixels">
+Photo by <a href="http://commons.wikimedia.org/wiki/File:XO_screen_01_Pengo.jpg">Peter Halasz</a></p>
+<p>When you work with a graphics library like p5.js or the Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a>, you don’t have to think about individual pixels. You can use methods like <code>ellipse()</code> and the library will figure out which pixels need to change for you.</p>
+<p>Many interesting effects can be achieved by working directly with the pixels, reading and writing their red, green, and blue values one-by-one. Working this way naturally leads to thinking about drawing with code differently.</p>
+<div id="" class="callout">
+<h3 id="vector-monitors">Vector Monitors</h3>
+<p>Computer displays don’t have to use pixels at all. One of the earliest video games, <a href="https://en.wikipedia.org/wiki/Tennis_for_Two">Tennis for Two</a>, used a cathode ray oscilloscope as its display. Oscilloscopes are used to visualize electric signals. In a cathode ray oscilloscope, the signal is drawn by magnetically deflecting a beam of electrons as they race from an emitter—the cathode—towards a phosphor-coated glass screen. The phosphor glows where the electrons strike it, showing the signal.</p>
+<p><a href="https://en.wikipedia.org/wiki/Vector_monitor">Vector Monitors</a> were used in later video games as well, including the <a href="https://en.wikipedia.org/wiki/Tempest_(video_game)">Tempest</a> arcade game and several games for the <a href="https://en.wikipedia.org/wiki/Vectrex">Vectrex</a> home console.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Tennis_For_Two_on_a_DuMont_Lab_Oscilloscope_Type_304-A.jpg" alt="Tennis for Two"></p>
+</div>
+<h3 id="video-memory">Video Memory</h3>
+<p>An high-definition display is 1920 pixels wide and 1080 tall: 345,600 total pixels. Each pixel needs three bytes to represent its color value, one byte each for the red, green, and blue channels. In total that is 6,220,800 bytes—about 6 megabytes—of memory to keep track the full HD image. This data is usually kept in the video card’s VRAM, but might also be kept in the computers main RAM. The display hardware sweeps through every pixel on the screen, changing its brightness based on the values in RAM. If you change the values in the RAM, a new picture appears on the screen.</p>
+<p>In reality, modern video pipelines are more complicated than this, but at some level this is basically what is going on.</p>
+<div id="" class="callout">
+<p>Today, six megabytes isn’t much but it used to be that computers didn’t have enough RAM to keep a full-color image of the screen in memory at all. They used a <a href="https://www.youtube.com/watch?v=Tfh0ytz8S0k">variety of tricks</a> instead.</p>
+</div>
+<h3 id="the-pixels-array">The Pixels Array</h3>
+<p>The memory representing the image on the screen is called the video buffer or framebuffer. The p5.js library doesn’t give you direct access to the framebuffer. Direct access to the screen’s framebuffer is pretty rare on modern computers. p5.js <em>does</em> give you access to a pixel buffer representing the image show on your sketch’s canvas. This buffer is composited into the rendered webpage by the browser and shown in the browser’s window. The window image is composited onto the screen by the OS.</p>
 <p>[diagram]
 [get and set are slow, really slow, and why]</p>
 <h3 id="rasterization">Rasterization</h3>

@@ -16,17 +16,49 @@ description: Access pixel values directly to process and generate images.
 software: p5.js
 ---
 
-## Learning Objectives
-- Understand how raster image data is represented in memory.
-- Explore image generation and image processing.
-- Explore using an image as a data input.
-- Technical: Using p5's `get()` and `set()` function to read and write pixel values.
-- Technical: Using p5's `pixel[]` array to work with pixel data directly.
+## Pixel Data
+
+Today, most computers use color displays that produce images using a grid of pixels. By lighting up pixels in the grid detailed pictures can be formed. Because these pixels are very close together, the image appears continuous. Conceptually, each pixel is made up of three sub-pixels—red, green, and blue—though the actual hardware may use a different pattern. Because our eyes can only directly perceive red, green, and blue, the screen can reproduce most of the colors we are capable of seeing.
+
+![Pixels](https://upload.wikimedia.org/wikipedia/commons/c/cb/XO_screen_01_Pengo.jpg)
+Photo by [Peter Halasz](http://commons.wikimedia.org/wiki/File:XO_screen_01_Pengo.jpg){figure}
+
+When you work with a graphics library like p5.js or the Javascript [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API), you don't have to think about individual pixels. You can use methods like `ellipse()` and the library will figure out which pixels need to change for you.
+
+Many interesting effects can be achieved by working directly with the pixels, reading and writing their red, green, and blue values one-by-one. Working this way naturally leads to thinking about drawing with code differently.
 
 
-## Raster Images
+::: .callout
+### Vector Monitors
 
-### The pixel array
+Computer displays don't have to use pixels at all. One of the earliest video games, [Tennis for Two](https://en.wikipedia.org/wiki/Tennis_for_Two), used a cathode ray oscilloscope as its display. Oscilloscopes are used to visualize electric signals. In a cathode ray oscilloscope, the signal is drawn by magnetically deflecting a beam of electrons as they race from an emitter—the cathode—towards a phosphor-coated glass screen. The phosphor glows where the electrons strike it, showing the signal.
+
+
+[Vector Monitors](https://en.wikipedia.org/wiki/Vector_monitor) were used in later video games as well, including the [Tempest](https://en.wikipedia.org/wiki/Tempest_(video_game)) arcade game and several games for the [Vectrex](https://en.wikipedia.org/wiki/Vectrex) home console.
+
+
+![Tennis for Two](https://upload.wikimedia.org/wikipedia/commons/5/50/Tennis_For_Two_on_a_DuMont_Lab_Oscilloscope_Type_304-A.jpg)
+
+
+
+/::
+
+### Video Memory
+
+An high-definition display is 1920 pixels wide and 1080 tall: 345,600 total pixels. Each pixel needs three bytes to represent its color value, one byte each for the red, green, and blue channels. In total that is 6,220,800 bytes—about 6 megabytes—of memory to keep track the full HD image. This data is usually kept in the video card's VRAM, but might also be kept in the computers main RAM. The display hardware sweeps through every pixel on the screen, changing its brightness based on the values in RAM. If you change the values in the RAM, a new picture appears on the screen. 
+
+In reality, modern video pipelines are more complicated than this, but at some level this is basically what is going on.
+
+
+::: .callout
+Today, six megabytes isn't much but it used to be that computers didn't have enough RAM to keep a full-color image of the screen in memory at all. They used a [variety of tricks](https://www.youtube.com/watch?v=Tfh0ytz8S0k) instead.
+/::
+
+
+### The Pixels Array
+
+The memory representing the image on the screen is called the video buffer or framebuffer. The p5.js library doesn't give you direct access to the framebuffer. Direct access to the screen's framebuffer is pretty rare on modern computers. p5.js _does_ give you access to a pixel buffer representing the image show on your sketch's canvas. This buffer is composited into the rendered webpage by the browser and shown in the browser's window. The window image is composited onto the screen by the OS.
+
 
 
 [diagram]
@@ -115,12 +147,12 @@ The first two examples use a nested loop to set a value for every pixel in the i
 
 Explore using p5's pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. <br/> Don't skip any.
 
-Time | Comment
---- | ---
-< 13 in 20 Minutes | You need to put in some extra work<br/> to strengthen your programming understanding.
-13 in 20 Minutes | Good.
-All in 20 Minutes   | Great.
-All in 15 Minutes   | Hot Dang!
+| Time               | Comment                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------- |
+| < 13 in 20 Minutes | You need to put in some extra work<br/> to strengthen your programming understanding. |
+| 13 in 20 Minutes   | Good.                                                                                 |
+| All in 20 Minutes  | Great.                                                                                |
+| All in 15 Minutes  | Hot Dang!                                                                             |
 
 
 ### Modify the Basic Example
@@ -237,12 +269,12 @@ This example doesn't draw the image at all. Instead, the image is used as an inp
 
 Explore using p5's pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. <br/> Don't skip any.
 
-Time | Comment
---- | ---
-< 10 in 20 Minutes | You need to put in some extra work<br/> to strengthen your programming understanding.
-10 in 20 Minutes | Good.
-All in 20 Minutes   | Great.
-All in 15 Minutes   | Hot Dang!
+| Time               | Comment                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------- |
+| < 10 in 20 Minutes | You need to put in some extra work<br/> to strengthen your programming understanding. |
+| 10 in 20 Minutes   | Good.                                                                                 |
+| All in 20 Minutes  | Great.                                                                                |
+| All in 15 Minutes  | Hot Dang!                                                                             |
 
 ### Modify Example 1
 1. Colorize the white pixels with a vertical black to red gradient.
