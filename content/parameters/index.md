@@ -78,6 +78,9 @@ Imagine a program that draws squares like the one below. What parameters might s
 [Wikipedia:<br/>Parameter Space](https://en.wikipedia.org/wiki/Parameter_space)
 
 [Wikipedia:<br/>Combinatorial Explosion](https://en.wikipedia.org/wiki/Combinatorial_explosion)
+
+[3Blue1Brown:<br/>How secure is 256 bit security?](https://www.youtube.com/watch?v=S9JGmA5_unY)
+
 /::
 
 A **parameter space** is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (true/false) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. This rapid growth is referred to as **Combinatorial Explosion**.
@@ -258,10 +261,10 @@ Begin designing a user interface for a fictional machine by considering which pa
 
 ::: .half
 #### Machine Types {underline}
-- A car
-- Planet generator
+- A self-driving car
+- Planet terraformer
 - Grocery-shopping bot
-- Internet surveillance front-end
+- Song Composer
 - Genetic pet builder
 - Love potion mixer
 /::
@@ -273,6 +276,7 @@ Begin designing a user interface for a fictional machine by considering which pa
 - A child
 - An [machine type] enthusiast
 - Another machine
+- A small accounting firm
 /::
 
 
@@ -318,11 +322,11 @@ The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides fun
 Explore using parameters by completing the following challenges in order. <br/> Don't skip any.
 
 
-Time | Comment
---- | ---
-< 6 in 20 Minutes | You need to put in some extra work to strengthen your understanding of these topics.
-6 in 20 Minutes | Good.
-All 10 in 20 Minutes   | Great.
+| Time                 | Comment                                                                              |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| < 6 in 20 Minutes    | You need to put in some extra work to strengthen your understanding of these topics. |
+| 6 in 20 Minutes      | Good.                                                                                |
+| All 10 in 20 Minutes | Great.                                                                               |
 
 
 ### Modify the Globals as Interface Example
@@ -372,12 +376,11 @@ Build a face-generating tool. This tool will create an image of a face that can 
 
 ## Reference Links
 
-
-
 [p5: Reference](https://p5js.org/reference/)
 : Documentation on the p5 API.
 
-
-
 [dat.gui](https://github.com/dataarts/dat.gui)
 : Popular, lightweight tool for quickly making nice-looking interfaces like [this one](http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage).
+
+[How secure is 256 bit security?](https://www.youtube.com/watch?v=S9JGmA5_unY)
+: The fantastic YouTube channel 3Blue1Brown explores combinitorical explosion in the context of crypograhic security.

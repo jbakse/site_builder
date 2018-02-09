@@ -78,17 +78,9 @@ Share your chosen sketch, comment on it and summarize your discussion.
 | 6     | Rik, Kirsten, Mario <br>Choose a sketch you feel should be tagged 😍. Explain why.                                                                                           |
 /::
 
-
-<!-- 1. *Xia, Patricia, Dahee* <br/>How does working within constraints support creativity?
-2. *Bella, Leah, Carla* <br/>Considering the tile set as a tool, how do tools impact authorship?
-3. *Aakanksha, Julian, Xu* <br/>Choose a sketch you feel should be tagged 🤓. Explain why.
-4. *Alyssa, Ting, Jack* <br/>Choose a sketch you feel should be tagged 😂. Explain why.
-5. *Madison, Earl, Patrick* <br/>Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project?
-6. *Rik, Kirsten, Mario* <br>Choose a sketch you feel should be tagged 😍. Explain why. -->
-
+9
 
 /::
-<!-- Choose a project that presents an interesting direction for further design inquiry. Suggest possible variations on this project. -->
 
 
 ### Class Notes
