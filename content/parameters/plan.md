@@ -14,6 +14,7 @@ Fictional Machines Decks: `Machine Types`, `User Types`
 - Consider the relationship of parameters and interface design
 - Practice problem analysis and interface design
 - Practice user-centered design concepts
+- Consider relationship between what you "make" and what you "design"
 - Consider distiction between "choices" and "options"
 - Technical: Exposing parameters as global variables
 - Technical: Exposing parameters with HTML controls

@@ -255,9 +255,10 @@ Begin designing a user interface for a fictional machine by considering which pa
 1. Choose a machine from the list below.
 2. Spend 6 minutes brainstorming possible parameters for your machine.
 3. Choose a user from the list below.
-4. Spend 3 minutes deciding which parameters to expose for your user. Choose exactly 3 parameters.
-5. Spend 3 minutes naming your parameters and defining the allowed values for each.
-6. Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present.
+4. Spend 3 minutes deciding which parameters to expose to your user. Choose exactly 3 parameters.
+5. Spend 1 minute deciding which parameters **not** to expose to your user. Choose exactly 1 parameter.
+6. Spend 3 minutes naming your exposed parameters and defining the allowed values for each.
+7. Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present.
 
 ::: .half
 #### Machine Types {underline}
