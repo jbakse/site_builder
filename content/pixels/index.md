@@ -51,7 +51,7 @@ In reality, modern video pipelines are more complicated than this, but at some l
 
 
 ::: .callout
-Today, six megabytes isn't much at all, but it used to be that computers didn't have enough RAM to keep a full-color image of the screen in memory at all. They used a [variety of tricks](https://www.youtube.com/watch?v=Tfh0ytz8S0k) instead.
+Today, six megabytes isn't much but it used to be that computers didn't have enough RAM to keep a full-color image of the screen in memory at all. They used a [variety of tricks](https://www.youtube.com/watch?v=Tfh0ytz8S0k) instead.
 /::
 
 
