@@ -21,7 +21,7 @@ software: p5.js
 
 ## Noise
 
-Random values are extremely common and important in procedural generation. They are also hard to work with. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly distributed values. If we want *related* or *repeatable* random values we have to do extra work.
+Random values are extremely common and important in procedural generation. They are also hard to work with. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly-distributed values. If we want *related* or *repeatable* random values we have to do extra work.
 
 Noise functions are often a better source of random values. 
 
@@ -42,7 +42,7 @@ Value Noise{figure}
 /::
 
 
-Noise functions provide a "cloud" of random values that can be used in a wide variety of ways. Noise functions are very frequently used in procedural texture generation and terrain generation. More generally, noise functions can be thought of as a lookup-table of pre-generated random values and used in place of `random()` in many cases.
+Noise functions provide a "cloud" of random values that can be used in a wide variety of ways. Noise functions are very frequently used in procedural texture generation and terrain generation. More generally, noise functions can be thought of as a lookup table of pre-generated random values and used in place of `random()` in many cases.
 
 
 ::: slides .!short .cover
@@ -100,16 +100,16 @@ Now suppose we wanted to add variation to the size of the squares. Both `random(
 /::
 
 
-Consider the two examples above, one uses `random()` and one uses `noise()`.
+Consider the two examples above: one uses `random()` and one uses `noise()`.
 
 random()                        | noise()
 ---                             | ---
-Its easy to control the range of values provided by `random()`.             | It is also easy with `noise()`.
-The values provided by `random()` are independent an unrelated. The circles change size at high frequency and with no transition.        | The values provided by `noise()` are arranged spatially. The frequency of size changes is more easily controlled.
-Achieving repeatable results with `randomSeed()` applies globally. You can have to freeze the big circle and the circle line together. | Achieving repeatable results with `noise()` is more flexible. You can freeze the circle line without changing the behavior of the big circle.
-good        | great
+It's easy to control the range of values provided by `random()`.             | It is also easy with `noise()`.
+The values provided by `random()` are independent and unrelated. The circles change size at high frequency and with no transition.        | The values provided by `noise()` are arranged spatially. The frequency of size changes is more easily controlled.
+Achieving repeatable results with `randomSeed()` applies globally. You have to freeze the big circle and the circle line together. | Achieving repeatable results with `noise()` is more flexible. You can freeze the circle line without changing the behavior of the big circle.
+Good        | Great
 
-
+<!--[[are "good" and "great" in the table above comments on random vs. noise? If so, I'd capitalize them. Or a copy/paste leftover?]]-->
 
 
 
@@ -117,14 +117,14 @@ good        | great
 ## Benefits of Noise
 
 ### Noise Looks Good
-The `noise(x)` function returns values sampled from Perlin Noise. Perlin Noise provides random values that are aesthetically arranged. The variation in perlin noise is band limited—its variation is even, with out flat or noisy areas—and visually isotropic—it looks the same at different rotations. These characteristics make it a useful basis for many applications that require natural-feeling variation.
+The `noise(x)` function returns values sampled from Perlin noise. Perlin noise provides random values that are aesthetically arranged. The variation in Perlin noise is band-limited: it is even, without flat or noisy areas. The variation is also visually isotropic—it looks the same at different rotations. These characteristics make it a useful basis for many applications that require natural-feeling variation.
 
 
 ### Noise is Repeatable
-Repeated variation is easy with `noise(x)`: every time you call `noise(x)` with a particular argument, you get the same value back. This is often very useful. For example, in an animation you often need a value to stay the same from frame to frame.
+Repeated variation is easy with `noise(x)`: every time you call `noise(x)` with a particular argument, you get the same value back. This can be very useful. For example, in an animation you often need a value to stay the same from frame to frame.
 
-- `random()` requires no arguments and returns a different random value every time
-- `noise(x)` requires an argument and returns the same random value _for that argument_ every time
+- `random()` requires no arguments and returns a different random value every time.
+- `noise(x)` requires an argument and returns the same random value _for that argument_ every time.
 
 This difference is a core reason why `noise(x)` is so useful. This difference takes some getting used to, and learning what to pass in for `x` takes some practice.
 
@@ -182,7 +182,7 @@ How does the `noise(x)` function work? Explore the underlying concepts by buildi
 
 The `noise()` function takes up to three parameters: `noise(x,y,z)` allowing you to request values arranged in a three dimensional "cloud" of pseudo-random values.
 
-When you call `noise(x)` you have to pass in at least one parameter. This parameter specifies the location in the cloud of the value to return. You can think about `noise(x)` as a lookup-table: `noise(1)` provides one value in the table and `noise(2)` provides another. 
+When you call `noise(x)` you have to pass in at least one parameter. This parameter specifies the location in the cloud of the value to return. You can think about `noise(x)` as a lookup table: `noise(1)` provides one value in the table and `noise(2)` provides another. 
 
 Choosing appropriate parameter values takes some getting used to. You can pass in `frameCount` or `millis()` to get values that change over time. You can pass in XYZ coordinates to get values that change over space. These are very common cases, but really you can pass values from any range into `noise()` and it will provide random values in return.
 
@@ -203,7 +203,7 @@ n = noise(frameCount * 10);
 ```
 
 ### Controlling the Amplitude and Range
-The `noise(x)` function returns values in the range of 0 to 1. Use multiplication and addition to shift this range to the range you need. Be aware that while `random()` provides evenly distributed values, `noise()` values are biased towards the middle.
+The `noise(x)` function returns values in the range of 0 to 1. Use multiplication and addition to shift this range to the range you need. Be aware that while `random()` provides evenly-distributed values, `noise()` values are biased towards the middle.
 
 ```javascript
 // scale values to sit between 10 and 20;
@@ -240,7 +240,7 @@ By default, every time you restart your sketch the noise pattern will be differe
 
 
 ## Study Examples
-The following study examples demonstrate different ways of using noise to get different looks and effects. Some of these examples are similar to the examples in the [Random Values](../random) chapter. Carefully study each example to understand how they work. Several of the examples offer different approaches which can be commented in and out to compare their results.
+The following study examples demonstrate different ways of using noise to get different looks and effects. Some of these examples are similar to the examples in the [Random Values](../random) chapter. Carefully study each example to understand how it works. Several of the examples offer different approaches which can be commented in and out to compare their results.
 
 ### Mapping Noise
 ::: js-lab
@@ -261,7 +261,7 @@ The following study examples demonstrate different ways of using noise to get di
 ::: .activity
 ## In-class Challenge
 
-Explore using parameters by completing the following challenges in order. <br/> Don't skip any.
+Explore using noise by completing the following challenges in order. <br/> Don't skip any.
 
 
 Time | Comment
@@ -281,7 +281,7 @@ All 9 in 20 Minutes   | Great.
 {continue}
 
 ### Modify the Skyline Example
-1. This example has two global parameters: `amplitude` and `frequency`. Change the values of these parameters to get a feel for how they effect the output. What happens when you use a very small value for frequency, such as `.001`?
+1. This example has two global parameters: `amplitude` and `frequency`. Change the values of these parameters to get a feel for how they affect the output. What happens when you use a very small value for frequency, such as `.001`?
 2. On line 23, what would happen if you changed `noise(x * frequency)` to `noise(x * frequency, frameCount)`? Make the change. Is that what you expected?
 3. Your last change should have caused the bar heights to animate very quickly. Slow down the rate of change.
 {continue}
@@ -317,19 +317,19 @@ Make a program that generates treasure maps.
 
 #### Things to consider
 
-- Where is you treasure? On a tropical island? A farm? In a warehouse?
+- Where is your treasure? On a tropical island? On a farm? In a warehouse?
 - What style is your map? Is it old and beaten? Sci-fi? 
 - Does your map include labels? What do they say?
-- Can you make a believable, natural geography? Should you?
+- Can you make a believable natural geography? Should you?
 - What terrain features might you include? Rivers? Mountains? Hills? Boxes?
-- It is okay if your map takes seconds, or even minutes to generate. Does allow you to do something different?
-- A map can represent many things, it doesn't necessarily need to represent geography.
+- It is okay if your map takes seconds or even minutes to generate. Does allow you to do something different? <!--[[What do you want to ask in the second question?]]-->
+- A map can represent many things—it doesn't necessarily need to represent geography.
 
 #### When posting your map
 
 - Include three maps generated by your program.
-- Each map should be shown as an image, not video.
-- Consider posting a first run at this challenge early, and then revisiting towards the end of the week with a second post.
+- Each map should be shown as an image, not a video.
+- Consider posting a first run at this challenge early, and then revisiting it towards the end of the week with a second post.
 
 
 /::
@@ -345,17 +345,17 @@ Make a program that generates treasure maps.
 : Active Pinterest search for *Perlin Noise Art*
 
 [Book of Shaders: Noise](https://thebookofshaders.com/11/)
-: Chapter on using Noise in GLSL shaders from the excellent *The Book of Shaders*.
+: Chapter on using noise in GLSL shaders from the excellent *The Book of Shaders*.
 
 [Shiffman: 2D Noise](https://www.youtube.com/watch?v=ikwNrFvnL3g)
-: [Daniel Shiffman's](http://shiffman.net/about/) video on 2D Perlin Noise 
+: [Daniel Shiffman's](http://shiffman.net/about/) video on 2D Perlin noise 
 
 
 [Ken Perlin: Noise and Turbulence](http://mrl.nyu.edu/~perlin/doc/oscar.html)
-: Comments on Perlin Noise direct from the source, including the code.
+: Comments on Perlin noise direct from the source, including the code.
 
 [GPU Gems: Improved Perlin Noise](https://developer.nvidia.com/gpugems/GPUGems/gpugems_ch05.html)
-: Ken Perlin details an improved implementation of Perlin Noise for [GPU Gems](https://developer.nvidia.com/gpugems/GPUGems/gpugems_pref01.html)
+: Ken Perlin details an improved implementation of Perlin noise for [GPU Gems](https://developer.nvidia.com/gpugems/GPUGems/gpugems_pref01.html)
 
 [Lecture: Juicing your Cameras With Math](https://www.youtube.com/watch?v=tu-Qe66AvtY)
 : GDC talk on making cameras cooler. At 11:40 he discusses the benefits of using Perlin noise instead of RNG for camera shake.
