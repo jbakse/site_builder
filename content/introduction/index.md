@@ -31,7 +31,7 @@ We will make things that make things.{bigger}
 
 There are many reasons artists and designers employ algorithmic methods. Some important ones include:
 
-- exploring new aesthetic
+- exploring new aesthetics
 - automating complex tasks
 - enhancing variety
 - creating dynamic, responsive content
@@ -52,9 +52,9 @@ While we use computer programming throughout this class, it is important to unde
 
 ## The Sierpinski Triangle
 
-Draw a Sierpinski Triangle with pencil&nbsp;and&nbsp;paper.
+Draw a Sierpinski triangle with pencil&nbsp;and&nbsp;paper.
 
-The [Sierpinski Triangle](http://en.wikipedia.org/wiki/Sierpinski_triangle) is a fractal. It is **infinitely detailed** and **self-similar**. There are many, many ways to generate a Sierpinski Triangle. The amazing [Sierpinski triangle page to end most Sierpinski triangle pages](http://www.oftenpaper.net/sierpinski.htm) details many of them. Here is another.
+The [Sierpinski Triangle](http://en.wikipedia.org/wiki/Sierpinski_triangle) is a fractal. It is **infinitely detailed** and **self-similar**. There are many, many ways to generate a Sierpinski triangle. The amazing [Sierpinski triangle page to end most Sierpinski triangle pages](http://www.oftenpaper.net/sierpinski.htm) details many of them. Here is another.
 
 ### Instructions
 
@@ -79,7 +79,7 @@ Yes, these instructions will go on forever. I'll interrupt you in a minute.
 
 ## About this Class
 
-In this class, we will make things that make things. We will **explore** a variety of programming languages, tools, and methods. We will **create** a variety of output: graphics, sounds, videos, animations, even 3D printed objects. The primary goals of this class are to introduce **new ways of making** and to encourage **aesthetic investigation**.
+In this class, we will make things that make things. We will **explore** a variety of programming languages, tools, and methods. We will **create** a variety of output: graphics, sounds, videos, animations, even 3D-printed objects. The primary goals of this class are to introduce **new ways of making** and to encourage **aesthetic investigation**.
 
 ![Make Things that Make Things](./figures/make_things.png){full-width}
 
@@ -96,7 +96,7 @@ We will also explore some interesting programming topics including:
 - composing strategies and tactics
 - Markov chains
 - alternative programming paradigms
-- real-time vs prerendered animation
+- real-time vs pre-rendered animation
 
 ### Who I am
 
@@ -112,7 +112,7 @@ I am Justin Bakse. I am an assistant professor of interaction design at Parsons.
 
 This class focuses on exploration. Each class introduces a new topic or tool, usually with an in-class workshop. Throughout the week you will be expected to create daily sketches/experiments related to that topic. 
 
-**This emphasis on this class will be on personal exploration, learning to learn, and process rather than outcomes.**
+**The emphasis in this class will be on personal exploration, learning to learn, and process rather than outcomes.**
 
 ![This not That](figures/this_not_that.png){full-width}
 
@@ -121,9 +121,9 @@ This class focuses on exploration. Each class introduces a new topic or tool, us
 
 As noted in the Syllabus, students in the MFA program must complete one extra assignment. BFA students are encouraged to also complete this assignment for extra credit. 
 
-In short this assignment is to choose a topic for further exploration, build a somewhat larger project, and write up a case study for the project. This assignment is intended to be flexibile, so feel free to propose your own spin.
+In short this assignment is to choose a topic for further exploration, build a somewhat larger project, and write up a case study for the project. This assignment is intended to be flexible, so feel free to propose your own spin.
 
-You can complete this assignment at any time durring the semester. I suggest turning this in around midterms. Please discuss your general plan for your project with me before starting.
+You can complete this assignment at any time during the semester. I suggest turning this in around midterms. Please discuss with me your general plan for your project before starting.
 
 ### Notes on Daily Sketching
 Your goal **each day** should be to explore a different aspect of the weekly theme. Ideally, you will spend **1 to 2 hours on an idea**, resulting in an image or other artifact. Each day you will work on **different ideas**, possibly informed by something you did earlier in the week or class.
@@ -142,7 +142,7 @@ That is fine, spend more time on another day and post twice.
 
 <br>
 
-> Can I spend, say, 8 hours all on one day? Maybe I'll pull an all-nighter.
+> Can I spend, say, 8 hours all in one day? Maybe I'll pull an all-nighter.
 
 Don't do that. This process is about exploring different ideas. Spacing out your work gives you time to think. Creativity often comes in the space between actions.
 
@@ -194,7 +194,7 @@ Absolutely. **I highly recommend that you do!** The more variety between your po
 
 <br>
 
-> What about in class work? Does that count?
+> What about in-class work? Does that count?
 
 Some weeks we'll have time set aside in class to make something, some weeks we won't. If we do start something in class, you can finish it after class and post it as one of your sketches.
 

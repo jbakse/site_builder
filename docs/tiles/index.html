@@ -9,7 +9,7 @@
 <script src="../mess/truchent_mess.js"></script>
 <h2 id="tile-maps-sets">Tile Maps + Sets</h2>
 <p>Artists and designers have worked with modular motifs arranged on grids throughout history. This approach affords a variety of aesthetic and practical benefits. Repetition on a grid leads to patterns with natural visual rhythm and concord while allowing for variety and complexity. Practically, this method allows templates and molds to facilitate mass production of the individual units, which can be arranged contextually on-site. This approach also allows the creative work to be split up: a single artist creates the graphic system, and local craftsmen apply it.</p>
-<p>You will find examples of this approach in many media including masonry and tile, textiles, font design, and video games. Tile maps and sets were widely used in the 8-bit and 16-bit video game era. Hardware limitation imposed strict limits on designers who took advantage of hardware tile support to push the media forward. Today’s games do not face the same hardware restrictions but modular graphic systems are still an important tool for artists. Support for tile maps is built into many contemporary game engines, including <a href="https://docs.unity3d.com/Manual/Tilemap.html">Unity</a>.</p>
+<p>You will find examples of this approach in many media including masonry and tile, textiles, font design, and video games. Tile maps and sets were widely used in the 8-bit and 16-bit video game era. Hardware limitation imposed strict limits on designers who took advantage of hardware tile support to push the media forward. Today’s games do not face the same hardware restrictions, but modular graphic systems are still an important tool for artists. Support for tile maps is built into many contemporary game engines, including <a href="https://docs.unity3d.com/Manual/Tilemap.html">Unity</a>.</p>
 <div id="" class="contain slides-wrap slideInfos">
 <div id="carousel-1" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner slides" role="listbox">
@@ -229,15 +229,15 @@
 </div>
 <h2 id="designing-tile-sets">Designing Tile Sets</h2>
 <p>The most basic tile set is a single image. Repeating this image, side by side by side, creates a pattern. With a little care, the image can be designed to match up edge-to-edge creating a pattern where the seams are hidden.</p>
-<p>You can build on this simple premise in many ways: alternate tiles, rotatable tiles, complex collections of tiles that work together. You can work with different grids as well; squares are commonly used, but many other <a href="http://gwydir.demon.co.uk/jo/tess/grids.htm">shapes can tessellate</a> as well.</p>
+<p>You can build on this simple premise in many ways: alternate tiles, rotatable tiles, complex collections of tiles that work together. You can work with different grids as well: squares are commonly used, but many other <a href="http://gwydir.demon.co.uk/jo/tess/grids.htm">shapes can tessellate</a>.</p>
 <h3 id="repeating-tiles">Repeating Tiles</h3>
-<p>The basic repeating tile: top matches bottom, left matches right. Below simple repeating tiles are used to create striped, houndstooth, and herringbone patterns.</p>
+<p>The basic repeating tile: top matches bottom, left matches right. Below, simple repeating tiles are used to create striped, houndstooth, and herringbone patterns.</p>
 <p class="scale"><img src="./figures/patterns.png" alt="patterns"></p>
 <h3 id="repeating-tiles-with-alternates">Repeating Tiles with Alternates</h3>
 <p>Top matches bottom, left matches right. Alternate tiles used to break up pattern.</p>
 <p class="scale"><img src="./figures/patterns_alt.png" alt="patterns"></p>
 <h3 id="rotatable-tiles">Rotatable Tiles</h3>
-<p>Top matches bottom, left, and right. Rotated tiles still match up nicely. These are sometimes called See also: <a href="https://en.wikipedia.org/wiki/Truchet_tiles">Truchet tiles</a>.</p>
+<p>Top matches bottom, left, and right. Rotated tiles still match up nicely. These are sometimes called <a href="https://en.wikipedia.org/wiki/Truchet_tiles">Truchet tiles</a>.</p>
 <p class="scale"><img src="./figures/patterns_truchet.png" alt="truchet"></p>
 <h3 id="edge-matched-tile-sets">Edge-matched Tile Sets</h3>
 <p>A set of tiles where the sides of each tile match up to the opposing side of another tile in the set. Edge-matched tiles are great for forming lines.</p>
@@ -277,7 +277,7 @@
 <div id="" class="activity">
 <h2 id="tile-set-workshop">Tile Set Workshop</h2>
 <p>Create an edge-matched tile kit with markers on paper squares.</p>
-<p class="scale">First, create a tile set. Create a design that allows rotation, this is faster to draw out than a full set. The image below shows which tiles you need to make, and how many to make of each.
+<p class="scale">First, create a tile set. Create a design that allows rotation—this is faster to draw out than a full set. The image below shows which tiles you need to make, and how many to make of each.
 <img src="./figures/edge_counts.png" alt="edge_counts"></p>
 <p>Once you have made your kit, use it to create a variety of forms. Try building out each letter in the alphabet. After playing with your set, start experimenting however you wish.</p>
 <p>Before the end of the class take a picture of your work and <strong>post it the class sketch blog.</strong></p>
@@ -290,9 +290,9 @@
 </div>
 <h2 id="procedural-tile-mapping">Procedural Tile Mapping</h2>
 <p>Early computer games were often severely constrained by available storage, memory, and processing power. Super Mario Bros for the NES had only 40 kilobytes of storage for everything: the game code, character and world art, and music.</p>
-<p class="scale  pixel">This single screenshot mario dying in world 1_1 is 8 kilobytes alone.
+<p class="scale  pixel">This single screenshot of Mario dying in world 1_1 is 8 kilobytes alone.
 <img src="./figures/smb_1_1.png" alt="Super Mario Bros 1-1"></p>
-<p>This is possible because SMB builds the world from a small set of reusable tiles that can be re-colored and re-used in multiple ways. For example the bush and the cloud in the screenshot above use the same tiles with different palettes. Below is a dump of the tiles and palettes used in SMB.</p>
+<p>This is possible because SMB builds the world from a small set of reusable tiles that can be re-colored and re-used in multiple ways. For example, the bush and the cloud in the screenshot above use the same tiles with different palettes. Below is a dump of the tiles and palettes used in SMB.</p>
 <p class="scale  pixel"><img src="https://gamasutra.com/db_area/images/news/253377/fig03.png" alt="SMB Tiles"></p>
 <h3 id="1-bit-per-tile">1-bit per Tile</h3>
 <p>We can pack a map for edge-matched tile sets very efficiently using a single bit for each tile. By comparing the state of adjacent tiles, we can determine which tile should be drawn in each grid position.</p>
@@ -318,7 +318,7 @@ Derived Roadway Drawing</p>
 </ol>
 </div>
 <p class="scale"><img src="./figures/tile_bitmask.png" alt="tile_bitmask"></p>
-<p>This point-scheme generates a unique value to every combination of neighboring tile state.</p>
+<p>This point scheme generates a unique value for every combination of neighboring tile states.</p>
 <p>The following example uses this approach to draw a road using a edge-mapped tile set with a 1-bit map. You can click grid squares to toggle them on and off.</p>
 <div id="" class="">
 <div class="js-lab">
@@ -352,6 +352,6 @@ Derived Roadway Drawing</p>
 <dt><a href="https://www.gamasutra.com/blogs/DavidDAngelo/20140625/219383/Breaking_the_NES_for_Shovel_Knight.php">Breaking the NES for Shovel Knight</a></dt>
 <dd>Shovel Knight is an amazing retro platformer from <a href="http://yachtclubgames.com/">Yacht Club Games</a>. Developer David D’Angelo discusses how the Nintendo’s specific technical limitations and abilities influenced Shovel Knight’s design.</dd>
 <dt><a href="https://www.youtube.com/watch?v=Tfh0ytz8S0k">The 8-bit Guy: How “oldschool” graphics worked</a></dt>
-<dd>Overview of the hardware limitation and creative solutions of early pixel grapihcs.</dd>
+<dd>Overview of the hardware limitations and creative solutions in early pixel graphics.</dd>
 </dl>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>
