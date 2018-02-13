@@ -20,7 +20,7 @@ software: p5.js + p5.dom
 
 Artists and designers have worked with modular motifs arranged on grids throughout history. This approach affords a variety of aesthetic and practical benefits. Repetition on a grid leads to patterns with natural visual rhythm and concord while allowing for variety and complexity. Practically, this method allows templates and molds to facilitate mass production of the individual units, which can be arranged contextually on-site. This approach also allows the creative work to be split up: a single artist creates the graphic system, and local craftsmen apply it.
 
-You will find examples of this approach in many media including masonry and tile, textiles, font design, and video games. Tile maps and sets were widely used in the 8-bit and 16-bit video game era. Hardware limitation imposed strict limits on designers who took advantage of hardware tile support to push the media forward. Today's games do not face the same hardware restrictions but modular graphic systems are still an important tool for artists. Support for tile maps is built into many contemporary game engines, including [Unity](https://docs.unity3d.com/Manual/Tilemap.html).
+You will find examples of this approach in many media including masonry and tile, textiles, font design, and video games. Tile maps and sets were widely used in the 8-bit and 16-bit video game era. Hardware limitation imposed strict limits on designers who took advantage of hardware tile support to push the media forward. Today's games do not face the same hardware restrictions, but modular graphic systems are still an important tool for artists. Support for tile maps is built into many contemporary game engines, including [Unity](https://docs.unity3d.com/Manual/Tilemap.html).
 
 
 
@@ -32,12 +32,12 @@ You will find examples of this approach in many media including masonry and tile
 
 The most basic tile set is a single image. Repeating this image, side by side by side, creates a pattern. With a little care, the image can be designed to match up edge-to-edge creating a pattern where the seams are hidden.
 
-You can build on this simple premise in many ways: alternate tiles, rotatable tiles, complex collections of tiles that work together. You can work with different grids as well; squares are commonly used, but many other [shapes can tessellate](http://gwydir.demon.co.uk/jo/tess/grids.htm) as well.
+You can build on this simple premise in many ways: alternate tiles, rotatable tiles, complex collections of tiles that work together. You can work with different grids as well: squares are commonly used, but many other [shapes can tessellate](http://gwydir.demon.co.uk/jo/tess/grids.htm).
 
 
 ### Repeating Tiles
 
-The basic repeating tile: top matches bottom, left matches right. Below simple repeating tiles are used to create striped, houndstooth, and herringbone patterns.
+The basic repeating tile: top matches bottom, left matches right. Below, simple repeating tiles are used to create striped, houndstooth, and herringbone patterns.
 
 ![patterns](./figures/patterns.png){scale}
 
@@ -50,7 +50,7 @@ Top matches bottom, left matches right. Alternate tiles used to break up pattern
 
 ### Rotatable Tiles
 
-Top matches bottom, left, and right. Rotated tiles still match up nicely. These are sometimes called See also: [Truchet tiles](https://en.wikipedia.org/wiki/Truchet_tiles).
+Top matches bottom, left, and right. Rotated tiles still match up nicely. These are sometimes called [Truchet tiles](https://en.wikipedia.org/wiki/Truchet_tiles).
 
 ![truchet](./figures/patterns_truchet.png){scale}
 
@@ -124,7 +124,7 @@ Discuss the aesthetic and practical features of tile sets and maps.
 
 Create an edge-matched tile kit with markers on paper squares. 
 
-First, create a tile set. Create a design that allows rotation, this is faster to draw out than a full set. The image below shows which tiles you need to make, and how many to make of each.
+First, create a tile set. Create a design that allows rotation—this is faster to draw out than a full set. The image below shows which tiles you need to make, and how many to make of each.
 ![edge_counts](./figures/edge_counts.png){scale}
 
 Once you have made your kit, use it to create a variety of forms. Try building out each letter in the alphabet. After playing with your set, start experimenting however you wish. 
@@ -149,10 +149,10 @@ At the end of class, trade your tiles with another student in the class. This we
 
 Early computer games were often severely constrained by available storage, memory, and processing power. Super Mario Bros for the NES had only 40 kilobytes of storage for everything: the game code, character and world art, and music. 
 
-This single screenshot mario dying in world 1_1 is 8 kilobytes alone.
+This single screenshot of Mario dying in world 1_1 is 8 kilobytes alone.
 ![Super Mario Bros 1-1](./figures/smb_1_1.png){scale  pixel}
 
-This is possible because SMB builds the world from a small set of reusable tiles that can be re-colored and re-used in multiple ways. For example the bush and the cloud in the screenshot above use the same tiles with different palettes. Below is a dump of the tiles and palettes used in SMB.
+This is possible because SMB builds the world from a small set of reusable tiles that can be re-colored and re-used in multiple ways. For example, the bush and the cloud in the screenshot above use the same tiles with different palettes. Below is a dump of the tiles and palettes used in SMB.
 
 ![SMB Tiles](https://gamasutra.com/db_area/images/news/253377/fig03.png){scale  pixel}
 
@@ -191,7 +191,7 @@ The roadway image above was produced by following these rules:
 
 
 
-This point-scheme generates a unique value to every combination of neighboring tile state. 
+This point scheme generates a unique value for every combination of neighboring tile states. 
 
 The following example uses this approach to draw a road using a edge-mapped tile set with a 1-bit map. You can click grid squares to toggle them on and off.
 
@@ -252,4 +252,4 @@ Design a full alphabet using a single tile set. Post an image that shows your fo
 
 
 [The 8-bit Guy: How "oldschool" graphics worked](https://www.youtube.com/watch?v=Tfh0ytz8S0k)
-: Overview of the hardware limitation and creative solutions of early pixel grapihcs.
+: Overview of the hardware limitations and creative solutions in early pixel graphics.
