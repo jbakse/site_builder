@@ -21,7 +21,7 @@ software: p5.js
 
 ## Noise
 
-Random values are extremely common and important in procedural generation. They are also hard to work with. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly distributed values. If we want *related* or *repeatable* random values we have to do extra work.
+Random values are extremely common and important in procedural generation. They are also hard to work with in many situations. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly distributed values. If we want *related* or *repeatable* random values we have to do extra work.
 
 Noise functions are often a better source of random values. 
 
@@ -75,12 +75,12 @@ Where do those values come from? They could come from a few places.
 
 
 
-Source          | Purpose
----             | ---
-Hard Coded      | You want specific control of the value.
-Parameters      | You want to be able to control the value from a larger context.
-`random()`      | You want random variation.
-`noise(x)`      | You want controlled variation.
+| Source     | Purpose                                                         |
+| ---------- | --------------------------------------------------------------- |
+| Hard Coded | You want specific control of the value.                         |
+| Parameters | You want to be able to control the value from a larger context. |
+| `random()` | You want random variation.                                      |
+| `noise(x)` | You want controlled variation.                                  |
 
 Now suppose we wanted to add variation to the size of the squares. Both `random()` and `noise()` would allow us to do that, but `noise()` provides much more control. With `random()` the sizes of the boxes won't be related at all. With `noise()` we can control how quickly the size changes horizontally, vertically, and over time. If we sample a small area of the noise function the variation will be subtle and gradual. If our samples are far apart the variation will be be drastic and unpredictable and look a lot like `random()`.
 
@@ -102,12 +102,12 @@ Now suppose we wanted to add variation to the size of the squares. Both `random(
 
 Consider the two examples above, one uses `random()` and one uses `noise()`.
 
-random()                        | noise()
----                             | ---
-Its easy to control the range of values provided by `random()`.             | It is also easy with `noise()`.
-The values provided by `random()` are independent an unrelated. The circles change size at high frequency and with no transition.        | The values provided by `noise()` are arranged spatially. The frequency of size changes is more easily controlled.
-Achieving repeatable results with `randomSeed()` applies globally. You can have to freeze the big circle and the circle line together. | Achieving repeatable results with `noise()` is more flexible. You can freeze the circle line without changing the behavior of the big circle.
-good        | great
+| random()                                                                                                                               | noise()                                                                                                                                       |
+| -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Its easy to control the range of values provided by `random()`.                                                                        | It is also easy with `noise()`.                                                                                                               |
+| The values provided by `random()` are independent an unrelated. The circles change size at high frequency and with no transition.      | The values provided by `noise()` are arranged spatially. The frequency of size changes is more easily controlled.                             |
+| Achieving repeatable results with `randomSeed()` applies globally. You can have to freeze the big circle and the circle line together. | Achieving repeatable results with `noise()` is more flexible. You can freeze the circle line without changing the behavior of the big circle. |
+| good                                                                                                                                   | great                                                                                                                                         |
 
 
 
@@ -264,11 +264,11 @@ The following study examples demonstrate different ways of using noise to get di
 Explore using parameters by completing the following challenges in order. <br/> Don't skip any.
 
 
-Time | Comment
---- | ---
-< 7 in 20 Minutes | You need to put in some extra work to strengthen your understanding of these topics.
-7 in 20 Minutes | Good.
-All 9 in 20 Minutes   | Great.
+| Time                | Comment                                                                              |
+| ------------------- | ------------------------------------------------------------------------------------ |
+| < 7 in 20 Minutes   | You need to put in some extra work to strengthen your understanding of these topics. |
+| 7 in 20 Minutes     | Good.                                                                                |
+| All 9 in 20 Minutes | Great.                                                                               |
 
 
 ### Modify the Mapping Noise Example
