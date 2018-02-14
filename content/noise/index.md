@@ -21,7 +21,7 @@ software: p5.js
 
 ## Noise
 
-Random values are extremely common and important in procedural generation. They are also hard to work with in many situations. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly-distributed values. If we want *related* or *repeatable* random values we have to do extra work.
+Random values are extremely common and important in procedural generation, but in many situations they are hard to work with. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly-distributed values. If we want *related* or *repeatable* random values we have to do extra work.
 
 Noise functions are often a better source of random values. 
 
@@ -42,7 +42,7 @@ Value Noise{figure}
 /::
 
 
-Noise functions provide a "cloud" of random values that can be used in a wide variety of ways. Noise functions are very frequently used in procedural texture generation and terrain generation. More generally, noise functions can be thought of as a lookup table of pre-generated random values and used in place of `random()` in many cases.
+Noise functions provide a "cloud" of random values that can be used in a wide variety of ways. Noise functions are very frequently used in procedural texture generation and terrain generation. More generally, noise functions can be thought of as a lookup table of pre-generated random values that can be used in place of `random()` in many cases.
 
 
 ::: slides .!short .cover
@@ -67,7 +67,7 @@ Noise functions provide a "cloud" of random values that can be used in a wide va
 ![blue square](figures/grid.svg){scale}
 /::
 
-Consider the code you would write to draw the blue squares above. You need to provide several values for each square: horizontal position, vertical position, width, height, and color.
+Consider the code you would write to draw the blue squares above. You would need to provide several values for each square: horizontal position, vertical position, width, height, and color.
 
 Where do those values come from? They could come from a few places.
 
@@ -78,11 +78,11 @@ Where do those values come from? They could come from a few places.
 | Source     | Purpose                                                         |
 | ---------- | --------------------------------------------------------------- |
 | Hard Coded | You want specific control of the value.                         |
-| Parameters | You want to be able to control the value from a larger context. |
+| Parameters | You want to be able to control the value within a larger context. |
 | `random()` | You want random variation.                                      |
 | `noise(x)` | You want controlled variation.                                  |
 
-Now suppose we wanted to add variation to the size of the squares. Both `random()` and `noise()` would allow us to do that, but `noise()` provides much more control. With `random()` the sizes of the boxes won't be related at all. With `noise()` we can control how quickly the size changes horizontally, vertically, and over time. If we sample a small area of the noise function the variation will be subtle and gradual. If our samples are far apart the variation will be be drastic and unpredictable and look a lot like `random()`.
+Now suppose we wanted to add variation to the size of the squares. Both `random()` and `noise()` would allow us to do that, but `noise()` provides much more control. With `random()` the sizes of the boxes won't be related at all. With `noise()` we can control how quickly the size changes horizontally, vertically, and over time. If we sample a small area of the noise function the variation will be subtle and gradual. If our samples are far apart the variation will be be drastic, unpredictable and look a lot like `random()`.
 
 
 ### Random()
@@ -117,7 +117,7 @@ Consider the two examples above: one uses `random()` and one uses `noise()`.
 ## Benefits of Noise
 
 ### Noise Looks Good
-The `noise(x)` function returns values sampled from Perlin noise. Perlin noise provides random values that are aesthetically arranged. The variation in Perlin noise is band-limited: it is even, without flat or noisy areas. The variation is also visually isotropic—it looks the same at different rotations. These characteristics make it a useful basis for many applications that require natural-feeling variation.
+The `noise(x)` function returns values sampled from Perlin noise. Perlin noise provides random values that are aesthetically arranged. The variation in Perlin noise is band-limited: It is even, without flat or noisy areas. The variation is also visually isotropic—it looks the same at different rotations. These characteristics make it a useful basis for many applications that require natural-feeling variation.
 
 
 ### Noise is Repeatable
@@ -180,7 +180,7 @@ How does the `noise(x)` function work? Explore the underlying concepts by buildi
 
 ### Calling the Noise Function
 
-The `noise()` function takes up to three parameters: `noise(x,y,z)` allowing you to request values arranged in a three dimensional "cloud" of pseudo-random values.
+The `noise()` function takes up to three parameters: `noise(x,y,z)`. These parameters allow you to request values arranged in a three dimensional "cloud" of pseudo-random values.
 
 When you call `noise(x)` you have to pass in at least one parameter. This parameter specifies the location in the cloud of the value to return. You can think about `noise(x)` as a lookup table: `noise(1)` provides one value in the table and `noise(2)` provides another. 
 
@@ -203,7 +203,7 @@ n = noise(frameCount * 10);
 ```
 
 ### Controlling the Amplitude and Range
-The `noise(x)` function returns values in the range of 0 to 1. Use multiplication and addition to shift this range to the range you need. Be aware that while `random()` provides evenly-distributed values, `noise()` values are biased towards the middle.
+The `noise(x)` function returns values in the range of 0 to 1. Use multiplication and addition to shift values to the range you need. Be aware that while `random()` provides evenly-distributed values, `noise()` values are biased towards the middle.
 
 ```javascript
 // scale values to sit between 10 and 20;
@@ -226,7 +226,7 @@ n = map(n, 0, 1, 10, 20);
 /::
 
 The `noiseDetail()`  function allows you to control the "roughness" or "detail" of the noise returned. 
-
+<!--[[Sometimes in sketches you call this octaves, sometimes detail. Maybe make clear that octaves, detail, and roughness all refer to the same noiseDetail() function. "Octaves" especially might require explanation, since the function itself is just called "detail".]]-->
 
 ### Controlling the Seed
 
@@ -236,11 +236,11 @@ The `noiseDetail()`  function allows you to control the "roughness" or "detail" 
 
 
 By default, every time you restart your sketch the noise pattern will be different. The `noiseSeed()` allows you to manually set the noise pattern seed. 
-
+<!--[[You discuss in the beginning how noise(x) always returns the same value for the same input. It's not immediately clear that this means the same value within the context of a single sketch run vs. constant across each run.]]-->
 
 
 ## Study Examples
-The following study examples demonstrate different ways of using noise to get different looks and effects. Some of these examples are similar to the examples in the [Random Values](../random) chapter. Carefully study each example to understand how it works. Several of the examples offer different approaches which can be commented in and out to compare their results.
+The following study examples demonstrate different methods of using noise to get varied looks and effects. Some of these examples are similar to the examples in the [Random Values](../random) chapter. Carefully study each example to understand how it works. Several of the examples offer multiple approaches which can be commented in and out to compare their results.
 
 ### Mapping Noise
 ::: js-lab
@@ -272,7 +272,7 @@ Explore using noise by completing the following challenges in order. <br/> Don't
 
 
 ### Modify the Mapping Noise Example
-1. This example shows several ways of mapping noise. Comment in and out each example, and compare the results.
+1. This example shows several ways to map noise. Comment in and out each example, and compare the results.
 
 ### Modify the Grass Example
 1. Study the code and get a general idea of how it works.
@@ -329,7 +329,7 @@ Make a program that generates treasure maps.
 
 - Include three maps generated by your program.
 - Each map should be shown as an image, not a video.
-- Consider posting a first run at this challenge early, and then revisiting it towards the end of the week with a second post.
+- Consider posting a first run at this challenge early in the week, and then revisiting it towards the end of the week with a second post.
 
 
 /::

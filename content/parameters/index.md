@@ -384,4 +384,4 @@ Build a face-generating tool. This tool will create an image of a face that can 
 : Popular, lightweight tool for quickly making nice-looking interfaces like [this one](http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage).
 
 [How secure is 256 bit security?](https://www.youtube.com/watch?v=S9JGmA5_unY)
-: The fantastic YouTube channel 3Blue1Brown explores combinitorical explosion in the context of crypograhic security.
+: The fantastic YouTube channel 3Blue1Brown explores combinatorial explosion in the context of cryptographic security.
