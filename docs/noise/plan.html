@@ -42,36 +42,36 @@
 </tr>
 <tr>
 <td>4:20</td>
-<td>Engage</td>
-<td>Discussion</td>
-<td>Noise Introduction</td>
+<td>Study</td>
+<td>Lecture</td>
+<td>01 Noise</td>
 </tr>
 <tr>
 <td>4:30</td>
-<td>Engage+Study</td>
-<td>Lecture</td>
-<td>Noise Worksheet</td>
+<td>Engage</td>
+<td>Activity</td>
+<td>04 Noise Worksheet</td>
 </tr>
 <tr>
-<td>4:45</td>
+<td>4:40</td>
 <td>Engage</td>
-<td>Discussion</td>
+<td>Activity</td>
 <td>Noise Circles Whiteboard Computer</td>
 </tr>
 <tr>
-<td>4:55</td>
+<td>4:50</td>
 <td>Study</td>
 <td>Lecture</td>
-<td>Random VS Noise</td>
+<td>02 Noise vs. Random</td>
 </tr>
 <tr>
-<td>5:05</td>
+<td>5:10</td>
 <td>Study</td>
 <td>Lecture</td>
-<td>Benefits of Noise</td>
+<td>03 Benefits of Noise</td>
 </tr>
 <tr>
-<td>5:15</td>
+<td>5:20</td>
 <td>Break</td>
 <td>-</td>
 <td>Break</td>
@@ -79,29 +79,78 @@
 <tr>
 <td>5:20</td>
 <td>Activate</td>
-<td>Activity</td>
-<td>Study Examples Overview</td>
+<td>Coding</td>
+<td>Intro + Challenges</td>
 </tr>
 <tr>
-<td>5:30</td>
-<td>Study</td>
-<td>Lecture</td>
-<td>Challenges</td>
-</tr>
-<tr>
-<td>5:50</td>
+<td>5:40</td>
 <td>Study</td>
 <td>Lecture</td>
 <td>Challenges Discussion</td>
 </tr>
 <tr>
-<td>6:10</td>
+<td>6:00</td>
 <td>Activate</td>
-<td>Coding</td>
-<td>Working With Noise</td>
+<td>Coding Lecture</td>
+<td>05 Working With Noise</td>
 </tr>
 </tbody>
 </table>
+<h3 id="outline">Outline</h3>
+<p>01 Noise</p>
+<ul>
+<li><code>random()</code> completely, actually random</li>
+<li><code>noise()</code> random, arranged variation with nice properties</li>
+<li>Perlin Noise is just one example, not the only one.</li>
+<li>Slides</li>
+</ul>
+<p>Common Questions/Problems</p>
+<ul>
+<li>
+<p>Many examples of noise focus on visualizing the noise. Leading students to think that the <code>noise()</code> function is mostly when you want something to look like <code>noise()</code>. On the contrary, the noise function can be used any time you want <em>good looking variation</em>. Also, you probably want to shape the noise a bit so it doesn’t look like straight <code>noise()</code>.</p>
+</li>
+<li>
+<p><code>random()</code> doesn’t take parameters but <code>noise()</code> does. Understanding what parameters to pass in is often confusing when you start using <code>noise()</code>. Once you get a hang of it, the parameters become the key to the power of <code>noise()</code>.</p>
+</li>
+</ul>
+<p>04 Noise Worksheet, Building Noise</p>
+<ul>
+<li>Dice, Decks, LUTs</li>
+<li>Roll Dice - Build an N-Dimensional infinite field</li>
+<li>Connect Dots - Create an interpolated look up</li>
+<li>Could extend to more dimensions (figures)</li>
+<li>compare <code>random()</code> (dice) to <code>noise()</code> (LUT)</li>
+<li>answer key question: where does input come from?</li>
+<li>Make a drawing like [ . o O . o o . O ] using dice, using noise</li>
+<li>Make an animation [ . -&gt; O -&gt; o ] using dice, using noise</li>
+</ul>
+<p>02 Noise vs. Random + 03 Benefits of Noise</p>
+<ul>
+<li><code>random()</code> is better when you want actually random <em>variation</em></li>
+<li><code>noise()</code> is better when you want visually pleasing <em>variation</em></li>
+<li>Control Frequency</li>
+<li>Fractal Detail</li>
+<li>Control Repeatability</li>
+<li>Looks Good</li>
+<li><code>random()</code> vs <code>noise()</code> examples</li>
+<li>1D Noise Example</li>
+<li>Range of <code>noise()</code></li>
+<li>Fractal Noise</li>
+</ul>
+<p>Challenges</p>
+<ul>
+<li>Intro</li>
+<li>Coding</li>
+<li>Q+A</li>
+</ul>
+<p>05 Working With Noise</p>
+<ul>
+<li>Calling Noise: What do you pass in?</li>
+<li>Controlling Frequency</li>
+<li>Amplitude and Range</li>
+<li>Detail (optional)</li>
+<li>Seed (optional)</li>
+</ul>
 <h3 id="parameters-review-questions">Parameters Review Questions</h3>
 <p>In your assigned team, choose 1 or 2 sketches from the past week and use them to illustrate your answer to your team’s question.</p>
 <table class="table table-responsive">
