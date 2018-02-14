@@ -3,7 +3,7 @@
 
 var freq_slider;
 var amplitude_slider;
-var octive_slider;
+var octave_slider;
 
 function setup() {
     createCanvas(640, 300);
@@ -17,7 +17,7 @@ function setup() {
     createP('Amplitude');
     amplitude_slider = createSlider(0, 100, 50);
     createP('Octaves');
-    octive_slider = createSlider(1, 8, 1);
+    octave_slider = createSlider(1, 8, 1);
 
 }
 
@@ -27,7 +27,7 @@ function draw() {
     ellipseMode(CENTER);
     var frequency = freq_slider.value() / 1000;
     var amplitude = amplitude_slider.value() / 100;
-    noiseDetail(octive_slider.value(), .5);
+    noiseDetail(octave_slider.value(), .5);
 
 
     var y = height * .5;

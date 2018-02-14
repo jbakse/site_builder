@@ -3,7 +3,7 @@
 
 let freq_slider;
 let amplitude_slider;
-let octive_slider;
+let octave_slider;
 let animate_checkbox;
 let t = 0;
 
@@ -19,7 +19,7 @@ function setup() {
     createP('Frequency');
     freq_slider = createSlider(0, 100, 50);
     createP('Octaves/Detail');
-    octive_slider = createSlider(1, 8, 1);
+    octave_slider = createSlider(1, 8, 1);
 
 
     animate_checkbox = createCheckbox('Animate Line', false);
@@ -34,7 +34,7 @@ function draw() {
 
     let frequency = freq_slider.value() / 100;
     let amplitude = amplitude_slider.value();
-    noiseDetail(octive_slider.value(), .5);
+    noiseDetail(octave_slider.value(), .5);
 
     // draw a pulsing circle at the top
     let w = 50 + noise(frameCount * frequency) * amplitude;
