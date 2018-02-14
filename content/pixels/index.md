@@ -57,11 +57,21 @@ Today, six megabytes isn't much but it used to be that computers didn't have eno
 
 ### The Pixels Array
 
-The memory representing the image on the screen is called the video buffer or framebuffer. The p5.js library doesn't give you direct access to the framebuffer. Direct access to the screen's framebuffer is pretty rare on modern computers. p5.js _does_ give you access to a pixel buffer representing the image show on your sketch's canvas. This buffer is composited into the rendered webpage by the browser and shown in the browser's window. The window image is composited onto the screen by the OS.
+The memory representing the image on the screen is called the video buffer or framebuffer. The p5.js library doesn't give you direct access to the framebuffer. Direct access to the screen's framebuffer is pretty rare on modern computers. p5.js _does_ give you access to a pixel buffer representing the image shown on your sketch's canvas. When you call p5.js drawing functions like `rect()` and `ellipse()` p5 updates the appropriate values in this buffer. This buffer is then composited into the rendered webpage by the browser and shown in the browser's window. The window image is composited onto the screen by the OS.
 
+::: .links-sidebar
+[p5.js<br/>pixels array](https://p5js.org/reference/#/p5/pixels)
+/::
 
+You can work with the canvas's pixels using the p5.js `pixels` array. This array holds four color values—red, green, blue, and alpha—for every pixel on the canvas. On a high-dpi or retina display, the array may have more values than you expect. When you call `createCanvas(512,512)` on a high pixel density display, p5.js actually creates a canvas that is 1024x1024, or potentially even larger if the display pixel density is very large.
+
+Images are two dimensional—each pixel has a x and y position—but the pixels array is one dimensional. In order to change the color in the pixels array, you need to find the right values to change. The data in the pixels array is laid out like this:
 
 [diagram]
+`[r, g, b, a, r, g, b, a, r, g, b, a, r, g, b, a, ...]`
+
+
+
 [get and set are slow, really slow, and why]
 
 
