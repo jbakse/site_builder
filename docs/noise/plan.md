@@ -8,7 +8,7 @@ debug: false
 ## Week 4, Noise {plain}
 
 ### Materials
-1D Noise Worksheet
+1D Noise Worksheet, 12-sided dice
 
 ### Learning Objectives
 - What the `noise()` function does.
@@ -38,16 +38,18 @@ debug: false
 
 ### Outline
 
+Homework Discussion
+- reason for sketching
+
 01 Noise
 - `random()` completely, actually random
 - `noise()` random, arranged variation with nice properties
 - Perlin Noise is just one example, not the only one.
 - Slides
-
-Common Questions/Problems
 - Many examples of noise focus on visualizing the noise. Leading students to think that the `noise()` function is mostly when you want something to look like `noise()`. On the contrary, the noise function can be used any time you want _good looking variation_. Also, you probably want to shape the noise a bit so it doesn't look like straight `noise()`.
-
 - `random()` doesn't take parameters but `noise()` does. Understanding what parameters to pass in is often confusing when you start using `noise()`. Once you get a hang of it, the parameters become the key to the power of `noise()`.
+- live code example using `noise()`
+
 
 04 Noise Worksheet, Building Noise
 - Dice, Decks, LUTs
@@ -61,7 +63,7 @@ Common Questions/Problems
 
 02 Noise vs. Random + 03 Benefits of Noise
 - `random()` is better when you want actually random _variation_
-- `noise()` is better when you want visually pleasing _variation_
+- `noise()` is better when you want aethetically pleasing _variation_
 - Control Frequency
 - Fractal Detail
 - Control Repeatability
@@ -84,23 +86,52 @@ Challenges
 - Seed (optional)
 
 
-### Parameters Review Questions
-
-In your assigned team, choose 1 or 2 sketches from the past week and use them to illustrate your answer to your team's question.
-
-| Group | Question                                                                                     |
-| ----- | -------------------------------------------------------------------------------------------- |
-| 1     | Choose a work that did something unexpected with parameters. Discuss.                        |
-| 2     | Choose a work that you 1) like and 2) don't know how how it was made. Describe what you see. |
-| 3     | Choose a work that combined elements from a previous week with parameters. Discuss.          |
-| 4     | Who had the widest "apparent" parameter space?                                               |
-| 5     | The challenge is still not a competition, but who won?                                       |
+::: .activity
+## Homework Review
 
 
+::: .headless
+| Group | Question                                                                                                                         |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Max, Leah, Sue <br/>Choose a common theme that has appeared in several pieces. Discuss the theme and two example sketchs.        |
+| 2     | Bella, Julian, Jack <br/>Choose a work that you feel used parameters is a very well. Why did you choose this piece?              |
+| 3     | Aakanksha, Ting, Patrick <br/>Choose a work that you like and and don't know how it was made. Describe what you see.             |
+| 4     | Alyssa, Earl, Mario <br/>Choose a sketch that you think started with plan. What benefits did starting with a plan have?          |
+| 5     | Madison, Kirsten, Dahee <br/>Choose a sketch that you think started without a plan. What benefits did starting with a plan have? |
+| 6     | Rik, Patricia, Carla <br>The challenge is not a competition. Who won?                                                            |
+/::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/::
+
+
+
+
+<style> 
+    .headless thead {
+        display: none;
+    }
+</style>
 
 
 
 ### Class Notes
 [Noise](./index.html) {boxed right}
+
+
+
 
 
