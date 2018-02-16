@@ -119,7 +119,7 @@ Consider the two examples above: one uses `random()` and one uses `noise()`.
 ### Noise Looks Good
 The `noise(x)` function returns values sampled from Perlin Noise. Perlin Noise provides random values that are aesthetically arranged. The variation in Perlin Noise is band-limited: It is even, without flat or noisy areas. The variation is also visually isotropic—it looks the same at different rotations. These characteristics make it a useful basis for many applications that require natural-feeling variation. 
 
-You can tweak the aesthetics of a noise functional by manipulating its values with a a little math. The [Terain from Noise](https://www.redblobgames.com/maps/terrain-from-noise/) article on Red Blob Games is a good place to see some common techniques for shaping noise.
+You can tweak the aesthetics of a noise functional by manipulating its values with a little math. The [Terrain from Noise](https://www.redblobgames.com/maps/terrain-from-noise/) article on Red Blob Games is a good place to see some common techniques for shaping noise.
 
 Other noise functions—like Worely and Value Noise—offer different aesthetic qualities, and it is quite possible to create your own noise function that looks the way you want.
 
