@@ -91,14 +91,14 @@ Challenges
 
 
 ::: .headless
-| Group | Question                                                                                                                         |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------- |
-| 1     | Max, Leah, Sue <br/>Choose a common theme that has appeared in several pieces. Discuss the theme and two example sketchs.        |
-| 2     | Bella, Julian, Jack <br/>Choose a work that you feel used parameters is a very well. Why did you choose this piece?              |
-| 3     | Aakanksha, Ting, Patrick <br/>Choose a work that you like and and don't know how it was made. Describe what you see.             |
-| 4     | Alyssa, Earl, Mario <br/>Choose a sketch that you think started with plan. What benefits did starting with a plan have?          |
-| 5     | Madison, Kirsten, Dahee <br/>Choose a sketch that you think started without a plan. What benefits did starting with a plan have? |
-| 6     | Rik, Patricia, Carla <br>The challenge is not a competition. Who won?                                                            |
+| Group | Question                                                                                                                            |
+| ----- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Max, Leah, Sue <br/>Choose a common theme that has appeared in several pieces. Discuss the theme and two example sketchs.           |
+| 2     | Bella, Julian, Jack <br/>Choose a work that you feel used parameters is a very well. Why did you choose this piece?                 |
+| 3     | Aakanksha, Ting, Patrick <br/>Choose a work that you like and and don't know how it was made. Describe what you see.                |
+| 4     | Alyssa, Earl, Mario <br/>Choose a sketch that you think started with plan. What benefits did starting with a plan have?             |
+| 5     | Madison, Kirsten, Dahee <br/>Choose a sketch that you think started without a plan. What benefits did starting without a plan have? |
+| 6     | Rik, Patricia, Carla <br>The challenge is not a competition. Who won?                                                               |
 /::
 
 
