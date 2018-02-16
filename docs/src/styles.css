@@ -559,6 +559,12 @@
     margin-bottom: 0; }
   .comp-form-copy .callout h3 {
     margin-top: 0; }
+  .comp-form-copy .callout.error {
+    border-left: 3px solid red;
+    background-color: #FEE; }
+  .comp-form-copy .callout.warn {
+    border-left: 3px solid #FA0;
+    background-color: #FED; }
   .comp-form-copy .activity, .comp-form-copy .assignment, .comp-form-copy .discussion {
     position: relative;
     margin-top: 90px;

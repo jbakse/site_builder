@@ -182,6 +182,18 @@
 
     }
 
+    .callout.error {
+        border-left: 3px solid red;
+        background-color: #FEE;
+
+    }
+    .callout.warn {
+        border-left: 3px solid #FA0;
+        background-color: #FED;
+
+    }
+
+
     /* activity */
     .activity, .assignment, .discussion {
         @include color-band($light-grey, $middle-grey);
