@@ -12,14 +12,15 @@
 <div id="" class="callout">
 <p>Intermediate programming students often hear this advice:</p>
 <blockquote>
-<p>Break you complex problem into smaller parts, and solve those parts.</p>
+<p>Break your complex problem into smaller parts, and solve those parts.</p>
 </blockquote>
-<p>In practice, its tricker than that. It’s hard to understand a complex problem and it’s hard to break complex problem down. With experience you will be able to tackle larger and more varied problems, but even very experienced programmers work on systems they can’t understand and break-down at first.</p>
-<p>When the program you want to make is too complex to understand well enough to break down you still have an option for getting started: make a simpler program. For example, imagine you want to make a game like <a href="https://www.youtube.com/watch?v=1LsRGUODHlQ">pong</a>. You can begin to break it down into sub-tasks—keyboard controlled paddles, animated ball, scoreboards, etc—but it is hard to plan all those pieces at once. Before you start implementing each piece, you won’t know the details, and without the details its hard to make pieces that fit together. So start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the little square move to the right. Don’t worry about the paddles, or the score yet. Make the square bounce when it hits the side. Then make it move diagonally, and make sure it bounces off all the sides.</p>
-<p>You might make make dozens incremental working programs as you get the basic ball working. As you do, you will gain a clear understanding of details you need to see how that piece will work with the others. As you start to bring in other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. You can expect to run into some dead-ends and back track. This might have been avoided if you had made a complete plan in the beginning, but <em>in the beginning, you didn’t know enough to make a complete plan</em>. This reason this strategy works is simple: instead of trying to do something you can’t, you try to do something you can.</p>
+<p>In practice, it’s tricker than that. It’s hard to understand a complex problem and it’s hard to break complex problem down. With experience you will be able to tackle larger and more varied problems, but even very experienced programmers work on systems they can’t understand and break-down at first.</p>
+<p>When the program you want to make is too complex to understand well enough to break down you still have an option for getting started: make a simpler program. For example, imagine you want to make a game like <a href="https://www.youtube.com/watch?v=1LsRGUODHlQ">pong</a>. You can begin to break it down into sub-tasks—keyboard controlled paddles, animated ball, scoreboards, etc—but it is hard to plan all those pieces at once. Before you start implementing each piece, you won’t know the details, and without the details it’s hard to make pieces that fit together. So start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the little square move to the right. Don’t worry about the paddles, or the score yet. Make the square bounce when it hits the side. Then make it move diagonally, and make sure it bounces off all the sides.</p>
+<p>You might make dozens of incremental working programs as you get the basic ball working. As you do, you will gain a clear understanding of details you need to see how that piece will work with the others. As you start to bring in other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. You can expect to run into some dead ends, and then back track. This might have been avoided if you had made a complete plan in the beginning, but <em>in the beginning, you didn’t know enough to make a complete plan</em>. This reason this strategy works is simple: instead of trying to do something you can’t, you try to do something you can.</p>
+<!--[[lots of issues with sentence clarity here--I'll work on it, but maybe you should review it as well.]]-->
 </div>
 <h3 id="building-a-toolbox">Building a Toolbox</h3>
-<p>Many problems can be solved using the same techniques composed in different ways. The techniques we have already discussed are building-blocks that can be used in a wide array problems. As you explore other tools and media you will see many common themes and techniques emerge.</p>
+<p>Many problems can be solved using the same techniques composed in different ways. The techniques we have already discussed are building blocks that can be used in a wide array of problems. As you explore other tools and media you will see many common themes and techniques emerge.</p>
 <p>Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We’ve explored some of these already and will touch on others in the course of this class, but you don’t need to know all of these techniques to build interesting things.</p>
 <p>In this chapter we’ll be looking at how conceptually simple steps can be combined in different ways to get different effects.</p>
 <div id="" class="discussion">
@@ -29,7 +30,7 @@
 </div>
 <h2 id="where-should-i-put-things">Where Should I Put Things?</h2>
 <p>Many procedural systems have to answer a fundamental question: <em>Where should I put things?</em>.</p>
-<p>This problem area shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches to a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don’t tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn’t overlap because when beads of water touch the join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, your can determine how planned, chaotic, random, natural, or mechanical the placement feels.</p>
+<p>This problem area shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches on a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don’t tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn’t overlap because when beads of water touch, they join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, your can determine how planned, chaotic, random, natural, or mechanical the placement feels.</p>
 <p>Most of this chapter will address this problem area by exploring a simple example: arranging points on a square.</p>
 <div id="" class="!short slides-wrap slideInfos">
 <div id="carousel-1" class="carousel slide" data-ride="carousel">
@@ -131,7 +132,7 @@
 </div>
 <div id="" class="activity">
 <h2 id="whats-the-difference">What’s the Difference?</h2>
-<p>Analyze each of the examples below, carefully consider their similarities and differences.</p>
+<p>Analyze each of the examples below. Carefully consider their similarities and differences.</p>
 <ul>
 <li>How does each example compare to the others?</li>
 <li>What characteristics could be used to group similar examples?</li>
@@ -143,13 +144,13 @@
 </p>
 </div>
 <h3 id="placing-the-points">Placing the Points</h3>
-<p>If we want points arranged on a square, we’ve got to start by creating some points and assigning them initial positions. There are many, many ways to go about this; here are five relatively simple, but powerful, tactics. I’ve given each of these tactics a name here, but these are not widely used names.</p>
+<p>If we want points arranged on a square, we’ve got to start by creating some points and assigning them initial positions. There are many, many ways to go about this: here are five relatively simple but powerful tactics. I’ve given each of these tactics a name, but these are not widely used names.</p>
 <h4 id="random-placement">Random Placement</h4>
 <p>Place each point at a random location on the square.</p>
 <pre><code class="language-javascript">x = random() * width;
 y = random() * height;
 </code></pre>
-<p>This is a quick, effective, and straight forward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.</p>
+<p>This is a quick, effective, and straightforward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.</p>
 <h4 id="grid-placement">Grid Placement</h4>
 <p>Place points on grid squares. One way to do this is a nested loop. This approach guarantees a perfectly even distribution.</p>
 <pre><code class="language-javascript"><span class="hljs-keyword">for</span> (row = <span class="hljs-number">0</span>; row &lt; grid_rows; row++) {
@@ -163,7 +164,7 @@ y = random() * height;
 <h4 id="noise-placement">Noise Placement</h4>
 <p>Place each point at a location determined by a noise lookup.</p>
 <ul>
-<li>Because noise is center biased, the results will center biased.</li>
+<li>Because noise is center-biased, the results will center-biased.</li>
 <li>Each dot will be placed near the last as the values change in the noise cloud.</li>
 <li>This technique allows you some control over the proximity of successive points.</li>
 </ul>
@@ -172,17 +173,17 @@ x = noise(i * frequency, <span class="hljs-number">0</span>) * w;
 y = noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 </code></pre>
 <h4 id="cull-placement">Cull Placement</h4>
-<p>Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points. In the example below, three points already exist and a fourth is being considered. Three possible values are shown. One is too close and one is to far, so they are rejected. The third location is okay, and a fourth point at that location is added.</p>
+<p>Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points. In the example below, three points already exist and a fourth is being considered. Three possible values are shown. One is too close and one is too far, so they are rejected. The third location is okay, and a fourth point at that location is added.</p>
 <p class="three-up no-margin"><img src="figures/cull_placement_1.svg" alt="cull placement 1">
 <img src="figures/cull_placement_2.svg" alt="cull placement 2">
 <img src="figures/cull_placement_3.svg" alt="cull placement 3"></p>
 <div id="" class="links-sidebar">
 <p><a href="https://www.jasondavies.com/poisson-disc/">Jason Davies:<br/>Poisson-Disc Sampling</a></p>
 </div>
-<p>This tactic is essentially unoptimized poison-disc sampling. Poison-disc sampling is great when you need evenly distributed points without pattern artifacts.</p>
+<p>This tactic is essentially unoptimized poisson-disc sampling. Poisson-disc sampling is great when you need evenly distributed points without pattern artifacts.</p>
 <h4 id="stamp-placement">Stamp Placement</h4>
-<p>Create pre-defined arrangements of points by hand or generatively. Copy these arrangements onto different locations.</p>
-<p>This technique is allow mixing of hand-made and procedural design.</p>
+<p>Create predefined arrangements of points by hand or generatively. Copy these arrangements onto different locations.</p>
+<p>This technique allows mixing of hand-made and procedural design.</p>
 <p class="three-up no-margin"><img src="figures/tile_1.svg" alt="stamp placement 1">
 <img src="figures/tile_2.svg" alt="stamp placement 2">
 <img src="figures/tile_3.svg" alt="stamp placement 3"></p>
@@ -194,7 +195,7 @@ y = noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 y = y + random() * height;
 </code></pre>
 <h4 id="noise-displacement">Noise Displacement</h4>
-<p>Displace each point at by an amount determined by a noise lookup.</p>
+<p>Displace each point by an amount determined by a noise lookup.</p>
 <ul>
 <li>This technique allows for nice control over the frequency of displacement.</li>
 <li>Can be used to create wave-like effects.</li>
@@ -203,11 +204,11 @@ y = y + random() * height;
 y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 </code></pre>
 <h4 id="relaxation-displacement">Relaxation Displacement</h4>
-<p>Find pairs of points that are near each other. Move them towards or away from each other a small amount. This technique is often applied several times in a row with small movements. This avoids the problem of pushing a point away from one, but then into another.</p>
+<p>Find pairs of points that are near each other. Move them towards or away from each other by a small amount. This technique is often applied several times in a row with small movements, which avoids the problem of pushing a point away from one, but then into another.</p>
 <ul>
 <li>This technique can be used to push points apart to some minimum distance.</li>
 <li>This technique can also be used to pull points together if they are near each other.</li>
-<li>This technique simulates attractive or repulsive forces acting on the points and can be used to loosely simulate natural phenomenon.</li>
+<li>This technique simulates attractive or repulsive forces acting on the points and can be used to loosely simulate natural phenomena.</li>
 </ul>
 <p class="three-up no-margin"><img src="figures/relax_1.svg" alt="relax displacement 1">
 <img src="figures/relax_2.svg" alt="relax displacement 2">
@@ -217,7 +218,7 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 <p class="three-up no-margin"><img src="figures/noise_cull_1.svg" alt="noise cull 1">
 <img src="figures/noise_cull_2.svg" alt="noise cull 2">
 <img src="figures/noise_cull_3.svg" alt="noise cull 3"></p>
-<p>In the example above points are removed if the corresponding noise value is too low (dark). This results in patches or islands of dots.</p>
+<p>In the example above, points are removed if the corresponding noise value is too low (dark). This results in patches or islands of dots.</p>
 <div id="" class="activity">
 <h2 id="tactics-match">Tactics Match</h2>
 <p>What tactics might have been used to get each result below?</p>
@@ -269,8 +270,8 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 <h3 id="speed">Speed</h3>
 <ul>
 <li>How fast does your program need to run?</li>
-<li>Is it okay if takes a very long time to complete?</li>
-<li>Many times a faster running program is harder to code and understand.</li>
+<li>Is it okay if it takes a very long time to complete?</li>
+<li>Many times a faster-running program is harder to code and understand.</li>
 <li>A frame of VR content needs to be rendered in under 10ms, and a short pre-rendered animation may take days to render.</li>
 </ul>
 <h3 id="reliability">Reliability</h3>
@@ -304,12 +305,12 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 <div id="" class="assignment">
 <h2 id="challenge-sketch">Challenge + Sketch!</h2>
 <h3 id="base">Base</h3>
-<p>This is the last week of the “Foundation” unit. Look back at the topics covered so far: tile systems, using random, user parameters, using noise, and now thinking strategically.</p>
+<p>This is the last week of the “Foundation” unit. Look back at the topics covered so far: tile systems, using random, user parameters, using noise, and now, thinking strategically.</p>
 <p>Begin by completing the challenges for this week.  Completing this week’s challenges will result in two posts. <strong>This week the challenges are required.</strong></p>
 <p>Then keep sketching! For the remaining three posts, I encourage you to build a single, more complex sketch and post work in progress as you go.</p>
 <h3 id="required-challenge-1-dots-a-b-x">Required Challenge 1: Dots A -&gt; B -&gt; X</h3>
 <ul>
-<li><strong>Analyze</strong> the challenge, clearly describe what the sketch does.</li>
+<li><strong>Analyze</strong> the challenge: clearly describe what the sketch does.</li>
 <li><strong>Strategize</strong> how you would achieve the same effect.</li>
 <li><strong>Study</strong> the provided starting code.</li>
 <li><strong>Recreate</strong> the challenge as closely as you can. You may use the starting code, or start from scratch.</li>
@@ -366,7 +367,7 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 <dt><a href="https://www.youtube.com/watch?v=Uqk5Zf0tw3o">Game Maker’s Toolkit: How (and Why) Spelunky Makes its Own Levels</a></dt>
 <dd>Overview of the Spelunky level generator from a technical and critical perspective.</dd>
 <dt><a href="http://tinysubversions.com/spelunkyGen/">Darius Kazemi: Spelunky Mod</a></dt>
-<dd>Darius kazemi has created a mod of the original Spelunky that runs in the browser and visualizes level generation.</dd>
+<dd>Darius Kazemi has created a mod of the original Spelunky that runs in the browser and visualizes level generation.</dd>
 <dt><a href="https://bl.ocks.org/mbostock/19168c663618b7f07158">bl.ocks.org: Poisson-Disc</a>, <a href="https://bl.ocks.org/mbostock/dbb02448b0f93e4c82c3">Poisson-Disc II</a></dt>
 <dd>Poisson Disc description, visual explanation, and sample code by Mike Bostock.</dd>
 <dt><a href="http://devmag.org.za/2009/05/03/poisson-disk-sampling/">Devmag.org: Poisson Disk Sampling</a></dt>
