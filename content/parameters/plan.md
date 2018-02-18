@@ -61,7 +61,7 @@ Share your chosen sketch, comment on it and summarize your discussion.
 | Group | Question                                                                                                                                                                  |
 | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1     | Jack, Aakanksha, Patricia<br/>When allowing chance to influence their artwork, does an artist give up authorship?                                                         |
-| 2     | Dahee, Earl, Carla<br/>Choose two sketches that you believe demonstrate a baising technique discussed last week. What kind of bias do you think was used in each?         |
+| 2     | Dahee, Earl, Carla<br/>Choose two sketches that you believe demonstrate a biasing technique discussed last week. What kind of bias do you think was used in each?         |
 | 3     | Julian, Max, Madison<br/>Does computationally generated art have an inherent aesthetic?                                                                                   |
 | 4     | Ting, Mario, Xu<br/>Choose a work that combines procedural and non-procedural elements well. What works about this piece?                                                 |
 | 5     | Leah, Allysa, Kirsten<br/>Choose a project that presents an interesting direction for further design inquiry. Suggest 5 possible avenues of development for this project. |

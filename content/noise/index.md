@@ -33,7 +33,7 @@ There are several common noise functions, each with different characteristics. T
 ![Perlin Noise](https://upload.wikimedia.org/wikipedia/commons/d/da/Perlin_noise.jpg)
 Perlin Noise{figure}
 
-![Worely Noise](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Worley.jpg/400px-Worley.jpg)
+![Worley Noise](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Worley.jpg/400px-Worley.jpg)
 Worely Noise{figure}
 
 ![Value Noise](https://upload.wikimedia.org/wikipedia/commons/b/bc/Value_noise_2D.png)

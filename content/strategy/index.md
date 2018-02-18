@@ -28,20 +28,20 @@ So far we've been looking at low-level topics like how to use `random()` and `no
 
 Intermediate programming students often hear this advice:
 
-> Break you complex problem into smaller parts, and solve those parts.
+> Break your complex problem into smaller parts, and solve those parts.
 
-In practice, its tricker than that. It's hard to understand a complex problem and it's hard to break complex problem down. With experience you will be able to tackle larger and more varied problems, but even very experienced programmers work on systems they can't understand and break-down at first.
+In practice, it's tricker than that. It's hard to understand a complex problem and it's hard to break complex problem down. With experience you will be able to tackle larger and more varied problems, but even very experienced programmers work on systems they can't understand and break-down at first.
 
-When the program you want to make is too complex to understand well enough to break down you still have an option for getting started: make a simpler program. For example, imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You can begin to break it down into sub-tasks—keyboard controlled paddles, animated ball, scoreboards, etc—but it is hard to plan all those pieces at once. Before you start implementing each piece, you won't know the details, and without the details its hard to make pieces that fit together. So start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the little square move to the right. Don't worry about the paddles, or the score yet. Make the square bounce when it hits the side. Then make it move diagonally, and make sure it bounces off all the sides.
+When the program you want to make is too complex to understand well enough to break down you still have an option for getting started: make a simpler program. For example, imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You can begin to break it down into sub-tasks—keyboard controlled paddles, animated ball, scoreboards, etc—but it is hard to plan all those pieces at once. Before you start implementing each piece, you won't know the details, and without the details it's hard to make pieces that fit together. So start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the little square move to the right. Don't worry about the paddles, or the score yet. Make the square bounce when it hits the side. Then make it move diagonally, and make sure it bounces off all the sides.
 
-You might make make dozens incremental working programs as you get the basic ball working. As you do, you will gain a clear understanding of details you need to see how that piece will work with the others. As you start to bring in other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. You can expect to run into some dead-ends and back track. This might have been avoided if you had made a complete plan in the beginning, but *in the beginning, you didn't know enough to make a complete plan*. This reason this strategy works is simple: instead of trying to do something you can't, you try to do something you can. 
-
+You might make dozens of incremental working programs as you get the basic ball working. As you do, you will gain a clear understanding of details you need to see how that piece will work with the others. As you start to bring in other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. You can expect to run into some dead ends, and then back track. This might have been avoided if you had made a complete plan in the beginning, but *in the beginning, you didn't know enough to make a complete plan*. This reason this strategy works is simple: instead of trying to do something you can't, you try to do something you can. 
+<!--[[lots of issues with sentence clarity here--I'll work on it, but maybe you should review it as well.]]-->
 
 /::
 
 ### Building a Toolbox
 
-Many problems can be solved using the same techniques composed in different ways. The techniques we have already discussed are building-blocks that can be used in a wide array problems. As you explore other tools and media you will see many common themes and techniques emerge. 
+Many problems can be solved using the same techniques composed in different ways. The techniques we have already discussed are building blocks that can be used in a wide array of problems. As you explore other tools and media you will see many common themes and techniques emerge. 
 
 Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We've explored some of these already and will touch on others in the course of this class, but you don't need to know all of these techniques to build interesting things.
 
@@ -64,7 +64,7 @@ Consider the image below. How might you make something like this?
 
 Many procedural systems have to answer a fundamental question: *Where should I put things?*. 
 
-This problem area shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches to a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don't tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn't overlap because when beads of water touch the join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, your can determine how planned, chaotic, random, natural, or mechanical the placement feels.
+This problem area shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches on a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don't tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn't overlap because when beads of water touch, they join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, your can determine how planned, chaotic, random, natural, or mechanical the placement feels.
 
 Most of this chapter will address this problem area by exploring a simple example: arranging points on a square. 
 
@@ -78,7 +78,7 @@ Most of this chapter will address this problem area by exploring a simple exampl
 
 ## What's the Difference?
 
-Analyze each of the examples below, carefully consider their similarities and differences.
+Analyze each of the examples below. Carefully consider their similarities and differences.
 
 - How does each example compare to the others?
 - What characteristics could be used to group similar examples?
@@ -98,7 +98,7 @@ Analyze each of the examples below, carefully consider their similarities and di
 
 ### Placing the Points
 
-If we want points arranged on a square, we've got to start by creating some points and assigning them initial positions. There are many, many ways to go about this; here are five relatively simple, but powerful, tactics. I've given each of these tactics a name here, but these are not widely used names.
+If we want points arranged on a square, we've got to start by creating some points and assigning them initial positions. There are many, many ways to go about this: here are five relatively simple but powerful tactics. I've given each of these tactics a name, but these are not widely used names.
 
 #### Random Placement
 Place each point at a random location on the square.
@@ -108,7 +108,7 @@ x = random() * width;
 y = random() * height;
 ```
 
-This is a quick, effective, and straight forward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.
+This is a quick, effective, and straightforward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.
 
 
 #### Grid Placement
@@ -128,7 +128,7 @@ for (row = 0; row < grid_rows; row++) {
 #### Noise Placement
 Place each point at a location determined by a noise lookup.
 
-- Because noise is center biased, the results will center biased.
+- Because noise is center-biased, the results will center-biased.
 - Each dot will be placed near the last as the values change in the noise cloud.
 - This technique allows you some control over the proximity of successive points.
 
@@ -140,7 +140,7 @@ y = noise(i * frequency, 1000) * h;
 
 
 #### Cull Placement
-Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points. In the example below, three points already exist and a fourth is being considered. Three possible values are shown. One is too close and one is to far, so they are rejected. The third location is okay, and a fourth point at that location is added.
+Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points. In the example below, three points already exist and a fourth is being considered. Three possible values are shown. One is too close and one is too far, so they are rejected. The third location is okay, and a fourth point at that location is added.
 
 ![cull placement 1](figures/cull_placement_1.svg)
 ![cull placement 2](figures/cull_placement_2.svg)
@@ -150,14 +150,14 @@ Place points randomly, but reject a point if it is too close to an existing poin
 [Jason Davies:<br/>Poisson-Disc Sampling](https://www.jasondavies.com/poisson-disc/)
 /::
 
-This tactic is essentially unoptimized poison-disc sampling. Poison-disc sampling is great when you need evenly distributed points without pattern artifacts.
+This tactic is essentially unoptimized poisson-disc sampling. Poisson-disc sampling is great when you need evenly distributed points without pattern artifacts.
 
 
 
 #### Stamp Placement
-Create pre-defined arrangements of points by hand or generatively. Copy these arrangements onto different locations.
+Create predefined arrangements of points by hand or generatively. Copy these arrangements onto different locations.
 
-This technique is allow mixing of hand-made and procedural design.
+This technique allows mixing of hand-made and procedural design.
 
 ![stamp placement 1](figures/tile_1.svg)
 ![stamp placement 2](figures/tile_2.svg)
@@ -178,7 +178,7 @@ y = y + random() * height;
 
 #### Noise Displacement
 
-Displace each point at by an amount determined by a noise lookup.
+Displace each point by an amount determined by a noise lookup.
 
 - This technique allows for nice control over the frequency of displacement.
 - Can be used to create wave-like effects.
@@ -190,11 +190,11 @@ y = x + noise(i * frequency, 1000) * h;
 
 #### Relaxation Displacement
 
-Find pairs of points that are near each other. Move them towards or away from each other a small amount. This technique is often applied several times in a row with small movements. This avoids the problem of pushing a point away from one, but then into another.
+Find pairs of points that are near each other. Move them towards or away from each other by a small amount. This technique is often applied several times in a row with small movements, which avoids the problem of pushing a point away from one, but then into another.
 
 - This technique can be used to push points apart to some minimum distance.
 - This technique can also be used to pull points together if they are near each other.
-- This technique simulates attractive or repulsive forces acting on the points and can be used to loosely simulate natural phenomenon.
+- This technique simulates attractive or repulsive forces acting on the points and can be used to loosely simulate natural phenomena.
 
 
 ![relax displacement 1](figures/relax_1.svg)
@@ -212,7 +212,7 @@ Sample noise based on the location of the point. Use the sampled value to determ
 ![noise cull 2](figures/noise_cull_2.svg)
 ![noise cull 3](figures/noise_cull_3.svg){three-up no-margin}
 
-In the example above points are removed if the corresponding noise value is too low (dark). This results in patches or islands of dots. 
+In the example above, points are removed if the corresponding noise value is too low (dark). This results in patches or islands of dots. 
 
 
 
@@ -253,8 +253,8 @@ When designing a procedural generation system there are several properties to co
 ### Speed
 
 - How fast does your program need to run?
-- Is it okay if takes a very long time to complete?
-- Many times a faster running program is harder to code and understand.
+- Is it okay if it takes a very long time to complete?
+- Many times a faster-running program is harder to code and understand.
 - A frame of VR content needs to be rendered in under 10ms, and a short pre-rendered animation may take days to render.
 
 ### Reliability
@@ -291,7 +291,7 @@ When designing a procedural generation system there are several properties to co
 ## Challenge + Sketch!
 
 ### Base
-This is the last week of the "Foundation" unit. Look back at the topics covered so far: tile systems, using random, user parameters, using noise, and now thinking strategically.
+This is the last week of the "Foundation" unit. Look back at the topics covered so far: tile systems, using random, user parameters, using noise, and now, thinking strategically.
 
 Begin by completing the challenges for this week.  Completing this week's challenges will result in two posts. **This week the challenges are required.**
 
@@ -299,7 +299,7 @@ Then keep sketching! For the remaining three posts, I encourage you to build a s
 
 ### Required Challenge 1: Dots A -> B -> X
 
-- **Analyze** the challenge, clearly describe what the sketch does.
+- **Analyze** the challenge: clearly describe what the sketch does.
 - **Strategize** how you would achieve the same effect.
 - **Study** the provided starting code.
 - **Recreate** the challenge as closely as you can. You may use the starting code, or start from scratch.
@@ -375,7 +375,7 @@ If you want to play Spelunky—optional but highly recommended—original versio
 : Overview of the Spelunky level generator from a technical and critical perspective.
 
 [Darius Kazemi: Spelunky Mod](http://tinysubversions.com/spelunkyGen/)
-: Darius kazemi has created a mod of the original Spelunky that runs in the browser and visualizes level generation.
+: Darius Kazemi has created a mod of the original Spelunky that runs in the browser and visualizes level generation.
 
 [bl.ocks.org: Poisson-Disc](https://bl.ocks.org/mbostock/19168c663618b7f07158), [Poisson-Disc II](https://bl.ocks.org/mbostock/dbb02448b0f93e4c82c3)
 : Poisson Disc description, visual explanation, and sample code by Mike Bostock.
