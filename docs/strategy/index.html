@@ -143,6 +143,7 @@
     <a href="../handouts/strategy_workshop.ai" download>strategy_workshop.ai</a>
 </p>
 </div>
+<h2 id="point-tactics">Point Tactics</h2>
 <h3 id="placing-the-points">Placing the Points</h3>
 <p>If we want points arranged on a square, we’ve got to start by creating some points and assigning them initial positions. There are many, many ways to go about this: here are five relatively simple but powerful tactics. I’ve given each of these tactics a name, but these are not widely used names.</p>
 <h4 id="random-placement">Random Placement</h4>
@@ -265,6 +266,26 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 </div>
 </div>
 <!-- [Point Placing Demo](https://jsbin.com/telipu/edit?js,output) -->
+<h2 id="study-examples">Study Examples</h2>
+<h3 id="basic-grid-placement">Basic Grid Placement</h3>
+<p>[[ 10 x 10 Grid ]]
+change to 10 x 20, 20 x 20, 100 x 100
+add a little random offset to each circle
+draw a little “pine tree” at each point (a green triangle on a brown square)</p>
+<h3 id="basic-random-placement">Basic Random Placement</h3>
+<p>[[ draws 100 randomly placed points ]]
+change to 10, 1000
+use center biasing to make points tend to be toward the center
+draw a little “snowman” at each point (three little white circles, stacked)</p>
+<h3 id="advanced-placement">Advanced Placement</h3>
+<p>[[ stores positions in array on setup, draws them in draw ]]
+add a little random offset to each position in setup
+change the setup to use random placement and place 100 points</p>
+<h3 id="challenging-challenges">Challenging Challenges</h3>
+<p>… continuing from advanced
+make it so that 75% of the points draw trees and 25% draw snowmen
+store which dots are snowmen and which dots are trees so they don’t flicker
+each “draw” move the snowmen a random step left, up, right, or down.</p>
 <h2 id="properties-of-pcg-system">Properties of PCG System</h2>
 <p>When designing a procedural generation system there are several properties to consider. The following properties are borrowed from <a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCGBook: Chapter 1</a></p>
 <h3 id="speed">Speed</h3>
@@ -306,7 +327,7 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 <h2 id="challenge-sketch">Challenge + Sketch!</h2>
 <h3 id="base">Base</h3>
 <p>This is the last week of the “Foundation” unit. Look back at the topics covered so far: tile systems, using random, user parameters, using noise, and now, thinking strategically.</p>
-<p>Begin by completing the challenges for this week.  Completing this week’s challenges will result in two posts. <strong>This week the challenges are required.</strong></p>
+<p>Begin by completing the challenges for this week. Completing this week’s challenges will result in two posts. <strong>This week the challenges are required.</strong></p>
 <p>Then keep sketching! For the remaining three posts, I encourage you to build a single, more complex sketch and post work in progress as you go.</p>
 <h3 id="required-challenge-1-dots-a-b-x">Required Challenge 1: Dots A -&gt; B -&gt; X</h3>
 <ul>
