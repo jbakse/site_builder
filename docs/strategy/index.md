@@ -24,27 +24,35 @@ So far we've been looking at low-level topics like how to use `random()` and `no
 
 ::: .callout
 
-Intermediate programming students often hear this advice:
+**Tackling Complexity**
 
-> Break your complex problem into smaller parts, and solve those parts.
+When beginner and intermediate programmers run into trouble building more complex projects, they often hear this advice:
 
-In practice, it's tricker than that. It's hard to understand a complex problem and it's hard to break complex problem down. With experience you will be able to tackle larger and more varied problems, but even very experienced programmers work on systems they can't understand and break-down at first.
+> Break your problem into smaller parts, and solve those parts.
 
-When the program you want to make is too complex to understand well enough to break down you still have an option for getting started: make a simpler program. For example, imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You can begin to break it down into sub-tasks—keyboard controlled paddles, animated ball, scoreboards, etc—but it is hard to plan all those pieces at once. Before you start implementing each piece, you won't know the details, and without the details it's hard to make pieces that fit together. So start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the little square move to the right. Don't worry about the paddles, or the score yet. Make the square bounce when it hits the side. Then make it move diagonally, and make sure it bounces off all the sides.
+This is much easier said than done. It's hard to understand a complex problem and it's hard to break complex problems down into parts. How big should the parts be? How do you build individual parts without the other parts it depends on? Once you have a few working parts, how do you put them together? With experience, it gets easier to answer these questions, but advanced programmers still frequently encounter problems they can't understand and break-down at first. When this happens to you, you still have an option for getting started: **make a simpler program**.
 
-You might make dozens of incremental working programs as you get the basic ball working. As you do, you will gain a clear understanding of details you need to see how that piece will work with the others. As you start to bring in other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. You can expect to run into some dead ends, and then back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. This reason this strategy works is simple: instead of trying to do something you can't, you try to do something you can.
+Imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You can begin to break it down into sub-tasks—keyboard controlled paddles, animated ball, scoreboards, etc—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won't know the details. Without an understanding details, the pieces you make probably won't fit together. You might end up with a lot of code that doesn't work and you don't understand. It is much better to have a little bit of code that does work and that you do understand.
 
-<!--[[lots of issues with sentence clarity here--I'll work on it, but maybe you should review it as well.]]-->
+You could also start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don't worry about the paddles or the score yet, focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do take the time to review the code and make sure you understand how everything works.
+
+Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. This reason this strategy works is simple: instead of trying to do something you can't, you are trying to do something you can.
+
+<!--[[lots of issues with sentence clarity here--I'll work on it, but maybe you should review it as well. -l]]-->
+
+<!--[[better? -j]]-->
 
 /::
 
-### Building a Toolbox
+### Building with a Toolbox
 
-Many problems can be solved using the same techniques composed in different ways. The techniques we have already discussed are building blocks that can be used in a wide array of problems. As you explore other tools and media you will see many common themes and techniques emerge.
+Many problems can be solved—at least in part—by using the same techniques composed in different ways. The techniques we have already discussed are building blocks that can be used in a wide array of problems. As you explore other tools and media you will see many common themes and techniques emerge.
 
-Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We've explored some of these already and will touch on others in the course of this class, but you don't need to know all of these techniques to build interesting things.
+Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, Brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We've explored some of these already and will touch on others in the course of this class, but you don't need to know all of these techniques to build interesting things.
 
 In this chapter we'll be looking at how conceptually simple steps can be combined in different ways to get different effects.
+
+<!-- [[above section feels awkwardly positioned, especially after the preceding aside. Maybe this should talk more about "design patterns", composition? -->
 
 ::: .discussion
 
@@ -100,7 +108,7 @@ x = random() * width;
 y = random() * height;
 ```
 
-This is a quick, effective, and straightforward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.
+This is a quick, effective, and straightforward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half of the square. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.
 
 #### Grid Placement
 
@@ -171,17 +179,17 @@ y = y + random() * height;
 
 Displace each point by an amount determined by a noise lookup.
 
-* This technique allows for nice control over the frequency of displacement.
+* This technique allows for nice control over displacement.
 * Can be used to create wave-like effects.
 
 ```javascript
-x = x + noise(i * frequency, 0) * w;
-y = x + noise(i * frequency, 1000) * h;
+x = x + noise(i * frequency, 0) * amount;
+y = x + noise(i * frequency, 1000) * amount;
 ```
 
 #### Relaxation Displacement
 
-Find pairs of points that are near each other. Move them towards or away from each other by a small amount. This technique is often applied several times in a row with small movements, which avoids the problem of pushing a point away from one, but then into another.
+Find pairs of points that are near each other. Move them towards or away from each other by a small amount. This technique is often applied several times in a row with small movements, which avoids the problem of pushing a point away from one, but into another.
 
 * This technique can be used to push points apart to some minimum distance.
 * This technique can also be used to pull points together if they are near each other.
@@ -235,30 +243,66 @@ What tactics might have been used to get each result below?
 
 ### Basic Grid Placement
 
-[[ 10 x 10 Grid ]]
-change to 10 x 20, 20 x 20, 100 x 100
-add a little random offset to each circle
-draw a little "pine tree" at each point (a green triangle on a brown square)
+::: js-lab
+/strategy/sketches/grid_basic.js
+/::
 
 ### Basic Random Placement
 
-[[ draws 100 randomly placed points ]]
-change to 10, 1000
-use center biasing to make points tend to be toward the center
-draw a little "snowman" at each point (three little white circles, stacked)
+::: js-lab
+/strategy/sketches/random_basic.js
+/::
 
-### Advanced Placement
+### Stored Grid Placement
 
-[[ stores positions in array on setup, draws them in draw ]]
-add a little random offset to each position in setup
-change the setup to use random placement and place 100 points
+::: js-lab
+/strategy/sketches/grid_stored.js
+/::
+
+::: .activity
+
+## In-class Challenge
+
+Explore the code examples above by completing the following challenges in order. <br/> Don't skip any.
+
+| Time                 | Comment                                                                              |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| < 11 in 20 Minutes   | You need to put in some extra work to strengthen your understanding of these topics. |
+| 11 in 20 Minutes     | Good.                                                                                |
+| All 14 in 20 Minutes | Great.                                                                               |
+
+### Modify the Basic Grid Placement Example
+
+1. Change the grid to 10 x 20, 20 x 20, and 100 x 100.
+2. Add a little random offset to each circle.
+3. Draw a little "pine tree" at each point: a green triangle on a brown square.
+4. Remove the `noLoop()`. Does this introduce any problems?
+
+### Modify the Basic Random Placement Example
+
+1. Change to code to place only 10 points. Try 1000.
+2. Use middle biasing when placing points to make them more likely to appear near the center.
+3. Draw a little "snowman" at each point: three white circles, stacked.
+4. Remove the `noLoop()`. Does this introduce any problems?
+   {continue}
+
+### Modify the Stored Grid Placement Example
+
+1. Add a little random offset to each circle.
+2. Change the setup to use random placement and place 100 points.
+3. This example doesn't need `noLoop()`. Why?
+   {continue}
 
 ### Challenging Challenges
 
-... continuing from advanced
-make it so that 75% of the points draw trees and 25% draw snowmen
-store which dots are snowmen and which dots are trees so they don't flicker
-each "draw" move the snowmen a random step left, up, right, or down.
+Continue with the stored random placement code you made above.
+
+1. Draw about 75% of the points as trees and 25% as snowmen.
+2. Make sure the points don't switch between trees and snowmen every frame.
+3. Each `draw()` move the snowmen a random step left, up, right, or down.
+   {continue}
+
+/::
 
 ## Properties of PCG System
 
