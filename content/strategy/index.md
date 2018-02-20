@@ -40,9 +40,9 @@ You might make dozens of incremental working programs as you get the basic ball 
 
 ### Building a Toolbox
 
-Many problems can be solved using the same techniques composed in different ways. The techniques we have already discussed are building blocks that can be used in a wide array of problems. As you explore other tools and media you will see many common themes and techniques emerge.
+Many problems can be solved using the same techniques composed in different ways. The techniques covered in the section above are building blocks that can be used in a wide array of problems. As you explore other tools and media you will see many common themes and techniques emerge.
 
-Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We've explored some of these already and will touch on others in the course of this class, but you don't need to know all of these techniques to build interesting things.
+Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, Brownian motion, L-systems, neural nets, turtles, Markov chains, Poisson-disc sampling, particle systems, fractals, meta-balls. We've explored some of these already and will touch on others in the course of this class, but you don't need to know all of these techniques to build interesting things.
 
 In this chapter we'll be looking at how conceptually simple steps can be combined in different ways to get different effects.
 
@@ -142,7 +142,7 @@ Place points randomly, but reject a point if it is too close to an existing poin
 [Jason Davies:<br/>Poisson-Disc Sampling](https://www.jasondavies.com/poisson-disc/)
 /::
 
-This tactic is essentially unoptimized poisson-disc sampling. Poisson-disc sampling is great when you need evenly distributed points without pattern artifacts.
+This tactic is essentially unoptimized Poisson-disc sampling. Poisson-disc sampling is great when you need evenly distributed points without pattern artifacts.
 
 #### Stamp Placement
 
@@ -160,7 +160,7 @@ These tactics can be used to move existing points. Many effects can be created b
 
 #### Random Displacement
 
-Given a set of points, offset the location of each point a random amount. This can be used to roughen up a rigid arrangement like grid placement produces.
+Given a set of points, offset the location of each point by a random amount. This can be used to roughen up a rigid arrangement like grid placement produces.
 
 ```javascript
 x = x + random() * width;
