@@ -34,7 +34,7 @@ This is much easier said than done. It's hard to understand a complex problem an
 
 Imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You can begin to break it down into sub-tasks—keyboard controlled paddles, animated ball, scoreboards, etc—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won't know the details. Without an understanding details, the pieces you make probably won't fit together. You might end up with a lot of code that doesn't work and you don't understand. It is much better to have a little bit of code that does work and that you do understand.
 
-You could also start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don't worry about the paddles or the score yet, focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do take the time to review the code and make sure you understand how everything works.
+You could also start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don't worry about the paddles or the score yet, focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do, take the time to review the code and make sure you understand how everything works.
 
 Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. This reason this strategy works is simple: instead of trying to do something you can't, you are trying to do something you can.
 
@@ -48,17 +48,12 @@ Working this way will let you discover the details of how your ball—an importa
 
 Many problems can be solved—at least in part—by using the same techniques composed in different ways. The techniques we have already discussed are building blocks that can be used in a wide array of problems. As you explore other tools and media you will see many common themes and techniques emerge.
 
-<<<<<<< HEAD
-Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, Brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We’ve explored some of these already and will touch on others in the course of this class, but you don’t need to know all of these techniques to build interesting things.
-=======
 Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, Brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We've explored some of these already and will touch on others in the course of this class, but you don't need to know all of these techniques to build interesting things.
->>>>>>> c812e9fc3e213670f4187dd212d8eed30915d07c
 
 In this chapter we’ll be looking at how conceptually simple steps can be combined in different ways to get different effects.
 
 <!-- [[above section feels awkwardly positioned, especially after the preceding aside. Maybe this should talk more about "design patterns", composition? -->
 
-<!-- [[above section feels awkwardly positioned, especially after the preceding aside. Maybe this should talk more about "design patterns", composition? -->
 
 ::: .discussion
 
