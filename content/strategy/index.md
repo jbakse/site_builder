@@ -50,7 +50,7 @@ Many problems can be solved—at least in part—by using the same techniques co
 
 Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, Brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We've explored some of these already and will touch on others in the course of this class, but you don't need to know all of these techniques to build interesting things.
 
-In this chapter we’ll be looking at how conceptually simple steps can be combined in different ways to get different effects.
+In this chapter we'll be looking at how conceptually simple steps can be combined in different ways to get different effects.
 
 <!-- [[above section feels awkwardly positioned, especially after the preceding aside. Maybe this should talk more about "design patterns", composition? -->
 
