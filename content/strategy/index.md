@@ -22,27 +22,33 @@ software: p5.js
 
 So far we've been looking at low-level topics like how to use `random()` and `noise()` to get specific results. As our goals grow **more complex**, we need to approach problems from a much **higher level**. To create more complex systems you must develop a clear understanding of the result you would like to achieve, break the task down into smaller sub-tasks, and then implement the sub-tasks in code. In short you need to have a plan—a strategy—before you start coding.
 
-::: .callout
 
-**Tackling Complexity**
+[[ strategies composed of tactics ]]
+[[ In the next section create an explicit bridge saything that "this [points on square] is an example of that [composing strategies of tactics]"
 
-When beginner and intermediate programmers run into trouble building more complex projects, they often hear this advice:
 
-> Break your problem into smaller parts, and solve those parts.
+[[ task < tactic < strategy ]]
+[[ understanding API Calls + syntax ]]
+[[ micro tactics like biasing ]]
+[[ bigger tactics like algorithms + data structures]]
+[[ design patterns algo + data]]
+[[ named things like markov chains and l systems]]
 
-This is much easier said than done. It's hard to understand a complex problem and it's hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together? With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can't initially understand and break down. When this happens to you, you still have an option for getting started: **make a simpler program**.
+[[methods \ systems : markov chain l system ]]
 
-Imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You can begin to break it down into sub-tasks—keyboard controlled paddles, an animated ball, scoreboards—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won't know the details. Without understanding the details, the pieces you make probably won't fit together. You might end up with a lot of code that doesn't work and you don't understand. It is much better to have a little bit of code that does work and that you do understand.
+[[“Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.” Sun Tzu wrote “The Art of War.” ]]
 
-You could start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don't worry about the paddles or the score yet: focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do, take the time to review the code and make sure you understand how everything works.
+[[ problem ((randomly generate a musical phrase) ]]
+[[ strategy is a high level approach to solving your specific problem]
+[[ tactics are a mid or low level approach to solving a small, common sub-problem (animate a value over time, find the highest value in an array)]]
+[[ tasks are often provided by api and syntax (draw a square, loop) ]]
 
-Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. This reason this strategy works is simple: instead of trying to do something you can't, you are trying to do something you can.
 
-<!--[[lots of issues with sentence clarity here--I'll work on it, but maybe you should review it as well. -l]]-->
+[[ design pattern ]]
 
-<!--[[better? -j]]-->
-
-/::
+[[ a template for solving a common problem, usually a software architecture problem, but sometimes applied to other problems ]]
+[[ Gang of 4 ]]
+[[http://www.gameprogrammingpatterns.com/]]
 
 ### Building with a Toolbox
 
@@ -55,6 +61,35 @@ In this chapter we'll be looking at how conceptually simple steps can be combine
 <!-- [[above section feels awkwardly positioned, especially after the preceding aside. Maybe this should talk more about "design patterns", composition? -->
 
 <!-- [[I agree. The following discussion section feels awkward too. Knowing that these named strategies are actually tools for solving specific problems is important--I hadn't though of them like that before. But the language in the first paragraph here is pretty vague. Discussing design patterns and composition might clarify it.]]-->
+
+
+
+
+::: .callout
+
+**Tackling Complexity**
+
+When beginner and intermediate programmers run into trouble building more complex projects, they often hear this advice:
+
+> Break your problem into smaller parts, and solve those parts.
+
+[[process vs. structure]]
+[[this confuses the process of developing a program with the structure of that program]]
+[[a well factored/composed program breaks problems down into sub-problems ]]
+[[as a process this is necessary but not sufficient ]]
+
+This is much easier said than done. It's hard to understand a complex problem and it's hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together? With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can't initially understand and break down. When this happens to you, you still have an option for getting started: **make a simpler program**.
+
+Imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You can begin to break it down into sub-tasks—keyboard controlled paddles, an animated ball, scoreboards—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won't know the details. Without understanding the details, the pieces you make probably won't fit together. You might end up with a lot of code that doesn't work and you don't understand. It is much better to have a little bit of code that does work and that you do understand.
+
+You could start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don't worry about the paddles or the score yet: focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do, take the time to review the code and make sure you understand how everything works.
+
+Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. This reason this strategy works is simple: instead of trying to do something you can't, you are trying to do something you can.
+
+
+/::
+
+
 
 ::: .discussion
 
