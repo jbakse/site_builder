@@ -18,9 +18,114 @@ software: p5.js
 
 <script src="/mess/strat_mess.js"></script>
 
-## Computational Form Strategies
+## Computational Form + Strategies
 
-So far we've been looking at low-level topics like how to use `random()` and `noise()` to get specific results. As our goals grow **more complex**, we need to look at problems from at a much **higher level**. To create more complex systems you must develop a clear understanding of the result you would like to achieve, break the task down into smaller sub-tasks, and then implement the sub-tasks in code. In short you need to have a plan—a strategy—before you start coding.
+> “Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.”{bigger}
+
+[Probably not Sun Tzu](https://en.wikiquote.org/wiki/Sun_Tzu){attrib}
+
+<style>
+canvas {
+   image-rendering: pixelated;
+}
+</style>
+
+So far we've been looking at low-level topics like how to use `random()` and `noise()`. This week we are changing focus to high-level planning. To create more complex systems you must develop a clear understanding of the your goal, create a plan to achieve that goal, divide that plan into sub-problems ([decomposition](https://en.wikipedia.org/wiki/Decomposition_(computer_science))) and create code to solve those sub-problems [implementation](https://en.wikipedia.org/wiki/Implementation). 
+
+When planning and coding a project, I tend to think in terms of *strategies* and *tactics*.
+
+Strategies
+: Strategies are high-level plans for achieving particular goals. Strategies are specific to their goals, and not highly reusable. 
+
+_Strategies are composed of tactics._
+
+Tactics
+: Tactics are low- to mid-level concrete approaches to solving common problems. Tactics include [algorithms](https://www.khanacademy.org/computing/computer-science/algorithms), [data structures](https://en.wikipedia.org/wiki/List_of_data_structures), [design patterns](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612), and other reusable components that can be applied to a variety of problems. 
+
+_Tactics are composed of primitives._
+
+Primitives
+: Primitives are the programming building blocks provided by your [language]((https://en.wikipedia.org/wiki/Language_primitive)) and libraries. These include control structures like loops and functions and built-in data types like variables, objects, and arrays. They may also include more complex tasks like `rect()` and `random()` when the complexity is hidden from your program's frame of reference. 
+
+_Primitives are atomic: they are the smallest units of composition and cannot be further broken down._
+
+
+### Building a Toolbox
+
+Becoming familiar with common tactics and being able to recognize the problems they solve is critical to creating more complex code. Tactics are powerful and useful because they are **reusable** and **composable**: the problems they solve appear over and over in a variety of contexts and you can combine tactics in different ways to solve different problems.
+
+For example compare this code that animates a bouncing ball:
+
+::: js-lab
+/strategy/sketches/bounce.js
+/::
+
+to this code that "bounces" the color of a ball:
+
+::: js-lab
+/strategy/sketches/bounce_color.js
+/::
+
+These two programs produce different effects, but structurally they are almost identical. We could call this common structure a "bounce" tactic. Bounce is a fairly simple tactic but we can break it down further as a composition of smaller common tactics:
+
+Line 20
+: A variable increment to provide motion. 
+
+_If you want to dig deeper, this is a very simple [explicit numerical integration](https://gafferongames.com/post/integration_basics/) of motion. It is the [Euler method](https://en.wikipedia.org/wiki/Euler_method) simplified by assuming no acceleration and a constant time step._
+
+Line 14 and 17
+: A very simple implementation of the [collision detection](https://en.wikipedia.org/wiki/Collision_detection) tactic.
+
+Line 15 and 18
+: A very simple implementation of the [collision response](https://en.wikipedia.org/wiki/Collision_response) tactic.
+
+
+Tactics can range from very simple—using the average of two `random()` calls to center bias the result—to very complex. Many of the more complex tactics have earned their own names: linear congruential generators, noise generation, Brownian motion, L-systems, neural nets, turtles, Markov chains, Poisson-disc sampling, particle systems, fractals, meta-balls. We've seen some of these already and will explore others in the course of this class.
+
+This week we'll look at some tactics for a very common problem in procedural generation: arranging points on a square.
+
+
+
+<!-- 
+[[Compostion]]
+[[Factoring]]
+
+ to get specific results. As our goals grow **more complex**, we need to approach problems from a much **higher level**. To create more complex systems you must develop a clear understanding of the result you would like to achieve, break the task down into smaller sub-tasks, and then implement the sub-tasks in code. In short you need to have a plan—a strategy—before you start coding.
+
+
+[[ strategies composed of tactics ]]
+[[ In the next section create an explicit bridge saything that "this [points on square] is an example of that [composing strategies of tactics]"
+
+
+[[ task < tactic < strategy ]]
+[[ understanding API Calls + syntax ]]
+[[ micro tactics like biasing ]]
+[[ bigger tactics like algorithms + data structures]]
+[[ design patterns algo + data]]
+[[ named things like markov chains and l systems]]
+
+[[methods \ systems : markov chain l system ]]
+
+[[ problem ((randomly generate a musical phrase) ]]
+[[ strategy is a high level approach to solving your specific problem]
+[[ tactics are a mid or low level approach to solving a small, common sub-problem (animate a value over time, find the highest value in an array)]]
+[[ tasks are often provided by api and syntax (draw a square, loop) ]]
+
+
+[[ design pattern ]]
+[[ a template for solving a common problem, usually a software architecture problem, but sometimes applied to other problems ]]
+[[ Gang of 4 ]]
+[[http://www.gameprogrammingpatterns.com/]]
+ -->
+
+ 
+
+<!-- [[above section feels awkwardly positioned, especially after the preceding aside. Maybe this should talk more about "design patterns", composition? -->
+
+<!-- [[I agree. The following discussion section feels awkward too. Knowing that these named strategies are actually tools for solving specific problems is important--I hadn't though of them like that before. But the language in the first paragraph here is pretty vague. Discussing design patterns and composition might clarify it.]]-->
+
+
+
 
 ::: .callout
 
@@ -29,30 +134,23 @@ So far we've been looking at low-level topics like how to use `random()` and `no
 When beginner and intermediate programmers run into trouble building more complex projects, they often hear this advice:
 
 > Break your problem into smaller parts, and solve those parts.
+<!-- 
+[[process vs. structure]]
+[[this confuses the process of developing a program with the structure of that program]]
+[[a well factored/composed program breaks problems down into sub-problems ]]
+[[as a process this is necessary but not sufficient ]] -->
 
-This is much easier said than done. It's hard to understand a complex problem and it's hard to break complex problems down into parts. How big should the parts be? How do you build individual parts without the other parts it depends on? Once you have a few working parts, how do you put them together? With experience, it gets easier to answer these questions, but advanced programmers still frequently encounter problems they can't understand and break-down at first. When this happens to you, you still have an option for getting started: **make a simpler program**.
+This advice falls short because it describes how the final program should be structured rather than the process of developing it. It's hard to understand a complex problem and it's hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together?  With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can't initially understand well enough to break down. When this happens to you, you still have an option for getting started: **make a simpler program**.
 
-Imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You can begin to break it down into sub-tasks—keyboard controlled paddles, animated ball, scoreboards, etc—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won't know the details. Without an understanding details, the pieces you make probably won't fit together. You might end up with a lot of code that doesn't work and you don't understand. It is much better to have a little bit of code that does work and that you do understand.
+Imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You could begin by trying to break it down into sub-tasks—keyboard controlled paddles, an animated ball, a scoreboard—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won't know the details. Without understanding the details, the pieces you make probably won't fit together. You might end up with a lot of code that doesn't work and you don't understand. It is much better to have a little bit of code that does work and that you do understand.
 
-You could also start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don't worry about the paddles or the score yet, focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do take the time to review the code and make sure you understand how everything works.
+Instead, you could start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don't worry about the paddles or the score yet: focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do, take the time to review the code and make sure you understand how everything works.
 
-Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. This reason this strategy works is simple: instead of trying to do something you can't, you are trying to do something you can.
-
-<!--[[lots of issues with sentence clarity here--I'll work on it, but maybe you should review it as well. -l]]-->
-
-<!--[[better? -j]]-->
+Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. This reason this strategy works is simple: **instead of trying to do something you can't, you are trying to do something you can.**
 
 /::
 
-### Building with a Toolbox
 
-Many problems can be solved—at least in part—by using the same techniques composed in different ways. The techniques we have already discussed are building blocks that can be used in a wide array of problems. As you explore other tools and media you will see many common themes and techniques emerge.
-
-Some of the more complex techniques have earned their own names: pseudo-random number generation, noise sampling, Brownian motion, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, meta-balls. We've explored some of these already and will touch on others in the course of this class, but you don't need to know all of these techniques to build interesting things.
-
-In this chapter we'll be looking at how conceptually simple steps can be combined in different ways to get different effects.
-
-<!-- [[above section feels awkwardly positioned, especially after the preceding aside. Maybe this should talk more about "design patterns", composition? -->
 
 ::: .discussion
 
@@ -65,11 +163,10 @@ Consider the image below. How might you make something like this?
 
 ## Where Should I Put Things?
 
-Many procedural systems have to answer a fundamental question: _Where should I put things?_.
+Many procedural systems have to answer a fundamental question: _Where should I put things?_
 
-This problem area shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches on a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don't tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn't overlap because when beads of water touch, they join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, your can determine how planned, chaotic, random, natural, or mechanical the placement feels.
+This problem area shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches on a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don't tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn't overlap because when beads of water touch, they join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, you can determine how planned, chaotic, random, natural, or mechanical the placement feels.
 
-Most of this chapter will address this problem area by exploring a simple example: arranging points on a square.
 
 ::: slides .!short
 @@include('./slides.yaml')
@@ -93,11 +190,11 @@ Analyze each of the examples below. Carefully consider their similarities and di
 
 /::
 
-## Point Tactics
+## Placement Tactics 
 
 ### Placing the Points
 
-If we want points arranged on a square, we've got to start by creating some points and assigning them initial positions. There are many, many ways to go about this: here are five relatively simple but powerful tactics. I've given each of these tactics a name, but these are not widely used names.
+If we want points arranged on a square, we've got to start by creating some points and assigning them initial positions. There are many, many ways to go about this: here are five relatively simple but powerful tactics.
 
 #### Random Placement
 
@@ -138,9 +235,9 @@ x = noise(i * frequency, 0) * w;
 y = noise(i * frequency, 1000) * h;
 ```
 
-#### Cull Placement
+#### Proximity Cull Placement
 
-Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points. In the example below, three points already exist and a fourth is being considered. Three possible values are shown. One is too close and one is too far, so they are rejected. The third location is okay, and a fourth point at that location is added.
+Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points. In the example below, three points already exist and a fourth is being considered. Three possible values are shown. One is too close and one is too far, so they are rejected. The third location is okay, and a fourth point is added at that location.
 
 ![cull placement 1](figures/cull_placement_1.svg)
 ![cull placement 2](figures/cull_placement_2.svg)
@@ -150,13 +247,13 @@ Place points randomly, but reject a point if it is too close to an existing poin
 [Jason Davies:<br/>Poisson-Disc Sampling](https://www.jasondavies.com/poisson-disc/)
 /::
 
-This tactic is essentially unoptimized poisson-disc sampling. Poisson-disc sampling is great when you need evenly distributed points without pattern artifacts.
+This tactic is essentially unoptimized Poisson-disc sampling. Poisson-disc sampling is great when you need evenly distributed points without pattern artifacts.
 
 #### Stamp Placement
 
 Create predefined arrangements of points by hand or generatively. Copy these arrangements onto different locations.
 
-This technique allows mixing of hand-made and procedural design.
+This technique allows mixing of handmade and procedural design.
 
 ![stamp placement 1](figures/tile_1.svg)
 ![stamp placement 2](figures/tile_2.svg)
@@ -164,11 +261,11 @@ This technique allows mixing of hand-made and procedural design.
 
 ### Moving the Points
 
-These tactics can be used to move existing points. Many effects can be created by combining these with the placement techniques above.
+These tactics can be used to move existing points. Many effects can be created by combining these with the placement tactics above if in different ways.
 
 #### Random Displacement
 
-Given a set of points, offset the location of each point a random amount. This can be used to roughen up a rigid arrangement like grid placement produces.
+Given a set of points, offset the location of each point by a random amount. This can be used to roughen up a rigid arrangement like grid placement produces.
 
 ```javascript
 x = x + random() * width;
@@ -189,7 +286,7 @@ y = x + noise(i * frequency, 1000) * amount;
 
 #### Relaxation Displacement
 
-Find pairs of points that are near each other. Move them towards or away from each other by a small amount. This technique is often applied several times in a row with small movements, which avoids the problem of pushing a point away from one, but into another.
+Find pairs of points that are near each other. Move them towards or away from each other by a small amount. This technique is often applied several times in a row with small movements, which avoids the problem of pushing a point away from one point, but into another.
 
 * This technique can be used to push points apart to some minimum distance.
 * This technique can also be used to pull points together if they are near each other.
@@ -215,13 +312,13 @@ In the example above, points are removed if the corresponding noise value is too
 
 What tactics might have been used to get each result below?
 
-| Place  | Move       |
-| ------ | ---------- |
-| Random | Random     |
-| Noise  | Noise      |
-| Grid   | Relaxation |
-| Cull   | Noise Cull |
-| Stamp  | &nbsp;     |
+| Place          | Move       |
+| -------------- | ---------- |
+| Random         | Random     |
+| Noise          | Noise      |
+| Grid           | Relaxation |
+| Proximity Cull | Noise Cull |
+| Stamp          | &nbsp;     |
 
 ![overview](figures/pp_tall.png){scale}
 
@@ -280,7 +377,7 @@ Explore the code examples above by completing the following challenges in order.
 
 ### Modify the Basic Random Placement Example
 
-1. Change to code to place only 10 points. Try 1000.
+1. Change the code to place only 10 points. Try placing 1000 points.
 2. Use middle biasing when placing points to make them more likely to appear near the center.
 3. Draw a little "snowman" at each point: three white circles, stacked.
 4. Remove the `noLoop()`. Does this introduce any problems?
@@ -299,7 +396,7 @@ Continue with the stored random placement code you made above.
 
 1. Draw about 75% of the points as trees and 25% as snowmen.
 2. Make sure the points don't switch between trees and snowmen every frame.
-3. Each `draw()` move the snowmen a random step left, up, right, or down.
+3. For each `draw()` move the snowmen a random step left, up, right, or down.
    {continue}
 
 /::
@@ -435,3 +532,5 @@ If you want to play Spelunky—optional but highly recommended—original versio
 : Nice, interactive demo of three strategies for placing points on a sphere.
 
 [Leena's Inception Overworld Overview](http://bytten-studio.com/devlog/2014/09/08/overworld-overview-part-1/)
+
+[Game Programming Patterns](http://www.gameprogrammingpatterns.com/)

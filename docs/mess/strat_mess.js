@@ -15,8 +15,7 @@ function preload() {
 
 function setup() {
     pixelDensity(1);
-    p5_canvas = createCanvas(windowWidth, windowHeight);
-
+    p5_canvas = createCanvas(windowWidth * .25, windowHeight * .25);
     $(p5_canvas.canvas).addClass("mess");
     $(p5_canvas.canvas).addClass("hide");
     $(p5_canvas.canvas).attr("style", "");
@@ -37,6 +36,9 @@ function draw() {
 
     if (mouseX === 0 && mouseY === 0) return;
 
+    scale(.25);
+    mouseX *= 4;
+    mouseY *= 4;
 
 
     dots.push(new Dot(mouseX, mouseY));
@@ -65,7 +67,7 @@ class Dot {
         this.r = 15;
         this.seeking = true;
         // this.hue = random(1000);
-        this.hue = map(this.x + this.y, 0, width + height, 1, 1000);
+        this.hue = map(this.x + this.y, 0, width + height * 25, 1, 1000);
 
         this.age = 0;
     }
