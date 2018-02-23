@@ -66,7 +66,7 @@ to this code that "bounces" the color of a ball:
 /strategy/sketches/bounce_color.js
 /::
 
-These two programs produce different effects, but structurally they are almost identical. We could call this common structure a "bounce" tactic. Bounce is a fairly simple tactic but we can break it down further as a composition of smaller common tactics:
+These two programs produce different effects, but structurally they are almost identical. The two problems have a similar "shape" and we can use a common tactic to solve them both. We could call this common tactic "bounce". Bounce is fairly simple but we can break it down further as a composition of smaller common tactics:
 
 Line 20
 : A variable increment to provide motion. 
@@ -79,8 +79,12 @@ Line 14 and 17
 Line 15 and 18
 : A very simple implementation of the [collision response](https://en.wikipedia.org/wiki/Collision_response) tactic.
 
+Line 10
+: This tactic relies on being run repeatedly in [game loop](http://gameprogrammingpatterns.com/game-loop.html).
 
-Tactics can range from very simple—using the average of two `random()` calls to center bias the result—to very complex. Many of the more complex tactics have earned their own names: linear congruential generators, noise generation, Brownian motion, L-systems, neural nets, turtles, Markov chains, Poisson-disc sampling, particle systems, fractals, meta-balls. We've seen some of these already and will explore others in the course of this class.
+These tactics are all fairly common and they all names. Some tactics have several names and other tactics don't have names at all. Naming tactics is helpful when communicating with other programmers about your code, but the most important thing is to recognize their essential structures.
+
+Tactics can range from very simple—like using the average of two `random()` calls to center bias the result—to complex—linear congruential generators, noise generation, Brownian motion, L-systems, neural nets, turtles, Markov chains, Poisson-disc sampling, particle systems, fractals, meta-balls. We've seen some of these already and will explore others in the course of this class.
 
 This week we'll look at some tactics for a very common problem in procedural generation: arranging points on a square.
 
@@ -140,7 +144,7 @@ When beginner and intermediate programmers run into trouble building more comple
 [[a well factored/composed program breaks problems down into sub-problems ]]
 [[as a process this is necessary but not sufficient ]] -->
 
-This advice falls short because it describes how the final program should be structured rather than the process of developing it. It's hard to understand a complex problem and it's hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together?  With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can't initially understand well enough to break down. When this happens to you, you still have an option for getting started: **make a simpler program**.
+This advice falls short because it describes how the final program should be structured rather than the process of developing it. It is hard to understand a complex problem and it is hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together?  With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can't initially understand well enough to break down. When this happens to you, you still have an option for getting started: **make a simpler program**.
 
 Imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You could begin by trying to break it down into sub-tasks—keyboard controlled paddles, an animated ball, a scoreboard—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won't know the details. Without understanding the details, the pieces you make probably won't fit together. You might end up with a lot of code that doesn't work and you don't understand. It is much better to have a little bit of code that does work and that you do understand.
 
@@ -166,6 +170,8 @@ Consider the image below. How might you make something like this?
 Many procedural systems have to answer a fundamental question: _Where should I put things?_
 
 This problem area shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches on a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don't tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn't overlap because when beads of water touch, they join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, you can determine how planned, chaotic, random, natural, or mechanical the placement feels.
+
+The problems above are all specific instances of the general problem of arranging points. Below we'll look at several tactics for placing and moving points on a square. These tactics can be combined in different ways to generate a wide variety of arrangements. These tactics can help with planting trees, beading water, or banging up a spaceship. They could be adapted to arranging points on lines or in cubes or arranging events in time. You can find applications for these tactics in all areas of procedural generation any time you have things that need to be arranged.
 
 
 ::: slides .!short
@@ -489,9 +495,25 @@ Same as above: Analyze, Strategize, Study, Recreate, Extend, Post
 
 /::
 
+
+
 ::: .assignment
 
-## Reading + Watch + Play
+### Special Assignment
+Later in this class I will ask you to create special sketches using equipment available to you through The New School. If you haven’t used the following equipment before, you should sign up for orientations. Be ready to use the following equipment by week 8.
+
+- Laser Cutters
+- 3D Printers
+- Large Format Printers/Plotters
+- CNC Mills (optional)
+
+/::
+
+
+
+::: .assignment
+
+## Read + Watch + Play
 
 ### Read
 
@@ -532,5 +554,7 @@ If you want to play Spelunky—optional but highly recommended—original versio
 : Nice, interactive demo of three strategies for placing points on a sphere.
 
 [Leena's Inception Overworld Overview](http://bytten-studio.com/devlog/2014/09/08/overworld-overview-part-1/)
+: A description of the strategy used to create the main map in Lenna's Inception.
 
 [Game Programming Patterns](http://www.gameprogrammingpatterns.com/)
+: An online book that looks at design patterns commonly found in games.

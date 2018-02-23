@@ -36,20 +36,23 @@ debug: false
 ## Homework Review
 
 ::: .headless
-| Group | Question |
-| ----- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| 1 | Max, Bella, Sue <br/>Choose a common theme that has appeared in several pieces. Discuss the theme and two example sketches. |
-| 2 | Aakanksha, Alyssa, Jack <br/>Choose a work that uses theme in a way not seen in the other sketches. Why did you choose this piece? |
-| 3 | Madison, Rik, Patrick <br/>Choose a work that you like and and don't know how it was made. Describe what you see. |
-| 4 | Leah, Julian, Mario <br/>Perlin Noise is often used to simulate natural forms. Choose a work that demonstrates this. Discuss. |
-| 5 | Ting, Earl, Dahee <br/>Choose any work. List 5 different ways the artist could change the sketch to explore further. |
-| 6 | Kirsten, Patricia, Carla <br/>The challenge is not a competition. Who won? |
+| Group | Question                                                                                                                             |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| 1     | Kirsten, Patricia, Carla <br/>Choose a common theme that has appeared in several pieces. Discuss the theme and two example sketches. |
+| 2     | Max, Bella, Sue <br/>Choose a work that uses theme in a way not seen in the other sketches. Why did you choose this piece?           |
+| 3     | Aakanksha, Alyssa, Jack <br/>Choose a work that you like and and don't know how it was made. Describe what you see.                  |
+| 4     | Madison, Rik, Patrick <br/>Perlin Noise is often used to simulate natural forms. Choose a work that demonstrates this. Discuss.      |
+| 5     | Leah, Julian, Mario <br/>Choose any work. List 5 different ways the artist could change the sketch to explore further.               |
+| 6     | Ting, Earl, Dahee <br/>The challenge is not a competition. Who won?                                                                  |
+/::
 /::
 
-::: .assignment
 
-### Special Assignment
 
-Don't forget to sign up for orientations for the Laser Cutter and 3D printer. <br/> **You must complete orientations for the Laser Cutter and 3D Printer before spring break!**
 
-/::
+
+<style> 
+    .headless thead {
+        display: none;
+    }
+</style>
