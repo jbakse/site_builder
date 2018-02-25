@@ -10,10 +10,12 @@ debug: false
 
 ## Learning Objectives
 - Understand how raster image data is represented in memory.
-- Explore per-pixel image generation and image processing.
+- Consider relationship between vector images, raster images, p5.js drawing api, and pixel access.
+- Explore per-pixel image generation.
+- Explore per-pixel image processing.
 - Explore using an image as a data input.
 - Technical: Using p5's `get()` and `set()` function to read and write pixel values.
-- Technical: Using p5's `pixel[]` array to work with pixel data directly.
+- Technical: Using p5's `pixel[]` array to work with pixel data directly and faster.
 
 
 ### Announcements
@@ -21,14 +23,19 @@ debug: false
 
 
 ### Schedule
-| Time | ESA    | Type       | Activity                                           |
-| ---- | ------ | ---------- | -------------------------------------------------- |
-| Pre  | Fun    | -          | Music                                              |
-| 3:50 | Review | Discussion | Homework Review Questions                          |
-| 4:30 | Engage | Discussion | Homework Introduction + Guess Topics to Whiteboard |
-| 4:40 | Study  | Lecture    | Intro + Slides                                     |
-
-
+| Time | ESA           | Type         | Activity                    |
+| ---- | ------------- | ------------ | --------------------------- |
+| Pre  | TBA           | -            | TBA                         |
+| 3:50 | Review+Engage | Discussion   | Homework Review             |
+| 4:20 | Study         | Lecture      | 01 Pixels                   |
+| 4:30 | Activate      | Code         | Pixel Writing Challenges    |
+| 4:50 | Study         | Code Lecture | Challenges Discussion       |
+| 5:00 | Activate      | Code         | Pixel Processing Challenges |
+| 5:20 | Study         | Code Lecture | Challenges Discussion       |
+| 5:30 | Study         | Lecture      | 04 pixels[]                 |
+| 5:45 | Activate      | Code         | pixels[] Challenges         |
+| 6:00 | Study         | Code Lecture | Challenges Discussion       |
+| 6:10 | Study         | Lecture      | Vector vs Raster            |
 
 
 ::: .activity

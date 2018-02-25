@@ -13,7 +13,7 @@ function setup() {
 function draw() {
     background(0);
 
-
+    worldImage.loadPixels();
 
     for (var y = 0; y < worldImage.height; y++) {
         for (var x = 0; x < worldImage.width; x++) {
