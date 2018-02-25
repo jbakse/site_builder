@@ -30,7 +30,7 @@ canvas {
 }
 </style>
 
-So far we've been looking at low-level topics like how to use `random()` and `noise()`. This week we are changing focus to high-level planning. To create more complex systems you must develop a clear understanding of the your goal, create a plan to achieve that goal, divide that plan into sub-problems ([decomposition](https://en.wikipedia.org/wiki/Decomposition_(computer_science))) and create code to solve those sub-problems [implementation](https://en.wikipedia.org/wiki/Implementation). 
+So far we've been looking at low-level topics like how to use `random()` and `noise()`. This week we are changing focus to high-level planning. To create more complex systems you must develop a clear understanding of your goal, create a plan to achieve that goal, divide that plan into sub-problems ([decomposition](https://en.wikipedia.org/wiki/Decomposition_(computer_science))) and create code to solve those sub-problems ([implementation](https://en.wikipedia.org/wiki/Implementation)). 
 
 When planning and coding a project, I tend to think in terms of *strategies* and *tactics*.
 
@@ -54,7 +54,7 @@ _Primitives are atomic: they are the smallest units of composition and cannot be
 
 Becoming familiar with common tactics and being able to recognize the problems they solve is critical to creating more complex code. Tactics are powerful and useful because they are **reusable** and **composable**: the problems they solve appear over and over in a variety of contexts and you can combine tactics in different ways to solve different problems.
 
-For example compare this code that animates a bouncing ball:
+For example, compare this code that animates a bouncing ball:
 
 ::: js-lab
 /strategy/sketches/bounce.js
@@ -66,7 +66,7 @@ to this code that "bounces" the color of a ball:
 /strategy/sketches/bounce_color.js
 /::
 
-These two programs produce different effects, but structurally they are almost identical. The two problems have a similar "shape" and we can use a common tactic to solve them both. We could call this common tactic "bounce". Bounce is fairly simple but we can break it down further as a composition of smaller common tactics:
+These two programs produce different effects, but structurally they are almost identical. The two problems have a similar "shape" and we can use a common tactic to solve them both. We could call this common tactic "bounce". Bounce is fairly simple, but we can break it down further as a composition of smaller common tactics:
 
 Line 20
 : A variable increment to provide motion. 
@@ -80,7 +80,7 @@ Line 15 and 18
 : A very simple implementation of the [collision response](https://en.wikipedia.org/wiki/Collision_response) tactic.
 
 Line 10
-: This tactic relies on being run repeatedly in [game loop](http://gameprogrammingpatterns.com/game-loop.html).
+: This tactic relies on being run repeatedly in the [game loop](http://gameprogrammingpatterns.com/game-loop.html).
 
 These tactics are all fairly common and they all names. Some tactics have several names and other tactics don't have names at all. Naming tactics is helpful when communicating with other programmers about your code, but the most important thing is to recognize their essential structures.
 
@@ -231,7 +231,7 @@ for (row = 0; row < grid_rows; row++) {
 
 Place each point at a location determined by a noise lookup.
 
-* Because noise is center-biased, the results will center-biased.
+* Because noise is center-biased, the results will be center-biased.
 * Each dot will be placed near the last as the values change in the noise cloud.
 * This technique allows you some control over the proximity of successive points.
 
