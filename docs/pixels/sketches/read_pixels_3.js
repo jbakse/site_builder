@@ -4,6 +4,7 @@ var worldImage;
 
 function preload() {
     worldImage = loadImage("/pixels/sketches/world.png");
+    // worldImage = loadImage("/pixels/sketches/world_100.png");
 }
 
 function setup() {
@@ -17,11 +18,12 @@ function draw() {
     fill(200, 50, 50);
     noStroke();
 
+    var spacing = 500 / worldImage.width;
     for (var y = 0; y < worldImage.height; y++) {
         for (var x = 0; x < worldImage.width; x++) {
             var in_color = worldImage.get(x, y);
-            var s = lightness(in_color) / 255 * 50;
-            ellipse(x * 30 + 25, y * 30 + 25, s, s);
+            var dot_size = lightness(in_color) / 255 * 50;
+            ellipse(x * spacing + spacing * .5, y * spacing + spacing * .5, dot_size, dot_size);
         }
     }
 

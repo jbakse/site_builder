@@ -13,7 +13,7 @@ function setup() {
 function draw() {
     background(0);
 
-    worldImage.loadPixels();
+
 
     for (var y = 0; y < worldImage.height; y++) {
         for (var x = 0; x < worldImage.width; x++) {
@@ -22,7 +22,13 @@ function draw() {
             var r = red(in_color);
             var g = green(in_color);
             var b = blue(in_color);
-            var out_color = color(r * random(), g * random(), b * random());
+
+            var out_color;
+            if (r === 255) {
+                out_color = color(255, 0, 0);
+            } else {
+                out_color = color(0, 0, 255);
+            }
 
             worldImage.set(x, y, out_color);
             worldImage.updatePixels();
