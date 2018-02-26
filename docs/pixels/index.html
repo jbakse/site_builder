@@ -272,17 +272,16 @@ var blended_color = lerpColor(color_a, color_b, .5);
 </ol>
 </div>
 <h2 id="working-directly-with-the-pixels-array">Working Directly with the <code>pixels[]</code> Array</h2>
-<h3 id="the-canvas-pixel-density">The Canvas + Pixel Density</h3>
-<p>When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a 2x resolution canvas when running on a high-dpi (retina) display. You can call <code>pixelDensity(1)</code> to disable this feature. If you don’t, you’ll need to take into account the density when calculating a position in the <code>pixels[]</code> array.</p>
-<p>The examples on this page work with the pixels of images instead of the canvas to avoid this issue altogether.</p>
+<p>The p5.js <code>get()</code> method internally calls <code>loadPixels()</code> to make sure it is working with up to date information. Because of this, reading a single color value with <code>get()</code> requires reading</p>
 <h3 id="performance">Performance</h3>
-<p>The built-in p5 <code>someImage.get(x, y)</code> function gets the RGBA values of a pixel in an image. As noted in the <a href="https://p5js.org/reference/#/p5/get">reference</a>, the get call is slower than accessing the values in the <code>someImage.pixels[]</code> array directly. In fact, <code>get()</code> can be 1000s of times slower. Under the hood, <code>get()</code> reads the colors of every pixel in the image before returning the value you request.</p>
-<p>We can get much faster results by loading the pixel values <strong>once</strong> with <code>loadPixels()</code>, and then reading from the <code>pixels[]</code> array directly.</p>
-<p>The <code>getQuick()</code> funciton below reads a pixels color value from an image’s <code>pixels[]</code> array. You must call <code>loadPixels()</code> before calling this funciton.</p>
-<pre><code class="language-javascript"><span class="hljs-comment">// find the RGBA values of the pixel at x, y in the img's pixels array</span>
+<p>The built-in p5 <code>get()</code> function gets the RGBA values of a pixel in an image. Internally <code>get()</code> calls <code>loadPixels()</code> to make sure it is workign with up to date information. This means that when even when getting the values for a single pixel, <em>every</em> pixel is read. As noted in the <a href="https://p5js.org/reference/#/p5/get">reference</a>, this makes <code>get()</code> slower than accessing the values in the <code>pixels[]</code> array directly. In fact, <code>get()</code> can easily be 1000s of times slower.</p>
+<p>We can get much faster results by loading all of the pixel values <strong>once</strong> with <code>loadPixels()</code>, and then reading and writing the <code>pixels[]</code> array directly.</p>
+<p>The <code>getQuick()</code> function below reads a pixels color value from an image’s <code>pixels[]</code> array. You must call <code>loadPixels()</code> before calling this function. When you are done working with the <code>pixels[]</code> array, you should call <code>updatePixels()</code> to update the image with your changes</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// returns the RGBA values of the pixel at x, y in the img's pixels[] array</span>
+<span class="hljs-comment">// returns values as an array [r, g, b, a]</span>
 <span class="hljs-comment">// use instead of p5s built in .get(x,y), for much better performance (more than 1000x better in many cases)</span>
 <span class="hljs-comment">// see: http://p5js.org/reference/#/p5/pixels[]</span>
-<span class="hljs-comment">// we don't need to worry about screen pixel density here, because we are not reading from the screen</span>
+<span class="hljs-comment">// we don't need to worry about screen pixel density here, because we are not reading from the canvas</span>
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getQuick</span>(<span class="hljs-params">img, x, y</span>) </span>{
 
@@ -306,6 +305,9 @@ img.loadPixels();
 
 <span class="hljs-comment">// in loop</span>
 c = getQuick(img, x, y);
+
+<span class="hljs-comment">// after loop</span>
+img.updatePixels();
 </code></pre>
 <p>The following example compares the performance of using <code>get()</code> and <code>getQuick()</code> to read and invert the color value of a small image.</p>
 <div id="" class="">
@@ -314,10 +316,10 @@ c = getQuick(img, x, y);
 </iframe>
 </div>
 </div>
-<h3 id="get-and-set"><code>get()</code> and <code>set()</code></h3>
-<div id="" class="callout warn">
-<p>The <code>get()</code> and <code>set()</code> methods are easy to use, but they are really, really slow.</p>
-</div>
+<h3 id="the-canvas-pixel-density">The Canvas + Pixel Density</h3>
+<p>You can work with the pixels in an image using <code>image.pixels[]</code> or the pixels of the canvas with just <code>pixels[]</code>.
+When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a high-dpi canvas when running on a high-dpi (retina) display. You can call <code>pixelDensity(1)</code> to disable this feature. Otherwise, you’ll need to take into account the density when calculating a position in the <code>pixels[]</code> array.</p>
+<p>The examples on this page work with the pixels of images instead of the canvas to avoid this issue altogether. If you need to work with the canvas, the <a href="https://p5js.org/reference/#/p5/pixels">pixels</a> documentation has info on working with higher pixel densities.</p>
 <!-- 
 ### Using the `pixels` array
 
