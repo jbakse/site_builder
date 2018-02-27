@@ -19,9 +19,8 @@ function setup() {
 function draw() {
     // clear the background
     background(255);
-
-
     var start, end;
+    var testImageCopy = createImage(100, 100);
 
     noSmooth();
 
@@ -29,27 +28,20 @@ function draw() {
     image(testImage, 0, 0);
 
     // invert and draw
+    testImageCopy.copy(testImage, 0, 0, 100, 100, 0, 0, 100, 100);
     start = millis();
-    invertStandard(testImage);
+    invertStandard(testImageCopy);
     end = millis();
     console.log("invertStandard: ", end - start);
-    image(testImage, 100, 0);
+    image(testImageCopy, 100, 0);
 
     // invert and draw
+    testImageCopy.copy(testImage, 0, 0, 100, 100, 0, 0, 100, 100);
     start = millis();
-    invertQuick(testImage);
+    invertQuick(testImageCopy);
     end = millis();
     console.log("invertQuick: ", end - start);
-    image(testImage, 200, 0);
-
-    // invert and draw
-    start = millis();
-    invertQuicker(testImage);
-    end = millis();
-    console.log("invertQuicker: ", end - start);
-    image(testImage, 300, 0);
-
-
+    image(testImageCopy, 200, 0);
 
 
     noLoop();
@@ -103,32 +95,6 @@ function invertQuick(img) {
     img.updatePixels();
 }
 
-
-function invertQuicker(img) {
-    // load up the pixel[] array so we can read colors out of it
-    img.loadPixels();
-
-    for (y = 0; y < img.height; y++) {
-        for (x = 0; x < img.width; x++) {
-
-
-            // var c = getQuick(img, x, y);
-            var i = (y * img.width + x) * 4;
-
-            var c = [
-                255 - testImage.pixels[i + 0],
-                255 - testImage.pixels[i + 1],
-                255 - testImage.pixels[i + 2],
-                testImage.pixels[i + 3],
-            ];
-            img.set(x, y, c);
-
-
-        }
-    }
-
-    img.updatePixels();
-}
 
 
 // find the RGBA values of the pixel at x, y in the img.pixels array
