@@ -21,7 +21,7 @@ debug: false
 | ----- | --------------- | -------------- | ----------------------------- |
 | Pre   | TBD             | -              | TBD                           |
 | 3:50  | Review+Engage   | Discussion     | Homework Review               |
-| 4:20  | Study           | Lecture        | 01 Comp Form Strategies Intro |
+| 4:20  | Study           | Lecture        | 01 CF + Strategies + Tactics  |
 | &nbsp | Study           | Lecture        | 02 Where Should I Put Things? |
 | 4:35  | Engage+Activate | Activity       | Analyze Workshop              |
 | 4:55  | Study           | Lecture        | 03 Point Tactics              |
@@ -30,6 +30,25 @@ debug: false
 | 5:55  | Study           | Coding Lecture | Challenges Discussion         |
 | 6:05  | Study           | Lecture        | Homework Intro                |
 | 6:15  | Activate        | Lecture        | 04 Properties of PCG System   |
+
+
+### Notes
+```
+3:50 Homework Review
+4:20 01 CF + Strategies + Tactics
+Goals
+Strategies
+Tactics: algorithms, data structures, design patterns
+Primitives
+Sun Tzu Quote
+Composable and Reusable
+Ball example
+Points on square group discussion
+4:30 02 Where Should I Put Things
+Brief intro of problem domain
+4:35 Analyze workshop
+```
+
 
 ::: .activity
 
