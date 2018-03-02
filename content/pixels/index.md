@@ -45,7 +45,7 @@ Computer displays don't have to use pixels at all. One of the earliest video gam
 
 ### Video Memory
 
-Modern video pipelines are fairly complicated, but at a basic level they works something like this: The red, green, and blue brightness values of every pixel on a display are stored in memory. This data is usually stored on the video card's VRAM, but might also be stored in the computer's main RAM. The video hardware repeatedly runs through this data, pixel by pixel, and sends it to the display over a display interface like DVI or HDMI. Hardware in the display receives this data and updates the brightness of each pixel as needed. When you change the values in the RAM, a new picture appears on the screen. 
+Modern video pipelines are fairly complicated, but at a basic level they work something like this: The red, green, and blue brightness values of every pixel on a display are stored in memory. This data is usually stored on the video card's VRAM, but might also be stored in the computer's main RAM. The video hardware repeatedly runs through this data, pixel by pixel, and sends it to the display over a display interface like DVI or HDMI. Hardware in the display receives this data and updates the brightness of each pixel as needed. When you change the values in the RAM, a new picture appears on the screen. 
 
 
 ::: .callout
@@ -82,6 +82,8 @@ Raster images are represented as samples
 [slide show]
 
  -->
+
+ <!--[[Yes! This is important, and I've explained it to people here a few times,  mostly in the context of laser cutting file prep. In these cases people didn't quite grasp the difference between the data content of the two formats, and why that's important-for example, why you can't just open a jpeg in Illustrator and re-save it, but instead actually have to trace the paths.]]-->
 
 ## Writing Pixel Data
 
@@ -481,9 +483,13 @@ Post your source image, the result after one generation, and the result after se
 
 
 [Reaction Diffusion in Photoshop](https://vimeo.com/61154654){boxed right}
+Create a pattern in Photoshop by repeatedly applying filters.
 
 [Factorio](http://store.steampowered.com/app/427520/){boxed right}
+A game in which players gather resources to create increasingly complex technology and factories—sometimes building these structures into pixel art. 
 
 [Icon Machine](http://brianmacintosh.com/iconmachine/){boxed right}
+A pixel art web app that randomly generates potion bottle icons.
 
 [AtariArchives.org: Memory-Mapped Video: The Scanning Game](https://www.atariarchives.org/cgp/Ch02_Sec03.php)
+An article on ASCII encoding and storage, part of a 1979 primer on computer graphics.
