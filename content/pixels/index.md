@@ -83,6 +83,14 @@ Raster images are represented as samples
 
  -->
 
+
+::: slides .contain
+@@include('./slides.yaml')
+/::
+
+
+
+
 ## Writing Pixel Data
 
 ### A Basic Example
@@ -456,7 +464,7 @@ This example uses an image as an input to control the density and placement of d
 
 ### Base
 
-Explore working with image pixel data directly. This week, most of your posts should be still images. You might also consider creating animations. Since p5 pixel access is slow, this technique will pair well with pre-rendering.{bigger}
+Explore working with image pixel data directly. This week, most of your posts should be still images.{bigger}
 
 Post **at least one** sketch **for each** of the following:
 1. Generate an image from scratch: pixel by pixel. Don't call any high level drawing function like `ellipse()` or `rect()`.

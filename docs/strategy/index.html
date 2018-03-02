@@ -17,7 +17,7 @@ canvas {
    image-rendering: pixelated;
 }
 </style>
-<p>So far we’ve been looking at low-level topics like how to use <code>random()</code> and <code>noise()</code>. This week we are changing focus to high-level planning. To create more complex systems you must develop a clear understanding of the your goal, create a plan to achieve that goal, divide that plan into sub-problems (<a href="https://en.wikipedia.org/wiki/Decomposition_(computer_science)">decomposition</a>) and create code to solve those sub-problems <a href="https://en.wikipedia.org/wiki/Implementation">implementation</a>.</p>
+<p>So far we’ve been looking at low-level topics like how to use <code>random()</code> and <code>noise()</code>. This week we are changing focus to high-level planning. To create more complex systems you must develop a clear understanding of your goal, create a plan to achieve that goal, divide that plan into sub-problems (<a href="https://en.wikipedia.org/wiki/Decomposition_(computer_science)">decomposition</a>) and create code to solve those sub-problems (<a href="https://en.wikipedia.org/wiki/Implementation">implementation</a>).</p>
 <p>When planning and coding a project, I tend to think in terms of <em>strategies</em> and <em>tactics</em>.</p>
 <dl>
 <dt>Strategies</dt>
@@ -36,7 +36,7 @@ canvas {
 <p><em>Primitives are atomic: they are the smallest units of composition and cannot be further broken down.</em></p>
 <h3 id="building-a-toolbox">Building a Toolbox</h3>
 <p>Becoming familiar with common tactics and being able to recognize the problems they solve is critical to creating more complex code. Tactics are powerful and useful because they are <strong>reusable</strong> and <strong>composable</strong>: the problems they solve appear over and over in a variety of contexts and you can combine tactics in different ways to solve different problems.</p>
-<p>For example compare this code that animates a bouncing ball:</p>
+<p>For example, compare this code that animates a bouncing ball:</p>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/strategy/sketches/bounce.js">
@@ -50,7 +50,7 @@ canvas {
 </iframe>
 </div>
 </div>
-<p>These two programs produce different effects, but structurally they are almost identical. The two problems have a similar “shape” and we can use a common tactic to solve them both. We could call this common tactic “bounce”. Bounce is fairly simple but we can break it down further as a composition of smaller common tactics:</p>
+<p>These two programs produce different effects, but structurally they are almost identical. The two problems have a similar “shape” and we can use a common tactic to solve them both. We could call this common tactic “bounce”. Bounce is fairly simple, but we can break it down further as a composition of smaller common tactics:</p>
 <dl>
 <dt>Line 20</dt>
 <dd>A variable increment to provide motion.</dd>
@@ -62,7 +62,7 @@ canvas {
 <dt>Line 15 and 18</dt>
 <dd>A very simple implementation of the <a href="https://en.wikipedia.org/wiki/Collision_response">collision response</a> tactic.</dd>
 <dt>Line 10</dt>
-<dd>This tactic relies on being run repeatedly in <a href="http://gameprogrammingpatterns.com/game-loop.html">game loop</a>.</dd>
+<dd>This tactic relies on being run repeatedly in the <a href="http://gameprogrammingpatterns.com/game-loop.html">game loop</a>.</dd>
 </dl>
 <p>These tactics are all fairly common and they all names. Some tactics have several names and other tactics don’t have names at all. Naming tactics is helpful when communicating with other programmers about your code, but the most important thing is to recognize their essential structures.</p>
 <p>Tactics can range from very simple—like using the average of two <code>random()</code> calls to center bias the result—to complex—linear congruential generators, noise generation, Brownian motion, L-systems, neural nets, turtles, Markov chains, Poisson-disc sampling, particle systems, fractals, meta-balls. We’ve seen some of these already and will explore others in the course of this class.</p>
@@ -154,7 +154,7 @@ canvas {
 <div class="slide-info-middle">
 <div class="artist">Hello Games</div>
 <div class="title">No Man's Sky</div>
-<div class="comments">No Man's Sky populates its vegitation on the three dimensional surface of its planets.</div>
+<div class="comments">No Man's Sky populates its vegetation on the three-dimensional surface of its planets.</div>
 </div>
 <div class="slide-info-bottom">
 <a href="https://www.nomanssky.com">No Man's Sky</a>
@@ -258,7 +258,7 @@ y = random() * height;
 <h4 id="noise-placement">Noise Placement</h4>
 <p>Place each point at a location determined by a noise lookup.</p>
 <ul>
-<li>Because noise is center-biased, the results will center-biased.</li>
+<li>Because noise is center-biased, the results will be center-biased.</li>
 <li>Each dot will be placed near the last as the values change in the noise cloud.</li>
 <li>This technique allows you some control over the proximity of successive points.</li>
 </ul>
