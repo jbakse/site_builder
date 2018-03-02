@@ -11,6 +11,12 @@ is the p5 download bug fixed? should I jump in on that?
   - `var` to `let`
 
 
+#####################
+# Challenge Ideas
+
+Flower (thanks Dahee)
+Pokemon Generator: makes three related monsters (monster, max monster, super max monster)
+Screensaver
 
 
 
@@ -235,3 +241,8 @@ alleatoric / aleatory
 Sighack: My Explorations with Generative Art
 Manohar Vanga
 sighack.com
+
+
+
+
+https://www.youtube.com/watch?v=QPZ0pIK_wsc

@@ -23,19 +23,18 @@ debug: false
 
 
 ### Schedule
-| Time | ESA           | Type         | Activity                    |
-| ---- | ------------- | ------------ | --------------------------- |
-| Pre  | TBA           | -            | TBA                         |
-| 3:50 | Review+Engage | Discussion   | Homework Review             |
-| 4:20 | Study         | Lecture      | 01 Pixels                   |
-| 4:30 | Activate      | Code         | Pixel Writing Challenges    |
-| 4:50 | Study         | Code Lecture | Challenges Discussion       |
-| 5:00 | Activate      | Code         | Pixel Processing Challenges |
-| 5:20 | Study         | Code Lecture | Challenges Discussion       |
-| 5:30 | Study         | Lecture      | 04 pixels[]                 |
-| 5:45 | Activate      | Code         | pixels[] Challenges         |
-| 6:00 | Study         | Code Lecture | Challenges Discussion       |
-| 6:10 | Study         | Lecture      | Vector vs Raster            |
+| Time | ESA           | Type         | Activity                          |
+| ---- | ------------- | ------------ | --------------------------------- |
+| Pre  | TBA           | -            | TBA                               |
+| 3:50 | Review+Engage | Discussion   | Homework Review                   |
+| 4:20 | Study         | Lecture      | 01 Pixels                         |
+| 4:30 | Activate      | Code         | Pixel Writing Challenges          |
+| 4:50 | Study         | Code Lecture | Challenges Discussion             |
+| 5:00 | Activate      | Code         | Pixel Processing Challenges       |
+| 5:20 | Study         | Code Lecture | Challenges Discussion             |
+| 5:30 | Study         | Lecture      | 04 pixels[]                       |
+| 5:45 | Activate      | Code         | setQuick +Grass Example Live Code |
+| 6:10 | Study         | Lecture      | Vector vs Raster                  |
 
 
 ::: .activity
@@ -45,17 +44,15 @@ debug: false
 ### Groups
 
 ::: .headless
-| Group | Question                                                                                                                                                                     |
-| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1     | Xia, Patricia, Dahee <br/>How does working within constraints support creativity?                                                                                            |
-| 2     | Bella, Leah, Carla <br/>Considering the tile set as a tool, how do tools impact authorship?                                                                                  |
-| 3     | Aakanksha, Julian, Xu <br/>Choose a sketch you feel should be tagged 🤓. Explain why.                                                                                        |
-| 4     | Alyssa, Ting, Jack <br/>Choose a sketch you feel should be tagged 😂. Explain why.                                                                                           |
-| 5     | Madison, Earl, Patrick <br/>Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project? |
-| 6     | Rik, Kirsten, Mario <br>Choose a sketch you feel should be tagged 😍. Explain why.                                                                                           |
+| Group | Question                                                                                                                                                 |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Xia, Aakanksha, Sue <br/> Choose your favorite take on the dot challenge. Discuss                                                                        |
+| 2     | Jack, Patricia, Ting <br/> Choose your favorite take on the line challenge. Discuss                                                                      |
+| 3     | Earl, Carla, Dahee  <br/> Choose a work that you like, but are unsure how it was made. Describe what you see.                                            |
+| 4     | Leah, Kirsten, Bella <br/> Choose a set of sketches that show interesting progression from one to the next. Discuss how the sketch changed in each post. |
+| 5     | Madison, Rik, Patrick <br/> Choose a work that combines computational and manually-created form. Discuss.                                                |
+| 6     | Allysa, Mario, Julian <br/> Choose a 😂, 😍, or 🤓. Discuss.                                                                                             |
 /::
-
-
 
 
 
