@@ -45,7 +45,7 @@ Computer displays don't have to use pixels at all. One of the earliest video gam
 
 ### Video Memory
 
-Modern video pipelines are fairly complicated, but at a basic level it works something like this. The red, green, and blue brightness values of every pixel on a display is stored in memory. This data is usually stored on the video card's VRAM, but might also be stored in the computer's main RAM. The video hardware repeatedly runs through this data, pixel by pixel, and sends it to the display over a display interface like DVI or HDMI. Hardware in the display receives this data and updates the brightness of each LED as needed. When you change the values in the RAM, a new picture appears on the screen. 
+Modern video pipelines are fairly complicated, but at a basic level it works something like this. The red, green, and blue brightness values of every pixel on a display is stored in memory. This data is usually stored on the video card's VRAM, but might also be stored in the computer's main RAM. The video hardware repeatedly runs through this data, pixel by pixel, and sends it to the display over a display interface like DVI or HDMI. Hardware in the display receives this data and updates the brightness of each pixel as needed. When you change the values in the RAM, a new picture appears on the screen. 
 
 
 ::: .callout
@@ -326,27 +326,25 @@ Explore using p5's pixel manipulation functions by modifying the scripts above. 
 
 ## Working Directly with the `pixels[]` Array
 
+The p5.js `get()` method internally calls `loadPixels()` to make sure it is working with up to date information. Because of this, reading a single color value with `get()` requires reading
 
-### The Canvas + Pixel Density
-When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a 2x resolution canvas when running on a high-dpi (retina) display. You can call `pixelDensity(1)` to disable this feature. If you don't, you'll need to take into account the density when calculating a position in the `pixels[]` array.
-
-The examples on this page work with the pixels of images instead of the canvas to avoid this issue altogether.
 
 
 
 ### Performance
 
-The built-in p5 `someImage.get(x, y)` function gets the RGBA values of a pixel in an image. As noted in the [reference](https://p5js.org/reference/#/p5/get), the get call is slower than accessing the values in the `someImage.pixels[]` array directly. In fact, `get()` can be 1000s of times slower. Under the hood, `get()` reads the colors of every pixel in the image before returning the value you request.
+The built-in p5 `get()` function gets the RGBA values of a pixel in an image. Internally `get()` calls `loadPixels()` to make sure it is workign with up to date information. This means that when even when getting the values for a single pixel, _every_ pixel is read. As noted in the [reference](https://p5js.org/reference/#/p5/get), this makes `get()` slower than accessing the values in the `pixels[]` array directly. In fact, `get()` can easily be 1000s of times slower.
 
-We can get much faster results by loading the pixel values **once** with `loadPixels()`, and then reading from the `pixels[]` array directly.
+We can get much faster results by loading all of the pixel values **once** with `loadPixels()`, and then reading and writing the `pixels[]` array directly.
 
-The `getQuick()` funciton below reads a pixels color value from an image's `pixels[]` array. You must call `loadPixels()` before calling this funciton.
+The `getQuick()` function below reads a pixels color value from an image's `pixels[]` array. You must call `loadPixels()` before calling this function. When you are done working with the `pixels[]` array, you should call `updatePixels()` to update the image with your changes
 
 ```javascript
-// find the RGBA values of the pixel at x, y in the img's pixels array
+// returns the RGBA values of the pixel at x, y in the img's pixels[] array
+// returns values as an array [r, g, b, a]
 // use instead of p5s built in .get(x,y), for much better performance (more than 1000x better in many cases)
 // see: http://p5js.org/reference/#/p5/pixels[]
-// we don't need to worry about screen pixel density here, because we are not reading from the screen
+// we don't need to worry about screen pixel density here, because we are not reading from the canvas
 
 function getQuick(img, x, y) {
 
@@ -376,6 +374,9 @@ img.loadPixels();
 
 // in loop
 c = getQuick(img, x, y);
+
+// after loop
+img.updatePixels();
 ```
 
 The following example compares the performance of using `get()` and `getQuick()` to read and invert the color value of a small image.
@@ -386,12 +387,15 @@ The following example compares the performance of using `get()` and `getQuick()`
 
 
 
-### `get()` and `set()`
+
+### The Canvas + Pixel Density
+You can work with the pixels in an image using `image.pixels[]` or the pixels of the canvas with just `pixels[]`. 
+When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a high-dpi canvas when running on a high-dpi (retina) display. You can call `pixelDensity(1)` to disable this feature. Otherwise, you'll need to take into account the density when calculating a position in the `pixels[]` array.
+
+The examples on this page work with the pixels of images instead of the canvas to avoid this issue altogether. If you need to work with the canvas, the [pixels](https://p5js.org/reference/#/p5/pixels) documentation has info on working with higher pixel densities.
 
 
-::: .callout .warn
-The `get()` and `set()` methods are easy to use, but they are really, really slow.
-/::
+
 
 
 <!-- 

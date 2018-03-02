@@ -18,7 +18,7 @@ software: p5.js
 
 <script src="/mess/strat_mess.js"></script>
 
-## Computational Form + Strategies
+## Computational Form + Strategies + Tactics
 
 > “Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.”{bigger}
 

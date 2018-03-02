@@ -38,11 +38,7 @@ function draw() {
             // var pixelRed = red(testImage.get(x, y));
 
             // quick
-            var pixelRed = red(getQuick(testImage, x, y));
-
-            // even quicker...
-            // since we don't need the other colors, grab the red value directly
-            // var pixelRed = testImage.pixels[(y * 640 + x) * 4];
+            var pixelRed = getQuick(testImage, x, y)[0];
 
 
             // pick a random value and compare it pixelRed
@@ -58,7 +54,7 @@ function draw() {
 
     var end = millis();
 
-    console.log("time", end - start);
+    console.log(`took ${floor(end - start)} ms`);
 
     noLoop();
 }
@@ -66,14 +62,11 @@ function draw() {
 function drawGrassBlade(x, y) {
 
     var bladeHeight = min(
-        random(1, 20), random(1, 20), random(1, 20),
-        random(1, 20), random(1, 20), random(1, 20)
+        random(1, 60), random(1, 60), random(1, 60),
+        random(1, 60), random(1, 60), random(1, 60)
     );
 
-    bladeHeight = bladeHeight * 3;
-
-    var bladeLean = random(-1, 1);
-    bladeLean = bladeLean * .3;
+    var bladeLean = random(-.3, .3);
     bladeLean *= bladeHeight;
 
     line(x, y, x + bladeLean, y - bladeHeight);
