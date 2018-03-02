@@ -45,7 +45,11 @@ Computer displays don't have to use pixels at all. One of the earliest video gam
 
 ### Video Memory
 
+<<<<<<< HEAD
 Modern video pipelines are fairly complicated, but at a basic level it works something like this. The red, green, and blue brightness values of every pixel on a display is stored in memory. This data is usually stored on the video card's VRAM, but might also be stored in the computer's main RAM. The video hardware repeatedly runs through this data, pixel by pixel, and sends it to the display over a display interface like DVI or HDMI. Hardware in the display receives this data and updates the brightness of each pixel as needed. When you change the values in the RAM, a new picture appears on the screen. 
+=======
+Modern video pipelines are fairly complicated, but at a basic level they work something like this. The red, green, and blue brightness values of every pixel on a display is stored in memory. This data is usually stored on the video card's VRAM, but might also be stored in the computer's main RAM. The video hardware repeatedly runs through this data, pixel by pixel, and sends it to the display over a display interface like DVI or HDMI. Hardware in the display receives this data and updates the brightness of each pixel as needed. When you change the values in the RAM, a new picture appears on the screen. 
+>>>>>>> be83705665af272bae512663aabe0d7eef192e8d
 
 
 ::: .callout
