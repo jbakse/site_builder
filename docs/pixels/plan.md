@@ -36,6 +36,16 @@ debug: false
 | 5:45 | Activate      | Code         | setQuick +Grass Example Live Code |
 | 6:10 | Study         | Lecture      | Vector vs Raster                  |
 
+### Lecture Notes
+```
+Next few weeks look at different paradigms of drawing.
+Pixels, Turtle Graphics, Vector
+Drawing API vs Pixels, Vector vs Raster, Absolute vs Relative Positioning, Immediate Mode vs Retained Mode
+01 Pixels
+Raster video pipeline, memory mapping
+Vector Monitors
+```
+
 
 ::: .activity
 ## Homework Review

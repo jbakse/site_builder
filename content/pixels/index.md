@@ -83,7 +83,12 @@ Raster images are represented as samples
 
  -->
 
- <!--[[Yes! This is important, and I've explained it to people here a few times,  mostly in the context of laser cutting file prep. In these cases people didn't quite grasp the difference between the data content of the two formats, and why that's important-for example, why you can't just open a jpeg in Illustrator and re-save it, but instead actually have to trace the paths.]]-->
+
+::: slides .contain
+@@include('./slides.yaml')
+/::
+
+
 
 ## Writing Pixel Data
 
@@ -458,7 +463,7 @@ This example uses an image as an input to control the density and placement of d
 
 ### Base
 
-Explore working with image pixel data directly. This week, most of your posts should be still images. You might also consider creating animations. Since p5 pixel access is slow, this technique will pair well with pre-rendering.{bigger}
+Explore working with image pixel data directly. This week, most of your posts should be still images.{bigger}
 
 Post **at least one** sketch **for each** of the following:
 1. Generate an image from scratch: pixel by pixel. Don't call any high-level drawing function like `ellipse()` or `rect()`.
