@@ -1,122 +1,128 @@
-<h1 id="turtlejs">Turtle.js</h1>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Turtle Library | Comp Form</title></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<polygon points="32,64 0,119.4 64,119.4"/>
+<polygon points="64,8.6 32,64 96,64"/>
+<polygon points="80,91.7 64,119.4 96,119.4"/>
+<polygon points="112,91.7 96,119.4 128,119.4"/>
+<polygon points="96,64 80,91.7 112,91.7"/>
+</svg></a></div><div id="content"><div class="container comp-form-copy" id="copy"><h1 id="turtlejs">Turtle.js</h1>
 <p>The following is a basic implementation of a graphics turtle. This implementation is written in Javascript and uses the p5.js library.</p>
 <p>To use this code, you’ll need to include it in your sketch.</p>
-<p>If you are working with the compfrom_sketch_template project (see week 2 notes), you can download this sketch <a href="sketch_turtle.zip">sketch_turtle.zip</a> and place it in your sketches folder</p>
-<p><strong>Or</strong>, if you are creating your own project from scratch.</p>
 <ol>
 <li>Create a file called <code>turtle.js</code> in the same folder as your <code>index.html</code> and <code>sketch.js</code></li>
-<li>Copy/paste the code listed at the bottom of the page into your new file.</li>
+<li>Copy the code listed at the bottom of the page into your new file.</li>
 <li>In <code>index.html</code> add the following line just before the <code>script</code> tag that includes your <code>sketch.js</code> script.</li>
 </ol>
 <pre><code>&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;turtle.js&quot;&gt;&lt;/script&gt;
 </code></pre>
-<pre><code>// Turtle
-// Basic turtle graphics implementation:
-// https://en.wikipedia.org/wiki/Turtle_graphics
-// For more info on Javascript OOP:
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript
-//
-// The turtle's coordinate system uses pixels for distance and degrees for rotations
-// 0 degrees is straight right (east); positive degrees are clockwise
+<pre><code class="language-javascript"><span class="hljs-comment">// Turtle</span>
+<span class="hljs-comment">// Basic turtle graphics implementation:</span>
+<span class="hljs-comment">// https://en.wikipedia.org/wiki/Turtle_graphics</span>
+<span class="hljs-comment">// For more info on Javascript OOP:</span>
+<span class="hljs-comment">// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// The turtle's coordinate system uses pixels for distance and degrees for rotations</span>
+<span class="hljs-comment">// 0 degrees is straight right (east); positive degrees are clockwise</span>
 
-// Turtle constructor
-// takes optional x, y starting coordinates (default is center of sketch)
-function Turtle(x, y) {
-  // assign default values to x and y if they were not passed
-  if (typeof x === &quot;undefined&quot;) {
-    x = width * 0.5;
+<span class="hljs-comment">// Turtle constructor</span>
+<span class="hljs-comment">// takes optional x, y starting coordinates (default is center of sketch)</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Turtle</span>(<span class="hljs-params">x, y</span>) </span>{
+  <span class="hljs-comment">// assign default values to x and y if they were not passed</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> x === <span class="hljs-string">"undefined"</span>) {
+    x = width * <span class="hljs-number">0.5</span>;
   }
-  if (typeof y === &quot;undefined&quot;) {
-    y = height * 0.5;
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> y === <span class="hljs-string">"undefined"</span>) {
+    y = height * <span class="hljs-number">0.5</span>;
   }
-  this.x = x;
-  this.y = y;
-  this.bearingRadians = 0;
-  this.isPenDown = true;
-  this._stateStack = [];
+  <span class="hljs-keyword">this</span>.x = x;
+  <span class="hljs-keyword">this</span>.y = y;
+  <span class="hljs-keyword">this</span>.bearingRadians = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">this</span>.isPenDown = <span class="hljs-literal">true</span>;
+  <span class="hljs-keyword">this</span>._stateStack = [];
 }
 
-// moveTo instantly transports the turtle to the provided x, y location, drawing a line if pen is down
-Turtle.prototype.moveTo = function (newX, newY) {
-  if (this.isPenDown) {
-    line(this.x, this.y, newX, newY);
+<span class="hljs-comment">// moveTo instantly transports the turtle to the provided x, y location, drawing a line if pen is down</span>
+Turtle.prototype.moveTo = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">newX, newY</span>) </span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isPenDown) {
+    line(<span class="hljs-keyword">this</span>.x, <span class="hljs-keyword">this</span>.y, newX, newY);
   }
-  this.x = newX;
-  this.y = newY;
+  <span class="hljs-keyword">this</span>.x = newX;
+  <span class="hljs-keyword">this</span>.y = newY;
 };
 
-// moveForward moves the turtle along its current bearing, drawing a line if pen is down
-Turtle.prototype.moveForward = function (distance) {
-  var newX = this.x + cos(this.bearingRadians) * distance;
-  var newY = this.y + sin(this.bearingRadians) * distance;
-  this.moveTo(newX, newY);
+<span class="hljs-comment">// moveForward moves the turtle along its current bearing, drawing a line if pen is down</span>
+Turtle.prototype.moveForward = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">distance</span>) </span>{
+  <span class="hljs-keyword">var</span> newX = <span class="hljs-keyword">this</span>.x + cos(<span class="hljs-keyword">this</span>.bearingRadians) * distance;
+  <span class="hljs-keyword">var</span> newY = <span class="hljs-keyword">this</span>.y + sin(<span class="hljs-keyword">this</span>.bearingRadians) * distance;
+  <span class="hljs-keyword">this</span>.moveTo(newX, newY);
 };
 
-// moveBackward moves the turtle backward from its current bearing, drawing a line if pen is down
-Turtle.prototype.moveBackward = function (distance) {
-  this.moveForward(-distance);
+<span class="hljs-comment">// moveBackward moves the turtle backward from its current bearing, drawing a line if pen is down</span>
+Turtle.prototype.moveBackward = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">distance</span>) </span>{
+  <span class="hljs-keyword">this</span>.moveForward(-distance);
 };
 
-// turnTo changes the turtle's bearing to the provided angle in degrees
-Turtle.prototype.turnTo = function (angleDegrees) {
-  this.bearingRadians = radians(angleDegrees);
+<span class="hljs-comment">// turnTo changes the turtle's bearing to the provided angle in degrees</span>
+Turtle.prototype.turnTo = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">angleDegrees</span>) </span>{
+  <span class="hljs-keyword">this</span>.bearingRadians = radians(angleDegrees);
 };
 
-// turnRight rotates the turtle's bearing clockwise by the provided angle in degrees
-Turtle.prototype.turnRight = function (amountDegrees) {
-  this.bearingRadians += radians(amountDegrees);
+<span class="hljs-comment">// turnRight rotates the turtle's bearing clockwise by the provided angle in degrees</span>
+Turtle.prototype.turnRight = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">amountDegrees</span>) </span>{
+  <span class="hljs-keyword">this</span>.bearingRadians += radians(amountDegrees);
 };
 
-// turnLeft rotates the turtle's bearing counter-clockwise by the provided angle in degrees
-Turtle.prototype.turnLeft = function (amountDegrees) {
-  this.bearingRadians -= radians(amountDegrees);
+<span class="hljs-comment">// turnLeft rotates the turtle's bearing counter-clockwise by the provided angle in degrees</span>
+Turtle.prototype.turnLeft = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">amountDegrees</span>) </span>{
+  <span class="hljs-keyword">this</span>.bearingRadians -= radians(amountDegrees);
 };
 
-// penUp tells the turtle to move without drawing
-Turtle.prototype.penUp = function () {
-  this.isPenDown = false;
+<span class="hljs-comment">// penUp tells the turtle to move without drawing</span>
+Turtle.prototype.penUp = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">this</span>.isPenDown = <span class="hljs-literal">false</span>;
 };
 
-// penDown tells the turtle to draw a line when it moves
-Turtle.prototype.penDown = function () {
-  this.isPenDown = true;
+<span class="hljs-comment">// penDown tells the turtle to draw a line when it moves</span>
+Turtle.prototype.penDown = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">this</span>.isPenDown = <span class="hljs-literal">true</span>;
 };
 
-// pushState records the turtle's current state (position, bearing, etc.) to a stack so that changes can be undone easily
-Turtle.prototype.pushState = function () {
-  this._stateStack.push({
-    x: this.x,
-    y: this.y,
-    bearingRadians: this.bearingRadians,
-    isPenDown: this.isPenDown
+<span class="hljs-comment">// pushState records the turtle's current state (position, bearing, etc.) to a stack so that changes can be undone easily</span>
+Turtle.prototype.pushState = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">this</span>._stateStack.push({
+    <span class="hljs-attr">x</span>: <span class="hljs-keyword">this</span>.x,
+    <span class="hljs-attr">y</span>: <span class="hljs-keyword">this</span>.y,
+    <span class="hljs-attr">bearingRadians</span>: <span class="hljs-keyword">this</span>.bearingRadians,
+    <span class="hljs-attr">isPenDown</span>: <span class="hljs-keyword">this</span>.isPenDown
   });
 };
 
-// popState restores the turtle's state to the top recorded state on the stack
-Turtle.prototype.popState = function () {
-  if (this._stateStack.length === 0) {
-    console.error(
-      &quot;Turtle: No states left on stack. Make sure your calls to .pushState and .popState are ballanced.&quot;
+<span class="hljs-comment">// popState restores the turtle's state to the top recorded state on the stack</span>
+Turtle.prototype.popState = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>._stateStack.length === <span class="hljs-number">0</span>) {
+    <span class="hljs-built_in">console</span>.error(
+      <span class="hljs-string">"Turtle: No states left on stack. Make sure your calls to .pushState and .popState are ballanced."</span>
     );
-    return;
+    <span class="hljs-keyword">return</span>;
   }
-  var state = this._stateStack.pop();
-  this.x = state.x;
-  this.y = state.y;
-  this.bearingRadians = state.bearingRadians;
-  this.isPenDown = state.isPenDown;
+  <span class="hljs-keyword">var</span> state = <span class="hljs-keyword">this</span>._stateStack.pop();
+  <span class="hljs-keyword">this</span>.x = state.x;
+  <span class="hljs-keyword">this</span>.y = state.y;
+  <span class="hljs-keyword">this</span>.bearingRadians = state.bearingRadians;
+  <span class="hljs-keyword">this</span>.isPenDown = state.isPenDown;
 };
 
-// image draws and image centered on the turtle's current location and alligned with the turtle's rotation (forward = up)
-Turtle.prototype.image = function (i, w, h) {
-  // w, h are optional parameters to this function and to p5's image
-  // p5's image function will draw the image at its &quot;normal&quot; size if w and h are undefined
+<span class="hljs-comment">// image draws and image centered on the turtle's current location and alligned with the turtle's rotation (forward = up)</span>
+Turtle.prototype.image = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">i, w, h</span>) </span>{
+  <span class="hljs-comment">// w, h are optional parameters to this function and to p5's image</span>
+  <span class="hljs-comment">// p5's image function will draw the image at its "normal" size if w and h are undefined</span>
 
   push();
-  translate(this.x, this.y);
-  rotate(this.bearingRadians + PI * 0.5);
+  translate(<span class="hljs-keyword">this</span>.x, <span class="hljs-keyword">this</span>.y);
+  rotate(<span class="hljs-keyword">this</span>.bearingRadians + PI * <span class="hljs-number">0.5</span>);
   imageMode(CENTER);
-  image(i, 0, 0, w, h);
+  image(i, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, w, h);
   pop();
 };
 </code></pre>
+</div><div class="container" id="scroll-out"></div></div></body></html>

@@ -333,10 +333,6 @@ Explore using p5's pixel manipulation functions by modifying the scripts above. 
 
 ## Working Directly with the `pixels[]` Array
 
-The p5.js `get()` method internally calls `loadPixels()` to make sure it is working with up to date information. Because of this, reading a single color value with `get()` requires reading <!--[[unfinished sentence here]]-->
-
-
-
 
 ### Performance
 
