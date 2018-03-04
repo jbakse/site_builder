@@ -119,7 +119,7 @@ p5.js
 
 </a>
 
-<a class="col-6 col-md-4" data-ready="false" href="./#">
+<a class="col-6 col-md-4" data-ready="true" href="./turtles">
 
 ### Turtle Graphics
 p5.js + custom library
@@ -205,26 +205,26 @@ Vuo
 
 <br/>
 
-Lesson Plan                                             | Topics                        
----                                                     | ---                           
-**Foundation**                                          | &nbsp;
-[Week 1, January 26](introduction/plan.html)            | [Introduction](introduction), [Tile Graphics](tiles)
-[Week 2, February 2](random/plan.html)                  | [Random Values](random)
-[Week 3, February 9](parameters/plan.html)              | [Parameters](parameters)
-[Week 4, February 16](noise/plan.html)                  | [Noise](noise)
-[Week 5, February 23](strategy/plan.html)               | [Strategy](strategy)
-**Exploration**                                         | &nbsp;
-[Week 6, March 2](#)                                    | [Pixel Data](#)
-[Week 7, March 9](#)                                    | [Turtle Graphics](#)
-[Week 8, March 16](#)                                   | [Vector Data](#)
-Week 9, March 23{gray}                                   | Spring Break{gray}
-[Week 10, March 30](#)                                  | [Animation](#)
-[Week 11, April 6](#)                                   | [Generating Text](#)
-[Week 12, April 13](#)                                  | [Generating Sound](#)
-[Week 13, April 20](#)                                  | [3D Forms](#)
-[Week 14, April 27](#)                                  | [Microgames](#)
-[Week 15, May 4](#)                                     | [TBD](#)
-[Week 16, May 11](#)                                    | [Postmortem Party](#)
+| Lesson Plan                                  | Topics                                               |
+| -------------------------------------------- | ---------------------------------------------------- |
+| **Foundation**                               | &nbsp;                                               |
+| [Week 1, January 26](introduction/plan.html) | [Introduction](introduction), [Tile Graphics](tiles) |
+| [Week 2, February 2](random/plan.html)       | [Random Values](random)                              |
+| [Week 3, February 9](parameters/plan.html)   | [Parameters](parameters)                             |
+| [Week 4, February 16](noise/plan.html)       | [Noise](noise)                                       |
+| [Week 5, February 23](strategy/plan.html)    | [Strategy](strategy)                                 |
+| **Exploration**                              | &nbsp;                                               |
+| [Week 6, March 2](#)                         | [Pixel Data](#)                                      |
+| [Week 7, March 9](#)                         | [Turtle Graphics](#)                                 |
+| [Week 8, March 16](#)                        | [Vector Data](#)                                     |
+| Week 9, March 23{gray}                       | Spring Break{gray}                                   |
+| [Week 10, March 30](#)                       | [Animation](#)                                       |
+| [Week 11, April 6](#)                        | [Generating Text](#)                                 |
+| [Week 12, April 13](#)                       | [Generating Sound](#)                                |
+| [Week 13, April 20](#)                       | [3D Forms](#)                                        |
+| [Week 14, April 27](#)                       | [Microgames](#)                                      |
+| [Week 15, May 4](#)                          | [TBD](#)                                             |
+| [Week 16, May 11](#)                         | [Postmortem Party](#)                                |
 
 <style>
 table {

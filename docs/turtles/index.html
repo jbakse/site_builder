@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Turtle Graphics | Comp Form</title></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<polygon points="32,64 0,119.4 64,119.4"/>
+<polygon points="64,8.6 32,64 96,64"/>
+<polygon points="80,91.7 64,119.4 96,119.4"/>
+<polygon points="112,91.7 96,119.4 128,119.4"/>
+<polygon points="96,64 80,91.7 112,91.7"/>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Turtle Graphics</span><div class="buttons"><a class="previous" href="../strategy"><i class="fa fa-caret-left fa-lg"></i>Strategy</a><a class="next" href="../strategy">Strategy<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Turtle Graphics</h1><h6>Overview</h6><p class="description">TBD</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="turtles">Turtles</h2>
+<h1 id="todays-learning-objectives">Today’s Learning Objectives</h1>
+<ul>
+<li>Background on Logo + Turtles</li>
+<li>Basic Turtle Commands</li>
+<li>Using Turtles to Draw</li>
+</ul>
+<h1 id="logo-and-turtle-graphics">Logo and Turtle Graphics</h1>
+<p>Logo is a computer programming language, created in 1967 at the (now) MIT Media Lab to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the book <a href="https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8">Mindstorms</a> which discusses logo and its goals.</p>
+<p>One of the ideas introduced in Logo was “turtle graphics”. In Logo one can issue commands like <code>left</code> to turn and <code>forward</code> to move. These commands are carried out by a robotic or on-screen “turtle”. The turtle can draw a line, tracing its path and producing interesting drawings.</p>
+<p>Logo’s use of turtles allows students make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this “body-syntonic” learning.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=IhEovwWiniY">Seymour Paper on Learning with Toys</a></li>
+<li><a href="https://www.youtube.com/watch?v=5dZMgdqy7zY">Seymour Papert and Students</a></li>
+<li><a href="https://www.youtube.com/watch?v=xMzojQFyMo0">Seymour Papert and Students (longer cut)</a></li>
+<li><a href="https://youtu.be/ZG9cYhekB8A?t=4m25s">Seymour Papert on Logo 4:25 - 6:40</a></li>
+<li><a href="http://el.media.mit.edu/logo-foundation/what_is_logo/history.html">Logo History</a></li>
+</ul>
+<h1 id="a-shift-in-perspective">A Shift in Perspective</h1>
+<p>so we are not <em>constrained</em> to work this way, this is simply the way of thinking that is most naturally supported.</p>
+<!-- 
+# Our Simple Turtle
+
+I've created a basic implementation of a turtle for you to use this week.
+
+Grab [the code here](turtle/turtle.html).
+
+## Comp Form Turtle API
+
+`myTurtle = new Turtle(x, y)`
+
+turtle constructor, creates a turtle object
+takes optional x, y starting coordinates (default is center of sketch)
+
+`myTurtle.moveForward(distance)`
+
+moves the turtle along its current bearing, drawing a line if pen is down
+
+`myTurtle.moveBackward(distance)`
+
+moves the turtle backward from its current bearing, drawing a line if pen is down
+
+`myTurtle.moveTo(x, y)`
+
+instantly transports the turtle to the provided x, y location, drawing a line if pen is down
+
+`myTurtle.turnRight(angleDegrees)`
+
+rotates the turtle's bearing clockwise by the provided angle in degrees
+
+`myTurtle.turnLeft(angleDegrees)`
+
+rotates the turtle's bearing counter-clockwise by the provided angle in degrees
+
+`myTurtle.turnTo(angleDegrees)`
+
+changes the turtle's bearing to the provided angle in degrees
+
+`myTurtle.penUp()`
+
+tells the turtle to move without drawing
+
+`myTurtle.penDown()`
+
+tells the turtle to draw a line when it moves
+
+`myTurtle.image(image, width, height)`
+
+draws and image centered on the turtle's current location and aligned with the turtle's rotation
+
+`myTurtle.pushState()`
+
+records the turtle’s current state (position, bearing, etc.) to a stack so that changes can be undone easily
+
+`myTurtle.popState()`
+
+restores the turtle’s state to the top recorded state on the stack
+
+# Turtle Examples
+
+## Turtle Square Example
+<a href="./sketches/turtle_square.js" class="p5_example show-lab show-lab-link hidden">turtle_square</a>
+
+## Turtle Triangle Example
+<a href="./sketches/turtle_triangle.js" class="p5_example show-lab show-lab-link hidden">turtle_triangle</a>
+
+## Turtle Multiple Triangles Example
+<a href="./sketches/turtle_triangles.js" class="p5_example show-lab show-lab-link hidden">turtle_triangles</a>
+
+## Turtle Spiralgraph Example
+<a href="./sketches/turtle_spiralgraph.js" class="p5_example show-lab show-lab-link hidden">turtle_spiralgraph</a>
+
+
+
+# In-class Challenge
+
+Explore using p5's pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. Don't skip any.
+
+##
+
+### Modify the Triangle Example
+1. Draw a Pentagon.
+2. Draw an Octagon.
+3. Draw a Circle.
+4. Draw a Circle with a dashed line. Tip: `penUp() + penDown()`
+
+### Modify the Multiple Triangles Example
+5. Draw each triangle with different colors.
+6. Change the triangle function to draw squares.
+7. Remove the `.moveTo()` commands.
+8. Change the `.turnTo()` commands to `turnLeft(60)`.
+
+Style Tip: If you change what a function does, you should change its name as well. Did you change the function name in 6?
+
+### Modify the Spiralgraph Example
+9. Change the `moveForward()` parameter to `i * 3`.
+10. Center the result of 11.
+11. Comment out the `noLoop()`
+12. Change the `turnRight()` parameter to `175 + frameCount`.
+
+### Challenging Challenges
+13. Start with the original Triangle Example. Change it to draw a Spiral.
+14. Draw two spirals. One Red, one Blue. They should spiral inside each other.
+15. Using a loop, draw 10 concentric triangles.
+16. Draw this:
+![challenge_1.png](challenge_1.png)
+
+
+### Challenge Self Assessment
+
+After you work with Turtle Graphics this week, you should have a solid grasp on the basics. Consider redoing the challenges above to see how solid your understanding is.
+
+| Time               | Comment                                                                          |
+| ------------------ | -------------------------------------------------------------------------------- |
+| < 12 in 20 minutes | You need to put in some extra work to strengthen your programming understanding. |
+| 12 in 20 minutes   | Good.                                                                            |
+| 16 in 30 minutes   | Great.                                                                           |
+| 16 in 20 minutes   | Hot Dang!                                                                        |
+
+
+# Study Examples
+
+## Turtle + Images
+
+<a href="./sketches/turtle_image.js" class="p5_example show-lab show-lab-link hidden">turtle_image</a>
+
+
+## Turtle Push + Pop
+
+<a href="./sketches/turtle_push.js" class="p5_example show-lab show-lab-link hidden">turtle_push</a>
+
+
+## Turtle Recursive Tree
+
+<a href="./sketches/turtle_tree.js" class="p5_example show-lab show-lab-link hidden">turtle_tree</a>
+ -->
+<h1 id="assignment">Assignment</h1>
+<p>Keep Sketching!</p>
+<p>Suggestions:</p>
+<ul>
+<li>Make a crazy spirograph looking thing. Get that out of the way.</li>
+<li>Use a thick, transparent line. Explore building up layers. Recolor in Photoshop with a Gradient Map.</li>
+<li>Create a pre-rendered animation.</li>
+</ul>
+<h2 id="challenge-animal-face">Challenge: Animal Face</h2>
+<p>Using turtle graphics, create an intricate portrait of an animal. Begin by choosing an animal. Look a photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch. Create you sketch primarily using turtle graphics techniques.</p>
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
