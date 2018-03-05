@@ -10,16 +10,19 @@ previous: Strategy
 previous_url: ../strategy
 
 hero_title: Turtle Graphics
-description: TBD
+description: Introduced in the programming language Logo, turtle graphics connect drawing to how we move our bodies through space and encourage approaching computational form with a new mindset.
 software: p5.js
 ---
 
 ## Logo and Turtle Graphics
 
-The Logo computer programming language was [created in 1967](http://el.media.mit.edu/logo-foundation/what_is_logo/history.html) at the (now) MIT Media Lab to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the book [Mindstorms](https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8) which discusses Logo and its goals.
+The Logo computer programming language was [created in 1967](http://el.media.mit.edu/logo-foundation/what_is_logo/history.html) at the (now) MIT Media Lab to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the book [Mindstorms](https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8) in 1980 which discusses Logo and its goals:
+
+> In many schools today, the phrase "computer-aided instruction" means making the computer teach the child. One might say _the computer is being used to program the child_. In my vision, _the child programs the computer_ and, in doing so, both acquires a sense of mastery over a piece of the most modern and powerful technology and establishes an intimate contact with some of the deepest ideas from science, from mathematics, and from the art of intellectual model building.
 
 ::: .links-sidebar
 [Wikipedia:<br/> Turtle Graphics](https://en.wikipedia.org/wiki/Turtle_graphics)
+
 [MIT: Scratch + Turtles](https://scratch.mit.edu/projects/196503540/)
 /::
 
@@ -33,12 +36,12 @@ Seymour Papert with a turtle, photo by Cynthia Solomon{figure}
 Logo in action{figure}
 /::
 
-Logo's use of turtles allows students make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this _body-syntonic_ learning.
+Logo's use of turtles allows students make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this _body-syntonic_ learning. Body-syntonic learning supports understanding of abstract ideas through sensory experience. This is a powerful way to learn.
 
+- [Seymour Papert on Logo + Body Syntonic Learning 4:25 - 6:40](https://youtu.be/ZG9cYhekB8A?t=4m25s)
 - [Seymour Paper on Learning with Toys (1986)](https://www.youtube.com/watch?v=IhEovwWiniY)
 - [Seymour Papert and Students](https://www.youtube.com/watch?v=5dZMgdqy7zY)
 - [Seymour Papert and Students (longer cut)](https://www.youtube.com/watch?v=xMzojQFyMo0)
-- [Seymour Papert on Logo 4:25 - 6:40](https://youtu.be/ZG9cYhekB8A?t=4m25s)
 
 
 
@@ -51,15 +54,15 @@ line(100, 100, 200, 200)
 
 This priorities the `x,y` coordinates of the **start** and **end** of the line. The **length** and **angle** of the line are deprioritized; they are not directly specified at all.
 
-Turtle graphics flips this prioritization around. This is code you might write to draw a using a turtle:
+Turtle graphics flips this prioritization around. This is code you might write to draw a line using a turtle:
 ```javascript
 right(45); forward(100);
 ```
 Now the line's **angle** and **length** are specified instead of its **start** and **end**. This is one of the key shifts in thinking encouraged by turtle graphics. 
 
-The second shift becomes apparent if we ask where the line in the second example would be drawn. We can figure out the angle and length of a line from its start and end points, but we can't go the other way. Knowing the length and angle of a line does not tell us where it should be drawn. In turtle graphics, commands like `right` and `forward` use coordinates **relative** to the turtle, rather than **absolute** coordinates measured on the canvas.
+The second shift becomes apparent if we ask where the line in the second example should be drawn. We can figure out the angle and length of a line from its start and end points, but we can't go the other way. Knowing the length and angle of a line does not tell us where it should be drawn. In turtle graphics, commands like `right` and `forward` use coordinates **relative** to the turtle, rather than **absolute** coordinates measured on the canvas.
 
-This shift in priorities makes some things easier to express and some things harder.
+This shift in priorities makes some things easier to express and some things harder:
 
 
 
@@ -114,20 +117,20 @@ for(side = 0; side < 5; side++) {
 
 /::
 
-The Cartesian system works well for drawing a square, but the Cartesian code for the star is awkward and unclear. Changing the star's position or size would take a lot of work. With turtle graphics, the code that draws the star mirrors how we might describe the figure. It is a more natural expression of the idea and will be easier to modify.
+In the examples above, the Cartesian system works well for drawing a square, but the Cartesian code for the star is awkward and unclear. Changing the star's position or size would take a lot of work. Work should be done by computers, not programmers. With turtle graphics, the code that draws the star mirrors how we might describe the figure. It is a more natural expression of the idea and will be easier to modify.
 
 <!-- ::: js-lab
 /turtles/sketches/turtle_star.js
 /:: -->
 
 
-Both frameworks can be used to draw a square or star; we are not _forced_ to draw specific things by either framework, but the way of thinking encouraged by the frameworks is different. 
+Both frameworks can be used to draw a square or star; we are not [_forced_](https://en.wikipedia.org/wiki/Technological_determinism) to draw specific things by either framework, but the way of thinking encouraged by the frameworks is different. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with Turtle Graphics encourages yet other forms. 
 
 Turtles are often used to draw spirograph-like figures and recursive trees.
 
 
 ::: js-lab
-/turtles/sketches/turtle_spiralgraph.js
+/turtles/sketches/turtle_spirograph.js
 /::
 
 ::: js-lab
