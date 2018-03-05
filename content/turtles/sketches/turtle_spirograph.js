@@ -1,7 +1,6 @@
 // require https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js
 // require /turtles/turtle/turtle.js
 
-// basic template sketch showing how to use the Turtle class
 var myTurtle;
 
 function setup() {

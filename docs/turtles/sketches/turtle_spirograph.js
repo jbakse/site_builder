@@ -2,12 +2,6 @@
 // require /turtles/turtle/turtle.js
 
 var myTurtle;
-var aImage;
-
-function preload() {
-	aImage = loadImage("/turtles/sketches/a.png");
-}
-
 
 function setup() {
 	createCanvas(500, 500);
@@ -18,22 +12,21 @@ function draw() {
 	background(50);
 
 	noFill();
-	stroke(0);
-	strokeWeight(1);
+	stroke(255, 255, 255, 180);
+	strokeWeight(2);
 
-	blendMode(ADD);
+
 	// move to starting position (without drawing)
 	myTurtle.penUp();
-	myTurtle.moveTo(250, 150);
+	myTurtle.moveTo(100, 250);
 
 	// put the pen down to draw
 	myTurtle.penDown();
 
 	// draw the triangle
-	for (var i = 0; i < 12; i++) {
-		myTurtle.moveForward(60);
-		myTurtle.turnRight(30);
-		myTurtle.image(aImage);
+	for (var i = 0; i < 72; i++) {
+		myTurtle.moveForward(300);
+		myTurtle.turnRight(175);
 	}
 
 	noLoop();

@@ -341,6 +341,9 @@
     line-height: 1.5;
     padding: 0;
     overflow-x: visible; }
+  .comp-form-copy .half pre {
+    margin-left: 0;
+    margin-right: 0; }
   .comp-form-copy ul,
   .comp-form-copy ol {
     list-style-type: none;
