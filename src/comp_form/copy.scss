@@ -116,7 +116,6 @@
         font-family: 'Overpass Mono', monospace;
         color: $black;
         background-color: $light-grey;
-
         border-radius: 0;
     }
 
@@ -155,6 +154,11 @@
         line-height: 1.5;
         padding: 0;
         overflow-x: visible;
+    }
+    
+    .half pre {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     /* ul, ol */

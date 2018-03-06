@@ -1,9 +1,11 @@
-// basic template sketch showing how to use the Turtle class
+// require https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js
+// require /turtles/turtle/turtle.js
+
 var myTurtle;
 var aImage;
 
 function preload() {
-	aImage = loadImage("week_8_turtles/sketches/a.png");
+	aImage = loadImage("/turtles/sketches/a.png");
 }
 
 

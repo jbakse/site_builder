@@ -1,23 +1,29 @@
+---
+title: Turtle Library
+layout: layouts/compform_plain.pug
+debug: false
+---
+
+
 # Turtle.js
 
 The following is a basic implementation of a graphics turtle. This implementation is written in Javascript and uses the p5.js library.
 
 To use this code, you'll need to include it in your sketch.
 
-If you are working with the compfrom_sketch_template project (see week 2 notes), you can download this sketch [sketch_turtle.zip](sketch_turtle.zip) and place it in your sketches folder
+1. Copy all the code into your p5.js sketch.
 
-**Or**, if you are creating your own project from scratch.
+or
 
 1. Create a file called `turtle.js` in the same folder as your `index.html` and `sketch.js`
-2. Copy/paste the code listed at the bottom of the page into your new file.
+2. Copy the code listed at the bottom of the page into your new file.
 3. In `index.html` add the following line just before the `script` tag that includes your `sketch.js` script.
-
 
 ```
 <script language="javascript" type="text/javascript" src="turtle.js"></script>
 ```
 
-```
+```javascript
 // Turtle
 // Basic turtle graphics implementation:
 // https://en.wikipedia.org/wiki/Turtle_graphics

@@ -1,4 +1,6 @@
-// basic template sketch showing how to use the Turtle class
+// require https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js
+// require /turtles/turtle/turtle.js
+
 var myTurtle;
 
 function setup() {
@@ -7,24 +9,17 @@ function setup() {
 	stroke(255);
 	background(50);
 	noLoop();
-
-
 	myTurtle = new Turtle();
 }
 
 
 
 function draw() {
-	// move to starting position (without drawing)
 	myTurtle.penUp();
 	myTurtle.moveTo(250, 450);
 	myTurtle.turnTo(-90);
 	myTurtle.penDown();
-
-
 	drawBranch(100);
-
-
 }
 
 
