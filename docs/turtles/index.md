@@ -124,9 +124,9 @@ In the examples above, the Cartesian system works well for drawing a square, but
 /:: -->
 
 
-Both frameworks can be used to draw a square or star; we are not [_forced_](https://en.wikipedia.org/wiki/Technological_determinism) to draw specific things by either framework, but the way of thinking encouraged by the frameworks is different. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with Turtle Graphics encourages yet other forms. 
+Both frameworks can be used to draw a square or star; we are not [forced](https://en.wikipedia.org/wiki/Technological_determinism) to draw specific things by either framework, but the way of thinking encouraged by the frameworks is different. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with Turtle Graphics encourages yet other forms. 
 
-Turtles are often used to draw spirograph-like figures and recursive trees.
+Two of the forms that turtles are very good for are spirograph-like figures and recursive trees.
 
 
 ::: js-lab
@@ -144,6 +144,11 @@ Turtles are often used to draw spirograph-like figures and recursive trees.
 To explore using a turtle graphics with p5.js, I've created a basic turtle class for you to use this week. The examples above and below use this library, and you can copy it into your sketches.
 
 Grab [the code here](turtle/turtle.html).
+
+<!-- ::: js-lab
+/turtles/sketches/turtle_house.js
+/:: -->
+
 
 ### Comp Form Turtle API
 

@@ -1,30 +1,32 @@
+---
+title: Turtles
+layout: layouts/compform_plain.pug
+debug: false
+---
+## Week 7, Turtle Graphics {plain}
+
 # Materials
 
 # Learning Objectives
-- Background on Logo + Turtles
-- Basic Turtle Commands
-- How the Library Works
+
+- Introduce Logo, Mindstorms, and turtles
+- Compare turtle and Cartesian graphics.
+- Introduction to basic turtle commands
+- Discuss the basic turtle class
 
 
-# Challenge
+### Schedule
 
-# Links
+| Time | ESA           | Type           | Activity                    |
+| ---- | ------------- | -------------- | --------------------------- |
+| Pre  | TBA           | -              | Seymor Papert Videos        |
+| 3:50 | Review+Engage | Discussion     | Homework Review             |
+| 4:20 | Study         | Lecture        | 01 Logo and Turtle Graphics |
+| 4:35 | Study         | Lecture        | 02 A Simple Turtle in p5.js |
+| 4:45 | Activate      | Code           | Turtle Challenges           |
+| 5:05 | Study         | Code Lecture   | Challenges Discussion       |
+| 5:15 | Break         | Break          | Break                       |
+| 5:25 | Study         | Study Examples | Images, Push, Pop, Tree     |
+| 5:40 | Study         | Code Lecture   | Turtle Class                |
+| 6:00 | TBA           | TBA            | TBA                         |
 
-[Logo History](http://el.media.mit.edu/logo-foundation/what_is_logo/history.html)
-
-
-[Seymour Paper on Learning w/ Toys](https://www.youtube.com/watch?v=IhEovwWiniY)
-
-[Seymour Papert w/ Students](https://www.youtube.com/watch?v=5dZMgdqy7zY)
-
-
-
-[Seymour Papert on Logo 4:25 - 6:40](https://youtu.be/ZG9cYhekB8A?t=4m25s)
-
-[Seymour Papert w/ Students (longer cut)](https://www.youtube.com/watch?v=xMzojQFyMo0)
-
-# Schedule
-
-Time    | Type      |Activity
----     | ---       |---
-3:50    | review    | Homework Review
