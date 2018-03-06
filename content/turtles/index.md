@@ -40,7 +40,7 @@ Logo's use of turtles allows students make a strong association between what hap
 
 - [Seymour Papert on Logo + Body Syntonic Learning 4:25 - 6:40](https://youtu.be/ZG9cYhekB8A?t=4m25s)
 - [Seymour Paper on Learning with Toys (1986)](https://www.youtube.com/watch?v=IhEovwWiniY)
-- [Seymour Papert and Students](https://www.youtube.com/watch?v=5dZMgdqy7zY)
+- [Seymour Papert and Students (1972)](https://www.youtube.com/watch?v=5dZMgdqy7zY)
 - [Seymour Papert and Students (longer cut)](https://www.youtube.com/watch?v=xMzojQFyMo0)
 
 
@@ -305,8 +305,6 @@ Explore using turtle graphics. Start with a crazy spirograph thing and get that 
 
 ### Challenge: Animal Face
 Using turtle graphics, create an **intricate** portrait of an animal. Begin by choosing an animal. Look a photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch? Create you sketch primarily using turtle graphics techniques.
-
-
 
 /::
 

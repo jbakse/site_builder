@@ -249,6 +249,10 @@ https://www.youtube.com/watch?v=QPZ0pIK_wsc
 
 
 
+
 http://blog.mecheye.net/2018/03/deconstructing-the-water-effect-in-super-mario-sunshine/
 
 https://magcius.github.io/model-viewer/#zww/data/j3d/ww/sea/Room11.arc
+
+
+http://www.papert.org/articles/ACritiqueofTechnocentrism.html
