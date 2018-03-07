@@ -10,13 +10,13 @@ previous: Strategy
 previous_url: ../strategy
 
 hero_title: Turtle Graphics
-description: Introduced in the programming language Logo, turtle graphics connect drawing to how we move our bodies through space and encourage approaching computational form with a new mindset.
+description: Introduced as a feature of Logo programming language in 1969, turtle graphics connect computer drawing to how we move our bodies through space and encourage approaching computational form with a new mindset.
 software: p5.js
 ---
 
 ## Logo and Turtle Graphics
 
-The Logo computer programming language was [created in 1967](http://el.media.mit.edu/logo-foundation/what_is_logo/history.html) at the (now) MIT Media Lab to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the book [Mindstorms](https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8) in 1980 which discusses Logo and its goals:
+The Logo computer programming language was [created in 1967](http://el.media.mit.edu/logo-foundation/what_is_logo/history.html) by Wally Feurzeig, Seymour Papert, and Cynthia Solomon to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the book [Mindstorms](https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8) in 1980 which discusses Logo and its goals:
 
 > In many schools today, the phrase "computer-aided instruction" means making the computer teach the child. One might say _the computer is being used to program the child_. In my vision, _the child programs the computer_ and, in doing so, both acquires a sense of mastery over a piece of the most modern and powerful technology and establishes an intimate contact with some of the deepest ideas from science, from mathematics, and from the art of intellectual model building.
 
@@ -33,15 +33,16 @@ One of the key ideas introduced in Logo was _turtle graphics_. The turtle was or
 Seymour Papert with a turtle, photo by Cynthia Solomon{figure}
 
 ![turtle screenshot](images/turtle.png)
-Logo in action{figure}
+A turtle in action!{figure}
 /::
 
-Logo's use of turtles allows students make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this _body-syntonic_ learning. Body-syntonic learning supports understanding of abstract ideas through sensory experience. This is a powerful way to learn.
+Logo's use of turtles allows students make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this _body-syntonic_ learning. Body-syntonic learning supports understanding of abstract ideas through sensory experience. Papert often discussed these ideas in writing and videos.
 
-- [Seymour Papert on Logo + Body Syntonic Learning 4:25 - 6:40](https://youtu.be/ZG9cYhekB8A?t=4m25s)
-- [Seymour Paper on Learning with Toys (1986)](https://www.youtube.com/watch?v=IhEovwWiniY)
-- [Seymour Papert and Students](https://www.youtube.com/watch?v=5dZMgdqy7zY)
-- [Seymour Papert and Students (longer cut)](https://www.youtube.com/watch?v=xMzojQFyMo0)
+- [Seymour Papert and Students (1972)](https://www.youtube.com/watch?v=5dZMgdqy7zY), [longer cut](https://www.youtube.com/watch?v=xMzojQFyMo0)
+- [Seymour Papert on Logo (1986, full video series)](http://el.media.mit.edu/logo-foundation/resources/onlogo/index.html)
+- [Seymour Papert on Logo: Teaching (1986) 4:25 - 6:40](https://youtu.be/ZG9cYhekB8A?t=4m25s)
+- [Learning with Toys (1986)](https://www.youtube.com/watch?v=IhEovwWiniY)
+
 
 
 
@@ -124,9 +125,9 @@ In the examples above, the Cartesian system works well for drawing a square, but
 /:: -->
 
 
-Both frameworks can be used to draw a square or star; we are not [_forced_](https://en.wikipedia.org/wiki/Technological_determinism) to draw specific things by either framework, but the way of thinking encouraged by the frameworks is different. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with Turtle Graphics encourages yet other forms. 
+Both frameworks can be used to draw a square or star; we are not [forced](https://en.wikipedia.org/wiki/Technological_determinism) to draw specific things by either framework, but the way of thinking encouraged by the frameworks is different. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with Turtle Graphics encourages yet other forms. 
 
-Turtles are often used to draw spirograph-like figures and recursive trees.
+Two of the forms that turtles are very good for are spirograph-like figures and recursive trees.
 
 
 ::: js-lab
@@ -144,6 +145,11 @@ Turtles are often used to draw spirograph-like figures and recursive trees.
 To explore using a turtle graphics with p5.js, I've created a basic turtle class for you to use this week. The examples above and below use this library, and you can copy it into your sketches.
 
 Grab [the code here](turtle/turtle.html).
+
+<!-- ::: js-lab
+/turtles/sketches/turtle_house.js
+/:: -->
+
 
 ### Comp Form Turtle API
 
@@ -300,8 +306,6 @@ Explore using turtle graphics. Start with a crazy spirograph thing and get that 
 
 ### Challenge: Animal Face
 Using turtle graphics, create an **intricate** portrait of an animal. Begin by choosing an animal. Look a photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch? Create you sketch primarily using turtle graphics techniques.
-
-
 
 /::
 

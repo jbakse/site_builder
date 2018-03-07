@@ -214,8 +214,8 @@ Vuo
 | [Week 4, February 16](noise/plan.html)       | [Noise](noise)                                       |
 | [Week 5, February 23](strategy/plan.html)    | [Strategy](strategy)                                 |
 | **Exploration**                              | &nbsp;                                               |
-| [Week 6, March 2](#)                         | [Pixel Data](#)                                      |
-| [Week 7, March 9](#)                         | [Turtle Graphics](#)                                 |
+| [Week 6, March 2](pixels/plan.html)          | [Pixel Data](pixels)                                 |
+| [Week 7, March 9](turtles/plan.html)         | [Turtle Graphics](turtles)                           |
 | [Week 8, March 16](#)                        | [Vector Data](#)                                     |
 | Week 9, March 23{gray}                       | Spring Break{gray}                                   |
 | [Week 10, March 30](#)                       | [Animation](#)                                       |
