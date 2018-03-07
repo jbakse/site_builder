@@ -10,13 +10,13 @@ previous: Pixel Data
 previous_url: ../pixels
 
 hero_title: Turtle Graphics
-description: Introduced as a feature of Logo programming language in 1969, turtle graphics connect computer drawing to how we move our bodies through space and encourage approaching computational form with a new mindset.
+description: Introduced as a feature of Logo programming language in 1969, turtle graphics connect computer drawing to how we move our bodies through space, and encourage approaching computational form with a new mindset.
 software: p5.js
 ---
 
 ## Logo and Turtle Graphics
 
-The Logo computer programming language was [created in 1967](http://el.media.mit.edu/logo-foundation/what_is_logo/history.html) by Wally Feurzeig, Seymour Papert, and Cynthia Solomon to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the book [Mindstorms](https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8) in 1980 which discusses Logo and its goals:
+The Logo computer programming language was [created in 1967](http://el.media.mit.edu/logo-foundation/what_is_logo/history.html) by Wally Feurzeig, Seymour Papert, and Cynthia Solomon to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the 1980 book [Mindstorms](https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8) which discusses Logo and its goals:
 
 > In many schools today, the phrase "computer-aided instruction" means making the computer teach the child. One might say _the computer is being used to program the child_. In my vision, _the child programs the computer_ and, in doing so, both acquires a sense of mastery over a piece of the most modern and powerful technology and establishes an intimate contact with some of the deepest ideas from science, from mathematics, and from the art of intellectual model building.
 
@@ -55,9 +55,9 @@ The p5.js graphics API uses a _Cartesian_ coordinate system. To draw a line in p
 line(100, 100, 200, 200)
 ```
 
-This prioritizes the `x,y` coordinates of the **start** and **end** of the line. The **length** and **angle** of the line are deprioritized; they are not directly specified at all.
+This prioritizes the `x,y` coordinates of the **start** and **end** of the line. The **length** and **angle** of the line are deprioritized: they are not directly specified at all.
 
-Turtle graphics flips this prioritization around. This is code you might write to draw a line using a turtle:
+Turtle graphics flips these priorities around. This is code you might write to draw a line using a turtle:
 ```javascript
 right(45); forward(100);
 ```
@@ -127,7 +127,7 @@ In the examples above, the Cartesian system works well for drawing a square, but
 /:: -->
 
 
-Both frameworks can be used to draw a square or star. We are not [_forced_](https://en.wikipedia.org/wiki/Technological_determinism) to draw specific things by either framework, but each framework encourages a different way of thinking. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with Turtle Graphics encourages yet other forms. 
+Both frameworks can be used to draw a square or star. We are not [_forced_](https://en.wikipedia.org/wiki/Technological_determinism) to draw specific things by either framework, but each framework encourages a different way of thinking. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with turtle graphics encourages yet other forms. 
 
 
 Two of the forms that turtles are very good for are spirograph-like figures and recursive trees.
@@ -184,7 +184,7 @@ Rotates the turtle's bearing counter-clockwise by the provided angle in degrees.
 
 `myTurtle.turnTo(angleDegrees)`
 
-Changes the turtle's bearing to the provided angle in degrees.
+Changes the turtle's bearing to the provided angle in degrees.<!--[[Somewhat confusing vs. the previous two. If this is an absolute vs. relative number, where is 0?]]-->
 
 `myTurtle.penUp()`
 
@@ -269,7 +269,7 @@ Style Tip: If you change what a function does, you should change its name as wel
 
 
 ### Challenging Challenges
-12. Start with the original Triangle Example. Change it to draw a Spiral.
+12. Start with the original Triangle Example. Change it to draw a spiral.
 13. Using a loop, draw 10 concentric triangles.
 14. Draw the figure below.
 15. Create a `polygon(sides)` function that receives a `sides` parameter and draws a regular polygon.
