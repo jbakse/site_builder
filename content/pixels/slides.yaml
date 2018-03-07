@@ -12,7 +12,7 @@
 - artist: Michael Bromley
   title: Chromata
   image: slides/chromata.png
-  comments: JavaScript image to art machine.
+  comments: JavaScript image-to-art machine.
   links:
     - label: "Chromata"
       href: https://www.michaelbromley.co.uk/experiments/chromata/
