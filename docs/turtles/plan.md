@@ -34,7 +34,7 @@ debug: false
 
 ### Logo and Turtle Graphics
 
-- I'm a design + technology teacher.
+- I'm a design + technology teacher and grew up programming.
 - Seymour Papert researched how technology could support teaching.
 
 .
