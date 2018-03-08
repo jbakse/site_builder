@@ -6,17 +6,17 @@ debug: false
 header_title: "Turtle Graphics"
 next: Strategy
 next_url: ../strategy
-previous: Strategy
-previous_url: ../strategy
+previous: Pixel Data
+previous_url: ../pixels
 
 hero_title: Turtle Graphics
-description: Introduced as a feature of Logo programming language in 1969, turtle graphics connect computer drawing to how we move our bodies through space and encourage approaching computational form with a new mindset.
+description: Introduced as a feature of Logo programming language in 1969, turtle graphics connect computer drawing to how we move our bodies through space, and encourage approaching computational form with a new mindset.
 software: p5.js
 ---
 
 ## Logo and Turtle Graphics
 
-The Logo computer programming language was [created in 1967](http://el.media.mit.edu/logo-foundation/what_is_logo/history.html) by Wally Feurzeig, Seymour Papert, and Cynthia Solomon to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the book [Mindstorms](https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8) in 1980 which discusses Logo and its goals:
+The Logo computer programming language was [created in 1967](http://el.media.mit.edu/logo-foundation/what_is_logo/history.html) by Wally Feurzeig, Seymour Papert, and Cynthia Solomon to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the 1980 book [Mindstorms](https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8) which discusses Logo and its goals:
 
 > In many schools today, the phrase "computer-aided instruction" means making the computer teach the child. One might say _the computer is being used to program the child_. In my vision, _the child programs the computer_ and, in doing so, both acquires a sense of mastery over a piece of the most modern and powerful technology and establishes an intimate contact with some of the deepest ideas from science, from mathematics, and from the art of intellectual model building.
 
@@ -26,7 +26,7 @@ The Logo computer programming language was [created in 1967](http://el.media.mit
 [MIT: Scratch + Turtles](https://scratch.mit.edu/projects/196503540/)
 /::
 
-One of the key ideas introduced in Logo was _turtle graphics_. The turtle was originally a small programmable robot that carried a pen and could trace its path as it moved. Logo could control this turtle with simple commands: `left` and `right` to turn and `forward` to move. This ideas was extended to drawing on screen using a virtual turtle.
+One of the key ideas introduced in Logo was _turtle graphics_. The turtle was originally a small programmable robot that carried a pen and could trace its path as it moved. Logo could control this turtle with simple commands: `left` and `right` to turn and `forward` to move. This idea was extended to drawing on-screen using a virtual turtle.
 
 ::: .two-up
 ![Papert w/ turtle](http://cyberneticzoo.com/wp-content/uploads/Papert-x640.jpg)
@@ -36,12 +36,14 @@ Seymour Papert with a turtle, photo by Cynthia Solomon{figure}
 A turtle in action!{figure}
 /::
 
-Logo's use of turtles allows students make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this _body-syntonic_ learning. Body-syntonic learning supports understanding of abstract ideas through sensory experience. Papert often discussed these ideas in writing and videos.
+
+Logo's use of turtles allows students to make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this _body-syntonic_ learning. Body-syntonic learning supports understanding of abstract ideas through sensory experience. Papert often discussed these ideas in writing and videos.
 
 - [Seymour Papert and Students (1972)](https://www.youtube.com/watch?v=5dZMgdqy7zY), [longer cut](https://www.youtube.com/watch?v=xMzojQFyMo0)
 - [Seymour Papert on Logo (1986, full video series)](http://el.media.mit.edu/logo-foundation/resources/onlogo/index.html)
 - [Seymour Papert on Logo: Teaching (1986) 4:25 - 6:40](https://youtu.be/ZG9cYhekB8A?t=4m25s)
 - [Learning with Toys (1986)](https://www.youtube.com/watch?v=IhEovwWiniY)
+
 
 
 
@@ -53,9 +55,9 @@ The p5.js graphics API uses a _Cartesian_ coordinate system. To draw a line in p
 line(100, 100, 200, 200)
 ```
 
-This priorities the `x,y` coordinates of the **start** and **end** of the line. The **length** and **angle** of the line are deprioritized; they are not directly specified at all.
+This prioritizes the `x,y` coordinates of the **start** and **end** of the line. The **length** and **angle** of the line are deprioritized: they are not directly specified at all.
 
-Turtle graphics flips this prioritization around. This is code you might write to draw a line using a turtle:
+Turtle graphics flips these priorities around. This is code you might write to draw a line using a turtle:
 ```javascript
 right(45); forward(100);
 ```
@@ -125,7 +127,8 @@ In the examples above, the Cartesian system works well for drawing a square, but
 /:: -->
 
 
-Both frameworks can be used to draw a square or star; we are not [forced](https://en.wikipedia.org/wiki/Technological_determinism) to draw specific things by either framework, but the way of thinking encouraged by the frameworks is different. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with Turtle Graphics encourages yet other forms. 
+Both frameworks can be used to draw a square or star. We are not [_forced_](https://en.wikipedia.org/wiki/Technological_determinism) to draw specific things by either framework, but each framework encourages a different way of thinking. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with turtle graphics encourages yet other forms. 
+
 
 Two of the forms that turtles are very good for are spirograph-like figures and recursive trees.
 
@@ -142,7 +145,7 @@ Two of the forms that turtles are very good for are spirograph-like figures and 
 
 ## A Simple Turtle in p5.js
 
-To explore using a turtle graphics with p5.js, I've created a basic turtle class for you to use this week. The examples above and below use this library, and you can copy it into your sketches.
+To explore using turtle graphics with p5.js, I've created a basic turtle class for you to use this week. The examples above and below use this library, and you can copy it into your sketches.
 
 Grab [the code here](turtle/turtle.html).
 
@@ -155,7 +158,7 @@ Grab [the code here](turtle/turtle.html).
 
 `myTurtle = new Turtle(x, y)`
 
-The turtle constructor, it creates a turtle object.
+The turtle constructor: it creates a turtle object.
 
 It takes optional [x, y] starting coordinates or defaults to the center of the sketch.
 
@@ -181,7 +184,7 @@ Rotates the turtle's bearing counter-clockwise by the provided angle in degrees.
 
 `myTurtle.turnTo(angleDegrees)`
 
-Changes the turtle's bearing to the provided angle in degrees.
+Changes the turtle's bearing to the provided angle. The angle is measured in clockwise degrees from straight right. 
 
 `myTurtle.penUp()`
 
@@ -193,7 +196,7 @@ Tells the turtle to start drawing lines while it moves.
 
 `myTurtle.image(image, width, height)`
 
-Draws and image centered on the turtle's current location and aligned with the turtle's rotation.
+Draws an image centered on the turtle's current location and aligned with the turtle's rotation.
 
 `myTurtle.pushState()`
 
@@ -266,7 +269,7 @@ Style Tip: If you change what a function does, you should change its name as wel
 
 
 ### Challenging Challenges
-12. Start with the original Triangle Example. Change it to draw a Spiral.
+12. Start with the original Triangle Example. Change it to draw a spiral.
 13. Using a loop, draw 10 concentric triangles.
 14. Draw the figure below.
 15. Create a `polygon(sides)` function that receives a `sides` parameter and draws a regular polygon.
@@ -305,7 +308,7 @@ Style Tip: If you change what a function does, you should change its name as wel
 Explore using turtle graphics. Start with a crazy spirograph thing and get that out of the way. Then see how much variety you can get from the turtle.{bigger}
 
 ### Challenge: Animal Face
-Using turtle graphics, create an **intricate** portrait of an animal. Begin by choosing an animal. Look a photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch? Create you sketch primarily using turtle graphics techniques.
+Using turtle graphics, create an **intricate** portrait of an animal. Begin by choosing an animal. Look at photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch? Create your sketch primarily using turtle graphics techniques.
 
 /::
 

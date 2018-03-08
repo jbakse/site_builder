@@ -11,7 +11,7 @@ debug: false
 
 - Introduce Logo, Mindstorms, and turtles
 - Compare turtle and Cartesian graphics.
-- Introduction to basic turtle commands
+- Introduce basic turtle commands
 - Discuss the basic turtle class
 
 
@@ -49,7 +49,7 @@ debug: false
 .
 
 - [Seymour Papert and Students (1972)](https://www.youtube.com/watch?v=5dZMgdqy7zY)
-- Logo: Langague created not for teaching students to code, but teaching students to code as a powerful tool for learning about the world.
+- Logo: Language created not for teaching students to code, but teaching students to code as a powerful tool for learning about the world.
 - Turtle: a robot that provides a relatable context for coding
 
 .
@@ -72,6 +72,50 @@ debug: false
 - absolute vs. relative
 
 
+::: .activity
+## Homework Review
+
+Observe, describe, and critique sketches from the past week.
+
+
+### Prepare
+
+_Individually, 5 minutes_
+
+- Review all of the posts made by your partner over the past week. 
+- Choose one work that you wish to provide feedback on.
+- Create a new email. 
+- Address it to your partner.
+- Set the subject to "Comp Form: " followed by the date and time of the sketch you have chosen. `Comp Form: March 8th, 12:46 am` 
+
+
+### Observe
+
+_Individually, 5 minutes_
+
+**Observe** the post carefully. Look at all images in the post. Read the post text. Look at any linked code or inspirations. Do not write or make notes.
+
+
+### Write
+
+Spend five minutes on the following three writing prompts. Don't stop writing. Don't worry about spelling or grammar or format. Just note as much as you can in the time allowed.
+
+_Individually, 5 minutes_
+
+**Describe** what you see. Focus on what you can _see_, don't comment on the artist's intent, process, or success.
+
+_Individually, 5 minutes_
+
+**Compare** the post another work. Quickly choose a well known artwork that you feel has a formal relationship to the sketch. Enumerate as many similarities and differences as you can.
+
+_Individually, 5 minutes_
+
+**Suggest** possible ways the sketch could be further developed. Technical, formal, aesthetics, framing, concept, content.
+
+
+/::
+
+
 ::: .assignment
 
 ## Comp Form Case Study
@@ -85,14 +129,14 @@ This assignment is required for MFA students and suggested for BFA students.{big
 Your project is due before the start of the final class meeting. You may submit it at any time between now and then. I suggest completing this project in March, as a sort of midterm. That way you will have no final in this class.
 
 March 30
-: Optional proposals due. Proposals should be informal, 100-200 words, and include exactly two links to related web resources that I will find interesting. Submit proposals via email. Proposals are optional, you do not need an approved topic for this assignment.
+: Optional proposals due. Proposals should be informal, 100-200 words, and include exactly two links to related web resources that I will find interesting. Submit proposals via email. Proposals are optional: you do not need an approved topic for this assignment.
 
   If you submit a proposal I will respond with my thoughts.
 
 April 13
-: Optional drafts due. Drafts should be complete, full-length, fully-proofed versions of your case study meeting the full assignment requirements. Submit your draft by linking to your online case-study. Optionally include a google doc of the text of your case study. Submitting a draft is optional.
+: Optional drafts due. Drafts should be complete, full-length, fully-proofed versions of your case study, meeting the full assignment requirements. Submit your draft by linking to your online case study. Optionally, include a google doc of your case study text.
 
-  If you submit a draft complete, I will respond with my thoughts. If your draft is incomplete or no proofed, I will not respond.
+  If you submit a complete draft, I will respond with my thoughts. If your draft is incomplete or not proofed, I will not respond.
 
 May 11
 : Last day to submit final.
@@ -101,7 +145,7 @@ May 11
 ### Deliverables
 This project has two main deliverables:
 
-1) The project itself. Your project should represent about 5-8 hours of work and have a clear connection to computational form. Your project does not need to employ a novel technique but it may. In either case your project should not be just the exploration of a technique, it should apply computational to a specific context.
+1) The project itself. Your project should represent about 5-8 hours of work and have a clear connection to computational form. Your project does not need to employ a novel technique but it may. In either case your project should not be just an exploration of a technique: it should apply computational form within a specific context.
 2) Your written case study. Host your case study online on the platform of your choosing. Turn in your case study by creating a post on the sketch blog with an image, link, and brief teaser text.
   - 500-1000 words
   - Describe your goals for the project and explain how your project works.

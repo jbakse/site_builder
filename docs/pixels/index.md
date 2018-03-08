@@ -4,9 +4,9 @@ layout: layouts/compform_chapter.pug
 debug: false
 
 header_title: "Pixel Data"
-next: Strategy
-next_url: ../strategy
-previous: Strategy
+next: Turtle Graphics
+next_url: ../turtles
+previous: Strategies
 previous_url: ../strategy
 
 hero_title: Pixel Data

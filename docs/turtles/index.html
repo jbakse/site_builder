@@ -5,8 +5,8 @@
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Turtle Graphics</span><div class="buttons"><a class="previous" href="../strategy"><i class="fa fa-caret-left fa-lg"></i>Strategy</a><a class="next" href="../strategy">Strategy<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Turtle Graphics</h1><h6>Overview</h6><p class="description">Introduced as a feature of Logo programming language in 1969, turtle graphics connect computer drawing to how we move our bodies through space and encourage approaching computational form with a new mindset.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="logo-and-turtle-graphics">Logo and Turtle Graphics</h2>
-<p>The Logo computer programming language was <a href="http://el.media.mit.edu/logo-foundation/what_is_logo/history.html">created in 1967</a> by Wally Feurzeig, Seymour Papert, and Cynthia Solomon to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the book <a href="https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8">Mindstorms</a> in 1980 which discusses Logo and its goals:</p>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Turtle Graphics</span><div class="buttons"><a class="previous" href="../pixels"><i class="fa fa-caret-left fa-lg"></i>Pixel Data</a><a class="next" href="../strategy">Strategy<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Turtle Graphics</h1><h6>Overview</h6><p class="description">Introduced as a feature of Logo programming language in 1969, turtle graphics connect computer drawing to how we move our bodies through space, and encourage approaching computational form with a new mindset.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="logo-and-turtle-graphics">Logo and Turtle Graphics</h2>
+<p>The Logo computer programming language was <a href="http://el.media.mit.edu/logo-foundation/what_is_logo/history.html">created in 1967</a> by Wally Feurzeig, Seymour Papert, and Cynthia Solomon to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the 1980 book <a href="https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8">Mindstorms</a> which discusses Logo and its goals:</p>
 <blockquote>
 <p>In many schools today, the phrase “computer-aided instruction” means making the computer teach the child. One might say <em>the computer is being used to program the child</em>. In my vision, <em>the child programs the computer</em> and, in doing so, both acquires a sense of mastery over a piece of the most modern and powerful technology and establishes an intimate contact with some of the deepest ideas from science, from mathematics, and from the art of intellectual model building.</p>
 </blockquote>
@@ -14,14 +14,14 @@
 <p><a href="https://en.wikipedia.org/wiki/Turtle_graphics">Wikipedia:<br/> Turtle Graphics</a></p>
 <p><a href="https://scratch.mit.edu/projects/196503540/">MIT: Scratch + Turtles</a></p>
 </div>
-<p>One of the key ideas introduced in Logo was <em>turtle graphics</em>. The turtle was originally a small programmable robot that carried a pen and could trace its path as it moved. Logo could control this turtle with simple commands: <code>left</code> and <code>right</code> to turn and <code>forward</code> to move. This ideas was extended to drawing on screen using a virtual turtle.</p>
+<p>One of the key ideas introduced in Logo was <em>turtle graphics</em>. The turtle was originally a small programmable robot that carried a pen and could trace its path as it moved. Logo could control this turtle with simple commands: <code>left</code> and <code>right</code> to turn and <code>forward</code> to move. This idea was extended to drawing on-screen using a virtual turtle.</p>
 <div id="" class="two-up">
 <p class="figure"><img src="http://cyberneticzoo.com/wp-content/uploads/Papert-x640.jpg" alt="Papert w/ turtle">
 Seymour Papert with a turtle, photo by Cynthia Solomon</p>
 <p class="figure"><img src="images/turtle.png" alt="turtle screenshot">
 A turtle in action!</p>
 </div>
-<p>Logo’s use of turtles allows students make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this <em>body-syntonic</em> learning. Body-syntonic learning supports understanding of abstract ideas through sensory experience. Papert often discussed these ideas in writing and videos.</p>
+<p>Logo’s use of turtles allows students to make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this <em>body-syntonic</em> learning. Body-syntonic learning supports understanding of abstract ideas through sensory experience. Papert often discussed these ideas in writing and videos.</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=5dZMgdqy7zY">Seymour Papert and Students (1972)</a>, <a href="https://www.youtube.com/watch?v=xMzojQFyMo0">longer cut</a></li>
 <li><a href="http://el.media.mit.edu/logo-foundation/resources/onlogo/index.html">Seymour Papert on Logo (1986, full video series)</a></li>
@@ -32,8 +32,8 @@ A turtle in action!</p>
 <p>The p5.js graphics API uses a <em>Cartesian</em> coordinate system. To draw a line in p5.js you might use code like this:</p>
 <pre><code class="language-javascript">line(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>)
 </code></pre>
-<p>This priorities the <code>x,y</code> coordinates of the <strong>start</strong> and <strong>end</strong> of the line. The <strong>length</strong> and <strong>angle</strong> of the line are deprioritized; they are not directly specified at all.</p>
-<p>Turtle graphics flips this prioritization around. This is code you might write to draw a line using a turtle:</p>
+<p>This prioritizes the <code>x,y</code> coordinates of the <strong>start</strong> and <strong>end</strong> of the line. The <strong>length</strong> and <strong>angle</strong> of the line are deprioritized: they are not directly specified at all.</p>
+<p>Turtle graphics flips these priorities around. This is code you might write to draw a line using a turtle:</p>
 <pre><code class="language-javascript">right(<span class="hljs-number">45</span>); forward(<span class="hljs-number">100</span>);
 </code></pre>
 <p>Now the line’s <strong>angle</strong> and <strong>length</strong> are specified instead of its <strong>start</strong> and <strong>end</strong>. This is one of the key shifts in thinking encouraged by turtle graphics.</p>
@@ -81,7 +81,7 @@ t.penDown();
 <!-- ::: js-lab
 /turtles/sketches/turtle_star.js
 /:: -->
-<p>Both frameworks can be used to draw a square or star; we are not <a href="https://en.wikipedia.org/wiki/Technological_determinism">forced</a> to draw specific things by either framework, but the way of thinking encouraged by the frameworks is different. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with Turtle Graphics encourages yet other forms.</p>
+<p>Both frameworks can be used to draw a square or star. We are not <a href="https://en.wikipedia.org/wiki/Technological_determinism"><em>forced</em></a> to draw specific things by either framework, but each framework encourages a different way of thinking. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with turtle graphics encourages yet other forms.</p>
 <p>Two of the forms that turtles are very good for are spirograph-like figures and recursive trees.</p>
 <div id="" class="">
 <div class="js-lab">
@@ -96,14 +96,14 @@ t.penDown();
 </div>
 </div>
 <h2 id="a-simple-turtle-in-p5js">A Simple Turtle in p5.js</h2>
-<p>To explore using a turtle graphics with p5.js, I’ve created a basic turtle class for you to use this week. The examples above and below use this library, and you can copy it into your sketches.</p>
+<p>To explore using turtle graphics with p5.js, I’ve created a basic turtle class for you to use this week. The examples above and below use this library, and you can copy it into your sketches.</p>
 <p>Grab <a href="turtle/turtle.html">the code here</a>.</p>
 <!-- ::: js-lab
 /turtles/sketches/turtle_house.js
 /:: -->
 <h3 id="comp-form-turtle-api">Comp Form Turtle API</h3>
 <p><code>myTurtle = new Turtle(x, y)</code></p>
-<p>The turtle constructor, it creates a turtle object.</p>
+<p>The turtle constructor: it creates a turtle object.</p>
 <p>It takes optional [x, y] starting coordinates or defaults to the center of the sketch.</p>
 <p><code>myTurtle.moveForward(distance)</code></p>
 <p>Moves the turtle along its current bearing, drawing a line if pen is down.</p>
@@ -116,13 +116,13 @@ t.penDown();
 <p><code>myTurtle.turnLeft(angleDegrees)</code></p>
 <p>Rotates the turtle’s bearing counter-clockwise by the provided angle in degrees.</p>
 <p><code>myTurtle.turnTo(angleDegrees)</code></p>
-<p>Changes the turtle’s bearing to the provided angle in degrees.</p>
+<p>Changes the turtle’s bearing to the provided angle. The angle is measured in clockwise degrees from straight right.</p>
 <p><code>myTurtle.penUp()</code></p>
 <p>Tells the turtle to stop drawing lines while it moves.</p>
 <p><code>myTurtle.penDown()</code></p>
 <p>Tells the turtle to start drawing lines while it moves.</p>
 <p><code>myTurtle.image(image, width, height)</code></p>
-<p>Draws and image centered on the turtle’s current location and aligned with the turtle’s rotation.</p>
+<p>Draws an image centered on the turtle’s current location and aligned with the turtle’s rotation.</p>
 <p><code>myTurtle.pushState()</code></p>
 <p>Records the turtle’s current state (position, bearing, etc.) to a stack.</p>
 <p><code>myTurtle.popState()</code></p>
@@ -197,7 +197,7 @@ t.penDown();
 </ol>
 <h3 id="challenging-challenges">Challenging Challenges</h3>
 <ol start="12" class="continue">
-<li>Start with the original Triangle Example. Change it to draw a Spiral.</li>
+<li>Start with the original Triangle Example. Change it to draw a spiral.</li>
 <li>Using a loop, draw 10 concentric triangles.</li>
 <li>Draw the figure below.</li>
 <li>Create a <code>polygon(sides)</code> function that receives a <code>sides</code> parameter and draws a regular polygon.</li>
@@ -230,6 +230,6 @@ t.penDown();
 <h3 id="base">Base</h3>
 <p class="bigger">Explore using turtle graphics. Start with a crazy spirograph thing and get that out of the way. Then see how much variety you can get from the turtle.</p>
 <h3 id="challenge-animal-face">Challenge: Animal Face</h3>
-<p>Using turtle graphics, create an <strong>intricate</strong> portrait of an animal. Begin by choosing an animal. Look a photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch? Create you sketch primarily using turtle graphics techniques.</p>
+<p>Using turtle graphics, create an <strong>intricate</strong> portrait of an animal. Begin by choosing an animal. Look at photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch? Create your sketch primarily using turtle graphics techniques.</p>
 </div>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>

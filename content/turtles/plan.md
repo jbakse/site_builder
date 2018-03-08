@@ -72,6 +72,50 @@ debug: false
 - absolute vs. relative
 
 
+::: .activity
+## Homework Review
+
+Observe, describe, and critique sketches from the past week.
+
+
+### Prepare
+
+_Individually, 5 minutes_
+
+- Review all of the posts made by your partner over the past week. 
+- Choose one work that you wish to provide feedback on.
+- Create a new email. 
+- Address it to your partner.
+- Set the subject to "Comp Form: " followed by the date and time of the sketch you have chosen. `Comp Form: March 8th, 12:46 am` 
+
+
+### Observe
+
+_Individually, 5 minutes_
+
+**Observe** the post carefully. Look at all images in the post. Read the post text. Look at any linked code or inspirations. Do not write or make notes.
+
+
+### Write
+
+Spend five minutes on the following three writing prompts. Don't stop writing. Don't worry about spelling or grammar or format. Just note as much as you can in the time allowed.
+
+_Individually, 5 minutes_
+
+**Describe** what you see. Focus on what you can _see_, don't comment on the artist's intent, process, or success.
+
+_Individually, 5 minutes_
+
+**Compare** the post another work. Quickly choose a well known artwork that you feel has a formal relationship to the sketch. Enumerate as many similarities and differences as you can.
+
+_Individually, 5 minutes_
+
+**Suggest** possible ways the sketch could be further developed. Technical, formal, aesthetics, framing, concept, content.
+
+
+/::
+
+
 ::: .assignment
 
 ## Comp Form Case Study

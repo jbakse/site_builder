@@ -201,7 +201,7 @@ Vuo
 
 # Comp Form Spring 2018
 
-### [Syllabus](./syllabus.html) | [Sketch Blog](http://sketches2018.compform.net/)
+### [Syllabus](./syllabus.html) | [Sketch Blog](http://sketches2018.compform.net/) | [Case Study Assignment](http://localhost:3000/turtles/plan.html#comp-form-case-study)
 
 <br/>
 
