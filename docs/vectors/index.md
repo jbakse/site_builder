@@ -66,7 +66,9 @@ Because we are so good at inferring meaning it is always there. We don't appreci
 
 [Two Minute Papers: Deep Image Prior](https://www.youtube.com/watch?v=_BPJFFkxSbw)
 
-
+[[
+Something about raster still being a good file format, and that many images can't be reasonably described with basic geometry and shapes. Rect, Ellipse, Pologon, Line is a pretty limited vacabulary when you mean "flower", "tree", "person", "sky". 3D Grapihcs are very much like vector files and are closer to photo real. 
+]]
 
 
 
