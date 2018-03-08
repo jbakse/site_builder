@@ -7,6 +7,8 @@
         "composable",
         "framebuffer",
         "mindstorms",
+        "rasterization",
+        "rasterize",
         "repo"
     ]
 }

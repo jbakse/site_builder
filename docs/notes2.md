@@ -256,3 +256,6 @@ https://magcius.github.io/model-viewer/#zww/data/j3d/ww/sea/Room11.arc
 
 
 http://www.papert.org/articles/ACritiqueofTechnocentrism.html
+
+// the whole idea book
+http://www.squidi.net/three/entry.php?id=247
