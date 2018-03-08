@@ -184,7 +184,7 @@ Rotates the turtle's bearing counter-clockwise by the provided angle in degrees.
 
 `myTurtle.turnTo(angleDegrees)`
 
-Changes the turtle's bearing to the provided angle in degrees.<!--[[Somewhat confusing vs. the previous two. If this is an absolute vs. relative number, where is 0?]]-->
+Changes the turtle's bearing to the provided angle. The angle is measured in clockwise degrees from straight right. 
 
 `myTurtle.penUp()`
 
