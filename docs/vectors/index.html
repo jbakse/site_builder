@@ -7,39 +7,41 @@
 <polygon points="96,64 80,91.7 112,91.7"/>
 </svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Pixel Data</span><div class="buttons"><a class="previous" href="../turtles"><i class="fa fa-caret-left fa-lg"></i>Turtle Graphics</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Vector Data</h1><h6>Overview</h6><p class="description">Access pixel values directly to process and generate images.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="vector-data">Vector Data</h2>
 <p>Last week, we worked directly with pixels, the fundamental unit of raster graphics. Today we will work with vector graphics, which represent images as a collection of shapes.</p>
-<p>Vector graphics must be converted to raster graphics—a process called <a href="https://magcius.github.io/xplain/article/rast1.html">rasterization</a>—in order to be viewed on a pixel-based display. Fortunately, it is easy to rasterize vector graphics: vector graphics contain all the information necessary to do so. It is <em>not</em> easy to convert from raster images to vector images: in order to so so we have to make inferences about the meaning implied by the raster image. When the form is ambiguous our inferences are just guesses and they may be wrong.</p>
-<p>[[ recipie vs finished dish? you can go one way, not the other. you can easily remove salt from a recipie, you can’t easily remove salt from a dish]]</p>
+<p>Vector graphics must be converted to raster graphics—a process called <a href="https://magcius.github.io/xplain/article/rast1.html">rasterization</a>—in order to be viewed on a pixel-based display. Fortunately, it is easy to rasterize vector graphics: vector graphics contain all the information necessary to do so. It is <em>not</em> easy to convert from raster images to vector images: in order to do so we would have to make inferences about the meaning implied by the raster image. When the form is ambiguous our inferences are just guesses, and they may be wrong.</p>
+<p>[[ recipe vs finished dish? you can go one way, not the other. you can easily remove salt from a recipe, you can’t easily remove salt from a dish]]</p>
 <h3 id="meaning-vs-form">Meaning vs Form</h3>
-<p>Consider the image below. What should the image look like if the black circle were removed?</p>
+<p>Consider the image below. What would the image look like if the black circle were removed?</p>
 <p><img src="figures/inference-01.png" alt="inference-01"></p>
 <div id="" class="three-up">
 <p class="figure"><img src="figures/inference-02.png" alt="inference-02">
 We might infer that a red circle lies behind the black one.</p>
 <p class="figure"><img src="figures/inference-03.png" alt="inference-03">
-The red shape might be a crescent.</p>
+The red shape might be a crescent instead. It could be something else. We don’t know.</p>
 <p class="figure"><img src="figures/inference-04.png" alt="inference-04">
 We don’t know if the blue background should continue either.</p>
 </div>
-<p>When we look at the image, we might infer that it represents two, overlapping circles. But the raster image doesn’t contain enough information to know for sure.
-This is the key advantage of vector graphics over raster graphics: vector graphics contain high-level <em>meaning</em> about the drawings that they represent. This meaning allows us to make high-level changes: we can scale the vector image up and perfectly fill in the needed additional detail; we can change the fonts used to render text; we can remove a shape and reveal what is behind it.</p>
-<p>It is easy to underestimate the value of this meaning. Humans are very, very good at inferring meaning from visual forms. We fill meaning in without conscious thought, when we look at the image above we see circles, not red and black pixels.</p>
+<p>When we look at the image, we quickly infer that it represents two overlapping circles, but the raster image doesn’t contain this information. It contains only blue, red, and black pixels. Humans are very, very good at inferring meaning from visual forms. We fill meaning in without conscious thought, when we look at the image above we see the circles automatically.</p>
 <div id="" class="callout">
+<p>Humans are so good at inferring visual meaning, that it can be difficult for us to separate our inferences from our direct observations. In <em>Stranger in a Strange Land</em> (1961), Robert A. Heinlein writes about <em>fair witnesses</em>, people who have trained themselves to carefully observe and report what they see without drawing inferences.</p>
 <blockquote>
 <p>Anne was on the springboard; she turned her head. Jubal called out, “That house on the hilltop–can you see what color they’ve painted it?”</p>
 <p>Anne looked, then answered, “It’s white on this side.”</p>
 <p>Jubal went on to Jill: “You see? It doesn’t occur to Anne to infer that the other side is white, too. All the King’s horses couldn’t force her to commit herself…unless she went there and looked—and even then she wouldn’t assume that it stayed white after she left.”</p>
 </blockquote>
+</div>
+<p>Because we are so good at inferring meaning it is always there. We don’t appreciate how limited we would be without it. Computers are not good at inferring meaning from form. A human can guess that a red circle lies behind the black one, but a computer can’t, so a human can imagine the drawing without the circle, and the computer can’t. This is the key advantage of vector graphics over raster graphics: vector graphics contain high-level <em>meaning</em> about the drawings that they represent. They are built from semantic units like rectangles and ellipses instead of nonsemantic pixels. This meaning allows us to make high-level changes: we can scale the vector image up and perfectly fill in the needed additional detail; we can change the fonts used to render text; we can remove a shape and reveal what is behind it.</p>
+<div id="" class="callout">
+<p>Actually, computers <em>can</em> infer meaning from images, they just need to be programmed to do so. This is an extremely active area of research, and the rate of progress in recent years is staggering. This research is already making its way to consumer tools—Photoshop introduced <a href="https://research.adobe.com/project/content-aware-fill/">Content-Aware Fill</a> in 2010—and current approaches are actually <strong>better than humans</strong> at specific tasks.</p>
+<p>The <a href="https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg">Two Minute Papers</a> channel on youtube summarizes graphics and AI research papers. Here are some great videos:</p>
 <ul>
-<li class="attrib">Stranger in a Strange Land, Robert Heinlein</li>
+<li><a href="https://www.youtube.com/watch?v=XhH2Cc4thJw">Two Minute Papers: AI Learns Semantic Image Manipulation</a></li>
+<li><a href="https://www.youtube.com/watch?v=bVGubOt_jLI">Two Minute Papers: Physics-based Image and Video Editing</a></li>
+<li><a href="https://www.youtube.com/watch?v=_BPJFFkxSbw">Two Minute Papers: Deep Image Prior</a></li>
+<li><a href="https://www.youtube.com/watch?v=MfaTOXxA8dM">Two Minute Papers: Image Colorization with Deep Learning and Classification</a></li>
+<li><a href="https://www.youtube.com/watch?v=psOPu3TldgY">Two Minute Papers: Learning to Fill Holes in Images</a></li>
 </ul>
 </div>
-<p>Because we are so good at inferring meaning it is always there. We don’t appreciate how limited we would be without it. Computers are not good at inferring meaning from form. A human can guess that a red circle lies behind the black one, but a computer can’t, so a human can imagine the drawing without the circle, and the computer can’t. For now. This is an extremely active area of research, and the rate of progress in recent years is staggering. This research is already making its way to consumer tools: Photoshop introduced <a href="https://research.adobe.com/project/content-aware-fill/">Content-Aware Fill</a> in 2010.</p>
-<p><a href="https://www.youtube.com/watch?v=XhH2Cc4thJw">Two Minute Papers: AI Learns Semantic Image Manipulation</a></p>
-<p><a href="https://www.youtube.com/watch?v=bVGubOt_jLI">Two Minute Papers: Physics-based Image and Video Editing</a></p>
-<p><a href="https://www.youtube.com/watch?v=_BPJFFkxSbw">Two Minute Papers: Deep Image Prior</a></p>
-<p>[[
-Something about raster still being a good file format, and that many images can’t be reasonably described with basic geometry and shapes. Rect, Ellipse, Pologon, Line is a pretty limited vacabulary when you mean “flower”, “tree”, “person”, “sky”. 3D Grapihcs are very much like vector files and are closer to photo real.
-]]</p>
+<p>The information contained in vector graphics files higher level information, but this information is pretty limited. Vector files can describe basic shapes, colors, and effects, but lack the vocabulary to describe complex, detailed ideas like flowers, buildings, or people. Because of this vector files are well suited to highly graphic images like logos but not well suited for photographic content.</p>
 <!-- 
 Describe the steps taken to make a drawing
 Describe the shapes in the drawing
@@ -53,7 +55,7 @@ Semantics vs Form vs Syntax
 
 "Colorless green ideas sleep furiously"
 Noam Chomsky https://en.wikipedia.org/wiki/Colorless_green_ideas_sleep_furiously -->
-<h3 id="retained-mode-vs-immediate-mode">Retained Mode vs Immediate Mode</h3>
+<h3 id="retained-mode-vs-immediate-mode">Retained Mode vs. Immediate Mode</h3>
 <p>Immediate Mode: Shapes are drawn immediately after each step is described.
 Retained Mode: the shapes/steps are stored as data and rendering is done all at once when after you describe the scene.
 Scene Graph
@@ -73,7 +75,7 @@ circle 2, 10
 <h2 id="paperjs">Paper.js</h2>
 <p>Intro to paper.js. Library/API, Language.</p>
 <h3 id="paperscript-vs-javascript">Paperscript vs. Javascript</h3>
-<h3 id="object-oriented-api-vs-procedural-api">Object Oriented API vs Procedural API</h3>
+<h3 id="object-oriented-api-vs-procedural-api">Object Oriented API vs. Procedural API</h3>
 <h3 id="basic-example">Basic Example</h3>
 <h3 id="boolean-example">Boolean Example</h3>
 <h3 id="animation-example">Animation Example</h3>

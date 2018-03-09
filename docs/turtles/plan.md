@@ -84,21 +84,16 @@ _Individually, 5 minutes_
 
 - Review all of the posts made by your partner over the past week. 
 - Choose one work that you wish to provide feedback on.
-- Create a new email. 
-- Address it to your partner.
-- Set the subject to "Comp Form: " followed by the date and time of the sketch you have chosen. `Comp Form: March 8th, 12:46 am` 
 
 
 ### Observe
 
 _Individually, 5 minutes_
 
-**Observe** the post carefully. Look at all images in the post. Read the post text. Look at any linked code or inspirations. Do not write or make notes.
+**Observe** the post carefully. Look at all images in the post. Read the post text. Look at any linked code or inspirations.
 
 
-### Write
-
-Spend five minutes on the following three writing prompts. Don't stop writing. Don't worry about spelling or grammar or format. Just note as much as you can in the time allowed.
+### Discuss
 
 _Individually, 5 minutes_
 
@@ -110,7 +105,7 @@ _Individually, 5 minutes_
 
 _Individually, 5 minutes_
 
-**Suggest** possible ways the sketch could be further developed. Technical, formal, aesthetics, framing, concept, content.
+**Suggest** possible ways the sketch could be further developed. Technical, formal, aesthetics, framing, concept, content. 
 
 
 /::

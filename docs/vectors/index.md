@@ -20,13 +20,13 @@ software: p5.js
 
 Last week, we worked directly with pixels, the fundamental unit of raster graphics. Today we will work with vector graphics, which represent images as a collection of shapes.
 
-Vector graphics must be converted to raster graphics—a process called [rasterization](https://magcius.github.io/xplain/article/rast1.html)—in order to be viewed on a pixel-based display. Fortunately, it is easy to rasterize vector graphics: vector graphics contain all the information necessary to do so. It is _not_ easy to convert from raster images to vector images: in order to so so we have to make inferences about the meaning implied by the raster image. When the form is ambiguous our inferences are just guesses and they may be wrong. 
+Vector graphics must be converted to raster graphics—a process called [rasterization](https://magcius.github.io/xplain/article/rast1.html)—in order to be viewed on a pixel-based display. Fortunately, it is easy to rasterize vector graphics: vector graphics contain all the information necessary to do so. It is _not_ easy to convert from raster images to vector images: in order to do so we would have to make inferences about the meaning implied by the raster image. When the form is ambiguous our inferences are just guesses, and they may be wrong. 
 
-[[ recipie vs finished dish? you can go one way, not the other. you can easily remove salt from a recipie, you can't easily remove salt from a dish]]
+[[ recipe vs finished dish? you can go one way, not the other. you can easily remove salt from a recipe, you can't easily remove salt from a dish]]
 
 ### Meaning vs Form
 
-Consider the image below. What should the image look like if the black circle were removed?
+Consider the image below. What would the image look like if the black circle were removed?
 
 ![inference-01](figures/inference-01.png)
 
@@ -35,18 +35,16 @@ Consider the image below. What should the image look like if the black circle we
 We might infer that a red circle lies behind the black one.{figure}
 
 ![inference-03](figures/inference-03.png)
-The red shape might be a crescent.{figure}
+The red shape might be a crescent instead. It could be something else. We don't know.{figure}
 
 ![inference-04](figures/inference-04.png)
 We don't know if the blue background should continue either.{figure}
 /::
 
-When we look at the image, we might infer that it represents two, overlapping circles. But the raster image doesn't contain enough information to know for sure.
-This is the key advantage of vector graphics over raster graphics: vector graphics contain high-level _meaning_ about the drawings that they represent. This meaning allows us to make high-level changes: we can scale the vector image up and perfectly fill in the needed additional detail; we can change the fonts used to render text; we can remove a shape and reveal what is behind it.
-
-It is easy to underestimate the value of this meaning. Humans are very, very good at inferring meaning from visual forms. We fill meaning in without conscious thought, when we look at the image above we see circles, not red and black pixels. 
+When we look at the image, we quickly infer that it represents two overlapping circles, but the raster image doesn't contain this information. It contains only blue, red, and black pixels. Humans are very, very good at inferring meaning from visual forms. We fill meaning in without conscious thought, when we look at the image above we see the circles automatically. 
 
 ::: .callout
+Humans are so good at inferring visual meaning, that it can be difficult for us to separate our inferences from our direct observations. In _Stranger in a Strange Land_ (1961), Robert A. Heinlein writes about _fair witnesses_, people who have trained themselves to carefully observe and report what they see without drawing inferences.
 
 > Anne was on the springboard; she turned her head. Jubal called out, "That house on the hilltop--can you see what color they've painted it?"
 >
@@ -54,21 +52,24 @@ It is easy to underestimate the value of this meaning. Humans are very, very goo
 >
 > Jubal went on to Jill: "You see? It doesn't occur to Anne to infer that the other side is white, too. All the King's horses couldn't force her to commit herself...unless she went there and looked—and even then she wouldn't assume that it stayed white after she left."
 
-- Stranger in a Strange Land, Robert Heinlein{attrib}
-
 /::
 
-Because we are so good at inferring meaning it is always there. We don't appreciate how limited we would be without it. Computers are not good at inferring meaning from form. A human can guess that a red circle lies behind the black one, but a computer can't, so a human can imagine the drawing without the circle, and the computer can't. For now. This is an extremely active area of research, and the rate of progress in recent years is staggering. This research is already making its way to consumer tools: Photoshop introduced [Content-Aware Fill](https://research.adobe.com/project/content-aware-fill/) in 2010.
+Because we are so good at inferring meaning it is always there. We don't appreciate how limited we would be without it. Computers are not good at inferring meaning from form. A human can guess that a red circle lies behind the black one, but a computer can't, so a human can imagine the drawing without the circle, and the computer can't. This is the key advantage of vector graphics over raster graphics: vector graphics contain high-level _meaning_ about the drawings that they represent. They are built from semantic units like rectangles and ellipses instead of nonsemantic pixels. This meaning allows us to make high-level changes: we can scale the vector image up and perfectly fill in the needed additional detail; we can change the fonts used to render text; we can remove a shape and reveal what is behind it.
 
-[Two Minute Papers: AI Learns Semantic Image Manipulation](https://www.youtube.com/watch?v=XhH2Cc4thJw)
+::: .callout
 
-[Two Minute Papers: Physics-based Image and Video Editing](https://www.youtube.com/watch?v=bVGubOt_jLI)
+Actually, computers _can_ infer meaning from images, they just need to be programmed to do so. This is an extremely active area of research, and the rate of progress in recent years is staggering. This research is already making its way to consumer tools—Photoshop introduced [Content-Aware Fill](https://research.adobe.com/project/content-aware-fill/) in 2010—and current approaches are actually **better than humans** at specific tasks.
 
-[Two Minute Papers: Deep Image Prior](https://www.youtube.com/watch?v=_BPJFFkxSbw)
+The [Two Minute Papers](https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg) channel on youtube summarizes graphics and AI research papers. Here are some great videos:
 
-[[
-Something about raster still being a good file format, and that many images can't be reasonably described with basic geometry and shapes. Rect, Ellipse, Pologon, Line is a pretty limited vacabulary when you mean "flower", "tree", "person", "sky". 3D Grapihcs are very much like vector files and are closer to photo real. 
-]]
+- [Two Minute Papers: AI Learns Semantic Image Manipulation](https://www.youtube.com/watch?v=XhH2Cc4thJw)
+- [Two Minute Papers: Physics-based Image and Video Editing](https://www.youtube.com/watch?v=bVGubOt_jLI)
+- [Two Minute Papers: Deep Image Prior](https://www.youtube.com/watch?v=_BPJFFkxSbw)
+- [Two Minute Papers: Image Colorization with Deep Learning and Classification](https://www.youtube.com/watch?v=MfaTOXxA8dM)
+- [Two Minute Papers: Learning to Fill Holes in Images](https://www.youtube.com/watch?v=psOPu3TldgY)
+/::
+
+The information contained in vector graphics files higher level information, but this information is pretty limited. Vector files can describe basic shapes, colors, and effects, but lack the vocabulary to describe complex, detailed ideas like flowers, buildings, or people. Because of this vector files are well suited to highly graphic images like logos but not well suited for photographic content.
 
 
 
@@ -90,7 +91,7 @@ Semantics vs Form vs Syntax
 Noam Chomsky https://en.wikipedia.org/wiki/Colorless_green_ideas_sleep_furiously -->
 
 
-### Retained Mode vs Immediate Mode
+### Retained Mode vs. Immediate Mode
 Immediate Mode: Shapes are drawn immediately after each step is described.
 Retained Mode: the shapes/steps are stored as data and rendering is done all at once when after you describe the scene.
 Scene Graph
@@ -126,7 +127,7 @@ Intro to paper.js. Library/API, Language.
 
 ### Paperscript vs. Javascript
 
-### Object Oriented API vs Procedural API
+### Object Oriented API vs. Procedural API
 
 
 ### Basic Example
