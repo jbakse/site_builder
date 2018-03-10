@@ -10,15 +10,15 @@ lab.settings = {
 // returns a debounced version of the function that waits _ms_ before firing
 // "eats" multiple quick calls at once, firing just the last one
 // adapted from https://john-dugan.com/javascript-debounce/
-lab.debounce = function(func, ms) {
+lab.debounce = function (func, ms) {
     let timeout;
     ms = ms || 200;
 
-    return function() {
+    return function () {
         let context = this;
         let args = arguments;
 
-        let later = function() {
+        let later = function () {
             timeout = null;
             func.apply(context, args);
         };
@@ -64,7 +64,7 @@ lab.main = function main() {
     // load content of script, inject into editor
     let jqxhr = $.ajax({
         url: script_name,
-        success: function(source) {
+        success: function (source) {
             editor.setValue(source);
             editor.gotoLine(1);
         },
@@ -72,7 +72,7 @@ lab.main = function main() {
     });
 
     // install iframe:onload listener that injects new code into preview after it is reloaded by lab.inject
-    $('#preview').on('load', function() {
+    $('#preview').on('load', function () {
 
         let frame = $('#preview')[0];
         if (frame.contentWindow.lab_view) {
@@ -104,7 +104,7 @@ lab.main = function main() {
 
     // install editor:onchange listener to reload code after edit
     if (lab.settings.autorefresh) {
-        editor.getSession().on('change', function(e) {
+        editor.getSession().on('change', function (e) {
             lab.debounced_inject()
         });
     }
@@ -188,14 +188,14 @@ lab_view = {};
 
 lab_view.main = function main() {
     lab_view.setupConsole();
-    window.onerror = function(messageOrEvent, source, lineno, colno, error) {
+    window.onerror = function (messageOrEvent, source, lineno, colno, error) {
         console.log(`<span class="error"><b>${error}</b> on line <b>${lineno}</b></span>`);
     }
 };
 
 // takes an array of library urls, attaches them as <scripts>
 // waits for onload/onerror on each before calling cb 
-lab_view.takeLibs = function(hrefs, cb) {
+lab_view.takeLibs = function (hrefs, cb) {
     loaded_count = 0;
     error_count = 0;
 
@@ -224,8 +224,17 @@ lab_view.takeLibs = function(hrefs, cb) {
 };
 
 lab_view.takeSource = function takeSource(source) {
-    let script = $("<script async=false>");
+    const script = $("<script async=false>");
     script.text(source);
+
+    const language_regex = /^\/\/ ?language (.*?)$/gm;
+    const language_result = language_regex.exec(source);
+    const language = language_result && language_result[1];
+    if (language === "paperscript") {
+        $("body").append("<canvas id='paperCanvas' resize='true' width=500 height=500></canvas>");
+        script.attr("type", "text/paperscript");
+        script.attr("canvas", "paperCanvas");
+    }
     $("body").append(script);
 };
 
@@ -242,7 +251,7 @@ lab_view.setupConsole = function setupConsole() {
         console_log = console.log;
 
         // overwrite console.log with our function
-        console.log = function() {
+        console.log = function () {
 
             // echo to dom console
             lab_view.appendConsole.apply(this, arguments);
@@ -290,7 +299,7 @@ show.main = function main() {
 
     let jqxhr = $.ajax({
         url: script_name,
-        success: function(source) {
+        success: function (source) {
             show.inject(source);
         },
         dataType: "text"
@@ -298,7 +307,7 @@ show.main = function main() {
 };
 
 
-show.inject = function(source) {
+show.inject = function (source) {
     // regex matches "// require (url)"
     let require_regex = /^\/\/ ?require (.*?)$/gm;
 

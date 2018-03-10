@@ -127,7 +127,7 @@ p5.js + custom library
 </a>
 
 
-<a class="col-6 col-md-4" data-ready="false" href="./#">
+<a class="col-6 col-md-4" data-ready="true" href="./vectors">
 
 ### Vector Data
 paper.js

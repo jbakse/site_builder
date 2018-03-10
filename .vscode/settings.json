@@ -10,6 +10,8 @@
         "nonsemantic",
         "rasterization",
         "rasterize",
-        "repo"
+        "rasterized",
+        "repo",
+        "sandboxed"
     ]
 }

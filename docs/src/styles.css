@@ -398,7 +398,7 @@
     font-size: .85em; }
   .comp-form-copy .table th {
     border-top: none; }
-  .comp-form-copy img {
+  .comp-form-copy img, .comp-form-copy svg {
     display: block;
     max-width: 100%;
     margin-left: auto;
