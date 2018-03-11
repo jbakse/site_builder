@@ -110,7 +110,7 @@ You can find an overview of Paper.js [features](http://paperjs.org/features/), a
 
 ### PaperScript vs. JavaScript
 
-Paper.js is a javascript library, and can be used with JavaScript alone, but can also be used with PaperScript. Paper.js is easier to use with PaperScript, at least for small projects.
+Paper.js is a javascript library, and can be used with JavaScript alone, but can also be used with PaperScript. Paper.js is easier to use with PaperScript, at least for small projects. You can find info on setting up your workspace here: [Working with Paper.js](http://paperjs.org/tutorials/getting-started/working-with-paper-js/)
 
 You can use PaperScript with this site's code example editor. You can tell the editor you are using PaperScript with a special comment: `// language paperscript`.
 
@@ -154,11 +154,92 @@ The `Project.exportSVG()` function will create `svg` data of your Paper.js proje
 
 ### Basic Example
 
+::: js-lab
+/vectors/sketches/example_basic.js
+/::
+
+
 ### Boolean Example
+A super-useful feature of Paper.js is the ability to combine shapes with boolean operations. This allows you to describe complex shapes by building them from primitives.
 
-### Challenges
+::: js-lab
+/vectors/sketches/example_boolean.js
+/::
 
-### Assignement
+
+
+::: .activity
+## In-class Challenge
+
+
+Explore Paper.js by modifying the examples above. Work through the following challenges in order. Don't skip any.
+
+
+| Time                 | Comment                                                      |
+| -------------------- | ------------------------------------------------------------ |
+| < 11 in 20 Minutes   | Keep studying to improve your understanding of these topics. |
+| 11 in 20 Minutes     | Good.                                                        |
+| All 15 in 20 Minutes | Great.                                                       |
+
+
+
+
+
+### Modify the Basic Example
+It might help to have the documentation for [Paper.js Path](http://paperjs.org/reference/path/) handy.
+
+1. Make both lines 8 pixels wide and blue. 
+2. Set the `.strokeCap` of both lines to `round`;
+3. Make 50 lines with random start and end points.
+   
+   You don't have the p5.js `random()` function in Paper.js, but you do have JavaScript's `Math.random()`. This will get you a random value between 0 and 500: `Math.random() * 500`.
+4. Make each of the 50 lines a random width and color.
+{continue}
+
+
+### Modify the Boolean Example
+5. Make the green square 500 pixels wide.
+6. Change the function that creates comboPath from `subtract` to `unite`.
+7. Change it again. This time try `intersect`.
+8. Change the green squre to an ellipse.
+9. Remove the green and red shapes, leaving only the compound shape. Tip: `.remove()` [docs](http://paperjs.org/reference/path/#remove).
+{continue}
+
+
+### Challenging Challenges
+10. Starting fro scratch, draw a simple stick figure.
+11. Create a compound shape from _three_ shapes using any of the boolean operations: `unite`, `intersect`, `subtract`. Tip: You'll need to do this in two steps.
+12. Create the drawing below.
+{continue}
+
+
+::: js-show
+/vectors/sketches/challenge.js
+/::
+
+
+/::
+
+
+
+::: .assignment
+
+## Keep Sketching!
+
+### Base
+Explore using Paper.js. Focus this week on creating vector-based images. I highly encourage you to use a hybrid workflow this week: start with code in Paper.js but finish with manual work in Illustrator.{bigger}
+
+This week you must complete at least one of these challenges. These challenges count as 2 sketches. Post one work-in-progress screenshot sketch, and a second sketch with a photo of the final output.
+
+### Challenge: Promo Poster
+Create a promotional poster for a real or fictional event. Your poster must be printed in color at 24"x24" or greater. Your poster should promote a specific event (of your choosing) and must include a generative vector element and text describing the title, date, and location of the event.
+
+### Challenge: Lasercut Anything
+Create a lasercut thing. This can be anything you like that combines generative vector data and laser cutting or etching.
+
+**Complete your posts before our next class and bring your posters and laser-cuts to class!**
+
+/::
 
 
 

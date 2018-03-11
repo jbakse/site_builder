@@ -231,7 +231,7 @@ lab_view.takeSource = function takeSource(source) {
     const language_result = language_regex.exec(source);
     const language = language_result && language_result[1];
     if (language === "paperscript") {
-        $("body").append("<canvas id='paperCanvas' resize='true' width=500 height=500></canvas>");
+        $("body").append("<canvas id='paperCanvas' width=500 height=500></canvas>");
         script.attr("type", "text/paperscript");
         script.attr("canvas", "paperCanvas");
     }
