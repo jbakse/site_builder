@@ -93,8 +93,11 @@ The [Two Minute Papers](https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg
 
 Using a vector-based graphics library allows us to computationally generate images, export them in a way that preserves their shape information, and further manipulate them in vector editing software.
 
-[example of this]
+::: .callout
+![figures/post.svg](figures/post.svg)
 
+Top: Vector Output<br/>Middle: Illustrator » Effect » Stylize » Round Corners...<br/>Bottom: Illustrator » Custom Pattern Brush{figure}
+/::
 
 
 ## Paper.js
