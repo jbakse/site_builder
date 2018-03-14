@@ -264,7 +264,7 @@
 
 
     /* images */
-    img {
+    img, svg {
         display: block; // margin-bottom: 15px;
         max-width: 100%; // border: 10px solid $dark-grey;
         margin-left: auto;
@@ -319,6 +319,7 @@
 
 
     }
+    
     .three-up .figure {
         width: calc((100% - 20px) / 3);
         float: left;
