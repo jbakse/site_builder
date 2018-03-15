@@ -10,12 +10,11 @@ previous: Turtle Graphics
 previous_url: ../turtles
 
 hero_title: Vector Data
-old_description: Vector graphics encode high-level meaning about the shapes that make up a drawing allowing you to manipulate them in higher-level ways.
 
-description: Access pixel values directly to process and generate images.
+description: Vector graphics encode high-level meaning about the shapes that make up a drawing allowing you to manipulate them in higher-level ways.
+
 software: p5.js
 ---
-<!--[[Update description header from pixel data description]]-->
 ## Vector Data
 
 Last week, we worked directly with **pixels**, the fundamental unit of raster graphics. Today we will work with vector graphics, which represent images as collections of **shapes**. Scalable Vector Graphics, or `svg`, is a common XML-based vector graphics format. SVG files look like this:
@@ -112,8 +111,7 @@ You can find an overview of Paper.js [features](http://paperjs.org/features/), a
 
 
 ### PaperScript vs. JavaScript
-<!--[[which javascript capitalization do you prefer for the sentence below?]]-->
-Paper.js is a javascript library, and can be used with JavaScript alone, but can also be used with PaperScript. Paper.js is easier to use with PaperScript, at least for small projects. You can find info on setting up your workspace here: [Working with Paper.js](http://paperjs.org/tutorials/getting-started/working-with-paper-js/)
+Paper.js is a JavaScript library, and can be used with JavaScript alone, but can also be used with PaperScript. Paper.js is easier to use with PaperScript, at least for small projects. You can find info on setting up your workspace here: [Working with Paper.js](http://paperjs.org/tutorials/getting-started/working-with-paper-js/)
 
 You can use PaperScript with this site's code example editor. You can tell the editor you are using PaperScript with a special comment: `// language paperscript`.
 

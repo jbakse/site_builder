@@ -488,13 +488,13 @@ Post your source image, the result after one generation, and the result after se
 
 
 [Reaction Diffusion in Photoshop](https://vimeo.com/61154654){boxed right}
-Create a pattern in Photoshop by repeatedly applying filters.
+: Create a pattern in Photoshop by repeatedly applying filters.
 
 [Factorio](http://store.steampowered.com/app/427520/){boxed right}
-A game in which players gather resources to create increasingly complex technology and factories—sometimes building these structures into pixel art. 
+: A game in which players gather resources to create increasingly complex technology and factories—sometimes building these structures into pixel art. 
 
 [Icon Machine](http://brianmacintosh.com/iconmachine/){boxed right}
-A pixel art web app that randomly generates potion bottle icons.
+: A pixel art web app that randomly generates potion bottle icons.
 
 [AtariArchives.org: Memory-Mapped Video: The Scanning Game](https://www.atariarchives.org/cgp/Ch02_Sec03.php)
-An article on ASCII encoding and storage, part of a 1979 primer on computer graphics.
+: An article on ASCII encoding and storage, part of a 1979 primer on computer graphics.

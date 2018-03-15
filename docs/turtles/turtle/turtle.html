@@ -105,7 +105,7 @@ Turtle.prototype.pushState = <span class="hljs-function"><span class="hljs-keywo
 Turtle.prototype.popState = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>._stateStack.length === <span class="hljs-number">0</span>) {
     <span class="hljs-built_in">console</span>.error(
-      <span class="hljs-string">"Turtle: No states left on stack. Make sure your calls to .pushState and .popState are ballanced."</span>
+      <span class="hljs-string">"Turtle: No states left on stack. Make sure your calls to .pushState and .popState are balanced."</span>
     );
     <span class="hljs-keyword">return</span>;
   }

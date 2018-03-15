@@ -216,7 +216,7 @@ Vuo
 | **Exploration**                              | &nbsp;                                               |
 | [Week 6, March 2](pixels/plan.html)          | [Pixel Data](pixels)                                 |
 | [Week 7, March 9](turtles/plan.html)         | [Turtle Graphics](turtles)                           |
-| [Week 8, March 16](#)                        | [Vector Data](#)                                     |
+| [Week 8, March 16](vectors/plan.html)        | [Vector Data](vectors)                               |
 | Week 9, March 23{gray}                       | Spring Break{gray}                                   |
 | [Week 10, March 30](#)                       | [Animation](#)                                       |
 | [Week 11, April 6](#)                        | [Generating Text](#)                                 |

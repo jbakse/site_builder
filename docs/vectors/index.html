@@ -5,7 +5,7 @@
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Pixel Data</span><div class="buttons"><a class="previous" href="../turtles"><i class="fa fa-caret-left fa-lg"></i>Turtle Graphics</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Vector Data</h1><h6>Overview</h6><p class="description">Access pixel values directly to process and generate images.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="vector-data">Vector Data</h2>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Pixel Data</span><div class="buttons"><a class="previous" href="../turtles"><i class="fa fa-caret-left fa-lg"></i>Turtle Graphics</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Vector Data</h1><h6>Overview</h6><p class="description">Vector graphics encode high-level meaning about the shapes that make up a drawing allowing you to manipulate them in higher-level ways.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="vector-data">Vector Data</h2>
 <p>Last week, we worked directly with <strong>pixels</strong>, the fundamental unit of raster graphics. Today we will work with vector graphics, which represent images as collections of <strong>shapes</strong>. Scalable Vector Graphics, or <code>svg</code>, is a common XML-based vector graphics format. SVG files look like this:</p>
 <pre><code class="language-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">"1.0"</span> encoding=<span class="hljs-string">"UTF-8"</span> <span class="hljs-meta">?&gt;</span></span>
 <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 360 144"</span>&gt;</span>
@@ -23,7 +23,7 @@
     <polygon fill="#f00" points="288 54 270 36 252 54 288 54"/>
 </svg>
 </div>
-<p>Vector graphics must be converted to raster graphics—a process called <a href="https://magcius.github.io/xplain/article/rast1.html">rasterization</a>—in order to be viewed on a pixel-based display. Fortunately, it is easy to rasterize vector graphics: vector graphics contain all the information necessary to do so. It is <em>not</em> easy to convert from raster images to vector images: in order to do so we would have to make inferences about the meaning implied by the raster image. When the form is ambiguous our inferences are just guesses, and they may be wrong.</p>
+<p>Vector graphics must be converted to raster graphics—a process called <a href="https://magcius.github.io/xplain/article/rast1.html">rasterization</a>—in order to be viewed on a pixel-based display. Fortunately, it is easy to rasterize vector graphics: vector graphics contain all the information necessary to do so. It is <em>not</em> easy to convert from raster images to vector images: In order to do so we would have to make inferences about the meaning implied by the raster image. When the form is ambiguous our inferences are just guesses, and they may be wrong.</p>
 <!-- [[ recipe vs finished dish? you can go one way, not the other. you can easily remove salt from a recipe, you can't easily remove salt from a dish]] -->
 <h3 id="meaning-vs-form">Meaning vs. Form</h3>
 <p>Consider the image below. What would the image look like if the black circle were removed?</p>
@@ -36,16 +36,16 @@ The red shape might be a crescent instead. Or it could be something else entirel
 <p class="figure"><img src="figures/inference-04.png" alt="inference-04">
 We don’t know if the blue background should continue either.</p>
 </div>
-<p>When we look at the image, we quickly infer that it represents two overlapping circles on a blue rectangle, but the raster image doesn’t contain information about shapes at all. It contains only blue, red, and black pixels. Humans are very, very good at inferring meaning from visual forms. We fill in meaning in without conscious thought. When we look at the image above we see the circles automatically.</p>
+<p>When we look at the image, we quickly infer that it represents two overlapping circles on a blue rectangle, but the raster image doesn’t contain information about shapes at all. It contains only blue, red, and black pixels. Humans are very, very good at inferring meaning from visual forms. We fill in meaning without conscious thought. When we look at the image above we see the circles automatically.</p>
 <div id="" class="callout">
-<p>Humans are so good at inferring visual meaning, that it can be difficult for us to separate our inferences from our direct observations. In <em>Stranger in a Strange Land</em> (1961), Robert A. Heinlein explores this idea. One of the book’s characters is a <em>fair witness</em>, a person who has trained themselves to carefully observe and report what they see without drawing inferences.</p>
+<p>Humans are so good at inferring visual meaning that it can be difficult for us to separate our inferences from our direct observations. In <em>Stranger in a Strange Land</em> (1961), Robert A. Heinlein explores this idea. One of the book’s characters is a <em>fair witness</em>, a person who has trained themselves to carefully observe and report what they see without drawing inferences.</p>
 <blockquote>
 <p>Anne was on the springboard; she turned her head. Jubal called out, “That house on the hilltop—can you see what color they’ve painted it?”</p>
 <p>Anne looked, then answered, “It’s white on this side.”</p>
 <p>Jubal went on to Jill: “You see? It doesn’t occur to Anne to infer that the other side is white, too. All the King’s horses couldn’t force her to commit herself…unless she went there and looked—and even then she wouldn’t assume that it stayed white after she left.”</p>
 </blockquote>
 </div>
-<p>Because we are so good at inferring meaning, meaning is always there. We don’t appreciate how limited we would be without it. Computers are not good at inferring meaning from form. A human can guess that a red circle lies behind the black one, but a computer can’t; so the human can imagine the drawing without the circle, and the computer can’t.</p>
+<p>Because we are so good at inferring meaning, meaning is always there. We don’t appreciate how limited we would be without it. Computers are not good at inferring meaning from form. A human can guess that a red circle lies behind the black one, but a computer can’t—so the human can imagine the drawing without the circle, and the computer can’t.</p>
 <p>This is the key advantage of vector graphics over raster graphics: <strong>vector graphics contain high-level <em>meaning</em></strong> about the image that they represent. They are built from semantic units like rectangles and ellipses instead of nonsemantic pixels. This meaning allows us to make high-level changes: we can scale the vector image up and perfectly fill in the needed additional detail; we can change the fonts used to render text; we can remove a shape and reveal what is behind it.</p>
 <div id="" class="callout">
 <p>Actually, computers <em>can</em> infer meaning from images, they just need to be programmed to do so. This is an extremely active area of research, and the rate of progress in recent years is staggering. This research is already making its way to consumer tools—Photoshop introduced <a href="https://research.adobe.com/project/content-aware-fill/">Content-Aware Fill</a> in 2010—and current approaches are actually <strong>better than humans</strong> at specific tasks.</p>
@@ -69,9 +69,9 @@ We don’t know if the blue background should continue either.</p>
 <p>Paper.js is an open source vector graphics scripting framework that runs on top of the HTML5 Canvas. It offers a clean Scene Graph / Document Object Model and a lot of powerful functionality to create and work with vector graphics and bezier curves, all neatly wrapped up in a well designed, consistent and clean programming interface.</p>
 </blockquote>
 <p class="attrib"><a href="http://paperjs.org/about/">About Paper.js</a></p>
-<p>You can find an overview of Paper.js <a href="http://paperjs.org/features/">features</a>, a set of<a href="http://paperjs.org/tutorials/">tutorials</a>, and a complete <a href="http://paperjs.org/reference/global/">API Reference</a> on the Paper.js site.</p>
+<p>You can find an overview of Paper.js <a href="http://paperjs.org/features/">features</a>, a set of <a href="http://paperjs.org/tutorials/">tutorials</a>, and a complete <a href="http://paperjs.org/reference/global/">API Reference</a> on the Paper.js site.</p>
 <h3 id="paperscript-vs-javascript">PaperScript vs. JavaScript</h3>
-<p>Paper.js is a javascript library, and can be used with JavaScript alone, but can also be used with PaperScript. Paper.js is easier to use with PaperScript, at least for small projects. You can find info on setting up your workspace here: <a href="http://paperjs.org/tutorials/getting-started/working-with-paper-js/">Working with Paper.js</a></p>
+<p>Paper.js is a JavaScript library, and can be used with JavaScript alone, but can also be used with PaperScript. Paper.js is easier to use with PaperScript, at least for small projects. You can find info on setting up your workspace here: <a href="http://paperjs.org/tutorials/getting-started/working-with-paper-js/">Working with Paper.js</a></p>
 <p>You can use PaperScript with this site’s code example editor. You can tell the editor you are using PaperScript with a special comment: <code>// language paperscript</code>.</p>
 <p>Here is an example of a Paper.js program written in PaperScript:</p>
 <div id="" class="">
@@ -80,18 +80,18 @@ We don’t know if the blue background should continue either.</p>
 </iframe>
 </div>
 </div>
-<p>PaperScript programs are sandboxed in their own scope with access to all the Paper.js methods. PaperScript also lets you use mathematical operators to work with Point and Size objects. You can see this on line 12. <code>circle1Location + new Point(100, 0)</code> adds two points together. JavaScript is not able to overload operators like this, this is a feature of PaperScript.</p>
+<p>PaperScript programs are sandboxed in their own scope with access to all the Paper.js methods. PaperScript also lets you use mathematical operators to work with Point and Size objects. You can see this on line 12. <code>circle1Location + new Point(100, 0)</code> adds two points together. JavaScript is not able to overload operators like this: this is a feature of PaperScript.</p>
 <h3 id="retained-mode-vs-immediate-mode">Retained Mode vs. Immediate Mode</h3>
 <p>The p5.js library is an <em>immediate mode</em> graphics library. When you call <code>rect()</code> or <code>ellipse()</code>, p5.js immediately draws the shape to the canvas.</p>
 <p>Paper.js is a <em>retained mode</em> graphics library. When you call <code>Path.Rectangles()</code> or <code>Path.Ellipses()</code>, Paper.js creates object instances to represent the shapes and adds them to a <em>scene graph</em>. The scene graph can then be changed. You can add and remove shapes and change their properties. The shapes in the scene graph are all drawn to the canvas at once, when you are done making changes to it.</p>
-<p>Creating an animation in p5.js involves constructing and drawing the entire canvas every frame. In Paper.js redraws the shapes in your scene graph every frame, so all you have to do is change the properties of your shapes that animate.</p>
+<p>Creating an animation in p5.js involves constructing and drawing the entire canvas every frame. Paper.js redraws the shapes in your scene graph every frame, so all you have to do is change the properties of your animated shapes.</p>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/vectors/sketches/animation.js">
 </iframe>
 </div>
 </div>
-<p>Notice that we don’t need to create the rectangle or the ellipse in every <code>onFrame()</code> call. We don’t need to mention the background rectangle at all, once it is in the scene graph Paper.js will draw it every frame until we remove it. We also don’t need to set the color of the circle every frame. We can set it just when it changes, and that information is also stored in the scene graph.</p>
+<p>Notice that we don’t need to create the rectangle or the ellipse in every <code>onFrame()</code> call. We don’t need to mention the background rectangle at all, once it is in the scene graph. Paper.js will draw it every frame until we remove it. We also don’t need to set the color of the circle every frame. We can set it just when it changes, and that information is also stored in the scene graph.</p>
 <h3 id="svg-output">SVG Output</h3>
 <p>Since Paper.js works in retained mode and stores your drawing as a vector scene graph, you can export your scene as an <code>svg</code> drawing that you can open in a vector editor like Adobe Illustrator.</p>
 <p>The <code>Project.exportSVG()</code> function will create <code>svg</code> data of your Paper.js project. You need to do a little more work to download this data as a file. You can use the <code>downloadAsSVG()</code> in the example below to export your sketches. To export the example click it to focus it, and then press the <code>s</code> key.</p>
@@ -148,7 +148,7 @@ We don’t know if the blue background should continue either.</p>
 <p>Make both lines 8 pixels wide and blue.</p>
 </li>
 <li>
-<p>Set the <code>.strokeCap</code> of both lines to <code>round</code>;</p>
+<p>Set the <code>.strokeCap</code> of both lines to <code>round</code>.</p>
 </li>
 <li>
 <p>Make 50 lines with random start and end points.</p>
@@ -162,13 +162,13 @@ We don’t know if the blue background should continue either.</p>
 <ol start="5" class="continue">
 <li>Make the green square 500 pixels wide.</li>
 <li>Change the function that creates comboPath from <code>subtract</code> to <code>unite</code>.</li>
-<li>Change it again. This time try <code>intersect</code>.</li>
-<li>Change the green squre to an ellipse.</li>
+<li>Change the function again. This time try <code>intersect</code>.</li>
+<li>Change the green square to an ellipse.</li>
 <li>Remove the green and red shapes, leaving only the compound shape. Tip: <code>.remove()</code> <a href="http://paperjs.org/reference/path/#remove">docs</a>.</li>
 </ol>
 <h3 id="challenging-challenges">Challenging Challenges</h3>
 <ol start="10" class="continue">
-<li>Starting fro scratch, draw a simple stick figure.</li>
+<li>Starting from scratch, draw a simple stick figure.</li>
 <li>Create a compound shape from <em>three</em> shapes using any of the boolean operations: <code>unite</code>, <code>intersect</code>, <code>subtract</code>. Tip: You’ll need to do this in two steps.</li>
 <li>Create the drawing below.</li>
 </ol>
@@ -182,13 +182,13 @@ We don’t know if the blue background should continue either.</p>
 <div id="" class="assignment">
 <h2 id="keep-sketching">Keep Sketching!</h2>
 <h3 id="base">Base</h3>
-<p class="bigger">Explore using Paper.js. Focus this week on creating vector-based images. I highly encourage you to use a hybrid workflow this week: start with code in Paper.js but finish with manual work in Illustrator.</p>
-<p>This week you must complete at least one of these challenges. These challenges count as 2 sketches. Post one work-in-progress screenshot sketch, and a second sketch with a photo of the final output.</p>
+<p class="bigger">Explore using Paper.js. Focus on creating vector-based images this week. I highly encourage you to use a hybrid workflow this week: start with code in Paper.js but finish with manual work in Illustrator.</p>
+<p>This week you must complete at least one of the following challenges. These challenges count as 2 sketches. Post one work-in-progress screenshot sketch, and a second sketch with a photo of the final output.</p>
 <h3 id="challenge-promo-poster">Challenge: Promo Poster</h3>
 <p>Create a promotional poster for a real or fictional event. Your poster must be printed in color at 24&quot;x24&quot; or greater. Your poster should promote a specific event (of your choosing) and must include a generative vector element and text describing the title, date, and location of the event.</p>
 <h3 id="challenge-lasercut-anything">Challenge: Lasercut Anything</h3>
 <p>Create a lasercut thing. This can be anything you like that combines generative vector data and laser cutting or etching.</p>
-<p><strong>Complete your posts before our next class and bring your posters and laser-cuts to class!</strong></p>
+<p><strong>Complete your posts before our next class and bring your posters and laser cuts to class!</strong></p>
 </div>
 <!-- 
 Describe the steps taken to make a drawing
