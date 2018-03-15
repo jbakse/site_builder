@@ -15,7 +15,7 @@ old_description: Vector graphics encode high-level meaning about the shapes that
 description: Access pixel values directly to process and generate images.
 software: p5.js
 ---
-
+<!--[[Update description header from pixel data description]]-->
 ## Vector Data
 
 Last week, we worked directly with **pixels**, the fundamental unit of raster graphics. Today we will work with vector graphics, which represent images as collections of **shapes**. Scalable Vector Graphics, or `svg`, is a common XML-based vector graphics format. SVG files look like this:
@@ -39,7 +39,7 @@ Last week, we worked directly with **pixels**, the fundamental unit of raster gr
 </svg>
 /::
 
-Vector graphics must be converted to raster graphics—a process called [rasterization](https://magcius.github.io/xplain/article/rast1.html)—in order to be viewed on a pixel-based display. Fortunately, it is easy to rasterize vector graphics: vector graphics contain all the information necessary to do so. It is _not_ easy to convert from raster images to vector images: in order to do so we would have to make inferences about the meaning implied by the raster image. When the form is ambiguous our inferences are just guesses, and they may be wrong. 
+Vector graphics must be converted to raster graphics—a process called [rasterization](https://magcius.github.io/xplain/article/rast1.html)—in order to be viewed on a pixel-based display. Fortunately, it is easy to rasterize vector graphics: vector graphics contain all the information necessary to do so. It is _not_ easy to convert from raster images to vector images: In order to do so we would have to make inferences about the meaning implied by the raster image. When the form is ambiguous our inferences are just guesses, and they may be wrong. 
 
 <!-- [[ recipe vs finished dish? you can go one way, not the other. you can easily remove salt from a recipe, you can't easily remove salt from a dish]] -->
 
@@ -60,10 +60,10 @@ The red shape might be a crescent instead. Or it could be something else entirel
 We don't know if the blue background should continue either.{figure}
 /::
 
-When we look at the image, we quickly infer that it represents two overlapping circles on a blue rectangle, but the raster image doesn't contain information about shapes at all. It contains only blue, red, and black pixels. Humans are very, very good at inferring meaning from visual forms. We fill in meaning in without conscious thought. When we look at the image above we see the circles automatically. 
+When we look at the image, we quickly infer that it represents two overlapping circles on a blue rectangle, but the raster image doesn't contain information about shapes at all. It contains only blue, red, and black pixels. Humans are very, very good at inferring meaning from visual forms. We fill in meaning without conscious thought. When we look at the image above we see the circles automatically. 
 
 ::: .callout
-Humans are so good at inferring visual meaning, that it can be difficult for us to separate our inferences from our direct observations. In _Stranger in a Strange Land_ (1961), Robert A. Heinlein explores this idea. One of the book's characters is a _fair witness_, a person who has trained themselves to carefully observe and report what they see without drawing inferences.
+Humans are so good at inferring visual meaning that it can be difficult for us to separate our inferences from our direct observations. In _Stranger in a Strange Land_ (1961), Robert A. Heinlein explores this idea. One of the book's characters is a _fair witness_, a person who has trained themselves to carefully observe and report what they see without drawing inferences.
 
 > Anne was on the springboard; she turned her head. Jubal called out, "That house on the hilltop—can you see what color they've painted it?"
 >
@@ -73,7 +73,7 @@ Humans are so good at inferring visual meaning, that it can be difficult for us 
 
 /::
 
-Because we are so good at inferring meaning, meaning is always there. We don't appreciate how limited we would be without it. Computers are not good at inferring meaning from form. A human can guess that a red circle lies behind the black one, but a computer can't; so the human can imagine the drawing without the circle, and the computer can't. 
+Because we are so good at inferring meaning, meaning is always there. We don't appreciate how limited we would be without it. Computers are not good at inferring meaning from form. A human can guess that a red circle lies behind the black one, but a computer can't—so the human can imagine the drawing without the circle, and the computer can't. 
 
 This is the key advantage of vector graphics over raster graphics: **vector graphics contain high-level _meaning_** about the image that they represent. They are built from semantic units like rectangles and ellipses instead of nonsemantic pixels. This meaning allows us to make high-level changes: we can scale the vector image up and perfectly fill in the needed additional detail; we can change the fonts used to render text; we can remove a shape and reveal what is behind it. 
 
@@ -108,11 +108,11 @@ This chapter introduces [Paper.js](http://paperjs.org/), developed by [Jürg Leh
 
 [About Paper.js](http://paperjs.org/about/){attrib}
 
-You can find an overview of Paper.js [features](http://paperjs.org/features/), a set of[tutorials](http://paperjs.org/tutorials/), and a complete [API Reference](http://paperjs.org/reference/global/) on the Paper.js site.
+You can find an overview of Paper.js [features](http://paperjs.org/features/), a set of [tutorials](http://paperjs.org/tutorials/), and a complete [API Reference](http://paperjs.org/reference/global/) on the Paper.js site.
 
 
 ### PaperScript vs. JavaScript
-
+<!--[[which javascript capitalization do you prefer for the sentence below?]]-->
 Paper.js is a javascript library, and can be used with JavaScript alone, but can also be used with PaperScript. Paper.js is easier to use with PaperScript, at least for small projects. You can find info on setting up your workspace here: [Working with Paper.js](http://paperjs.org/tutorials/getting-started/working-with-paper-js/)
 
 You can use PaperScript with this site's code example editor. You can tell the editor you are using PaperScript with a special comment: `// language paperscript`.
@@ -124,7 +124,7 @@ Here is an example of a Paper.js program written in PaperScript:
 /::
 
 
-PaperScript programs are sandboxed in their own scope with access to all the Paper.js methods. PaperScript also lets you use mathematical operators to work with Point and Size objects. You can see this on line 12. `circle1Location + new Point(100, 0)` adds two points together. JavaScript is not able to overload operators like this, this is a feature of PaperScript.
+PaperScript programs are sandboxed in their own scope with access to all the Paper.js methods. PaperScript also lets you use mathematical operators to work with Point and Size objects. You can see this on line 12. `circle1Location + new Point(100, 0)` adds two points together. JavaScript is not able to overload operators like this: this is a feature of PaperScript.
 
 
 ### Retained Mode vs. Immediate Mode
@@ -133,13 +133,13 @@ The p5.js library is an _immediate mode_ graphics library. When you call `rect()
 
 Paper.js is a _retained mode_ graphics library. When you call `Path.Rectangles()` or `Path.Ellipses()`, Paper.js creates object instances to represent the shapes and adds them to a _scene graph_. The scene graph can then be changed. You can add and remove shapes and change their properties. The shapes in the scene graph are all drawn to the canvas at once, when you are done making changes to it.
 
-Creating an animation in p5.js involves constructing and drawing the entire canvas every frame. In Paper.js redraws the shapes in your scene graph every frame, so all you have to do is change the properties of your shapes that animate.
+Creating an animation in p5.js involves constructing and drawing the entire canvas every frame. Paper.js redraws the shapes in your scene graph every frame, so all you have to do is change the properties of your animated shapes.
 
 ::: js-lab
 /vectors/sketches/animation.js
 /::
 
-Notice that we don't need to create the rectangle or the ellipse in every `onFrame()` call. We don't need to mention the background rectangle at all, once it is in the scene graph Paper.js will draw it every frame until we remove it. We also don't need to set the color of the circle every frame. We can set it just when it changes, and that information is also stored in the scene graph.
+Notice that we don't need to create the rectangle or the ellipse in every `onFrame()` call. We don't need to mention the background rectangle at all, once it is in the scene graph. Paper.js will draw it every frame until we remove it. We also don't need to set the color of the circle every frame. We can set it just when it changes, and that information is also stored in the scene graph.
 
 
 
@@ -192,7 +192,7 @@ Explore Paper.js by modifying the examples above. Work through the following cha
 It might help to have the documentation for [Paper.js Path](http://paperjs.org/reference/path/) handy.
 
 1. Make both lines 8 pixels wide and blue. 
-2. Set the `.strokeCap` of both lines to `round`;
+2. Set the `.strokeCap` of both lines to `round`.
 3. Make 50 lines with random start and end points.
    
    You don't have the p5.js `random()` function in Paper.js, but you do have JavaScript's `Math.random()`. This will get you a random value between 0 and 500: `Math.random() * 500`.
@@ -203,14 +203,14 @@ It might help to have the documentation for [Paper.js Path](http://paperjs.org/r
 ### Modify the Boolean Example
 5. Make the green square 500 pixels wide.
 6. Change the function that creates comboPath from `subtract` to `unite`.
-7. Change it again. This time try `intersect`.
-8. Change the green squre to an ellipse.
+7. Change the function again. This time try `intersect`.
+8. Change the green square to an ellipse.
 9. Remove the green and red shapes, leaving only the compound shape. Tip: `.remove()` [docs](http://paperjs.org/reference/path/#remove).
 {continue}
 
 
 ### Challenging Challenges
-10. Starting fro scratch, draw a simple stick figure.
+10. Starting from scratch, draw a simple stick figure.
 11. Create a compound shape from _three_ shapes using any of the boolean operations: `unite`, `intersect`, `subtract`. Tip: You'll need to do this in two steps.
 12. Create the drawing below.
 {continue}
@@ -230,9 +230,9 @@ It might help to have the documentation for [Paper.js Path](http://paperjs.org/r
 ## Keep Sketching!
 
 ### Base
-Explore using Paper.js. Focus this week on creating vector-based images. I highly encourage you to use a hybrid workflow this week: start with code in Paper.js but finish with manual work in Illustrator.{bigger}
+Explore using Paper.js. Focus on creating vector-based images this week. I highly encourage you to use a hybrid workflow this week: start with code in Paper.js but finish with manual work in Illustrator.{bigger}
 
-This week you must complete at least one of these challenges. These challenges count as 2 sketches. Post one work-in-progress screenshot sketch, and a second sketch with a photo of the final output.
+This week you must complete at least one of the following challenges. These challenges count as 2 sketches. Post one work-in-progress screenshot sketch, and a second sketch with a photo of the final output.
 
 ### Challenge: Promo Poster
 Create a promotional poster for a real or fictional event. Your poster must be printed in color at 24"x24" or greater. Your poster should promote a specific event (of your choosing) and must include a generative vector element and text describing the title, date, and location of the event.
@@ -240,7 +240,7 @@ Create a promotional poster for a real or fictional event. Your poster must be p
 ### Challenge: Lasercut Anything
 Create a lasercut thing. This can be anything you like that combines generative vector data and laser cutting or etching.
 
-**Complete your posts before our next class and bring your posters and laser-cuts to class!**
+**Complete your posts before our next class and bring your posters and laser cuts to class!**
 
 /::
 
