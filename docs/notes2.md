@@ -259,3 +259,7 @@ http://www.papert.org/articles/ACritiqueofTechnocentrism.html
 
 // the whole idea book
 http://www.squidi.net/three/entry.php?id=247
+
+
+essential thing vectors: high level data allows high level changes
+essential thing realtime: created while shown, allows reaction and interaction

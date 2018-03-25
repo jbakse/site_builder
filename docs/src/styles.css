@@ -478,6 +478,10 @@
   .comp-form-copy .biggest {
     font-family: "Miriam Libre";
     font-size: 1.5em; }
+  .comp-form-copy .caption {
+    font-size: .8em;
+    font-style: italic;
+    margin-top: .5em; }
   .comp-form-copy .center {
     text-align: center; }
   .comp-form-copy .columns:after {
@@ -801,6 +805,21 @@ div.js-show {
     div.js-lab,
     div.js-show {
       height: 80vh; } }
+
+.aspect-2-1 {
+  padding-top: calc((100% + 10px) * .5 + 20px);
+  position: relative; }
+
+.aspect-4-1 {
+  padding-top: calc((100% + 10px) * .25 + 20px);
+  position: relative; }
+
+.aspect-2-1 > .js-show,
+.aspect-4-1 > .js-show {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%; }
 
 iframe.js-lab,
 iframe.js-show {

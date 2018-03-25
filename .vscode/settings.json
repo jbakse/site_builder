@@ -4,8 +4,10 @@
         "docs": true
     },
     "cSpell.words": [
+        "callout",
         "composable",
         "framebuffer",
+        "millis",
         "mindstorms",
         "nonsemantic",
         "rasterization",

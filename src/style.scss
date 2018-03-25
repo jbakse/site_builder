@@ -38,6 +38,25 @@ div.js-show {
     }
 }
 
+.aspect-2-1 {
+    padding-top: calc((100% + 10px) * .5 + 20px);
+    position: relative;
+}
+
+.aspect-4-1 {
+    padding-top: calc((100% + 10px) * .25 + 20px);
+    position: relative;
+}
+
+.aspect-2-1 > .js-show,
+.aspect-4-1 > .js-show 
+{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
 
 
 

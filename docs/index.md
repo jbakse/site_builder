@@ -135,7 +135,7 @@ paper.js
 </a>
 
 
-<a class="col-6 col-md-4" data-ready="false" href="./#">
+<a class="col-6 col-md-4" data-ready="true" href="./animation">
 
 ### Animation
 p5.js
