@@ -16,7 +16,7 @@ software: p5.js
 <!-- [[ leah, want to take a crack at the hero desc? ]] -->
 
 ## Animation
-At heart, a procedurally generated animation is just a series of procedurally generated images. These images, called frames, are shown in quick succession, like a flipbook, to show motion. Creating a procedurally generated animation requires creating instructions for drawing each frame and how each frame should be different from the last.
+At heart, a procedurally-generated animation is just a series of procedurally-generated images. These images, called frames, are shown in quick succession—like a flipbook—to show motion. Creating a procedurally-generated animation requires creating instructions for drawing each frame and for how each frame should be different from the last.
 
 
 ### Frames Per Second
@@ -36,7 +36,7 @@ In **pre-rendered** animation, all the frames are created ahead of time. In **re
 
 Real-time rendering needs to be done quickly. To render an animation at 30 frames per second, each frame must be generated in 33 milliseconds or less. To render VR at 90 frames per second, two frames—one for each eye—must be rendered in 10 milliseconds. In exchange for limiting how much time can be spent rendering each frame, we gain a huge benefit. Real-time animation can react to information—including user input—that is not known ahead of time. This allows real-time animation to be _interactive_. 
 
-Pre-rendering provides its own huge benefit. Limiting the time spent rendering each frame often means compromising on the quality or complexity of the animation, but pre-rendered animations can take as long as they need to create each frame, allowing for high complexity and quality. Individual frames in high-end animated films often take hours—or even days—to render and they look better as a result.
+Pre-rendering provides its own huge benefit. Limiting the time spent rendering each frame often means compromising on the quality or complexity of the animation. Pre-rendered animations can take as long as they need to create each frame, allowing for high complexity and quality. Individual frames in high-end animated films often take hours or even days to render, and they look better as a result.
 
 
 
@@ -45,7 +45,7 @@ Pre-rendering provides its own huge benefit. Limiting the time spent rendering e
 Real-time animation is computed faster than it is shown, while pre-rendered animation is computed slower than it is shown. Because of this, each requires a different approach to keeping track of time.
 
 ### The Simple Approach
-A common, simple approach to keeping time is to first set the frame rate, and then count the frames. In p5.js you can set the framerate with `frameRate(fps)` and get the current frame number from `frameCount`.
+A common simple approach to keeping time is to first set the frame rate, and then count the frames. In p5.js you can set the framerate with `frameRate(fps)` and get the current frame number from `frameCount`.
 
 ::: js-lab
 /animation/sketches/metronome_simple.js
@@ -55,9 +55,9 @@ This example draws a metronome that swings its pendulum **once every second**. T
 
 **Line 10** uses `map()` to map the current `frameCount` to `theta` such that `theta` increases by 2π every 60 frames or 1 second. 
 
-**Line 11** uses calculates `pendulumAngle` using `sin()`. Because the site function has a period of 2π, `sin(theta)` will produce a smooth wave that repeats every 1 second.
+**Line 11** calculates `pendulumAngle` using `sin()`. Because the sin function has a period of 2π, `sin(theta)` will produce a smooth wave that repeats every 1 second.
 
-This approach works fine for a simple example like this one but has some problems. The `frameCount` variable tells us how many _frames_ have been drawn, it doesn't actually tell us how much _time_ has gone by. We can calculate time from `frameCount`, but only if we assume that each frame is drawn exactly on schedule. Unfortunately, that is not always the case.
+This approach works fine for a simple example like this one but has some problems. The `frameCount` variable tells us how many _frames_ have been drawn: It doesn't actually tell us how much _time_ has gone by. We can calculate time from `frameCount`, but only if we assume that each frame is drawn exactly on schedule. Unfortunately, that is not always the case.
 
 ### Real-time Draw Loops
 
@@ -79,7 +79,7 @@ Another way your frame count can fall out of sync with time is if your requested
 /animation/sketches/frame_rate_test.js
 /::
 
-In simple games and other real-time applications, these problems may not matter. When syncing animation to real-time _does_ matter the simple approach above will cause problems.
+In simple games and other real-time applications, these problems may not matter. When syncing animation to real time _does_ matter the simple approach above will cause problems.
 
 ### Real-time Clocks for Real-time Animation
 
@@ -132,7 +132,7 @@ if (frameCount === 10) {
 };
 ```
 
-But might come up if you convert an event time from seconds to frames and the result is not an integer.
+But the problem might come up if you convert an event time from seconds to frames and the result is not an integer.
 
 ```javascript
 // okay
@@ -145,7 +145,7 @@ if (frameCount - 1 < eventFrame && frameCount >= eventFrame) {
 
 ### Timed Intervals
 
-The `map()` function can be great for making things happen over a set interval.
+The `map()` function can be useful for making things happen over a set interval.
 
 ```javascript
 // move an ellipse from 100 to 400 
@@ -169,10 +169,10 @@ First `millis() % 500` converts the time from `0 → ∞` to `0 → 500, 0 → 5
 
 ### Periodic Functions
 
-Periodic functions produce repeating values in regular intervals. They are very useful in procedurally generated animation to create rhythms. The modulus operator and `sin()` function are both periodic and are used in the examples above to produce steady repeated animation.
+Periodic functions produce repeating values in regular intervals. They are very useful for creating rhythms in procedurally-generated animation. The modulus operator and `sin()` function are both periodic and are used in the examples above to produce steadily repeating animation.
 
 
-### Derivitive Motion
+### Derivative Motion
 
 for simple things: position = f(time)
 what about acclearation: more complex eqations (derivities)
@@ -192,7 +192,7 @@ pre-rendere with recording
 
 ## Exporting + Stitching Frames
 
-Some environments support exporting frames as video, but neither JavaScript or p5.js has this feature. p5.js does make it easy to export individual frames however. By including the frame number in the frame of each export you can create an image sequence that can be stitched into a video in separate software.
+Some environments support exporting frames as video, but neither JavaScript nor p5.js has this feature. However, p5.js does make it easy to export individual frames. By including the frame number in the name of each export you can create an image sequence that can be stitched into a video using separate software.
 
 [[ export safeFrame example ]]
 
@@ -220,14 +220,14 @@ You can even apply Photoshop effects in the bargain.
 ## Keep Sketching!
 
 ### Base
-This week focus on creating smooth, pre-rendered animations.{bigger}
+This week focuses on creating smooth pre-rendered animations.{bigger}
 
 ### Challenge: Comp Form Bumper
 
 Create a three-second bumper for Computational Form
 
-- Should be exactly 90 frames. 3 seconds @ 30fps
-- Should have a clear progression: beginning, middle, end.
+- Should be exactly 90 frames: 3 seconds @ 30fps
+- Should have a clear progression: beginning, middle, end
 - Should feature either the text “Compform” or “Computational Form”
 - Consider including the five-triangle "Sierpinski" icon
 - Consider adding music or sound in post production
