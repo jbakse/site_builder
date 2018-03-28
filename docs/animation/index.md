@@ -214,6 +214,12 @@ You can even apply Photoshop effects in the bargain.
 
 [[ example ]]
 
+## Challenge Example
+
+::: js-lab
+/animation/sketches/challenge_example.js
+/::
+
 
 ::: .assignment
 
