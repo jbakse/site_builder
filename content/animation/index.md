@@ -10,17 +10,17 @@ next:
 next_url: 
 
 hero_title: Animation
-description: Creating procedurally generated animation r
+description: Procedurally-generated animation 
 software: p5.js
 ---
 <!-- [[ leah, want to take a crack at the hero desc? ]] -->
 
 ## Animation
-At heart, a procedurally-generated animation is just a series of procedurally-generated images. These images, called frames, are shown in quick succession—like a flipbook—to show motion. Creating a procedurally-generated animation requires creating instructions for drawing each frame and for how each frame should be different from the last.
+At heart, a procedurally-generated animation is just a series of procedurally-generated images. These images, called frames, are shown in quick succession—like a flipbook—to create motion. Making a procedurally-generated animation requires creating instructions to draw each frame and to describe how each frame should be different from the last.
 
 
 ### Frames Per Second
-Generally, faster frame rates produce smoother motion. Below about 10 frames per second, we tend to see a series of images as a series of images. Above 10, we begin to perceive a series of images as motion. Hand-drawn animation is often shown at 12 or 24 frames per second. Films are traditionally shot at 24 frames per second. Modern video games usually target 30 or 60 frames per second. Frame rates higher than 60 frames per second don't improve animation very much, but they are necessary for virtual reality. Virtual reality is more demanding than flat animation because it is trying to create an illusion of _presence_, not just motion. Current VR systems run at 90 frames per second.
+Generally, faster frame rates produce smoother motion. At rates below about 10 frames per second, we tend to see a series of images as a series of images. Above 10, we begin to perceive a series of images as motion. Hand-drawn animation is often shown at 12 or 24 frames per second. Films are traditionally shot at 24 frames per second. Modern video games usually target 30 or 60 frames per second. Frame rates higher than 60 frames per second don't improve animation very much, but they are necessary for virtual reality. Virtual reality is more demanding than flat animation because it is trying to create an illusion of _presence_, not just motion. Current VR systems run at 90 frames per second.
 
 
 ::: js-show .aspect-4-1 .no-margin
@@ -36,7 +36,7 @@ In **pre-rendered** animation, all the frames are created ahead of time. In **re
 
 Real-time rendering needs to be done quickly. To render an animation at 30 frames per second, each frame must be generated in 33 milliseconds or less. To render VR at 90 frames per second, two frames—one for each eye—must be rendered in 10 milliseconds. In exchange for limiting how much time can be spent rendering each frame, we gain a huge benefit. Real-time animation can react to information—including user input—that is not known ahead of time. This allows real-time animation to be _interactive_. 
 
-Pre-rendering provides its own huge benefit. Limiting the time spent rendering each frame often means compromising on the quality or complexity of the animation. Pre-rendered animations can take as long as they need to create each frame, allowing for high complexity and quality. Individual frames in high-end animated films often take hours or even days to render, and they look better as a result.
+Pre-rendering provides its own huge benefit. Limiting the time spent rendering each frame often means compromising on the quality or complexity of the animation. Pre-rendered animations can take as long as necessary to create each frame, allowing for high complexity and quality. Individual frames in high-end animated films often take hours or even days to render, and they look better as a result.
 
 
 
@@ -57,7 +57,7 @@ This example draws a metronome that swings its pendulum **once every second**. T
 
 **Line 11** calculates `pendulumAngle` using `sin()`. Because the sin function has a period of 2π, `sin(theta)` will produce a smooth wave that repeats every 1 second.
 
-This approach works fine for a simple example like this one but has some problems. The `frameCount` variable tells us how many _frames_ have been drawn: It doesn't actually tell us how much _time_ has gone by. We can calculate time from `frameCount`, but only if we assume that each frame is drawn exactly on schedule. Unfortunately, that is not always the case.
+This approach works fine for a simple example like the metronome, but it has some problems. The `frameCount` variable tells us how many _frames_ have been drawn: It doesn't actually tell us how much _time_ has gone by. We can calculate time from `frameCount`, but only if we assume that each frame is drawn exactly on schedule. Unfortunately, that is not always the case.
 
 ### Real-time Draw Loops
 
@@ -93,7 +93,7 @@ The example below swings the pendulum once per second using `millis()` as the ti
 
 ### Frame Counting for Pre-rendered Animation
 
-For pre-rendered animation, we want to base our animation on the current frame, regardless of the time elapsed. We don't care how long the frames take to render because we know we will play them back at the correct rate regardless. Our priority is to render every frame needed for later playback.
+For pre-rendered animation, we want to base our animation on the current frame, regardless of the time elapsed. We don't care how long the frames take to render because we know we will play them back at the correct rate. Our priority is to render every frame needed for later playback.
 
 The example below swings the pendulum once per second using `frameCount` as the time base. If you slow the frame rate down with the slider, the animation slows down. 
 
@@ -188,13 +188,42 @@ discrete inegration. dX += force * t; x += dX * t;
 
 low quality interactive
 record input
-pre-rendere with recording
+pre-rendere with recording -->
 
 ## Exporting + Stitching Frames
 
-Some environments support exporting frames as video, but neither JavaScript nor p5.js has this feature. However, p5.js does make it easy to export individual frames. By including the frame number in the name of each export you can create an image sequence that can be stitched into a video using separate software.
+Some environments support exporting frames as video, but neither JavaScript nor p5.js has this feature. However, p5.js does make it easy to export individual frames. You can create an image sequence by including the frame number in the name of each exported frame. Then the sequence can be stitched into a video using separate software. The following utility function wraps p5.js's `save()` function to make exporting image sequences easier.
 
-[[ export safeFrame example ]]
+
+
+```javascript
+// saveFrame - a utility function to save the current frame out with a nicely formatted name
+// format: name_####.extension
+// name: prefix for file name
+// frameNumber: number for the frame, will be zero padded
+// extension: jpg or png, controls file name and image format
+// maxFrame: checked against frameNumber, frames beyond maxFrame are not saved
+function saveFrame(name, frameNumber, extension, maxFrame) {
+	// don't save frames once we reach the max
+	if (maxFrame && frameNumber > maxFrame) {
+		return;
+	}
+
+	if (!extension) {
+		extension = "png";
+	}
+	// remove the decimal part (just in case)
+	frameNumber = floor(frameNumber);
+	// zero-pad the number (e.g. 13 -> 0013);
+	var paddedNumber = ("0000" + frameNumber).substr(-4, 4);
+
+	save(name + "_" + paddedNumber + "." + extension);
+}
+```
+
+::: .callout .warn
+If you are exporting frames, keep in mind that p5.js automatically uses a higher resolution on retina displays, and this is the resolution at which `save()` will export. You can use `pixelDensity(1);` before your `createCanvas()` call to disable this.
+/::
 
 There are many applications that can take a sequence of frames and stitch them into a video. [FFmpeg](https://www.ffmpeg.org/) is a powerful command line utility for this and other video tasks. FFmpeg is a good choice for automated/back-end workflows. [After Effects](https://www.adobe.com/products/aftereffects.html) is a good choice if you are going to use the animation as part of a larger animated composition.
 
@@ -208,12 +237,13 @@ You can even stitch images in [Photoshop](https://www.adobe.com/products/photosh
 6. Adjust export settings.
 7. Click `Render`
 
-[[ example render ]]
+<video src="videos/render.mp4" poster="videos/render_0030.jpg" controls></video>
 
 You can even apply Photoshop effects in the bargain.
 
-[[ example ]]
+<video src="videos/render_color.mp4" poster="videos/render_color_0030.jpg" controls></video>
 
+[Example Source](/js_lab/js_lab.html?/animation/sketches/save_frames.js)
 
 ::: .assignment
 

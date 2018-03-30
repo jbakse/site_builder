@@ -170,7 +170,7 @@ First `millis() % 500` converts the time from `0 → ∞` to `0 → 500, 0 → 5
 ### Periodic Functions
 
 Periodic functions produce repeating values in regular intervals. They are very useful in procedurally generated animation to create rhythms. The modulus operator and `sin()` function are both periodic and are used in the examples above to produce steady repeated animation.
-
+<!-- 
 
 ### Derivitive Motion
 
@@ -188,13 +188,42 @@ discrete inegration. dX += force * t; x += dX * t;
 
 low quality interactive
 record input
-pre-rendere with recording
+pre-rendere with recording -->
 
 ## Exporting + Stitching Frames
 
-Some environments support exporting frames as video, but neither JavaScript or p5.js has this feature. p5.js does make it easy to export individual frames however. By including the frame number in the frame of each export you can create an image sequence that can be stitched into a video in separate software.
+Some environments support exporting frames as video, but neither JavaScript or p5.js has this feature. p5.js does make it easy to export individual frames however. By including the frame number in the frame of each export you can create an image sequence that can be stitched into a video in separate software. The following utility function wraps p5.js's `save()` function to make exporting image sequences easier.
 
-[[ export safeFrame example ]]
+
+
+```javascript
+// saveFrame - a utility function to save the current frame out with a nicely formatted name
+// format: name_####.extension
+// name: prefix for file name
+// frameNumber: number for the frame, will be zero padded
+// extension: jpg or png, controls file name and image format
+// maxFrame: checked against frameNumber, frames beyond maxFrame are not saved
+function saveFrame(name, frameNumber, extension, maxFrame) {
+	// don't save frames once we reach the max
+	if (maxFrame && frameNumber > maxFrame) {
+		return;
+	}
+
+	if (!extension) {
+		extension = "png";
+	}
+	// remove the decimal part (just in case)
+	frameNumber = floor(frameNumber);
+	// zero-pad the number (e.g. 13 -> 0013);
+	var paddedNumber = ("0000" + frameNumber).substr(-4, 4);
+
+	save(name + "_" + paddedNumber + "." + extension);
+}
+```
+
+::: .callout .warn
+If you are exporting frames keep in mind that p5 automatically uses a higher resolution on retina displays, and this is the resolution that `save()` will export at. You can use `pixelDensity(1);` before your `createCanvas()` call to disable this.
+/::
 
 There are many applications that can take a sequence of frames and stitch them into a video. [FFmpeg](https://www.ffmpeg.org/) is a powerful command line utility for this and other video tasks. FFmpeg is a good choice for automated/back-end workflows. [After Effects](https://www.adobe.com/products/aftereffects.html) is a good choice if you are going to use the animation as part of a larger animated composition.
 
@@ -208,12 +237,13 @@ You can even stitch images in [Photoshop](https://www.adobe.com/products/photosh
 6. Adjust export settings.
 7. Click `Render`
 
-[[ example render ]]
+<video src="videos/render.mp4" poster="videos/render_0030.jpg" controls></video>
 
 You can even apply Photoshop effects in the bargain.
 
-[[ example ]]
+<video src="videos/render_color.mp4" poster="videos/render_color_0030.jpg" controls></video>
 
+[Example Source](/js_lab/js_lab.html?/animation/sketches/save_frames.js)
 
 ::: .assignment
 
