@@ -237,7 +237,7 @@ You can even stitch images in [Photoshop](https://www.adobe.com/products/photosh
 6. Adjust export settings.
 7. Click `Render`
 
-<video src="videos/render.mp4" poster="videos/render_0030.jpg" controls></video>
+<!-- <video src="videos/render.mp4" poster="videos/render_0030.jpg" controls></video> -->
 
 You can even apply Photoshop effects in the bargain.
 
