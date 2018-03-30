@@ -10,7 +10,7 @@ next:
 next_url: 
 
 hero_title: Animation
-description: Procedurally-generated animation 
+description: Procedural generation can be used to describe motion in animations. In both pre-rendered and real-time animations, an unerstanding of frame rate and timing are crucial for generating satisfying motion graphics.
 software: p5.js
 ---
 <!-- [[ leah, want to take a crack at the hero desc? ]] -->
