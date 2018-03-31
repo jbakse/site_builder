@@ -119,20 +119,31 @@ ellipse(x, <span class="hljs-number">100</span>, <span class="hljs-number">10</s
 <p>First <code>millis() % 500</code> converts the time from <code>0 → ∞</code> to <code>0 → 500, 0 → 500, ...</code>. Then the map function makes <code>red</code> decrease from 255 to 0 over the first 300 milliseconds of each interval.</p>
 <h3 id="periodic-functions">Periodic Functions</h3>
 <p>Periodic functions produce repeating values in regular intervals. They are very useful for creating rhythms in procedurally-generated animation. The modulus operator and <code>sin()</code> function are both periodic and are used in the examples above to produce steadily repeating animation.</p>
-<h3 id="derivative-motion">Derivative Motion</h3>
-<p>for simple things: position = f(time)
+<!--
+### Derivative Motion
+
+for simple things: position = f(time)
 what about acclearation: more complex eqations (derivities)
-discrete inegration. dX += force * t; x += dX * t;</p>
+discrete inegration. dX += force * t; x += dX * t;
+
 <div id="" class="">
+
+
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/animation/sketches/bounce.js">
 </iframe>
 </div>
+
+
 </div>
-<h2 id="interactivity">Interactivity</h2>
-<p>low quality interactive
+
+
+
+## Interactivity 
+
+low quality interactive
 record input
-pre-rendere with recording --&gt;</p>
+pre-rendere with recording -->
 <h2 id="exporting-stitching-frames">Exporting + Stitching Frames</h2>
 <p>Some environments support exporting frames as video, but neither JavaScript nor p5.js has this feature. However, p5.js does make it easy to export individual frames. You can create an image sequence by including the frame number in the name of each exported frame. Then the sequence can be stitched into a video using separate software. The following utility function wraps p5.js’s <code>save()</code> function to make exporting image sequences easier.</p>
 <pre><code class="language-javascript"><span class="hljs-comment">// saveFrame - a utility function to save the current frame out with a nicely formatted name</span>
@@ -172,10 +183,19 @@ pre-rendere with recording --&gt;</p>
 <li>Adjust export settings.</li>
 <li>Click <code>Render</code></li>
 </ol>
-<!-- <video src="videos/render.mp4" poster="videos/render_0030.jpg" controls></video> -->
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/animation/sketches/save_frames.js">
+</iframe>
+</div>
+</div>
+<div id="" class="full-width">
+<p><video src="videos/render.mp4" poster="videos/render_0030.jpg" controls></video></p>
+</div>
 <p>You can even apply Photoshop effects in the bargain.</p>
+<div id="" class="full-width">
 <p><video src="videos/render_color.mp4" poster="videos/render_color_0030.jpg" controls></video></p>
-<p><a href="/js_lab/js_lab.html?/animation/sketches/save_frames.js">Example Source</a></p>
+</div>
 <div id="" class="assignment">
 <h2 id="keep-sketching">Keep Sketching!</h2>
 <h3 id="base">Base</h3>
