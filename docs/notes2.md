@@ -2,6 +2,9 @@ Review sub folder notes files
 
 is the p5 download bug fixed? should I jump in on that?
 
+maybe split animation into two: prerender realtime
+
+
 #####################
 # Research Assistance
 

@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Text | Comp Form</title></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<polygon points="32,64 0,119.4 64,119.4"/>
+<polygon points="64,8.6 32,64 96,64"/>
+<polygon points="80,91.7 64,119.4 96,119.4"/>
+<polygon points="112,91.7 96,119.4 128,119.4"/>
+<polygon points="96,64 80,91.7 112,91.7"/>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Text</span><div class="buttons"><a class="previous" href="../animation"><i class="fa fa-caret-left fa-lg"></i>Animation</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Text</h1><h6>Overview</h6><p class="description">...</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><!-- [[ leah, want to take a crack at the hero desc? again? ]] -->
+<h2 id="computational-text">Computational Text</h2>
+<p>[ text is still relevant and powerful form of communication ]</p>
+<p>[ web pages written in html, and are largely text. a great deal of the content we read online is algorithmicly assembled text. some of it is fully algorithmically generated. ]</p>
+<p>[[ many tactics, but we’re going to focus on three. ]]</p>
+<h3 id="examples-of-computational-text">Examples of Computational Text</h3>
+<dl>
+<dt><a href="https://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html">NYT: The Best and Worst Places to Grow Up</a></dt>
+<dd>This fantastic NYT piece looks at how income is impacted by where someone grows up. To make the information relatable the story adapts itself based on the location of the reader.</dd>
+<dt><a href="https://github.com/wbkd/awesome-interactive-journalism">Interactive Journalism</a></dt>
+<dd>Curated collection “outstanding examples of visual and interactive journalism”.</dd>
+<dt><a href="https://www.reddit.com/r/SubredditSimulator/">Subreddit Simulator</a>, <a href="https://www.reddit.com/r/SubredditSimulator/comments/3g9ioz/what_is_rsubredditsimulator/">Explination</a></dt>
+<dd>The Subreddit Simulator is a subreddit populated entirely by bots using Markov Chains trained on posts made across reddit.</dd>
+<dt><a href="https://www.nytimes.com/2015/12/23/business/media/personalizing-books-via-robot.html?_r=0">NYT: The little girl/boy who lost her/his name.</a></dt>
+<dd>NYT covers a custom, made-to-order children’s book.</dd>
+<dt><a href="https://www.reddit.com/r/proceduralgeneration/comments/4bhohq/more_animal_fun/">More Animal Fun…</a></dt>
+<dd><a href="https://www.reddit.com/r/proceduralgeneration">r/ProceduralGeneration</a> post of animal names invented by an algorithm.</dd>
+<dt><a href="https://github.com/NaNoGenMo/2017">NaNoGenMo 2017</a></dt>
+<dd>Annual competition to procedurally generate a 50,000 word novel.</dd>
+<dt><a href="http://orteil.dashnet.org/gamegen">Indie Game Generator</a>, <a href="https://applepinegames.com/tech/steam-game-generator">Another Indie Game Generator</a></dt>
+<dd>Instant pitches for your next game project.</dd>
+<dt><a href="https://twitter.com/pentametron?lang=en">Pentametron</a>, <a href="https://twitter.com/greatartbot">GreatArtBot</a>, <a href="http://barrl.net/2748">ThinkPieceBot</a></dt>
+<dd>A twitter bot that pairs up tweets to create couplets in iambic pentameter. Another that generates low resolution art. A third that generates essay titles.</dd>
+<dt><a href="https://en.wikipedia.org/wiki/Tay_(bot)">Tay</a>, <a href="http://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist">Verge covers Tay</a></dt>
+<dd>Tay was an AI twitterbot created my Microsoft and launched on March 23, 2016. Less than a day later, it was shut down after posting many controversial, inflammatory, and racist tweets.</dd>
+<dt><a href="https://github.com/galaxykate/tracery">Tracery</a>, <a href="https://www.gdcvault.com/play/1023377/Tech">Tracery Talk (16:16)</a></dt>
+<dd>Tracery is an easy to use generative grammar system developed by <a href="http://www.galaxykate.com/">Kate Compton</a></dd>
+<dt><a href="https://cheapbotsdonequick.com/">Cheap Bots, Done Quick!</a></dt>
+<dd>A easy to use twitterbot generator using the Tracery.</dd>
+</dl>
+<h2 id="computational-text-tactics">Computational Text Tactics</h2>
+<h2 id="templates">Templates</h2>
+<p>String templating is basic but powerful tool for building text procedurally. If you have every completed a <a href="http://www.madlibs.com/">Mad Lib</a> fill-in-the-blank story, you’ve worked with string templates.</p>
+<div id="" class="activity">
+<h2 id="fill-in-the-blank-constitution">Fill-in-the-blank Constitution</h2>
+<p>Explore building text with string template using pencil and paper.</p>
+</div>
+<h2 id="markov-chains">Markov Chains</h2>
+<p><a href="https://en.wikipedia.org/wiki/Markov_chain">Markov Chains</a></p>
+<div id="" class="activity">
+<h2 id="markov-chain">Markov Chain</h2>
+<p>Explore the Markov Chain algorithm with paper and pencil using this worksheet.</p>
+</div>
+<h2 id="context-free-grammars">Context-Free Grammars</h2>
+<p>Consider this excerpt in html:</p>
+<div id="" class="bad">
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Hello, World!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+</code></pre>
+</div>
+<p>This isn’t proper html. The <code>b</code> tag should be closed before the the <code>div</code> tag.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Hello, World!<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>HTML is text, and it can be represented by a text string. But not all text strings are valid HTML, because in HTML the order of the characters is meaningful. HTML is a <a href="https://en.wikipedia.org/wiki/Formal_language">formal language</a> and it has a <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a>, a set of rules that define which sequences of characters are valid. Only strings that meet those rules can be properly understood by code that expects HTML.</p>
+<p><a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free grammars</a> are a subtype of formal grammars that are useful for generating text. A context-free grammar is a set of replacement rules. Each rule represents a legal replacement of one symbol with zero, one, or more other symbols. In a context-free grammar, these rules don’t consider the symbols before or after the symbol being replaced (the context).</p>
+<p>The following example demonstrates using a context-free grammar to generate a short story. This example uses <a href="https://github.com/galaxykate/tracery">Tracery</a>, created by Kate Compton](<a href="http://www.galaxykate.com/">http://www.galaxykate.com/</a>). The <a href="https://cheapbotsdonequick.com/">Cheap Bots, Done Quick</a> service lets you <a href="http://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots">make twitterbots</a> very quickly using Tracery.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/text/sketches/tracery_example.js">
+</iframe>
+</div>
+</div>
+<p>HTML is text, so Tracery can generate HTML!</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/text/sketches/tracery_html.js">
+</iframe>
+</div>
+</div>
+<h2 id="implementing-string-templates">Implementing String Templates</h2>
+<p>string templates
+lodash shuffle
+lodash sample</p>
+<p>Basic
+Title Generator
+Life Expectancy</p>
+<h2 id="implementing-markov-chains">Implementing Markov Chains</h2>
+<p>Markov Chain</p>
+<div id="" class="assignment">
+<h2 id="keep-sketching">Keep Sketching!</h2>
+<h3 id="base">Base</h3>
+<p class="bigger">Explore generating and displaying text.</p>
+<h3 id="challenge-it-was-a-dark-and-stormy-night">Challenge: It was a Dark and Stormy Night.</h3>
+<p>Make a program that generates <a href="https://en.wikipedia.org/wiki/It_was_a_dark_and_stormy_night">bad</a> short stories that start with “It was a dark and stormy night.”</p>
+<p>The story must:</p>
+<ul>
+<li>be bad</li>
+<li>be short</li>
+<li>start with “It was a dark and stormy night.”</li>
+<li>be generated by code, consider using templates, <a href="https://github.com/galaxykate/tracery">Tracery</a>, Markov Chains, or anything you want.</li>
+</ul>
+<p>Ideally, your story should:</p>
+<ul>
+<li>be grammatically pefect</li>
+<li>make sense, with consistent characters, relationships, and actions</li>
+<li>follow a dark and stormy theme</li>
+<li>be of the horror or mystery genre</li>
+<li>have a clear structure: beginning (exposition), middle (rising action/conflict), and end(resolution)</li>
+</ul>
+</div>
+<h2 id="reference-links">Reference Links</h2>
+<dl>
+<dt><a href="https://cheapbotsdonequick.com/">Cheap Bots, Done Quick!</a></dt>
+<dd>A easy to use twitterbot generator using the Tracery (<a href="http://www.crystalcodepalace.com/traceryTut.html">demo</a>, <a href="https://github.com/galaxykate/tracery">repo</a>) grammar by <a href="http://www.galaxykate.com/">Kate Compton</a>.</dd>
+</dl>
+<p>[Twine]</p>
+<dl>
+<dt><a href="https://www.youtube.com/watch?v=Rhqk9HYiB7Q">Coding Train: Context-Free Grammar</a></dt>
+<dd>Daniel Shiffman talks about context-free grammars, Tracery, and RiTa
+<a href="https://www.youtube.com/watch?v=8Z9FRiW2Jlc">Coding Train: Context-Free Challenge</a></dd>
+<dd>Daniel Shiffman builds a small context-free grammar from scratch.
+<a href="https://en.wikipedia.org/wiki/L-system">Wikipedia: L-Systems</a></dd>
+<dd>L-systems are a type of formal grammar often used in procedural graphics generation.</dd>
+</dl>
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
