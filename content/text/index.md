@@ -72,10 +72,25 @@ software: p5.js
 
 String templating is basic but powerful tool for building text procedurally. If you have every completed a [Mad Lib](http://www.madlibs.com/) fill-in-the-blank story, you've worked with string templates. 
 
+king
+lonely
+The ___ is ___.
+
+Memory
+Nested templates
+
+
+
 
 ::: .activity
-## Fill-in-the-blank Constitution
-Explore building text with string template using pencil and paper.
+## Make an Amendment!
+
+::: js-show
+/text/sketches/first_amendment.js
+/::
+
+[source](http://localhost:3000/js_lab/js_lab.html?/text/sketches/first_amendment.js)
+
 /::
 
 
@@ -161,7 +176,7 @@ The story must:
 
 Ideally, your story should:
 
-- be grammatically pefect
+- be grammatically perfect
 - make sense, with consistent characters, relationships, and actions
 - follow a dark and stormy theme
 - be of the horror or mystery genre
@@ -174,12 +189,10 @@ Ideally, your story should:
 
 ## Reference Links
 
-[Cheap Bots, Done Quick!](https://cheapbotsdonequick.com/)
-: A easy to use twitterbot generator using the Tracery ([demo](http://www.crystalcodepalace.com/traceryTut.html), [repo](https://github.com/galaxykate/tracery)) grammar by [Kate Compton](http://www.galaxykate.com/).
-
-[Twine]
-
-
+[RiTa](https://rednoise.org/rita/index.php)
+: Software toolkit for computational literature
+[Twine](http://twinery.org/)
+: Open-source tool for telling interactive, nonlinear stories.
 [Coding Train: Context-Free Grammar](https://www.youtube.com/watch?v=Rhqk9HYiB7Q)
 : Daniel Shiffman talks about context-free grammars, Tracery, and RiTa
 [Coding Train: Context-Free Challenge](https://www.youtube.com/watch?v=8Z9FRiW2Jlc)
