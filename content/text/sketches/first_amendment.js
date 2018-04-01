@@ -1,6 +1,8 @@
 injectInterface();
-const button = document.getElementById("submit");
-button.addEventListener('click', buildTemplate);
+const submitButton = document.getElementById("submit");
+submitButton.addEventListener('click', buildTemplate);
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener('click', reset);
 
 
 function buildTemplate() {
@@ -19,8 +21,21 @@ function buildTemplate() {
     to petition the government for a ${noun4}.`
 
     const outputDiv = document.getElementById('output');
+    const inputDiv = document.getElementById('input');
 
-    outputDiv.textContent = amendment;
+    inputDiv.classList.add("hidden");
+    outputDiv.classList.remove("hidden");
+
+    const messageDiv = document.getElementById('message');
+    messageDiv.innerText = amendment;
+}
+
+function reset() {
+    const outputDiv = document.getElementById('output');
+    const inputDiv = document.getElementById('input');
+
+    inputDiv.classList.remove("hidden");
+    outputDiv.classList.add("hidden");
 }
 
 
@@ -30,37 +45,53 @@ function injectInterface() {
 <style>
 body {
     font-family: "Overpass Mono", sans-serif;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.input, .output {
-    margin-bottom: 40px;
-    
-    
+
+#input,
+#output
+{
+    font-size: 22px;
 }
-.input input {
+
+#output
+{
+    width: 600px;
+}
+
+#message {
+    margin-bottom: 30px;
+}
+#input input {
     border: 1px solid black;
     padding: 5px;
     font-size: 18px;
     margin-bottom: 10px;
+    width: 250px;
 }
 
-
-.input label {
+#input label {
     font-size: 12px;
     width: 150px;
     display: inline-block;
 }
 
-.input button {
+button {
     font-family: "Overpass Mono", sans-serif;
     font-size: 12px;
     background: white;
+}
+
+.hidden {
+   display: none;
 }
 </style>
 `);
 
     document.body.insertAdjacentHTML('beforeend', `
-<div class="input">
+<div id="input">
     <div><label>abstract noun</label><input id="noun1"></div>
     <div><label>abstract noun</label><input id="noun2"></div>
     <div><label>collective noun</label><input id="noun3"></div>
@@ -69,7 +100,9 @@ body {
     <div><label>verb</label><input id="verb1"></div>
     <div><label></label><button id="submit">submit</button></div>
 </div>
-<div id="output" class="output">
+<div id="output" class="hidden">
+    <div id="message"></div>
+    <button id="reset">reset</button>
 </div>
 `);
 }

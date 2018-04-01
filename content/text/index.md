@@ -66,41 +66,58 @@ software: p5.js
 : A easy to use twitterbot generator using the Tracery.
 
 
-## Computational Text Tactics
-
-## Templates
+## String Templates
 
 String templating is basic but powerful tool for building text procedurally. If you have every completed a [Mad Lib](http://www.madlibs.com/) fill-in-the-blank story, you've worked with string templates. 
 
-king
-lonely
-The ___ is ___.
-
-Memory
-Nested templates
-
-
-
-
 ::: .activity
 ## Make an Amendment!
+This demo populates a template with the words you provide to generate a new constitutional amendment. <br/><br/> [view source](http://localhost:3000/js_lab/js_lab.html?/text/sketches/first_amendment.js)
+ 
 
 ::: js-show
 /text/sketches/first_amendment.js
 /::
 
-[source](http://localhost:3000/js_lab/js_lab.html?/text/sketches/first_amendment.js)
 
 /::
 
 
+### Template Example
+
+::: js-lab
+/text/sketches/title/title.js
+/::
+
 ## Markov Chains
 
-[Markov Chains](https://en.wikipedia.org/wiki/Markov_chain)
+[Markov chains](https://en.wikipedia.org/wiki/Markov_chain)
+ produce sequences by choosing each item based on the previous item and a table of weighted options. This table can be trained on examples, allowing Markov chains to mimic different styles. Markov chains are a useful tool for procedurally generating anything that can be represented as a sequence including text, music, and events. 
+
+
+
 
 ::: .activity
 ## Markov Chain
 Explore the Markov Chain algorithm with paper and pencil using this worksheet.
+
+### Build the Model
+The right side of the worksheet lists every word that occurs in the Dr. Suess poem. These are the "keys". Find every occurrence of each key in the poem. Write the following word in the corresponding box. Do not skip repeats.
+
+### Generate Text
+Choose a random word from the keys. Write it down. Choose a word at random from corresponding box, and write it down. Continue this process, choosing each word based on the previous one.
+
+<br/>
+
+::: .boxed .download
+<a href="../handouts/markov.svg" download>markov.svg</a>
+/::
+
+/::
+
+### Markov Chain Example
+::: js-lab
+/text/sketches/markov.js
 /::
 
 
@@ -139,24 +156,6 @@ HTML is text, so Tracery can generate HTML!
 
 
 
-
-## Implementing String Templates
-
-string templates
-lodash shuffle
-lodash sample
-
-Basic
-Title Generator
-Life Expectancy
-
-## Implementing Markov Chains
-
-Markov Chain
-
-
-
-
 ::: .assignment
 
 ## Keep Sketching!
@@ -191,11 +190,15 @@ Ideally, your story should:
 
 [RiTa](https://rednoise.org/rita/index.php)
 : Software toolkit for computational literature
+
 [Twine](http://twinery.org/)
 : Open-source tool for telling interactive, nonlinear stories.
+
 [Coding Train: Context-Free Grammar](https://www.youtube.com/watch?v=Rhqk9HYiB7Q)
-: Daniel Shiffman talks about context-free grammars, Tracery, and RiTa
+: Daniel Shiffman talks about context-free grammars, Tracery, and RiTa.
+
 [Coding Train: Context-Free Challenge](https://www.youtube.com/watch?v=8Z9FRiW2Jlc)
 : Daniel Shiffman builds a small context-free grammar from scratch.
+
 [Wikipedia: L-Systems](https://en.wikipedia.org/wiki/L-system)
 : L-systems are a type of formal grammar often used in procedural graphics generation.
