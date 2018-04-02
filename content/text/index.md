@@ -17,13 +17,62 @@ software: p5.js
 
 ## Computational Text
 
-[ text is still relevant and powerful form of communication ]
+Procedural generation can be used to create form in almost any media: image, video, animation, sound, sculpture. The chapter introduces some tactics for procedurally generating text, which may be the media most often computationally generated. Web pages are built out of text, and most of the time this text is computationally generated at least to some degree. 
 
-[ web pages written in html, and are largely text. a great deal of the content we read online is algorithmicly assembled text. some of it is fully algorithmically generated. ]
+::: .links-sidebar
+[Google:<br/>How search works.](https://www.google.com/search/howsearchworks/)
+://
 
+Google uses programs to crawl the web, collecting a database of information about every page. When you perform a search, another program searches this database for relevant information. This information is then carefully excerpted, summarized, formatted, and collated. The resulting web page is built on the fly and sent to your browser for your to read.
+
+Social media sites like Facebook and Twitter are software systems for collecting and sharing user created content, largely text. Even websites primarily concerned with other media, like YouTube and Instagram, must generate HTML text to showcase their videos and images.
+
+### The Imitation Game
+
+Search engines and social media sites are certainly procedurally generating text, but for the most part they are not generating _content_. Few would argue that they are being truly _creative_. Many have argued that computers not capable of true creativity.
+
+> Not until a machine can write a sonnet or compose a concerto because of thoughts and emotions felt, and not by the chance fall of symbols, could we agree that machine equals brain—that is, not only write it but know that it had written it. No mechanism could feel (and not merely artificially signal, an easy contrivance) pleasure at its successes, grief when its valves fuse, be warmed by flattery, be made miserable by its mistakes, be charmed by sex, be angry or depressed when it cannot get what it wants.
+
+Geoffrey Jefferson{attrib}
+
+In 1950, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) addressed this argument and several others in [Computing Machinery and Intelligence](https://home.manhattan.edu/~tina.tian/CMPT420/Turing.pdf), in which he considered the question "Can machines think?" Rather than answering that question directly, Turing proposes a an _imitation game_, often referred to as the Turing Test, which challenges a machine to imitate a human over "a teleprinter communicating between two rooms". He asks wether a machines could do well enough that a human interrogator would be unable to tell such a machine from an actual human. He argues that passing such a test would actually be harder than thinking, after all a human can certainly think but could not convincingly imitate a computer. 
+
+Creativity can be expressed in many media, but perhaps as a consequence of the Turing Test using verbal communication, artificial creativity is particularly associated text generation. 
+
+### Generating Language 
 
 [[ many tactics, but we're going to focus on three. ]]
 
+
+Procedurally generated text content isn't that hard to find though. 
+
+long history and _very_ active area of research today.
+
+
+Natural-language processing and natural-language generation
+Natural language processing, [[automatic summarization, translation, question answering, sentiment analysis]] is an area of active research, and [free tools](https://www.textcompactor.com/) are available online.
+
+machine learning
+
+markov chains, grammars, templates
+
+
+Classic
+
+In 1964 Joseph Weizenbaum created [ELIZA](https://en.wikipedia.org/wiki/ELIZA), a therapist chatbot that you can still [talk to today](http://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm). 
+
+Siri and Alexa. 
+ 
+The Associated Press procedurally generates [college sports coverage](https://www.ap.org/press-releases/2015/ap-ncaa-to-grow-college-sports-coverage-with-automated-game-stories) and  [corporate earnings reports](https://blog.ap.org/announcements/automated-earnings-stories-multiply). 
+
+[hotel descriptions](https://wordsmith.automatedinsights.com/gallery/hotel-descriptions)
+
+Spam
+
+the [primary] media for exploring the potential of computer programing to not just mimic creative output but genenuinely exhibit creativity.
+
+
+turing test
 
 ### Examples of Computational Text
 
@@ -34,8 +83,8 @@ software: p5.js
 : Curated collection "outstanding examples of visual and interactive journalism".
 
 
-[Subreddit Simulator](https://www.reddit.com/r/SubredditSimulator/), [Explination](https://www.reddit.com/r/SubredditSimulator/comments/3g9ioz/what_is_rsubredditsimulator/)
-: The Subreddit Simulator is a subreddit populated entirely by bots using Markov Chains trained on posts made across reddit.
+[Subreddit Simulator](https://www.reddit.com/r/SubredditSimulator/), [Explanation](https://www.reddit.com/r/SubredditSimulator/comments/3g9ioz/what_is_rsubredditsimulator/)
+: The Subreddit Simulator is a subreddit populated entirely by bots using Markov Chains trained on posts made across Reddit.
 
 [NYT: The little girl/boy who lost her/his name.](https://www.nytimes.com/2015/12/23/business/media/personalizing-books-via-robot.html?_r=0)
 : NYT covers a custom, made-to-order children's book.
@@ -64,6 +113,29 @@ software: p5.js
 
 [Cheap Bots, Done Quick!](https://cheapbotsdonequick.com/)
 : A easy to use twitterbot generator using the Tracery.
+
+
+
+
+
+
+
+
+### Generating other Media via Text
+Generating text can be part of the process for generating form in other media as well. The structure of a webpage is defined in [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML). The layout and style is defined in [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS). [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) is a popular format for defining vector images. The [ABC](https://en.wikipedia.org/wiki/ABC_notation) and [JAM](https://en.wikipedia.org/wiki/JAM_notation) formats represent music. Three-dimensional objects can be represented in [OBJ](https://en.wikipedia.org/wiki/Wavefront_.obj_file) files. **All of these formats are plain text files.** Thinking about these media in terms of the text files that can represent them provides an unusual point of view and can lead to novel approaches to generating form.
+
+
+### Programs that Write Programs 
+Most programming languages are themselves text based. Programs that generate programs are common and important computing tools. [Compilers](https://en.wikipedia.org/wiki/Compiler) are programs that rewrite code from one language to another. GUI coding environments like [Blocky](https://blockly-demo.appspot.com/static/demos/generator/index.html) and [makecode](https://makecode.adafruit.com/#editor) generate corresponding JavaScript. Interface builders like Xcode generate code scaffolding to be further developed manually.
+
+[[Programs that Write Programs is a section title in the wonderful book The Practice of Programming.]]
+
+
+
+
+
+
+
 
 
 ## String Templates
@@ -102,7 +174,7 @@ This demo populates a template with the words you provide to generate a new cons
 Explore the Markov Chain algorithm with paper and pencil using this worksheet.
 
 ### Build the Model
-The right side of the worksheet lists every word that occurs in the Dr. Suess poem. These are the "keys". Find every occurrence of each key in the poem. Write the following word in the corresponding box. Do not skip repeats.
+The right side of the worksheet lists every word that occurs in the Dr. Seuss poem. These are the "keys". Find every occurrence of each key in the poem. Write the following word in the corresponding box. Do not skip repeats.
 
 ### Generate Text
 Choose a random word from the keys. Write it down. Choose a word at random from corresponding box, and write it down. Continue this process, choosing each word based on the previous one.
@@ -202,3 +274,7 @@ Ideally, your story should:
 
 [Wikipedia: L-Systems](https://en.wikipedia.org/wiki/L-system)
 : L-systems are a type of formal grammar often used in procedural graphics generation.
+
+
+
+http://recursivedrawing.com/draw.html

@@ -7,17 +7,44 @@
 <polygon points="96,64 80,91.7 112,91.7"/>
 </svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Text</span><div class="buttons"><a class="previous" href="../animation"><i class="fa fa-caret-left fa-lg"></i>Animation</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Text</h1><h6>Overview</h6><p class="description">...</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><!-- [[ leah, want to take a crack at the hero desc? again? ]] -->
 <h2 id="computational-text">Computational Text</h2>
-<p>[ text is still relevant and powerful form of communication ]</p>
-<p>[ web pages written in html, and are largely text. a great deal of the content we read online is algorithmicly assembled text. some of it is fully algorithmically generated. ]</p>
+<p>Procedural generation can be used to create form in almost any media: image, video, animation, sound, sculpture. The chapter introduces some tactics for procedurally generating text, which may be the media most often computationally generated. Web pages are built out of text, and most of the time this text is computationally generated at least to some degree.</p>
+<p>::: .links-sidebar
+<a href="https://www.google.com/search/howsearchworks/">Google:<br/>How search works.</a>
+://</p>
+<p>Google uses programs to crawl the web, collecting a database of information about every page. When you perform a search, another program searches this database for relevant information. This information is then carefully excerpted, summarized, formatted, and collated. The resulting web page is built on the fly and sent to your browser for your to read.</p>
+<p>Social media sites like Facebook and Twitter are software systems for collecting and sharing user created content, largely text. Even websites primarily concerned with other media, like YouTube and Instagram, must generate HTML text to showcase their videos and images.</p>
+<h3 id="the-imitation-game">The Imitation Game</h3>
+<p>Search engines and social media sites are certainly procedurally generating text, but for the most part they are not generating <em>content</em>. Few would argue that they are being truly <em>creative</em>. Many have argued that computers not capable of true creativity.</p>
+<blockquote>
+<p>Not until a machine can write a sonnet or compose a concerto because of thoughts and emotions felt, and not by the chance fall of symbols, could we agree that machine equals brain—that is, not only write it but know that it had written it. No mechanism could feel (and not merely artificially signal, an easy contrivance) pleasure at its successes, grief when its valves fuse, be warmed by flattery, be made miserable by its mistakes, be charmed by sex, be angry or depressed when it cannot get what it wants.</p>
+</blockquote>
+<p class="attrib">Geoffrey Jefferson</p>
+<p>In 1950, <a href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</a> addressed this argument and several others in <a href="https://home.manhattan.edu/~tina.tian/CMPT420/Turing.pdf">Computing Machinery and Intelligence</a>, in which he considered the question “Can machines think?” Rather than answering that question directly, Turing proposes a an <em>imitation game</em>, often referred to as the Turing Test, which challenges a machine to imitate a human over “a teleprinter communicating between two rooms”. He asks wether a machines could do well enough that a human interrogator would be unable to tell such a machine from an actual human. He argues that passing such a test would actually be harder than thinking, after all a human can certainly think but could not convincingly imitate a computer.</p>
+<p>Creativity can be expressed in many media, but perhaps as a consequence of the Turing Test using verbal communication, artificial creativity is particularly associated text generation.</p>
+<h3 id="generating-language">Generating Language</h3>
 <p>[[ many tactics, but we’re going to focus on three. ]]</p>
+<p>Procedurally generated text content isn’t that hard to find though.</p>
+<p>long history and <em>very</em> active area of research today.</p>
+<p>Natural-language processing and natural-language generation
+Natural language processing, [[automatic summarization, translation, question answering, sentiment analysis]] is an area of active research, and <a href="https://www.textcompactor.com/">free tools</a> are available online.</p>
+<p>machine learning</p>
+<p>markov chains, grammars, templates</p>
+<p>Classic</p>
+<p>In 1964 Joseph Weizenbaum created <a href="https://en.wikipedia.org/wiki/ELIZA">ELIZA</a>, a therapist chatbot that you can still <a href="http://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm">talk to today</a>.</p>
+<p>Siri and Alexa.</p>
+<p>The Associated Press procedurally generates <a href="https://www.ap.org/press-releases/2015/ap-ncaa-to-grow-college-sports-coverage-with-automated-game-stories">college sports coverage</a> and  <a href="https://blog.ap.org/announcements/automated-earnings-stories-multiply">corporate earnings reports</a>.</p>
+<p><a href="https://wordsmith.automatedinsights.com/gallery/hotel-descriptions">hotel descriptions</a></p>
+<p>Spam</p>
+<p>the [primary] media for exploring the potential of computer programing to not just mimic creative output but genenuinely exhibit creativity.</p>
+<p>turing test</p>
 <h3 id="examples-of-computational-text">Examples of Computational Text</h3>
 <dl>
 <dt><a href="https://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html">NYT: The Best and Worst Places to Grow Up</a></dt>
 <dd>This fantastic NYT piece looks at how income is impacted by where someone grows up. To make the information relatable the story adapts itself based on the location of the reader.</dd>
 <dt><a href="https://github.com/wbkd/awesome-interactive-journalism">Interactive Journalism</a></dt>
 <dd>Curated collection “outstanding examples of visual and interactive journalism”.</dd>
-<dt><a href="https://www.reddit.com/r/SubredditSimulator/">Subreddit Simulator</a>, <a href="https://www.reddit.com/r/SubredditSimulator/comments/3g9ioz/what_is_rsubredditsimulator/">Explination</a></dt>
-<dd>The Subreddit Simulator is a subreddit populated entirely by bots using Markov Chains trained on posts made across reddit.</dd>
+<dt><a href="https://www.reddit.com/r/SubredditSimulator/">Subreddit Simulator</a>, <a href="https://www.reddit.com/r/SubredditSimulator/comments/3g9ioz/what_is_rsubredditsimulator/">Explanation</a></dt>
+<dd>The Subreddit Simulator is a subreddit populated entirely by bots using Markov Chains trained on posts made across Reddit.</dd>
 <dt><a href="https://www.nytimes.com/2015/12/23/business/media/personalizing-books-via-robot.html?_r=0">NYT: The little girl/boy who lost her/his name.</a></dt>
 <dd>NYT covers a custom, made-to-order children’s book.</dd>
 <dt><a href="https://www.reddit.com/r/proceduralgeneration/comments/4bhohq/more_animal_fun/">More Animal Fun…</a></dt>
@@ -35,6 +62,11 @@
 <dt><a href="https://cheapbotsdonequick.com/">Cheap Bots, Done Quick!</a></dt>
 <dd>A easy to use twitterbot generator using the Tracery.</dd>
 </dl>
+<h3 id="generating-other-media-via-text">Generating other Media via Text</h3>
+<p>Generating text can be part of the process for generating form in other media as well. The structure of a webpage is defined in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>. The layout and style is defined in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>. <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a> is a popular format for defining vector images. The <a href="https://en.wikipedia.org/wiki/ABC_notation">ABC</a> and <a href="https://en.wikipedia.org/wiki/JAM_notation">JAM</a> formats represent music. Three-dimensional objects can be represented in <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">OBJ</a> files. <strong>All of these formats are plain text files.</strong> Thinking about these media in terms of the text files that can represent them provides an unusual point of view and can lead to novel approaches to generating form.</p>
+<h3 id="programs-that-write-programs">Programs that Write Programs</h3>
+<p>Most programming languages are themselves text based. Programs that generate programs are common and important computing tools. <a href="https://en.wikipedia.org/wiki/Compiler">Compilers</a> are programs that rewrite code from one language to another. GUI coding environments like <a href="https://blockly-demo.appspot.com/static/demos/generator/index.html">Blocky</a> and <a href="https://makecode.adafruit.com/#editor">makecode</a> generate corresponding JavaScript. Interface builders like Xcode generate code scaffolding to be further developed manually.</p>
+<p>[[Programs that Write Programs is a section title in the wonderful book The Practice of Programming.]]</p>
 <h2 id="string-templates">String Templates</h2>
 <p>String templating is basic but powerful tool for building text procedurally. If you have every completed a <a href="http://www.madlibs.com/">Mad Lib</a> fill-in-the-blank story, you’ve worked with string templates.</p>
 <div id="" class="activity">
@@ -61,7 +93,7 @@ produce sequences by choosing each item based on the previous item and a table o
 <h2 id="markov-chain">Markov Chain</h2>
 <p>Explore the Markov Chain algorithm with paper and pencil using this worksheet.</p>
 <h3 id="build-the-model">Build the Model</h3>
-<p>The right side of the worksheet lists every word that occurs in the Dr. Suess poem. These are the “keys”. Find every occurrence of each key in the poem. Write the following word in the corresponding box. Do not skip repeats.</p>
+<p>The right side of the worksheet lists every word that occurs in the Dr. Seuss poem. These are the “keys”. Find every occurrence of each key in the poem. Write the following word in the corresponding box. Do not skip repeats.</p>
 <h3 id="generate-text">Generate Text</h3>
 <p>Choose a random word from the keys. Write it down. Choose a word at random from corresponding box, and write it down. Continue this process, choosing each word based on the previous one.</p>
 <br/>
@@ -136,4 +168,5 @@ produce sequences by choosing each item based on the previous item and a table o
 <dt><a href="https://en.wikipedia.org/wiki/L-system">Wikipedia: L-Systems</a></dt>
 <dd>L-systems are a type of formal grammar often used in procedural graphics generation.</dd>
 </dl>
+<p><a href="http://recursivedrawing.com/draw.html">http://recursivedrawing.com/draw.html</a></p>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>
