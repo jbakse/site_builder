@@ -4,7 +4,7 @@ const storyGrammar = {
     "story": ["First, #phrase#. Then, #phrase#. Finally, #phrase#, and #phrase#."],
     "phrase": ["#subject.a# #verb# #object.a#"],
     "subject": ["#noun#", "#adjective# #noun#"],
-    "object": ["#noun#", "#adjective# #noun#", "#adjective# #noun# and #adverb# #adjective# #noun#"],
+    "object": ["#noun#", "#adjective# #noun#", "#adjective# #noun# and #adverb.a# #adjective# #noun#"],
     "adverb": ["exceptionally", "somewhat"],
     "adjective": ["proud", "small", "forgetful", "handsome", "comical", "wild"],
     "noun": ["cat", "dog", "frog", "duck"],
@@ -25,4 +25,3 @@ function main() {
 
 
 setTimeout(main, 10);
-

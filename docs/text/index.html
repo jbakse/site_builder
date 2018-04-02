@@ -5,68 +5,58 @@
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Text</span><div class="buttons"><a class="previous" href="../animation"><i class="fa fa-caret-left fa-lg"></i>Animation</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Text</h1><h6>Overview</h6><p class="description">...</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><!-- [[ leah, want to take a crack at the hero desc? again? ]] -->
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Text</span><div class="buttons"><a class="previous" href="../animation"><i class="fa fa-caret-left fa-lg"></i>Animation</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Text</h1><h6>Overview</h6><p class="description">Generate strings with templates, Markov chains, and context free grammars.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><!-- [[ leah, want to take a crack at the hero desc? again? ]] -->
 <h2 id="computational-text">Computational Text</h2>
 <p>Procedural generation can be used to create form in almost any media: image, video, animation, sound, sculpture. The chapter introduces some tactics for procedurally generating text, which may be the media most often computationally generated. Web pages are built out of text, and most of the time this text is computationally generated at least to some degree.</p>
-<p>::: .links-sidebar
-<a href="https://www.google.com/search/howsearchworks/">Google:<br/>How search works.</a>
-://</p>
+<div id="" class="links-sidebar">
+<p><a href="https://www.google.com/search/howsearchworks/">Google:<br/>How search works.</a></p>
+</div>
 <p>Google uses programs to crawl the web, collecting a database of information about every page. When you perform a search, another program searches this database for relevant information. This information is then carefully excerpted, summarized, formatted, and collated. The resulting web page is built on the fly and sent to your browser for your to read.</p>
 <p>Social media sites like Facebook and Twitter are software systems for collecting and sharing user created content, largely text. Even websites primarily concerned with other media, like YouTube and Instagram, must generate HTML text to showcase their videos and images.</p>
 <h3 id="the-imitation-game">The Imitation Game</h3>
-<p>Search engines and social media sites are certainly procedurally generating text, but for the most part they are not generating <em>content</em>. Few would argue that they are being truly <em>creative</em>. Many have argued that computers not capable of true creativity.</p>
+<p>Search engines and social media sites are certainly procedurally generating text, but for the most part they are not generating <em>content</em>. Few would argue that these sites are being truly <em>creative</em>. In fact, many have argued that computers not capable of true creativity at all.</p>
 <blockquote>
 <p>Not until a machine can write a sonnet or compose a concerto because of thoughts and emotions felt, and not by the chance fall of symbols, could we agree that machine equals brain—that is, not only write it but know that it had written it. No mechanism could feel (and not merely artificially signal, an easy contrivance) pleasure at its successes, grief when its valves fuse, be warmed by flattery, be made miserable by its mistakes, be charmed by sex, be angry or depressed when it cannot get what it wants.</p>
 </blockquote>
 <p class="attrib">Geoffrey Jefferson</p>
-<p>In 1950, <a href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</a> addressed this argument and several others in <a href="https://home.manhattan.edu/~tina.tian/CMPT420/Turing.pdf">Computing Machinery and Intelligence</a>, in which he considered the question “Can machines think?” Rather than answering that question directly, Turing proposes a an <em>imitation game</em>, often referred to as the Turing Test, which challenges a machine to imitate a human over “a teleprinter communicating between two rooms”. He asks wether a machines could do well enough that a human interrogator would be unable to tell such a machine from an actual human. He argues that passing such a test would actually be harder than thinking, after all a human can certainly think but could not convincingly imitate a computer.</p>
-<p>Creativity can be expressed in many media, but perhaps as a consequence of the Turing Test using verbal communication, artificial creativity is particularly associated text generation.</p>
+<p>In 1950, <a href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</a> addressed this argument and several others in <a href="https://home.manhattan.edu/~tina.tian/CMPT420/Turing.pdf">Computing Machinery and Intelligence</a>, in which he considered the question “Can machines think?” Rather than answering the question directly, Turing proposes a an <em>imitation game</em>, often referred to as the Turing Test, which challenges a machine to imitate a human over “a teleprinter communicating between two rooms”. He asks wether a machines could do well enough that a human interrogator would be unable to tell such a machine from an actual human. He argues that passing such a test would actually be harder than thinking, after all a human can certainly think but could not convincingly imitate a computer.</p>
 <h3 id="generating-language">Generating Language</h3>
-<p>[[ many tactics, but we’re going to focus on three. ]]</p>
-<p>Procedurally generated text content isn’t that hard to find though.</p>
-<p>long history and <em>very</em> active area of research today.</p>
-<p>Natural-language processing and natural-language generation
-Natural language processing, [[automatic summarization, translation, question answering, sentiment analysis]] is an area of active research, and <a href="https://www.textcompactor.com/">free tools</a> are available online.</p>
-<p>machine learning</p>
-<p>markov chains, grammars, templates</p>
-<p>Classic</p>
-<p>In 1964 Joseph Weizenbaum created <a href="https://en.wikipedia.org/wiki/ELIZA">ELIZA</a>, a therapist chatbot that you can still <a href="http://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm">talk to today</a>.</p>
-<p>Siri and Alexa.</p>
-<p>The Associated Press procedurally generates <a href="https://www.ap.org/press-releases/2015/ap-ncaa-to-grow-college-sports-coverage-with-automated-game-stories">college sports coverage</a> and  <a href="https://blog.ap.org/announcements/automated-earnings-stories-multiply">corporate earnings reports</a>.</p>
-<p><a href="https://wordsmith.automatedinsights.com/gallery/hotel-descriptions">hotel descriptions</a></p>
-<p>Spam</p>
-<p>the [primary] media for exploring the potential of computer programing to not just mimic creative output but genenuinely exhibit creativity.</p>
-<p>turing test</p>
-<h3 id="examples-of-computational-text">Examples of Computational Text</h3>
+<p>Creativity can be expressed in many media, but—perhaps as a consequence of the Turing Test using verbal communication—artificial creativity is often explored in the context of natural-language text generation. This chapter introduces three common and accessible text generation tactics: string templating, Markov chains, and context-free grammars. These techniques focus on <strong>syntax</strong>*—the patterns and structure of language—without much concern for <strong>semantics</strong>, the underlying meaning expressed. Natural-language processing and natural-language generation are areas of active research with numerous sub-fields including automatic summarization, translation, question answering, and sentiment analysis. Much of this research is focused on semantics, knowledge, and understanding and often approaches these problems with machine learning.</p>
+<p>The following projects explore many areas related to generative text:</p>
+<h4 id="content-generators">Content Generators</h4>
+<dl>
+<dt><a href="https://www.reddit.com/r/SubredditSimulator/">Subreddit Simulator</a>, <a href="https://www.reddit.com/r/SubredditSimulator/comments/3g9ioz/what_is_rsubredditsimulator/">Explanation</a></dt>
+<dd>The Subreddit Simulator is a subreddit populated entirely by bots using Markov Chains trained on posts made across Reddit.</dd>
+<dt><a href="https://github.com/NaNoGenMo/2017">NaNoGenMo 2017</a></dt>
+<dd>Annual competition to procedurally generate a 50,000 word novel.</dd>
+<dt><a href="http://orteil.dashnet.org/gamegen">Indie Game Generator</a>, <a href="https://applepinegames.com/tech/steam-game-generator">Another Indie Game Generator</a></dt>
+<dd>Instant pitches for your next game project.</dd>
+<dt><a href="https://twitter.com/pentametron?lang=en">Pentametron</a></dt>
+<dd>A twitter bot that pairs up tweets to create couplets in iambic pentameter.</dd>
+</dl>
+<h4 id="procedural-journalism">Procedural Journalism</h4>
 <dl>
 <dt><a href="https://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html">NYT: The Best and Worst Places to Grow Up</a></dt>
 <dd>This fantastic NYT piece looks at how income is impacted by where someone grows up. To make the information relatable the story adapts itself based on the location of the reader.</dd>
 <dt><a href="https://github.com/wbkd/awesome-interactive-journalism">Interactive Journalism</a></dt>
 <dd>Curated collection “outstanding examples of visual and interactive journalism”.</dd>
-<dt><a href="https://www.reddit.com/r/SubredditSimulator/">Subreddit Simulator</a>, <a href="https://www.reddit.com/r/SubredditSimulator/comments/3g9ioz/what_is_rsubredditsimulator/">Explanation</a></dt>
-<dd>The Subreddit Simulator is a subreddit populated entirely by bots using Markov Chains trained on posts made across Reddit.</dd>
 <dt><a href="https://www.nytimes.com/2015/12/23/business/media/personalizing-books-via-robot.html?_r=0">NYT: The little girl/boy who lost her/his name.</a></dt>
 <dd>NYT covers a custom, made-to-order children’s book.</dd>
-<dt><a href="https://www.reddit.com/r/proceduralgeneration/comments/4bhohq/more_animal_fun/">More Animal Fun…</a></dt>
-<dd><a href="https://www.reddit.com/r/proceduralgeneration">r/ProceduralGeneration</a> post of animal names invented by an algorithm.</dd>
-<dt><a href="https://github.com/NaNoGenMo/2017">NaNoGenMo 2017</a></dt>
-<dd>Annual competition to procedurally generate a 50,000 word novel.</dd>
-<dt><a href="http://orteil.dashnet.org/gamegen">Indie Game Generator</a>, <a href="https://applepinegames.com/tech/steam-game-generator">Another Indie Game Generator</a></dt>
-<dd>Instant pitches for your next game project.</dd>
-<dt><a href="https://twitter.com/pentametron?lang=en">Pentametron</a>, <a href="https://twitter.com/greatartbot">GreatArtBot</a>, <a href="http://barrl.net/2748">ThinkPieceBot</a></dt>
-<dd>A twitter bot that pairs up tweets to create couplets in iambic pentameter. Another that generates low resolution art. A third that generates essay titles.</dd>
+<dt>Associated Press</dt>
+<dd>The Associated Press procedurally generates <a href="https://www.ap.org/press-releases/2015/ap-ncaa-to-grow-college-sports-coverage-with-automated-game-stories">college sports coverage</a> and  <a href="https://blog.ap.org/announcements/automated-earnings-stories-multiply">corporate earnings reports</a>.</dd>
+</dl>
+<h4 id="bots">Bots</h4>
+<dl>
+<dt><a href="https://en.wikipedia.org/wiki/ELIZA">ELIZA</a></dt>
+<dd>In 1964 Joseph Weizenbaum created ELIZA, a therapist chatbot that you can still <a href="http://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm">talk to today</a>.</dd>
 <dt><a href="https://en.wikipedia.org/wiki/Tay_(bot)">Tay</a>, <a href="http://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist">Verge covers Tay</a></dt>
 <dd>Tay was an AI twitterbot created my Microsoft and launched on March 23, 2016. Less than a day later, it was shut down after posting many controversial, inflammatory, and racist tweets.</dd>
-<dt><a href="https://github.com/galaxykate/tracery">Tracery</a>, <a href="https://www.gdcvault.com/play/1023377/Tech">Tracery Talk (16:16)</a></dt>
-<dd>Tracery is an easy to use generative grammar system developed by <a href="http://www.galaxykate.com/">Kate Compton</a></dd>
-<dt><a href="https://cheapbotsdonequick.com/">Cheap Bots, Done Quick!</a></dt>
-<dd>A easy to use twitterbot generator using the Tracery.</dd>
 </dl>
 <h3 id="generating-other-media-via-text">Generating other Media via Text</h3>
-<p>Generating text can be part of the process for generating form in other media as well. The structure of a webpage is defined in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>. The layout and style is defined in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>. <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a> is a popular format for defining vector images. The <a href="https://en.wikipedia.org/wiki/ABC_notation">ABC</a> and <a href="https://en.wikipedia.org/wiki/JAM_notation">JAM</a> formats represent music. Three-dimensional objects can be represented in <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">OBJ</a> files. <strong>All of these formats are plain text files.</strong> Thinking about these media in terms of the text files that can represent them provides an unusual point of view and can lead to novel approaches to generating form.</p>
+<p>Generating text can be a step in the process for generating form in other media. The structure of a webpage is defined in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>. The layout and style is defined in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>. <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a> is a popular format for defining vector images. The <a href="https://en.wikipedia.org/wiki/ABC_notation">ABC</a> and <a href="https://en.wikipedia.org/wiki/JAM_notation">JAM</a> formats represent music. Three-dimensional objects can be represented in <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">OBJ</a> files. <strong>All of these formats are plain text files.</strong></p>
+<p>You can thinking about these media in terms of the text files that represent them. This provides a fundamentally different point of view and can lead to novel approaches for generating form.</p>
 <h3 id="programs-that-write-programs">Programs that Write Programs</h3>
-<p>Most programming languages are themselves text based. Programs that generate programs are common and important computing tools. <a href="https://en.wikipedia.org/wiki/Compiler">Compilers</a> are programs that rewrite code from one language to another. GUI coding environments like <a href="https://blockly-demo.appspot.com/static/demos/generator/index.html">Blocky</a> and <a href="https://makecode.adafruit.com/#editor">makecode</a> generate corresponding JavaScript. Interface builders like Xcode generate code scaffolding to be further developed manually.</p>
-<p>[[Programs that Write Programs is a section title in the wonderful book The Practice of Programming.]]</p>
+<p>Most programming languages are themselves text based. Programs that generate programs are common and important computing tools. <a href="https://en.wikipedia.org/wiki/Compiler">Compilers</a> are programs that rewrite code from one language to another. GUI coding environments like <a href="https://blockly-demo.appspot.com/static/demos/generator/index.html">Blocky</a> and <a href="https://makecode.com/">MakeCode</a> generate corresponding JavaScript. Interface builders like the one in Xcode generate code scaffolding which can be added to manually. Of course, programs that write programs can also have more esoteric functions. A <a href="https://en.wikipedia.org/wiki/Quine_(computing)">Quine</a> is a program that generates a copy of itself.</p>
 <h2 id="string-templates">String Templates</h2>
 <p>String templating is basic but powerful tool for building text procedurally. If you have every completed a <a href="http://www.madlibs.com/">Mad Lib</a> fill-in-the-blank story, you’ve worked with string templates.</p>
 <div id="" class="activity">
@@ -79,10 +69,28 @@ Natural language processing, [[automatic summarization, translation, question an
 </div>
 </div>
 </div>
-<h3 id="template-example">Template Example</h3>
+<br/>
+<p>Since generating HTML strings is such a common problem in web development, there are many javascript libraries for working with string templates including <a href="https://mustache.github.io/">Mustache</a>, <a href="http://handlebarsjs.com/">Handlebars</a>, <a href="https://olado.github.io/doT/">doT</a>, <a href="http://underscorejs.org/">Underscore</a>, and <a href="https://pugjs.org/">Pug/Jade</a>.</p>
+<p>Starting with ES6, JavaScript has native support for string templates via <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>. Template literals are now <a href="http://kangax.github.io/compat-table/es6/">widely supported</a> in browsers without the need for a preprocessor.</p>
+<p>A JavaScript template literal is a string enclosed in back-ticks:</p>
+<pre><code class="language-javascript"><span class="hljs-string">`I am a <span class="hljs-subst">${noun}</span>!`</span>
+</code></pre>
+<p>The literal above has one placeholder: <code>${noun}</code>. When content of a placeholder is evaluated as a javascript expression and the result is inserted into the string.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">let</span> day = <span class="hljs-string">"Monday"</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`I ate <span class="hljs-subst">${<span class="hljs-number">2</span>*<span class="hljs-number">4</span>}</span> apples on <span class="hljs-subst">${day}</span>!`</span>);
+<span class="hljs-comment">// I ate 8 apples on Monday!</span>
+</code></pre>
+<p>The examples below demonstrates using JavaScript template literals.</p>
+<h3 id="template-examples">Template Examples</h3>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/text/sketches/title/title.js">
+</iframe>
+</div>
+</div>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/text/sketches/death/death.js">
 </iframe>
 </div>
 </div>
@@ -117,9 +125,9 @@ produce sequences by choosing each item based on the previous item and a table o
 <p>This isn’t proper html. The <code>b</code> tag should be closed before the the <code>div</code> tag.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Hello, World!<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
-<p>HTML is text, and it can be represented by a text string. But not all text strings are valid HTML, because in HTML the order of the characters is meaningful. HTML is a <a href="https://en.wikipedia.org/wiki/Formal_language">formal language</a> and it has a <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a>, a set of rules that define which sequences of characters are valid. Only strings that meet those rules can be properly understood by code that expects HTML.</p>
-<p><a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free grammars</a> are a subtype of formal grammars that are useful for generating text. A context-free grammar is a set of replacement rules. Each rule represents a legal replacement of one symbol with zero, one, or more other symbols. In a context-free grammar, these rules don’t consider the symbols before or after the symbol being replaced (the context).</p>
-<p>The following example demonstrates using a context-free grammar to generate a short story. This example uses <a href="https://github.com/galaxykate/tracery">Tracery</a>, created by Kate Compton](<a href="http://www.galaxykate.com/">http://www.galaxykate.com/</a>). The <a href="https://cheapbotsdonequick.com/">Cheap Bots, Done Quick</a> service lets you <a href="http://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots">make twitterbots</a> very quickly using Tracery.</p>
+<p>HTML is text, and it can be represented by a text string. But not all text strings are valid HTML. HTML is a <a href="https://en.wikipedia.org/wiki/Formal_language">formal language</a> and it has a <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a>, a set of rules that define which sequences of characters are valid. Only strings that meet those rules can be properly understood by code that expects HTML.</p>
+<p><a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free grammars</a> are a subtype of formal grammars that are useful for generating text. A context-free grammar is described as a set of replacement rules. Each rule represents a legal replacement of one symbol with zero, one, or more other symbols. In a context-free grammar, these rules don’t consider the symbols before or after the symbol being replaced (the context).</p>
+<p>The following example demonstrates using a context-free grammar to generate a short story. This example uses <a href="https://github.com/galaxykate/tracery">Tracery</a>, created by <a href="http://www.galaxykate.com/">Kate Compton</a>. The <a href="https://cheapbotsdonequick.com/">Cheap Bots, Done Quick</a> service lets you <a href="http://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots">make twitterbots</a> very quickly using Tracery. You can learn more about Tracery by watching this <a href="https://www.gdcvault.com/play/1023377/Tech">talk (16:16)</a> by Kate Compton.</p>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/text/sketches/tracery_example.js">
@@ -132,6 +140,34 @@ produce sequences by choosing each item based on the previous item and a table o
 <iframe class="js-lab" src="/js_lab/js_lab.html?/text/sketches/tracery_html.js">
 </iframe>
 </div>
+</div>
+<div id="" class="activity">
+<h2 id="in-class-challenge">In-class Challenge</h2>
+<p>Explore using Javascript Template literals by completing the following challenges.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/text/sketches/challenge.js">
+</iframe>
+</div>
+</div>
+<h3 id="modify-the-example-above">Modify the Example Above</h3>
+<ol>
+<li>Change the value of <code>person</code> to a different name.</li>
+<li>Change the value of <code>number</code> to a random integer between 0 and 100.</li>
+<li>Add a second sentence to the template with two new placeholders.</li>
+</ol>
+<h3 id="modify-the-example-above-some-more">Modify the Example Above Some More</h3>
+<ol class="continue">
+<li>Add an ‘s’ to ‘computer’ when <code>number</code> is not 1.</li>
+<li>Add this to your template. <code>The word &quot;${word}&quot; has ${letterCount} letters</code>.</li>
+<li>Create a variable for <code>word</code> set its value to a random word from a small list.</li>
+<li>Create a variable for <code>letterCount</code> and set its value to the number of letters in <code>word</code>.</li>
+</ol>
+<h3 id="challenging-challenges">Challenging Challenges</h3>
+<ol class="continue">
+<li>Instead of using <code>console.log()</code> to show the expanded template, inject the result into the webpage.</li>
+<li>Alter the program so that the dynamic parts of the template appear in bold.</li>
+</ol>
 </div>
 <div id="" class="assignment">
 <h2 id="keep-sketching">Keep Sketching!</h2>
@@ -168,5 +204,4 @@ produce sequences by choosing each item based on the previous item and a table o
 <dt><a href="https://en.wikipedia.org/wiki/L-system">Wikipedia: L-Systems</a></dt>
 <dd>L-systems are a type of formal grammar often used in procedural graphics generation.</dd>
 </dl>
-<p><a href="http://recursivedrawing.com/draw.html">http://recursivedrawing.com/draw.html</a></p>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>
