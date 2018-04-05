@@ -171,7 +171,7 @@ First `millis() % 500` converts the time from `0 → ∞` to `0 → 500, 0 → 5
 
 Periodic functions produce repeating values in regular intervals. They are very useful for creating rhythms in procedurally-generated animation. The modulus operator and `sin()` function are both periodic and are used in the examples above to produce steadily repeating animation.
 
-
+<!--
 ### Derivative Motion
 
 for simple things: position = f(time)
@@ -237,13 +237,22 @@ You can even stitch images in [Photoshop](https://www.adobe.com/products/photosh
 6. Adjust export settings.
 7. Click `Render`
 
+
+::: js-lab
+/animation/sketches/save_frames.js
+/::
+
+::: .full-width
 <video src="videos/render.mp4" poster="videos/render_0030.jpg" controls></video>
+/::
 
 You can even apply Photoshop effects in the bargain.
 
+::: .full-width
 <video src="videos/render_color.mp4" poster="videos/render_color_0030.jpg" controls></video>
+/::
 
-[Example Source](/js_lab/js_lab.html?/animation/sketches/save_frames.js)
+
 
 ::: .assignment
 

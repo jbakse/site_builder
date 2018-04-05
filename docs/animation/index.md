@@ -10,17 +10,17 @@ next:
 next_url: 
 
 hero_title: Animation
-description: Creating procedurally generated animation r
+description: Procedural generation can be used to describe motion in animations. In both pre-rendered and real-time animations, an unerstanding of frame rate and timing are crucial for generating satisfying motion graphics.
 software: p5.js
 ---
 <!-- [[ leah, want to take a crack at the hero desc? ]] -->
 
 ## Animation
-At heart, a procedurally generated animation is just a series of procedurally generated images. These images, called frames, are shown in quick succession, like a flipbook, to show motion. Creating a procedurally generated animation requires creating instructions for drawing each frame and how each frame should be different from the last.
+At heart, a procedurally-generated animation is just a series of procedurally-generated images. These images, called frames, are shown in quick succession—like a flipbook—to create motion. Making a procedurally-generated animation requires creating instructions to draw each frame and to describe how each frame should be different from the last.
 
 
 ### Frames Per Second
-Generally, faster frame rates produce smoother motion. Below about 10 frames per second, we tend to see a series of images as a series of images. Above 10, we begin to perceive a series of images as motion. Hand-drawn animation is often shown at 12 or 24 frames per second. Films are traditionally shot at 24 frames per second. Modern video games usually target 30 or 60 frames per second. Frame rates higher than 60 frames per second don't improve animation very much, but they are necessary for virtual reality. Virtual reality is more demanding than flat animation because it is trying to create an illusion of _presence_, not just motion. Current VR systems run at 90 frames per second.
+Generally, faster frame rates produce smoother motion. At rates below about 10 frames per second, we tend to see a series of images as a series of images. Above 10, we begin to perceive a series of images as motion. Hand-drawn animation is often shown at 12 or 24 frames per second. Films are traditionally shot at 24 frames per second. Modern video games usually target 30 or 60 frames per second. Frame rates higher than 60 frames per second don't improve animation very much, but they are necessary for virtual reality. Virtual reality is more demanding than flat animation because it is trying to create an illusion of _presence_, not just motion. Current VR systems run at 90 frames per second.
 
 
 ::: js-show .aspect-4-1 .no-margin
@@ -36,7 +36,7 @@ In **pre-rendered** animation, all the frames are created ahead of time. In **re
 
 Real-time rendering needs to be done quickly. To render an animation at 30 frames per second, each frame must be generated in 33 milliseconds or less. To render VR at 90 frames per second, two frames—one for each eye—must be rendered in 10 milliseconds. In exchange for limiting how much time can be spent rendering each frame, we gain a huge benefit. Real-time animation can react to information—including user input—that is not known ahead of time. This allows real-time animation to be _interactive_. 
 
-Pre-rendering provides its own huge benefit. Limiting the time spent rendering each frame often means compromising on the quality or complexity of the animation, but pre-rendered animations can take as long as they need to create each frame, allowing for high complexity and quality. Individual frames in high-end animated films often take hours—or even days—to render and they look better as a result.
+Pre-rendering provides its own huge benefit. Limiting the time spent rendering each frame often means compromising on the quality or complexity of the animation. Pre-rendered animations can take as long as necessary to create each frame, allowing for high complexity and quality. Individual frames in high-end animated films often take hours or even days to render, and they look better as a result.
 
 
 
@@ -45,7 +45,7 @@ Pre-rendering provides its own huge benefit. Limiting the time spent rendering e
 Real-time animation is computed faster than it is shown, while pre-rendered animation is computed slower than it is shown. Because of this, each requires a different approach to keeping track of time.
 
 ### The Simple Approach
-A common, simple approach to keeping time is to first set the frame rate, and then count the frames. In p5.js you can set the framerate with `frameRate(fps)` and get the current frame number from `frameCount`.
+A common simple approach to keeping time is to first set the frame rate, and then count the frames. In p5.js you can set the framerate with `frameRate(fps)` and get the current frame number from `frameCount`.
 
 ::: js-lab
 /animation/sketches/metronome_simple.js
@@ -55,9 +55,9 @@ This example draws a metronome that swings its pendulum **once every second**. T
 
 **Line 10** uses `map()` to map the current `frameCount` to `theta` such that `theta` increases by 2π every 60 frames or 1 second. 
 
-**Line 11** uses calculates `pendulumAngle` using `sin()`. Because the site function has a period of 2π, `sin(theta)` will produce a smooth wave that repeats every 1 second.
+**Line 11** calculates `pendulumAngle` using `sin()`. Because the sin function has a period of 2π, `sin(theta)` will produce a smooth wave that repeats every 1 second.
 
-This approach works fine for a simple example like this one but has some problems. The `frameCount` variable tells us how many _frames_ have been drawn, it doesn't actually tell us how much _time_ has gone by. We can calculate time from `frameCount`, but only if we assume that each frame is drawn exactly on schedule. Unfortunately, that is not always the case.
+This approach works fine for a simple example like the metronome, but it has some problems. The `frameCount` variable tells us how many _frames_ have been drawn: It doesn't actually tell us how much _time_ has gone by. We can calculate time from `frameCount`, but only if we assume that each frame is drawn exactly on schedule. Unfortunately, that is not always the case.
 
 ### Real-time Draw Loops
 
@@ -79,7 +79,7 @@ Another way your frame count can fall out of sync with time is if your requested
 /animation/sketches/frame_rate_test.js
 /::
 
-In simple games and other real-time applications, these problems may not matter. When syncing animation to real-time _does_ matter the simple approach above will cause problems.
+In simple games and other real-time applications, these problems may not matter. When syncing animation to real time _does_ matter the simple approach above will cause problems.
 
 ### Real-time Clocks for Real-time Animation
 
@@ -93,7 +93,7 @@ The example below swings the pendulum once per second using `millis()` as the ti
 
 ### Frame Counting for Pre-rendered Animation
 
-For pre-rendered animation, we want to base our animation on the current frame, regardless of the time elapsed. We don't care how long the frames take to render because we know we will play them back at the correct rate regardless. Our priority is to render every frame needed for later playback.
+For pre-rendered animation, we want to base our animation on the current frame, regardless of the time elapsed. We don't care how long the frames take to render because we know we will play them back at the correct rate. Our priority is to render every frame needed for later playback.
 
 The example below swings the pendulum once per second using `frameCount` as the time base. If you slow the frame rate down with the slider, the animation slows down. 
 
@@ -132,7 +132,7 @@ if (frameCount === 10) {
 };
 ```
 
-But might come up if you convert an event time from seconds to frames and the result is not an integer.
+But the problem might come up if you convert an event time from seconds to frames and the result is not an integer.
 
 ```javascript
 // okay
@@ -145,7 +145,7 @@ if (frameCount - 1 < eventFrame && frameCount >= eventFrame) {
 
 ### Timed Intervals
 
-The `map()` function can be great for making things happen over a set interval.
+The `map()` function can be useful for making things happen over a set interval.
 
 ```javascript
 // move an ellipse from 100 to 400 
@@ -169,10 +169,10 @@ First `millis() % 500` converts the time from `0 → ∞` to `0 → 500, 0 → 5
 
 ### Periodic Functions
 
-Periodic functions produce repeating values in regular intervals. They are very useful in procedurally generated animation to create rhythms. The modulus operator and `sin()` function are both periodic and are used in the examples above to produce steady repeated animation.
-<!-- 
+Periodic functions produce repeating values in regular intervals. They are very useful for creating rhythms in procedurally-generated animation. The modulus operator and `sin()` function are both periodic and are used in the examples above to produce steadily repeating animation.
 
-### Derivitive Motion
+<!--
+### Derivative Motion
 
 for simple things: position = f(time)
 what about acclearation: more complex eqations (derivities)
@@ -192,7 +192,7 @@ pre-rendere with recording -->
 
 ## Exporting + Stitching Frames
 
-Some environments support exporting frames as video, but neither JavaScript or p5.js has this feature. p5.js does make it easy to export individual frames however. By including the frame number in the frame of each export you can create an image sequence that can be stitched into a video in separate software. The following utility function wraps p5.js's `save()` function to make exporting image sequences easier.
+Some environments support exporting frames as video, but neither JavaScript nor p5.js has this feature. However, p5.js does make it easy to export individual frames. You can create an image sequence by including the frame number in the name of each exported frame. Then the sequence can be stitched into a video using separate software. The following utility function wraps p5.js's `save()` function to make exporting image sequences easier.
 
 
 
@@ -222,7 +222,7 @@ function saveFrame(name, frameNumber, extension, maxFrame) {
 ```
 
 ::: .callout .warn
-If you are exporting frames keep in mind that p5 automatically uses a higher resolution on retina displays, and this is the resolution that `save()` will export at. You can use `pixelDensity(1);` before your `createCanvas()` call to disable this.
+If you are exporting frames, keep in mind that p5.js automatically uses a higher resolution on retina displays, and this is the resolution at which `save()` will export. You can use `pixelDensity(1);` before your `createCanvas()` call to disable this.
 /::
 
 There are many applications that can take a sequence of frames and stitch them into a video. [FFmpeg](https://www.ffmpeg.org/) is a powerful command line utility for this and other video tasks. FFmpeg is a good choice for automated/back-end workflows. [After Effects](https://www.adobe.com/products/aftereffects.html) is a good choice if you are going to use the animation as part of a larger animated composition.
@@ -237,27 +237,36 @@ You can even stitch images in [Photoshop](https://www.adobe.com/products/photosh
 6. Adjust export settings.
 7. Click `Render`
 
+
+::: js-lab
+/animation/sketches/save_frames.js
+/::
+
+::: .full-width
 <video src="videos/render.mp4" poster="videos/render_0030.jpg" controls></video>
+/::
 
 You can even apply Photoshop effects in the bargain.
 
+::: .full-width
 <video src="videos/render_color.mp4" poster="videos/render_color_0030.jpg" controls></video>
+/::
 
-[Example Source](/js_lab/js_lab.html?/animation/sketches/save_frames.js)
+
 
 ::: .assignment
 
 ## Keep Sketching!
 
 ### Base
-This week focus on creating smooth, pre-rendered animations.{bigger}
+This week focuses on creating smooth pre-rendered animations.{bigger}
 
 ### Challenge: Comp Form Bumper
 
 Create a three-second bumper for Computational Form
 
-- Should be exactly 90 frames. 3 seconds @ 30fps
-- Should have a clear progression: beginning, middle, end.
+- Should be exactly 90 frames: 3 seconds @ 30fps
+- Should have a clear progression: beginning, middle, end
 - Should feature either the text “Compform” or “Computational Form”
 - Consider including the five-triangle "Sierpinski" icon
 - Consider adding music or sound in post production

@@ -75,7 +75,7 @@ You can go `no-margin`. This is mostly for images.{no-margin}
 
 ### Full Width
 
-You can go `fullwidth`. This is mostly for images, and big widgets.{full-width callout}
+You can go `full-width`. This is mostly for images, and big widgets.{full-width callout}
 
 
 ## Include

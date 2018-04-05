@@ -2,6 +2,9 @@ Review sub folder notes files
 
 is the p5 download bug fixed? should I jump in on that?
 
+maybe split animation into two: prerender realtime
+
+
 #####################
 # Research Assistance
 
@@ -263,3 +266,6 @@ http://www.squidi.net/three/entry.php?id=247
 
 essential thing vectors: high level data allows high level changes
 essential thing realtime: created while shown, allows reaction and interaction
+
+
+https://mathbitsnotebook.com/Algebra1/Quadratics/QDprojectilemotion.html
