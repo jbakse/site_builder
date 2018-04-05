@@ -218,8 +218,8 @@ Vuo
 | [Week 7, March 9](turtles/plan.html)         | [Turtle Graphics](turtles)                           |
 | [Week 8, March 16](vectors/plan.html)        | [Vector Data](vectors)                               |
 | Week 9, March 23{gray}                       | Spring Break{gray}                                   |
-| [Week 10, March 30](#)                       | [Animation](#)                                       |
-| [Week 11, April 6](#)                        | [Generating Text](#)                                 |
+| [Week 10, March 30](#)                       | [Animation](animation)                                       |
+| [Week 11, April 6](text/plan.html)                        | [Generating Text](text)                                 |
 | [Week 12, April 13](#)                       | [Generating Sound](#)                                |
 | [Week 13, April 20](#)                       | [3D Forms](#)                                        |
 | [Week 14, April 27](#)                       | [Microgames](#)                                      |
