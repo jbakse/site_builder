@@ -42,11 +42,9 @@ This is practical!
 This is how websites are made.
 Text to generate other media
 Programs that write programs.
-
 Turing Test
 Generating Language subset of Generating Text
 Examples, Subreddit Simulator, NYT Best Places, ELIZA
-
 02 Templates
 03 Markov Chains + Activity
 04 Context-free Grammars
