@@ -62,10 +62,10 @@ function injectInterface() {
 		<body>
 			<div class="wrap">
 				<p>You are <input id="age-input" type="range" min="0" max="99" value="20"> <span id="age">20</span> years old.</p>
-				<p>According to the <a href="https://www.ssa.gov/oact/STATS/table4c6.html">Social Security Adminstration</a>, if you are male you have a <span id="male-death-chance">.1%</span> chance of dying in the next year. But you will probably live another
+				<p>According to the <a href="https://www.ssa.gov/oact/STATS/table4c6.html">Social Security Administration</a>, if you are male you have a <span id="male-death-chance">.1%</span> chance of dying in the next year. But you will probably live another
 					<span id="male-years-left">57</span> years.</p>
 				<p>If you are female, you'll probably live a little longer: <span id="female-years-left">57</span> more years. There is still a <span id="female-death-chance">.1%</span> chance you'll die in the next year though.</p>
-				<p>Anyway, you are probably about <span id="percent-left">30%</span> of your life left.</p>
+				<p>Anyway, you probably have about <span id="percent-left">30%</span> of your life left.</p>
 			</div>
 
 			<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
