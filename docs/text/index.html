@@ -5,23 +5,23 @@
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Text</span><div class="buttons"><a class="previous" href="../animation"><i class="fa fa-caret-left fa-lg"></i>Animation</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Text</h1><h6>Overview</h6><p class="description">Generate strings with templates, Markov chains, and context free grammars.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><!-- [[ leah, want to take a crack at the hero desc? again? ]] -->
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Text</span><div class="buttons"><a class="previous" href="../animation"><i class="fa fa-caret-left fa-lg"></i>Animation</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Text</h1><h6>Overview</h6><p class="description">Generate strings with templates, Markov chains, and context-free grammars.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><!-- [[ leah, want to take a crack at the hero desc? again? ]] -->
 <h2 id="computational-text">Computational Text</h2>
 <p>Procedural generation can be used to create form in almost any media: image, video, animation, sound, sculpture. The chapter introduces some tactics for procedurally generating text, which may be the media most often computationally generated. Web pages are built out of text, and most of the time this text is computationally generated at least to some degree.</p>
 <div id="" class="links-sidebar">
 <p><a href="https://www.google.com/search/howsearchworks/">Google:<br/>How search works.</a></p>
 </div>
-<p>Google uses programs to crawl the web, collecting a database of information about every page. When you perform a search, another program searches this database for relevant information. This information is then carefully excerpted, summarized, formatted, and collated. The resulting web page is built on the fly and sent to your browser for your to read.</p>
-<p>Social media sites like Facebook and Twitter are software systems for collecting and sharing user created content, largely text. Even websites primarily concerned with other media, like YouTube and Instagram, must generate HTML text to showcase their videos and images.</p>
+<p>Google uses programs to crawl the web, collecting a database of information about every page. When you perform a search, another program searches this database for relevant information. This information is then carefully excerpted, summarized, formatted, and collated. The resulting web page of results is built on the fly and sent to your browser for your to read.</p>
+<p>Social media sites like Facebook and Twitter are software systems for collecting and sharing user-created content, largely text. Even websites primarily concerned with other media, like YouTube and Instagram, must generate HTML text to showcase their videos and images.</p>
 <h3 id="the-imitation-game">The Imitation Game</h3>
-<p>Search engines and social media sites are certainly procedurally generating text, but for the most part they are not generating <em>content</em>. Few would argue that these sites are being truly <em>creative</em>. In fact, many have argued that computers not capable of true creativity at all.</p>
+<p>Search engines and social media sites are certainly procedurally generating text, but for the most part they are not generating <em>content</em>. Few would argue that these sites are being truly <em>creative</em>. In fact, many have argued that computers are not capable of true creativity at all.</p>
 <blockquote>
 <p>Not until a machine can write a sonnet or compose a concerto because of thoughts and emotions felt, and not by the chance fall of symbols, could we agree that machine equals brain—that is, not only write it but know that it had written it. No mechanism could feel (and not merely artificially signal, an easy contrivance) pleasure at its successes, grief when its valves fuse, be warmed by flattery, be made miserable by its mistakes, be charmed by sex, be angry or depressed when it cannot get what it wants.</p>
 </blockquote>
 <p class="attrib">Geoffrey Jefferson</p>
-<p>In 1950, <a href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</a> addressed this argument and several others in <a href="https://home.manhattan.edu/~tina.tian/CMPT420/Turing.pdf">Computing Machinery and Intelligence</a>, in which he considered the question “Can machines think?” Rather than answering the question directly, Turing proposes a an <em>imitation game</em>, often referred to as the Turing Test, which challenges a machine to imitate a human over “a teleprinter communicating between two rooms”. He asks wether a machines could do well enough that a human interrogator would be unable to tell such a machine from an actual human. He argues that passing such a test would actually be harder than thinking, after all a human can certainly think but could not convincingly imitate a computer.</p>
+<p>In 1950, <a href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</a> addressed this argument and several others in <a href="https://home.manhattan.edu/~tina.tian/CMPT420/Turing.pdf">Computing Machinery and Intelligence</a>, in which he considered the question “Can machines think?” Rather than answering the question directly, Turing proposes a an <em>imitation game</em>, often referred to as the Turing Test, which challenges a machine to imitate a human over “a teleprinter communicating between two rooms”. Turing asks whether a machine could do well enough that a human interrogator would be unable to tell such a machine from an actual human. He argues that passing such a test would actually be harder than thinking—after all, a human can certainly think, but could not convincingly imitate a computer.</p>
 <h3 id="generating-language">Generating Language</h3>
-<p>Creativity can be expressed in many media, but—perhaps as a consequence of the Turing Test using verbal communication—artificial creativity is often explored in the context of natural-language text generation. This chapter introduces three common and accessible text generation tactics: string templating, Markov chains, and context-free grammars. These techniques focus on <strong>syntax</strong>*—the patterns and structure of language—without much concern for <strong>semantics</strong>, the underlying meaning expressed. Natural-language processing and natural-language generation are areas of active research with numerous sub-fields including automatic summarization, translation, question answering, and sentiment analysis. Much of this research is focused on semantics, knowledge, and understanding and often approaches these problems with machine learning.</p>
+<p>Creativity can be expressed in many media, but—perhaps as a consequence of the Turing Test using verbal communication—artificial creativity is often explored in the context of natural-language text generation. This chapter introduces three common and accessible text generation tactics: string templating, Markov chains, and context-free grammars. These techniques focus on <strong>syntax</strong>—the patterns and structure of language—without much concern for <strong>semantics</strong>, the underlying meaning expressed. Natural-language processing and natural-language generation are areas of active research with numerous sub-fields including automatic summarization, translation, question answering, and sentiment analysis. Much of this research is focused on semantics, knowledge, and understanding and often approaches these problems with machine learning.</p>
 <p>The following projects explore many areas related to generative text:</p>
 <h4 id="content-generators">Content Generators</h4>
 <dl>
@@ -37,9 +37,9 @@
 <h4 id="procedural-journalism">Procedural Journalism</h4>
 <dl>
 <dt><a href="https://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html">NYT: The Best and Worst Places to Grow Up</a></dt>
-<dd>This fantastic NYT piece looks at how income is impacted by where someone grows up. To make the information relatable the story adapts itself based on the location of the reader.</dd>
+<dd>This fantastic NYT piece looks at how where someone grows up impacts income. To make the information relatable the story adapts itself based on the location of the reader.</dd>
 <dt><a href="https://github.com/wbkd/awesome-interactive-journalism">Interactive Journalism</a></dt>
-<dd>Curated collection “outstanding examples of visual and interactive journalism”.</dd>
+<dd>A curated collection of “outstanding examples of visual and interactive journalism”.</dd>
 <dt><a href="https://www.nytimes.com/2015/12/23/business/media/personalizing-books-via-robot.html?_r=0">NYT: The little girl/boy who lost her/his name.</a></dt>
 <dd>NYT covers a custom, made-to-order children’s book.</dd>
 <dt>Associated Press</dt>
@@ -50,18 +50,19 @@
 <dt><a href="https://en.wikipedia.org/wiki/ELIZA">ELIZA</a></dt>
 <dd>In 1964 Joseph Weizenbaum created ELIZA, a therapist chatbot that you can still <a href="http://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm">talk to today</a>.</dd>
 <dt><a href="https://en.wikipedia.org/wiki/Tay_(bot)">Tay</a>, <a href="http://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist">Verge covers Tay</a></dt>
-<dd>Tay was an AI twitterbot created my Microsoft and launched on March 23, 2016. Less than a day later, it was shut down after posting many controversial, inflammatory, and racist tweets.</dd>
+<dd>Tay was an AI twitterbot created by Microsoft and launched on March 23, 2016. Less than a day later, it was shut down after posting many controversial, inflammatory, and racist tweets.</dd>
 </dl>
 <h3 id="generating-other-media-via-text">Generating other Media via Text</h3>
 <p>Generating text can be a step in the process for generating form in other media. The structure of a webpage is defined in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>. The layout and style is defined in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>. <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a> is a popular format for defining vector images. The <a href="https://en.wikipedia.org/wiki/ABC_notation">ABC</a> and <a href="https://en.wikipedia.org/wiki/JAM_notation">JAM</a> formats represent music. Three-dimensional objects can be represented in <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">OBJ</a> files. <strong>All of these formats are plain text files.</strong></p>
-<p>You can thinking about these media in terms of the text files that represent them. This provides a fundamentally different point of view and can lead to novel approaches for generating form.</p>
+<p>You can think about these media in terms of the text files that represent them. This provides a fundamentally different point of view and can lead to novel approaches for generating form.</p>
 <h3 id="programs-that-write-programs">Programs that Write Programs</h3>
-<p>Most programming languages are themselves text based. Programs that generate programs are common and important computing tools. <a href="https://en.wikipedia.org/wiki/Compiler">Compilers</a> are programs that rewrite code from one language to another. GUI coding environments like <a href="https://blockly-demo.appspot.com/static/demos/generator/index.html">Blocky</a> and <a href="https://makecode.com/">MakeCode</a> generate corresponding JavaScript. Interface builders like the one in Xcode generate code scaffolding which can be added to manually. Of course, programs that write programs can also have more esoteric functions. A <a href="https://en.wikipedia.org/wiki/Quine_(computing)">Quine</a> is a program that generates a copy of itself.</p>
+<p>Most programming languages are themselves text-based. Programs that generate programs are common and important computing tools. <a href="https://en.wikipedia.org/wiki/Compiler">Compilers</a> are programs that rewrite code from one language to another. GUI coding environments like <a href="https://blockly-demo.appspot.com/static/demos/generator/index.html">Blocky</a> and <a href="https://makecode.com/">MakeCode</a> generate corresponding JavaScript. Interface builders like the one in Xcode generate code scaffolding which can be added to manually. Of course, programs that write programs can also have more esoteric functions. A <a href="https://en.wikipedia.org/wiki/Quine_(computing)">Quine</a> is a program that generates a copy of itself.</p>
 <h2 id="string-templates">String Templates</h2>
-<p>String templating is basic but powerful tool for building text procedurally. If you have every completed a <a href="http://www.madlibs.com/">Mad Lib</a> fill-in-the-blank story, you’ve worked with string templates.</p>
+<p>String templating is a basic but powerful tool for building text procedurally. If you have every completed a <a href="http://www.madlibs.com/">Mad Lib</a> fill-in-the-blank story, you’ve worked with string templates.</p>
 <div id="" class="activity">
 <h2 id="make-an-amendment">Make an Amendment!</h2>
 <p>This demo populates a template with the words you provide to generate a new constitutional amendment. <br/><br/> <a href="http://localhost:3000/js_lab/js_lab.html?/text/sketches/first_amendment.js">view source</a></p>
+<!-- [[localhost link, issue with page resizing/cutting off beginning of lines]] -->
 <div id="" class="">
 <div class="js-show">
 <iframe class="js-show" src="/js_lab/js_show.html?/text/sketches/first_amendment.js">
@@ -75,12 +76,12 @@
 <p>A JavaScript template literal is a string enclosed in back-ticks:</p>
 <pre><code class="language-javascript"><span class="hljs-string">`I am a <span class="hljs-subst">${noun}</span>!`</span>
 </code></pre>
-<p>The literal above has one placeholder: <code>${noun}</code>. When content of a placeholder is evaluated as a javascript expression and the result is inserted into the string.</p>
+<p>The literal above has one placeholder: <code>${noun}</code>. The content of the placeholder is evaluated as a javascript expression and the result is inserted into the string.</p>
 <pre><code class="language-javascript"><span class="hljs-keyword">let</span> day = <span class="hljs-string">"Monday"</span>;
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`I ate <span class="hljs-subst">${<span class="hljs-number">2</span>*<span class="hljs-number">4</span>}</span> apples on <span class="hljs-subst">${day}</span>!`</span>);
 <span class="hljs-comment">// I ate 8 apples on Monday!</span>
 </code></pre>
-<p>The examples below demonstrates using JavaScript template literals.</p>
+<p>The examples below demonstrate using JavaScript template literals.</p>
 <h3 id="template-examples">Template Examples</h3>
 <div id="" class="">
 <div class="js-lab">
@@ -96,7 +97,7 @@
 </div>
 <h2 id="markov-chains">Markov Chains</h2>
 <p><a href="https://en.wikipedia.org/wiki/Markov_chain">Markov chains</a>
-produce sequences by choosing each item based on the previous item and a table of weighted options. This table can be trained on examples, allowing Markov chains to mimic different styles. Markov chains are a useful tool for procedurally generating anything that can be represented as a sequence including text, music, and events.</p>
+produce sequences by choosing each item based on the previous item and a table of weighted options. This table can be trained on examples, allowing Markov chains to mimic different text styles. Markov chains are a useful tool for procedurally generating anything that can be represented as a sequence, including text, music, or events.</p>
 <div id="" class="activity">
 <h2 id="markov-chain">Markov Chain</h2>
 <p>Explore the Markov Chain algorithm with paper and pencil using this worksheet.</p>
@@ -117,7 +118,7 @@ produce sequences by choosing each item based on the previous item and a table o
 </div>
 </div>
 <h2 id="context-free-grammars">Context-Free Grammars</h2>
-<p>Consider this excerpt in html:</p>
+<p>Consider this html excerpt:</p>
 <div id="" class="bad">
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Hello, World!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
 </code></pre>
@@ -126,7 +127,7 @@ produce sequences by choosing each item based on the previous item and a table o
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Hello, World!<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p>HTML is text, and it can be represented by a text string. But not all text strings are valid HTML. HTML is a <a href="https://en.wikipedia.org/wiki/Formal_language">formal language</a> and it has a <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a>, a set of rules that define which sequences of characters are valid. Only strings that meet those rules can be properly understood by code that expects HTML.</p>
-<p><a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free grammars</a> are a subtype of formal grammars that are useful for generating text. A context-free grammar is described as a set of replacement rules. Each rule represents a legal replacement of one symbol with zero, one, or more other symbols. In a context-free grammar, these rules don’t consider the symbols before or after the symbol being replaced (the context).</p>
+<p><a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free grammars</a> are a subtype of formal grammars that are useful for generating text. A context-free grammar is described as a set of replacement rules. Each rule represents a legal replacement of one symbol with zero, one, or multiple other symbols. In a context-free grammar, the rules don’t consider the symbols before or after—the context around—the symbol being replaced.</p>
 <p>The following example demonstrates using a context-free grammar to generate a short story. This example uses <a href="https://github.com/galaxykate/tracery">Tracery</a>, created by <a href="http://www.galaxykate.com/">Kate Compton</a>. The <a href="https://cheapbotsdonequick.com/">Cheap Bots, Done Quick</a> service lets you <a href="http://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots">make twitterbots</a> very quickly using Tracery. You can learn more about Tracery by watching this <a href="https://www.gdcvault.com/play/1023377/Tech">talk (16:16)</a> by Kate Compton.</p>
 <div id="" class="">
 <div class="js-lab">
@@ -159,8 +160,8 @@ produce sequences by choosing each item based on the previous item and a table o
 <h3 id="modify-the-example-above-some-more">Modify the Example Above Some More</h3>
 <ol class="continue">
 <li>Add an ‘s’ to ‘computer’ when <code>number</code> is not 1.</li>
-<li>Add this to your template. <code>The word &quot;${word}&quot; has ${letterCount} letters</code>.</li>
-<li>Create a variable for <code>word</code> set its value to a random word from a small list.</li>
+<li>Add this to your template: <code>The word &quot;${word}&quot; has ${letterCount} letters</code>.</li>
+<li>Create a variable for <code>word</code> and set its value to a random word from a small list.</li>
 <li>Create a variable for <code>letterCount</code> and set its value to the number of letters in <code>word</code>.</li>
 </ol>
 <h3 id="challenging-challenges">Challenging Challenges</h3>
@@ -180,7 +181,7 @@ produce sequences by choosing each item based on the previous item and a table o
 <li>be bad</li>
 <li>be short</li>
 <li>start with “It was a dark and stormy night.”</li>
-<li>be generated by code, consider using templates, <a href="https://github.com/galaxykate/tracery">Tracery</a>, Markov Chains, or anything you want.</li>
+<li>be generated by code: consider using templates, <a href="https://github.com/galaxykate/tracery">Tracery</a>, Markov Chains, or anything you want.</li>
 </ul>
 <p>Ideally, your story should:</p>
 <ul>
@@ -188,7 +189,7 @@ produce sequences by choosing each item based on the previous item and a table o
 <li>make sense, with consistent characters, relationships, and actions</li>
 <li>follow a dark and stormy theme</li>
 <li>be of the horror or mystery genre</li>
-<li>have a clear structure: beginning (exposition), middle (rising action/conflict), and end(resolution)</li>
+<li>have a clear structure: beginning (exposition), middle (rising action/conflict), and end (resolution)</li>
 </ul>
 </div>
 <h2 id="reference-links">Reference Links</h2>
