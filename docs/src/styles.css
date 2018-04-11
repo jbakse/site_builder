@@ -621,8 +621,6 @@
       font-size: 14px;
       letter-spacing: 0.31px;
       line-height: 20px; }
-    .comp-form-copy .activity code, .comp-form-copy .assignment code, .comp-form-copy .discussion code {
-      background-color: rgba(0, 0, 0, 0.1); }
     .comp-form-copy .activity > h3, .comp-form-copy .assignment > h3, .comp-form-copy .discussion > h3 {
       font-family: "Miriam Libre";
       font-weight: bold;

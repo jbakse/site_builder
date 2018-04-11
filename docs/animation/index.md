@@ -10,7 +10,7 @@ next:
 next_url: 
 
 hero_title: Animation
-description: Procedural generation can be used to describe motion in animations. In both pre-rendered and real-time animations, an unerstanding of frame rate and timing are crucial for generating satisfying motion graphics.
+description: Procedural generation can be used to describe motion in animations. In both pre-rendered and real-time animations, an understanding of frame rate and timing are crucial for generating satisfying motion graphics.
 software: p5.js
 ---
 <!-- [[ leah, want to take a crack at the hero desc? ]] -->
@@ -150,7 +150,7 @@ The `map()` function can be useful for making things happen over a set interval.
 ```javascript
 // move an ellipse from 100 to 400 
 // starting at 1 second and ending at 2.5 seconds
-let x = map(millis(), 1, 2.5, 100, 400, true);
+let x = map(millis(), 1000, 2500, 100, 400, true);
 ellipse(x, 100, 10, 10);
 ```
 
