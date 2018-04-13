@@ -151,7 +151,7 @@ javascript + html
 </a>
 
 
-<a class="col-6 col-md-4" data-ready="false" href="./#">
+<a class="col-6 col-md-4" data-ready="true" href="./sound">
 
 ### Comp Sound
 p5.js + p5.sound
@@ -220,7 +220,7 @@ Vuo
 | Week 9, March 23{gray}                       | Spring Break{gray}                                   |
 | [Week 10, March 30](#)                       | [Animation](animation)                               |
 | [Week 11, April 6](text/plan.html)           | [Generating Text](text)                              |
-| [Week 12, April 13](#)                       | [Generating Sound](#)                                |
+| [Week 12, April 13](sound/plan.html)         | [Generating Sound](sound)                            |
 | [Week 13, April 20](#)                       | [3D Forms](#)                                        |
 | [Week 14, April 27](#)                       | [Microgames](#)                                      |
 | [Week 15, May 4](#)                          | [TBD](#)                                             |
