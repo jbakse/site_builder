@@ -209,22 +209,3 @@ Pressure waves propagated in the air.
 /::
 
 
-
-::: .assignment
-
-## Sketch!
-
-### Base
-Keep sketching. Make a bunch of noise!
-
-
-### Challenge 1: Synesthesia 1
-Choose a 15 second video clip. Use p5.sound to create a new soundtrack for your clip. Combine audio and sound and post.
-
-### Challenge 2: Synesthesia 2
-Choose a 15 second audio clip. Use p5.sound to generate graphics driven by the sound. Combine audio and sound and post.
-
-### Challenge 3: Synesthesia 3
-Create a 15 second procedurally generated audio+visual form. Try to "feed" the audio and the video from the same process.
-
-/::

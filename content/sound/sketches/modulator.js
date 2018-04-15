@@ -49,7 +49,9 @@ function stop() {
 }
 
 
-
+function draw() {
+    background(50);
+}
 
 // uses the p5 SoundRecorder and SoundFile classes to record the audio output.
 // begins recording when called. records for _length_ time in milliseconds.

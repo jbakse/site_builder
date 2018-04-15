@@ -166,6 +166,11 @@ Screensaver
 - Talk about pow(x, y) as a way to sharpen or blunt slopes
 
 
+# Chapter Ideas
+  - Color
+  - Input Devices
+  - Input APIs
+
 
 
 
@@ -269,3 +274,9 @@ essential thing realtime: created while shown, allows reaction and interaction
 
 
 https://mathbitsnotebook.com/Algebra1/Quadratics/QDprojectilemotion.html
+
+
+
+http://www.ctrl-alt-test.fr/2018/a-dive-into-the-making-of-immersion/
+
+
