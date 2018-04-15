@@ -1,10 +1,13 @@
 {
 	"folders": [
 		{
+			"path": "./content"
+		},
+		{
 			"path": "."
 		},
 		{
-			"path": "/Users/jbakse/Documents/Projects/compform_classnotes"
+			"path": "../compform_classnotes"
 		}
 	],
 	"settings": {}
