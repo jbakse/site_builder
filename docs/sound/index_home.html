@@ -13,19 +13,20 @@
 <li><a href="https://p5js.org/examples/">p5.sound Examples</a></li>
 </ul>
 <div id="" class="discussion">
-<h2 id="drawing-sounds">Drawing Sounds</h2>
+<h2 id="drawings-and-sounds">Drawings and Sounds</h2>
 <p>Compare a basic p5.js drawing with a p5.audio sketch. What do they have in common? How are they different?</p>
-<h3 id="a-hello-world-for-p5js">A “Hello, World!” for p5.js</h3>
+<h3 id="hello-p5js">Hello, p5.js!</h3>
 <pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
     createCanvas(<span class="hljs-number">500</span>, <span class="hljs-number">500</span>);
 }
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
     fill(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    noStroke();
     ellipse(<span class="hljs-number">250</span>, <span class="hljs-number">250</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
 }
 </code></pre>
-<h3 id="a-hello-world-for-p5sound">A “Hello, World!” for p5.sound</h3>
+<h3 id="hello-p5sound">Hello, p5.sound!</h3>
 <pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
     myOscillator = <span class="hljs-keyword">new</span> p5.Oscillator(<span class="hljs-string">'sine'</span>);
     myOscillator.amp(<span class="hljs-number">1</span>);
@@ -33,8 +34,10 @@
     myOscillator.start();
 }
 </code></pre>
-<p><a href="./light_and_sound.html">Light and Sound Lecture Notes</a></p>
 </div>
+<h3 id="computers-light-sound-and-people">Computers, Light, Sound, and People</h3>
+<p>Light and sound flow through our environment as electromagnetic and air pressure waves. Our eyes and our ears collect data about these waves and our visual and auditory cortexes process that data to create information. These sensory systems work in different ways but are both powerful. We can take advantage of these systems by choosing the types of forms we create.</p>
+<p><a href="./light_and_sound.html">Light and Sound Lecture Notes</a></p>
 <h2 id="generating-sound-with-p5js">Generating Sound with p5.js</h2>
 <h3 id="generating-tones">Generating Tones</h3>
 <div id="" class="">

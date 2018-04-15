@@ -27,14 +27,15 @@ In addition to the basic drawing API, p5.js includes add-on [libraries](https://
 - [p5.sound API Reference](https://p5js.org/reference/#/libraries/p5.sound)
 - [p5.sound Examples](https://p5js.org/examples/)
 
-::: .discussion
 
-## Drawing Sounds
+::: .discussion
+## Drawings and Sounds
 
 Compare a basic p5.js drawing with a p5.audio sketch. What do they have in common? How are they different?
 
 
-### A "Hello, World!" for p5.js
+
+### Hello, p5.js!
 
 ```javascript
 function setup() {
@@ -43,11 +44,12 @@ function setup() {
 
 function draw() {
     fill(255, 0, 0);
+    noStroke();
     ellipse(250, 250, 100, 100);
 }
 ```
 
-### A "Hello, World!" for p5.sound
+### Hello, p5.sound!
 
 ```javascript
 function setup() {
@@ -57,11 +59,13 @@ function setup() {
     myOscillator.start();
 }
 ```
+/::
+
+### Computers, Light, Sound, and People
+
+Light and sound flow through our environment as electromagnetic and air pressure waves. Our eyes and our ears collect data about these waves and our visual and auditory cortexes process that data to create information. These sensory systems work in different ways but are both powerful. We can take advantage of these systems by choosing the types of forms we create.
 
 [Light and Sound Lecture Notes](./light_and_sound.html)
-
-
-/::
 
 
 
