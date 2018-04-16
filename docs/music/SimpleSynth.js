@@ -64,30 +64,15 @@ class SimpleSynth {
      * @param  {number} time - time in seconds from now to start note
      */
     playNote(note, length, time = 0) {
-
-        if (note === undefined || length === undefined) {
-            console.error("playNote requires note and length parameters");
-            return;
-        }
-
-        if (note !== "rest") {
-            //schedule the pitch change
-            const frequency = midiToFreq(note);
-
-            this.oscillator.freq(frequency, 0, time);
-            // const now = getAudioContext().currentTime;
-            // this.oscillator.oscillator.frequency.setValueAtTime(frequency, now + time);
-
-            //schedule the attack envelope
-            const sustainLength = length - this.spacing;
-            this.envelope.mult(this.amplitude);
-            this.envelope.play(this.oscillator, time, sustainLength);
-        }
-
-        setTimeout(() => {
-            this.onNotePlayed(self, note, length, time);
-        }, time * 1000);
+        this.noteOn(note, time);
+        this.noteOff(note, time + length - this.spacing);
     }
+
+    /**
+     * starts a note
+     * @param  {number} note - midi pitch value - middle C is 60
+     * @param  {number} time - time in seconds from now to start note
+     */
 
     noteOn(note, time = 0) {
         if (note === undefined || length === undefined) {
@@ -106,11 +91,19 @@ class SimpleSynth {
             this.envelope.mult(this.amplitude);
             this.envelope.triggerAttack(this.oscillator, time);
 
-            this.onNotePlayed(self, note, length, time);
+            setTimeout(() => {
+                this.onNotePlayed(self, note, length, time);
+            }, time * 1000);
         }
     }
 
+    /**
+     * ends a note
+     * @param  {number} note - midi pitch value - middle C is 60
+     * @param  {number} time - time in seconds from now to start note
+     */
     noteOff(note, time = 0) {
+        // note is not used since this is a monophonic synth there can only be one note
         this.envelope.triggerRelease(this.oscillator, time);
     }
 

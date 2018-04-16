@@ -27,14 +27,15 @@
 <p class="scale"><img src="https://s-media-cache-ak0.pinimg.com/736x/76/fd/4a/76fd4ae694014ee601970e9cde9b45f9.jpg" alt="Voice Piece For Soprano"></p>
 </div>
 <h2 id="synthesizing-a-note">Synthesizing a Note</h2>
-<p>There are many ways to synthesize a musical note. Some of the most common are additive, FM, and sampled synthesis. Synthesis is a good place to start: we generate music lets make sure we can play it.</p>
+<p>There are many ways to synthesize a musical note. Some of the most common are additive, FM, and sampled synthesis. Synthesis is a good place to start: before we generate a melody let’s make sure we can play it.</p>
 <p><a href="https://en.wikipedia.org/wiki/Synthesizer">Wikipedia: Synthesizer</a></p>
 <div id="" class="discussion">
 <h2 id="designing-the-synth">Designing the Synth</h2>
 <p>Most synthesizer offer a great deal of customization through parameters. What qualities do we want control of?</p>
 </div>
 <h3 id="qualities-our-synth">Qualities our Synth</h3>
-<p>The p5.sound library has an Oscillator class that can generate a periodic signal with customizable frequency, amplitude, and waveform. We will base our synthesizer on this oscillator.</p>
+<p>P5.sound has a built monophonic and polyphonic synthesizers. Here, we build our own from more basic units. The p5 synths are a little under-documented and building our own is a good way to understand what is going on.</p>
+<p>The p5.sound Oscillator class generates a periodic signal with customizable frequency, amplitude, and waveform. We will base our synthesizer on this oscillator.</p>
 <p>The p5.sound library also has an Env class. This class can control the amplitude of an oscillator using an <a href="https://en.wikipedia.org/wiki/Synthesizer#Attack_Decay_Sustain_Release_(ADSR)_envelope">ADSR</a> envelope. An ADSR envelope controls the attack, decay, sustain and release of a sound and can be used to simulate some of the characteristics of acoustic instruments. We’ll use an Env object to control the our synthesizer.</p>
 <p>[whiteboard diagram ADSR Envelope]
 [whiteboard diagram [Evn] -&gt; (amp)[Oscillator]]</p>
@@ -48,12 +49,17 @@
 <li>Release Time</li>
 </ul>
 <p>Our synth will be very basic. We won’t have control of velocity or amplitude at the note level. And we won’t be able to play more than one note at a time. Playing a note will cut off any other note currently playing and chords won’t work at all. This type of synth was pretty common on cheap 80’s musical keyboards.</p>
-<p>[raw Env+Oscillator example]</p>
-<h3 id="monosynth">MonoSynth</h3>
-<p>MonoSynth is a small class encapsulates this synth and gives it an easy to use interface.</p>
 <div id="" class="">
 <div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/music/sketches/hello_monosynth.js">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/music/sketches/hello_env.js">
+</iframe>
+</div>
+</div>
+<h3 id="simplesynth">SimpleSynth</h3>
+<p><a href="./SimpleSynth.html">SimpleSynth</a> is a small class encapsulates this synth and gives it an easy to use interface.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/music/sketches/hello_simplesynth.js">
 </iframe>
 </div>
 </div>
@@ -137,18 +143,41 @@
 ];
 </code></pre>
 <h3 id="playing-our-melody-format">Playing our Melody Format</h3>
+<p>SimpleSynth’s <code>noteOn</code> and <code>noteOff</code> methods accept a parameter <code>time</code> to schedule events in the future. To play back our melody, we can loop through each note and schedule it on the SimpleSynth. SimpleSynth has the <code>playNote</code> and <code>playNotes</code> methods to do this.</p>
+<pre><code class="language-javascript">playNote(note, length, time = <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">this</span>.noteOn(note, time);
+    <span class="hljs-keyword">this</span>.noteOff(note, time + length - <span class="hljs-keyword">this</span>.spacing);
+}
+
+playNotes(notes) {
+    <span class="hljs-keyword">let</span> time = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; notes.length; i++) {
+        <span class="hljs-keyword">const</span> freq = notes[i][<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">const</span> length = notes[i][<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">this</span>.playNote(freq, length, time);
+        time += length;
+    }
+}
+</code></pre>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/music/sketches/simple_song.js">
 </iframe>
 </div>
 </div>
-<h2 id="part-3-generating-a-melody">Part 3: Generating a Melody</h2>
-<p>We could generate input for our player any way we wanted. Even just random notes of random lengths. But that would be like generating images by randomly assigning colors to pixels. The result will be noise, not information.</p>
-<p>(discussion)</p>
-<h3 id="what-qualities-do-we-want">What qualities do we want?</h3>
+<h2 id="generating-a-melody">Generating a Melody</h2>
+<p>Now we have a format to represent a melody and a function to play it. Now we need to generate our melody.</p>
+<p>We could generate a melody by picking random notes and random lengths, but that would be like generating images by randomly assigning colors to pixels: the result will be noise, in many senses.</p>
+<div id="" class="discussion">
+<h2 id="what-kind-of-melody-do-we-want">What Kind of Melody do We Want?</h2>
+<p>A melody is an <em>organized</em> series of notes, but how do we want <em>our</em> melody organized? What qualities do we want?</p>
+</div>
+<h3 id="our-target-characteristics">Our Target Characteristics</h3>
+<p>We are going to use the C-Major key.
+We are going to use 4/4 time.</p>
+<h2 id="reference-links">Reference Links</h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">MDN: Web Audio API</a></p>
 <p><a href="https://www.html5rocks.com/en/tutorials/webaudio/intro/">HTML5Rocks: Getting Started with Web Audio</a></p>
 <p><a href="http://blog.mecheye.net/2017/09/i-dont-know-who-the-web-audio-api-is-designed-for/">I don’t know who the Web Audio API is designed for</a></p>
-<p><a href="http://psam3060-d-s16.github.io/class_notes/week_9/">http://psam3060-d-s16.github.io/class_notes/week_9/</a></p>
+<p><a href="http://blog.eumlab.com/c-and-db-whats-the-difference/">C-sharp vs D-flat</a></p>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>

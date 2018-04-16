@@ -50,7 +50,7 @@ We'll look at how to plan this project, the pieces that need to be built, and ho
 
 ## Synthesizing a Note
 
-There are many ways to synthesize a musical note. Some of the most common are additive, FM, and sampled synthesis. Synthesis is a good place to start: we generate music lets make sure we can play it.
+There are many ways to synthesize a musical note. Some of the most common are additive, FM, and sampled synthesis. Synthesis is a good place to start: before we generate a melody let's make sure we can play it. 
 
 [Wikipedia: Synthesizer](https://en.wikipedia.org/wiki/Synthesizer)
 
@@ -61,7 +61,10 @@ Most synthesizer offer a great deal of customization through parameters. What qu
 /::
 
 ### Qualities our Synth
-The p5.sound library has an Oscillator class that can generate a periodic signal with customizable frequency, amplitude, and waveform. We will base our synthesizer on this oscillator. 
+
+P5.sound has a built monophonic and polyphonic synthesizers. Here, we build our own from more basic units. The p5 synths are a little under-documented and building our own is a good way to understand what is going on.
+
+The p5.sound Oscillator class generates a periodic signal with customizable frequency, amplitude, and waveform. We will base our synthesizer on this oscillator. 
 
 The p5.sound library also has an Env class. This class can control the amplitude of an oscillator using an [ADSR](https://en.wikipedia.org/wiki/Synthesizer#Attack_Decay_Sustain_Release_(ADSR)_envelope) envelope. An ADSR envelope controls the attack, decay, sustain and release of a sound and can be used to simulate some of the characteristics of acoustic instruments. We'll use an Env object to control the our synthesizer.
 
@@ -79,14 +82,16 @@ By combining a p5 Oscillator and Env we'll have a synth with these parameters:
 
 Our synth will be very basic. We won't have control of velocity or amplitude at the note level. And we won't be able to play more than one note at a time. Playing a note will cut off any other note currently playing and chords won't work at all. This type of synth was pretty common on cheap 80's musical keyboards.
 
-[raw Env+Oscillator example]
+::: js-lab
+/music/sketches/hello_env.js
+/::
 
-### MonoSynth
+### SimpleSynth
 
-MonoSynth is a small class encapsulates this synth and gives it an easy to use interface. 
+[SimpleSynth](./SimpleSynth.html) is a small class encapsulates this synth and gives it an easy to use interface. 
 
 ::: js-lab
-/music/sketches/hello_monosynth.js
+/music/sketches/hello_simplesynth.js
 /::
 
 ::: js-lab
@@ -149,6 +154,26 @@ const melody = [
 
 ###  Playing our Melody Format
 
+SimpleSynth's `noteOn` and `noteOff` methods accept a parameter `time` to schedule events in the future. To play back our melody, we can loop through each note and schedule it on the SimpleSynth. SimpleSynth has the `playNote` and `playNotes` methods to do this.
+
+
+```javascript
+playNote(note, length, time = 0) {
+    this.noteOn(note, time);
+    this.noteOff(note, time + length - this.spacing);
+}
+
+playNotes(notes) {
+    let time = 0;
+    for (let i = 0; i < notes.length; i++) {
+        const freq = notes[i][0];
+        const length = notes[i][1];
+        this.playNote(freq, length, time);
+        time += length;
+    }
+}
+```
+
 ::: js-lab
 /music/sketches/simple_song.js
 /::
@@ -158,13 +183,28 @@ const melody = [
 
 
 
-## Part 3: Generating a Melody
+## Generating a Melody
 
-We could generate input for our player any way we wanted. Even just random notes of random lengths. But that would be like generating images by randomly assigning colors to pixels. The result will be noise, not information.
+Now we have a format to represent a melody and a function to play it. Now we need to generate our melody.
 
-(discussion)
-### What qualities do we want?
+We could generate a melody by picking random notes and random lengths, but that would be like generating images by randomly assigning colors to pixels: the result will be noise, in many senses.
 
+::: .discussion
+## What Kind of Melody do We Want?
+A melody is an _organized_ series of notes, but how do we want _our_ melody organized? What qualities do we want?
+/::
+
+
+### Our Target Characteristics
+
+We are going to use the C-Major key.
+We are going to use 4/4 time.
+
+
+
+
+
+## Reference Links
 
 [MDN: Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 
@@ -172,6 +212,5 @@ We could generate input for our player any way we wanted. Even just random notes
 
 [I don't know who the Web Audio API is designed for](http://blog.mecheye.net/2017/09/i-dont-know-who-the-web-audio-api-is-designed-for/)
 
+[C-sharp vs D-flat](http://blog.eumlab.com/c-and-db-whats-the-difference/)
 
-
-http://psam3060-d-s16.github.io/class_notes/week_9/

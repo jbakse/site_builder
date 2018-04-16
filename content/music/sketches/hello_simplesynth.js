@@ -8,7 +8,7 @@ let synth;
 
 function setup() {
     createCanvas(400, 200);
-    synth = new MonoSynth('triangle');
+    synth = new SimpleSynth('triangle');
     // synth.envelope.setADSR(.01, .1, .1, 0); // quick decay
 }
 

@@ -1,7 +1,7 @@
 // require https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js
 // require https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.sound.js
 // require https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js
-// require /music/MonoSynth.js
+// require /music/SimpleSynth.js
 
 
 let synth;
@@ -9,7 +9,7 @@ let synth;
 function setup() {
     createCanvas(400, 200);
 
-    synth = new MonoSynth('triangle');
+    synth = new SimpleSynth('triangle');
 
     const startButton = createButton('start');
     startButton.mousePressed(start);
