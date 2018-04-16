@@ -12,10 +12,11 @@ function setup() {
     myOscillator.freq(440); // set frequency
 
 
-    startButton = createButton('start');
+
+    const startButton = createButton('start');
     startButton.mousePressed(start);
 
-    stopButton = createButton('stop');
+    const stopButton = createButton('stop');
     stopButton.mousePressed(stop);
 }
 
