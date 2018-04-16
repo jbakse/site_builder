@@ -60,7 +60,7 @@ There are many ways to synthesize a musical note. Some of the most common are ad
 Most synthesizer offer a great deal of customization through parameters. What qualities do we want control of?
 /::
 
-### Qualities our Synth
+### Qualities of our Synth
 
 P5.sound has a built monophonic and polyphonic synthesizers. Here, we build our own from more basic units. The p5 synths are a little under-documented and building our own is a good way to understand what is going on.
 
@@ -88,24 +88,21 @@ Our synth will be very basic. We won't have control of velocity or amplitude at 
 
 ### SimpleSynth
 
-[SimpleSynth](./SimpleSynth.html) is a small class encapsulates this synth and gives it an easy to use interface. 
+[SimpleSynth](./SimpleSynth.html) is a small class [encapsulates](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)) this synth and gives it an easy to use interface. 
+
+
+[SimpleSynth Source](./SimpleSynth.html){boxed right}
+[Try it with MIDI](http://localhost:3000/js_lab/js_lab.html?/music/sketches/hello_midi.js){boxed right}
 
 ::: js-lab
 /music/sketches/hello_simplesynth.js
 /::
 
-::: js-lab
-/music/sketches/hello_midi.js
-/::
-
-
-
-
 
 
 ## Playing a Melody
 
-Now that we can play a musical note, we need to create a system that can play a series of notes: a melody.
+Now that we can play a single musical note, we need to create a system that can play a series of notes—a melody.
 
 ::: .discussion
 ## What does a Melody Look Like?
@@ -119,9 +116,13 @@ The p5.sound library has a set of classes—Phrase, Part, and Score—for repres
 Since our synth can't play more than one note at a time our format can be a simple sequence, without support for chords. And because our synth isn't velocity sensitive we don't need to represent that either. We _do need_ to represent the pitch of each note and its length.
 
 Pitch
-: We could represent our pitch with the raw frequency in [hertz](https://en.wikipedia.org/wiki/Heinrich_Hertz): `261.63`. We could use [scientific pitch notation](https://en.wikipedia.org/wiki/Scientific_pitch_notation): `C4`. We could use the [MIDI](https://en.wikipedia.org/wiki/MIDI) note value: `60`.
+: We could represent our pitch with the raw frequency in [hertz](https://en.wikipedia.org/wiki/Heinrich_Hertz): `261.63`.
 
-  Hertz is a little fussy, and scientific pitch notation is a little harder to parse. We'll use MIDI note values and p5.sound's `midiToFreq()` will translate from midi values to frequencies for us.
+  We could use [scientific pitch notation](https://en.wikipedia.org/wiki/Scientific_pitch_notation): `C4`.
+  
+  We could use the [MIDI](https://en.wikipedia.org/wiki/MIDI) note value: `60`.
+
+  Hertz is a little fussy, and scientific pitch notation is a little hard to parse. We'll use MIDI note values. P5.sound's `midiToFreq()` will translate from midi values to frequencies for us.
 
 | A  | B♭ | B  | C4 | D♭ | D  | E♭ | E  | F  | G♭ | G  | A♭ |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
@@ -187,7 +188,7 @@ playNotes(notes) {
 
 Now we have a format to represent a melody and a function to play it. Now we need to generate our melody.
 
-We could generate a melody by picking random notes and random lengths, but that would be like generating images by randomly assigning colors to pixels: the result will be noise, in many senses.
+We could generate a melody by picking random notes and random lengths, but that would be like generating images by randomly assigning colors to pixels. The result would be noise—in many senses—but we want to make music.
 
 ::: .discussion
 ## What Kind of Melody do We Want?
@@ -197,14 +198,20 @@ A melody is an _organized_ series of notes, but how do we want _our_ melody orga
 
 ### Our Target Characteristics
 
-We are going to use the C-Major key.
-We are going to use 4/4 time.
-
+- We are going to use the C-Major key.
+- We are going to use 4/4 time.
+- We will use only half-notes and quarter-notes.
+- Our melody should contain mostly small pitch steps: `C to D`, `F to E`
+- Our melody should have occasional bigger jumps: `C to E`.
+- Our melody will end on the root `C`.
 
 
 
 
 ## Reference Links
+
+
+[Melod in Songwriting](https://www.amazon.com/Melody-Songwriting-Techniques-Writing-Berklee/dp/063400638X)
 
 [MDN: Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 

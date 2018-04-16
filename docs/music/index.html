@@ -33,7 +33,7 @@
 <h2 id="designing-the-synth">Designing the Synth</h2>
 <p>Most synthesizer offer a great deal of customization through parameters. What qualities do we want control of?</p>
 </div>
-<h3 id="qualities-our-synth">Qualities our Synth</h3>
+<h3 id="qualities-of-our-synth">Qualities of our Synth</h3>
 <p>P5.sound has a built monophonic and polyphonic synthesizers. Here, we build our own from more basic units. The p5 synths are a little under-documented and building our own is a good way to understand what is going on.</p>
 <p>The p5.sound Oscillator class generates a periodic signal with customizable frequency, amplitude, and waveform. We will base our synthesizer on this oscillator.</p>
 <p>The p5.sound library also has an Env class. This class can control the amplitude of an oscillator using an <a href="https://en.wikipedia.org/wiki/Synthesizer#Attack_Decay_Sustain_Release_(ADSR)_envelope">ADSR</a> envelope. An ADSR envelope controls the attack, decay, sustain and release of a sound and can be used to simulate some of the characteristics of acoustic instruments. We’ll use an Env object to control the our synthesizer.</p>
@@ -56,21 +56,17 @@
 </div>
 </div>
 <h3 id="simplesynth">SimpleSynth</h3>
-<p><a href="./SimpleSynth.html">SimpleSynth</a> is a small class encapsulates this synth and gives it an easy to use interface.</p>
+<p><a href="./SimpleSynth.html">SimpleSynth</a> is a small class <a href="https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)">encapsulates</a> this synth and gives it an easy to use interface.</p>
+<p class="boxed right"><a href="./SimpleSynth.html">SimpleSynth Source</a>
+<a href="http://localhost:3000/js_lab/js_lab.html?/music/sketches/hello_midi.js">Try it with MIDI</a></p>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/music/sketches/hello_simplesynth.js">
 </iframe>
 </div>
 </div>
-<div id="" class="">
-<div class="js-lab">
-<iframe class="js-lab" src="/js_lab/js_lab.html?/music/sketches/hello_midi.js">
-</iframe>
-</div>
-</div>
 <h2 id="playing-a-melody">Playing a Melody</h2>
-<p>Now that we can play a musical note, we need to create a system that can play a series of notes: a melody.</p>
+<p>Now that we can play a single musical note, we need to create a system that can play a series of notes—a melody.</p>
 <div id="" class="discussion">
 <h2 id="what-does-a-melody-look-like">What does a Melody Look Like?</h2>
 <p>A melody is a series of notes. What information is necessary to describe a melody? How would you represent that information in code?</p>
@@ -81,8 +77,10 @@
 <dl>
 <dt>Pitch</dt>
 <dd>
-<p>We could represent our pitch with the raw frequency in <a href="https://en.wikipedia.org/wiki/Heinrich_Hertz">hertz</a>: <code>261.63</code>. We could use <a href="https://en.wikipedia.org/wiki/Scientific_pitch_notation">scientific pitch notation</a>: <code>C4</code>. We could use the <a href="https://en.wikipedia.org/wiki/MIDI">MIDI</a> note value: <code>60</code>.</p>
-<p>Hertz is a little fussy, and scientific pitch notation is a little harder to parse. We’ll use MIDI note values and p5.sound’s <code>midiToFreq()</code> will translate from midi values to frequencies for us.</p>
+<p>We could represent our pitch with the raw frequency in <a href="https://en.wikipedia.org/wiki/Heinrich_Hertz">hertz</a>: <code>261.63</code>.</p>
+<p>We could use <a href="https://en.wikipedia.org/wiki/Scientific_pitch_notation">scientific pitch notation</a>: <code>C4</code>.</p>
+<p>We could use the <a href="https://en.wikipedia.org/wiki/MIDI">MIDI</a> note value: <code>60</code>.</p>
+<p>Hertz is a little fussy, and scientific pitch notation is a little hard to parse. We’ll use MIDI note values. P5.sound’s <code>midiToFreq()</code> will translate from midi values to frequencies for us.</p>
 </dd>
 </dl>
 <table class="table table-responsive">
@@ -167,15 +165,22 @@ playNotes(notes) {
 </div>
 <h2 id="generating-a-melody">Generating a Melody</h2>
 <p>Now we have a format to represent a melody and a function to play it. Now we need to generate our melody.</p>
-<p>We could generate a melody by picking random notes and random lengths, but that would be like generating images by randomly assigning colors to pixels: the result will be noise, in many senses.</p>
+<p>We could generate a melody by picking random notes and random lengths, but that would be like generating images by randomly assigning colors to pixels. The result would be noise—in many senses—but we want to make music.</p>
 <div id="" class="discussion">
 <h2 id="what-kind-of-melody-do-we-want">What Kind of Melody do We Want?</h2>
 <p>A melody is an <em>organized</em> series of notes, but how do we want <em>our</em> melody organized? What qualities do we want?</p>
 </div>
 <h3 id="our-target-characteristics">Our Target Characteristics</h3>
-<p>We are going to use the C-Major key.
-We are going to use 4/4 time.</p>
+<ul>
+<li>We are going to use the C-Major key.</li>
+<li>We are going to use 4/4 time.</li>
+<li>We will use only half-notes and quarter-notes.</li>
+<li>Our melody should contain mostly small pitch steps: <code>C to D</code>, <code>F to E</code></li>
+<li>Our melody should have occasional bigger jumps: <code>C to E</code>.</li>
+<li>Our melody will end on the root <code>C</code>.</li>
+</ul>
 <h2 id="reference-links">Reference Links</h2>
+<p><a href="https://www.amazon.com/Melody-Songwriting-Techniques-Writing-Berklee/dp/063400638X">Melod in Songwriting</a></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">MDN: Web Audio API</a></p>
 <p><a href="https://www.html5rocks.com/en/tutorials/webaudio/intro/">HTML5Rocks: Getting Started with Web Audio</a></p>
 <p><a href="http://blog.mecheye.net/2017/09/i-dont-know-who-the-web-audio-api-is-designed-for/">I don’t know who the Web Audio API is designed for</a></p>

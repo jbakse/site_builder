@@ -158,6 +158,13 @@ p5.js + p5.sound
 
 </a>
 
+<a class="col-6 col-md-4" data-ready="true" href="./music">
+
+### Comp Music
+p5.js + p5.sound
+
+</a>
+
 
 <a class="col-6 col-md-4" data-ready="false" href="./#">
 
@@ -221,9 +228,9 @@ Vuo
 | [Week 10, March 30](#)                       | [Animation](animation)                               |
 | [Week 11, April 6](text/plan.html)           | [Generating Text](text)                              |
 | [Week 12, April 13](sound/plan.html)         | [Generating Sound](sound)                            |
-| [Week 13, April 20](#)                       | [3D Forms](#)                                        |
-| [Week 14, April 27](#)                       | [Microgames](#)                                      |
-| [Week 15, May 4](#)                          | [TBD](#)                                             |
+| [Week 13, April 20](music/plan.html)         | [Music](music)                                       |
+| [Week 14, April 27](#)                       | [3D Forms](#)                                        |
+| [Week 15, May 4](#)                          | [Microgames](#)                                      |
 | [Week 16, May 11](#)                         | [Postmortem Party](#)                                |
 
 <style>
