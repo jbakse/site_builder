@@ -17,7 +17,7 @@ software: p5.js
 
 ## Computational Text
 
-Procedural generation can be used to create form in almost any media: image, video, animation, sound, sculpture. The chapter introduces some tactics for procedurally generating text, which may be the media most often computationally generated. Web pages are built out of text, and most of the time this text is computationally generated at least to some degree. 
+Procedural generation can be used to create form in almost any media: image, video, animation, sound, sculpture. This chapter introduces some tactics for procedurally generating text, which may be the media most often computationally generated. Web pages are built out of text, and most of the time this text is computationally generated at least to some degree. 
 
 ::: .links-sidebar
 [Google:<br/>How search works.](https://www.google.com/search/howsearchworks/)
