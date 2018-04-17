@@ -29,13 +29,8 @@ class SimpleSynth {
         /**
          * generates the tone of the notes
          * https://github.com/processing/p5.js-sound/blob/master/src/oscillator.js
-         * 
          * @type p5.Oscillator
          */
-
-
-
-        // sine, sawtooth, triangle, square
         this.oscillator = new p5.Oscillator(shape);
         this.oscillator.amp(this.envelope); // set amplitude
         this.oscillator.freq(220); // set frequency
@@ -46,7 +41,7 @@ class SimpleSynth {
          * they are fully decayed before next note plays
          * @type {Number}
          */
-        this.spacing = 0; // -0.7;
+        this.spacing = .02; // -0.7;
 
         /**
          * callback called when a note is played, receives
