@@ -151,9 +151,16 @@ javascript + html
 </a>
 
 
-<a class="col-6 col-md-4" data-ready="false" href="./#">
+<a class="col-6 col-md-4" data-ready="true" href="./sound">
 
 ### Comp Sound
+p5.js + p5.sound
+
+</a>
+
+<a class="col-6 col-md-4" data-ready="true" href="./music">
+
+### Comp Music
 p5.js + p5.sound
 
 </a>
@@ -218,12 +225,12 @@ Vuo
 | [Week 7, March 9](turtles/plan.html)         | [Turtle Graphics](turtles)                           |
 | [Week 8, March 16](vectors/plan.html)        | [Vector Data](vectors)                               |
 | Week 9, March 23{gray}                       | Spring Break{gray}                                   |
-| [Week 10, March 30](#)                       | [Animation](animation)                                       |
-| [Week 11, April 6](text/plan.html)                        | [Generating Text](text)                                 |
-| [Week 12, April 13](#)                       | [Generating Sound](#)                                |
-| [Week 13, April 20](#)                       | [3D Forms](#)                                        |
-| [Week 14, April 27](#)                       | [Microgames](#)                                      |
-| [Week 15, May 4](#)                          | [TBD](#)                                             |
+| [Week 10, March 30](#)                       | [Animation](animation)                               |
+| [Week 11, April 6](text/plan.html)           | [Generating Text](text)                              |
+| [Week 12, April 13](sound/plan.html)         | [Generating Sound](sound)                            |
+| [Week 13, April 20](music/plan.html)         | [Music](music)                                       |
+| [Week 14, April 27](#)                       | [3D Forms](#)                                        |
+| [Week 15, May 4](#)                          | [Microgames](#)                                      |
 | [Week 16, May 11](#)                         | [Postmortem Party](#)                                |
 
 <style>

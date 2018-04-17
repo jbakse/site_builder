@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Music | Comp Form</title></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<polygon points="32,64 0,119.4 64,119.4"/>
+<polygon points="64,8.6 32,64 96,64"/>
+<polygon points="80,91.7 64,119.4 96,119.4"/>
+<polygon points="112,91.7 96,119.4 128,119.4"/>
+<polygon points="96,64 80,91.7 112,91.7"/>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Music</span><div class="buttons"><a class="previous" href="../sound"><i class="fa fa-caret-left fa-lg"></i>Sound</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Music</h1><h6>Overview</h6><p class="description">Music is organized sound.</p><h6>Tools</h6><p class="software">p5.js p5.sound</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="music">Music</h2>
+<p>In this chapter we look at tactics and strategies for generating a short piece of music. Our result will be a simple version of <a href="http://psam3060-d-s16.github.io/class_notes/week_9/sketch_music/">this demo</a>.</p>
+<p>We’ll look at how to plan this project, the pieces that need to be built, and how to represent data. We will build this music generator using the p5.sound library.</p>
+<h3 id="examples">Examples</h3>
+<dl>
+<dt><a href="https://www.youtube.com/watch?v=mLZelvSvh3A">Six Marimbas</a> <a href="https://www.youtube.com/watch?v=g0WVh1D0N50">Come Out</a> <a href="https://www.youtube.com/watch?v=vugqRAX7xQE">Its Gonna Rain</a></dt>
+<dd>Three compositions by Steve Reich</dd>
+<dt><a href="https://www.youtube.com/watch?v=UdNdSJUf_8I">Cobra</a></dt>
+<dd>John Zorn’s “game piece” music.</dd>
+<dt><a href="https://en.wikipedia.org/wiki/Ambient_1:_Music_for_Airports">Music for Airports</a></dt>
+<dd>Ambient music created by Brian Eno</dd>
+<dt><a href="http://jeremywentworth.com/projects/webkitsynth/index.html">Jeremy Wentworth: WebKitSynth</a></dt>
+<dd>Generates a short sequence, with lots of knobs to tweak.</dd>
+<dt><a href="https://www.youtube.com/watch?v=En1BApnx3Co">Happy Songs in Sad Versions</a></dt>
+<dd>Popular songs in Minor Keys.</dd>
+<dt><a href="http://yoavz.com/music_rnn/">Neural Network Music</a></dt>
+<dd>Academic paper (with examples) on “Music Language Modeling with Recurrent Neural Networks”.</dd>
+</dl>
+<div id="" class="callout">
+<p class="scale"><img src="https://s-media-cache-ak0.pinimg.com/736x/76/fd/4a/76fd4ae694014ee601970e9cde9b45f9.jpg" alt="Voice Piece For Soprano"></p>
+</div>
+<h2 id="synthesizing-a-note">Synthesizing a Note</h2>
+<p>There are many ways to synthesize a musical note. Some of the most common are additive, FM, and sampled synthesis. Synthesis is a good place to start: before we generate a melody let’s make sure we can play it.</p>
+<p><a href="https://en.wikipedia.org/wiki/Synthesizer">Wikipedia: Synthesizer</a></p>
+<div id="" class="discussion">
+<h2 id="designing-the-synth">Designing the Synth</h2>
+<p>Most synthesizer offer a great deal of customization through parameters. What qualities do we want control of?</p>
+</div>
+<h3 id="qualities-of-our-synth">Qualities of our Synth</h3>
+<p>P5.sound has a built monophonic and polyphonic synthesizers. Here, we build our own from more basic units. The p5 synths are a little under-documented and building our own is a good way to understand what is going on.</p>
+<p>The p5.sound Oscillator class generates a periodic signal with customizable frequency, amplitude, and waveform. We will base our synthesizer on this oscillator.</p>
+<p>The p5.sound library also has an Env class. This class can control the amplitude of an oscillator using an <a href="https://en.wikipedia.org/wiki/Synthesizer#Attack_Decay_Sustain_Release_(ADSR)_envelope">ADSR</a> envelope. An ADSR envelope controls the attack, decay, sustain and release of a sound and can be used to simulate some of the characteristics of acoustic instruments. We’ll use an Env object to control the our synthesizer.</p>
+<p>[whiteboard diagram ADSR Envelope]
+[whiteboard diagram [Evn] -&gt; (amp)[Oscillator]]</p>
+<p>By combining a p5 Oscillator and Env we’ll have a synth with these parameters:</p>
+<ul>
+<li>Frequency</li>
+<li>Basic Waveform Tone</li>
+<li>Attack Time</li>
+<li>Decay Time</li>
+<li>Sustain Level</li>
+<li>Release Time</li>
+</ul>
+<p>Our synth will be very basic. We won’t have control of velocity or amplitude at the note level. And we won’t be able to play more than one note at a time. Playing a note will cut off any other note currently playing and chords won’t work at all. This type of synth was pretty common on cheap 80’s musical keyboards.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/music/sketches/hello_env.js">
+</iframe>
+</div>
+</div>
+<h3 id="simplesynth">SimpleSynth</h3>
+<p><a href="./SimpleSynth.html">SimpleSynth</a> is a small class <a href="https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)">encapsulates</a> this synth and gives it an easy to use interface.</p>
+<p class="boxed right"><a href="./SimpleSynth.html">SimpleSynth Source</a>
+<a href="http://localhost:3000/js_lab/js_lab.html?/music/sketches/hello_midi.js">Try it with MIDI</a></p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/music/sketches/hello_simplesynth.js">
+</iframe>
+</div>
+</div>
+<h2 id="playing-a-melody">Playing a Melody</h2>
+<p>Now that we can play a single musical note, we need to create a system that can play a series of notes—a melody.</p>
+<div id="" class="discussion">
+<h2 id="what-does-a-melody-look-like">What does a Melody Look Like?</h2>
+<p>A melody is a series of notes. What information is necessary to describe a melody? How would you represent that information in code?</p>
+</div>
+<h3 id="our-melody-format">Our Melody Format</h3>
+<p>The p5.sound library has a set of classes—Phrase, Part, and Score—for representing and playing musical sequences. That system assumes each “note” in the song is the same length, and doesn’t specifically support precise timing, so we’ll build our own representation of a song.</p>
+<p>Since our synth can’t play more than one note at a time our format can be a simple sequence, without support for chords. And because our synth isn’t velocity sensitive we don’t need to represent that either. We <em>do need</em> to represent the pitch of each note and its length.</p>
+<dl>
+<dt>Pitch</dt>
+<dd>
+<p>We could represent our pitch with the raw frequency in <a href="https://en.wikipedia.org/wiki/Heinrich_Hertz">hertz</a>: <code>261.63</code>.</p>
+<p>We could use <a href="https://en.wikipedia.org/wiki/Scientific_pitch_notation">scientific pitch notation</a>: <code>C4</code>.</p>
+<p>We could use the <a href="https://en.wikipedia.org/wiki/MIDI">MIDI</a> note value: <code>60</code>.</p>
+<p>Hertz is a little fussy, and scientific pitch notation is a little hard to parse. We’ll use MIDI note values. P5.sound’s <code>midiToFreq()</code> will translate from midi values to frequencies for us.</p>
+</dd>
+</dl>
+<table class="table table-responsive">
+<thead>
+<tr>
+<th>A</th>
+<th>B♭</th>
+<th>B</th>
+<th>C4</th>
+<th>D♭</th>
+<th>D</th>
+<th>E♭</th>
+<th>E</th>
+<th>F</th>
+<th>G♭</th>
+<th>G</th>
+<th>A♭</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>33</td>
+<td>34</td>
+<td>35</td>
+<td>36</td>
+<td>37</td>
+<td>38</td>
+<td>39</td>
+<td>40</td>
+<td>41</td>
+<td>42</td>
+<td>43</td>
+<td>44</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>Length</dt>
+<dd>In musical notation note lengths are usually provided in relation to the tempo of the piece: <code>quarter note</code>. We’ll use seconds: <code>.25</code>.</dd>
+</dl>
+<p>We could use an object <code>{pitch: 60, length: .25}</code> or an array <code>[60, .25]</code> to represent our note. The object is clearer and the array is more compact. I think a melody will look better with the array, lets use that.</p>
+<dl>
+<dt>Rests</dt>
+<dd>Rests are gaps between notes. They have a length, but no pitch. We could set the node pitch to <code>0</code> or <code>undefined</code> to represent a rest, but those are quite semantically correct. Since we can mix types in JavaScript we could use a string too: <code>rest</code>;</dd>
+</dl>
+<p>Here is how our melody will look.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> melody = [
+    [<span class="hljs-number">64</span>, <span class="hljs-number">3</span>/<span class="hljs-number">8</span>],
+    [<span class="hljs-number">62</span>, <span class="hljs-number">1</span>/<span class="hljs-number">8</span>],
+    [<span class="hljs-number">60</span>, <span class="hljs-number">1</span>/<span class="hljs-number">4</span>],
+    [<span class="hljs-number">62</span>, <span class="hljs-number">1</span>/<span class="hljs-number">4</span>],
+
+    [<span class="hljs-number">64</span>, <span class="hljs-number">1</span>/<span class="hljs-number">4</span>],
+    [<span class="hljs-number">64</span>, <span class="hljs-number">1</span>/<span class="hljs-number">4</span>],
+    [<span class="hljs-number">64</span>, <span class="hljs-number">1</span>/<span class="hljs-number">2</span>],
+
+    [<span class="hljs-string">'rest'</span>, <span class="hljs-number">1</span>],
+];
+</code></pre>
+<h3 id="playing-our-melody-format">Playing our Melody Format</h3>
+<p>SimpleSynth’s <code>noteOn</code> and <code>noteOff</code> methods accept a parameter <code>time</code> to schedule events in the future. To play back our melody, we can loop through each note and schedule it on the SimpleSynth. SimpleSynth has the <code>playNote</code> and <code>playNotes</code> methods to do this.</p>
+<pre><code class="language-javascript">playNote(note, length, time = <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">this</span>.noteOn(note, time);
+    <span class="hljs-keyword">this</span>.noteOff(note, time + length - <span class="hljs-keyword">this</span>.spacing);
+}
+
+playNotes(notes) {
+    <span class="hljs-keyword">let</span> time = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; notes.length; i++) {
+        <span class="hljs-keyword">const</span> freq = notes[i][<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">const</span> length = notes[i][<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">this</span>.playNote(freq, length, time);
+        time += length;
+    }
+}
+</code></pre>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/music/sketches/simple_song.js">
+</iframe>
+</div>
+</div>
+<h2 id="generating-a-melody">Generating a Melody</h2>
+<p>Now we have a format to represent a melody and a function to play it. Now we need to generate our melody.</p>
+<p>We could generate a melody by picking random notes and random lengths, but that would be like generating images by randomly assigning colors to pixels. The result would be noise—in many senses—but we want to make music.</p>
+<div id="" class="discussion">
+<h2 id="what-kind-of-melody-do-we-want">What Kind of Melody do We Want?</h2>
+<p>A melody is an <em>organized</em> series of notes, but how do we want <em>our</em> melody organized? What qualities do we want?</p>
+</div>
+<h3 id="our-target-characteristics">Our Target Characteristics</h3>
+<ul>
+<li>We are going to use the C-Major key.</li>
+<li>We are going to use 4/4 time.</li>
+<li>We will use only half-notes and quarter-notes.</li>
+<li>Our melody should contain mostly small pitch steps: <code>C to D</code>, <code>F to E</code></li>
+<li>Our melody should have occasional bigger jumps: <code>C to E</code>.</li>
+<li>Our melody will end on the root <code>C</code>.</li>
+</ul>
+<h2 id="reference-links">Reference Links</h2>
+<p><a href="https://www.amazon.com/Melody-Songwriting-Techniques-Writing-Berklee/dp/063400638X">Melod in Songwriting</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">MDN: Web Audio API</a></p>
+<p><a href="https://www.html5rocks.com/en/tutorials/webaudio/intro/">HTML5Rocks: Getting Started with Web Audio</a></p>
+<p><a href="http://blog.mecheye.net/2017/09/i-dont-know-who-the-web-audio-api-is-designed-for/">I don’t know who the Web Audio API is designed for</a></p>
+<p><a href="http://blog.eumlab.com/c-and-db-whats-the-difference/">C-sharp vs D-flat</a></p>
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>

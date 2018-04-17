@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Sound | Comp Form</title></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<polygon points="32,64 0,119.4 64,119.4"/>
+<polygon points="64,8.6 32,64 96,64"/>
+<polygon points="80,91.7 64,119.4 96,119.4"/>
+<polygon points="112,91.7 96,119.4 128,119.4"/>
+<polygon points="96,64 80,91.7 112,91.7"/>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Sound</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Sound</h1><h6>Overview</h6><p class="description">Make some noise</p><h6>Tools</h6><p class="software">p5.js + p5.sound</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="warm-up">Warm Up</h2>
+<p><a href="https://www.youtube.com/watch?v=DGCvo3RsLkU">Play a little melody.</a></p>
+<p><a href="https://www.youtube.com/watch?v=RtlYi1yLTVQ">ElectroBOOM: ESD Safety</a></p>
+<h3 id="key-takeaways">Key Takeaways</h3>
+<ul>
+<li>Computers are physical machines.</li>
+<li>Computers can interface with the physical environment.</li>
+<li>Data flows through our physical environment.</li>
+<li>Our eyes and ears are sensors.</li>
+<li>Our eyes and ears are significantly different in structure.</li>
+<li>The types of information gathered by our eyes and ears are rooted in their structure.</li>
+<li>We miss most of the information.</li>
+<li>Our eyes and ears are just sensors, they provide data.</li>
+<li>Our brain is needed to process this data and provide information.</li>
+<li>Our brain’s visual and auditory data processing is powerful and valuable.</li>
+<li>We can take advantage of this power by creating visual and auditory form.</li>
+</ul>
+<h2 id="drawing-sounds">Drawing Sounds</h2>
+<h3 id="hello-p5js">Hello, p5.js!</h3>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+    createCanvas(<span class="hljs-number">500</span>, <span class="hljs-number">500</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+    fill(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    noStroke();
+    ellipse(<span class="hljs-number">250</span>, <span class="hljs-number">250</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+}
+</code></pre>
+<h3 id="hello-p5sound">Hello, p5.sound!</h3>
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+    myOscillator = <span class="hljs-keyword">new</span> p5.Oscillator(<span class="hljs-string">'sine'</span>);
+    myOscillator.amp(<span class="hljs-number">1</span>); <span class="hljs-comment">// set amplitude</span>
+    myOscillator.freq(<span class="hljs-number">440</span>); <span class="hljs-comment">// set frequency</span>
+    myOscillator.start(); <span class="hljs-comment">// start oscillating</span>
+}
+</code></pre>
+<h2 id="computers">Computers</h2>
+<p><a href="https://docs.google.com/presentation/d/1JhBhWI8IHTgY59WDwSWg-M0PJtsKe5YRz21G61lI1E4/present">Carefully Arranged Sand and Lightning</a></p>
+<h2 id="light">Light</h2>
+<h3 id="emissive-color">Emissive Color</h3>
+<ul>
+<li>Sunlight contains electromagnetic radiation in many wavelengths.</li>
+<li>An LED provides electromagnetic radiation in a very specific wavelength range.</li>
+<li>An LED computer display has LEDs of three colors. It can vary the intensity of those three colors, but can’t provide electromagnetic radiation in the wavelengths between them.</li>
+<li>We perceive the mix of the three colors as a single color.</li>
+<li>Red, green, and blue are used because they correspond with our biology.</li>
+</ul>
+<h3 id="reflectiveabsorptive-color">Reflective/Absorptive Color</h3>
+<ul>
+<li>A reflective object doesn’t reflect color of single wavelength. Instead it reflects/absorbs all wavelengths at different amounts.</li>
+<li>We perceive the reflections as a single color.</li>
+<li>We can’t determine what combination of stimulating frequencies contribute to that color.</li>
+<li>A reflective color cannot be brighter than the lighting in any wavelength.</li>
+<li>We adjust our perceived color of an image based on our understanding of the lighting.</li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/675px-EM_Spectrum_Properties_edit.svg.png" alt="EM"></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Cone-fundamentals-with-srgb-spectrum.svg/540px-Cone-fundamentals-with-srgb-spectrum.svg.png" alt="Cones"></p>
+<ul>
+<li>Color wheel?</li>
+<li>No such thing as purple light. But the color purple exists.</li>
+</ul>
+<h3 id="vision">Vision</h3>
+<p><a href="https://youtu.be/1DiqL8iFD8g?t=22s">ElectroBOOM: Thermal Imaging</a></p>
+<p><a href="https://www.youtube.com/watch?v=o9BqrSAHbTc">How the Sun Sees You: UV Imaging</a></p>
+<p><a href="https://www.youtube.com/watch?v=FjHJ7FmV0M4">Feynman on Light</a></p>
+<h3 id="our-eyes">Our Eyes</h3>
+<ul>
+<li>Our eyes have ~120 million rods that detect brightness and ~6.5 million cones that detect color.</li>
+<li>For comparison an HD display has 6.2 million leds, a high end DSLR has ~45 million sensors.</li>
+<li>Angular resolution: 1 arcminute or .02° Thats about 250 dpi at one foot away, 3 pixels/mm at 1 meter. Something 6 inches wide about a mile away. We can see things much smaller than this, when they are bright, we just can’t understand their shape. For example a bright led would be easily visible a mile away in a dark environment.</li>
+<li>Field of View: ~ 160° x 175° But resolution is very center biased. (Foviated rendering.)</li>
+<li>Color Sensitivity: Able to perceive electromagnetic waves from 390 to 700nm, and can differentiate hues as close as 1-10 nm.</li>
+<li>Contrast Sensitivity: Have a contrast range something like 1:1000000 (20+ stops). Film cameras are 9-10, high end digital camera are a little better. A typical screen might have a true contrast ratio of 1:1000.</li>
+<li>We can differentiate a solid light from a flickering one, up to 60+ hz.</li>
+<li>In the US more than 3% of of those 40 years and older are either legally blind (20/200 vision or worse, with corrective lenses) or visually impaired (20/40 or worse).</li>
+<li>In the US more 7% of males and .4% of females have some form of color-blindness.</li>
+</ul>
+<h3 id="our-visual-cortex">Our Visual Cortex</h3>
+<ul>
+<li>Depth Perception (Binocular and not)</li>
+<li>Persistance</li>
+<li>Estimation of “True” Color, or Color Under Different Lighting<a href="https://en.wikipedia.org/wiki/The_dress">The Dress</a></li>
+<li>Pattern Recognition</li>
+</ul>
+<h3 id="thoughts">Thoughts</h3>
+<ul>
+<li>Our understanding of color/color theory is informed from the anatomy of our eye and the way our mind processes vision.</li>
+<li>We talk about what color something is a single thing: dark blue, pink, vivid green. We don’t think about the color of something as a little bit green, a little bit blue, and a lot red. We definitely don’t think of color as the sum of the many in between wavelengths.</li>
+<li>We talk about primary colors and color wheels. These are properties of <strong>vision</strong> not <strong>light</strong>.</li>
+</ul>
+<h2 id="sound">Sound</h2>
+<p>Pressure waves propagated in the air.</p>
+<p><a href="https://www.youtube.com/watch?v=flIAxGsV1q0">How Hearing Works</a></p>
+<h3 id="our-ears">Our Ears</h3>
+<ul>
+<li>16,000-20,000 hairs in a curled up tube, the cochlea. Each hair in the cochlea are “tuned” to different frequencies.</li>
+<li>Volume sensitivity: Detect Pressure Changes &lt; 1 billionth of the atmospheric pressure</li>
+<li>Dynamic range: We can hear sounds 10 trillion times louder than that, where they start hurting.</li>
+<li>Frequency Sensitivity: Detect Pitches/Frequencies from 20hz to 20,000hz, and can differentiate frequencies as close as 5 cents (.15hz at Middle C).</li>
+<li>An 88 Key Piano ranges from A0 (27.5 hz) to C8 (4186.01 hz)</li>
+<li>Detect Timbre</li>
+<li>About 20% of Americans have some hearing loss.</li>
+</ul>
+<h3 id="our-auditory-cortex">Our Auditory Cortex</h3>
+<ul>
+<li>3D location of sound. We have two sound sensors, and we can detect differences in the amplitude, phase, and timing of signals that reach them.</li>
+<li>We can turn our head to hear sounds from a different “view point”.</li>
+<li>We can infer information from acoustic context including echoes and spectral attenuation.</li>
+<li>Source differentiation. Listen to one person in noisy room, or to a specific instrument in a symphony.</li>
+<li>Very, very good temporal pattern detection.</li>
+<li>Easily noticed off key notes in a song.</li>
+</ul>
+<p><a href="https://soundphysics.ius.edu/?page_id=1005">Ears make Mistakes</a></p>
+<p><a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Sound/earsens.html">Sensitivity of Human Ear</a></p>
+<h2 id="hearing-vs-sight">Hearing vs Sight</h2>
+<p><a href="https://www.youtube.com/watch?v=G-lN8vWm3m0">McGurk Effect</a></p>
+<table class="table table-responsive">
+<thead>
+<tr>
+<th>Eyes</th>
+<th>Ears</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lens</td>
+<td>No Lens</td>
+</tr>
+<tr>
+<td>Sensitive to four frequency ranges</td>
+<td>Sensitive to thousands of frequency ranges</td>
+</tr>
+<tr>
+<td>Spacial Priority</td>
+<td>Frequency Priority</td>
+</tr>
+<tr>
+<td>1,000,000:1</td>
+<td>10,000,000,000:1</td>
+</tr>
+<tr>
+<td>170° FOV</td>
+<td>360° FOV</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Our vision prioritizes spacial information over spectral information.</li>
+<li>Our hearing prioritizes spectral information over spacial informational.</li>
+<li>We are pretty good at telling where a sound originates, but much better at telling where a light originates.</li>
+<li>We can reduce color to a single value, but we can understand the spectrum of a sound much better.</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<h3 id="hello-again-p5sound">Hello again, p5.sound!</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/hello_sound.js">
+</iframe>
+</div>
+</div>
+<h3 id="oscillator">Oscillator</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/oscillator.js">
+</iframe>
+</div>
+</div>
+<h3 id="modulator">Modulator</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/modulator.js">
+</iframe>
+</div>
+</div>
+<div id="" class="activity">
+<h2 id="in-class-challenge">In-class Challenge</h2>
+<p><a href="https://www.youtube.com/watch?v=DGCvo3RsLkU">Play a little melody.</a></p>
+</div>
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
