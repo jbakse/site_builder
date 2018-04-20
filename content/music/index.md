@@ -25,6 +25,14 @@ We'll look at how to plan this project, the pieces that need to be built, and ho
 
 ### Examples
 
+Composers have long explored the writing music with algorithms and chance. These works fall into a few rough categories.
+
+In [algorithmic music](https://en.wikipedia.org/wiki/Algorithmic_composition), and algorithm is employed _at the time of composition_ resulting in a fixed score.
+
+In [aleatoric music](https://en.wikipedia.org/wiki/Aleatoric_music), important aspects of a composition are intended to be decided _at the time of the performance_. Aleatoric allows for variation according to the performer or to chance within a specific structure. For example, a musical system published in 1792, _Anleitung zum Componieren von Walzern so viele man will vermittelst zweier Würfel, ohne etwas von der Musik oder Composition zu verstehen (Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition)_ employed chance to arrange a pre-composed measures of music.
+
+Brian Eno used the term Generative Music to describe music that is created by a system an constantly changes.
+
 [Six Marimbas](https://www.youtube.com/watch?v=mLZelvSvh3A) [Come Out](https://www.youtube.com/watch?v=g0WVh1D0N50) [Its Gonna Rain](https://www.youtube.com/watch?v=vugqRAX7xQE)
 : Three compositions by Steve Reich
 
@@ -252,7 +260,8 @@ Codebases often diverge from their initial specifications. Compare the target ch
 ### Base
 Continuing explore generating and visualizing sound and music.{bigger}
 
-### Challenge: 
+### Challenge: Write and Record a Song
+It doesn't have to be good. It doesn't have to use code.
 
 
 /::
