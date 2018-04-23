@@ -123,7 +123,7 @@ The code above creates a small synthesizer system.
 
 
 [SimpleSynth Source](./SimpleSynth.html){boxed right}
-[Try it with MIDI](http://localhost:3000/js_lab/js_lab.html?/music/sketches/hello_midi.js){boxed right}
+[Try it with MIDI](http://compform.net/js_lab/js_lab.html?/music/sketches/hello_midi.js){boxed right}
 
 ::: js-lab
 /music/sketches/hello_simplesynth.js
