@@ -638,6 +638,9 @@
     content: "assignment"; }
   .comp-form-copy .discussion > h2:first-child::before {
     content: "discussion"; }
+  .comp-form-copy .embed {
+    width: 100%;
+    height: 500px; }
 
 .comp-form-copy .slides-wrap {
   margin-top: 30px;

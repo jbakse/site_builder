@@ -291,3 +291,8 @@ It doesn't have to be good. It doesn't have to use code.
 [UNSW: Midi Notes and Math](https://newt.phys.unsw.edu.au/jw/notes.html)
 
 [Ocenaudio: Free OS X Sound Editor](http://www.ocenaudio.com/)
+
+[ChucK](http://chuck.cs.princeton.edu/)
+
+[ChucK Intro Video](https://www.youtube.com/watch?v=2rpk461T6l4)
+
