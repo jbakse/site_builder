@@ -7,12 +7,12 @@
 <polygon points="96,64 80,91.7 112,91.7"/>
 </svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Music</span><div class="buttons"><a class="previous" href="../sound"><i class="fa fa-caret-left fa-lg"></i>Sound</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Music</h1><h6>Overview</h6><p class="description">Music is organized sound.</p><h6>Tools</h6><p class="software">p5.js p5.sound</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="music">Music</h2>
 <p>This chapter covers some specific tactics for generating a short piece of music. Our result will be a simplified version of <a href="http://psam3060-d-s16.github.io/class_notes/week_9/sketch_music/">this demo</a>.</p>
-<p>We’ll look at how to plan this project, the pieces that need to be built, and how to represent data. The final generator will be implemented in  JavaScript using the p5.sound library.</p>
+<p>We’ll look at how to plan this project, the pieces that need to be built, and how to represent data. The final generator will be implemented in JavaScript using the p5.sound library.</p>
 <h3 id="examples">Examples</h3>
-<p>Composers have long explored the writing music with algorithms and chance. These works fall into a few rough categories.</p>
-<p>In <a href="https://en.wikipedia.org/wiki/Algorithmic_composition">algorithmic music</a>, and algorithm is employed <em>at the time of composition</em> resulting in a fixed score.</p>
-<p>In <a href="https://en.wikipedia.org/wiki/Aleatoric_music">aleatoric music</a>, important aspects of a composition are intended to be decided <em>at the time of the performance</em>. Aleatoric allows for variation according to the performer or to chance within a specific structure. For example, a musical system published in 1792, <em>Anleitung zum Componieren von Walzern so viele man will vermittelst zweier Würfel, ohne etwas von der Musik oder Composition zu verstehen (Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition)</em> employed chance to arrange a pre-composed measures of music.</p>
-<p>Brian Eno used the term Generative Music to describe music that is created by a system an constantly changes.</p>
+<p>Composers have long explored the writing of music with algorithms and chance. These works fall into a few rough categories.</p>
+<p>In <a href="https://en.wikipedia.org/wiki/Algorithmic_composition">algorithmic music</a>, an algorithm is employed <em>at the time of composition</em> resulting in a fixed score.</p>
+<p>In <a href="https://en.wikipedia.org/wiki/Aleatoric_music">aleatoric music</a>, important aspects of a composition are intended to be decided <em>at the time of the performance</em>. Aleatoric music allows for variation according to the performer or chance within a specific structure. For example, a musical system published in 1792, <em>Anleitung zum Componieren von Walzern so viele man will vermittelst zweier Würfel, ohne etwas von der Musik oder Composition zu verstehen (Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition)</em> employed chance to arrange pre-composed measures of music.</p>
+<p>Brian Eno used the term Generative Music to describe music that is created by a system and that constantly changes.</p>
 <dl>
 <dt><a href="https://www.youtube.com/watch?v=mLZelvSvh3A">Six Marimbas</a> <a href="https://www.youtube.com/watch?v=g0WVh1D0N50">Come Out</a> <a href="https://www.youtube.com/watch?v=vugqRAX7xQE">Its Gonna Rain</a></dt>
 <dd>Three compositions by Steve Reich</dd>
@@ -44,7 +44,7 @@
 <dt>FM Synthesis</dt>
 <dd>Modulate the frequency of one oscillator with another, vibrato</dd>
 <dt>AM Synthesis</dt>
-<dd>Modulate the amplitude of one oscillator with another</dd>
+<dd>Modulate the amplitude of one oscillator using another</dd>
 <dt>Wavetable Synthesis</dt>
 <dd>Combine data-defined waveforms</dd>
 <dt>Sampled Synthesis</dt>
@@ -56,7 +56,7 @@
 <p>Most synthesizers offer a great deal of customization through parameters. What qualities do we want control of?</p>
 </div>
 <h3 id="qualities-of-our-synth">Qualities of our Synth</h3>
-<p>P5.sound has built-in monophonic and polyphonic synthesizers.   They are a little underdocumented, so we’ll build our own using p5.sounds Oscillator and Env classes. Building our own is a good way to understand what is going on anyway.</p>
+<p>P5.sound has built-in monophonic and polyphonic synthesizers.   They are a little underdocumented, so we’ll build our own using the p5.sound Oscillator and Env classes. Building our own is a good way to understand what is going on anyway.</p>
 <p>The p5.sound Oscillator class generates a periodic signal with customizable frequency, amplitude, and waveform.</p>
 <p>We can shape the amplitude of the Oscillator using the p5.sound Evn class. This class can control the amplitude of an oscillator using an <a href="https://en.wikipedia.org/wiki/Synthesizer#Attack_Decay_Sustain_Release_(ADSR)_envelope">ADSR</a> envelope. An ADSR envelope controls the attack, decay, sustain and release of a sound and can be used to simulate these characteristics of acoustic instruments.</p>
 <p>[whiteboard diagram ADSR Envelope]
@@ -89,7 +89,7 @@
 </div>
 </div>
 <h2 id="playing-a-melody">Playing a Melody</h2>
-<p>Now that we can play individual musical notes, we need to create some coee to play a series of notes—a melody.</p>
+<p>Now that we can play individual musical notes, we need to create some code to play a series of notes—a melody.</p>
 <div id="" class="discussion">
 <h2 id="what-does-a-melody-look-like">What does a Melody Look Like?</h2>
 <p>A melody is a series of notes. What information is necessary to describe a melody? How would you represent that information in code?</p>
@@ -103,7 +103,7 @@
 <p>We could represent our pitch with the raw frequency in <a href="https://en.wikipedia.org/wiki/Heinrich_Hertz">hertz</a>: e.g. <code>261.63</code>.</p>
 <p>We could use <a href="https://en.wikipedia.org/wiki/Scientific_pitch_notation">scientific pitch notation</a>: e.g. <code>C4</code>.</p>
 <p>We could use the <a href="https://en.wikipedia.org/wiki/MIDI">MIDI</a> note value: e.g. <code>60</code>.</p>
-<p>Hertz is a little fussy, and scientific pitch notation is harder to parse than MIDI note values so we’ll use MIDI note values. P5.sound’s <code>midiToFreq()</code> will translate from midi values to frequencies for us.</p>
+<p>Hertz is a little fussy, and scientific pitch notation is harder to parse than MIDI note values, so we’ll use MIDI note values. P5.sound’s <code>midiToFreq()</code> will translate from midi values to frequencies for us.</p>
 </dd>
 </dl>
 <table class="table table-responsive">
@@ -142,11 +142,11 @@
 </table>
 <dl>
 <dt>Length</dt>
-<dd>In musical notation note lengths are usually provided in relation to the tempo and time signature of the piece: e.g. <code>quarter note</code>. We’ll use seconds time in seconds. This is a little less flexible and maybe a little less <em>musical</em> but very straightforward.</dd>
+<dd>In musical notation, note lengths are usually provided in relation to the tempo and time signature of the piece: e.g. <code>quarter note</code>. We’ll use time in seconds. This is a little less flexible and maybe a little less <em>musical</em> but very straightforward.</dd>
 <dt>Notes</dt>
-<dd>Notes have two values: Pitch and Length. We could use an object <code>{pitch: 60, length: .25}</code> or an array <code>[60, .25]</code> to represent our note. The object is clearer but the array is more compact. I think a melody will look better with the arrays, let’s use them.</dd>
+<dd>Notes have two values: Pitch and Length. We could use an object <code>{pitch: 60, length: .25}</code> or an array <code>[60, .25]</code> to represent our note. The object is clearer but the array is more compact. I think a melody will look better with arrays: let’s use them.</dd>
 <dt>Rests</dt>
-<dd>Rests are gaps between notes. They have a length, but no pitch. We could have a different format for rests, or we could use notes but set the pitch to a special value.  For simplicity, lets use notes with a special pitch value. We might use <code>0</code> or <code>undefined</code> to represent a rest, but those are quite semantically correct. Since we can mix types in JavaScript we could use a string too: <code>rest</code>.</dd>
+<dd>Rests are gaps between notes. They have a length, but no pitch. We could have a different format for rests, or we could use notes but set the pitch to a special value.  For simplicity, let’s use notes with a special pitch value. We might use <code>0</code> or <code>undefined</code> to represent a rest, but those aren’t quite semantically correct. Since we can mix types in JavaScript we could use a string too: <code>rest</code>.</dd>
 </dl>
 <p>Here is how our melody will look.</p>
 <pre><code class="language-javascript"><span class="hljs-keyword">const</span> melody = [
@@ -186,7 +186,7 @@ playNotes(notes) {
 </div>
 </div>
 <h2 id="generating-a-melody">Generating a Melody</h2>
-<p>Now we have a format to represent a melody and a function to play it. Our final challenge is the code to generate one. We can’t jump into coding yet, we need a much more detailed plan that we can translate into code. You really can’t write computer code without first deciding exactly what you want the computer to do. You can try, but you’ll end up making decisions anyway. You’ll just make them as you go along, without a plan.</p>
+<p>Now we have a format to represent a melody and a function to play it. Our final challenge is the code to generate one. We can’t jump into coding yet: we need a much more detailed plan that we can translate into code. You really can’t write computer code without first deciding exactly what you want the computer to do. You can try, but you’ll end up making decisions anyway. You’ll just make them as you go along, without a plan.</p>
 <p>One approach we might consider is picking random notes and random lengths and placing them in a sequence. But that would be like generating images by randomly assigning colors to pixels: the result would be noise—in many senses. We don’t want noise, we want to make <em>music</em>.</p>
 <div id="" class="discussion">
 <h2 id="what-kind-of-melody-do-we-want">What Kind of Melody do We Want?</h2>
@@ -214,12 +214,12 @@ playNotes(notes) {
 </div>
 <div id="" class="discussion">
 <h2 id="compare-the-code-to-spec">Compare the Code to Spec</h2>
-<p>Codebases often diverge from their initial specifications. Compare the target characteristics and melody generator above. How are they different?</p>
+<p>Codebases often diverge from their initial specifications. Compare the target characteristics with the melody generator above. How are they different?</p>
 </div>
 <div id="" class="assignment">
 <h2 id="keep-sketching">Keep Sketching!</h2>
 <h3 id="base">Base</h3>
-<p class="bigger">Continuing explore generating and visualizing sound and music.</p>
+<p class="bigger">Continuing to explore generating and visualizing sound and music.</p>
 <h3 id="challenge-write-and-record-a-song">Challenge: Write and Record a Song</h3>
 <p>It doesn’t have to be good. It doesn’t have to use code.</p>
 </div>

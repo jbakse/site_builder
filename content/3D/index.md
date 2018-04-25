@@ -53,16 +53,20 @@ While you can rotate computer generated 3D shapes, you are still seeing a 2D pro
 
 The [OpenSCAD Manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language) describes OpenSCAD as a [functional](https://en.wikipedia.org/wiki/Functional_programming) programming language. One could more generally refer to OpenSCAD as a [declarative](https://en.wikipedia.org/wiki/Declarative_programming) language. In contrast to JavaScript, C, and Processing, it is not an [imperative](https://en.wikipedia.org/wiki/Imperative_programming) or [procedural](https://en.wikipedia.org/wiki/Procedural_programming) language.
 
-| paradigm    | description                                                                                        |
-| ----------- | -------------------------------------------------------------------------------------------------- |
-| imperative  | focuses on the steps needed to achieve a goal; ordered commands, mutable program state               |
-| procedural  | an imperative approach that primarily organizes commands using procedures                          |
-| declarative | focuses on what you want to achieve rather than the steps to achieve it; unordered                |
-| functional  | a declarative approach that organizes logic using pure functions; no side effects, immutable state |
 
-The most noticeable effect of OpenSCAD being functional is that data in OpenSCAD is not immutable: the value of every variable is constant. In fact, variables are not even assigned values at runtime. A variable's value is determined and assigned at compile time, before the script is run. If you keep this in mind, data in OpenSCAD will make more sense. The OpenSCAD manual goes into more detail about how [variables](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables) behave.
 
-<!--[["data in OpenScad is not immutable" --Should this be "data in OpenScad is immutable?" If the sentence is correct, "data is mutable" would be clearer. Overall, I had trouble parsing the chart of paradigms and this description. Grouping (by color?) imperative/procedural and declarative/functional might help, rather than presenting them as four equal paradigms?]]-->
+| paradigm          | description                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------- |
+| imperative        | focuses on the steps needed to achieve a goal; ordered commands, mutable program state             |
+| ↳&nbsp;procedural | an imperative approach that primarily organizes commands using procedures                          |
+| declarative       | focuses on what you want to achieve rather than the steps to achieve it; unordered                 |
+| ↳&nbsp;functional | a declarative approach that organizes logic using pure functions; no side effects, immutable state |
+
+
+
+The most noticeable effect of OpenSCAD being functional is that data in OpenSCAD is immutable: the value of every variable is constant. In fact, variables are not even assigned values at runtime. A variable's value is determined and assigned at compile time, before the script is run. If you keep this in mind, data in OpenSCAD will make more sense. The OpenSCAD manual goes into more detail about how [variables](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables) behave.
+
+
 
 ### Infix vs. Prefix Notation
 
@@ -84,7 +88,7 @@ multiply(2, 3) -> 6
 multiply(2, 3, 4) -> 24
 ```
 
-You can think of OpenSCAD's boolean and transform operations as prefix operators or function calls. Unlike JavaScript and C, the contents of `{}` are operands: parameters rather than commands. 
+You can think of OpenSCAD's boolean and transform operations as prefix operators or function calls. Unlike JavaScript and C, the contents of `{}` are operands or parameters rather than commands. 
 ```javascript
 union() {
     cylinder (h=4, r=1, center = true);

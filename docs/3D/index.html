@@ -13,7 +13,7 @@
 <p>Most of the favorite subjects of representational art—the human figure, landscapes, still life—are three dimensional forms. Paintings and drawings represent these forms by projecting them into two dimensions. This is a destructive process in which part of the form is lost. You can not walk around a painting to see its subject from the other side. A painting strives to convey a sense of scale, of volume, of substance, and of presence, whereas a sculpture cannot escape them.</p>
 <p>While you can rotate computer generated 3D shapes, you are still seeing a 2D projection when you look at them on a screen. 3D Printing brings these shapes into into the physical world. Getting “real” results from procedural generation can be very gratifying. Viewing shapes in VR is also very satisfying and even more immediate. Virtual reality also allows exploring 3D shapes at a scale that 3D printing can not.</p>
 <h2 id="openscad">OpenSCAD</h2>
-<p><a href="http://www.openscad.org/about.html">OpenSCAD</a> is a language for specifying procedural 3D forms using <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">constructive solid geometry</a>. CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well suited to designing mechanical parts for manufacturing, but not well suited for organic shapes, characters, or animation. OpenSCAD is language, not an interactive modeller, and OpenSCAD files fully specify the modelling process rather than the just the resulting geometry. Because of this, OpenSCAD is well suited to specifying parametric designs.</p>
+<p><a href="http://www.openscad.org/about.html">OpenSCAD</a> is a language for specifying procedural 3D forms using <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">constructive solid geometry</a>. CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well suited to designing mechanical parts for manufacturing, but not well suited for organic shapes, characters, or animation. OpenSCAD is a language, not an interactive modeler, and OpenSCAD files fully specify the modeling process rather than the just the resulting geometry. Because of this, OpenSCAD is well-suited to specifying parametric designs.</p>
 <dl>
 <dt><a href="http://www.openscad.org/">OpenSCAD.org</a></dt>
 <dd>Main site for OpenSCAD. IDE Download, Documentation, Examples.</dd>
@@ -22,14 +22,14 @@
 <dt><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual">Manual</a></dt>
 <dd>The specifics of the OpenSCAD IDE and language.</dd>
 <dt><a href="http://openscad.net/">OpenSCAD.net</a></dt>
-<dd>A web based OpenSCAD editor and renderer. Does not implement every feature of OpenSCAD.</dd>
+<dd>A web-based OpenSCAD editor and renderer. Does not implement every feature of OpenSCAD.</dd>
 </dl>
 <h3 id="functional-and-declarative">Functional and Declarative</h3>
 <div id="" class="links-sidebar">
 <p><a href="https://en.wikipedia.org/wiki/Programming_paradigm">Wikipeda:<br/>Programming Paradigms</a></p>
 <p><a href="https://www.youtube.com/watch?v=cgVVZMfLjEI">Talk:<br/>4 Paradigms in 40 Minutes</a></p>
 </div>
-<p>The <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language">OpenSCAD Manual</a> describes OpenSCAD as a <a href="https://en.wikipedia.org/wiki/Functional_programming">functional</a> programming language. One could more generally refer to OpenSCAD as a <a href="https://en.wikipedia.org/wiki/Declarative_programming">declarative</a> language. In contrast to JavaScript, C, and Processing, it is not an <a href="https://en.wikipedia.org/wiki/Imperative_programming">imparative</a> or <a href="https://en.wikipedia.org/wiki/Procedural_programming">procedural</a> language.</p>
+<p>The <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language">OpenSCAD Manual</a> describes OpenSCAD as a <a href="https://en.wikipedia.org/wiki/Functional_programming">functional</a> programming language. One could more generally refer to OpenSCAD as a <a href="https://en.wikipedia.org/wiki/Declarative_programming">declarative</a> language. In contrast to JavaScript, C, and Processing, it is not an <a href="https://en.wikipedia.org/wiki/Imperative_programming">imperative</a> or <a href="https://en.wikipedia.org/wiki/Procedural_programming">procedural</a> language.</p>
 <table class="table table-responsive">
 <thead>
 <tr>
@@ -40,23 +40,23 @@
 <tbody>
 <tr>
 <td>imperative</td>
-<td>focuses on the steps need to achieve a goal; ordered commands, mutable program state</td>
+<td>focuses on the steps needed to achieve a goal; ordered commands, mutable program state</td>
 </tr>
 <tr>
-<td>procedural</td>
+<td>↳ procedural</td>
 <td>an imperative approach that primarily organizes commands using procedures</td>
 </tr>
 <tr>
 <td>declarative</td>
-<td>focuses on what you want to achieve rather than the steps to achieve it; unordered,</td>
+<td>focuses on what you want to achieve rather than the steps to achieve it; unordered</td>
 </tr>
 <tr>
-<td>functional</td>
+<td>↳ functional</td>
 <td>a declarative approach that organizes logic using pure functions; no side effects, immutable state</td>
 </tr>
 </tbody>
 </table>
-<p>The most noticeable effect of OpenSCAD being functional is that data in OpenSCAD is not immutable: the value of every variable is constant. In fact, variables are not even assigned values at runtime. A variables value is determined and assigned at compile time, before the script is run. If you keep this in mind, data in OpenSCAD will make more sense. The OpenSCAD manual goes into more detail about how <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables">variables</a> behave.</p>
+<p>The most noticeable effect of OpenSCAD being functional is that data in OpenSCAD is immutable: the value of every variable is constant. In fact, variables are not even assigned values at runtime. A variable’s value is determined and assigned at compile time, before the script is run. If you keep this in mind, data in OpenSCAD will make more sense. The OpenSCAD manual goes into more detail about how <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables">variables</a> behave.</p>
 <h3 id="infix-vs-prefix-notation">Infix vs. Prefix Notation</h3>
 <p>Javascript expression with infix notation</p>
 <pre><code class="language-javascript"><span class="hljs-number">2</span> * <span class="hljs-number">3</span> -&gt; <span class="hljs-number">6</span>
@@ -70,7 +70,7 @@
 <pre><code class="language-javascript">multiply(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>) -&gt; <span class="hljs-number">6</span>
 multiply(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>) -&gt; <span class="hljs-number">24</span>
 </code></pre>
-<p>You can think of OpenSCAD’s boolean and transform operations as prefix operators or function calls. Unlike JavaScript and C, the contents of <code>{}</code> are operands/parameters not commands.</p>
+<p>You can think of OpenSCAD’s boolean and transform operations as prefix operators or function calls. Unlike JavaScript and C, the contents of <code>{}</code> are operands or parameters rather than commands.</p>
 <pre><code class="language-javascript">union() {
     cylinder (h=<span class="hljs-number">4</span>, r=<span class="hljs-number">1</span>, center = <span class="hljs-literal">true</span>);
     rotate ([<span class="hljs-number">90</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]) cylinder (h=<span class="hljs-number">4</span>, r=<span class="hljs-number">1</span>, center=<span class="hljs-literal">true</span>);
@@ -90,14 +90,14 @@ multiply(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>,
 <p>OpenSCAD’s functional model has its advantages, but imperative languages also have advantages. For one, imperative languages are more familiar to many programmers. To explore procedural constructive solid geometry modeling in an imperative style, you may want to use one of these tools inspired by OpenSCAD.</p>
 <dl>
 <dt><a href="http://joostn.github.io/OpenJsCad/">OpenJSCAD</a></dt>
-<dd>Web based solid modeling in JavaScript. OpenSCAD but in JS.</dd>
+<dd>Web-based solid modeling in JavaScript. OpenSCAD but in JS.</dd>
 <dt><a href="https://openjscad.org/">OpenJSCAD.org IDE</a> <a href="https://github.com/jscad/OpenJSCAD.org">OpenJSCAD.org repo</a></dt>
 <dd>A web-based IDE built on OpenJSCAD.</dd>
 <dt><a href="https://en.wikibooks.org/wiki/OpenJSCAD_User_Guide">OpenJSCAD.org User and Programming Guide</a></dt>
 <dd>Manual for OpenJSCAD syntax and library.</dd>
 </dl>
 <h2 id="study-examples">Study Examples</h2>
-<p>These examples will build up to a parametric simplified Lego brick. To get started we’ll need the <a href="https://www.cailliau.org/Lego/Dimensions/zMeasurements-en.xhtml">dimensions of a Lego brick</a>.</p>
+<p>These examples will build up to a simplified parametric Lego brick. To get started we’ll need the <a href="https://www.cailliau.org/Lego/Dimensions/zMeasurements-en.xhtml">dimensions of a Lego brick</a>.</p>
 <h3 id="generating-primitives">Generating Primitives</h3>
 <pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
 % <span class="hljs-built_in">cube</span>([<span class="hljs-number">8</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9.6</span>], <span class="hljs-literal">true</span>);
@@ -123,7 +123,7 @@ multiply(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>,
 }
 </code></pre>
 <p class="full-width"><img src="images/example_2.png" alt="example_2"></p>
-<p>Translate moves the shapes passed to it. Here translate moves the cylinder up. Notice that the braces are used to group parameters to translate.</p>
+<p><code>Translate()</code> moves the shapes passed to it. Here translate moves the cylinder up. Notice that the braces are used to group parameters to translate.</p>
 <p>The example also demonstrates using <code>color</code> to change the color used to render the cube. Use color to make it easier to understand your model.</p>
 <h3 id="boolean-operations">Boolean Operations</h3>
 <pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
@@ -141,7 +141,7 @@ multiply(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>,
 }
 </code></pre>
 <p class="full-width"><img src="images/example_3.png" alt="example_3"></p>
-<p>This example uses <code>difference()</code> and <code>union()</code> to combine shapes. A cylinder and cube are combined with <code>union()</code>, the resulting shape has a recess cut out using <code>difference</code>.</p>
+<p>This example uses <code>difference()</code> and <code>union()</code> to combine shapes. A cylinder and cube are combined with <code>union()</code>. The resulting shape has a recess cut out using <code>difference()</code>.</p>
 <p>OpenSCAD may not preview this shape very cleanly. Render the shape with <code>Main Menu &gt; Design &gt; Render</code> to get a clear view of the rendered geometry.</p>
 <h3 id="variables-modules">Variables + Modules</h3>
 <pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
@@ -200,7 +200,7 @@ columns = <span class="hljs-number">8</span>;
 
 </code></pre>
 <p class="full-width"><img src="images/example_4.png" alt="example_4"></p>
-<p>This example uses <code>for</code> to create several instances of our basic shape. OpenSCAD’s <code>for()</code> looks a lot like the imperative flow control structure, but <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_Loop">works differently</a> because OpenSCAD is functional. Each instance is created in its own scope and no data can flow between. The syntax also allows “iterating” over multiple variables at once. This example will create a unit brick for every combination of x and y. In javascript you would need a nested pair of loops. Also, note that the for loop implicitly <code>union()</code>s the shapes.</p>
+<p>This example uses <code>for</code> to create several instances of our basic shape. OpenSCAD’s <code>for()</code> looks a lot like the imperative flow control structure, but <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_Loop">works differently</a> because OpenSCAD is functional. Each instance is created in its own scope and no data can flow between scopes. The syntax also allows “iterating” over multiple variables at once. This example will create a unit brick for every combination of x and y. In javascript you would need a nested pair of loops. Also, note that the for loop implicitly <code>union()</code>s the shapes.</p>
 <div id="" class="activity">
 <h2 id="in-class-challenge">In-class Challenge</h2>
 <p>Try creating OpenSCAD scripts for each of these shapes.</p>

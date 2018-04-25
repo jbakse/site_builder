@@ -20,18 +20,18 @@ software: p5.js p5.sound
 
 This chapter covers some specific tactics for generating a short piece of music. Our result will be a simplified version of [this demo](http://psam3060-d-s16.github.io/class_notes/week_9/sketch_music/). 
 
-We'll look at how to plan this project, the pieces that need to be built, and how to represent data. The final generator will be implemented in  JavaScript using the p5.sound library.
+We'll look at how to plan this project, the pieces that need to be built, and how to represent data. The final generator will be implemented in JavaScript using the p5.sound library.
 
 
 ### Examples
 
-Composers have long explored the writing music with algorithms and chance. These works fall into a few rough categories.
+Composers have long explored the writing of music with algorithms and chance. These works fall into a few rough categories.
 
-In [algorithmic music](https://en.wikipedia.org/wiki/Algorithmic_composition), and algorithm is employed _at the time of composition_ resulting in a fixed score.
+In [algorithmic music](https://en.wikipedia.org/wiki/Algorithmic_composition), an algorithm is employed _at the time of composition_ resulting in a fixed score.
 
-In [aleatoric music](https://en.wikipedia.org/wiki/Aleatoric_music), important aspects of a composition are intended to be decided _at the time of the performance_. Aleatoric allows for variation according to the performer or to chance within a specific structure. For example, a musical system published in 1792, _Anleitung zum Componieren von Walzern so viele man will vermittelst zweier Würfel, ohne etwas von der Musik oder Composition zu verstehen (Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition)_ employed chance to arrange a pre-composed measures of music.
+In [aleatoric music](https://en.wikipedia.org/wiki/Aleatoric_music), important aspects of a composition are intended to be decided _at the time of the performance_. Aleatoric music allows for variation according to the performer or chance within a specific structure. For example, a musical system published in 1792, _Anleitung zum Componieren von Walzern so viele man will vermittelst zweier Würfel, ohne etwas von der Musik oder Composition zu verstehen (Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition)_ employed chance to arrange pre-composed measures of music.
 
-Brian Eno used the term Generative Music to describe music that is created by a system an constantly changes.
+Brian Eno used the term Generative Music to describe music that is created by a system and that constantly changes.
 
 [Six Marimbas](https://www.youtube.com/watch?v=mLZelvSvh3A) [Come Out](https://www.youtube.com/watch?v=g0WVh1D0N50) [Its Gonna Rain](https://www.youtube.com/watch?v=vugqRAX7xQE)
 : Three compositions by Steve Reich
@@ -73,7 +73,7 @@ FM Synthesis
 : Modulate the frequency of one oscillator with another, vibrato
 
 AM Synthesis
-: Modulate the amplitude of one oscillator with another
+: Modulate the amplitude of one oscillator using another
 
 Wavetable Synthesis
 : Combine data-defined waveforms
@@ -92,7 +92,7 @@ Most synthesizers offer a great deal of customization through parameters. What q
 
 ### Qualities of our Synth
 
-P5.sound has built-in monophonic and polyphonic synthesizers.   They are a little underdocumented, so we'll build our own using p5.sounds Oscillator and Env classes. Building our own is a good way to understand what is going on anyway.
+P5.sound has built-in monophonic and polyphonic synthesizers.   They are a little underdocumented, so we'll build our own using the p5.sound Oscillator and Env classes. Building our own is a good way to understand what is going on anyway.
 
 The p5.sound Oscillator class generates a periodic signal with customizable frequency, amplitude, and waveform.
 
@@ -133,7 +133,7 @@ The code above creates a small synthesizer system.
 
 ## Playing a Melody
 
-Now that we can play individual musical notes, we need to create some coee to play a series of notes—a melody.
+Now that we can play individual musical notes, we need to create some code to play a series of notes—a melody.
 
 ::: .discussion
 ## What does a Melody Look Like?
@@ -153,20 +153,20 @@ Pitch
   
   We could use the [MIDI](https://en.wikipedia.org/wiki/MIDI) note value: e.g. `60`.
 
-  Hertz is a little fussy, and scientific pitch notation is harder to parse than MIDI note values so we'll use MIDI note values. P5.sound's `midiToFreq()` will translate from midi values to frequencies for us.
+  Hertz is a little fussy, and scientific pitch notation is harder to parse than MIDI note values, so we'll use MIDI note values. P5.sound's `midiToFreq()` will translate from midi values to frequencies for us.
 
 | A  | B♭ | B  | C4 | D♭ | D  | E♭ | E  | F  | G♭ | G  | A♭ |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 |
 
 Length
-: In musical notation note lengths are usually provided in relation to the tempo and time signature of the piece: e.g. `quarter note`. We'll use seconds time in seconds. This is a little less flexible and maybe a little less _musical_ but very straightforward.
+: In musical notation, note lengths are usually provided in relation to the tempo and time signature of the piece: e.g. `quarter note`. We'll use time in seconds. This is a little less flexible and maybe a little less _musical_ but very straightforward.
 
 Notes
-: Notes have two values: Pitch and Length. We could use an object `{pitch: 60, length: .25}` or an array `[60, .25]` to represent our note. The object is clearer but the array is more compact. I think a melody will look better with the arrays, let's use them.
+: Notes have two values: Pitch and Length. We could use an object `{pitch: 60, length: .25}` or an array `[60, .25]` to represent our note. The object is clearer but the array is more compact. I think a melody will look better with arrays: let's use them.
 
 Rests
-: Rests are gaps between notes. They have a length, but no pitch. We could have a different format for rests, or we could use notes but set the pitch to a special value.  For simplicity, lets use notes with a special pitch value. We might use `0` or `undefined` to represent a rest, but those are quite semantically correct. Since we can mix types in JavaScript we could use a string too: `rest`.
+: Rests are gaps between notes. They have a length, but no pitch. We could have a different format for rests, or we could use notes but set the pitch to a special value.  For simplicity, let's use notes with a special pitch value. We might use `0` or `undefined` to represent a rest, but those aren't quite semantically correct. Since we can mix types in JavaScript we could use a string too: `rest`.
 
 Here is how our melody will look.
 
@@ -218,7 +218,7 @@ playNotes(notes) {
 
 ## Generating a Melody
 
-Now we have a format to represent a melody and a function to play it. Our final challenge is the code to generate one. We can't jump into coding yet, we need a much more detailed plan that we can translate into code. You really can't write computer code without first deciding exactly what you want the computer to do. You can try, but you'll end up making decisions anyway. You'll just make them as you go along, without a plan. 
+Now we have a format to represent a melody and a function to play it. Our final challenge is the code to generate one. We can't jump into coding yet: we need a much more detailed plan that we can translate into code. You really can't write computer code without first deciding exactly what you want the computer to do. You can try, but you'll end up making decisions anyway. You'll just make them as you go along, without a plan. 
 
 One approach we might consider is picking random notes and random lengths and placing them in a sequence. But that would be like generating images by randomly assigning colors to pixels: the result would be noise—in many senses. We don't want noise, we want to make _music_.
 
@@ -249,7 +249,7 @@ A melody is an _organized_ series of notes, but how do we want _our_ melody orga
 
 ::: .discussion
 ## Compare the Code to Spec
-Codebases often diverge from their initial specifications. Compare the target characteristics and melody generator above. How are they different?
+Codebases often diverge from their initial specifications. Compare the target characteristics with the melody generator above. How are they different?
 /::
 
 
@@ -258,7 +258,7 @@ Codebases often diverge from their initial specifications. Compare the target ch
 ## Keep Sketching!
 
 ### Base
-Continuing explore generating and visualizing sound and music.{bigger}
+Continuing to explore generating and visualizing sound and music.{bigger}
 
 ### Challenge: Write and Record a Song
 It doesn't have to be good. It doesn't have to use code.
