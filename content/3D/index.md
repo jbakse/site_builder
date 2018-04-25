@@ -33,7 +33,7 @@ This chapter explores creating 3D forms
 
 ## OpenSCAD
 
-[OpenSCAD](http://www.openscad.org/about.html) is a language for specifying procedural 3D forms using [constructive solid geometry](https://en.wikipedia.org/wiki/Constructive_solid_geometry). CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well suited to designing mechanical parts for manufacturing, but not well suited for organic shapes, characters, or animation. OpenSCAD is a language, not an interactive modeler, and OpenSCAD files fully specify the modeling process rather than the just the resulting geometry. Because of this, OpenSCAD is well suited to specifying parametric designs.
+[OpenSCAD](http://www.openscad.org/about.html) is a language for specifying procedural 3D forms using [constructive solid geometry](https://en.wikipedia.org/wiki/Constructive_solid_geometry). CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well suited to designing mechanical parts for manufacturing, but not well suited for organic shapes, characters, or animation. OpenSCAD is a language, not an interactive modeler, and OpenSCAD files fully specify the modeling process rather than the just the resulting geometry. Because of this, OpenSCAD is well-suited to specifying parametric designs.
 
 [OpenSCAD.org](http://www.openscad.org/)
 : Main site for OpenSCAD. IDE Download, Documentation, Examples.
@@ -55,16 +55,18 @@ This chapter explores creating 3D forms
 [Talk:<br/>4 Paradigms in 40 Minutes](https://www.youtube.com/watch?v=cgVVZMfLjEI)
 /::
 
-The [OpenSCAD Manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language) describes OpenSCAD as a [functional](https://en.wikipedia.org/wiki/Functional_programming) programming language. One could more generally refer to OpenSCAD as a [declarative](https://en.wikipedia.org/wiki/Declarative_programming) language. In contrast to JavaScript, C, and Processing, it is not an [imparative](https://en.wikipedia.org/wiki/Imperative_programming) or [procedural](https://en.wikipedia.org/wiki/Procedural_programming) language.
+The [OpenSCAD Manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language) describes OpenSCAD as a [functional](https://en.wikipedia.org/wiki/Functional_programming) programming language. One could more generally refer to OpenSCAD as a [declarative](https://en.wikipedia.org/wiki/Declarative_programming) language. In contrast to JavaScript, C, and Processing, it is not an [imperative](https://en.wikipedia.org/wiki/Imperative_programming) or [procedural](https://en.wikipedia.org/wiki/Procedural_programming) language.
 
 | paradigm    | description                                                                                        |
 | ----------- | -------------------------------------------------------------------------------------------------- |
-| imperative  | focuses on the steps need to achieve a goal; ordered commands, mutable program state               |
+| imperative  | focuses on the steps needed to achieve a goal; ordered commands, mutable program state               |
 | procedural  | an imperative approach that primarily organizes commands using procedures                          |
-| declarative | focuses on what you want to achieve rather than the steps to achieve it; unordered,                |
+| declarative | focuses on what you want to achieve rather than the steps to achieve it; unordered                |
 | functional  | a declarative approach that organizes logic using pure functions; no side effects, immutable state |
 
 The most noticeable effect of OpenSCAD being functional is that data in OpenSCAD is not immutable: the value of every variable is constant. In fact, variables are not even assigned values at runtime. A variable's value is determined and assigned at compile time, before the script is run. If you keep this in mind, data in OpenSCAD will make more sense. The OpenSCAD manual goes into more detail about how [variables](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables) behave.
+
+<!--[["data in OpenScad is not immutable" --Should this be "data in OpenScad is immutable?" If the sentence is correct, "data is mutable" would be clearer. Overall, I had trouble parsing the chart of paradigms and this description. Grouping (by color?) imperative/procedural and declarative/functional might help, rather than presenting them as four equal paradigms?]]-->
 
 ### Infix vs. Prefix Notation
 
@@ -117,7 +119,7 @@ cylinder ({h=4, r=1, center=true});
 OpenSCAD's functional model has its advantages, but imperative languages also have advantages. For one, imperative languages are more familiar to many programmers. To explore procedural constructive solid geometry modeling in an imperative style, you may want to use one of these tools inspired by OpenSCAD.
 
 [OpenJSCAD](http://joostn.github.io/OpenJsCad/)
-: Web based solid modeling in JavaScript. OpenSCAD but in JS.
+: Web-based solid modeling in JavaScript. OpenSCAD but in JS.
 
 [OpenJSCAD.org IDE](https://openjscad.org/) [OpenJSCAD.org repo](https://github.com/jscad/OpenJSCAD.org)
 : A web-based IDE built on OpenJSCAD.
@@ -132,7 +134,7 @@ OpenSCAD's functional model has its advantages, but imperative languages also ha
 
 ## Study Examples
 
-These examples will build up to a parametric simplified Lego brick. To get started we'll need the [dimensions of a Lego brick](https://www.cailliau.org/Lego/Dimensions/zMeasurements-en.xhtml).
+These examples will build up to a simplified parametric Lego brick. To get started we'll need the [dimensions of a Lego brick](https://www.cailliau.org/Lego/Dimensions/zMeasurements-en.xhtml).
 
 
 ### Generating Primitives
@@ -189,7 +191,7 @@ difference() {
 ```
 ![example_3](images/example_3.png){full-width}
 
-This example uses `difference()` and `union()` to combine shapes. A cylinder and cube are combined with `union()`. The resulting shape has a recess cut out using `difference`.
+This example uses `difference()` and `union()` to combine shapes. A cylinder and cube are combined with `union()`. The resulting shape has a recess cut out using `difference()`.
 
 OpenSCAD may not preview this shape very cleanly. Render the shape with `Main Menu > Design > Render` to get a clear view of the rendered geometry.
 
@@ -260,7 +262,7 @@ for (x = [0:columns-1], y = [0:rows-1]) {
 ```
 ![example_4](images/example_4.png){full-width}
 
-This example uses `for` to create several instances of our basic shape. OpenSCAD's `for()` looks a lot like the imperative flow control structure, but [works differently](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_Loop) because OpenSCAD is functional. Each instance is created in its own scope and no data can flow between. The syntax also allows "iterating" over multiple variables at once. This example will create a unit brick for every combination of x and y. In javascript you would need a nested pair of loops. Also, note that the for loop implicitly `union()`s the shapes.
+This example uses `for` to create several instances of our basic shape. OpenSCAD's `for()` looks a lot like the imperative flow control structure, but [works differently](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_Loop) because OpenSCAD is functional. Each instance is created in its own scope and no data can flow between scopes. The syntax also allows "iterating" over multiple variables at once. This example will create a unit brick for every combination of x and y. In javascript you would need a nested pair of loops. Also, note that the for loop implicitly `union()`s the shapes.
 
 
 ::: .activity
