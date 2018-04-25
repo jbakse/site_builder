@@ -53,14 +53,19 @@ While you can rotate computer generated 3D shapes, you are still seeing a 2D pro
 
 The [OpenSCAD Manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language) describes OpenSCAD as a [functional](https://en.wikipedia.org/wiki/Functional_programming) programming language. One could more generally refer to OpenSCAD as a [declarative](https://en.wikipedia.org/wiki/Declarative_programming) language. In contrast to JavaScript, C, and Processing, it is not an [imperative](https://en.wikipedia.org/wiki/Imperative_programming) or [procedural](https://en.wikipedia.org/wiki/Procedural_programming) language.
 
+Classifying programming languages by paradigm is tricky in practice. The boundaries of paradigms are not always clear, different paradigms have different primary concerns and may be orthogonal to each other, and many languages support multiple paradigms.
 
 
-| paradigm          | description                                                                                        |
-| ----------------- | -------------------------------------------------------------------------------------------------- |
-| imperative        | focuses on the steps needed to achieve a goal; ordered commands, mutable program state             |
-| ↳&nbsp;procedural | an imperative approach that primarily organizes commands using procedures                          |
-| declarative       | focuses on what you want to achieve rather than the steps to achieve it; unordered                 |
-| ↳&nbsp;functional | a declarative approach that organizes logic using pure functions; no side effects, immutable state |
+
+| paradigm                    | description                                                                                                        |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| imperative                  | focuses on the steps needed to achieve a goal; ordered commands, mutable program state                             |
+| ↳&nbsp;procedural           | an imperative approach that primarily organizes commands using procedures                                          |
+| ↳&nbsp;object&nbsp;oriented | an imperative approach that groups related data and procedures using objects                                       |
+| declarative                 | focuses on what you want to achieve rather than the steps to achieve it; unordered                                 |
+| ↳&nbsp;functional           | a declarative approach that organizes logic using pure functions with no side effects and immutable state          |
+| ↳&nbsp;logic                | a declarative approach in which a program is a collection of logical declarations from which facts can be inferred |
+
 
 
 
@@ -114,7 +119,7 @@ cylinder ({h=4, r=1, center=true});
 ```
 
 
-### JavaScript Options
+### JavaScript Alternatives
 
 OpenSCAD's functional model has its advantages, but imperative languages also have advantages. For one, imperative languages are more familiar to many programmers. To explore procedural constructive solid geometry modeling in an imperative style, you may want to use one of these tools inspired by OpenSCAD.
 
@@ -282,9 +287,79 @@ Try creating OpenSCAD scripts for each of these shapes.
 ![pipes](images/pipes.png)
 ![ring](images/ring.png)
 
-Build the last shape so that you can parametrically control the number of disks that make up the ring.
+Build this shape so that you can parametrically control the number of disks that make up the ring.
 
 /::
+
+
+## Parametric OpenSCAD
+
+OpenSCAD is particularly well suited to creating parametric designs. [Thingiverse](https://www.thingiverse.com) uses OpenSCAD to allow users to share and customize 3D printable objects.
+
+[Parametric Pulley](https://www.thingiverse.com/thing:16627)
+
+[Parametric Nuts + Bolts](https://www.thingiverse.com/thing:193647)
+
+
+## Digital Fabrication
+
+Digital Fabrication is the a prototyping and production workflow that combines computer-aided design with computer-controlled manufacturing techniques. Just as desktop publishing caused shifts in skills, methods, and equipment needed to print documents, digital fabrication is changing how objects are designed and built.
+
+::: .links-sidebar
+[Wikipedia: <br/> 3D Printing Processes](https://en.wikipedia.org/wiki/3D_printing_processes)
+/::
+
+Fused Deposition Modeling (FDM) + Fused Filament Fabrication (FFF)
+: Thermoplastic is fed from a spool through a heated extruder.
+
+Stereolithography (SLA)
+: Photopolymer resin is cured via an ultraviolet laser.
+
+Selective Laser Sintering (SLS)
+: Powdered material is fused by a laser.
+
+Laminated Object Manufacturing (LOM)
+: Layers of object are cut from paper or film.
+
+Computer Numerical Control Milling (CNC)
+: Object is carved from a block of material using computer controlled cutting tool.
+
+
+### Slicing and G-Code
+The most popular hobbyist 3D printing method is Fused Filament Fabrication or Fused Deposition Modeling (FDM). To print an OpenSCAD file on an FDM machine you need to export the rendered geometry and then "slice" it with software like [Cura](https://ultimaker.com/en/products/ultimaker-cura-software) or [Slic3r](http://slic3r.org/). 
+
+
+
+Slicer software creates [G-code](https://en.wikipedia.org/wiki/G-code). G-code files are a list of instructions for CNC machines like 3D printers and mills. This g-code excerpt sets the move speed to 100 mm/minute and then moves the machine head to 0,0.
+
+```
+G0 F100;
+G1 X0 Y0;
+```
+
+You don't need to know much about g-code to use a 3D printer, you simply convert your model to g-code with a slicer app and load it on your printer. The app generates the g-code based on the object you are printing, the material you are using, and the specs of your machine. You _can_ write g-code directly if you want: g-code files are plain text and relatively easy to understand. Writing your own g-code allows you to directly control your hardware, which can be useful for custom applications and machines like drawbots.
+
+![Raven](http://justinbakse.com/v2/new_york/raven/images/drawing.jpg)
+Greg Schomburg and I created this custom [drawbot project](http://justinbakse.com/v2/new_york/drawbot/). It is controlled with g-code generated by a custom Processing app.{caption}
+
+
+## Other Procedural 3D Tools
+
+Support for procedural methods is common in 3D software. Nearly all CAD software has support for expressing design constrains and parameters. CG modeling software often hosts a runtime for executing scripts. These scripts are often used to add functionality to the UI, automate tasks, or procedurally generate 3D information.
+
+Maya Blender
+
+Fusion 360
+
+Houdini
+
+Substance Designer
+
+
+
+
+
+
 
 
 ::: .assignment
