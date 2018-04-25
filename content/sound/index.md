@@ -21,7 +21,7 @@ software: p5.js
 ### p5.js Sound Library
 
 In addition to the basic drawing API, p5.js includes add-on [libraries](https://p5js.org/libraries/). The interface chapter introduces the p5.dom library, and the examples in the chapter use the p5.sound library. The p5.sound library builds on the [Web Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) API and provides functions for generating tones, playing recorded sounds, and visualizing the waveform and spectrum of sounds. I highly suggest taking a look at **all** of the sound examples to get an idea of what the sound library can do.
-
+<!--[[Is the interface chapter on the p5 website? I couldn't find it.]]-->
 
 
 - [p5.sound API Reference](https://p5js.org/reference/#/libraries/p5.sound)
@@ -63,7 +63,9 @@ function setup() {
 
 ### Computers, Light, Sound, and People
 
-Light and sound flow through our environment as electromagnetic and air pressure waves. Our eyes and our ears collect data about these waves and our visual and auditory cortexes process that data to create information. These sensory systems work in different ways but are both powerful. We can take advantage of these systems by choosing the types of forms we create.
+Light and sound flow through our environment as electromagnetic and air pressure waves. Our eyes and our ears collect data about these waves and our visual and auditory cortexes process that data to create information. Though they work in different ways, both of these sensory systems are powerful. We can take advantage of these systems by choosing the types of forms we create. 
+
+<!--[[This last sentence is unclear to me...I'll work on it.]]-->
 
 [Light and Sound Lecture Notes](./light_and_sound.html)
 

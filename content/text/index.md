@@ -35,7 +35,7 @@ Search engines and social media sites are certainly procedurally generating text
 
 Geoffrey Jefferson{attrib}
 
-In 1950, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) addressed this argument and several others in [Computing Machinery and Intelligence](https://home.manhattan.edu/~tina.tian/CMPT420/Turing.pdf), in which he considered the question "Can machines think?" Rather than answering the question directly, Turing proposes a an _imitation game_, often referred to as the Turing Test, which challenges a machine to imitate a human over "a teleprinter communicating between two rooms". Turing asks whether a machine could do well enough that a human interrogator would be unable to tell such a machine from an actual human. He argues that passing such a test would actually be harder than thinking—after all, a human can certainly think, but could not convincingly imitate a computer. 
+In 1950, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) addressed this argument and several others in [Computing Machinery and Intelligence](https://home.manhattan.edu/~tina.tian/CMPT420/Turing.pdf), in which he considered the question "Can machines think?" Rather than answering the question directly, Turing proposes an _imitation game_, often referred to as the Turing Test, which challenges a machine to imitate a human over "a teleprinter communicating between two rooms". Turing asks whether a machine could do well enough that a human interrogator would be unable to tell such a machine from an actual human. He argues that passing such a test would actually be harder than thinking—after all, a human can certainly think, but could not convincingly imitate a computer. 
 
  
 ### Generating Language 
