@@ -10,26 +10,21 @@ next:
 next_url:
 
 hero_title: 3D Forms
-description: 3D = 2D + 1D
+description: Explore building three dimensional forms with OpenSCAD, a functional programming language for constructive solid geometry modeling.
 software: p5.js
 ---
 
 
 ## 3D Forms
 
-> It is not hard to understand modern art. If it hangs on a wall it's a painting, and if you can walk around it it's a painting
+> It is not hard to understand modern art. If it hangs on a wall it's a painting, and if you can walk around it it's a sculpture.
+{bigger}
 
-Tom Stoppard, author of [Rosencrantz & Guildenstern are Dead](Rosencrantz & Guildenstern Are Dead){attrib}
+Tom Stoppard, author of [Rosencrantz & Guildenstern are Dead](https://en.wikipedia.org/wiki/Rosencrantz_%26_Guildenstern_Are_Dead_(film)){attrib}
 
-This chapter explores creating 3D forms 
+Most of the favorite subjects of representational art—the human figure, landscapes, still life—are three dimensional forms. Paintings and drawings represent these forms by projecting them into two dimensions. This is a destructive process in which part of the form is lost. You can not walk around a painting to see its subject from the other side. A painting strives to convey a sense of scale, of volume, of substance, and of presence, whereas a sculpture cannot escape them. 
 
-- another dimension, volume, point of view
-- much of our world is 3D, and much of of our art is a representation that suggests real things. 3D forms can be these things.
-- actually make something
-- virtually make something is pretty good too
-- speed (immediate gratification)
-- scale(huge trees)
-
+While you can rotate computer generated 3D shapes, you are still seeing a 2D projection when you look at them on a screen. 3D Printing brings these shapes into into the physical world. Getting "real" results from procedural generation can be very gratifying. Viewing shapes in VR is also very satisfying and even more immediate. Virtual reality also allows exploring 3D shapes at a scale that 3D printing can not.
 
 ## OpenSCAD
 
@@ -148,9 +143,16 @@ cylinder(h=1.8, r=2.4, center=true);
 
 ### $fn, $fa, $fs
 
+`$fn`, `$fa`, and `$fs` are special variables that control how many edges are used for drawing arcs and circles. In the example above `$fn` is set to `20` telling OpenSCAD to make the cylinder with 20 sides. If `$fn` is `0` OpenSCAD will calculate the number of sides using a minimum angle `$fa` between edges and a minimum edge length `$fs`.
+
 ### %, #, *, !
 
+The `%`, `#`, `*`, and `!` [modifier characters](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters) can alter how parts of your drawing are rendered. These can be used to ghost, highlight, disable, or isolate a shape or subtree respectively.
+
+In the example above the cube is ghosted or backgrounded. It is shown in transparent gray but isn't a real part of the rendered geometry. 
+
 ### echo
+OpenSCAD has an [echo()](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#Echo_Statements) statement for tracing out debugging info.
 
 ### Transformations
 ```openscad
@@ -224,7 +226,7 @@ This example produces the same shape as the example above, but uses variables an
 
 
 
-### Foor Loops
+### For Loops
 
 ```openscad
 $fn = 20;
@@ -271,10 +273,29 @@ Try creating OpenSCAD scripts for each of these shapes.
 ![barbell](images/barbell.png)
 ![tag](images/tag.png)
 ![pipes](images/pipes.png)
+![ring](images/ring.png)
+
+Build the last shape so that you can parametrically control the number of disks that make up the ring.
 
 /::
 
 
-## Assignment
+::: .assignment
 
+## Keep Sketching!
+
+### Base
+This week explore using OpenSCAD, OpenJSCAD, or another tool to procedurally generate 3D shapes. Consider exporting your shapes and working with them further in a 3D package such as Cinema 4D, Maya, After Effects, or even Photoshop.
+
+
+### Challenge 1: Castle
+Build a 3D castle! Start with a reference search and look at examples of real and fantasy castles. Castles have many interesting features to consider: towers, spires, moats, walls, crenelations, bricks, stairs, windows.
+
+### Challenge 2: Spaceship
+Build a 3D spaceship! Start with a reference search and look at examples of real—yes, there are real spaceships—and fantasy spaceships. Spaceships also have many interesting features to consider: engines, wings, rockets, blasters, solar collectors, pods, antennas.
+
+
+**For both challenges consider using parameterization or randomization in  your script to get more variety, but its okay to hard code you challenges too.**
+
+/::
 

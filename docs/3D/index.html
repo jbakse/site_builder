@@ -5,20 +5,13 @@
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">3D Forms</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>3D Forms</h1><h6>Overview</h6><p class="description">3D = 2D + 1D</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="3d-forms">3D Forms</h2>
-<blockquote>
-<p>It is not hard to understand modern art. If it hangs on a wall it’s a painting, and if you can walk around it it’s a painting</p>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">3D Forms</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>3D Forms</h1><h6>Overview</h6><p class="description">Explore building three dimensional forms with OpenSCAD, a functional programming language for constructive solid geometry modeling.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="3d-forms">3D Forms</h2>
+<blockquote class="bigger">
+<p>It is not hard to understand modern art. If it hangs on a wall it’s a painting, and if you can walk around it it’s a sculpture.</p>
 </blockquote>
-<p class="attrib">Tom Stoppard, author of [Rosencrantz &amp; Guildenstern are Dead](Rosencrantz &amp; Guildenstern Are Dead)</p>
-<p>This chapter explores creating 3D forms</p>
-<ul>
-<li>another dimension, volume, point of view</li>
-<li>much of our world is 3D, and much of of our art is a representation that suggests real things. 3D forms can be these things.</li>
-<li>actually make something</li>
-<li>virtually make something is pretty good too</li>
-<li>speed (immediate gratification)</li>
-<li>scale(huge trees)</li>
-</ul>
+<p class="attrib">Tom Stoppard, author of <a href="https://en.wikipedia.org/wiki/Rosencrantz_%26_Guildenstern_Are_Dead_(film)">Rosencrantz &amp; Guildenstern are Dead</a></p>
+<p>Most of the favorite subjects of representational art—the human figure, landscapes, still life—are three dimensional forms. Paintings and drawings represent these forms by projecting them into two dimensions. This is a destructive process in which part of the form is lost. You can not walk around a painting to see its subject from the other side. A painting strives to convey a sense of scale, of volume, of substance, and of presence, whereas a sculpture cannot escape them.</p>
+<p>While you can rotate computer generated 3D shapes, you are still seeing a 2D projection when you look at them on a screen. 3D Printing brings these shapes into into the physical world. Getting “real” results from procedural generation can be very gratifying. Viewing shapes in VR is also very satisfying and even more immediate. Virtual reality also allows exploring 3D shapes at a scale that 3D printing can not.</p>
 <h2 id="openscad">OpenSCAD</h2>
 <p><a href="http://www.openscad.org/about.html">OpenSCAD</a> is a language for specifying procedural 3D forms using <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">constructive solid geometry</a>. CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well suited to designing mechanical parts for manufacturing, but not well suited for organic shapes, characters, or animation. OpenSCAD is language, not an interactive modeller, and OpenSCAD files fully specify the modelling process rather than the just the resulting geometry. Because of this, OpenSCAD is well suited to specifying parametric designs.</p>
 <dl>
@@ -112,8 +105,12 @@ multiply(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>,
 </code></pre>
 <p class="full-width"><img src="images/example_1.png" alt="example_1"></p>
 <h3 id="fn-fa-fs">$fn, $fa, $fs</h3>
+<p><code>$fn</code>, <code>$fa</code>, and <code>$fs</code> are special variables that control how many edges are used for drawing arcs and circles. In the example above <code>$fn</code> is set to <code>20</code> telling OpenSCAD to make the cylinder with 20 sides. If <code>$fn</code> is <code>0</code> OpenSCAD will calculate the number of sides using a minimum angle <code>$fa</code> between edges and a minimum edge length <code>$fs</code>.</p>
 <h3 id="">%, #, *, !</h3>
+<p>The <code>%</code>, <code>#</code>, <code>*</code>, and <code>!</code> <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters">modifier characters</a> can alter how parts of your drawing are rendered. These can be used to ghost, highlight, disable, or isolate a shape or subtree respectively.</p>
+<p>In the example above the cube is ghosted or backgrounded. It is shown in transparent gray but isn’t a real part of the rendered geometry.</p>
 <h3 id="echo">echo</h3>
+<p>OpenSCAD has an <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#Echo_Statements">echo()</a> statement for tracing out debugging info.</p>
 <h3 id="transformations">Transformations</h3>
 <pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
 
@@ -170,7 +167,7 @@ knob_height = <span class="hljs-number">1.8</span>;
 unit_brick();
 </code></pre>
 <p>This example produces the same shape as the example above, but uses variables and a module definition to make the code easier to read.</p>
-<h3 id="foor-loops">Foor Loops</h3>
+<h3 id="for-loops">For Loops</h3>
 <pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
 brick_width = <span class="hljs-number">8</span>;
 brick_height = <span class="hljs-number">9.6</span>;
@@ -209,7 +206,18 @@ columns = <span class="hljs-number">8</span>;
 <p>Try creating OpenSCAD scripts for each of these shapes.</p>
 <p><img src="images/barbell.png" alt="barbell">
 <img src="images/tag.png" alt="tag">
-<img src="images/pipes.png" alt="pipes"></p>
+<img src="images/pipes.png" alt="pipes">
+<img src="images/ring.png" alt="ring"></p>
+<p>Build the last shape so that you can parametrically control the number of disks that make up the ring.</p>
 </div>
-<h2 id="assignment">Assignment</h2>
+<div id="" class="assignment">
+<h2 id="keep-sketching">Keep Sketching!</h2>
+<h3 id="base">Base</h3>
+<p>This week explore using OpenSCAD, OpenJSCAD, or another tool to procedurally generate 3D shapes. Consider exporting your shapes and working with them further in a 3D package such as Cinema 4D, Maya, After Effects, or even Photoshop.</p>
+<h3 id="challenge-1-castle">Challenge 1: Castle</h3>
+<p>Build a 3D castle! Start with a reference search and look at examples of real and fantasy castles. Castles have many interesting features to consider: towers, spires, moats, walls, crenelations, bricks, stairs, windows.</p>
+<h3 id="challenge-2-spaceship">Challenge 2: Spaceship</h3>
+<p>Build a 3D spaceship! Start with a reference search and look at examples of real—yes, there are real spaceships—and fantasy spaceships. Spaceships also have many interesting features to consider: engines, wings, rockets, blasters, solar collectors, pods, antennas.</p>
+<p><strong>For both challenges consider using parameterization or randomization in  your script to get more variety, but its okay to hard code you challenges too.</strong></p>
+</div>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>
