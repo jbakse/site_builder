@@ -166,7 +166,7 @@ p5.js + p5.sound
 </a>
 
 
-<a class="col-6 col-md-4" data-ready="false" href="./#">
+<a class="col-6 col-md-4" data-ready="true" href="./3D">
 
 ### 3D Forms
 OpenSCAD
@@ -229,7 +229,7 @@ Vuo
 | [Week 11, April 6](text/plan.html)           | [Generating Text](text)                              |
 | [Week 12, April 13](sound/plan.html)         | [Generating Sound](sound)                            |
 | [Week 13, April 20](music/plan.html)         | [Music](music)                                       |
-| [Week 14, April 27](#)                       | [3D Forms](#)                                        |
+| [Week 14, April 27](3D/plan.html)            | [3D Forms](3D)                                       |
 | [Week 15, May 4](#)                          | [Microgames](#)                                      |
 | [Week 16, May 11](#)                         | [Postmortem Party](#)                                |
 

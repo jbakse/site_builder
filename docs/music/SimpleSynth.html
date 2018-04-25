@@ -36,13 +36,8 @@
         <span class="hljs-comment">/**
          * generates the tone of the notes
          * https://github.com/processing/p5.js-sound/blob/master/src/oscillator.js
-         * 
          * @type p5.Oscillator
          */</span>
-
-
-
-        <span class="hljs-comment">// sine, sawtooth, triangle, square</span>
         <span class="hljs-keyword">this</span>.oscillator = <span class="hljs-keyword">new</span> p5.Oscillator(shape);
         <span class="hljs-keyword">this</span>.oscillator.amp(<span class="hljs-keyword">this</span>.envelope); <span class="hljs-comment">// set amplitude</span>
         <span class="hljs-keyword">this</span>.oscillator.freq(<span class="hljs-number">220</span>); <span class="hljs-comment">// set frequency</span>
@@ -53,7 +48,7 @@
          * they are fully decayed before next note plays
          * @type {Number}
          */</span>
-        <span class="hljs-keyword">this</span>.spacing = <span class="hljs-number">0</span>; <span class="hljs-comment">// -0.7;</span>
+        <span class="hljs-keyword">this</span>.spacing = <span class="hljs-number">.02</span>; <span class="hljs-comment">// -0.7;</span>
 
         <span class="hljs-comment">/**
          * callback called when a note is played, receives

@@ -280,3 +280,6 @@ https://mathbitsnotebook.com/Algebra1/Quadratics/QDprojectilemotion.html
 http://www.ctrl-alt-test.fr/2018/a-dive-into-the-making-of-immersion/
 
 
+
+
+https://www.youtube.com/watch?v=tzMOp6-lzoA
