@@ -17,7 +17,7 @@ software: p5.js
 
 ## 3D Forms
 
-> It is not hard to understand modern art. If it hangs on a wall it's a painting, and if you can walk around it it's a painting
+> It is not hard to understand modern art. If it hangs on a wall it's a painting, and if you can walk around it it's a sculpture
 
 Tom Stoppard, author of [Rosencrantz & Guildenstern are Dead](Rosencrantz & Guildenstern Are Dead){attrib}
 
@@ -33,7 +33,7 @@ This chapter explores creating 3D forms
 
 ## OpenSCAD
 
-[OpenSCAD](http://www.openscad.org/about.html) is a language for specifying procedural 3D forms using [constructive solid geometry](https://en.wikipedia.org/wiki/Constructive_solid_geometry). CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well suited to designing mechanical parts for manufacturing, but not well suited for organic shapes, characters, or animation. OpenSCAD is language, not an interactive modeller, and OpenSCAD files fully specify the modelling process rather than the just the resulting geometry. Because of this, OpenSCAD is well suited to specifying parametric designs.
+[OpenSCAD](http://www.openscad.org/about.html) is a language for specifying procedural 3D forms using [constructive solid geometry](https://en.wikipedia.org/wiki/Constructive_solid_geometry). CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well suited to designing mechanical parts for manufacturing, but not well suited for organic shapes, characters, or animation. OpenSCAD is a language, not an interactive modeler, and OpenSCAD files fully specify the modeling process rather than the just the resulting geometry. Because of this, OpenSCAD is well suited to specifying parametric designs.
 
 [OpenSCAD.org](http://www.openscad.org/)
 : Main site for OpenSCAD. IDE Download, Documentation, Examples.
@@ -45,7 +45,7 @@ This chapter explores creating 3D forms
 : The specifics of the OpenSCAD IDE and language.
 
 [OpenSCAD.net](http://openscad.net/)
-: A web based OpenSCAD editor and renderer. Does not implement every feature of OpenSCAD.
+: A web-based OpenSCAD editor and renderer. Does not implement every feature of OpenSCAD.
 
 ### Functional and Declarative
 
@@ -64,7 +64,7 @@ The [OpenSCAD Manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_Ope
 | declarative | focuses on what you want to achieve rather than the steps to achieve it; unordered,                |
 | functional  | a declarative approach that organizes logic using pure functions; no side effects, immutable state |
 
-The most noticeable effect of OpenSCAD being functional is that data in OpenSCAD is not immutable: the value of every variable is constant. In fact, variables are not even assigned values at runtime. A variables value is determined and assigned at compile time, before the script is run. If you keep this in mind, data in OpenSCAD will make more sense. The OpenSCAD manual goes into more detail about how [variables](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables) behave.
+The most noticeable effect of OpenSCAD being functional is that data in OpenSCAD is not immutable: the value of every variable is constant. In fact, variables are not even assigned values at runtime. A variable's value is determined and assigned at compile time, before the script is run. If you keep this in mind, data in OpenSCAD will make more sense. The OpenSCAD manual goes into more detail about how [variables](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables) behave.
 
 ### Infix vs. Prefix Notation
 
@@ -86,7 +86,7 @@ multiply(2, 3) -> 6
 multiply(2, 3, 4) -> 24
 ```
 
-You can think of OpenSCAD's boolean and transform operations as prefix operators or function calls. Unlike JavaScript and C, the contents of `{}` are operands/parameters not commands. 
+You can think of OpenSCAD's boolean and transform operations as prefix operators or function calls. Unlike JavaScript and C, the contents of `{}` are operands: parameters rather than commands. 
 ```javascript
 union() {
     cylinder (h=4, r=1, center = true);
@@ -166,7 +166,7 @@ translate([0, 0, 9.6 * .5 + 1.8 * .5]) {
 ```
 ![example_2](images/example_2.png){full-width}
 
-Translate moves the shapes passed to it. Here translate moves the cylinder up. Notice that the braces are used to group parameters to translate.
+`Translate()` moves the shapes passed to it. Here translate moves the cylinder up. Notice that the braces are used to group parameters to translate.
 
 The example also demonstrates using `color` to change the color used to render the cube. Use color to make it easier to understand your model.
 
@@ -189,7 +189,7 @@ difference() {
 ```
 ![example_3](images/example_3.png){full-width}
 
-This example uses `difference()` and `union()` to combine shapes. A cylinder and cube are combined with `union()`, the resulting shape has a recess cut out using `difference`.
+This example uses `difference()` and `union()` to combine shapes. A cylinder and cube are combined with `union()`. The resulting shape has a recess cut out using `difference`.
 
 OpenSCAD may not preview this shape very cleanly. Render the shape with `Main Menu > Design > Render` to get a clear view of the rendered geometry.
 
