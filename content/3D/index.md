@@ -23,13 +23,15 @@ software: p5.js
 
 Tom Stoppard, author of [Rosencrantz & Guildenstern are Dead](https://en.wikipedia.org/wiki/Rosencrantz_%26_Guildenstern_Are_Dead_(film)){attrib}
 
-Most of the favorite subjects of representational art—the human figure, landscapes, still life—are three dimensional forms. Paintings and drawings represent these forms by projecting them into two dimensions. This is a destructive process in which part of the form is lost. You can not walk around a painting to see its subject from the other side. A painting strives to convey a sense of scale, of volume, of substance, and of presence, whereas a sculpture cannot escape them. 
+Most of the favorite subjects of representational art—human figures, landscapes, still lifes—are three dimensional forms. Paintings and drawings represent these forms by projecting them into two dimensions. This is a destructive process in which part of the form is lost. You can not walk around a painting to see its subject from the other side. Where a painting strives to convey a sense of scale, of volume, of substance, and of presence, a sculpture cannot escape them. 
 
-While you can rotate computer generated 3D shapes, you are still seeing a 2D projection when you look at them on a screen. 3D Printing brings these shapes into into the physical world. Getting "real" results from procedural generation can be very gratifying. Viewing shapes in VR is also very satisfying and even more immediate. Virtual reality also allows exploring 3D shapes at a scale that 3D printing can not.
+On screen, 3D graphics exist in between painting and sculpture. You can rotate computer generated 3D shapes, but you are still seeing a 2D projection. 3D Printing brings these shapes into into the physical world. Getting "real" results from procedural generation can be very gratifying, providing physical evidence of your efforts. While not physical, VR is also a compelling medium for computational form. I especially enjoy combining the rapid iteration enabled by working procedurally with the sense of presence and scale afforded by virtual reality. It is an intensely creative experience to procedurally generate a tree and immediately stand in its shadow looking up at the sky through its branches.
 
 ## OpenSCAD
 
-[OpenSCAD](http://www.openscad.org/about.html) is a language for specifying procedural 3D forms using [constructive solid geometry](https://en.wikipedia.org/wiki/Constructive_solid_geometry). CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well suited to designing mechanical parts for manufacturing, but not well suited for organic shapes, characters, or animation. OpenSCAD is a language, not an interactive modeler, and OpenSCAD files fully specify the modeling process rather than the just the resulting geometry. Because of this, OpenSCAD is well-suited to specifying parametric designs.
+[OpenSCAD](http://www.openscad.org/about.html) is a language for specifying procedural 3D forms using [constructive solid geometry](https://en.wikipedia.org/wiki/Constructive_solid_geometry). CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well suited to designing mechanical parts for manufacturing, but not well suited for organic shapes, characters, or animation. 
+
+![OpenSCAD](images/OpenSCAD_screenshot.png)
 
 [OpenSCAD.org](http://www.openscad.org/)
 : Main site for OpenSCAD. IDE Download, Documentation, Examples.
@@ -43,7 +45,24 @@ While you can rotate computer generated 3D shapes, you are still seeing a 2D pro
 [OpenSCAD.net](http://openscad.net/)
 : A web-based OpenSCAD editor and renderer. Does not implement every feature of OpenSCAD.
 
-### Functional and Declarative
+### OpenSCAD is not like C
+
+At first glance OpenSCAD syntax looks similar to C or JavaScript, with braces, brackets, and semicolons appearing about where you would expect. But as you read the code you see some surprising differences. 
+
+Look at the example below, which creates a ring by subtracting one cylinder from another.
+
+```openscad
+difference() {
+    cylinder (h=1, r=4, center = true);
+    cylinder (h=1, r=3, center = true);
+}
+```
+
+In the example, `difference()` looks like a function call but instead of being followed by a semicolon it is followed by what looks like a block of statements starting and ending with braces. In the vocabulary of OpenSCAD `difference()` is an **operator** and `cylinder(...);` is an **action**. Operators act on an action or a **group** of actions in braces.
+
+These differences reflect the fundamentally different approach to programming in OpenSCAD compared to C.
+
+### Functional vs. Procedural
 
 ::: .links-sidebar
 [Wikipeda:<br/>Programming Paradigms](https://en.wikipedia.org/wiki/Programming_paradigm)
@@ -51,7 +70,7 @@ While you can rotate computer generated 3D shapes, you are still seeing a 2D pro
 [Talk:<br/>4 Paradigms in 40 Minutes](https://www.youtube.com/watch?v=cgVVZMfLjEI)
 /::
 
-The [OpenSCAD Manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language) describes OpenSCAD as a [functional](https://en.wikipedia.org/wiki/Functional_programming) programming language. One could more generally refer to OpenSCAD as a [declarative](https://en.wikipedia.org/wiki/Declarative_programming) language. In contrast to JavaScript, C, and Processing, it is not an [imperative](https://en.wikipedia.org/wiki/Imperative_programming) or [procedural](https://en.wikipedia.org/wiki/Procedural_programming) language.
+The [OpenSCAD Manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language) describes OpenSCAD as a [functional](https://en.wikipedia.org/wiki/Functional_programming) programming language. One could also generally refer to OpenSCAD as a [declarative](https://en.wikipedia.org/wiki/Declarative_programming) language. In contrast to JavaScript, C, and Processing, it is not an [imperative](https://en.wikipedia.org/wiki/Imperative_programming) or [procedural](https://en.wikipedia.org/wiki/Procedural_programming) language.
 
 Classifying programming languages by paradigm is tricky in practice. The boundaries of paradigms are not always clear, different paradigms have different primary concerns and may be orthogonal to each other, and many languages support multiple paradigms.
 
@@ -67,30 +86,42 @@ Classifying programming languages by paradigm is tricky in practice. The boundar
 | ↳&nbsp;logic                | a declarative approach in which a program is a collection of logical declarations from which facts can be inferred |
 
 
+### Immutable vs. Mutable Data
+
+The most noticeable effect of OpenSCAD being functional is that data in OpenSCAD is immutable: the value of every variable is constant. In fact, variables are not even assigned values at runtime. A variable's value is determined and assigned at compile time, before the script is run. The variables value will be the _last_ assigned value.
+
+```openscad
+a = 1;
+echo(a); // -> 2
+a = 2;
+echo(a); // -> 2
+```
+
+This takes some getting used to. It helps to keep the idea that variables are given their value before the script is run. The OpenSCAD manual goes into more detail about how [variables](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables) behave.
 
 
-The most noticeable effect of OpenSCAD being functional is that data in OpenSCAD is immutable: the value of every variable is constant. In fact, variables are not even assigned values at runtime. A variable's value is determined and assigned at compile time, before the script is run. If you keep this in mind, data in OpenSCAD will make more sense. The OpenSCAD manual goes into more detail about how [variables](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables) behave.
 
-
-
-### Infix vs. Prefix Notation
+### Prefix vs. Infix Notation
 
 Javascript expression with infix notation
 ```javascript
 2 * 3 -> 6
 2 * 3 * 4 -> 24
+2 * (3 + 4) -> 14
 ```
 
 Lisp expressions with prefix notation
 ```lisp
 (* 2 3) -> 6
-(* 2 3 4) - 24
+(* 2 3 4) -> 24
+(* 2 (+ 3 4)) -> 14
 ```
 
 Prefix notation isn't that crazy. Compare it to function calls in JavaScript.
 ```javascript
 multiply(2, 3) -> 6
 multiply(2, 3, 4) -> 24
+multiply(2, add(3, 4)) -> 14
 ```
 
 You can think of OpenSCAD's boolean and transform operations as prefix operators or function calls. Unlike JavaScript and C, the contents of `{}` are operands or parameters rather than commands. 
@@ -101,11 +132,11 @@ union() {
 }
 ```
 
-### Named Parameters
+### Named vs. Positional Parameters
 
 OpenSCAD with named parameters
 ```javascript
-cylinder (h=4, r=1, center = true);
+cylinder (h=4, r=1, center=true);
 ```
 
 OpenSCAD with positional parameters
@@ -121,7 +152,7 @@ cylinder ({h=4, r=1, center=true});
 
 ### JavaScript Alternatives
 
-OpenSCAD's functional model has its advantages, but imperative languages also have advantages. For one, imperative languages are more familiar to many programmers. To explore procedural constructive solid geometry modeling in an imperative style, you may want to use one of these tools inspired by OpenSCAD.
+OpenSCAD's functional model has its advantages, but imperative languages also have advantages. For one, imperative languages are more familiar to most programmers. To explore constructive solid geometry modeling in an imperative style, you may want to use one of these tools inspired by OpenSCAD.
 
 [OpenJSCAD](http://joostn.github.io/OpenJsCad/)
 : Web-based solid modeling in JavaScript. OpenSCAD but in JS.
@@ -131,10 +162,6 @@ OpenSCAD's functional model has its advantages, but imperative languages also ha
 
 [OpenJSCAD.org User and Programming Guide](https://en.wikibooks.org/wiki/OpenJSCAD_User_Guide)
 : Manual for OpenJSCAD syntax and library.
-
-
-
-
 
 
 ## Study Examples
@@ -274,7 +301,11 @@ for (x = [0:columns-1], y = [0:rows-1]) {
 ```
 ![example_4](images/example_4.png){full-width}
 
-This example uses `for` to create several instances of our basic shape. OpenSCAD's `for()` looks a lot like the imperative flow control structure, but [works differently](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_Loop) because OpenSCAD is functional. Each instance is created in its own scope and no data can flow between scopes. The syntax also allows "iterating" over multiple variables at once. This example will create a unit brick for every combination of x and y. In javascript you would need a nested pair of loops. Also, note that the for loop implicitly `union()`s the shapes.
+This example uses `for` to create several instances of our basic shape. OpenSCAD's `for()` looks a lot like the imperative flow control structure, but [works differently](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_Loop) because OpenSCAD is functional. 
+
+The `for` loop creates a union of multiple instances of the following group. Each instance is constructed in its own scope and no data can flow between scopes. 
+
+The OpenSCAD `for` syntax allows "iterating" over multiple variables at once. This example will create a unit brick for every combination of x and y. In JavaScript you would use a nested pair of loops to achieve a similar effect. 
 
 
 ::: .activity
@@ -294,7 +325,7 @@ Build this shape so that you can parametrically control the number of disks that
 
 ## Parametric OpenSCAD
 
-OpenSCAD is particularly well suited to creating parametric designs. [Thingiverse](https://www.thingiverse.com) uses OpenSCAD to allow users to share and customize 3D printable objects.
+Because OpenSCAD is a language, not an interactive modeler, OpenSCAD files fully specify the modeling process rather than the just the resulting geometry. This makes OpenSCAD very well-suited to parametric designs. [Thingiverse](https://www.thingiverse.com) uses OpenSCAD to allow users to share and customize 3D printable objects.
 
 [Parametric Pulley](https://www.thingiverse.com/thing:16627)
 
@@ -303,7 +334,11 @@ OpenSCAD is particularly well suited to creating parametric designs. [Thingivers
 
 ## Digital Fabrication
 
-Digital Fabrication is the a prototyping and production workflow that combines computer-aided design with computer-controlled manufacturing techniques. Just as desktop publishing caused shifts in skills, methods, and equipment needed to print documents, digital fabrication is changing how objects are designed and built.
+Digital fabrication is a prototyping and production workflow that combines computer-aided design with computer-controlled manufacturing techniques. Just as desktop publishing caused shifts in skills, methods, and equipment needed to print documents, digital fabrication is changing how objects are designed and built.
+
+Machining is a subtractive manufacturing technique in which an object is carved out of a block of material. Computer numerical control (CNC) milling and [lathing](https://www.youtube.com/watch?v=q2PP9P-p79w) machines use subtractive manufacturing to make highly precise and very strong parts.
+
+3D Printing refers to a range of additive fabrication techniques. In additive fabrication an object is built up, usually in layers. Because subtractive methods can only create shapes which allow the cutting tool to reach all the material that must be removed, additive fabrication can achieve shapes that subtractive manufacturing can not. There are many types of 3D printing in use.
 
 ::: .links-sidebar
 [Wikipedia: <br/> 3D Printing Processes](https://en.wikipedia.org/wiki/3D_printing_processes)
@@ -321,16 +356,13 @@ Selective Laser Sintering (SLS)
 Laminated Object Manufacturing (LOM)
 : Layers of object are cut from paper or film.
 
-Computer Numerical Control Milling (CNC)
-: Object is carved from a block of material using computer controlled cutting tool.
+
 
 
 ### Slicing and G-Code
 The most popular hobbyist 3D printing method is Fused Filament Fabrication or Fused Deposition Modeling (FDM). To print an OpenSCAD file on an FDM machine you need to export the rendered geometry and then "slice" it with software like [Cura](https://ultimaker.com/en/products/ultimaker-cura-software) or [Slic3r](http://slic3r.org/). 
 
-
-
-Slicer software creates [G-code](https://en.wikipedia.org/wiki/G-code). G-code files are a list of instructions for CNC machines like 3D printers and mills. This g-code excerpt sets the move speed to 100 mm/minute and then moves the machine head to 0,0.
+This software converts your 3D geometery to [G-code](https://en.wikipedia.org/wiki/G-code). G-code files are a list of instructions for CNC machines like 3D printers and mills. This g-code excerpt sets the move speed to 100 mm/minute and then moves the machine head to 0,0.
 
 ```
 G0 F100;
@@ -345,16 +377,32 @@ Greg Schomburg and I created this custom [drawbot project](http://justinbakse.co
 
 ## Other Procedural 3D Tools
 
-Support for procedural methods is common in 3D software. Nearly all CAD software has support for expressing design constrains and parameters. CG modeling software often hosts a runtime for executing scripts. These scripts are often used to add functionality to the UI, automate tasks, or procedurally generate 3D information.
+Support for procedural methods is common in 3D software. Nearly all CAD software has support for expressing design constrains and parameters. CG modeling software often hosts a runtime for executing scripts. These scripts are often used to add functionality to the UI, automate tasks, or procedurally generate 3D content.
 
-Maya Blender
+[Maya](https://www.autodesk.com/products/maya/overview) and [Blender](https://www.blender.org/)
+: Maya and Blender are full 3D creation suites that allow you to model, animate, and render 3D content. 
 
-Fusion 360
+ Maya is available for free with an [academic license](https://www.autodesk.com/education/free-software/featured). 
+ 
+ Blender is free to everyone under the [GNU GPL license](https://www.blender.org/about/license/).
 
-Houdini
 
-Substance Designer
+[Fusion 360](https://www.autodesk.com/products/fusion-360/overview) and [Tinkercad](https://www.tinkercad.com)
+: Fusion 360 is a cloud-based computer-aided design, manufacturing, and engineering package.Tinkercad is a much simpler tool for designing and printing 3D objects.
 
+  Tinkercad is free to use, and Fusion 360 has an [academic license](https://www.autodesk.com/education/free-software/featured)
+
+
+
+[Houdini](https://www.sidefx.com/)
+: Houdini is an extremely powerful tool for procedural 3D modeling and simulating for visual effects work. Houdini can be used to build parametric tools that work inside other 3D tools like Maya and Unity.
+
+  Houdini has a reduced cost [educational license](https://www.sidefx.com/products/houdini-education/).
+
+[Substance Designer](https://www.allegorithmic.com/products/substance-designer)
+: Substance designer is a tool for procedurally creating realistic materials for 3D rendering.
+
+  Available for free with an [educational license](https://www.allegorithmic.com/buy/education)
 
 
 
