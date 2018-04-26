@@ -5,15 +5,15 @@
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">3D Forms</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>3D Forms</h1><h6>Overview</h6><p class="description">Explore building three dimensional forms with OpenSCAD, a functional programming language for constructive solid geometry modeling.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="3d-forms">3D Forms</h2>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">3D Forms</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>3D Forms</h1><h6>Overview</h6><p class="description">Explore building three-dimensional forms with OpenSCAD, a functional programming language for constructive solid geometry modeling.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="3d-forms">3D Forms</h2>
 <blockquote class="bigger">
 <p>It is not hard to understand modern art. If it hangs on a wall it’s a painting, and if you can walk around it it’s a sculpture.</p>
 </blockquote>
 <p class="attrib">Tom Stoppard, author of <a href="https://en.wikipedia.org/wiki/Rosencrantz_%26_Guildenstern_Are_Dead_(film)">Rosencrantz &amp; Guildenstern are Dead</a></p>
-<p>Most of the favorite subjects of representational art—human figures, landscapes, still lifes—are three dimensional forms. Paintings and drawings represent these forms by projecting them into two dimensions. This is a destructive process in which part of the form is lost. You can not walk around a painting to see its subject from the other side. Where a painting strives to convey a sense of scale, of volume, of substance, and of presence, a sculpture cannot escape them.</p>
-<p>On screen, 3D graphics exist in between painting and sculpture. You can rotate computer generated 3D shapes, but you are still seeing a 2D projection. 3D Printing brings these shapes into into the physical world. Getting “real” results from procedural generation can be very gratifying, providing physical evidence of your efforts. While not physical, VR is also a compelling medium for computational form. I especially enjoy combining the rapid iteration enabled by working procedurally with the sense of presence and scale afforded by virtual reality. It is an intensely creative experience to procedurally generate a tree and immediately stand in its shadow looking up at the sky through its branches.</p>
+<p>Most of the favorite subjects of representational art—human figures, landscapes, still lifes—are three dimensional forms. Paintings and drawings represent these forms by projecting them into two dimensions. This is a destructive process in which part of the form is lost. You cannot walk around a painting to see its subject from the other side. Where a painting strives to convey a sense of scale, of volume, of substance, and of presence, a sculpture cannot escape them.</p>
+<p>On screen, 3D graphics exist in between painting and sculpture. You can rotate computer generated 3D shapes, but you are still seeing a 2D projection. 3D Printing brings these shapes into the physical world. Getting “real” results from procedural generation can be very gratifying, providing physical evidence of your efforts. While not physical, VR is also a compelling medium for computational form. I especially enjoy combining the rapid iteration enabled by working procedurally with the sense of presence and scale afforded by virtual reality. It is an intensely creative experience to procedurally generate a tree and immediately stand in its shadow looking up at the sky through its branches.</p>
 <h2 id="openscad">OpenSCAD</h2>
-<p><a href="http://www.openscad.org/about.html">OpenSCAD</a> is a language for specifying procedural 3D forms using <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">constructive solid geometry</a>. CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well suited to designing mechanical parts for manufacturing, but not well suited for organic shapes, characters, or animation.</p>
+<p><a href="http://www.openscad.org/about.html">OpenSCAD</a> is a language for specifying procedural 3D forms using <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">constructive solid geometry</a>. CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well-suited to designing mechanical parts for manufacturing, but not well-suited for organic shapes, characters, or animation.</p>
 <p><img src="images/OpenSCAD_screenshot.png" alt="OpenSCAD"></p>
 <dl>
 <dt><a href="http://www.openscad.org/">OpenSCAD.org</a></dt>
@@ -25,6 +25,12 @@
 <dt><a href="http://openscad.net/">OpenSCAD.net</a></dt>
 <dd>A web-based OpenSCAD editor and renderer. Does not implement every feature of OpenSCAD.</dd>
 </dl>
+<div id="" class="activity">
+<h2 id="in-class-challenge">In-class Challenge</h2>
+<p>Download OpenSCAD, set it up, and try to make the challenges below.</p>
+<p><img src="images/green_bar.png" alt="green bar">
+<img src="images/yellow_ring.png" alt="yellow ring"></p>
+</div>
 <h3 id="openscad-is-not-like-c">OpenSCAD is not like C</h3>
 <p>At first glance OpenSCAD syntax looks similar to C or JavaScript, with braces, brackets, and semicolons appearing about where you would expect. But as you read the code you see some surprising differences.</p>
 <p>Look at the example below, which creates a ring by subtracting one cylinder from another.</p>
@@ -33,7 +39,7 @@
     <span class="hljs-built_in">cylinder</span> (h=<span class="hljs-number">1</span>, r=<span class="hljs-number">3</span>, center = <span class="hljs-literal">true</span>);
 }
 </code></pre>
-<p>In the example, <code>difference()</code> looks like a function call but instead of being followed by a semicolon it is followed by what looks like a block of statements starting and ending with braces. In the vocabulary of OpenSCAD <code>difference()</code> is an <strong>operator</strong> and <code>cylinder(...);</code> is an <strong>action</strong>. Operators act on an action or a <strong>group</strong> of actions in braces.</p>
+<p>In the example, <code>difference()</code> looks like a function call, but instead of being followed by a semicolon it is followed by what looks like a block of statements starting and ending with braces. In the vocabulary of OpenSCAD <code>difference()</code> is an <strong>operator</strong> and <code>cylinder(...);</code> is an <strong>action</strong>. Operators act on an action or a <strong>group</strong> of actions in braces.</p>
 <p>These differences reflect the fundamentally different approach to programming in OpenSCAD compared to C.</p>
 <h3 id="functional-vs-procedural">Functional vs. Procedural</h3>
 <div id="" class="links-sidebar">
@@ -41,7 +47,7 @@
 <p><a href="https://www.youtube.com/watch?v=cgVVZMfLjEI">Talk:<br/>4 Paradigms in 40 Minutes</a></p>
 </div>
 <p>The <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language">OpenSCAD Manual</a> describes OpenSCAD as a <a href="https://en.wikipedia.org/wiki/Functional_programming">functional</a> programming language. One could also generally refer to OpenSCAD as a <a href="https://en.wikipedia.org/wiki/Declarative_programming">declarative</a> language. In contrast to JavaScript, C, and Processing, it is not an <a href="https://en.wikipedia.org/wiki/Imperative_programming">imperative</a> or <a href="https://en.wikipedia.org/wiki/Procedural_programming">procedural</a> language.</p>
-<p>Classifying programming languages by paradigm is tricky in practice. The boundaries of paradigms are not always clear, different paradigms have different primary concerns and may be orthogonal to each other, and many languages support multiple paradigms.</p>
+<p>Classifying programming languages by paradigm is tricky in practice. The boundaries of paradigms are not always clear. Different paradigms have different primary concerns and may be orthogonal to each other, and many languages support multiple paradigms.</p>
 <table class="table table-responsive">
 <thead>
 <tr>
@@ -68,7 +74,7 @@
 </tr>
 <tr>
 <td>↳ functional</td>
-<td>a declarative approach that organizes logic using pure functions with no side effects and immutable state</td>
+<td>a declarative approach that organizes logic using pure functions with immutable states and no side effects</td>
 </tr>
 <tr>
 <td>↳ logic</td>
@@ -77,13 +83,13 @@
 </tbody>
 </table>
 <h3 id="immutable-vs-mutable-data">Immutable vs. Mutable Data</h3>
-<p>The most noticeable effect of OpenSCAD being functional is that data in OpenSCAD is immutable: the value of every variable is constant. In fact, variables are not even assigned values at runtime. A variable’s value is determined and assigned at compile time, before the script is run. The variables value will be the <em>last</em> assigned value.</p>
+<p>The most noticeable effect of OpenSCAD being functional is that data in OpenSCAD is immutable: the value of every variable is constant. In fact, variables are not even assigned values at runtime. A variable’s value is determined and assigned at compile time, before the script is run. The variable’s value will be the <em>last</em> assigned value.</p>
 <pre><code class="language-openscad">a = <span class="hljs-number">1</span>;
 <span class="hljs-built_in">echo</span>(a); <span class="hljs-comment">// -&gt; 2</span>
 a = <span class="hljs-number">2</span>;
 <span class="hljs-built_in">echo</span>(a); <span class="hljs-comment">// -&gt; 2</span>
 </code></pre>
-<p>This takes some getting used to. It helps to keep the idea that variables are given their value before the script is run. The OpenSCAD manual goes into more detail about how <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables">variables</a> behave.</p>
+<p>This takes some getting used to. It helps to keep in mind that variables are given their value before the script is run. The OpenSCAD manual goes into more detail about how <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables">variables</a> behave.</p>
 <h3 id="prefix-vs-infix-notation">Prefix vs. Infix Notation</h3>
 <p>Javascript expression with infix notation</p>
 <pre><code class="language-javascript"><span class="hljs-number">2</span> * <span class="hljs-number">3</span> -&gt; <span class="hljs-number">6</span>
@@ -153,7 +159,7 @@ multiply(<span class="hljs-number">2</span>, add(<span class="hljs-number">3</sp
 }
 </code></pre>
 <p class="full-width"><img src="images/example_2.png" alt="example_2"></p>
-<p><code>Translate()</code> moves the shapes passed to it. Here translate moves the cylinder up. Notice that the braces are used to group parameters to translate.</p>
+<p><code>Translate()</code> moves the shapes passed to it. Here translate moves the cylinder up. Notice that the braces are used to group parameters to translate. You can also scale, resize, rotate, and mirror shapes</p>
 <p>The example also demonstrates using <code>color</code> to change the color used to render the cube. Use color to make it easier to understand your model.</p>
 <h3 id="boolean-operations">Boolean Operations</h3>
 <pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
@@ -171,7 +177,7 @@ multiply(<span class="hljs-number">2</span>, add(<span class="hljs-number">3</sp
 }
 </code></pre>
 <p class="full-width"><img src="images/example_3.png" alt="example_3"></p>
-<p>This example uses <code>difference()</code> and <code>union()</code> to combine shapes. A cylinder and cube are combined with <code>union()</code>. The resulting shape has a recess cut out using <code>difference()</code>.</p>
+<p>This example uses <code>difference()</code> and <code>union()</code> to combine shapes. A cylinder and cube are combined with <code>union()</code> and a recess is cut out of the resulting shape using <code>difference()</code>. OpenSCAD also has an <code>intersect()</code> operator.</p>
 <p>OpenSCAD may not preview this shape very cleanly. Render the shape with <code>Main Menu &gt; Design &gt; Render</code> to get a clear view of the rendered geometry.</p>
 <h3 id="variables-modules">Variables + Modules</h3>
 <pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
@@ -234,7 +240,7 @@ columns = <span class="hljs-number">8</span>;
 <p>The <code>for</code> loop creates a union of multiple instances of the following group. Each instance is constructed in its own scope and no data can flow between scopes.</p>
 <p>The OpenSCAD <code>for</code> syntax allows “iterating” over multiple variables at once. This example will create a unit brick for every combination of x and y. In JavaScript you would use a nested pair of loops to achieve a similar effect.</p>
 <div id="" class="activity">
-<h2 id="in-class-challenge">In-class Challenge</h2>
+<h2 id="in-class-challenge-2">In-class Challenge</h2>
 <p>Try creating OpenSCAD scripts for each of these shapes.</p>
 <p><img src="images/barbell.png" alt="barbell">
 <img src="images/tag.png" alt="tag">
@@ -249,7 +255,7 @@ columns = <span class="hljs-number">8</span>;
 <h2 id="digital-fabrication">Digital Fabrication</h2>
 <p>Digital fabrication is a prototyping and production workflow that combines computer-aided design with computer-controlled manufacturing techniques. Just as desktop publishing caused shifts in skills, methods, and equipment needed to print documents, digital fabrication is changing how objects are designed and built.</p>
 <p>Machining is a subtractive manufacturing technique in which an object is carved out of a block of material. Computer numerical control (CNC) milling and <a href="https://www.youtube.com/watch?v=q2PP9P-p79w">lathing</a> machines use subtractive manufacturing to make highly precise and very strong parts.</p>
-<p>3D Printing refers to a range of additive fabrication techniques. In additive fabrication an object is built up, usually in layers. Because subtractive methods can only create shapes which allow the cutting tool to reach all the material that must be removed, additive fabrication can achieve shapes that subtractive manufacturing can not. There are many types of 3D printing in use.</p>
+<p>3D printing refers to a range of additive fabrication techniques. In additive fabrication an object is built up, usually in layers. Because subtractive methods can only create shapes that allow the cutting tool to reach all the material that must be removed, additive fabrication can achieve shapes that subtractive manufacturing cannot. There are many types of 3D printing in use.</p>
 <div id="" class="links-sidebar">
 <p><a href="https://en.wikipedia.org/wiki/3D_printing_processes">Wikipedia: <br/> 3D Printing Processes</a></p>
 </div>
@@ -261,15 +267,15 @@ columns = <span class="hljs-number">8</span>;
 <dt>Selective Laser Sintering (SLS)</dt>
 <dd>Powdered material is fused by a laser.</dd>
 <dt>Laminated Object Manufacturing (LOM)</dt>
-<dd>Layers of object are cut from paper or film.</dd>
+<dd>Layers of the object are cut from paper or film.</dd>
 </dl>
 <h3 id="slicing-and-g-code">Slicing and G-Code</h3>
 <p>The most popular hobbyist 3D printing method is Fused Filament Fabrication or Fused Deposition Modeling (FDM). To print an OpenSCAD file on an FDM machine you need to export the rendered geometry and then “slice” it with software like <a href="https://ultimaker.com/en/products/ultimaker-cura-software">Cura</a> or <a href="http://slic3r.org/">Slic3r</a>.</p>
-<p>This software converts your 3D geometery to <a href="https://en.wikipedia.org/wiki/G-code">G-code</a>. G-code files are a list of instructions for CNC machines like 3D printers and mills. This g-code excerpt sets the move speed to 100 mm/minute and then moves the machine head to 0,0.</p>
+<p>This software converts your 3D geometry to <a href="https://en.wikipedia.org/wiki/G-code">G-code</a>. G-code files are a list of instructions for CNC machines like 3D printers and mills. This g-code excerpt sets the move speed to 100 mm/minute and then moves the machine head to 0,0.</p>
 <pre><code>G0 F100;
 G1 X0 Y0;
 </code></pre>
-<p>You don’t need to know much about g-code to use a 3D printer, you simply convert your model to g-code with a slicer app and load it on your printer. The app generates the g-code based on the object you are printing, the material you are using, and the specs of your machine. You <em>can</em> write g-code directly if you want: g-code files are plain text and relatively easy to understand. Writing your own g-code allows you to directly control your hardware, which can be useful for custom applications and machines like drawbots.</p>
+<p>You don’t need to know much about g-code to use a 3D printer: you simply convert your model to g-code with a slicer app and load it on your printer. The app generates the g-code based on the object you are printing, the material you are using, and the specs of your machine. You <em>can</em> write g-code directly if you want: g-code files are plain text and relatively easy to understand. Writing your own g-code allows you to directly control your hardware, which can be useful for custom applications and machines like drawbots.</p>
 <p class="caption"><img src="http://justinbakse.com/v2/new_york/raven/images/drawing.jpg" alt="Raven">
 Greg Schomburg and I created this custom <a href="http://justinbakse.com/v2/new_york/drawbot/">drawbot project</a>. It is controlled with g-code generated by a custom Processing app.</p>
 <h2 id="other-procedural-3d-tools">Other Procedural 3D Tools</h2>
@@ -283,7 +289,7 @@ Greg Schomburg and I created this custom <a href="http://justinbakse.com/v2/new_
 <dl>
 <dt><a href="https://www.autodesk.com/products/fusion-360/overview">Fusion 360</a> and <a href="https://www.tinkercad.com">Tinkercad</a></dt>
 <dd>
-<p>Fusion 360 is a cloud-based computer-aided design, manufacturing, and engineering package.Tinkercad is a much simpler tool for designing and printing 3D objects.</p>
+<p>Fusion 360 is a cloud-based computer-aided design, manufacturing, and engineering package. Tinkercad is a much simpler tool for designing and printing 3D objects.</p>
 <p>Tinkercad is free to use, and Fusion 360 has an <a href="https://www.autodesk.com/education/free-software/featured">academic license</a></p>
 </dd>
 <dt><a href="https://www.sidefx.com/">Houdini</a></dt>
@@ -305,6 +311,6 @@ Greg Schomburg and I created this custom <a href="http://justinbakse.com/v2/new_
 <p>Build a 3D castle! Start with a reference search and look at examples of real and fantasy castles. Castles have many interesting features to consider: towers, spires, moats, walls, crenelations, bricks, stairs, windows.</p>
 <h3 id="challenge-2-spaceship">Challenge 2: Spaceship</h3>
 <p>Build a 3D spaceship! Start with a reference search and look at examples of real—yes, there are real spaceships—and fantasy spaceships. Spaceships also have many interesting features to consider: engines, wings, rockets, blasters, solar collectors, pods, antennas.</p>
-<p><strong>For both challenges consider using parameterization or randomization in  your script to get more variety, but its okay to hard code you challenges too.</strong></p>
+<p><strong>For both challenges consider using parameterization or randomization in  your script to get more variety—but it’s okay to hard code your challenges too.</strong></p>
 </div>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>

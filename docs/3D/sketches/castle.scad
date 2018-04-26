@@ -84,7 +84,7 @@ module spire(radius = 5, height = 5, wall = 1) {
 
 
 color("white") {
-brick_tower(8, radius = 3);
+brick_tower(18, radius = 3);
 translate([0,8,0]) spire(5, 6, 2);
 }
 

@@ -45,6 +45,19 @@ On screen, 3D graphics exist in between painting and sculpture. You can rotate c
 [OpenSCAD.net](http://openscad.net/)
 : A web-based OpenSCAD editor and renderer. Does not implement every feature of OpenSCAD.
 
+
+::: .activity
+## In-class Challenge
+
+Download OpenSCAD, set it up, and try to make the challenges below.
+
+![green bar](images/green_bar.png)
+![yellow ring](images/yellow_ring.png)
+
+
+/::
+
+
 ### OpenSCAD is not like C
 
 At first glance OpenSCAD syntax looks similar to C or JavaScript, with braces, brackets, and semicolons appearing about where you would expect. But as you read the code you see some surprising differences. 
@@ -207,7 +220,7 @@ translate([0, 0, 9.6 * .5 + 1.8 * .5]) {
 ```
 ![example_2](images/example_2.png){full-width}
 
-`Translate()` moves the shapes passed to it. Here translate moves the cylinder up. Notice that the braces are used to group parameters to translate.
+`Translate()` moves the shapes passed to it. Here translate moves the cylinder up. Notice that the braces are used to group parameters to translate. You can also scale, resize, rotate, and mirror shapes
 
 The example also demonstrates using `color` to change the color used to render the cube. Use color to make it easier to understand your model.
 
@@ -230,7 +243,7 @@ difference() {
 ```
 ![example_3](images/example_3.png){full-width}
 
-This example uses `difference()` and `union()` to combine shapes. A cylinder and cube are combined with `union()`. The resulting shape has a recess cut out using `difference()`.
+This example uses `difference()` and `union()` to combine shapes. A cylinder and cube are combined with `union()` and a recess is cut out of the resulting shape using `difference()`. OpenSCAD also has an `intersect()` operator.
 
 OpenSCAD may not preview this shape very cleanly. Render the shape with `Main Menu > Design > Render` to get a clear view of the rendered geometry.
 
