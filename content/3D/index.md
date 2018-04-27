@@ -47,7 +47,7 @@ On screen, 3D graphics exist in between painting and sculpture. You can rotate c
 
 
 ::: .activity
-## In-class Challenge
+## Hello, OpenSCAD!
 
 Download OpenSCAD, set it up, and try to make the challenges below.
 
