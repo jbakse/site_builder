@@ -62,16 +62,71 @@ Compare features to list of interactive artifacts
 
 /::
 
+## p5.play
+
+The p5.play library builds on p5.js to add a features common in interactive applications, especially games.
+
+
+
+
+> p5.play provides a <a href="http://p5play.molleindustria.org/examples/index.html?fileName=sprite.js" target="_blank">Sprite</a> class to manage visual objects in <a href="http://p5play.molleindustria.org/examples/index.html?fileName=sprite4.js" target="_blank">2D space</a> and features such as <a href="http://p5play.molleindustria.org/examples/index.html?fileName=sprite3.js" target="_blank">animation support</a>, <a href="http://p5play.molleindustria.org/examples/index.html?fileName=collisions.js" target="_blank">basic collision detection</a> and <a href="http://p5play.molleindustria.org/examples/index.html?fileName=collisions4.js" target="_blank">resolution</a>, sprite <a href="http://p5play.molleindustria.org/examples/index.html?fileName=sprite8.js" target="_blank">grouping</a>, helpers for mouse and keyboard <a href="http://p5play.molleindustria.org/examples/index.html?fileName=keyPresses.js" target="_blank">interactions</a>, and a <a href="http://p5play.molleindustria.org/examples/index.html?fileName=camera.js" target="_blank">virtual camera</a>. </p>
+{bigger}
+
+p5.play homepage{attrib}
+
+
+- [p5.play homepage](http://p5play.molleindustria.org/)
+- [p5.play examples](http://p5play.molleindustria.org/examples/index.html)
+- [p5.play api reference](http://p5play.molleindustria.org/docs/index.html)
+
+
+## Study Examples
+
+### Example 1: Sprites
+
+
+### Example 2: Interaction
+
+
+::: .activity
+## In-class Challenge
+
+Explore p5.play by completing these challenges.
+
+### Modify Example 1
+1. Comment out the addImage lines. See what happens. Put them back.
+2. Change the size parameters on createSprite. What happens? Why?
+3. The kid in green is running backwards. Fix that. Tip: `mirrorX`
+4. Make the king run to the right.
+
+### Modify Example 2
+1. Comment out the mouseActive line. See what happens. Put it back.
+2. Make the king spin when the mouse is over him.
+3. Make the king spin when the mouse is NOT over him.
+4. Make the king spin when he is clicked, and stop when clicked again.
+
+### Challenging Challenges
+1. With Example 1: Make the king and the kid in green run towards each other. Make them stop when they collide. Tip: `overlap()`
+2. With Example 2: Remove the king from the scene when he is clicked. Start the scene with 10 kings.
+3. With Example 1: Make the king and the kid “bounce” when they collide. Tip: Look at the “bouncing” p5play example.
+4. Start making microgames!
+/::
+
 ::: .assignment
 
 ## Keep Sketching!
 
 ### Base
 
-
+This week build interactive experiments that focus minimally expressing a single mechanic. 
 
 ### Challenge: Couch Co-op
 
+Cooperative games are games where two or more players work together to achieve a goal. Pandemic, Forbidden Island, and Hanabi are great co-op board games. Portal 2, Lovers in a Dangerous Spacetime, and Towerfall are great co-op videogames.
+
+Couch co-op games are local multiplayer videogames, where two people play together in the same room (on the same couch).
+
+Create a couch co-op microgame!
 
 
 /::
