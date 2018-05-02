@@ -174,7 +174,7 @@ OpenSCAD
 </a>
 
 
-<a class="col-6 col-md-4" data-ready="false" href="./#">
+<a class="col-6 col-md-4" data-ready="ture" href="./microgames">
 
 ### Microgames
 p5.js + p5.play
@@ -182,7 +182,7 @@ p5.js + p5.play
 </a>
 
 
-
+<!-- 
 
 <a class="col-6 col-md-4" data-ready="false" href="./#">
 
@@ -190,7 +190,7 @@ p5.js + p5.play
 Vuo
 
 </a>
-
+ -->
 
 
 
@@ -230,7 +230,7 @@ Vuo
 | [Week 12, April 13](sound/plan.html)         | [Generating Sound](sound)                            |
 | [Week 13, April 20](music/plan.html)         | [Music](music)                                       |
 | [Week 14, April 27](3D/plan.html)            | [3D Forms](3D)                                       |
-| [Week 15, May 4](#)                          | [Microgames](#)                                      |
+| [Week 15, May 4](microgames/plan.html)       | [Microgames](microgames)                             |
 | [Week 16, May 11](#)                         | [Postmortem Party](#)                                |
 
 <style>

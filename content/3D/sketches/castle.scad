@@ -1,10 +1,5 @@
 function booleanChoice(odds) = rands(0,1,1)[0] < odds ? true : false;
 
-
-
-
-
-
 module brick_ring(
     radius = 5,
     brick_x_pitch = 2,
@@ -84,9 +79,14 @@ module spire(radius = 5, height = 5, wall = 1) {
 
 
 color("white") {
-brick_tower(18, radius = 3);
-translate([0,8,0]) spire(5, 6, 2);
+    brick_tower(8, radius = 3);
+    translate([0,8,0]) spire(5, 6, 2);
 }
+
+
+
+
+
 
  
 module brick_wall(
