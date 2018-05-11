@@ -212,26 +212,26 @@ Vuo
 
 <br/>
 
-| Lesson Plan                                  | Topics                                               |
-| -------------------------------------------- | ---------------------------------------------------- |
-| **Foundation**                               | &nbsp;                                               |
-| [Week 1, January 26](introduction/plan.html) | [Introduction](introduction), [Tile Graphics](tiles) |
-| [Week 2, February 2](random/plan.html)       | [Random Values](random)                              |
-| [Week 3, February 9](parameters/plan.html)   | [Parameters](parameters)                             |
-| [Week 4, February 16](noise/plan.html)       | [Noise](noise)                                       |
-| [Week 5, February 23](strategy/plan.html)    | [Strategy](strategy)                                 |
-| **Exploration**                              | &nbsp;                                               |
-| [Week 6, March 2](pixels/plan.html)          | [Pixel Data](pixels)                                 |
-| [Week 7, March 9](turtles/plan.html)         | [Turtle Graphics](turtles)                           |
-| [Week 8, March 16](vectors/plan.html)        | [Vector Data](vectors)                               |
-| Week 9, March 23{gray}                       | Spring Break{gray}                                   |
-| [Week 10, March 30](#)                       | [Animation](animation)                               |
-| [Week 11, April 6](text/plan.html)           | [Generating Text](text)                              |
-| [Week 12, April 13](sound/plan.html)         | [Generating Sound](sound)                            |
-| [Week 13, April 20](music/plan.html)         | [Music](music)                                       |
-| [Week 14, April 27](3D/plan.html)            | [3D Forms](3D)                                       |
-| [Week 15, May 4](microgames/plan.html)       | [Microgames](microgames)                             |
-| [Week 16, May 11](#)                         | [Postmortem Party](#)                                |
+| Lesson Plan                                   | Topics                                               |
+| --------------------------------------------- | ---------------------------------------------------- |
+| **Foundation**                                | &nbsp;                                               |
+| [Week 1, January 26](introduction/plan.html)  | [Introduction](introduction), [Tile Graphics](tiles) |
+| [Week 2, February 2](random/plan.html)        | [Random Values](random)                              |
+| [Week 3, February 9](parameters/plan.html)    | [Parameters](parameters)                             |
+| [Week 4, February 16](noise/plan.html)        | [Noise](noise)                                       |
+| [Week 5, February 23](strategy/plan.html)     | [Strategy](strategy)                                 |
+| **Exploration**                               | &nbsp;                                               |
+| [Week 6, March 2](pixels/plan.html)           | [Pixel Data](pixels)                                 |
+| [Week 7, March 9](turtles/plan.html)          | [Turtle Graphics](turtles)                           |
+| [Week 8, March 16](vectors/plan.html)         | [Vector Data](vectors)                               |
+| Week 9, March 23{gray}                        | Spring Break{gray}                                   |
+| [Week 10, March 30](#)                        | [Animation](animation)                               |
+| [Week 11, April 6](text/plan.html)            | [Generating Text](text)                              |
+| [Week 12, April 13](sound/plan.html)          | [Generating Sound](sound)                            |
+| [Week 13, April 20](music/plan.html)          | [Music](music)                                       |
+| [Week 14, April 27](3D/plan.html)             | [3D Forms](3D)                                       |
+| [Week 15, May 4](microgames/plan.html)        | [Microgames](microgames)                             |
+| [Week 16, May 11](postmortem_party/plan.html) | Postmortem Party                                     |
 
 <style>
 table {
@@ -245,6 +245,8 @@ td {
 td a[href="#"] {
     color: black;
 }
+
+
 
 .gray {
     color: #AAA;
