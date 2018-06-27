@@ -283,3 +283,14 @@ http://www.ctrl-alt-test.fr/2018/a-dive-into-the-making-of-immersion/
 
 
 https://www.youtube.com/watch?v=tzMOp6-lzoA
+
+Opening Question Review Sessions,
+
+Mostly aesthetic currently, add some specific code discussion
+
+
+in class "analog" excercises were very helpful (for aakanksha)
+
+3*7*6 review worked well (the homework review where 6 groups wrote 3 findings in 7 words)
+
+"Personally, I've had really bad experiences with groups" Aakanksha
