@@ -47,7 +47,7 @@ There are many reasons artists and designers employ algorithmic methods. Some im
 
 While we use computer programming throughout this class, it is important to understand that procedural generation doesn't require a computer. Procedural generation is about defining instructions that create form. Computers are very useful tools for carrying out these instructions, but artists have also built systems that rely on humans or purpose-built machines instead. Many of the works included in the slideshow above embody principles of computation and instruction without using computers.
 
-
+<!-- 
 ::: .activity
 
 ## The Sierpinski Triangle
@@ -71,7 +71,7 @@ Yes, these instructions will go on forever. I'll interrupt you in a minute.
 
 [stand-alone instructions](./sierpinski.html){boxed right}
 
-/::
+/:: -->
 
 
 

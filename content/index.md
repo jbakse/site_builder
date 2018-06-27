@@ -11,8 +11,11 @@ debug: false
 
 # Comp Form
 
-## Foundation
+<div class="col-6 col-md-6">
+This site explores computational form, algorithmic images, generative art, parametric design, and procedural generation in many mediums, primarily as a method of aesthetic experimentation. It began as notes for [Justin Bakse's](justinbakse.com) Computational Form elective at [Parsons](parsons.edu), and has grown into a largely stand-alone resource for anyone interested in these topics.
+</div>
 
+## Foundation
 <!-- Outer -->
 <div class="row">
 
@@ -24,14 +27,14 @@ General principles, practices, and building blocks useful for all procedural gen
 <div class="col-12 col-md-9">
 <div class="row">
 
-<a class="col-6 col-md-4" data-ready="true" href="./introduction">
+<!-- <a class="col-6 col-md-4" data-ready="true" href="./introduction">
 
 ### Introduction
 p5.js
 
-</a>
+</a> -->
 
-<a class="col-6 col-md-4" data-ready="false" href="#">
+<a class="col-6 col-md-4" data-ready="true" href="./procedures">
 
 ### Procedures
 p5.js
@@ -207,6 +210,15 @@ Vuo
 
 
 # Comp Form Spring 2018
+
+
+<a class="col-6 col-md-4" data-ready="true" href="./introduction">
+
+### Introduction
+p5.js
+
+</a>
+
 
 ### [Syllabus](./syllabus.html) | [Sketch Blog](http://sketches2018.compform.net/) | [Case Study Assignment](http://localhost:3000/turtles/plan.html#comp-form-case-study)
 

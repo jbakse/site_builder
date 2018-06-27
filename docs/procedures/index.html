@@ -1,15 +1,125 @@
-<h2 id="get-to-know-p5">Get to Know p5</h2>
-<div id="" class="links-sidebar">
-<p><a href="https://p5js.org/reference/">p5: Reference</a></p>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Procedures | Comp Form</title></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<polygon points="32,64 0,119.4 64,119.4"/>
+<polygon points="64,8.6 32,64 96,64"/>
+<polygon points="80,91.7 64,119.4 96,119.4"/>
+<polygon points="112,91.7 96,119.4 128,119.4"/>
+<polygon points="96,64 80,91.7 112,91.7"/>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Procedures</span><div class="buttons"><a class="previous" href="../introduction"><i class="fa fa-caret-left fa-lg"></i>TBA</a><a class="next" href="../parameters">TBA<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Procedures</h1><h6>Overview</h6><p class="description">Procedures are blah blah.</p><h6>Tools</h6><p class="software">TBD</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="procedures">Procedures</h2>
+<p>Procedures—specific, defined, processes—lie near the heart of computational form.</p>
+<p>[general define this better]
+[in context of this site]</p>
+<p>[Artists have explored the conceptual and aesthetic implications of generative art for a while][The increasing prevalence of digital fabrication and short run manufacturing has stirred interest in parametric design] [PCG is widely used in the video game industry to create worlds far to complex to craft by hand]
+[the web, realtime, personalized content]</p>
+<div id="" class="discussion">
+<h2 id="why-use-procedures">Why use Procedures?</h2>
+<p>Consider the advantages and disadvantages of using procedures to generate form.</p>
 </div>
-<p>If you haven’t used the following features of p5, take a look.</p>
-<h3 id="colormode">colorMode()</h3>
-<p>Working with color in terms of hue, saturation, and brightness is often much better than RGB. Use <code>colorMode()</code>to switch to HSB colors, and to choose your range (0-255, 0-100, 0-1).</p>
-<h3 id="ellipsemode-rectmode">ellipseMode(), rectMode()</h3>
-<p>Sometimes the clearest way to draw a ellipse is to specify the bounding box corners. Sometimes the center and width/height makes more sense. Use these functions to switch how <code>ellipse()</code> and <code>rect()</code> use their arguments.</p>
-<h3 id="push-pop">push() + pop()</h3>
-<p>Normally if you change your drawing state (fill color, stroke weight, etc), it stays changed after you do your drawing. <code>push()</code> and <code>pop()</code> let you save and restore your state.</p>
-<h3 id="lerp-lerpcolor">lerp(), lerpColor()</h3>
-<p>These functions let you interpolate between two values.</p>
-<h3 id="map">map()</h3>
-<p>Use <code>map()</code> to remap values from one range to another.</p>
+<p>[[ the discussion above is a chance to stop and think about the topic before reading the stuff below ]]</p>
+<p>###[Working with procedures has many benefits]
+[reduce errors]
+[reduce tedium]
+[iterate quickly]
+[fresh eyes]
+[personalization]
+[realtime]
+[do the imposible]</p>
+<div id="" class="activity">
+<h2 id="the-sierpinski-triangle">The Sierpinski Triangle</h2>
+<p>Draw a Sierpinski triangle with pencil and paper.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/Sierpinski_triangle">Sierpinski Triangle</a> is a fractal. It is <strong>infinitely detailed</strong> and <strong>self-similar</strong>. There are many, many ways to generate a Sierpinski triangle. The amazing <a href="http://www.oftenpaper.net/sierpinski.htm">Sierpinski triangle page to end most Sierpinski triangle pages</a> details dozens of them. Here is yet another.</p>
+<h3 id="instructions">Instructions</h3>
+<p>Please take out a sheet of paper and pen and follow these instructions:</p>
+<ol>
+<li>Draw an up-pointing equilateral triangle that fills most of the page.</li>
+<li>Lightly mark the midpoint of each line of that triangle.</li>
+<li>Draw straight lines connecting each of those marks. This forms <strong>four</strong> new triangles: <strong>three</strong> that point up, <strong>one</strong> that points down.</li>
+<li>Choose any empty, up-pointing triangle on the page.</li>
+<li>Go to instruction 2.</li>
+</ol>
+<p>Yes, these instructions will go on forever. Stop after a few minutes.</p>
+<p class="boxed right"><a href="../introduction/sierpinski.html">stand-alone instructions</a></p>
+</div>
+<h2 id="code-example">[Code example]</h2>
+<p>[[Computation doesn’t necessairly  mean computer programming or even computers, but computers <em>are</em> and exceptionally powerful tool for exploring procedural generation. They are very fast, very accurate, predicatble, and reliable. They don’t complain about the tedium.]]</p>
+<p>[reference Hello, P5! chapter]</p>
+<p>[[Example 1]]
+[[A live code example, discussed on how code relates to form, and then as a springboard for talking about broader issues]]
+[[When working with a procedure the iterative process is indirect. write the procedure, execute the procedure, consider the result, adjust the procedure.]]</p>
+<p>[[Example 2]]
+One that makes “small multiples” with variations.</p>
+<p>[[Example 3]]
+One that is small in code but surprisingly complex: The donkey solution for Sierpinski triangle.</p>
+<h2 id="in-class-challenges">In class challenges</h2>
+<div id="" class="callout">
+<p><strong>Tackling Complexity</strong></p>
+<p>When beginner and intermediate programmers run into trouble building more complex projects, they often hear this advice:</p>
+<blockquote>
+<p>Break your problem into smaller parts, and solve those parts.</p>
+</blockquote>
+<!-- 
+[[process vs. structure]]
+[[this confuses the process of developing a program with the structure of that program]]
+[[a well factored/composed program breaks problems down into sub-problems ]]
+[[as a process this is necessary but not sufficient ]] -->
+<p>This advice falls short because it describes how the final program should be structured rather than the process of developing it. It is hard to understand a complex problem and it is hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together?  With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can’t initially understand well enough to break down. When this happens to you, you still have an option for getting started: <strong>make a simpler program</strong>.</p>
+<p>Imagine you want to make a game like <a href="https://www.youtube.com/watch?v=1LsRGUODHlQ">pong</a>. You could begin by trying to break it down into sub-tasks—keyboard controlled paddles, an animated ball, a scoreboard—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won’t know the details. Without understanding the details, the pieces you make probably won’t fit together. You might end up with a lot of code that doesn’t work and you don’t understand. It is much better to have a little bit of code that does work and that you do understand.</p>
+<p>Instead, you could start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don’t worry about the paddles or the score yet: focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do, take the time to review the code and make sure you understand how everything works.</p>
+<p>Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but <em>in the beginning, you didn’t know enough to make a complete plan</em>. This reason this strategy works is simple: <strong>instead of trying to do something you can’t, you are trying to do something you can.</strong></p>
+</div>
+<h2 id="properties-of-pcg-systems">Properties of PCG Systems</h2>
+<p>[[ elaborate here… ]]
+When designing a procedural generation system there are several properties to consider. The following properties are borrowed from <a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCGBook: Chapter 1</a></p>
+<h3 id="speed">Speed</h3>
+<ul>
+<li>How fast does your program need to run?</li>
+<li>Is it okay if it takes a very long time to complete?</li>
+<li>Many times a faster-running program is harder to code and understand.</li>
+<li>A frame of VR content needs to be rendered in under 10ms, and a short pre-rendered animation may take days to render.</li>
+</ul>
+<h3 id="reliability">Reliability</h3>
+<ul>
+<li>Does your program need to produce a good result every time?</li>
+<li>Are results shown directly to your audience, or will you have the opportunity to edit?</li>
+</ul>
+<h3 id="controllability">Controllability</h3>
+<ul>
+<li>Does your program expose any user parameters?</li>
+<li>Do you want explore the parameter space manually?</li>
+<li>Do you want to have tight control over the results or should everything work automatically?</li>
+</ul>
+<h3 id="expressivity-and-diversity">Expressivity and Diversity</h3>
+<ul>
+<li>How much apparent range does your system have?</li>
+<li>Does everything look same-y?</li>
+<li>Is it okay for your output to be completely wild or does it need to satisfy some constraints?</li>
+<li>If you are exposing parameters, do they allow for meaningful control?</li>
+</ul>
+<h3 id="creativity-and-believability">Creativity and Believability</h3>
+<ul>
+<li>Do you want your results to look natural or hand-made?</li>
+<li>Is it okay for them to look “computer-y”?</li>
+<li>If your system is generating variations on something that already exists, how closely do you want to copy the original?</li>
+</ul>
+<h3 id="repeatability">Repeatability</h3>
+<ul>
+<li>Do you need the ability to generate the same result more than once?</li>
+</ul>
+<div id="" class="assignment">
+<h2 id="read-watch-play">Read + Watch + Play</h2>
+<h3 id="read">Read</h3>
+<p><a href="http://pcgbook.com/">Procedural Content Generation in Games</a> is a collection of research in the field of procedural game content. It covers many interesting topics including dungeon+maze generation, fractals, L-systems, generating rules/mechanics, and mixing proc-gen and human-authored content.</p>
+<p class="boxed right"><a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCG Book, Chapter 1</a></p>
+<h3 id="watch">Watch</h3>
+<p><a href="https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw">Game Maker’s Toolkit</a> is a Youtube channel that features high-quality video essays on game design.</p>
+<p class="boxed right"><a href="https://www.youtube.com/watch?v=Uqk5Zf0tw3o">GMT: Spelunky</a></p>
+<h3 id="play">Play</h3>
+<p>If you want to play Spelunky—optional but highly recommended—original version (not the HD Remake) is free.</p>
+<p class="boxed right"><a href="http://spelunkyworld.com/original.html">For PC</a>
+<a href="https://forums.tigsource.com/index.php?topic=28467.0">For Mac</a></p>
+</div>
+<h2 id="additional-reading">Additional Reading</h2>
+<p>PCG Book
+Dan Shiffman Book + Site
+Generative Design</p>
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
