@@ -431,14 +431,12 @@ Support for procedural methods is common in 3D software. Nearly all CAD software
 This week explore using OpenSCAD, OpenJSCAD, or another tool to procedurally generate 3D shapes. Consider exporting your shapes and working with them further in a 3D package such as Cinema 4D, Maya, After Effects, or even Photoshop.
 
 
-### Challenge 1: Castle
+### Challenge: Castle
 Build a 3D castle! Start with a reference search and look at examples of real and fantasy castles. Castles have many interesting features to consider: towers, spires, moats, walls, crenelations, bricks, stairs, windows.
 
-### Challenge 2: Spaceship
-Build a 3D spaceship! Start with a reference search and look at examples of real—yes, there are real spaceships—and fantasy spaceships. Spaceships also have many interesting features to consider: engines, wings, rockets, blasters, solar collectors, pods, antennas.
 
 
-**For both challenges consider using parameterization or randomization in  your script to get more variety—but it's okay to hard code your challenges too.**
+**Consider using parameterization or randomization in your script to get more variety—but it's okay to hard code the challenge too.**
 
 /::
 

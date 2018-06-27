@@ -219,7 +219,7 @@ This is the first assignment and the beginning of your daily posts.
 Daily exercise:
 1. Create a new tile set.
 2. Use the tile set to create a design.
-3. Screengrab or photograph your work and post to the class sketch blog with the hashtag `#tiles`.
+3. Screengrab or photograph your work and post to the class sketch blog.
 
 Explore a different idea every day. If you need some ideas, consider using one of the following prompts. If you use one of these prompts, include it in your blog post. 
 
