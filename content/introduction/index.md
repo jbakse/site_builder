@@ -37,9 +37,10 @@ There are many reasons artists and designers employ algorithmic methods. Some im
 - creating dynamic, responsive content
 
 
-::: slides .contain
-@@include('./compform_slides.yaml')
-/::
+<!-- ::: slides .contain
+// needs @@ before inclue
+include('./compform_slides.yaml')
+/:: -->
 
 
 
