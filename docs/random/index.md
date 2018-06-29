@@ -583,3 +583,9 @@ Kasimir Malevich, Mark Rothko, Piet Modrian, and Anni Albers all worked with bas
 
 [Wikipedia: Musikalisches Würfelspiel](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel)
 : More info on musical dice games.
+
+[Chance vs. Randomness](https://plato.stanford.edu/entries/chance-randomness/)
+: Stanford Encyclopedia of Philosophy on the subtle distinction between chance and randomness.
+
+[Random.org](https://www.random.org/)
+: A true random number generator that uses atmospheric noise as a source of randomness.

@@ -6,13 +6,10 @@
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
 </svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Music</span><div class="buttons"><a class="previous" href="../sound"><i class="fa fa-caret-left fa-lg"></i>Sound</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Music</h1><h6>Overview</h6><p class="description">Music is organized sound.</p><h6>Tools</h6><p class="software">p5.js p5.sound</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="music">Music</h2>
-<p>This chapter covers some specific tactics for generating a short piece of music. Our result will be a simplified version of <a href="http://psam3060-d-s16.github.io/class_notes/week_9/sketch_music/">this demo</a>.</p>
-<p>We’ll look at how to plan this project, the pieces that need to be built, and how to represent data. The final generator will be implemented in JavaScript using the p5.sound library.</p>
-<h3 id="examples">Examples</h3>
-<p>Composers have long explored the writing of music with algorithms and chance. These works fall into a few rough categories.</p>
+<p>Composers have long explored creating music with algorithms and chance. These works fall into a few rough categories.</p>
 <p>In <a href="https://en.wikipedia.org/wiki/Algorithmic_composition">algorithmic music</a>, an algorithm is employed <em>at the time of composition</em> resulting in a fixed score.</p>
 <p>In <a href="https://en.wikipedia.org/wiki/Aleatoric_music">aleatoric music</a>, important aspects of a composition are intended to be decided <em>at the time of the performance</em>. Aleatoric music allows for variation according to the performer or chance within a specific structure. For example, a musical system published in 1792, <em>Anleitung zum Componieren von Walzern so viele man will vermittelst zweier Würfel, ohne etwas von der Musik oder Composition zu verstehen (Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition)</em> employed chance to arrange pre-composed measures of music.</p>
-<p>Brian Eno used the term Generative Music to describe music that is created by a system and that constantly changes.</p>
+<p>Brian Eno used the term <a href="https://en.wikipedia.org/wiki/Generative_music">Generative Music</a> to describe music that is created by a system and that constantly changes.</p>
 <dl>
 <dt><a href="https://www.youtube.com/watch?v=mLZelvSvh3A">Six Marimbas</a> <a href="https://www.youtube.com/watch?v=g0WVh1D0N50">Come Out</a> <a href="https://www.youtube.com/watch?v=vugqRAX7xQE">Its Gonna Rain</a></dt>
 <dd>Three compositions by Steve Reich</dd>
@@ -27,30 +24,31 @@
 <dt><a href="http://yoavz.com/music_rnn/">Neural Network Music</a></dt>
 <dd>Academic paper (with examples) on “Music Language Modeling with Recurrent Neural Networks”.</dd>
 </dl>
+<p>This chapter covers some specific tactics for generating a short piece of music. Our result will be a simplified version of <a href="http://psam3060-d-s16.github.io/class_notes/week_9/sketch_music/">this demo</a>.</p>
+<p>We’ll look at how to plan this project, the pieces that need to be built, and how to represent data. The final generator will be implemented in JavaScript using the p5.sound library.</p>
 <h2 id="synthesizing-a-note">Synthesizing a Note</h2>
-<p>Generating a melody isn’t much use if there is no way to hear it. We could export our melody in an interchange format like MIDI, and play it back in an audio software package, but it will be more fun to build our own synthesizer.</p>
+<p>Generating a melody isn’t much use if there is no way to hear it. We could export our melody in an interchange format like MIDI, and play it back in an audio software package, but it will be more fun to build our own synthesizer. A synthesizer is a computer program or circuit that generates sounds. Synthesizers can simulate the sounds of natural instruments like pianos, guitars, and drums or create entirely new sounds.</p>
+<p><a href="https://en.wikipedia.org/wiki/Synthesizer">Wikipedia: Synthesizer</a></p>
+<h3 id="timbre">Timbre</h3>
+<p>When a note is played on two different instruments—a piano and guitar—the note will sound different even if it is the same pitch, length, and volume. Instruments sound different because of a variety of characteristics: spectral envelope; noisyness; attack, sustain, and decay; vibrato; tremolo; and others. Considered together these characteristics are called <a href="https://en.wikipedia.org/wiki/Timbre">timbre</a> or tone.</p>
+<p>One of the key contributors to the timbre of sounds created by a synthesizer is the shape of the generated wave. For example a sine wave has a clear, smooth sound and a square wave has a brassier, buzzier sound. Natural instruments produce varying overtones resulting in more complicated wave shapes.</p>
+<p>[[illustrations: sine wave, square, guitar ]]</p>
 <p>There are many ways to synthesize tones. Some of the most common are additive, subtractive, frequency modulation, amplitude modulation, wavetable, and sampled synthesis.</p>
 <dl>
 <dt>Additive Synthesis</dt>
-<dd>Combine simple sinewave signals together to create complexity <a href="https://en.wikipedia.org/wiki/Fourier_series">Fourier</a></dd>
+<dd>Combine simple sine wave signals together to create complexity. <a href="https://en.wikipedia.org/wiki/Fourier_series">Fourier theory</a> shows us that any periodic wave shape can be generated by adding sine waves of various frequencies and amplitudes.</dd>
 </dl>
-<p>[illustration]</p>
+<p>[[illustration: fundamental, harmonic overtone, sum]]</p>
 <dl>
 <dt>Subtractive Synthesis</dt>
-<dd>Filter a signal to attenuate overtones and shape timbre. <a href="https://en.wikipedia.org/wiki/Minimoog">Minimoog</a></dd>
-</dl>
-<p>[illustration]</p>
-<dl>
-<dt>FM Synthesis</dt>
-<dd>Modulate the frequency of one oscillator with another, vibrato</dd>
-<dt>AM Synthesis</dt>
-<dd>Modulate the amplitude of one oscillator using another</dd>
+<dd>In subtractive synthesis a tone with rich overtones is filtered with frequency-pass filters. Subtracting different overtones to create new timbres. Square and sawtooth waves have strong overtones and are often used as the source in subtractive synthesis. The <a href="https://en.wikipedia.org/wiki/Minimoog">Minimoog</a> and other 1970’s synthesizers often used subtractive synthesis.</dd>
 <dt>Wavetable Synthesis</dt>
-<dd>Combine data-defined waveforms</dd>
+<dd>In wavetable synthesis the wave isn’t generated with a periodic function or math. It is simply stored as data which is used by the synthesizer.</dd>
 <dt>Sampled Synthesis</dt>
-<dd>Use recorded samples and pitch shifting</dd>
+<dd>Sampled Synthesis is a type of wavetable synthesis where the stored wave data is recorded from physical instruments.</dd>
+<dt>FM and AM Synthesis</dt>
+<dd>In FM and AM synthesis simple square, sine, or other oscillators are chained together. This allows one oscillator to change the frequency or amplitude of the other, usually at a rate higher than the fundamental frequency being played. This results in tremolo and vibrato effects.</dd>
 </dl>
-<p><a href="https://en.wikipedia.org/wiki/Synthesizer">Wikipedia: Synthesizer</a></p>
 <div id="" class="discussion">
 <h2 id="designing-the-synth">Designing the Synth</h2>
 <p>Most synthesizers offer a great deal of customization through parameters. What qualities do we want control of?</p>
