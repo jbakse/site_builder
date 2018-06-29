@@ -14,12 +14,12 @@
 <p><a href="https://en.wikipedia.org/wiki/Turtle_graphics">Wikipedia:<br/> Turtle Graphics</a></p>
 <p><a href="https://scratch.mit.edu/projects/196503540/">MIT: Scratch + Turtles</a></p>
 </div>
-<p>One of the key ideas introduced in Logo was <em>turtle graphics</em>. The turtle was originally a small programmable robot that carried a pen and could trace its path as it moved. Logo could control this turtle with simple commands: <code>left</code> and <code>right</code> to turn and <code>forward</code> to move. This idea was extended to drawing on-screen using a virtual turtle.</p>
+<p>One of the key ideas introduced in Logo was <em>turtle graphics</em>. The turtle was originally a small programmable physical robot that carried a pen and could trace its path as it moved. Logo could control this turtle with simple commands: <code>left</code> and <code>right</code> to turn and <code>forward</code> to move. This idea was extended to drawing on-screen using a virtual turtle.</p>
 <div id="" class="two-up">
 <p class="figure"><img src="http://cyberneticzoo.com/wp-content/uploads/Papert-x640.jpg" alt="Papert w/ turtle">
-Seymour Papert with a turtle, photo by Cynthia Solomon</p>
+Seymour Papert with a physical turtle robot, photo by Cynthia Solomon</p>
 <p class="figure"><img src="images/turtle.png" alt="turtle screenshot">
-A turtle in action!</p>
+A virtual turtle in action!</p>
 </div>
 <p>Logo’s use of turtles allows students to make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this <em>body-syntonic</em> learning. Body-syntonic learning supports understanding of abstract ideas through sensory experience. Papert often discussed these ideas in writing and videos.</p>
 <ul>
@@ -28,6 +28,25 @@ A turtle in action!</p>
 <li><a href="https://youtu.be/ZG9cYhekB8A?t=4m25s">Seymour Papert on Logo: Teaching (1986) 4:25 - 6:40</a></li>
 <li><a href="https://www.youtube.com/watch?v=IhEovwWiniY">Learning with Toys (1986)</a></li>
 </ul>
+<div id="" class="activity">
+<h2 id="be-the-turtle">Be the Turtle</h2>
+<p>Explore body-syntonic reasoning by acting out a logo-like program.</p>
+<h3 id="write-a-program">Write a Program</h3>
+<ul>
+<li>Begin by breaking up into pairs.</li>
+<li>Draw an image from the deck, keep it secret.</li>
+<li>Think about the path someone would need to take to trace that image as they walked.</li>
+<li>Write a series of instructions using <code>turn(degrees)</code> and <code>forward(steps)</code>.</li>
+</ul>
+<h3 id="run-a-program">Run a Program</h3>
+<ul>
+<li>Take the instructions, but not your image, from your partner.</li>
+<li>Follow the instructions, and think about the shape you are tracing on the ground.</li>
+<li>Draw an image of the path you took, and compare that image with your partner’s image.</li>
+</ul>
+<h3 id="discuss">Discuss</h3>
+<p>Did involving you bodily senses and physical movement impact how you thought about the program?</p>
+</div>
 <h1 id="a-shift-in-perspective">A Shift in Perspective</h1>
 <p>The p5.js graphics API uses a <em>Cartesian</em> coordinate system. To draw a line in p5.js you might use code like this:</p>
 <pre><code class="language-javascript">line(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>)
@@ -225,6 +244,9 @@ t.penDown();
 </iframe>
 </div>
 </div>
+<h2 id="drawing-machines-in-code">Drawing Machines in Code</h2>
+<p>Turtles make it possible to change how you think about drawing and give you a new set of tools for expressing an image in code. They don’t change <em>what you can do</em> though, <a href="turtle/turtle.html">under the hood</a> the turtle class uses the standard p5.js drawing API and a little trigonometry. Instead using a turtle changes <em>how you do it</em>. Changing your approach and mental model has a significant effect on the solutions you create. You could make the same exact drawing with or without turtles, but in practice using turtles tends to lead to certain motifs and styles.</p>
+<p>Turtles are just one example of a drawing machine. Inventing your own drawing machine is a rewarding exercise. It leads to new ways of approaching problems, a deeper understanding of programming, and new aesthetics to explore.</p>
 <div id="" class="assignment">
 <h2 id="keep-sketching">Keep Sketching!</h2>
 <h3 id="base">Base</h3>
@@ -232,4 +254,6 @@ t.penDown();
 <h3 id="challenge-animal-face">Challenge: Animal Face</h3>
 <p>Using turtle graphics, create an <strong>intricate</strong> portrait of an animal. Begin by choosing an animal. Look at photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch? Create your sketch primarily using turtle graphics techniques.</p>
 </div>
+<h2 id="links">Links</h2>
+<p><a href="https://www.media.mit.edu/posts/the-seeds-that-seymour-sowed/">Mitchel Resnick: The Seeds that Seymour Sowed</a></p>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>

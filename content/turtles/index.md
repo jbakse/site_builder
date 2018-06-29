@@ -26,14 +26,14 @@ The Logo computer programming language was [created in 1967](http://el.media.mit
 [MIT: Scratch + Turtles](https://scratch.mit.edu/projects/196503540/)
 /::
 
-One of the key ideas introduced in Logo was _turtle graphics_. The turtle was originally a small programmable robot that carried a pen and could trace its path as it moved. Logo could control this turtle with simple commands: `left` and `right` to turn and `forward` to move. This idea was extended to drawing on-screen using a virtual turtle.
+One of the key ideas introduced in Logo was _turtle graphics_. The turtle was originally a small programmable physical robot that carried a pen and could trace its path as it moved. Logo could control this turtle with simple commands: `left` and `right` to turn and `forward` to move. This idea was extended to drawing on-screen using a virtual turtle.
 
 ::: .two-up
 ![Papert w/ turtle](http://cyberneticzoo.com/wp-content/uploads/Papert-x640.jpg)
-Seymour Papert with a turtle, photo by Cynthia Solomon{figure}
+Seymour Papert with a physical turtle robot, photo by Cynthia Solomon{figure}
 
 ![turtle screenshot](images/turtle.png)
-A turtle in action!{figure}
+A virtual turtle in action!{figure}
 /::
 
 
@@ -44,7 +44,29 @@ Logo's use of turtles allows students to make a strong association between what 
 - [Seymour Papert on Logo: Teaching (1986) 4:25 - 6:40](https://youtu.be/ZG9cYhekB8A?t=4m25s)
 - [Learning with Toys (1986)](https://www.youtube.com/watch?v=IhEovwWiniY)
 
+::: .activity
 
+## Be the Turtle
+
+Explore body-syntonic reasoning by acting out a logo-like program.
+
+
+### Write a Program
+- Begin by breaking up into pairs.
+- Draw an image from the deck, keep it secret.
+- Think about the path someone would need to take to trace that image as they walked.
+- Write a series of instructions using `turn(degrees)` and `forward(steps)`.
+
+
+### Run a Program
+- Take the instructions, but not your image, from your partner.
+- Follow the instructions, and think about the shape you are tracing on the ground.
+- Draw an image of the path you took, and compare that image with your partner's image.
+
+### Discuss
+Did involving you bodily senses and physical movement impact how you thought about the program?
+
+/::
 
 
 
@@ -299,6 +321,11 @@ Style Tip: If you change what a function does, you should change its name as wel
 
 
 
+## Drawing Machines in Code
+
+Turtles make it possible to change how you think about drawing and give you a new set of tools for expressing an image in code. They don't change _what you can do_ though, [under the hood](turtle/turtle.html) the turtle class uses the standard p5.js drawing API and a little trigonometry. Instead using a turtle changes _how you do it_. Changing your approach and mental model has a significant effect on the solutions you create. You could make the same exact drawing with or without turtles, but in practice using turtles tends to lead to certain motifs and styles.
+
+Turtles are just one example of a drawing machine. Inventing your own drawing machine is a rewarding exercise. It leads to new ways of approaching problems, a deeper understanding of programming, and new aesthetics to explore. 
 
 ::: .assignment
 
@@ -315,3 +342,8 @@ Using turtle graphics, create an **intricate** portrait of an animal. Begin by c
 
 
 
+
+
+## Links
+
+[Mitchel Resnick: The Seeds that Seymour Sowed](https://www.media.mit.edu/posts/the-seeds-that-seymour-sowed/)
