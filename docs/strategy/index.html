@@ -100,22 +100,31 @@ canvas {
  -->
 <!-- [[above section feels awkwardly positioned, especially after the preceding aside. Maybe this should talk more about "design patterns", composition? -->
 <!-- [[I agree. The following discussion section feels awkward too. Knowing that these named strategies are actually tools for solving specific problems is important--I hadn't though of them like that before. But the language in the first paragraph here is pretty vague. Discussing design patterns and composition might clarify it.]]-->
-<div id="" class="callout">
-<p><strong>Tackling Complexity</strong></p>
-<p>When beginner and intermediate programmers run into trouble building more complex projects, they often hear this advice:</p>
-<blockquote>
-<p>Break your problem into smaller parts, and solve those parts.</p>
-</blockquote>
 <!-- 
+<div id="" class="callout">
+
+
+**Tackling Complexity**
+
+When beginner and intermediate programmers run into trouble building more complex projects, they often hear this advice:
+
+> Break your problem into smaller parts, and solve those parts.
+
 [[process vs. structure]]
 [[this confuses the process of developing a program with the structure of that program]]
 [[a well factored/composed program breaks problems down into sub-problems ]]
-[[as a process this is necessary but not sufficient ]] -->
-<p>This advice falls short because it describes how the final program should be structured rather than the process of developing it. It is hard to understand a complex problem and it is hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together?  With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can’t initially understand well enough to break down. When this happens to you, you still have an option for getting started: <strong>make a simpler program</strong>.</p>
-<p>Imagine you want to make a game like <a href="https://www.youtube.com/watch?v=1LsRGUODHlQ">pong</a>. You could begin by trying to break it down into sub-tasks—keyboard controlled paddles, an animated ball, a scoreboard—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won’t know the details. Without understanding the details, the pieces you make probably won’t fit together. You might end up with a lot of code that doesn’t work and you don’t understand. It is much better to have a little bit of code that does work and that you do understand.</p>
-<p>Instead, you could start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don’t worry about the paddles or the score yet: focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do, take the time to review the code and make sure you understand how everything works.</p>
-<p>Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but <em>in the beginning, you didn’t know enough to make a complete plan</em>. This reason this strategy works is simple: <strong>instead of trying to do something you can’t, you are trying to do something you can.</strong></p>
-</div>
+[[as a process this is necessary but not sufficient ]]
+
+This advice falls short because it describes how the final program should be structured rather than the process of developing it. It is hard to understand a complex problem and it is hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together?  With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can't initially understand well enough to break down. When this happens to you, you still have an option for getting started: **make a simpler program**.
+
+Imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You could begin by trying to break it down into sub-tasks—keyboard controlled paddles, an animated ball, a scoreboard—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won't know the details. Without understanding the details, the pieces you make probably won't fit together. You might end up with a lot of code that doesn't work and you don't understand. It is much better to have a little bit of code that does work and that you do understand.
+
+Instead, you could start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don't worry about the paddles or the score yet: focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do, take the time to review the code and make sure you understand how everything works.
+
+Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. This reason this strategy works is simple: **instead of trying to do something you can't, you are trying to do something you can.**
+
+
+</div> -->
 <div id="" class="discussion">
 <h2 id="points-on-a-square">Points on a Square</h2>
 <p>Consider the image below. How might you make something like this?</p>
@@ -434,7 +443,8 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * amount;
 <li>For each <code>draw()</code> move the snowmen a random step left, up, right, or down.</li>
 </ol>
 </div>
-<h2 id="properties-of-pcg-system">Properties of PCG System</h2>
+<!-- 
+## Properties of PCG System
 <p>When designing a procedural generation system there are several properties to consider. The following properties are borrowed from <a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCGBook: Chapter 1</a></p>
 <h3 id="speed">Speed</h3>
 <ul>
@@ -469,7 +479,7 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * amount;
 </ul>
 <h3 id="repeatability">Repeatability</h3>
 <ul>
-<li>Do you need the ability to generate the same result more than once?</li>
+<li>Do you need the ability to generate the same result more than once? --&gt;</li>
 </ul>
 <div id="" class="assignment">
 <h2 id="challenge-sketch">Challenge + Sketch!</h2>
@@ -528,19 +538,33 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * amount;
 <li>CNC Mills (optional)</li>
 </ul>
 </div>
+<!-- 
 <div id="" class="assignment">
-<h2 id="read-watch-play">Read + Watch + Play</h2>
-<h3 id="read">Read</h3>
-<p><a href="http://pcgbook.com/">Procedural Content Generation in Games</a> is a collection of research in the field of procedural game content. It covers many interesting topics including dungeon+maze generation, fractals, L-systems, generating rules/mechanics, and mixing proc-gen and human-authored content.</p>
-<p class="boxed right"><a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCG Book, Chapter 1</a></p>
-<h3 id="watch">Watch</h3>
-<p><a href="https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw">Game Maker’s Toolkit</a> is a Youtube channel that features high-quality video essays on game design.</p>
-<p class="boxed right"><a href="https://www.youtube.com/watch?v=Uqk5Zf0tw3o">GMT: Spelunky</a></p>
-<h3 id="play">Play</h3>
-<p>If you want to play Spelunky—optional but highly recommended—original version (not the HD Remake) is free.</p>
-<p class="boxed right"><a href="http://spelunkyworld.com/original.html">For PC</a>
-<a href="https://forums.tigsource.com/index.php?topic=28467.0">For Mac</a></p>
-</div>
+
+
+## Read + Watch + Play
+
+### Read
+
+[Procedural Content Generation in Games](http://pcgbook.com/) is a collection of research in the field of procedural game content. It covers many interesting topics including dungeon+maze generation, fractals, L-systems, generating rules/mechanics, and mixing proc-gen and human-authored content.
+
+[PCG Book, Chapter 1](http://pcgbook.com/wp-content/uploads/chapter01.pdf){boxed right}
+
+### Watch
+
+[Game Maker's Toolkit](https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw) is a Youtube channel that features high-quality video essays on game design.
+
+[GMT: Spelunky](https://www.youtube.com/watch?v=Uqk5Zf0tw3o){boxed right}
+
+### Play
+
+If you want to play Spelunky—optional but highly recommended—original version (not the HD Remake) is free.
+
+[For PC](http://spelunkyworld.com/original.html){boxed right}
+[For Mac](https://forums.tigsource.com/index.php?topic=28467.0){boxed right}
+
+
+</div> -->
 <h2 id="reference-links">Reference Links</h2>
 <dl>
 <dt><a href="https://www.youtube.com/watch?v=Uqk5Zf0tw3o">Game Maker’s Toolkit: How (and Why) Spelunky Makes its Own Levels</a></dt>

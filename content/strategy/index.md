@@ -130,7 +130,7 @@ This week we'll look at some tactics for a very common problem in procedural gen
 
 
 
-
+<!-- 
 ::: .callout
 
 **Tackling Complexity**
@@ -138,11 +138,11 @@ This week we'll look at some tactics for a very common problem in procedural gen
 When beginner and intermediate programmers run into trouble building more complex projects, they often hear this advice:
 
 > Break your problem into smaller parts, and solve those parts.
-<!-- 
+
 [[process vs. structure]]
 [[this confuses the process of developing a program with the structure of that program]]
 [[a well factored/composed program breaks problems down into sub-problems ]]
-[[as a process this is necessary but not sufficient ]] -->
+[[as a process this is necessary but not sufficient ]]
 
 This advice falls short because it describes how the final program should be structured rather than the process of developing it. It is hard to understand a complex problem and it is hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together?  With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can't initially understand well enough to break down. When this happens to you, you still have an option for getting started: **make a simpler program**.
 
@@ -152,7 +152,7 @@ Instead, you could start with a very simple program: just draw a little square�
 
 Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. This reason this strategy works is simple: **instead of trying to do something you can't, you are trying to do something you can.**
 
-/::
+/:: -->
 
 
 
@@ -406,7 +406,7 @@ Continue with the stored random placement code you made above.
    {continue}
 
 /::
-
+<!-- 
 ## Properties of PCG System
 
 When designing a procedural generation system there are several properties to consider. The following properties are borrowed from [PCGBook: Chapter 1](http://pcgbook.com/wp-content/uploads/chapter01.pdf)
@@ -444,7 +444,7 @@ When designing a procedural generation system there are several properties to co
 
 ### Repeatability
 
-* Do you need the ability to generate the same result more than once?
+* Do you need the ability to generate the same result more than once? -->
 
 ::: .assignment
 
@@ -510,7 +510,7 @@ Later in this class I will ask you to create special sketches using equipment av
 /::
 
 
-
+<!-- 
 ::: .assignment
 
 ## Read + Watch + Play
@@ -534,7 +534,7 @@ If you want to play Spelunky—optional but highly recommended—original versio
 [For PC](http://spelunkyworld.com/original.html){boxed right}
 [For Mac](https://forums.tigsource.com/index.php?topic=28467.0){boxed right}
 
-/::
+/:: -->
 
 ## Reference Links
 

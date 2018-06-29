@@ -10,7 +10,7 @@ next: Noise
 next_url: ../noise
 
 hero_title: Parameters
-description: Expose parameters to make your procedural systems easier to control, adjust, and use.
+description: Expose parameters to make your procedural systems easier to control, explore, and use.
 software: p5.js + p5.dom
 ---
 
@@ -83,12 +83,12 @@ Imagine a program that draws squares like the one below. What parameters might s
 
 /::
 
-A **parameter space** is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (true/false) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. This rapid growth is referred to as **Combinatorial Explosion**.
+A **parameter space** is the set of all possible combinations of values for the parameters of a system. The parameter space of a system can grow very quickly. A system that has just 8 boolean (true/false) parameters will have 256 possible combinations. A system with 16 boolean parameters will have 65,536 combinations. This rapid growth is referred to as **Combinatorial Explosion**.
 
-When changes to input parameters map to interesting changes in output, combinatorial explosion drives the power of procedural systems. Consider a program that generates faces by choosing from 4 options for each of these traits: hair style, hair color, eye color, eye shape, nose shape, mouth shape, face shape, and skin tone. Such a system can generate `4^8` or `65,536` distinct faces. If the system supported two more similar traits that number of outputs would grow to `1,048,576`!
+When changes to input parameters map to interesting changes in output, combinatorial explosion can make a procedural system very powerful. Consider a program that generates faces by choosing from 4 options for each of these traits: hair style, hair color, eye color, eye shape, nose shape, mouth shape, face shape, and skin tone. Such a system can generate `4^8` or `65,536` distinct faces. If the system supported two more similar traits that number of outputs would grow to `1,048,576`!
 
 ### Samey-ness
-Combinatorial explosion does not guarantee variety.
+Combinatorial explosion does not guarantee *variety*.
 
 Sometimes different parameter values have minimal impact on the final output. When this happens a system's output can feel monotonous, uninteresting, and "samey". A system that takes just two floating point parameters has `18,446,744,073,709,551,616` (18.4 Quintillion!) states. This is an inconceivably large number, but it is quite likely that many of those states would look very similar.
 
@@ -101,9 +101,15 @@ When creating interfaces for procedural systems, focus on exposing parameters th
 [Wikipedia:<br/>Parametric Design](https://en.wikipedia.org/wiki/Parametric_design)
 /::
 
-**Parametric Design** is a design approach where designs are built as systems with output that can be customized by adjusting parameters. For example a parametric design for a bicycle might accept a parameter for the rider’s height and provide a customized frame to suit.
+**Parametric Design** is a design approach where designs are built as systems with output that can be customized by adjusting parameters. For example, a parametric design for a bicycle might accept a parameter for the rider’s height and provide a customized frame to suit.
 
-An interesting aspect of parametric designs is that they explicitly embed **design intent**, rather than just the **design result**. 
+A critical aspect of parametric designs is that they explicitly embed the **design intent**, rather than just the **design result**. This allows parametric designs to adjust to fit provided parameters and create new design results as needed. 
+
+We often think of parameters as inputs, but the parameters exposed in parametric design are often closer to outputs. They represent the desired results that the parametric design should solve for.
+
+Imagine a machine that makes a snowman. The machine might take parameters for how large the bottom, middle, and top snowball should be. This interface would afford a good deal of flexibility, but might also lead to poorly proportioned or even infeasible snowmen. Instead the machine could be designed to take a single parameter represented the desired height of the snowman, and internally calculate the sizes of each snowball according to relationships determined by the designer rather than the user.
+
+
 
 
 
