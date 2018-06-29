@@ -13,10 +13,18 @@ hero_title: Animation
 description: Procedural generation can be used to describe motion in animations. In both pre-rendered and real-time animations, an understanding of frame rate and timing are crucial for generating satisfying motion graphics.
 software: p5.js
 ---
-<!-- [[ leah, want to take a crack at the hero desc? ]] -->
+
 
 ## Animation
-At heart, a procedurally-generated animation is just a series of procedurally-generated images. These images, called frames, are shown in quick succession—like a flipbook—to create motion. Making a procedurally-generated animation requires creating instructions to draw each frame and to describe how each frame should be different from the last.
+At heart, a procedurally-generated animation is just a series of procedurally-generated images. These images, called frames, are shown in quick succession—like a flipbook—to show motion. Even a short animation will have hundreds of frames so creating animations by hand—while [beautiful](https://www.theguardian.com/artanddesign/2013/jan/09/oskar-fischinger-animation-disney-nazis)can be tedious. This makes animation a great medium to explore with procedural methods. Making a procedurally-generated animation is similar to making a procedurally-generated image, but with additional instructions to express how the image will change over time.
+
+Creatively, animation differs from still images by introducing another dimension: time. Because animations live in time, they excel and showing actions, cause, and effect; expressing narrative arcs; and telling stories.
+
+[[todo: Slide show: Oskar Fischinger on here,  show a smear frame, Chuck Jones (mention golden age), boids, inside the mind's eye, pixar, realtime indie game "inside", realtime AAA game thats really animaty... ]]
+
+
+
+## Real-time vs. Pre-rendered
 
 
 ### Frames Per Second
@@ -29,14 +37,13 @@ Generally, faster frame rates produce smoother motion. At rates below about 10 f
 
 Metronomes animated at 5, 15, 30, and 60 frames per second.{caption}
 
-
-## Real-time vs. Pre-rendered
+<br/>
 
 In **pre-rendered** animation, all the frames are created ahead of time. In **real-time** animations, the frames are created as they are shown. 
 
 Real-time rendering needs to be done quickly. To render an animation at 30 frames per second, each frame must be generated in 33 milliseconds or less. To render VR at 90 frames per second, two frames—one for each eye—must be rendered in 10 milliseconds. In exchange for limiting how much time can be spent rendering each frame, we gain a huge benefit. Real-time animation can react to information—including user input—that is not known ahead of time. This allows real-time animation to be _interactive_. 
 
-Pre-rendering provides its own huge benefit. Limiting the time spent rendering each frame often means compromising on the quality or complexity of the animation. Pre-rendered animations can take as long as necessary to create each frame, allowing for high complexity and quality. Individual frames in high-end animated films often take hours or even days to render, and they look better as a result.
+But pre-rendering provides its own huge benefit. Limiting the time spent rendering each frame often means compromising on the quality or complexity of the animation. Pre-rendered animations can take as long as necessary to create each frame, allowing for high complexity and quality. Individual frames in high-end animated films often take hours or even days to render, and they look better as a result.
 
 
 
