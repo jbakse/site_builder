@@ -385,3 +385,9 @@ Build a face-generating tool. This tool will create an image of a face that can 
 
 [How secure is 256 bit security?](https://www.youtube.com/watch?v=S9JGmA5_unY)
 : The fantastic YouTube channel 3Blue1Brown explores combinatorial explosion in the context of cryptographic security.
+
+[A History of Parametric](http://www.danieldavis.com/a-history-of-parametric/)
+: A history of parametricism and parametric architecture, beginning before the invention of the computer.
+
+[Endgare](http://www.engare.design/)
+: A game about motion and geometry that draws on the mathematical principles of Islamic pattern design.
