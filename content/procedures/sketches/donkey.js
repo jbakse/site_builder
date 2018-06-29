@@ -31,12 +31,14 @@ function draw() {
 }
 
 function step() {
-  // move toward corner
+  // choose a corner at random
   const targetCorner = sampleArray(corners);
+
+  // move half way to that corner
   currentLocation.x = lerp(currentLocation.x, targetCorner.x, 0.5);
   currentLocation.y = lerp(currentLocation.y, targetCorner.y, 0.5);
 
-  // draw point
+  // draw a dot
   fill(255, 0, 0);
   rect(currentLocation.x, currentLocation.y, 1, 1);
 }
