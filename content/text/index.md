@@ -114,9 +114,9 @@ String templating is a basic but powerful tool for building text procedurally. I
 
 ::: .activity
 ## Make an Amendment!
-This demo populates a template with the words you provide to generate a new constitutional amendment. <br/><br/> [view source](http://localhost:3000/js_lab/js_lab.html?/text/sketches/first_amendment.js)
+This demo populates a template with the words you provide to generate a new constitutional amendment. <br/><br/> [view source](http://compform.net/js_lab/js_lab.html?/text/sketches/first_amendment.js)
 
-<!-- [[localhost link, issue with page resizing/cutting off beginning of lines]] -->
+<!-- [[issue with page resizing/cutting off beginning of lines]] -->
  
 ::: js-show
 /text/sketches/first_amendment.js
@@ -166,13 +166,13 @@ The examples below demonstrate using JavaScript template literals.
 
 ::: .activity
 ## Markov Chain
-Explore the Markov Chain algorithm with paper and pencil using this worksheet.
+Explore the Markov chain algorithm with paper and pencil using this worksheet.
 
 ### Build the Model
 The right side of the worksheet lists every word that occurs in the Dr. Seuss poem. These are the "keys". Find every occurrence of each key in the poem. Write the following word in the corresponding box. Do not skip repeats.
 
 ### Generate Text
-Choose a random word from the keys. Write it down. Choose a word at random from corresponding box, and write it down. Continue this process, choosing each word based on the previous one.
+Choose a random word from the keys. Write it down. Choose a word at random from the corresponding box, and write it down. Continue this process, choosing each word based on the previous one.
 
 <br/>
 

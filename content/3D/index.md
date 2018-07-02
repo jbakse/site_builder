@@ -415,13 +415,13 @@ Support for procedural methods is common in 3D software. Nearly all CAD software
 [Substance Designer](https://www.allegorithmic.com/products/substance-designer)
 : Substance designer is a tool for procedurally creating realistic materials for 3D rendering.
 
-  Available for free with an [educational license](https://www.allegorithmic.com/buy/education)
+  Available for free with an [educational license](https://www.allegorithmic.com/buy/education).
 
 
 [Grasshopper + Rhino](http://www.grasshopper3d.com/)
 : Grasshopper is a visual scripting plug-in for the 3D modeling software Rhino. It is used in generative architecture, product design, and art.
 
-  Rhino 6 includes Grasshopper (Windows only) and has a reduced cost [educational license](https://www.rhino3d.com/edu)
+  Rhino 6 includes Grasshopper (Windows only) and has a reduced cost [educational license](https://www.rhino3d.com/edu).
 
 
 
