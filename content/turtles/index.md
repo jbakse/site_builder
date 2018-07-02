@@ -344,6 +344,10 @@ Using turtle graphics, create an **intricate** portrait of an animal. Begin by c
 
 
 
-## Links
+## Reference Links
 
 [Mitchel Resnick: The Seeds that Seymour Sowed](https://www.media.mit.edu/posts/the-seeds-that-seymour-sowed/)
+
+[Rough.js](https://roughjs.com/): A tool for creating graphics with a sketchy, hand-drawn aesthetic.
+
+[Turtle for Processing](http://leahbuechley.com/Turtle/): A turtle library for Processing from Leah Buechley.

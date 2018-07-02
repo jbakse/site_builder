@@ -444,3 +444,10 @@ Build a 3D castle! Start with a reference search and look at examples of real an
 
 /::
 
+## Reference Links
+
+[Introduction to Parametric Customization](http://linkis.com/k2rSu)
+: An extensive tutorial on parametricism in Openscad.
+
+[Beetle Blocks](http://beetleblocks.com/)
+: Create 3D models using a program based on turtles.
