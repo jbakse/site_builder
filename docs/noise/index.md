@@ -168,6 +168,8 @@ How does the `noise(x)` function work? Explore the underlying concepts by buildi
 
 ### 1D, 2D, + 3D Noise
 
+In _Building 1D Noise_ activity above shows how build a simple 1-dimensional noise function that can provide smoothly varying values based on a single input parameter. You can think of the parameter as the address of the random value to return. The noise function in most programming libraries can take 2, 3, or even more parameters. You can think of these parameters as specifying a multidimensional address in a "cloud" of values.
+
 `noise(x)`
 ![noise_1d](figures/noise_1d.png)
 
