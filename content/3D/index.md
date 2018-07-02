@@ -193,18 +193,19 @@ cylinder(h=1.8, r=2.4, center=true);
 ![example_1](images/example_1.png){full-width}
 
 
-### $fn, $fa, $fs
+#### $fn, $fa, $fs
 
 `$fn`, `$fa`, and `$fs` are special variables that control how many edges are used for drawing arcs and circles. In the example above `$fn` is set to `20` telling OpenSCAD to make the cylinder with 20 sides. If `$fn` is `0` OpenSCAD will calculate the number of sides using a minimum angle `$fa` between edges and a minimum edge length `$fs`.
 
-### %, #, *, !
+#### %, #, *, !
 
 The `%`, `#`, `*`, and `!` [modifier characters](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters) can alter how parts of your drawing are rendered. These can be used to ghost, highlight, disable, or isolate a shape or subtree respectively.
 
 In the example above the cube is ghosted or backgrounded. It is shown in transparent gray but isn't a real part of the rendered geometry. 
 
-### echo
+#### echo
 OpenSCAD has an [echo()](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#Echo_Statements) statement for tracing out debugging info.
+
 
 ### Transformations
 ```openscad
@@ -338,7 +339,7 @@ Build this shape so that you can parametrically control the number of disks that
 
 ## Parametric OpenSCAD
 
-Because OpenSCAD is a language, not an interactive modeler, OpenSCAD files fully specify the modeling process rather than the just the resulting geometry. This makes OpenSCAD very well-suited to parametric designs. [Thingiverse](https://www.thingiverse.com) uses OpenSCAD to allow users to share and customize 3D printable objects.
+Because OpenSCAD is a language, not an interactive modeler, OpenSCAD files fully specify the modeling process rather than the just the resulting geometry. This makes OpenSCAD very well-suited to parametric designs—flexible designs that a user can customize by adjusting parameters. [Thingiverse](https://www.thingiverse.com) uses OpenSCAD to allow users to share and customize 3D printable objects.
 
 [Parametric Pulley](https://www.thingiverse.com/thing:16627)
 
@@ -373,9 +374,12 @@ Laminated Object Manufacturing (LOM)
 
 
 ### Slicing and G-Code
-The most popular hobbyist 3D printing method is Fused Filament Fabrication or Fused Deposition Modeling (FDM). To print an OpenSCAD file on an FDM machine you need to export the rendered geometry and then "slice" it with software like [Cura](https://ultimaker.com/en/products/ultimaker-cura-software) or [Slic3r](http://slic3r.org/). 
+The most popular hobbyist 3D printing method is Fused Filament Fabrication or Fused Deposition Modeling (FDM). To print an OpenSCAD file on an FDM machine you need to export the rendered geometry and then "slice" it with software like [Cura](https://ultimaker.com/en/products/ultimaker-cura-software) or [Slic3r](http://slic3r.org/). This software converts your 3D geometry into the tool paths your 3D printer will need to execute to build your part. 
 
-This software converts your 3D geometry to [G-code](https://en.wikipedia.org/wiki/G-code). G-code files are a list of instructions for CNC machines like 3D printers and mills. This g-code excerpt sets the move speed to 100 mm/minute and then moves the machine head to 0,0.
+
+Under the hood, the tool path is described using [G-code](https://en.wikipedia.org/wiki/G-code). G-code files are a list of instructions for CNC machines like 3D printers and mills. Typically, you don't really need know anything about G-code. Your slicer does the work for you. But learning a little about G-code is a good idea if you want to modify or build your own machines.
+
+This g-code excerpt sets the move speed to 100 mm/minute and then moves the machine head to 0,0.
 
 ```
 G0 F100;

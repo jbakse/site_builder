@@ -140,12 +140,12 @@ multiply(<span class="hljs-number">2</span>, add(<span class="hljs-number">3</sp
 <span class="hljs-built_in">cylinder</span>(h=<span class="hljs-number">1.8</span>, r=<span class="hljs-number">2.4</span>, center=<span class="hljs-literal">true</span>);
 </code></pre>
 <p class="full-width"><img src="images/example_1.png" alt="example_1"></p>
-<h3 id="fn-fa-fs">$fn, $fa, $fs</h3>
+<h4 id="fn-fa-fs">$fn, $fa, $fs</h4>
 <p><code>$fn</code>, <code>$fa</code>, and <code>$fs</code> are special variables that control how many edges are used for drawing arcs and circles. In the example above <code>$fn</code> is set to <code>20</code> telling OpenSCAD to make the cylinder with 20 sides. If <code>$fn</code> is <code>0</code> OpenSCAD will calculate the number of sides using a minimum angle <code>$fa</code> between edges and a minimum edge length <code>$fs</code>.</p>
-<h3 id="">%, #, *, !</h3>
+<h4 id="">%, #, *, !</h4>
 <p>The <code>%</code>, <code>#</code>, <code>*</code>, and <code>!</code> <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters">modifier characters</a> can alter how parts of your drawing are rendered. These can be used to ghost, highlight, disable, or isolate a shape or subtree respectively.</p>
 <p>In the example above the cube is ghosted or backgrounded. It is shown in transparent gray but isn’t a real part of the rendered geometry.</p>
-<h3 id="echo">echo</h3>
+<h4 id="echo">echo</h4>
 <p>OpenSCAD has an <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#Echo_Statements">echo()</a> statement for tracing out debugging info.</p>
 <h3 id="transformations">Transformations</h3>
 <pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
@@ -249,7 +249,7 @@ columns = <span class="hljs-number">8</span>;
 <p>Build this shape so that you can parametrically control the number of disks that make up the ring.</p>
 </div>
 <h2 id="parametric-openscad">Parametric OpenSCAD</h2>
-<p>Because OpenSCAD is a language, not an interactive modeler, OpenSCAD files fully specify the modeling process rather than the just the resulting geometry. This makes OpenSCAD very well-suited to parametric designs. <a href="https://www.thingiverse.com">Thingiverse</a> uses OpenSCAD to allow users to share and customize 3D printable objects.</p>
+<p>Because OpenSCAD is a language, not an interactive modeler, OpenSCAD files fully specify the modeling process rather than the just the resulting geometry. This makes OpenSCAD very well-suited to parametric designs—flexible designs that a user can customize by adjusting parameters. <a href="https://www.thingiverse.com">Thingiverse</a> uses OpenSCAD to allow users to share and customize 3D printable objects.</p>
 <p><a href="https://www.thingiverse.com/thing:16627">Parametric Pulley</a></p>
 <p><a href="https://www.thingiverse.com/thing:193647">Parametric Nuts + Bolts</a></p>
 <h2 id="digital-fabrication">Digital Fabrication</h2>
@@ -270,8 +270,9 @@ columns = <span class="hljs-number">8</span>;
 <dd>Layers of the object are cut from paper or film.</dd>
 </dl>
 <h3 id="slicing-and-g-code">Slicing and G-Code</h3>
-<p>The most popular hobbyist 3D printing method is Fused Filament Fabrication or Fused Deposition Modeling (FDM). To print an OpenSCAD file on an FDM machine you need to export the rendered geometry and then “slice” it with software like <a href="https://ultimaker.com/en/products/ultimaker-cura-software">Cura</a> or <a href="http://slic3r.org/">Slic3r</a>.</p>
-<p>This software converts your 3D geometry to <a href="https://en.wikipedia.org/wiki/G-code">G-code</a>. G-code files are a list of instructions for CNC machines like 3D printers and mills. This g-code excerpt sets the move speed to 100 mm/minute and then moves the machine head to 0,0.</p>
+<p>The most popular hobbyist 3D printing method is Fused Filament Fabrication or Fused Deposition Modeling (FDM). To print an OpenSCAD file on an FDM machine you need to export the rendered geometry and then “slice” it with software like <a href="https://ultimaker.com/en/products/ultimaker-cura-software">Cura</a> or <a href="http://slic3r.org/">Slic3r</a>. This software converts your 3D geometry into the tool paths your 3D printer will need to execute to build your part.</p>
+<p>Under the hood, the tool path is described using <a href="https://en.wikipedia.org/wiki/G-code">G-code</a>. G-code files are a list of instructions for CNC machines like 3D printers and mills. Typically, you don’t really need know anything about G-code. Your slicer does the work for you. But learning a little about G-code is a good idea if you want to modify or build your own machines.</p>
+<p>This g-code excerpt sets the move speed to 100 mm/minute and then moves the machine head to 0,0.</p>
 <pre><code>G0 F100;
 G1 X0 Y0;
 </code></pre>

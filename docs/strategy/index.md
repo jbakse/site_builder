@@ -537,12 +537,12 @@ If you want to play Spelunky—optional but highly recommended—original versio
 /:: -->
 
 ## Reference Links
-
+<!-- 
 [Game Maker's Toolkit: How (and Why) Spelunky Makes its Own Levels](https://www.youtube.com/watch?v=Uqk5Zf0tw3o)
 : Overview of the Spelunky level generator from a technical and critical perspective.
 
 [Darius Kazemi: Spelunky Mod](http://tinysubversions.com/spelunkyGen/)
-: Darius Kazemi has created a mod of the original Spelunky that runs in the browser and visualizes level generation.
+: Darius Kazemi has created a mod of the original Spelunky that runs in the browser and visualizes level generation. -->
 
 [bl.ocks.org: Poisson-Disc](https://bl.ocks.org/mbostock/19168c663618b7f07158), [Poisson-Disc II](https://bl.ocks.org/mbostock/dbb02448b0f93e4c82c3)
 : Poisson Disc description, visual explanation, and sample code by Mike Bostock.
