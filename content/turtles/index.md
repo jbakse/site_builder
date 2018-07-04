@@ -323,7 +323,7 @@ Style Tip: If you change what a function does, you should change its name as wel
 
 ## Drawing Machines in Code
 
-Turtles make it possible to change how you think about drawing and give you a new set of tools for expressing an image in code. They don't change _what you can do_ though, [under the hood](turtle/turtle.html) the turtle class uses the standard p5.js drawing API and a little trigonometry. Instead using a turtle changes _how you do it_. Changing your approach and mental model has a significant effect on the solutions you create. You could make the same exact drawing with or without turtles, but in practice using turtles tends to lead to certain motifs and styles.
+Turtles make it possible to change how you think about drawing and give you a new set of tools for expressing an image in code. They don't change _what you can do_ though: [under the hood](turtle/turtle.html) the turtle class uses the standard p5.js drawing API and a little trigonometry. Instead, using a turtle changes _how you do it_. Changing your approach and mental model has a significant effect on the solutions you create. You could make the same exact drawing with or without turtles, but in practice using turtles tends to lead to certain motifs and styles.
 
 Turtles are just one example of a drawing machine. Inventing your own drawing machine is a rewarding exercise. It leads to new ways of approaching problems, a deeper understanding of programming, and new aesthetics to explore. 
 
