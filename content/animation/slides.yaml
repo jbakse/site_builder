@@ -1,3 +1,11 @@
+- artist: Oskar Fischinger
+  title: An Optical Poem, 1938
+  image:  ./slides/fischinger.jpg
+  comments: Oskar Fischinger was a painter and filmmaker who created abstract animations. Working before computer graphics, he experimented with hand animation techniques and pioneered animation set to music.
+  links:
+    - label: "Video"
+      href: https://www.youtube.com/watch?v=6Xc4g00FFLk
+
 - artist: Odyssey Productions with Miramar Productions
   title: Mind's Eye Series, 1990-1996
   image: ./slides/mindseye.jpg
@@ -23,6 +31,23 @@
   links:
     - label: "Gallery of smear frames" 
       href: https://idearocketanimation.com/8857-animation-techniques-smear/
+
+- artist: Pixar
+  title: 
+  image:  
+  comments: 
+  links:
+    - label: 
+      href:
+
+- artist: Playdead
+  title: Inside, 2016
+  image:  
+  comments: 
+  links:
+    - label: "Website"
+      href: http://www.playdead.com/games/inside/
+
 
 
 
