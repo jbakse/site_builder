@@ -5,6 +5,9 @@
   links:
     - label: "Video"
       href: https://www.youtube.com/watch?v=6Xc4g00FFLk
+    - label: "Google interactive tribute"
+      href: https://www.google.com/logos/2017/fischinger/fischinger17.html
+      
 
 - artist: Odyssey Productions with Miramar Productions
   title: Mind's Eye Series, 1990-1996
@@ -43,7 +46,7 @@
 - artist: Playdead
   title: Inside, 2016
   image:  
-  comments: 
+  comments:
   links:
     - label: "Website"
       href: http://www.playdead.com/games/inside/

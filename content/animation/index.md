@@ -23,7 +23,6 @@ Creatively, animation differs from still images by introducing another dimension
 [[todo: Slide show: Oskar Fischinger on here,  show a smear frame, Chuck Jones (mention golden age), boids, inside the mind's eye, pixar, realtime indie game "inside", realtime AAA game thats really animaty... ]]
 
 
-
 ## Real-time vs. Pre-rendered
 
 

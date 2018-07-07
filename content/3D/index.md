@@ -49,7 +49,7 @@ On screen, 3D graphics exist in between painting and sculpture. You can rotate c
 ::: .activity
 ## Hello, OpenSCAD!
 
-Download OpenSCAD, set it up, and try to make the challenges below.
+Download OpenSCAD, set it up, and try to make the challenges below. Tip: Use code to rotate the bar.
 
 ![green bar](images/green_bar.png)
 ![yellow ring](images/yellow_ring.png)

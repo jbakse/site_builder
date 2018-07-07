@@ -52,19 +52,19 @@ Explore body-syntonic reasoning by acting out a logo-like program.
 
 
 ### Write a Program
-- Begin by breaking up into pairs.
-- Draw an image from the deck, keep it secret.
+- Draw an image from the deck and keep it secret.
 - Think about the path someone would need to take to trace that image as they walked.
-- Write a series of instructions using `turn(degrees)` and `forward(steps)`.
+- Write a series of instructions for tracing the image using `turn(degrees)` and `forward(steps)`.
 
 
 ### Run a Program
-- Take the instructions, but not your image, from your partner.
-- Follow the instructions, and think about the shape you are tracing on the ground.
-- Draw an image of the path you took, and compare that image with your partner's image.
+- Break into pairs.
+- Trade instructions, but not images, with your partner.
+- Follow the instructions your partner wrote, and think about the shape you are tracing on the ground.
+- Draw an image of the path you took, and compare that image with your partner's original image.
 
 ### Discuss
-Did involving you bodily senses and physical movement impact how you thought about the program?
+Did involving your bodily senses and physical movement impact how you thought about the program?
 
 /::
 

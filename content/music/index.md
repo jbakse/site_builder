@@ -283,8 +283,7 @@ It doesn't have to be good. It doesn't have to use code.
 
 [Kahn Academy: Music Basics](https://www.khanacademy.org/humanities/music/music-basics2)
 
-[Teoria.js Music Theory Library]
-(https://github.com/saebekassebil/teoria)
+[Teoria.js Music Theory Library](https://github.com/saebekassebil/teoria)
 
 [HTML5Rocks: Audio Scheduling](https://www.html5rocks.com/en/tutorials/audio/scheduling/)
 
