@@ -58,7 +58,7 @@ Generating a melody isn't much use if there is no way to hear it. We could expor
 
 ### Timbre 
 
-When a note is played on two different instruments—a piano and guitar—the note will sound different even if it is the same pitch, length, and volume. Instruments sound different because of a variety of characteristics: spectral envelope; noisyness; attack, sustain, and decay; vibrato; tremolo; and others. Considered together these characteristics are called [timbre](https://en.wikipedia.org/wiki/Timbre) or tone. 
+When a note is played on two different instruments—a piano and guitar—the note will sound different even if it is the same pitch, length, and volume. Instruments sound different because of a variety of characteristics: spectral envelope; noisiness; attack, sustain, and decay; vibrato; tremolo; and others. Considered together these characteristics are called [timbre](https://en.wikipedia.org/wiki/Timbre) or tone. 
 
 One of the key contributors to the timbre of sounds created by a synthesizer is the shape of the generated wave. For example a sine wave has a clear, smooth sound and a square wave has a brassier, buzzier sound. Natural instruments produce varying overtones resulting in more complicated wave shapes.
 
@@ -73,13 +73,13 @@ Additive Synthesis
 [[illustration: fundamental, harmonic overtone, sum]]
 
 Subtractive Synthesis
-: In subtractive synthesis a tone with rich overtones is filtered with frequency-pass filters. Subtracting different overtones to create new timbres. Square and sawtooth waves have strong overtones and are often used as the source in subtractive synthesis. The [Minimoog](https://en.wikipedia.org/wiki/Minimoog) and other 1970's synthesizers often used subtractive synthesis.
+: In subtractive synthesis a tone with rich overtones is filtered with frequency-pass filters that subtract different overtones to create new timbres. Square and sawtooth waves have strong overtones and are often used as the source in subtractive synthesis. The [Minimoog](https://en.wikipedia.org/wiki/Minimoog) and other 1970's synthesizers often used subtractive synthesis.
 
 Wavetable Synthesis
 : In wavetable synthesis the wave isn't generated with a periodic function or math. It is simply stored as data which is used by the synthesizer.
 
 Sampled Synthesis
-: Sampled Synthesis is a type of wavetable synthesis where the stored wave data is recorded from physical instruments.
+: Sampled synthesis is a type of wavetable synthesis where the stored wave data is recorded from physical instruments.
 
 FM and AM Synthesis
 : In FM and AM synthesis simple square, sine, or other oscillators are chained together. This allows one oscillator to change the frequency or amplitude of the other, usually at a rate higher than the fundamental frequency being played. This results in tremolo and vibrato effects.
@@ -272,26 +272,32 @@ It doesn't have to be good. It doesn't have to use code.
 
 
 [Melody in Songwriting](https://www.amazon.com/Melody-Songwriting-Techniques-Writing-Berklee/dp/063400638X)
+:Melody in Songwriting is an excellent book for developing melody-writing skills. 
+
+[C-sharp vs D-flat](http://blog.eumlab.com/c-and-db-whats-the-difference/)
+:Music theory article addressing note naming within different keys.
+
+[Kahn Academy: Music Basics](https://www.khanacademy.org/humanities/music/music-basics2)
+:Khan Academy offers interactive tutorials on basic music theory, including rhythm and musical notation. 
 
 [MDN: Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+:Documentation for the Web Audio API.
 
 [HTML5Rocks: Getting Started with Web Audio](https://www.html5rocks.com/en/tutorials/webaudio/intro/)
 
-[I don't know who the Web Audio API is designed for](http://blog.mecheye.net/2017/09/i-dont-know-who-the-web-audio-api-is-designed-for/)
-
-[C-sharp vs D-flat](http://blog.eumlab.com/c-and-db-whats-the-difference/)
-
-[Kahn Academy: Music Basics](https://www.khanacademy.org/humanities/music/music-basics2)
-
-[Teoria.js Music Theory Library](https://github.com/saebekassebil/teoria)
-
 [HTML5Rocks: Audio Scheduling](https://www.html5rocks.com/en/tutorials/audio/scheduling/)
+:A tutorial on audio timing and scheduling in the Web Audio API.
+
+[I don't know who the Web Audio API is designed for](http://blog.mecheye.net/2017/09/i-dont-know-who-the-web-audio-api-is-designed-for/)
 
 [UNSW: Midi Notes and Math](https://newt.phys.unsw.edu.au/jw/notes.html)
 
-[Ocenaudio: Free OS X Sound Editor](http://www.ocenaudio.com/)
+[Teoria.js Music Theory Library](https://github.com/saebekassebil/teoria)
+:A library for music software that supports musical structures and language, including chords, scales, and notes.
+
+[Ocenaudio](http://www.ocenaudio.com/):
+:Ocenaudio is a free sound editor available for both OS X and Windows. It's beginner-friendly while still offering more advanced features. 
 
 [ChucK](http://chuck.cs.princeton.edu/)
-
-[ChucK Intro Video](https://www.youtube.com/watch?v=2rpk461T6l4)
+:ChucK is a programming language for real-time music and audio generation. Watch creator Ge Wang discuss his design and use of the program in this [video](https://www.youtube.com/watch?v=2rpk461T6l4).
 

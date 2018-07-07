@@ -23,7 +23,7 @@ Procedural generation can be used to create form in almost any media: image, vid
 [Google:<br/>How search works.](https://www.google.com/search/howsearchworks/)
 /::
 
-Google uses programs to crawl the web, collecting a database of information about every page. When you perform a search, another program searches this database for relevant information. This information is then carefully excerpted, summarized, formatted, and collated. The resulting web page of results is built on the fly and sent to your browser for your to read.
+Google uses programs to crawl the web, collecting a database of information about every page. When you perform a search, another program searches this database for relevant information. This information is then carefully excerpted, summarized, formatted, and collated. The resulting web page of results is built on the fly and sent to your browser for you to read.
 
 Social media sites like Facebook and Twitter are software systems for collecting and sharing user-created content, largely text. Even websites primarily concerned with other media, like YouTube and Instagram, must generate HTML text to showcase their videos and images.
 
@@ -110,7 +110,7 @@ Most programming languages are themselves text-based. Programs that generate pro
 
 ## String Templates
 
-String templating is a basic but powerful tool for building text procedurally. If you have every completed a [Mad Lib](http://www.madlibs.com/) fill-in-the-blank story, you've worked with string templates. 
+String templating is a basic but powerful tool for building text procedurally. If you have ever completed a [Mad Lib](http://www.madlibs.com/) fill-in-the-blank story, you've worked with string templates. 
 
 ::: .activity
 ## Make an Amendment!
@@ -288,7 +288,7 @@ Ideally, your story should:
 ## Reference Links
 
 [RiTa](https://rednoise.org/rita/index.php)
-: Software toolkit for computational literature
+: Software toolkit for computational literature.
 
 [Twine](http://twinery.org/)
 : Open-source tool for telling interactive, nonlinear stories.
