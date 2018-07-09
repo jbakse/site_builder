@@ -11,8 +11,8 @@ debug: false
 
 # Comp Form
 
-<div class="col-6 col-md-6">
-This site explores computational form, algorithmic images, generative art, parametric design, and procedural generation in many mediums, primarily as a method of aesthetic experimentation. It began as notes for [Justin Bakse's](justinbakse.com) Computational Form elective at [Parsons](parsons.edu), and has grown into a largely stand-alone resource for anyone interested in these topics.
+<div class="col-6 col-md-6 overview top">
+This site introduces tools, methods, and concepts used in creating computational form, algorithmic images, generative art, ad parametric designs in many mediums primarily as a method of aesthetic experimentation. This site is a companion to the Computational Form elective taught by <a href="http://justinbakse.com">Justin Bakse</a> in <a href="parsons.edu">Parsons</a> Design and Technology program.
 </div>
 
 ## Foundation
@@ -262,5 +262,11 @@ td a[href="#"] {
 
 .gray {
     color: #AAA;
+}
+
+.top {
+    /* border: 1px solid red; */
+    padding: 0;
+    font-size: 14px;
 }
 </style>
