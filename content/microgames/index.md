@@ -183,3 +183,9 @@ Create a couch co-op microgame!
 
 /::
 
+## Reference Links
+
+[Game Maker's Toolkit: What Makes a Good Puzzle?](https://www.youtube.com/watch?v=zsjC6fa_YBg)
+: Game Maker's Toolkit is an excellent Youtube series about game design. This video addresses how to design a good micro challenge, and [The Secret Of Mario's Jump](https://www.youtube.com/watch?v=7daTGyVZ60I) analyzes player input.
+
+[Piskel](https://www.piskelapp.com/): A tool for building animated sprites.

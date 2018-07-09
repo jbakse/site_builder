@@ -397,3 +397,6 @@ Build a face-generating tool. This tool will create an image of a face that can 
 
 [Endgare](http://www.engare.design/)
 : A game about motion and geometry that draws on the mathematical principles of Islamic pattern design.
+
+[Variable Fonts](https://v-fonts.com/)
+: A compilation of [OpenType variable fonts](https://medium.com/variable-fonts/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369), which offer parametric control over weight, contrast, and other variables.
