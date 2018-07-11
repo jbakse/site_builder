@@ -1,12 +1,12 @@
 ---
-title: Random
+title: Plan Template
 layout: layouts/compform_plain.pug
 debug: false
 ---
 
 ## Week #, Week Title {plain}
 
-[Random Values Chapter](../random/index.html){boxed right}
+[Random Values Chapter](random/index.html){boxed right}
 
 ### Learning Objectives
 Students will be able to:
@@ -18,11 +18,29 @@ Students will be able to:
 
 ### Materials
 - Six- and Twelve-sided Dice
-- Dice Worksheet: [Illustrator](../handouts/dice_chart.ai), [SVG](../handouts/dice_chart.svg)
-- LCG Worksheet: [Illustrator](../handouts/lcg_random.ai), [SVG](../handouts/lcg_random.svg)
+- Dice Worksheet: [Illustrator](handouts/dice_chart.ai), [SVG](handouts/dice_chart.svg)
+- LCG Worksheet: [Illustrator](handouts/lcg_random.ai), [SVG](handouts/lcg_random.svg)
 
 
 ### Schedule
+
+
+```
+Purpose Values
+Engage: Build interest in new concept
+Study: Introduce details of new concepts
+Review: Review previously introduced concepts
+Activate: Practice using concepts
+
+Format Values
+Discussion: High student participation primarily through discussion
+Critique: Discussion with emphasis on describing or evaluating projects
+Activity: High student participation primarily through activity
+Coding: Activity focused primarily on coding
+Lecture: Faculty led presentation of content
+```
+
+
 
 | Duration | Time | Purpose      | Format       | Name                                       |
 | -- | ---- | -------- | ---------- | -------------------------------------------------- |
