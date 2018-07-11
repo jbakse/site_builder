@@ -242,6 +242,18 @@ Create a lasercut thing. This can be anything you like that combines generative 
 
 /::
 
+## Reference Links
+
+
+[YesYesNo: Más Que la Cara](https://medium.com/@zachlieberman/m%C3%A1s-que-la-cara-overview-48331a0202c0)
+: An interactive installation in downtown Houston using paper.js and facial detection.
+
+[Autodraw](https://www.autodraw.com/)
+: A Google AI experiment that interprets sketches, using Paper.js for the draw area.
+
+[Plumin.js](http://www.pluminjs.com/)
+: Javascript typeface editing using Paper.js.
+
 
 
 <!-- 

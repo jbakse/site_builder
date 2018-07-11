@@ -49,7 +49,7 @@ On screen, 3D graphics exist in between painting and sculpture. You can rotate c
 ::: .activity
 ## Hello, OpenSCAD!
 
-Download OpenSCAD, set it up, and try to make the challenges below.
+Download OpenSCAD, set it up, and try to make the challenges below. Tip: Use code to rotate the bar.
 
 ![green bar](images/green_bar.png)
 ![yellow ring](images/yellow_ring.png)
@@ -419,13 +419,13 @@ Support for procedural methods is common in 3D software. Nearly all CAD software
 [Substance Designer](https://www.allegorithmic.com/products/substance-designer)
 : Substance designer is a tool for procedurally creating realistic materials for 3D rendering.
 
-  Available for free with an [educational license](https://www.allegorithmic.com/buy/education)
+  Available for free with an [educational license](https://www.allegorithmic.com/buy/education).
 
 
 [Grasshopper + Rhino](http://www.grasshopper3d.com/)
 : Grasshopper is a visual scripting plug-in for the 3D modeling software Rhino. It is used in generative architecture, product design, and art.
 
-  Rhino 6 includes Grasshopper (Windows only) and has a reduced cost [educational license](https://www.rhino3d.com/edu)
+  Rhino 6 includes Grasshopper (Windows only) and has a reduced cost [educational license](https://www.rhino3d.com/edu).
 
 
 
@@ -448,3 +448,10 @@ Build a 3D castle! Start with a reference search and look at examples of real an
 
 /::
 
+## Reference Links
+
+[Introduction to Parametric Customization](http://linkis.com/k2rSu)
+: An extensive tutorial on parametricism in Openscad.
+
+[Beetle Blocks](http://beetleblocks.com/)
+: Create 3D models using a program based on turtles.
