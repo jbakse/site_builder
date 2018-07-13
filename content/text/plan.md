@@ -6,17 +6,15 @@ debug: false
 
 ## Week 10, Generating Text {plain}
 
-### Materials
-- Markov Worksheet
-- Markers
-
+[Text Chapter](../text/index.html){boxed right}
 
 ## Learning Objectives
 
 
-### Announcements
-- Check out [Recursive Drawing](http://recursivedrawing.com/draw.html)
 
+### Materials
+- Markov Worksheet: [Illustrator](handouts/markov.ai), [SVG](handouts/markov.svg)
+- Markers
 
 ### Schedule
 | Time | ESA           | Type         | Activity                      |
@@ -75,10 +73,9 @@ Examples, Subreddit Simulator, NYT Best Places, ELIZA
 /::
 <!-- Choose a project that presents an interesting direction for further design inquiry. Suggest possible variations on this project. -->
 
+### Announcements
+- Check out [Recursive Drawing](http://recursivedrawing.com/draw.html)
 
-### Class Notes
-
-[Text](./index.html){boxed right}
 
 
 <style> 

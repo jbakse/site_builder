@@ -4,7 +4,7 @@ layout: layouts/compform_plain.pug
 debug: false
 ---
 
-## Week #, Week Title {plain}
+## Week 2, Random Values {plain}
 
 [Random Values Chapter](../random/index.html){boxed right}
 

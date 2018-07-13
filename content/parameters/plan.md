@@ -6,18 +6,19 @@ debug: false
 
 ## Week 2, Parameters {plain}
 
-### Materials
-Fictional Machines Decks: `Machine Types`, `User Types`
-
-
 ### Learning Objectives
-- Consider the relationship of parameters and interface design
+Students will be able to:
+- Consider the relationship between parameters and interface design
 - Practice problem analysis and interface design
-- Practice user-centered design concepts
-- Consider relationship between what you "make" and what you "design"
-- Consider distiction between "choices" and "options"
-- Technical: Exposing parameters as global variables
-- Technical: Exposing parameters with HTML controls
+- Understand user-centered design concepts
+- Understand the relationship between what you "make" and what you "design"
+- Understand the distiction between "choices" and "options"
+- Expose parameters as global variables
+- Expose parameters with HTML controls
+
+
+### Materials
+- Fictional Machines Decks: `Machine Types`, `User Types`: [Illustrator](handouts/fictional_machines.ai)
 
 
 ### Schedule

@@ -6,21 +6,19 @@ debug: false
 
 ## Week 6, Pixel Data {plain}
 
-### Materials
+[Pixel Data Chapter](pixels/index.html){boxed right}
 
 ## Learning Objectives
+Students will be able to:
 - Understand how raster image data is represented in memory.
-- Consider relationship between vector images, raster images, p5.js drawing api, and pixel access.
-- Explore per-pixel image generation.
-- Explore per-pixel image processing.
-- Explore using an image as a data input.
-- Technical: Using p5's `get()` and `set()` function to read and write pixel values.
-- Technical: Using p5's `pixel[]` array to work with pixel data directly and faster.
+- Describe the relationship between vector images, raster images, p5.js drawing api, and pixel access.
+- Implement per-pixel image generation.
+- Implement per-pixel image processing.
+- Use an image as a data input.
+- Use p5's `get()` and `set()` function to read and write pixel values.
+- Use p5's `pixel[]` array to work with pixel data directly and faster.
 
-
-### Announcements
-
-
+### Materials
 
 ### Schedule
 | Time | ESA           | Type         | Activity                          |
@@ -70,9 +68,9 @@ Vector Monitors
 <!-- Choose a project that presents an interesting direction for further design inquiry. Suggest possible variations on this project. -->
 
 
-### Class Notes
 
-[Pixels](./index.html){boxed right}
+### Announcements
+
 
 
 <style> 

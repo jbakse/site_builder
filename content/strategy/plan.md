@@ -6,14 +6,18 @@ debug: false
 
 ## Week 5, Strategies {plain}
 
-### Materials
+[Strategy Chapter](../strategy/index.html){boxed right}
 
 ### Learning Objectives
+Students will be able to:
+* Analyze form in detail
+* Reverse-engineer procedural generation approaches
+* Develop strategies for procedural generation
+* Identify common methods for aesthetically arranging points on a plane
 
-* Practice analyzing form in detail
-* Practice developing strategies for procedural generation
-* Practice reverse engineering procedural generation approaches
-* Introduce some common methods for aesthetically arranging points on a plane.
+### Materials
+- Strategy Squares: [Illustrator](handouts/strategy_workshop.ai)
+- Tactic Match Worksheet: 
 
 ### Schedule
 
