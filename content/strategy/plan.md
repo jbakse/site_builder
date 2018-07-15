@@ -6,14 +6,14 @@ debug: false
 
 ## Week 5, Strategies {plain}
 
-[Strategy Chapter](../strategy/index.html){boxed right}
+[Strategy Chapter](./index.html){boxed right}
 
 ### Learning Objectives
 Students will be able to:
-* Analyze form in detail
-* Reverse-engineer procedural generation approaches
-* Develop strategies for procedural generation
-* Identify common methods for aesthetically arranging points on a plane
+- Analyze form in detail
+- Reverse-engineer procedural generation approaches
+- Develop strategies for procedural generation
+- Identify common methods for aesthetically arranging points on a plane
 
 ### Materials
 - Strategy Squares: [Illustrator](handouts/strategy_workshop.ai)
@@ -21,6 +21,7 @@ Students will be able to:
 
 ### Schedule
 
+<!--
 | Time  | ESA             | Type           | Activity                      |
 | ----- | --------------- | -------------- | ----------------------------- |
 | Pre   | TBD             | -              | TBD                           |
@@ -34,6 +35,20 @@ Students will be able to:
 | 5:55  | Study           | Coding Lecture | Challenges Discussion         |
 | 6:05  | Study           | Lecture        | Homework Intro                |
 | 6:15  | Activate        | Lecture        | 04 Properties of PCG System   |
+-->
+
+| Duration | Time | Purpose | Format       | Name                               |
+| --  | ---- | -------- | ---------- | ---------------------------------------  |
+| 30 | 3:50  | Review+Engage   | Discussion     | Homework Review               |
+| 5  | 4:20  | Study           | Lecture        | 01 CF + Strategies + Tactics  |
+| 10 | 4:25  | Study           | Lecture        | 02 Where Should I Put Things? |
+| 20 | 4:35  | Engage+Activate | Activity       | Analyze Workshop              |
+| 15 | 4:55  | Study           | Lecture        | 03 Point Tactics              |
+| 25 | 5:10  | Study           | Lecture        | Tactic Match Workshop         |
+| 20 | 5:35  | Activate        | Coding         | Intro + Challenges            |
+| 10 | 5:55  | Study           | Lecture        | Challenges Discussion         |
+| 10 | 6:05  | Study           | Lecture        | Homework Intro                |
+| 15 | 6:15  | Activate        | Lecture        | 04 Properties of PCG System   |
 
 
 ### Notes

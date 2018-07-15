@@ -6,31 +6,32 @@ debug: false
 
 ## Week 8, Vector Data {plain}
 
-### Materials
+[Vector Data Chapter](./index.html){boxed right}
 
 ### Learning Objectives
-- Understand essential differences between raster and vector graphics.
-- Consider relationship between form and meaning.
-- Explore advantages of exporting vector data from a procedural generator.
-- Introduce Paper.js
-- Introduce PaperScript
-- Understand retained mode and immediate Mode graphics
+Students will be able to:
+- Understand essential differences between raster and vector graphics
+- Consider the relationship between form and meaning.
+- Explore advantages of exporting vector data from a procedural generator
+- Use Paper.js and PaperScript
+- Understand retained mode and immediate mode graphics
 
+### Materials
 
 
 ### Schedule
-| Time | ESA           | Type         | Activity                          |
-| ---- | ------------- | ------------ | --------------------------------- |
-| Pre  | TBA           | -            | TBA                               |
-| 3:50 | Review+Engage | Discussion   | Homework Review                   |
-| 4:20 | Study         | Lecture      | 01 Pixels                         |
-| 4:30 | Activate      | Code         | Pixel Writing Challenges          |
-| 4:50 | Study         | Code Lecture | Challenges Discussion             |
-| 5:00 | Activate      | Code         | Pixel Processing Challenges       |
-| 5:20 | Study         | Code Lecture | Challenges Discussion             |
-| 5:30 | Study         | Lecture      | 04 pixels[]                       |
-| 5:45 | Activate      | Code         | setQuick +Grass Example Live Code |
-| 6:10 | Study         | Lecture      | Vector vs Raster                  |
+
+| Duration | Time | Purpose      | Format       | Name                         |
+| --  | ---- | -------- | ---------- | --------------------------------------  |
+| 30 | 3:50 | Review+Engage | Discussion   | Homework Review                   |
+| 10 | 4:20 | Study         | Lecture      | 01 Pixels                         |
+| 20 | 4:30 | Activate      | Code         | Pixel Writing Challenges          |
+| 10 | 4:50 | Study         | Code Lecture | Challenges Discussion             |
+| 20 | 5:00 | Activate      | Code         | Pixel Processing Challenges       |
+| 10 | 5:20 | Study         | Code Lecture | Challenges Discussion             |
+| 15 | 5:30 | Study         | Lecture      | 04 pixels[]                       |
+| 25 | 5:45 | Activate      | Code         | setQuick + Grass Example Live Code |
+| 20 | 6:10 | Study         | Lecture      | Vector vs Raster                  |
 
 ### Lecture Notes
 
@@ -62,11 +63,6 @@ debug: false
 
 /::
 <!-- Choose a project that presents an interesting direction for further design inquiry. Suggest possible variations on this project. -->
-
-
-### Class Notes
-
-[Vectors](./index.html){boxed right}
 
 
 <style> 

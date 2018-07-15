@@ -6,7 +6,7 @@ debug: false
 
 ## Week 6, Pixel Data {plain}
 
-[Pixel Data Chapter](pixels/index.html){boxed right}
+[Pixel Data Chapter](./index.html){boxed right}
 
 ## Learning Objectives
 Students will be able to:
@@ -21,6 +21,7 @@ Students will be able to:
 ### Materials
 
 ### Schedule
+<!--
 | Time | ESA           | Type         | Activity                          |
 | ---- | ------------- | ------------ | --------------------------------- |
 | Pre  | TBA           | -            | TBA                               |
@@ -33,6 +34,19 @@ Students will be able to:
 | 5:30 | Study         | Lecture      | 04 pixels[]                       |
 | 5:45 | Activate      | Code         | setQuick +Grass Example Live Code |
 | 6:10 | Study         | Lecture      | Vector vs Raster                  |
+-->
+
+| Duration | Time | Purpose      | Format       | Name                         |
+| -- | ---- | -------- | ---------- | ---------------------------------------  |
+| 30 | 3:50 | Review+Engage | Discussion   | Homework Review                   |
+| 10 | 4:20 | Study         | Lecture      | 01 Pixels                         |
+| 20 | 4:30 | Activate      | Code         | Pixel Writing Challenges          |
+| 10 | 4:50 | Study         | Code Lecture | Challenges Discussion             |
+| 20 | 5:00 | Activate      | Code         | Pixel Processing Challenges       |
+| 10 | 5:20 | Study         | Code Lecture | Challenges Discussion             |
+| 15 | 5:30 | Study         | Lecture      | 04 pixels[]                       |
+| 25 | 5:45 | Activate      | Code         | setQuick +Grass Example Live Code |
+| 20 | 6:10 | Study         | Lecture      | Vector vs Raster                  |
 
 ### Lecture Notes
 ```

@@ -12,7 +12,7 @@ Students will be able to:
 - Use OpenSCAD to create procedural 3D form
 - Create form using constructive solid geometry modeling
 - Understand programing paradigms
-- Differentiate functional vs procedural programming
+- Compare functional vs procedural programming
 
 <!--
 - discuss interesting OpenSCAD language features
@@ -25,9 +25,9 @@ Students will be able to:
 - Printed Examples
 - Quiz Printout: [Illustrator](handouts/quiz.ai)
 
-<!--
-### Schedule
 
+### Schedule
+<!--
 | Time | ESA             | Type             | Activity             |
 | ---- | --------------- | ---------------- | -------------------- |
 | Pre  | TBD             | -                | TBD                  |
@@ -43,21 +43,18 @@ Students will be able to:
 | 6:10 | Study           | Lecture          | Digital Fabrication  |
 -->
 
-### Schedule
-
-| Duration | Time | Purpose      | Format       | Name                                       |
-| -- | ---- | -------- | ---------- | -------------------------------------------------- |
-| 30  | 3:50 | Review   | Discussion   | Homework Review                                  |
-| 30  | 4:20 | Study   | Lecture   | 3D Forms Intro                       
-  |
-| 10  | 4:30 | Engage   | Coding | Hello, OpenSCAD!                                        |
-| 10  | 4:45 | Study    | Lecture    | OpenSCAD !== C                                        |
-| 10  | 5:05 | Review   | Activity   | OpenSCAD !== C Quiz                                     |
-| 20  | 5:10 | Break    | Break    | Break                                                  |
-| 5   | 5:15 | Study | Lecture | Study Examples                                              |
-| 10  | 5:35 | Engage    | Coding      | Coding Challenge                                              |
-| 10  | 6:00 | Engage   | Discussion    | Challenge Discussion                             |
-| 15  | 6:10 | Study | Lecture   | Digital Fabrication                                    |
+| Duration | Time | Purpose      | Format       | Name                        |
+| -- | ---- | -------- | ---------- | --------------------------------------- |
+| 30  | 3:50 | Review   | Discussion   | Homework Review                      |
+| 30  | 4:20 | Study   | Lecture   | 3D Forms Intro                           |
+| 10  | 4:30 | Engage   | Coding | Hello, OpenSCAD!                           |
+| 10  | 4:45 | Study    | Lecture    | OpenSCAD !== C                         |
+| 10  | 5:05 | Review   | Activity   | OpenSCAD !== C Quiz                    |
+| 20  | 5:10 | Break    | Break    | Break                                    |
+| 5   | 5:15 | Study | Lecture | Study Examples                               |
+| 10  | 5:35 | Engage    | Coding      | Coding Challenge                     |
+| 10  | 6:00 | Engage   | Discussion    | Challenge Discussion                |
+| 15  | 6:10 | Study | Lecture   | Digital Fabrication                        |
 
 ### Notes 
 

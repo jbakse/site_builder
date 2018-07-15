@@ -6,6 +6,8 @@ debug: false
 
 ## Week 2, Parameters {plain}
 
+[Parameters Chapter](./index.html){boxed right}
+
 ### Learning Objectives
 Students will be able to:
 - Consider the relationship between parameters and interface design
@@ -22,6 +24,7 @@ Students will be able to:
 
 
 ### Schedule
+<!-->
 | Time | ESA           | Type       | Activity                                                                                    |
 | ---- | ------------- | ---------- | ------------------------------------------------------------------------------------------- |
 | Pre  | Engage        | -          | [3Blue1Brown: How secure is 256 bit security?](https://www.youtube.com/watch?v=S9JGmA5_unY) |
@@ -36,6 +39,22 @@ Students will be able to:
 | 5:50 | Study         | Lecture    | Globals and Sliders Lecture                                                                 |
 | 6:00 | Activate      | Coding     | In-class Challenges                                                                         |
 | 6:20 | Activate      | Discussion | In-class Challenges Discussion                                                              |
+-->
+
+| Duration | Time | Purpose      | Format       | Name                                                                                 |
+| -- | ---- | -------- | ---------- | -----------------------------------------------------------------------------------------------  |
+| -- | Pre  | Engage        | -          | [3Blue1Brown: How secure is 256 bit security?](https://www.youtube.com/watch?v=S9JGmA5_unY) |
+| 20 | 3:50 | Review+Engage | Discussion | Homework Review                                                                             |
+| 10 | 4:10 | Engage        | Discussion | Homework Introduction + Guess Topics                                                        |
+| 10 | 4:20 | Engage+Study  | Lecture    | Topic Introduction                                                                          |
+| 10 | 4:30 | Engage        | Discussion | Blue Square Game                                                                            |
+| 20 | 4:40 | Study         | Lecture    | Parameters Lecture                                                                          |
+| 10 | 5:00 | Break         | -          | Break                                                                                       |
+| 15 | 5:10 | Study         | Lecture    | Interfaces Lecture                                                                          |
+| 25 | 5:25 | Activate      | Activity   | Fictional Machines                                                                          |
+| 10 | 5:50 | Study         | Lecture    | Globals and Sliders Lecture                                                                 |
+| 20 | 6:00 | Activate      | Coding     | In-class Challenges                                                                         |
+| 10 | 6:20 | Activate      | Discussion | In-class Challenges Discussion                                                              |
 
 
 ::: .activity
@@ -84,9 +103,6 @@ Later in this class I will ask you to create special sketches using equipment av
 - CNC Mills (optional)
 
 /::
-
-### Class Notes
-[Parameters](./index.html){boxed right}
 
 
 <style> 
