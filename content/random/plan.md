@@ -28,7 +28,7 @@ Students will be able to:
 | -- | ---- | -------- | ---------- | -------------------------------------------------- |
 | 10  | 3:50 | Engage   | Activity   | Homework Tagging                                   |
 | 30  | 4:00 | Review   | Critique   | Homework Review Questions                          |
-| 10  | 4:30 | Engage   | Discussion | Homework Introduction + Guess Today's Topics |
+| 10  | 4:30 | Engage   | Discussion | Homework Introduction + Guess Today's Topics       |
 | 10  | 4:40 | Study    | Lecture    | Intro + Slides                                     |
 | 10  | 4:50 | Engage   | Activity   | 2d6 vs 1d12 Dice Chart                             |
 | 20  | 5:00 | Study    | Lecture    | The Methodical Application of Chance               |

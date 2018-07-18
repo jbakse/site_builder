@@ -68,8 +68,8 @@ Vector Monitors
 ::: .headless
 | Group | Question                                                                                                                                                 |
 | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1     | Xia, Aakanksha, Sue <br/> Choose your favorite take on the dot challenge. Discuss                                                                        |
-| 2     | Jack, Patricia, Ting <br/> Choose your favorite take on the line challenge. Discuss                                                                      |
+| 1     | Xia, Aakanksha, Sue <br/> Choose your favorite take on the dot challenge. Discuss.                                                                        |
+| 2     | Jack, Patricia, Ting <br/> Choose your favorite take on the line challenge. Discuss.                                                                      |
 | 3     | Earl, Carla, Dahee  <br/> Choose a work that you like, but are unsure how it was made. Describe what you see.                                            |
 | 4     | Leah, Kirsten, Bella <br/> Choose a set of sketches that show interesting progression from one to the next. Discuss how the sketch changed in each post. |
 | 5     | Madison, Rik, Patrick <br/> Choose a work that combines computational and manually-created form. Discuss.                                                |
