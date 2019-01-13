@@ -16,12 +16,11 @@ software: p5.js
 
 
 ## Animation
-At heart, a procedurally-generated animation is just a series of procedurally-generated images. These images, called frames, are shown in quick succession—like a flipbook—to show motion. Even a short animation will have hundreds of frames so creating animations by hand—while [beautiful](https://www.theguardian.com/artanddesign/2013/jan/09/oskar-fischinger-animation-disney-nazis)can be tedious. This makes animation a great medium to explore with procedural methods. Making a procedurally-generated animation is similar to making a procedurally-generated image, but with additional instructions to express how the image will change over time.
+At heart, a procedurally-generated animation is just a series of procedurally-generated images. These images, called frames, are shown in quick succession—like a flipbook—to show motion. Even a short animation will have hundreds of frames so creating animations by hand—while [beautiful](https://www.theguardian.com/artanddesign/2013/jan/09/oskar-fischinger-animation-disney-nazis)—can be tedious. This makes animation a great medium to explore with procedural methods. Making a procedurally-generated animation is similar to making a procedurally-generated image, but with additional instructions to express how the image will change over time.
 
-Creatively, animation differs from still images by introducing another dimension: time. Because animations live in time, they excel and showing actions, cause, and effect; expressing narrative arcs; and telling stories.
+Creatively, animation differs from still images by introducing another dimension: time. Because animations live in time, they excel at showing actions, cause and effect, expressing narrative arcs, and telling stories.
 
 [[todo: Slide show: Oskar Fischinger on here,  show a smear frame, Chuck Jones (mention golden age), boids, inside the mind's eye, pixar, realtime indie game "inside", realtime AAA game thats really animaty... ]]
-
 
 
 ## Real-time vs. Pre-rendered
@@ -292,6 +291,19 @@ Bumper Examples:
 
 [GDC: Fast and Funky 1D Nonlinear Transformations](https://www.youtube.com/watch?v=mr5xkf6zSzk)
 : Great developer talk about creating interesting motion with nonlinear mapping.
+
+[The Illusion of Life: Disney Animation](https://www.amazon.com/gp/product/0786860707?tag=parblo-20)
+: Now out of print, this iconic book by Disney animators describes 12 principles for good animation.
+
+[12 Principles of Animation: Squash and Stretch](https://www.youtube.com/watch?v=haa7n3UGyDc)
+: Squash and stretch is a crucial principle for creating engaging, lifelike animation.
+
+<!-- [Animation Techniques: The Smear](https://idearocketanimation.com/8857-animation-techniques-smear/)
+: A history of the smear frame, featuring a gallery of images. -->
+
+
+
+
 
 
 

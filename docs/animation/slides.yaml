@@ -1,0 +1,56 @@
+- artist: Oskar Fischinger
+  title: An Optical Poem, 1938
+  image:  ./slides/fischinger.jpg
+  comments: Oskar Fischinger was a painter and filmmaker who created abstract animations. Working before computer graphics, he experimented with hand animation techniques and pioneered animation set to music.
+  links:
+    - label: "Video"
+      href: https://www.youtube.com/watch?v=6Xc4g00FFLk
+    - label: "Google interactive tribute"
+      href: https://www.google.com/logos/2017/fischinger/fischinger17.html
+      
+
+- artist: Odyssey Productions with Miramar Productions
+  title: Mind's Eye Series, 1990-1996
+  image: ./slides/mindseye.jpg
+  comments: The Mind's Eye series presented computer animations that were groundbreaking for their time. The videos consist of demo footage that is pieced together into surreal narratives. 
+  links:
+    - label: "Video: The Mind's Eye: A Computer Animation Odyssey"
+      href: https://archive.org/details/mindseyevhs
+    - label: "Wikipedia: Mind's Eye"
+      href: https://en.wikipedia.org/wiki/Mind%27s_Eye_(film_series)
+
+- artist: Craig Reynolds
+  title: Boids Simulation, 1986
+  image: http://www.red3d.com/cwr/boids/images/flocking_around_19.gif
+  comments: Craig Reynolds' <i>Boids</i> paper was presented at SIGGRAPH in 1986. In this program animation <b>emerges</b> from the application of basic rules.
+  links:
+    - label: "Video"
+      href: https://www.youtube.com/embed/86iQiV3-3IA
+
+- artist: Chuck Jones for Warner Bros.
+  title: Often An Orphan, 1949
+  image: https://idearocketanimation.com/wp-content/uploads/2016/03/b5c6eb85dcd9260569f9b1e44b55eac3.jpg
+  comments: Smear frames, popularized by Chuck Jones in Warner Bros. cartoons, convey speed and motion blur.
+  links:
+    - label: "Gallery of smear frames" 
+      href: https://idearocketanimation.com/8857-animation-techniques-smear/
+
+- artist: Pixar
+  title: 
+  image:  
+  comments: 
+  links:
+    - label: 
+      href:
+
+- artist: Playdead
+  title: Inside, 2016
+  image:  
+  comments:
+  links:
+    - label: "Website"
+      href: http://www.playdead.com/games/inside/
+
+
+
+
