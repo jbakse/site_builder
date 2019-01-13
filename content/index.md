@@ -248,7 +248,9 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 
 </a>
 
-<a class="col-6 col-md-6" data-ready="true" href="http://psam3060-d-s16.github.io/class_notes/">
+
+
+<a class="col-6 col-md-6" data-ready="true" href="http://2017.compform.net/">
 
 ### Class Notes 2017
 
@@ -258,6 +260,20 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 <a class="col-6 col-md-6" data-ready="true" href="http://sketches.compform.net">
 
 ### Sketch Book 2017
+
+</a>
+
+
+<a class="col-6 col-md-6" data-ready="true" href="http://psam3060-d-s16.github.io/class_notes/">
+
+### Class Notes 2016
+
+</a>
+
+
+<a class="col-6 col-md-6" data-ready="true" href="http://compform.tumblr.com/">
+
+### Sketch Book 2016
 
 </a>
 

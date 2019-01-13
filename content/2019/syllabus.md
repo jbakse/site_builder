@@ -4,7 +4,7 @@ layout: layouts/compform_plain.pug
 debug: false
 ---
 
-# Computational Form Course Syllabus
+# Computational Form 2019 Course Syllabus
 
 | Course Info
 | ---
