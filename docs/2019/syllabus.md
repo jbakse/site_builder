@@ -10,11 +10,11 @@ debug: false
 | ---
 | Parsons The New School for Design
 | School of Art, Media, and Technology
-| PSAM 5600 D, CRN 3124 (MFA)
-| PSAM 3060 D, CRN 3911 (BFA)
-| Spring 2018
+| PSAM 5012 D, CRN 7379 
+| Spring 2019
 | Fridays 3:50pm—6:30pm
-| Room TBD
+| 6 East 16th Street
+| Room D1208
 
 
 | Justin Bakse
@@ -24,7 +24,7 @@ debug: false
 
 
 ## Course Description
-Computer programming is a powerful tool for creating and manipulating form. It has long been used to by artists, designers, and composers to explore new aesthetics. In this class, students will continue this tradition of experimentation by creating and processing images, animation, video, sound, and 3D forms with rules, algorithms, and code. This class will build on existing programming skills by introducing a variety techniques, programming languages, and tools related to procedural generation. Topics will include: creating raster and vector images with javascript and p5.js, synthesizing audio in javascript, and using OpenSCAD to create models for 3D printing.
+Computer programming is a powerful tool for creating and manipulating form. It has long been used to by artists, designers, and composers to explore new aesthetics. In this class, students will continue this tradition of experimentation by creating and processing images, animation, video, sound, and 3D forms with rules, algorithms, and code. This class emphasizes formal exploration through daily "sketching". This class will build on existing programming skills by introducing a variety techniques, programming languages, and tools related to procedural generation. Topics will include: creating raster and vector images with javascript and p5.js, synthesizing audio in javascript, and using OpenSCAD to create models for 3D printing.
 
 In this class we will make things that make things.
 
@@ -59,24 +59,24 @@ Each week follows a similar format: an introduction and discussion of the the we
 
 Class                                                   | Topics                        
 ---                                                     | ---                           
-**Foundation**                                         | &nbsp;
-[Week 1, January 26](introduction/plan.html)            | [Introduction](introduction), [Tile Graphics](tiles), pencil + paper
-[Week 2, February 2](random/plan.html)                  | [Random Values](random), p5.js
-[Week 3, February 9](parameters/plan.html)              | [Parameters](parameters), p5.js
-[Week 4, February 16](noise/plan.html)                  | [Noise](noise), p5.js
-[Week 5, February 23](strategy/plan.html)               | [Strategy](strategy), p5.js
+**Foundation**                                          | &nbsp;
+Week 1, January 25                                      | Introduction, Tile Graphics
+Week 2, February 1                                      | Random Values
+Week 3, February 8                                      | Parameters
+Week 4, February 15                                     | Noise
+Week 5, February 22                                     | Strategy
 **Exploration**                                         | &nbsp;
-[Week 6, March 2](#)                                    | [Pixel Data](*), p5.js
-[Week 7, March 9](#)                                    | [Turtle Graphics](*), javascript
-[Week 8, March 16](#)                                   | [Vector Data](*), paper.js
-~~Week 9, March 23~~                                     | Spring Break
-[Week 10, March 30](#)                                   | [Animation](*), p5.js
-[Week 11, April 6](#)                                   | [Generating Text](*), javascript
-[Week 12, April 13](#)                                  | [Generating Sound](*), p5.js
-[Week 13, April 20](#)                                  | [3D Forms](*), OpenScad
-[Week 14, April 27](#)                                  | [Microgames](*), play.p5.js
-[Week 15, May 4](#)                                     | [TBD](*), node-based or reactive programming 
-[Week 16, May 11](#)                                    | [Postmortem Party](*), pencil + paper
+Week 6, March 1                                         | Pixel Data
+Week 7, March 8                                         | Turtle Graphics
+Week 8, March 15                                        | Vector Data
+~~Week 9, March 23~~                                    | Spring Break
+Week 10, March 29                                       | Animation
+Week 11, April 5                                        | Generating Text
+Week 12, April 12                                       | Generating Sound
+Week 13, April 19                                       | 3D Forms
+Week 14, April 26                                       | Microgames
+Week 15, May 3                                          | TBD
+Week 16, May 10                                         | Postmortem Party
 
 
 
@@ -87,22 +87,10 @@ Students will complete weekly assignments to demonstrate understanding of course
 - 80% Weekly Sketch Posts
 - 20% In-class Activities
 
-
-### Graduate Students
-In addition to the weekly sketches, Graduate Students must complete a project case-study. For this assignment create a project based on one of the class topics and write a case-study to support it. This project may be an expansion of one of your sketches, or a new idea. This project does not not need to be large in scope; plan on spending about 5-8 hours to explore an idea in a little more depth. The written component should introduce your project, describe your motivation for completing it, and explain how it works. This case-study should be built as a webpage or blog post. It should be at least 500 words, include at least 3 references, include images to support key ideas.
-
-MFA Students grade calculation follows:
-
-- 75% Weekly Sketch Posts
-- 15% Case-study Assignment
-- 10% In-class Activities
-
-
 ### Homework Grading
-
 Your weekly posts will be graded using the following guide. This assignment structure is meant to encourage experimentation. As a general rule, the number of sketches you post each week will primarily determine your grade for that week. Your weekly grade may be adjusted up or down if your posts demonstrate a particularly high or low amount of exploration or effort. To be clear, if you post five sketches in a given week but they are of low quality you will not receive full marks.
 
-As a general guideline, spend between 1 and 2 hours per sketch.
+As a general guideline, spend between 1.5 and 2 hours per sketch.
 
 Grade | Point Value | Criteria |
 --- | --- | --- |
@@ -132,6 +120,9 @@ There is no required textbook for this course. Students will not need to purchas
 ### Materials and Supplies
 Please bring your laptop, a notebook, a sketchbook, and black pen, a red pen, and a pencil to each class.
 
+### Email
+I will send official announcements regarding the class via new school email. You should check and read your email frequently and respond promptly.
+
 ### Office Hours
 By appointment. Email to arrange.
 
@@ -147,13 +138,13 @@ We only meet once per week, and new material will be introduced each week. I str
 We will spend a good amount of class time working together on coding projects. During work time, computers will be used. However, during lectures, discussion, and critiques computers must be closed. Note-taking can be done on paper. Nothing kills a conversation like a room full of people staring at screens.
 
 ### Plagiarism, Code, and Open-Source
-Code reuse is a complex issue in computer programming. Looking at existing code is a key part of the programming process, especially while learning. You often learn best by modifying working examples rather than starting from scratch. We stand on the shoulders of giants; that is a key part of the open-source philosophy.
+Code reuse is a complex issue in computer programming. Studying existing code is a key part of the programming process, especially while learning. You often learn best by modifying working examples rather than starting from scratch. We stand on the shoulders of giants; that is a key part of the open-source philosophy.
 
 However, copy+paste makes it easy to use other's code without understanding it. It is important when using example code that you take the time to read, study, and understand it. In many cases this process can begin with simply retyping code instead of pasting it.
 
 In a professional environment, the best practice is often to reuse existing code as much as possible. When learning however, it is often best to do as much as possible from scratch.
 
-With that in mind, you may use limited amounts of existing code in your homework. However, there is a very important caveat: any code you use, borrow, and/or modify must be labeled as such. If you study code closely but do not directly use any of it, you should still cite the code you studied in your own source. **Every time you use code, copy, or images you didn't create, document your use in your source code with a comment.** If your work uses someone else's code, copy, or images in a substantial way you should also cite the work when you post your work. You must include the name of the author (even if it is me or a student in this class), the source URL if possible, and you must make clear which lines of code are not yours. If you fail to do this, you will fail the class. It is very, very easy to get this right: if you take a moment's time to label your work correctly, you will not have a problem. Be diligent and honest.
+With that in mind, you may use limited amounts of existing code in your homework. However, there is a very important caveat: any code you use, borrow, and/or modify must be labeled as such. If you study code closely but do not directly use any of it, you should still cite the code you studied in your own source. If you follow a tutorial, you should cite it. **Every time you use code, copy, or images you didn't create, document your use in your source code with a comment.** **If your work uses someone else's code, copy, or images in a substantial way you should also cite the work when you post your work.** You must include the name of the author (even if it is me or a student in this class), the source URL if possible, and you must make clear which lines of code are not yours. If you fail to do this, you will fail the class. It is very, very easy to get this right: if you take a moment's time to label your work correctly, you will not have a problem. Be diligent and honest.
 
 
 
@@ -253,8 +244,8 @@ While attendance is just one aspect of active participation, absence from a sign
 
 Whether the course is a lecture, seminar or studio, faculty will assess each student’s performance against all of the assessment criteria in determining the student’s final grade.
 
-### Canvas
-Use of Canvas may be an important resource for this class. Students should check it for announcements before coming to class each week.  
+### ~~Canvas~~
+~~Use of Canvas may be an important resource for this class. Students should check it for announcements before coming to class each week.~~  
 
 ### Delays
 In rare instances, I may be delayed arriving to class.  If I have not arrived by the time class is scheduled to start, you must wait a minimum of thirty minutes for my arrival.  In the event that I will miss class entirely, a sign will be posted at the classroom indicating your assignment for the next class meeting.

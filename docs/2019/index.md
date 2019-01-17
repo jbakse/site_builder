@@ -18,7 +18,8 @@ This page houses information specific to the spring 2019 section of Computationa
 
 # Resources
 
-### [Syllabus](#./syllabus.html)
+### [Welcome Letter](./welcome_letter.html)
+### [Syllabus](./syllabus.html)
 ### [Sketch Book](http://sketches2019.compform.net/) 
 
 
@@ -29,28 +30,28 @@ This page houses information specific to the spring 2019 section of Computationa
 
 | Lesson Plan                                   | Topics                                               |
 | --------------------------------------------- | ---------------------------------------------------- |
-| [Week 1, January 26](#introduction_plan.html)  | [Introduction](../introduction), [Tile Graphics](../tiles) |
-| [Week 2, February 2](#random_plan.html)        | [Random Values](../random)                              |
-| [Week 3, February 9](#parameters_plan.html)    | [Parameters](../parameters)                             |
-| [Week 4, February 16](#noise_plan.html)        | [Noise](../noise)                                       |
-| [Week 5, February 23](#strategy_plan.html)     | [Strategy](../strategy)                                 |
+| [Week 1, January 25](introduction_plan.html)  | [Introduction](../introduction), [Tile Graphics](../tiles) |
+| [Week 2, February 1](#random_plan.html)        | [Random Values](../random)                              |
+| [Week 3, February 8](#parameters_plan.html)    | [Parameters](../parameters)                             |
+| [Week 4, February 15](#noise_plan.html)        | [Noise](../noise)                                       |
+| [Week 5, February 22](#strategy_plan.html)     | [Strategy](../strategy)                                 |
 
 
 ## Exploration Unit
 
 | Lesson Plan                                   | Topics                                               |
 | --------------------------------------------- | ---------------------------------------------------- |
-| [Week 6, March 2](#pixels_plan.html)           | [Pixel Data](../pixels)                                 |
-| [Week 7, March 9](#turtles_plan.html)          | [Turtle Graphics](../turtles)                           |
-| [Week 8, March 16](#vectors_plan.html)         | [Vector Data](../vectors)                               |
+| [Week 6, March 1](#pixels_plan.html)           | [Pixel Data](../pixels)                                 |
+| [Week 7, March 8](#turtles_plan.html)          | [Turtle Graphics](../turtles)                           |
+| [Week 8, March 15](#vectors_plan.html)         | [Vector Data](../vectors)                               |
 | Week 9, March 23{gray}                        | Spring Break{gray}                                   |
-| Week 10, March 30{gray}                         | [Animation](../animation)                               |
-| [Week 11, April 6](#text_plan.html)            | [Generating Text](../text)                              |
-| [Week 12, April 13](#sound_plan.html)          | [Generating Sound](../sound)                            |
-| [Week 13, April 20](#music_plan.html)          | [Music](../music)                                       |
-| [Week 14, April 27](#3D_plan.html)             | [3D Forms](../3D)                                       |
-| [Week 15, May 4](#microgames_plan.html)        | [Microgames](../microgames)                             |
-| [Week 16, May 11](#postmortem_party_plan.html) | Postmortem Party{gray}                                     |
+| Week 10, March 29{gray}                         | [Animation](../animation)                               |
+| [Week 11, April 5](#text_plan.html)            | [Generating Text](../text)                              |
+| [Week 12, April 12](#sound_plan.html)          | [Generating Sound](../sound)                            |
+| [Week 13, April 19](#music_plan.html)          | [Music](../music)                                       |
+| [Week 14, April 26](#3D_plan.html)             | [3D Forms](../3D)                                       |
+| [Week 15, May 3](#microgames_plan.html)        | [Microgames](../microgames)                             |
+| [Week 16, May 10](#postmortem_party_plan.html) | Postmortem Party{gray}                                     |
 
 
 

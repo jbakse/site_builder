@@ -6,9 +6,14 @@ debug: false
 
 ## Week #, Week Title {plain}
 
-[Random Values Chapter](random/index.html){boxed right}
+[Random Values](random/index.html){boxed right}
 
 ### Learning Objectives
+
+``` 
+use swabt verbs
+https://www.clinton.edu/curriculumcommittee/listofmeasurableverbs.cxml
+```
 Students will be able to:
 - Use the `random()` function
 - Map and bias random values
@@ -28,7 +33,7 @@ Students will be able to:
 ```
 Purpose Values
 Engage: Build interest in new concept
-Study: Introduce details of new concepts
+Study: Introduce new concepts
 Review: Review previously introduced concepts
 Activate: Practice using concepts
 
@@ -38,24 +43,25 @@ Critique: Discussion with emphasis on describing or evaluating projects
 Activity: High student participation primarily through activity
 Coding: Activity focused primarily on coding
 Lecture: Faculty led presentation of content
+Present: Faculty or student led presentation of intert
 ```
 
 
 
-| Duration | Time | Purpose      | Format       | Name                                       |
-| -- | ---- | -------- | ---------- | -------------------------------------------------- |
-| 10  | 3:50 | Engage   | Activity   | Homework Tagging                                   |
-| 30  | 4:00 | Review   | Critique   | Homework Review Questions                          |
-| 10  | 4:30 | Engage   | Discussion | Homework Introduction + Guess Today's Topics |
-| 10  | 4:40 | Study    | Lecture    | Intro + Slides                                     |
-| 10  | 4:50 | Engage   | Activity   | 2d6 vs 1d12 Dice Chart                             |
-| 20  | 5:00 | Study    | Lecture    | The Methodical Application of Chance               |
-| 5   | 5:20 | Activate | Discussion | Skyline Tactic Match                               |
-| 10  | 5:25 | Break    | Break      | Break                                              |
-| 10  | 5:35 | Study    | Lecture    | Pseudorandom vs Random                             |
-| 15  | 5:45 | Activate | Activity   | Pencil + Paper LCG                                 |
-| 10  | 6:00 | Activate | Lecture    | Study Example                                      |
-| 20  | 6:10 | Activate | Coding     | In-class Challenges                                |
+| Time | Duration | Purpose  | Format     | Name                                         |
+| ---- | -------- | -------- | ---------- | -------------------------------------------- |
+| 3:50 | 10 m     | Engage   | Activity   | Homework Tagging                             |
+| 4:00 | 30 m     | Review   | Critique   | Homework Review Questions                    |
+| 4:30 | 10 m     | Engage   | Discussion | Homework Introduction + Guess Today's Topics |
+| 4:40 | 10 m     | Study    | Lecture    | Intro + Slides                               |
+| 4:50 | 10 m     | Engage   | Activity   | 2d6 vs 1d12 Dice Chart                       |
+| 5:00 | 20 m     | Study    | Lecture    | The Methodical Application of Chance         |
+| 5:20 | 5 m      | Activate | Discussion | Skyline Tactic Match                         |
+| 5:25 | 10 m     | Break    | Break      | Break                                        |
+| 5:35 | 10 m     | Study    | Lecture    | Pseudorandom vs Random                       |
+| 5:45 | 15 m     | Activate | Activity   | Pencil + Paper LCG                           |
+| 6:00 | 10 m     | Activate | Lecture    | Study Example                                |
+| 6:10 | 20 m     | Activate | Coding     | In-class Challenges                          |
 
 
 
@@ -65,9 +71,9 @@ Lecture: Faculty led presentation of content
 
 
 ### Plan
-*indvidually, 5 minutes*
+*individually, 5 minutes*
 
-Scroll through this weeks homework and tag posts as you like.
+Scroll through this weeks homework and note posts as you like.
 
 *groups, 5 minutes*
 
@@ -75,7 +81,7 @@ In your assigned team, choose 1 or 2 sketches from the past week and use them to
 
 *class, 6x3 minutes*
 
-Share your chosen sketch, comment on it and summarize your discussion.
+Share your chosen sketch, comment on it, and summarize your discussion.
 
 
 ### Groups

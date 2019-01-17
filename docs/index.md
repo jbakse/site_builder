@@ -29,7 +29,7 @@ General principles, practices, and building blocks useful for all procedural gen
 
 <!-- <a class="col-6 col-md-4" data-ready="true" href="./introduction">
 
-### Introduction
+### Class Introduction
 p5.js
 
 </a> -->
@@ -220,6 +220,14 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 <!-- Inner -->
 <div class="col-12 col-md-6">
 <div class="row">
+
+
+<!-- <a class="col-6 col-md-6" data-ready="true" href="./introduction">
+
+&nbsp;
+
+</a> -->
+
 
 
 <a class="col-6 col-md-6" data-ready="true" href="./2019">

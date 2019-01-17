@@ -18,6 +18,7 @@ This page houses information specific to the spring 2018 section of Computationa
 
 # Resources
 
+### [Welcome Letter](./welcome_letter.html)
 ### [Syllabus](./syllabus.html)
 ### [Sketch Book](http://sketches2018.compform.net/) 
 
