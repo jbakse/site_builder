@@ -4,40 +4,43 @@ layout: layouts/compform_plain.pug
 debug: false
 ---
 
-## Week #, Week Title {plain}
+## Week 2, Random {plain}
 
-[Random Values Chapter](../random/index.html){boxed right}
+[Random Values](../random/index.html){boxed right}
 
 ### Learning Objectives
 Students will be able to:
-- Use the `random()` function
+- Consider the role of chance in art-making
+- Demonstrate how chances combine
+- Use the `Math.random()` and `random()` function
 - Map and bias random values
+- Compare dice and decks as sources of random values
 - Select and implement appropriate strategies for randomization
-- Identify what random biases looks like
-- Understand what pseudorandom values are
+- Identify types random biases
+- Summarize what pseudorandom values are
+- Demonstrate a simple pseudorandom value generator
 
 ### Materials
-- Six- and Twelve-sided Dice
-- Dice Worksheet: [Illustrator](../handouts/dice_chart.ai), [SVG](../handouts/dice_chart.svg)
-- LCG Worksheet: [Illustrator](../handouts/lcg_random.ai), [SVG](../handouts/lcg_random.svg)
+- Six- and twelve-sided Dice
+- Dice worksheet: [Illustrator](../handouts/dice_chart.ai), [SVG](../handouts/dice_chart.svg)
+- LCG worksheet: [Illustrator](../handouts/lcg_random.ai), [SVG](../handouts/lcg_random.svg)
 
 
 ### Schedule
 
-| Duration | Time | Purpose      | Format       | Name                                       |
-| -- | ---- | -------- | ---------- | -------------------------------------------------- |
-| 10  | 3:50 | Engage   | Activity   | Homework Tagging                                   |
-| 30  | 4:00 | Review   | Critique   | Homework Review Questions                          |
-| 10  | 4:30 | Engage   | Discussion | Homework Introduction + Guess Today's Topics |
-| 10  | 4:40 | Study    | Lecture    | Intro + Slides                                     |
-| 10  | 4:50 | Engage   | Activity   | 2d6 vs 1d12 Dice Chart                             |
-| 20  | 5:00 | Study    | Lecture    | The Methodical Application of Chance               |
-| 5   | 5:20 | Activate | Discussion | Skyline Tactic Match                               |
-| 10  | 5:25 | Break    | Break      | Break                                              |
-| 10  | 5:35 | Study    | Lecture    | Pseudorandom vs Random                             |
-| 15  | 5:45 | Activate | Activity   | Pencil + Paper LCG                                 |
-| 10  | 6:00 | Activate | Lecture    | Study Example                                      |
-| 20  | 6:10 | Activate | Coding     | In-class Challenges                                |
+| Time | Duration | Purpose  | Format     | Name                                 |
+| ---- | -------- | -------- | ---------- | ------------------------------------ |
+| 3:50 | 10 m     | Engage   | Activity   | Homework Tagging                     |
+| 4:00 | 30 m     | Review   | Critique   | Homework Review Questions            |
+| 4:30 | 10 m     | Study    | Lecture    | Intro + Slides                       |
+| 4:40 | 20 m     | Engage   | Activity   | 2d6 vs 1d12 Dice Chart               |
+| 5:00 | 20 m     | Study    | Lecture    | The Methodical Application of Chance |
+| 5:20 | 15 m     | Activate | Discussion | Skyline Tactic Match                 |
+| 5:35 | 10 m     | Break    | Break      | Break                                |
+| 5:45 | 10 m     | Study    | Lecture    | Pseudorandom vs Random               |
+| 5:55 | 10 m     | Activate | Activity   | Pencil + Paper LCG                   |
+| 6:05 | 10 m     | Activate | Lecture    | Study Example                        |
+| 6:10 | 20 m     | Activate | Coding     | In-class Challenges                  |
 
 
 
@@ -63,14 +66,14 @@ Share your chosen sketch, comment on it and summarize your discussion.
 ### Groups
 
 ::: .headless
-| Group | Question                                                                                                                                                                     |
-| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1     | Xia, Patricia, Dahee <br/>How does working within constraints support creativity?                                                                                            |
-| 2     | Bella, Leah, Carla <br/>Considering the tile set as a tool, how do tools impact authorship?                                                                                  |
-| 3     | Aakanksha, Julian, Xu <br/>Choose a sketch you feel should be tagged 🤓. Explain why.                                                                                        |
-| 4     | Alyssa, Ting, Jack <br/>Choose a sketch you feel should be tagged 😂. Explain why.                                                                                           |
-| 5     | Madison, Earl, Patrick <br/>Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project? |
-| 6     | Rik, Kirsten, Mario <br>Choose a sketch you feel should be tagged 😍. Explain why.                                                                                           |
+| Group | Question                                                                                                                                                      |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | A, B, C <br/>How does working within constraints support creativity?                                                                                          |
+| 2     | A, B, C <br/>Considering the tile set as a tool, how do tools impact authorship?                                                                              |
+| 3     | A, B, C <br/>Choose a sketch you feel should be tagged 🤓. Explain why.                                                                                       |
+| 4     | A, B, C <br/>Choose a sketch you feel should be tagged 😂. Explain why.                                                                                       |
+| 5     | A, B, C <br/>Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project? |
+| 6     | A, B, C <br>Choose a sketch you feel should be tagged 😍. Explain why.                                                                                        |
 /::
 
 /::

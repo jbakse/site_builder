@@ -12,9 +12,11 @@ debug: false
 ### Learning Objectives
 Students will be able to:
 - Discuss course content and structure
-- Understand homework Expectations
+- Understand homework expectations
 - Set up and begin using the class sketch book
-- Discuss the role of procedural generation in creative work
+- Begin exploring the value of a daily sketching routine
+- Begin discussing the role of procedural generation in creative work
+- See examples of procedurally generated form in a variety of media
 - Compare types of edge-matched tile graphics
 - Create and use an edge-matched tile toolkit
 - Explore the relationship between tools, authors, and artworks

@@ -35,7 +35,11 @@ Watch these videos *before* class on Friday:
 
 [How (and Why) Spelunky Makes its Own Levels | Game Maker's Toolkit](https://www.youtube.com/watch?v=Uqk5Zf0tw3o)
 
+[How Jonathan Blow Designs a Puzzle | Game Maker's Toolkit](https://www.youtube.com/watch?v=2zK8ItePe3Y)
+
 [Digital Creatures Learn to cooperate | Two Minute Papers](https://www.youtube.com/watch?v=LmYKfU5O_NA)
+
+
 
 
 # Be on Time

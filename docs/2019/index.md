@@ -31,8 +31,8 @@ This page houses information specific to the spring 2019 section of Computationa
 | Lesson Plan                                   | Topics                                               |
 | --------------------------------------------- | ---------------------------------------------------- |
 | [Week 1, January 25](introduction_plan.html)  | [Introduction](../introduction), [Tile Graphics](../tiles) |
-| [Week 2, February 1](#random_plan.html)        | [Random Values](../random)                              |
-| [Week 3, February 8](#parameters_plan.html)    | [Parameters](../parameters)                             |
+| [Week 2, February 1](random_plan.html)        | [Random Values](../random)                              |
+| [Week 3, February 8](parameters_plan.html)    | [Parameters](../parameters)                             |
 | [Week 4, February 15](#noise_plan.html)        | [Noise](../noise)                                       |
 | [Week 5, February 22](#strategy_plan.html)     | [Strategy](../strategy)                                 |
 

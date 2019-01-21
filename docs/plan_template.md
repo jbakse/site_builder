@@ -13,6 +13,7 @@ debug: false
 ``` 
 use swabt verbs
 https://www.clinton.edu/curriculumcommittee/listofmeasurableverbs.cxml
+
 ```
 Students will be able to:
 - Use the `random()` function
@@ -22,9 +23,9 @@ Students will be able to:
 - Understand what pseudorandom values are
 
 ### Materials
-- Six- and Twelve-sided Dice
-- Dice Worksheet: [Illustrator](handouts/dice_chart.ai), [SVG](handouts/dice_chart.svg)
-- LCG Worksheet: [Illustrator](handouts/lcg_random.ai), [SVG](handouts/lcg_random.svg)
+- Six- and twelve-sided Dice
+- Dice worksheet: [Illustrator](handouts/dice_chart.ai), [SVG](handouts/dice_chart.svg)
+- LCG worksheet: [Illustrator](handouts/lcg_random.ai), [SVG](handouts/lcg_random.svg)
 
 
 ### Schedule

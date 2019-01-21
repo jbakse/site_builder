@@ -46,7 +46,13 @@ include('./compform_slides.yaml')
 
 ### What Computational Form is Not
 
-While we use computer programming throughout this class, it is important to understand that procedural generation doesn't require a computer. Procedural generation is about defining instructions that create form. Computers are very useful tools for carrying out these instructions, but artists have also built systems that rely on humans or purpose-built machines instead. Many of the works included in the slideshow above embody principles of computation and instruction without using computers.
+While we use computer programming throughout this class, it is important to understand that procedural generation doesn't require a computer. Procedural generation is about defining instructions that create form. Computers are very useful tools for carrying out these instructions, but artists have also built systems that rely on humans or purpose-built machines instead. Many of the works included in the slideshow below embody principles of computation and instruction without using computers.
+
+
+::: slides .contain
+@@include('../procedures/compform_slides.yaml')
+/::
+
 
 <!-- 
 ::: .activity
@@ -248,7 +254,7 @@ Please review the [syllabus here](../syllabus.html).
 
 ### The Class Sketch Blog
 
-Our class sketch blog will host your daily experiments and links to content of interest to the class.
+Our class sketch blog will host your daily experiments and links to content of interest to the class. As you create sketches throughout the week, post them to the blog. Also be sure to review the work of everyone else.
 
-[2018 Sketch Blog](http://sketches2018.compform.net){boxed right}
+[2019 Sketch Blog](http://sketches2019.compform.net){boxed right}
 
