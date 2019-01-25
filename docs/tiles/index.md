@@ -236,7 +236,7 @@ Design a full alphabet using a single tile set. Post an image that shows your fo
 
 
 
-## Related Links
+## Reference Links
 
 [cr31: Wang Tile Maze Design](http://www.cr31.co.uk/stagecast/wang/intro.html)
 : An absolutely **excellent** resource with lots of information on tile sets, tile maps, and wang titles.

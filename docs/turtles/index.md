@@ -52,19 +52,19 @@ Explore body-syntonic reasoning by acting out a logo-like program.
 
 
 ### Write a Program
-- Begin by breaking up into pairs.
-- Draw an image from the deck, keep it secret.
+- Draw an image from the deck and keep it secret.
 - Think about the path someone would need to take to trace that image as they walked.
-- Write a series of instructions using `turn(degrees)` and `forward(steps)`.
+- Write a series of instructions for tracing the image using `turn(degrees)` and `forward(steps)`.
 
 
 ### Run a Program
-- Take the instructions, but not your image, from your partner.
-- Follow the instructions, and think about the shape you are tracing on the ground.
-- Draw an image of the path you took, and compare that image with your partner's image.
+- Break into pairs.
+- Trade instructions, but not images, with your partner.
+- Follow the instructions your partner wrote, and think about the shape you are tracing on the ground.
+- Draw an image of the path you took, and compare that image with your partner's original image.
 
 ### Discuss
-Did involving you bodily senses and physical movement impact how you thought about the program?
+Did involving your bodily senses and physical movement impact how you thought about the program?
 
 /::
 
@@ -323,7 +323,7 @@ Style Tip: If you change what a function does, you should change its name as wel
 
 ## Drawing Machines in Code
 
-Turtles make it possible to change how you think about drawing and give you a new set of tools for expressing an image in code. They don't change _what you can do_ though, [under the hood](turtle/turtle.html) the turtle class uses the standard p5.js drawing API and a little trigonometry. Instead using a turtle changes _how you do it_. Changing your approach and mental model has a significant effect on the solutions you create. You could make the same exact drawing with or without turtles, but in practice using turtles tends to lead to certain motifs and styles.
+Turtles make it possible to change how you think about drawing and give you a new set of tools for expressing an image in code. They don't change _what you can do_ though: [under the hood](turtle/turtle.html) the turtle class uses the standard p5.js drawing API and a little trigonometry. Instead, using a turtle changes _how you do it_. Changing your approach and mental model has a significant effect on the solutions you create. You could make the same exact drawing with or without turtles, but in practice using turtles tends to lead to certain motifs and styles.
 
 Turtles are just one example of a drawing machine. Inventing your own drawing machine is a rewarding exercise. It leads to new ways of approaching problems, a deeper understanding of programming, and new aesthetics to explore. 
 
@@ -344,6 +344,10 @@ Using turtle graphics, create an **intricate** portrait of an animal. Begin by c
 
 
 
-## Links
+## Reference Links
 
 [Mitchel Resnick: The Seeds that Seymour Sowed](https://www.media.mit.edu/posts/the-seeds-that-seymour-sowed/)
+
+[Rough.js](https://roughjs.com/): A tool for creating graphics with a sketchy, hand-drawn aesthetic.
+
+[Turtle for Processing](http://leahbuechley.com/Turtle/): A turtle library for Processing from Leah Buechley.

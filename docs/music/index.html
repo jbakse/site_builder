@@ -30,7 +30,7 @@
 <p>Generating a melody isn’t much use if there is no way to hear it. We could export our melody in an interchange format like MIDI, and play it back in an audio software package, but it will be more fun to build our own synthesizer. A synthesizer is a computer program or circuit that generates sounds. Synthesizers can simulate the sounds of natural instruments like pianos, guitars, and drums or create entirely new sounds.</p>
 <p><a href="https://en.wikipedia.org/wiki/Synthesizer">Wikipedia: Synthesizer</a></p>
 <h3 id="timbre">Timbre</h3>
-<p>When a note is played on two different instruments—a piano and guitar—the note will sound different even if it is the same pitch, length, and volume. Instruments sound different because of a variety of characteristics: spectral envelope; noisyness; attack, sustain, and decay; vibrato; tremolo; and others. Considered together these characteristics are called <a href="https://en.wikipedia.org/wiki/Timbre">timbre</a> or tone.</p>
+<p>When a note is played on two different instruments—a piano and guitar—the note will sound different even if it is the same pitch, length, and volume. Instruments sound different because of a variety of characteristics: spectral envelope; noisiness; attack, sustain, and decay; vibrato; tremolo; and others. Considered together these characteristics are called <a href="https://en.wikipedia.org/wiki/Timbre">timbre</a> or tone.</p>
 <p>One of the key contributors to the timbre of sounds created by a synthesizer is the shape of the generated wave. For example a sine wave has a clear, smooth sound and a square wave has a brassier, buzzier sound. Natural instruments produce varying overtones resulting in more complicated wave shapes.</p>
 <p>[[illustrations: sine wave, square, guitar ]]</p>
 <p>There are many ways to synthesize tones. Some of the most common are additive, subtractive, frequency modulation, amplitude modulation, wavetable, and sampled synthesis.</p>
@@ -41,11 +41,11 @@
 <p>[[illustration: fundamental, harmonic overtone, sum]]</p>
 <dl>
 <dt>Subtractive Synthesis</dt>
-<dd>In subtractive synthesis a tone with rich overtones is filtered with frequency-pass filters. Subtracting different overtones to create new timbres. Square and sawtooth waves have strong overtones and are often used as the source in subtractive synthesis. The <a href="https://en.wikipedia.org/wiki/Minimoog">Minimoog</a> and other 1970’s synthesizers often used subtractive synthesis.</dd>
+<dd>In subtractive synthesis a tone with rich overtones is filtered with frequency-pass filters that subtract different overtones to create new timbres. Square and sawtooth waves have strong overtones and are often used as the source in subtractive synthesis. The <a href="https://en.wikipedia.org/wiki/Minimoog">Minimoog</a> and other 1970’s synthesizers often used subtractive synthesis.</dd>
 <dt>Wavetable Synthesis</dt>
 <dd>In wavetable synthesis the wave isn’t generated with a periodic function or math. It is simply stored as data which is used by the synthesizer.</dd>
 <dt>Sampled Synthesis</dt>
-<dd>Sampled Synthesis is a type of wavetable synthesis where the stored wave data is recorded from physical instruments.</dd>
+<dd>Sampled synthesis is a type of wavetable synthesis where the stored wave data is recorded from physical instruments.</dd>
 <dt>FM and AM Synthesis</dt>
 <dd>In FM and AM synthesis simple square, sine, or other oscillators are chained together. This allows one oscillator to change the frequency or amplitude of the other, usually at a rate higher than the fundamental frequency being played. This results in tremolo and vibrato effects.</dd>
 </dl>
@@ -222,17 +222,23 @@ playNotes(notes) {
 <p>It doesn’t have to be good. It doesn’t have to use code.</p>
 </div>
 <h2 id="reference-links">Reference Links</h2>
-<p><a href="https://www.amazon.com/Melody-Songwriting-Techniques-Writing-Berklee/dp/063400638X">Melody in Songwriting</a></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">MDN: Web Audio API</a></p>
+<p><a href="https://www.amazon.com/Melody-Songwriting-Techniques-Writing-Berklee/dp/063400638X">Melody in Songwriting</a>
+:Melody in Songwriting is an excellent book for developing melody-writing skills.</p>
+<p><a href="http://blog.eumlab.com/c-and-db-whats-the-difference/">C-sharp vs D-flat</a>
+:Music theory article addressing note naming within different keys.</p>
+<p><a href="https://www.khanacademy.org/humanities/music/music-basics2">Kahn Academy: Music Basics</a>
+:Khan Academy offers interactive tutorials on basic music theory, including rhythm and musical notation.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">MDN: Web Audio API</a>
+:Documentation for the Web Audio API.</p>
 <p><a href="https://www.html5rocks.com/en/tutorials/webaudio/intro/">HTML5Rocks: Getting Started with Web Audio</a></p>
+<p><a href="https://www.html5rocks.com/en/tutorials/audio/scheduling/">HTML5Rocks: Audio Scheduling</a>
+:A tutorial on audio timing and scheduling in the Web Audio API.</p>
 <p><a href="http://blog.mecheye.net/2017/09/i-dont-know-who-the-web-audio-api-is-designed-for/">I don’t know who the Web Audio API is designed for</a></p>
-<p><a href="http://blog.eumlab.com/c-and-db-whats-the-difference/">C-sharp vs D-flat</a></p>
-<p><a href="https://www.khanacademy.org/humanities/music/music-basics2">Kahn Academy: Music Basics</a></p>
-<p>[Teoria.js Music Theory Library]
-(<a href="https://github.com/saebekassebil/teoria">https://github.com/saebekassebil/teoria</a>)</p>
-<p><a href="https://www.html5rocks.com/en/tutorials/audio/scheduling/">HTML5Rocks: Audio Scheduling</a></p>
 <p><a href="https://newt.phys.unsw.edu.au/jw/notes.html">UNSW: Midi Notes and Math</a></p>
-<p><a href="http://www.ocenaudio.com/">Ocenaudio: Free OS X Sound Editor</a></p>
-<p><a href="http://chuck.cs.princeton.edu/">ChucK</a></p>
-<p><a href="https://www.youtube.com/watch?v=2rpk461T6l4">ChucK Intro Video</a></p>
+<p><a href="https://github.com/saebekassebil/teoria">Teoria.js Music Theory Library</a>
+:A library for music software that supports musical structures and language, including chords, scales, and notes.</p>
+<p><a href="http://www.ocenaudio.com/">Ocenaudio</a>:
+:Ocenaudio is a free sound editor available for both OS X and Windows. It’s beginner-friendly while still offering more advanced features.</p>
+<p><a href="http://chuck.cs.princeton.edu/">ChucK</a>
+:ChucK is a programming language for real-time music and audio generation. Watch creator Ge Wang discuss his design and use of the program in this <a href="https://www.youtube.com/watch?v=2rpk461T6l4">video</a>.</p>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>

@@ -589,3 +589,6 @@ Kasimir Malevich, Mark Rothko, Piet Modrian, and Anni Albers all worked with bas
 
 [Random.org](https://www.random.org/)
 : A true random number generator that uses atmospheric noise as a source of randomness.
+
+[LavaRand by Cloudflare](https://blog.cloudflare.com/lavarand-in-production-the-nitty-gritty-technical-details/)
+: Cloudflare uses lava lamps as a source of randomness for encryption.
