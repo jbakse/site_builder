@@ -49,15 +49,15 @@
 
 
 
-- artist: Jessica Svendsen - Yale Architecture Lecture Series Poster - 2015
-  title:
-  image: https://jessicasvendsen.imgix.net/yaleschoolarchitecture_fall2015_jessicasvendsen_1.png?w=992&fm=jpg&q=75&sharp=20&fit=max&dpr=2
-  comments: >
-  links:
-    - label: Artist's Site
-      href: http://jessicasvendsen.com/
-    - label: "100 Days with Josef Müller-Brockmann"
-      href: http://jessicasvendsen.com/100-Days-with-Josef-Muller-Brockmann
+# - artist: Jessica Svendsen - Yale Architecture Lecture Series Poster - 2015
+#   title:
+#   image: https://jessicasvendsen.imgix.net/yaleschoolarchitecture_fall2015_jessicasvendsen_1.png?w=992&fm=jpg&q=75&sharp=20&fit=max&dpr=2
+#   comments: >
+#   links:
+#     - label: Artist's Site
+#       href: http://jessicasvendsen.com/
+#     - label: "100 Days with Josef Müller-Brockmann"
+#       href: http://jessicasvendsen.com/100-Days-with-Josef-Muller-Brockmann
 
 
 - artist: Sunsoft

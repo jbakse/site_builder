@@ -483,8 +483,7 @@ Post your source image, the result after one generation, and the result after se
 /::
 
 
-## Misc Links
-
+## Reference Links
 
 
 [Reaction Diffusion in Photoshop](https://vimeo.com/61154654)

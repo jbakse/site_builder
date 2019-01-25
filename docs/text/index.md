@@ -23,7 +23,7 @@ Procedural generation can be used to create form in almost any media: image, vid
 [Google:<br/>How search works.](https://www.google.com/search/howsearchworks/)
 /::
 
-Google uses programs to crawl the web, collecting a database of information about every page. When you perform a search, another program searches this database for relevant information. This information is then carefully excerpted, summarized, formatted, and collated. The resulting web page of results is built on the fly and sent to your browser for your to read.
+Google uses programs to crawl the web, collecting a database of information about every page. When you perform a search, another program searches this database for relevant information. This information is then carefully excerpted, summarized, formatted, and collated. The resulting web page of results is built on the fly and sent to your browser for you to read.
 
 Social media sites like Facebook and Twitter are software systems for collecting and sharing user-created content, largely text. Even websites primarily concerned with other media, like YouTube and Instagram, must generate HTML text to showcase their videos and images.
 
@@ -110,13 +110,13 @@ Most programming languages are themselves text-based. Programs that generate pro
 
 ## String Templates
 
-String templating is a basic but powerful tool for building text procedurally. If you have every completed a [Mad Lib](http://www.madlibs.com/) fill-in-the-blank story, you've worked with string templates. 
+String templating is a basic but powerful tool for building text procedurally. If you have ever completed a [Mad Lib](http://www.madlibs.com/) fill-in-the-blank story, you've worked with string templates. 
 
 ::: .activity
 ## Make an Amendment!
-This demo populates a template with the words you provide to generate a new constitutional amendment. <br/><br/> [view source](http://localhost:3000/js_lab/js_lab.html?/text/sketches/first_amendment.js)
+This demo populates a template with the words you provide to generate a new constitutional amendment. <br/><br/> [view source](http://compform.net/js_lab/js_lab.html?/text/sketches/first_amendment.js)
 
-<!-- [[localhost link, issue with page resizing/cutting off beginning of lines]] -->
+<!-- [[issue with page resizing/cutting off beginning of lines]] -->
  
 ::: js-show
 /text/sketches/first_amendment.js
@@ -166,13 +166,13 @@ The examples below demonstrate using JavaScript template literals.
 
 ::: .activity
 ## Markov Chain
-Explore the Markov Chain algorithm with paper and pencil using this worksheet.
+Explore the Markov chain algorithm with paper and pencil using this worksheet.
 
 ### Build the Model
 The right side of the worksheet lists every word that occurs in the Dr. Seuss poem. These are the "keys". Find every occurrence of each key in the poem. Write the following word in the corresponding box. Do not skip repeats.
 
 ### Generate Text
-Choose a random word from the keys. Write it down. Choose a word at random from corresponding box, and write it down. Continue this process, choosing each word based on the previous one.
+Choose a random word from the keys. Write it down. Choose a word at random from the corresponding box, and write it down. Continue this process, choosing each word based on the previous one.
 
 <br/>
 
@@ -288,7 +288,7 @@ Ideally, your story should:
 ## Reference Links
 
 [RiTa](https://rednoise.org/rita/index.php)
-: Software toolkit for computational literature
+: Software toolkit for computational literature.
 
 [Twine](http://twinery.org/)
 : Open-source tool for telling interactive, nonlinear stories.

@@ -253,6 +253,12 @@ When designing, step back and focus on the relationship between your project and
 
 ![what_you_design](figures/what_you_design-01.svg)
 
+
+#### Parameters and Constraints
+
+[Wikipedia: Constraint Programming](https://en.wikipedia.org/wiki/Constraint_programming)
+[Matt Keeter: Constraint Solver](https://www.mattkeeter.com/projects/constraints/)
+
 ::: .activity
 ## Fictional Machines
 

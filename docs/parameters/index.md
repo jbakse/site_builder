@@ -253,6 +253,12 @@ When designing, step back and focus on the relationship between your project and
 
 ![what_you_design](figures/what_you_design-01.svg)
 
+
+#### Parameters and Constraints
+
+[Wikipedia: Constraint Programming](https://en.wikipedia.org/wiki/Constraint_programming)
+[Matt Keeter: Constraint Solver](https://www.mattkeeter.com/projects/constraints/)
+
 ::: .activity
 ## Fictional Machines
 
@@ -397,3 +403,6 @@ Build a face-generating tool. This tool will create an image of a face that can 
 
 [Endgare](http://www.engare.design/)
 : A game about motion and geometry that draws on the mathematical principles of Islamic pattern design.
+
+[Variable Fonts](https://v-fonts.com/)
+: A compilation of [OpenType variable fonts](https://medium.com/variable-fonts/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369), which offer parametric control over weight, contrast, and other variables.

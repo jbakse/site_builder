@@ -37,10 +37,23 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 1.2;
-        color: inherit;
+        // color: inherit;
         letter-spacing: 0.31px;
+        
         border-bottom: 1px solid transparent;
     }
+
+    a h3 {
+        color: #04B;
+        display: inline-block;
+        
+    }
+
+    a {
+        color: #04B;
+    }
+
+   
 
     .row>a,
     .row>a:hover {
@@ -51,9 +64,7 @@
     }
 
 
-    h3 a {
-        color: black;
-    }
+   
 
     h3 a:hover {
         border-bottom: 1px soild black;

@@ -10,7 +10,7 @@ next: Hello, p5!
 next_url: ../p5
 
 hero_title: Tile Maps
-description: Tile mapping—creating images by arranging small graphic tiles—is a widely popular technique with a range of technical and artistic benefits.
+description: Tile mapping—creating images by arranging small graphic tiles—is a widely used technique with a range of technical and artistic benefits.
 software: p5.js + p5.dom
 ---
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
@@ -18,9 +18,9 @@ software: p5.js + p5.dom
 
 ## Tile Maps + Sets
 
-Artists and designers have worked with modular motifs arranged on grids throughout history. This approach affords a variety of aesthetic and practical benefits. Repetition on a grid leads to patterns with natural visual rhythm and concord while allowing for variety and complexity. Practically, this method allows templates and molds to facilitate mass production of the individual units, which can be arranged contextually on-site. This approach also allows the creative work to be split up: a single artist creates the graphic system, and local craftsmen apply it.
+Artists and designers have worked with modular motifs arranged on grids throughout history. This approach affords a variety of aesthetic and practical benefits. Repetition on a grid leads to patterns with natural visual rhythm and concord while allowing for variety and complexity. Practically, this method allows templates and molds to facilitate mass production of the individual units, which can be arranged contextually on-site. This approach also allows the creative work to be split up: a single designer creates the system, and local craftsmen apply it.
 
-You will find examples of this approach in many media including masonry and tile, textiles, font design, and video games. Tile maps and sets were widely used in the 8-bit and 16-bit video game era. Hardware limitation imposed strict limits on designers who took advantage of hardware tile support to push the media forward. Today's games do not face the same hardware restrictions, but modular graphic systems are still an important tool for artists. Support for tile maps is built into many contemporary game engines, including [Unity](https://docs.unity3d.com/Manual/Tilemap.html).
+You will find examples of this approach in media including masonry and tile, textiles, fonts. In digital media, tile maps and sets are commonly associated with the 8-bit and 16-bit video game era. Hardware limitation imposed strict limits on designers who took advantage of hardware tile support to push the media forward. Today's games do not face the same hardware restrictions, but modular graphic systems are still an important tool for artists. Support for tile maps is built into many contemporary game engines, including [Unity](https://docs.unity3d.com/Manual/Tilemap.html).
 
 
 
@@ -32,7 +32,7 @@ You will find examples of this approach in many media including masonry and tile
 
 The most basic tile set is a single image. Repeating this image, side by side by side, creates a pattern. With a little care, the image can be designed to match up edge-to-edge creating a pattern where the seams are hidden.
 
-You can build on this simple premise in many ways: alternate tiles, rotatable tiles, complex collections of tiles that work together. You can work with different grids as well: squares are commonly used, but many other [shapes can tessellate](http://gwydir.demon.co.uk/jo/tess/grids.htm).
+You can build on this simple premise in many ways: alternate tiles, rotatable tiles, complex collections of tiles that work together. You can work with different grids as well: squares are commonly used, but many other [shapes can tessellate](https://www.mathsisfun.com/geometry/tessellation.html).
 
 
 ### Repeating Tiles
@@ -230,13 +230,13 @@ Explore a different idea every day. If you need some ideas, consider using one o
 
 
 ### Challenge: Alphabet
-Design a full alphabet using a single tile set. Post an image that shows your font in use.
+Design a full alphabet using a single tile set. Post an image that shows your alphabet in use.
 
 /::
 
 
 
-## Related Links
+## Reference Links
 
 [cr31: Wang Tile Maze Design](http://www.cr31.co.uk/stagecast/wang/intro.html)
 : An absolutely **excellent** resource with lots of information on tile sets, tile maps, and wang titles.
@@ -249,7 +249,6 @@ Design a full alphabet using a single tile set. Post an image that shows your fo
 
 [Breaking the NES for Shovel Knight](https://www.gamasutra.com/blogs/DavidDAngelo/20140625/219383/Breaking_the_NES_for_Shovel_Knight.php)
 : Shovel Knight is an amazing retro platformer from [Yacht Club Games](http://yachtclubgames.com/). Developer David D'Angelo discusses how the Nintendo's specific technical limitations and abilities influenced Shovel Knight's design.
-
 
 [The 8-bit Guy: How "oldschool" graphics worked](https://www.youtube.com/watch?v=Tfh0ytz8S0k)
 : Overview of the hardware limitations and creative solutions in early pixel graphics.

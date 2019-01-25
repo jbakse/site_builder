@@ -29,7 +29,7 @@ General principles, practices, and building blocks useful for all procedural gen
 
 <!-- <a class="col-6 col-md-4" data-ready="true" href="./introduction">
 
-### Introduction
+### Class Introduction
 p5.js
 
 </a> -->
@@ -196,7 +196,6 @@ Vuo
  -->
 
 
-
 </div>
 </div>
 <!-- /Inner -->
@@ -207,6 +206,94 @@ Vuo
 
 
 
+
+## Class Resources
+
+
+<!-- Outer -->
+<div class="row">
+
+<div class="col-8 col-md-3 overview">
+Syllabi, schedules, and lesson plans for the Computational Form class.
+</div>
+
+<!-- Inner -->
+<div class="col-12 col-md-6">
+<div class="row">
+
+
+<!-- <a class="col-6 col-md-6" data-ready="true" href="./introduction">
+
+&nbsp;
+
+</a> -->
+
+
+
+<a class="col-6 col-md-6" data-ready="true" href="./2019">
+
+### Class Notes 2019
+
+</a>
+
+
+<a class="col-6 col-md-6" data-ready="true" href="http://sketches2019.compform.net">
+
+### Sketch Book 2019
+
+</a>
+
+<a class="col-6 col-md-6" data-ready="true" href="./2018">
+
+### Class Notes 2018
+
+</a>
+
+
+<a class="col-6 col-md-6" data-ready="true" href="http://sketches2018.compform.net">
+
+### Sketch Book 2018
+
+</a>
+
+
+
+<a class="col-6 col-md-6" data-ready="true" href="http://2017.compform.net/">
+
+### Class Notes 2017
+
+</a>
+
+
+<a class="col-6 col-md-6" data-ready="true" href="http://sketches.compform.net">
+
+### Sketch Book 2017
+
+</a>
+
+
+<a class="col-6 col-md-6" data-ready="true" href="http://psam3060-d-s16.github.io/class_notes/">
+
+### Class Notes 2016
+
+</a>
+
+
+<a class="col-6 col-md-6" data-ready="true" href="http://compform.tumblr.com/">
+
+### Sketch Book 2016
+
+</a>
+
+
+
+</div>
+</div>
+<!-- /Inner -->
+</div>
+<!-- /Outer -->
+
+<!--
 
 
 # Comp Form Spring 2018
@@ -245,28 +332,20 @@ p5.js
 | [Week 15, May 4](microgames/plan.html)        | [Microgames](microgames)                             |
 | [Week 16, May 11](postmortem_party/plan.html) | Postmortem Party                                     |
 
+
+-->
+
+
 <style>
-table {
-    /* border: 1px solid red; */
-}
-td {
-    /* border: 1px solid blue; */
-    width: 50%;
-}
+    
 
-td a[href="#"] {
-    color: black;
-}
-
-
-
-.gray {
-    color: #AAA;
-}
 
 .top {
     /* border: 1px solid red; */
     padding: 0;
     font-size: 14px;
 }
+
+
+
 </style>
