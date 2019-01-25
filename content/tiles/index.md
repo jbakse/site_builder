@@ -103,7 +103,7 @@ Discuss the aesthetic and practical features of tile sets and maps.
 
 - How does this method impact design rhythm, complexity, concord, similarity, repetition?
 - How are tile maps different from and similar to patterns?
-- What kinds of forms does this method lead to naturally? How can this be embraced or avoided?
+- What kinds of forms does this method lead to naturally? How can these be embraced or avoided?
 - What are the essential elements of this method?
 - How does a tile kit like this compare to building kits like lego blocks?
 - How does a tile kit compare to a font?

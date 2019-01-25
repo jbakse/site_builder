@@ -20,7 +20,11 @@ At heart, a procedurally-generated animation is just a series of procedurally-ge
 
 Creatively, animation differs from still images by introducing another dimension: time. Because animations live in time, they excel at showing actions, cause and effect, expressing narrative arcs, and telling stories.
 
-[[todo: Slide show: Oskar Fischinger on here,  show a smear frame, Chuck Jones (mention golden age), boids, inside the mind's eye, pixar, realtime indie game "inside", realtime AAA game thats really animaty... ]]
+::: slides .contain
+@@include('./slides.yaml')
+/::
+
+<!--[[todo: Slide show: Oskar Fischinger on here,  show a smear frame, Chuck Jones (mention golden age), boids, inside the mind's eye, pixar, realtime indie game "inside", realtime AAA game thats really animaty... ]]-->
 
 
 ## Real-time vs. Pre-rendered

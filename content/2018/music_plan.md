@@ -6,28 +6,50 @@ debug: false
 
 ## Week 13, Music {plain}
 
+[Music Chapter](./index.html) {boxed right}
+
+### Learning Objectives
+Students will be able to:
+- Describe some charateristics of a note, including its ASDR envelope
+- Use the SimpleSynth class to alter a note
+- Describe some charateristics of a melody
+
+<!--
+- Look at examples of procedural music
+-->
+
 ### Materials
 
 
-### Learning Objectives
-- Briefly discuss Comp Form pedagogy
-- Look at examples of procedural music
 
 ### Schedule
-
+<!-->
 | Time | ESA            | Type             | Activity               |
 | ---- | -------------- | ---------------- | ---------------------- |
-| Pre  | TBD            | -                | TBD                    |
 | 3:50 | Review+Engage  | Discussion       | Homework Review        |
 | 4:20 | Study          | Lecture          | Why Music Intro        |
 | 4:35 | Study          | Lecture          | Examples of Comp Music |
 | 4:45 | Study          | Lecture          | Today's Format         |
 | 4:50 | Activate+Study | Activity+Lecture | Synthesizing a Note    |
-| 5:15 | break          | break            | break                  |
+| 5:15 | Break          | -                | Break                  |
 | 5:20 | Activate+Study | Activity+Lecture | Playing a Melody       |
 | 5:45 | Activate+Study | Activity+Lecture | Generating a Melody    |
 | 6:15 | Activate       | Discussion       | Code To Spec           |
 | 6:25 | Study          | Lecture          | Homework               |
+-->
+
+| Duration | Time | Purpose      | Format       | Name                   |
+| --  | ---- | -------- | ---------- | --------------------------------- |
+| 30 | 3:50 | Review+Engage  | Discussion       | Homework Review        |
+| 15 | 4:20 | Study          | Lecture          | Why Music Intro        |
+| 10 | 4:35 | Study          | Lecture          | Examples of Comp Music |
+| 5  | 4:45 | Study          | Lecture          | Today's Format         |
+| 25 | 4:50 | Activate+Study | Activity+Lecture | Synthesizing a Note    |
+| 5  | 5:15 | Break          | -                | Break                  |
+| 25 | 5:20 | Activate+Study | Activity+Lecture | Playing a Melody       |
+| 30 | 5:45 | Activate+Study | Activity+Lecture | Generating a Melody    |
+| 10 | 6:15 | Activate       | Discussion       | Code To Spec           |
+| 5  | 6:25 | Study          | Lecture          | Homework               |
 
 
 ### Outline
@@ -77,10 +99,6 @@ But the real reason is:
 - Comp Form: student-centered, activity-based, variety of models, even the blog post
 - Music: worked in reverse for me, learning about music helped me reframe my exisiting models
 
-
-### Class Notes
-
-[Music](./index.html) {boxed right}
 
 
 

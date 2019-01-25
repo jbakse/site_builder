@@ -95,7 +95,9 @@ Along the way we'll use a variety of programming languages and tools:
 - p5.js
 - paper.js
 - OpenSCAD
-- Vuo
+- Vuo 
+
+<!--Will you use Vuo this year?-->
 
 We will also explore some interesting programming topics including:
 - pseudo-random numbers
@@ -128,7 +130,7 @@ This class focuses on exploration. Each class introduces a new topic or tool, us
 
 As noted in the Syllabus, students in the MFA program must complete one extra assignment. BFA students are encouraged to also complete this assignment for extra credit. 
 
-In short this assignment is to choose a topic for further exploration, build a somewhat larger project, and write up a case study for the project. This assignment is intended to be flexible, so feel free to propose your own spin.
+In short, this assignment is to choose a topic for further exploration, build a somewhat larger project, and write up a case study for the project. This assignment is intended to be flexible, so feel free to propose your own spin.
 
 You can complete this assignment at any time during the semester. I suggest turning this in around midterms. Please discuss with me your general plan for your project before starting.
 
@@ -169,7 +171,7 @@ Post it. Then stop working. Try something different tomorrow.
 
 > 1 to 2 hours is too short. Can I work longer?
 
-If after an hour, you feel excited about what you are doing then keep working or make an in-progress post and build on it the next day. If you are frustrated, just post what you've got and move on.
+If after an hour, you feel excited about what you are doing, then keep working or make an in-progress post and build on it the next day. If you are frustrated, just post what you've got and move on.
 
 Don't ever put more than 2 hours into a frustrating sketch. Just post what you've got and start fresh on something else the next day.
 
@@ -195,7 +197,7 @@ Post anyway. If you can't do exactly what you want, find something close that yo
 
 <br>
 
-> I'm tired of looking at the computer screen? Can I do a couple of posts with paper/paint/glue/wood/whatever?
+> I'm tired of looking at the computer screen. Can I do a couple of posts with paper/paint/glue/wood/whatever?
 
 Absolutely. **I highly recommend that you do!** The more variety between your posts the better. If the work relates to the weekly topic, you can make it however you want.
 
@@ -232,13 +234,13 @@ Attend every class. This class moves fast. New content is introduced in every me
 
 Arrive early. Get to the room early, review the work of your fellow students, and review the class notes from the previous week. Get yourself mentally settled and ready for class.
 
-Stay late. After class, take some time to summarize the weeks key content in your sketchbook. 
+Stay late. After class, take some time to summarize the week's key content in your sketchbook. 
 
 ### Breaks
-I will plan for a short break in the middle of each class. Avoid leaving class except during the break. Coming and going during lectures, activities, and class discussion is distruptive and rude.
+I will plan for a short break in the middle of each class. Avoid leaving class except during the break. Coming and going during lectures, activities, and class discussion is disruptive and rude.
 
 
-### Be Pepared
+### Be Prepared
 Bring a laptop + a Comp Form sketchbook + red pen + black pen + pencil + camera/phone to every class.
 
 
@@ -249,8 +251,7 @@ All the work you submit for this class should be your own. For the most part you
 
 
 ### Syllabus Review
-Please review the [syllabus here](../syllabus.html).
-
+Please review the [syllabus here](../2019/syllabus.html).
 
 ### The Class Sketch Blog
 

@@ -1,31 +1,27 @@
 ---
-title: Random
+title: Animation
 layout: layouts/compform_plain.pug
 debug: false
 ---
 
-## Week 2, Random Values {plain}
+## Week #10, Animation {plain}
 
-[Random Values Chapter](../random/index.html){boxed right}
+[Animation Chapter](./index.html){boxed right}
 
 ### Learning Objectives
 Students will be able to:
-- Use the `random()` function
-- Map and bias random values
-- Select and implement appropriate strategies for randomization
-- Identify what random biases looks like
-- Understand what pseudorandom values are
+
+
 
 ### Materials
-- Six- and Twelve-sided Dice
-- Dice Worksheet: [Illustrator](../handouts/dice_chart.ai), [SVG](../handouts/dice_chart.svg)
-- LCG Worksheet: [Illustrator](../handouts/lcg_random.ai), [SVG](../handouts/lcg_random.svg)
+
 
 
 ### Schedule
 
-| Duration | Time | Purpose      | Format       | Name                                       |
-| -- | ---- | -------- | ---------- | -------------------------------------------------- |
+<!--
+| Duration | Time | Purpose      | Format       | Name                                    |
+| --  | ---- | -------- | ---------- | -------------------------------------------------- |
 | 10  | 3:50 | Engage   | Activity   | Homework Tagging                                   |
 | 30  | 4:00 | Review   | Critique   | Homework Review Questions                          |
 | 10  | 4:30 | Engage   | Discussion | Homework Introduction + Guess Today's Topics       |
@@ -33,11 +29,12 @@ Students will be able to:
 | 10  | 4:50 | Engage   | Activity   | 2d6 vs 1d12 Dice Chart                             |
 | 20  | 5:00 | Study    | Lecture    | The Methodical Application of Chance               |
 | 5   | 5:20 | Activate | Discussion | Skyline Tactic Match                               |
-| 10  | 5:25 | Break    | Break      | Break                                              |
+| 10  | 5:25 | Break    | -          | Break                                              |
 | 10  | 5:35 | Study    | Lecture    | Pseudorandom vs Random                             |
 | 15  | 5:45 | Activate | Activity   | Pencil + Paper LCG                                 |
 | 10  | 6:00 | Activate | Lecture    | Study Example                                      |
 | 20  | 6:10 | Activate | Coding     | In-class Challenges                                |
+-->
 
 
 

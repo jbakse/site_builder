@@ -24,7 +24,7 @@ debug: false
 
 
 ## Course Description
-Computer programming is a powerful tool for creating and manipulating form. It has long been used to by artists, designers, and composers to explore new aesthetics. In this class, students will continue this tradition of experimentation by creating and processing images, animation, video, sound, and 3D forms with rules, algorithms, and code. This class emphasizes formal exploration through daily "sketching". This class will build on existing programming skills by introducing a variety techniques, programming languages, and tools related to procedural generation. Topics will include: creating raster and vector images with javascript and p5.js, synthesizing audio in javascript, and using OpenSCAD to create models for 3D printing.
+Computer programming is a powerful tool for creating and manipulating form. It has long been used to by artists, designers, and composers to explore new aesthetics. In this class, students will continue this tradition of experimentation by creating and processing images, animation, video, sound, and 3D forms with rules, algorithms, and code. This class emphasizes formal exploration through daily "sketching". This class will build on existing programming skills by introducing a variety of techniques, programming languages, and tools related to procedural generation. Topics will include: creating raster and vector images with Javascript and p5.js, synthesizing audio in Javascript, and using OpenSCAD to create models for 3D printing.
 
 In this class we will make things that make things.
 
@@ -38,23 +38,23 @@ In this course students will:
 - Develop a practice of daily "sketching"
 - Explore using computation to create work in a variety of media
 - Problem solve alone and with other students
-- Build a foundation for using these skill in their future work
+- Build a foundation for using these skills in their future work
 
 ### Homework
 Homework is the most important part of this class. This course involves a new way of thinking and multiple new tools and languages. To learn any language or tool, you must use it. The homework is where you will apply what we discuss in class.
 
-Each week you will create and post 5 sketches to the class sketch blog. These sketches should be related to the current week's theme. You are encouraged to also draw on themes from previous weeks. You must make an effort to post work each week, late work will not be accepted.
+Each week you will create and post 5 sketches to the class sketch blog. These sketches should be related to the current week's theme. You are encouraged to also draw on themes from previous weeks. You must make an effort to post work each week: late work will not be accepted.
 
-This assignment structure is meant to encourage experimentation and allow flexibility. In particular, this structure is intended to allow students to adjust the technical difficulty of the class work to suit their skill level. Please speak with me if you have any concerns related to this.
+This assignment structure is meant to encourage experimentation and allow flexibility. In particular, this structure is intended to allow students to adjust the technical difficulty of the class work to suit their skill level. Please speak with me if you have any concerns related to the homework structure.
 
 ### Class Sketch Blog
-Students will post their daily sketches to the class sketch blog. While students will retain the intellectual property rights to their work, they should be aware that the sketch blog is public and should be comfortable sharing images of their work publicly. In addition students are highly encouraged to share the source code to their projects. Please speak with me if you have any concerns related to this.
+Students will post their daily sketches to the class sketch blog. While students will retain the intellectual property rights to their work, they should be aware that the sketch blog is public and should be comfortable sharing images of their work publicly. In addition, students are highly encouraged to share the source code to their projects. Please speak with me if you have any concerns related to the blog.
 
 
 ### Course Outline
 The following outlines the main topics to be presented in each class. This may be adjusted during the semester.
 
-Each week follows a similar format: an introduction and discussion of the the weekly theme followed by an in-class workshop to explore the theory and technology chosen to support the theme. Students will participate in group discussions and hands-on activities each week.
+Each week follows a similar format: an introduction and discussion of the weekly theme followed by an in-class workshop to explore the theory and technology chosen to support the theme. Students will participate in group discussions and hands-on activities each week.
 
 
 Class                                                   | Topics                        
@@ -101,7 +101,7 @@ B | 3 | 4 Posts, Good Creative/Technical Exploration
 A | 4 | 5 Posts, Very Good Creative/Technical Exploration
 A+ | 5 | 6 Posts, 1 Extra Credit Point
 
-Note: Working at a steady pace is important for this class, but some flexibility is needed. Posting 6 high quality sketches in a week will earn extra credit point, which will partially offset a slow week. You cannot earn more than one point of extra credit in a given week.
+Note: Working at a steady pace is important for this class, but some flexibility is needed. Posting 6 high quality sketches in a week will earn an extra credit point, which will partially offset a slow week. You cannot earn more than one point of extra credit in a given week.
 
 ### Resubmitting and Making Up Work
 
@@ -118,16 +118,16 @@ Extra Credit will be given for formal contributions to the class. One way to con
 There is no required textbook for this course. Students will not need to purchase any readings for this class. Links to online articles will occasionally be provided.
 
 ### Materials and Supplies
-Please bring your laptop, a notebook, a sketchbook, and black pen, a red pen, and a pencil to each class.
+Please bring your laptop, a notebook, a sketchbook, a black pen, a red pen, and a pencil to each class.
 
 ### Email
-I will send official announcements regarding the class via new school email. You should check and read your email frequently and respond promptly.
+I will send official announcements regarding the class via New School email. You should check and read your email frequently and respond promptly.
 
 ### Office Hours
 By appointment. Email to arrange.
 
 ### Backups and Github
-Each student **must** keep backups of their daily sketches, including source code and images and be prepared to **submit or re-submit** this work at anytime. I strongly suggest that you host your work on Github to benefit from both versioning and backup. Data loss, even if due to a failure of a class resource such as the sketch blog or third party service will not be accepted as an excuse for missing work.
+Each student **must** keep backups of their daily sketches, including source code and images, and be prepared to **submit or re-submit** this work at any time. I strongly suggest that you host your work on Github to benefit from both versioning and backup. Data loss, even if due to a failure of a class resource such as the sketch blog or a third party service will not be accepted as an excuse for missing work.
 
 ### Attendance
 In short: attend every class, arrive early, stay late.

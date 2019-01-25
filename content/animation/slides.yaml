@@ -36,20 +36,32 @@
       href: https://idearocketanimation.com/8857-animation-techniques-smear/
 
 - artist: Pixar
-  title: 
-  image:  
-  comments: 
+  title: Up
+  image:  http://successyeti.com/wp-content/uploads/2015/10/up.jpg
+  comments: Pixar has been a pioneer in digital animation, producing feature-length films with compelling stories, memorable characters, and iconic art.
   links:
-    - label: 
-      href:
+    - label: Website
+      href: https://www.pixar.com/feature-films/up/
+
+- artist: LAIKA
+  title: Kubo and the Two Strings, 2016
+  image:  
+  comments: LAIKA creates beautiful, intricate stop-motion animation using contemporary technologies including 3D printing, laser cutting, and some digital animation.
+  links:
+   - label: Website
+      href: https://www.laika.com/
+    - label: Behind-the-scenes on Kubo and the Two Strings
+      href: https://www.theverge.com/2016/8/18/12500814/laika-studios-behind-the-scenes-kubo-and-the-two-strings-video
 
 - artist: Playdead
   title: Inside, 2016
-  image:  
-  comments:
+  image:  http://www.entertainmentdemocracy.com/wp-content/uploads/2016/12/INSIDE_shot_20-864x486.png
+  comments: A puzzle-platformer game with evocative, dark animation. 
   links:
     - label: "Website"
       href: http://www.playdead.com/games/inside/
+    - label: "GDC talk on Inside animation"
+      href: https://www.gdcvault.com/play/1023002/Low-Complexity-High-Fidelity-INSIDE
 
 
 
