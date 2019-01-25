@@ -46,7 +46,13 @@ include('./compform_slides.yaml')
 
 ### What Computational Form is Not
 
-While we use computer programming throughout this class, it is important to understand that procedural generation doesn't require a computer. Procedural generation is about defining instructions that create form. Computers are very useful tools for carrying out these instructions, but artists have also built systems that rely on humans or purpose-built machines instead. Many of the works included in the slideshow above embody principles of computation and instruction without using computers.
+While we use computer programming throughout this class, it is important to understand that procedural generation doesn't require a computer. Procedural generation is about defining instructions that create form. Computers are very useful tools for carrying out these instructions, but artists have also built systems that rely on humans or purpose-built machines instead. Many of the works included in the slideshow below embody principles of computation and instruction without using computers.
+
+
+::: slides .contain
+@@include('../procedures/compform_slides.yaml')
+/::
+
 
 <!-- 
 ::: .activity
@@ -221,10 +227,20 @@ Coming into this class, you should:
 
 That said, this class offers a good deal of flexibility. If you are not sure if you are ready for this class, please speak with me today to make a plan.
 
-### Every Class
+### Attend every class, arrive early, stay late.
+Attend every class. This class moves fast. New content is introduced in every meeting. We will have individual or group activities in most if not all meetings. Don't miss any.
 
-- Be early + ready.
-- Bring your computer, a sketchbook, a pencil, and a pen.
+Arrive early. Get to the room early, review the work of your fellow students, and review the class notes from the previous week. Get yourself mentally settled and ready for class.
+
+Stay late. After class, take some time to summarize the weeks key content in your sketchbook. 
+
+### Breaks
+I will plan for a short break in the middle of each class. Avoid leaving class except during the break. Coming and going during lectures, activities, and class discussion is distruptive and rude.
+
+
+### Be Pepared
+Bring a laptop + a Comp Form sketchbook + red pen + black pen + pencil + camera/phone to every class.
+
 
 ### Original Work
 All the work you submit for this class should be your own. For the most part you should create all the code, images, and writing used in your sketches yourself. In some cases it might make sense to incorporate something you didn't make yourself, like a code library.
@@ -238,7 +254,7 @@ Please review the [syllabus here](../syllabus.html).
 
 ### The Class Sketch Blog
 
-Our class sketch blog will host your daily experiments and links to content of interest to the class.
+Our class sketch blog will host your daily experiments and links to content of interest to the class. As you create sketches throughout the week, post them to the blog. Also be sure to review the work of everyone else.
 
-[2018 Sketch Blog](http://sketches2018.compform.net){boxed right}
+[2019 Sketch Blog](http://sketches2019.compform.net){boxed right}
 

@@ -1,13 +1,13 @@
 - artist: Josef Albers
   title: Bauhaus Lettering Set, 1926-31
   image: https://s-media-cache-ak0.pinimg.com/736x/a1/51/42/a15142d6be1048869220f180720e8e67.jpg
-  comments: Josef Albers was a highly inflential artist, designer, and educator. First a student and then faculty at the Bauhaus, his color theory work is a primary influence of design pedagogy.
+  comments: Josef Albers was a highly influential artist, designer, and educator. First a student and then faculty at the Bauhaus, his color theory work is a primary influence of design pedagogy.
   links:
-    - label: The Josef & Anni Albers Founation
+    - label: The Josef & Anni Albers Foundation
       href: http://www.albersfoundation.org/
     - label: "MoMA: Bauhaus Lettering Set"
       href: http://www.moma.org/collection/works/2724
-    - label: "MoMA: Joseph Albers"
+    - label: "MoMA: Josef Albers"
       href: http://www.moma.org/collection/artists/97?locale=en
 
 
@@ -16,11 +16,11 @@
   image:  http://www.moma.org/media/W1siZiIsIjY2NzIwIl0sWyJwIiwiY29udmVydCIsIi1yZXNpemUgMTI4MHgxMjgwXHUwMDNFIl1d.jpg?sha=73f0e9c465058815
   comments: Alber's Bauhaus Lettering Set is a modularly constructed alphabet composed from 10 pieces (top row).
   links:
-    - label: The Josef & Anni Albers Founation
+    - label: The Josef & Anni Albers Foundation
       href: http://www.albersfoundation.org/
     - label: "MoMA: Bauhaus Lettering Set"
       href: http://www.moma.org/collection/works/2724
-    - label: "MoMA: Joseph Albers"
+    - label: "MoMA: Josef Albers"
       href: http://www.moma.org/collection/artists/97?locale=en
 
 
@@ -49,21 +49,21 @@
 
 
 
-- artist: Jessica Svendsen - Yale Architecture Lecture Series Poster - 2015
-  title:
-  image: https://jessicasvendsen.imgix.net/yaleschoolarchitecture_fall2015_jessicasvendsen_1.png?w=992&fm=jpg&q=75&sharp=20&fit=max&dpr=2
-  comments: >
-  links:
-    - label: Artist's Site
-      href: http://jessicasvendsen.com/
-    - label: "100 Days with Josef Müller-Brockmann"
-      href: http://jessicasvendsen.com/100-Days-with-Josef-Muller-Brockmann
+# - artist: Jessica Svendsen - Yale Architecture Lecture Series Poster - 2015
+#   title:
+#   image: https://jessicasvendsen.imgix.net/yaleschoolarchitecture_fall2015_jessicasvendsen_1.png?w=992&fm=jpg&q=75&sharp=20&fit=max&dpr=2
+#   comments: >
+#   links:
+#     - label: Artist's Site
+#       href: http://jessicasvendsen.com/
+#     - label: "100 Days with Josef Müller-Brockmann"
+#       href: http://jessicasvendsen.com/100-Days-with-Josef-Muller-Brockmann
 
 
 - artist: Sunsoft
   title: Batman (NES)
   image: ./slides/batman.png
-  comments: Batman exhbits some of the best visuals found on the NES. Every tile uses just 4 colors chosen from the NES's 64 color palette.
+  comments: Batman exhibits some of the best visuals found on the NES. Every tile uses just 4 colors chosen from the NES's 64-color palette.
   links:    
     - label: Batman Tile Maps
       href: http://www.vgmaps.com/Atlas/NES/index.htm#B

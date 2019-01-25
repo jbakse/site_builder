@@ -20,7 +20,7 @@ software: p5.js + p5.dom
 
 ## Random Values
 
-We use the word *random* to mean an assortment of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety. 
+We use the word *random* to mean an hodgepodge of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety. 
 
 Artists began working with randomness and chance long before the invention of computers. Then, as now, artists had to decide what aspects to control within a piece, and what aspects to leave to chance. 
 

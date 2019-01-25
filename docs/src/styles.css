@@ -164,9 +164,15 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
-  color: inherit;
   letter-spacing: 0.31px;
   border-bottom: 1px solid transparent; }
+
+.comp-form-toc a h3 {
+  color: #04B;
+  display: inline-block; }
+
+.comp-form-toc a {
+  color: #04B; }
 
 .comp-form-toc .row > a,
 .comp-form-toc .row > a:hover {
@@ -174,9 +180,6 @@
   text-decoration: none;
   font-size: 12px;
   margin-bottom: 25px; }
-
-.comp-form-toc h3 a {
-  color: black; }
 
 .comp-form-toc h3 a:hover {
   border-bottom: 1px soild black; }
