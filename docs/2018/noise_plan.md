@@ -6,21 +6,25 @@ debug: false
 
 ## Week 4, Noise {plain}
 
-### Materials
-
-1D Noise Worksheet, 12-sided dice
+[Noise Chapter](./index.html) {boxed right}
 
 ### Learning Objectives
+Students will be able to:
+- Describe what the `noise()` function does.
+- Understand when, why, and how to use `noise()`
+- Understand sampling, mapping, and controlling `noise()`
+- Choose `noise()` vs. `random()`
+- Describe the importance of Perlin Noise in procedural generation
+- Qualities of Noise (Frequency, Amplitude, Smoothing, Layering, Dimensions)
 
-* What the `noise()` function does.
-* When, why, and how to use `noise()`
-* Sampling, mapping, and controlling `noise()`
-* Using `noise()` vs using `random()`
-* Importance of Perlin Noise in Procedural Generation
-* Qualities of Noise (Frequency, Amplitude, Smoothing, Layering, Dimensions)
+### Materials
+
+- 12-sided dice
+- 1D Noise Worksheet: [Illustrator](../handouts/1d_noise_graph.ai), [SVG](../handouts/1d_noise_graph-01.svg)
 
 ### Schedule
 
+<!--
 | Time | ESA           | Type           | Activity                          |
 | ---- | ------------- | -------------- | --------------------------------- |
 | Pre  | TBD           | -              | TBD                               |
@@ -34,6 +38,21 @@ debug: false
 | 5:20 | Activate      | Coding         | Intro + Challenges                |
 | 5:40 | Study         | Lecture        | Challenges Discussion             |
 | 6:00 | Activate      | Coding Lecture | 05 Working With Noise             |
+-->
+
+| Duration | Time | Purpose      | Format       | Name                          |
+| -- | ---- | ------------ | -------------- | --------------------------------- |
+| 30 | 3:50 | Review+Engage | Discussion     | Homework Review                   |
+| 10 | 4:20 | Study         | Lecture        | 01 Noise                          |
+| 10 | 4:30 | Engage        | Activity       | 04 Noise Worksheet                |
+| 10 | 4:40 | Engage        | Activity       | Noise Circles Whiteboard Computer |
+| 20 | 4:50 | Study         | Lecture        | 02 Noise vs. Random               |
+| 10 | 5:10 | Study         | Lecture        | 03 Benefits of Noise              |
+| 5  | 5:20 | Break         | -              | Break                             |
+| 20 | 5:25 | Activate      | Coding         | Intro + Challenges                |
+| 20 | 5:45 | Study         | Lecture        | Challenges Discussion             |
+| 25 | 6:05 | Activate      | Coding         | 05 Working With Noise             |
+
 
 ### Outline
 
@@ -112,6 +131,3 @@ Challenges
     }
 </style>
 
-### Class Notes
-
-[Noise](./index.html) {boxed right}

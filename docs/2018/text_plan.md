@@ -6,19 +6,18 @@ debug: false
 
 ## Week 10, Generating Text {plain}
 
-### Materials
-- Markov Worksheet
-- Markers
-
+[Text Chapter](./index.html){boxed right}
 
 ## Learning Objectives
 
 
-### Announcements
-- Check out [Recursive Drawing](http://recursivedrawing.com/draw.html)
 
+### Materials
+- Markov Worksheet: [Illustrator](handouts/markov.ai), [SVG](handouts/markov.svg)
+- Markers
 
 ### Schedule
+<!--
 | Time | ESA           | Type         | Activity                      |
 | ---- | ------------- | ------------ | ----------------------------- |
 | Pre  | TBA           | -            | Recursive Drawing?            |
@@ -32,7 +31,21 @@ debug: false
 | 5:40 | Activate      | Coding       | In-class challenge            |
 | 6:00 | Study         | Code Lecture | In-class challenge discussion |
 | 6:20 | Study         | Lecture      | Homework Review               |
+-->
 
+| Duration | Time | Purpose | Format | Name                                |
+| -- | ---- | -------- | ---------- | -----------------------------------  |
+| -- | Pre  | TBA           | -            | Recursive Drawing?            |
+| 30 | 3:50 | Review+Engage | Discussion   | Homework Review               |
+| 20 | 4:20 | Study         | Lecture      | 01 Text                       |
+| 10 | 4:40 | Study         | Lecture      | 02 Templates                  |
+| 15 | 4:50 | Study         | Lecture      | 03 Markov Chain               |
+| 15 | 5:05 | Activate      | Activity     | Markov Chain Worksheet        |
+| 5  | 5:20 | Break         | Break        | Break                         |
+| 15 | 5:25 | Study         | Lecture      | 04 Context-free Grammars      |
+| 20 | 5:40 | Activate      | Coding       | In-class challenge            |
+| 20 | 6:00 | Study         | Code Lecture | In-class challenge discussion |
+| 10 | 6:20 | Study         | Lecture      | Homework Review               |
 
 ### Lecture Notes
 
@@ -75,10 +88,9 @@ Examples, Subreddit Simulator, NYT Best Places, ELIZA
 /::
 <!-- Choose a project that presents an interesting direction for further design inquiry. Suggest possible variations on this project. -->
 
+### Announcements
+- Check out [Recursive Drawing](http://recursivedrawing.com/draw.html)
 
-### Class Notes
-
-[Text](./index.html){boxed right}
 
 
 <style> 

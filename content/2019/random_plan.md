@@ -50,7 +50,7 @@ Students will be able to:
 
 
 ### Plan
-*indvidually, 5 minutes*
+*individually, 5 minutes*
 
 Scroll through this weeks homework and tag posts as you like.
 
@@ -66,14 +66,14 @@ Share your chosen sketch, comment on it and summarize your discussion.
 ### Groups
 
 ::: .headless
-| Group | Question                                                                                                                                                      |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1     | A, B, C <br/>How does working within constraints support creativity?                                                                                          |
-| 2     | A, B, C <br/>Considering the tile set as a tool, how do tools impact authorship?                                                                              |
-| 3     | A, B, C <br/>Choose a sketch you feel should be tagged 🤓. Explain why.                                                                                       |
-| 4     | A, B, C <br/>Choose a sketch you feel should be tagged 😂. Explain why.                                                                                       |
-| 5     | A, B, C <br/>Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project? |
-| 6     | A, B, C <br>Choose a sketch you feel should be tagged 😍. Explain why.                                                                                        |
+| Group | Question                                                                                                                                                                     |
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Batool, Alonso, Josefina <br/>How does working within constraints support creativity?                                                                                        |
+| 2     | Felix, Akshansh, Noah <br/>Considering the tile set as a tool, how do tools impact authorship?                                                                               |
+| 3     | Kevin, Anna, Kathrin <br/>Choose a sketch you feel should be tagged 🤓. Explain why.                                                                                         |
+| 4     | Tinsley, Andrew, Brad K. <br/>Choose a sketch you feel should be tagged 😂. Explain why.                                                                                     |
+| 5     | Brooke E., Ray, Janice <br/>Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project? |
+| 6     | Fei Bi, Archit, Ivy, Jungu <br>Choose a sketch you feel should be tagged 😍. Explain why.                                                                                    |
 /::
 
 /::
@@ -86,7 +86,7 @@ Share your chosen sketch, comment on it and summarize your discussion.
 1. Did you cite your classmates tiles?
 2. You can now tag sketches with 🤓😂😍. 
 3. You can format your sketch comments with markdown.
-
+4. Next Week After Class: Discovering OOP in Javascript
 
 
 <style> 

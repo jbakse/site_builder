@@ -6,21 +6,21 @@ debug: false
 
 ## Week 1, Introduction {plain}
 
-
-### Instructor Materials
-Comp Form Stationary, Blank Tile Kits, Markers, Camera
-
+[Introduction](./index.html){boxed right}
+[Tile Sets Chapter](../tiles/index.html){boxed right}
 
 ### Learning Objectives
-- Class Content and Structure
-- Homework Expectations
-- How to use the Sketch Blog
-- Edge-Matched Tile Graphics
+Students will be able to:
+- Understand class content and structure
+- Understand homework expectations
+- Use the sketch blog
+- Create edge-matched tile graphics
 
-
-### Announcements
-Graduate extra assignment.
-
+### Materials
+- Comp Form Stationery
+- Blank Tile Kits
+- Markers
+- Camera
 
 ### Schedule
 
@@ -61,8 +61,6 @@ Who are you people? What are we doing here?
 - Ask your most important unanswered syllabus question.
 /::
 
+### Announcements
+Graduate extra assignment.
 
-### Related Chapters
-
-[Introduction](./index.html){boxed right}
-[Tile Sets](../tiles/index.html){boxed right}

@@ -5,18 +5,21 @@ debug: false
 ---
 ## Week 7, Turtle Graphics {plain}
 
-## Materials
+[Turtle Chapter](./index.html){boxed right}
 
 ## Learning Objectives
-
-- Introduce Logo, Mindstorms, and turtles
+Students will be able to:
+- Understand Logo, Mindstorms, and turtles
 - Compare turtle and Cartesian graphics.
-- Introduce basic turtle commands
-- Discuss the basic turtle class
+- Use basic turtle commands
+- Use the basic turtle class
 
+## Materials
+- Deck of Drawings
+- Drawing Instruction Worksheet
 
 ## Schedule
-
+<!--
 | Time | ESA           | Type           | Activity                    |
 | ---- | ------------- | -------------- | --------------------------- |
 | Pre  | TBA           | -              | Seymour Papert Videos       |
@@ -28,7 +31,19 @@ debug: false
 | 5:35 | Study         | Study Examples | Images, Push, Pop, Tree     |
 | 5:50 | Study         | Code Lecture   | Turtle Class                |
 | 6:10 | Intro         | Intro          | MFA Assignment              |
+-->
 
+| Duration | Time | Purpose      | Format       | Name                     |
+| --  | ---- | -------- | ---------- | ----------------------------------- |
+| -- | Pre  | TBA           | -              | Seymour Papert Videos       |
+| 30 | 3:50 | Review+Engage | Discussion     | Homework Review             |
+| 30 | 4:20 | Study         | Lecture        | 01 Logo and Turtle Graphics |
+| 10 | 4:50 | Study         | Lecture        | 02 A Simple Turtle in p5.js |
+| 25 | 5:00 | Activate      | Code           | Turtle Challenges + Break   |
+| 10 | 5:25 | Study         | Code Lecture   | Challenges Discussion       |
+| 25 | 5:35 | Study         | Study Examples | Images, Push, Pop, Tree     |
+| 20 | 5:50 | Study         | Code Lecture   | Turtle Class                |
+| 20 | 6:10 | Intro         | Intro          | MFA Assignment              |
 
 ## Lecture
 
