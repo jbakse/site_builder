@@ -73,7 +73,7 @@ Share your chosen sketch, comment on it and summarize your discussion.
 | 3     | Kevin, Anna, Kathrin <br/>Choose a sketch you feel should be tagged 🤓. Explain why.                                                                                         |
 | 4     | Tinsley, Andrew, Brad K. <br/>Choose a sketch you feel should be tagged 😂. Explain why.                                                                                     |
 | 5     | Brooke E., Ray, Janice <br/>Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project? |
-| 6     | Fei Bi, Archit, Ivy, Jungu <br>Choose a sketch you feel should be tagged 😍. Explain why.                                                                                    |
+| 6     | Fei Bi, Archit, Ivy, Jungu <br/>Choose a sketch you feel should be tagged 😍. Explain why.                                                                                   |
 /::
 
 /::

@@ -16,7 +16,7 @@ Students will be able to:
 - Practice problem analysis and interface design
 - Practice user-centered design concepts
 - Consider relationship between what you "make" and what you "design"
-- Consider distiction between "choices" and "options"
+- Consider distinction between "choices" and "options"
 - Reconsider parameters as desired outputs rather than specified inputs
 - Technical: Exposing parameters as global variables
 - Technical: Exposing parameters with HTML controls
@@ -68,16 +68,26 @@ Share your chosen sketch, comment on it and summarize your discussion.
 ### Groups
 
 ::: .headless
-| Group | Question                                                                                                                                                                  |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1     | A B C<br/>When allowing chance to influence their artwork, does an artist give up authorship?                                                         |
-| 2     | A B C<br/>Choose two sketches that you believe demonstrate a biasing technique discussed last week. What kind of bias do you think was used in each?         |
-| 3     | A B C<br/>Does computationally generated art have an inherent aesthetic?                                                                                   |
-| 4     | A B C<br/>Choose a work that combines procedural and non-procedural elements well. What works about this piece?                                                 |
-| 5     | A B C<br/>Choose a project that presents an interesting direction for further design inquiry. Suggest 5 possible avenues of development for this project. |
-| 6     | A B C<br/>The challenge is not a competition. But who won?                                                                                                  |
+| Group | Question                                                                                                                                                                     |
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Batool, Archit, Janice  <br/>When allowing chance to influence their artwork, does an artist give up authorship?                                                             |
+| 2     | Felix, Alonso,  Ivy<br/>Choose two sketches that you believe demonstrate a biasing technique discussed last week. What kind of bias do you think was used in each?           |
+| 3     | Kevin, Akshansh,  Josefina<br/>Does computationally generated art have an inherent aesthetic?                                                                                |
+| 4     | Tinsley, Anna ,  Noah<br/>Choose a work that combines procedural and non-procedural elements well. What works about this piece?                                              |
+| 5     | Brooke, Andrew, Kathrin <br/>Choose a project that presents an interesting direction for further design inquiry. Suggest 5 possible avenues of development for this project. |
+| 6     | Fei Bi, Ray, Jungu, Brad <br/>The challenge is not a competition. But who won?                                                                                               |
 /::
 /::
+
+
+
+
+
+
+
+
+
+
 
 
 

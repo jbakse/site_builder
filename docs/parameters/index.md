@@ -254,9 +254,26 @@ When designing, step back and focus on the relationship between your project and
 ![what_you_design](figures/what_you_design-01.svg)
 
 
-#### Parameters and Constraints
+#### Method-oriented vs Goal-oriented
+
+I sometimes find it helpful to consider wether my parameters should be method-oriented or goal-oriented. By method-oriented, I mean parameters that control what the procedure does. By goal-oriented, I mean parameters what control what the procedure achieves. This isn't a practical difference and programming languages don't make a distinction between these things. This is just a way of thinking about parameters and their purpose that can be helpful when designing interfaces.
+
+Loosely, method-oriented parameters correspond with the imperative programming paradigms and goal-oriented parameters correspond with declarative programming paradigm.
+
+::: js-lab
+/parameters/sketches/stipple_rect.js
+/::
+
+::: js-lab
+/parameters/sketches/stipple_rect_2.js
+/::
+
+
+
+
 
 [Wikipedia: Constraint Programming](https://en.wikipedia.org/wiki/Constraint_programming)
+
 [Matt Keeter: Constraint Solver](https://www.mattkeeter.com/projects/constraints/)
 
 ::: .activity
@@ -265,12 +282,14 @@ When designing, step back and focus on the relationship between your project and
 Begin designing a user interface for a fictional machine by considering which parameters you would expose.
 
 1. Choose a machine from the list below.
-2. Spend 6 minutes brainstorming possible parameters for your machine.
+2. Spend 4 minutes brainstorming possible parameters for your machine.
 3. Choose a user from the list below.
-4. Spend 3 minutes deciding which parameters to expose to your user. Choose exactly 3 parameters.
-5. Spend 1 minute deciding which parameters **not** to expose to your user. Choose exactly 1 parameter.
-6. Spend 3 minutes naming your exposed parameters and defining the allowed values for each.
-7. Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present.
+4. Spend 4 minutes considering the relationship between your machine and your user. 
+5. Choose one method-oriented parameter to expose to your user. 
+6. Choose one goal-oriented parameter to expose to your user.
+7. Choose one parameter you will **not** expose to your user.  
+8. For each parameter carefully choose a name, data type, and possible values if applicable.
+9.  Present your machine, user, and parameters to the class. You will have 2 minutes to present.
 
 ::: .half
 #### Machine Types {underline}
@@ -287,7 +306,7 @@ Begin designing a user interface for a fictional machine by considering which pa
 - Daily user
 - One-time user
 - A child
-- An [machine type] enthusiast
+- An enthusiast
 - Another machine
 - A small accounting firm
 /::
@@ -406,3 +425,6 @@ Build a face-generating tool. This tool will create an image of a face that can 
 
 [Variable Fonts](https://v-fonts.com/)
 : A compilation of [OpenType variable fonts](https://medium.com/variable-fonts/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369), which offer parametric control over weight, contrast, and other variables.
+
+[Safavid Surfaces and Parametricism](https://archinect.com/features/article/29553480/safavid-surfaces-and-parametricism)
+: Article describing "parametric design tools have brought about a contemporary resurgence of surface articulation". 
