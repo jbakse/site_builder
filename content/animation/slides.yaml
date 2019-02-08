@@ -1,18 +1,17 @@
 - artist: Oskar Fischinger
   title: An Optical Poem, 1938
-  image:  ./slides/fischinger.jpg
+  image: ./slides/fischinger.jpg
   comments: Oskar Fischinger was a painter and filmmaker who created abstract animations. Working before computer graphics, he experimented with hand animation techniques and pioneered animation set to music.
   links:
     - label: "Video"
       href: https://www.youtube.com/watch?v=6Xc4g00FFLk
     - label: "Google interactive tribute"
       href: https://www.google.com/logos/2017/fischinger/fischinger17.html
-      
 
 - artist: Odyssey Productions with Miramar Productions
   title: Mind's Eye Series, 1990-1996
   image: ./slides/mindseye.jpg
-  comments: The Mind's Eye series presented computer animations that were groundbreaking for their time. The videos consist of demo footage that is pieced together into surreal narratives. 
+  comments: The Mind's Eye series presented computer animations that were groundbreaking for their time. The videos consist of demo footage that is pieced together into surreal narratives.
   links:
     - label: "Video: The Mind's Eye: A Computer Animation Odyssey"
       href: https://archive.org/details/mindseyevhs
@@ -32,37 +31,33 @@
   image: https://idearocketanimation.com/wp-content/uploads/2016/03/b5c6eb85dcd9260569f9b1e44b55eac3.jpg
   comments: Smear frames, popularized by Chuck Jones in Warner Bros. cartoons, convey speed and motion blur.
   links:
-    - label: "Gallery of smear frames" 
+    - label: "Gallery of smear frames"
       href: https://idearocketanimation.com/8857-animation-techniques-smear/
 
 - artist: Pixar
-  title: Up
-  image:  http://successyeti.com/wp-content/uploads/2015/10/up.jpg
+  title: Brave
+  image: http://sciencebehindpixar.org/sites/science-behind-pixar/files/simulation_challenge_preview.jpg
   comments: Pixar has been a pioneer in digital animation, producing feature-length films with compelling stories, memorable characters, and iconic art.
   links:
-    - label: Website
-      href: https://www.pixar.com/feature-films/up/
+    - label: The Science Behind Pixar
+      href: http://sciencebehindpixar.org
 
 - artist: LAIKA
   title: Kubo and the Two Strings, 2016
-  image:  
+  image: https://www.laika.com/uploads/rich/rich_file/rich_file_file_name/661/Kubo_BTS__0003_variety.photo.swong.0002.jpg
   comments: LAIKA creates beautiful, intricate stop-motion animation using contemporary technologies including 3D printing, laser cutting, and some digital animation.
   links:
-   - label: Website
+    - label: Website
       href: https://www.laika.com/
     - label: Behind-the-scenes on Kubo and the Two Strings
       href: https://www.theverge.com/2016/8/18/12500814/laika-studios-behind-the-scenes-kubo-and-the-two-strings-video
 
 - artist: Playdead
   title: Inside, 2016
-  image:  http://www.entertainmentdemocracy.com/wp-content/uploads/2016/12/INSIDE_shot_20-864x486.png
-  comments: A puzzle-platformer game with evocative, dark animation. 
+  image: http://www.entertainmentdemocracy.com/wp-content/uploads/2016/12/INSIDE_shot_20-864x486.png
+  comments: A puzzle-platformer game with evocative, dark animation.
   links:
     - label: "Website"
       href: http://www.playdead.com/games/inside/
     - label: "GDC talk on Inside animation"
       href: https://www.gdcvault.com/play/1023002/Low-Complexity-High-Fidelity-INSIDE
-
-
-
-
