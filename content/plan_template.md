@@ -65,6 +65,11 @@ Present: Faculty or student led presentation of intert
 | 6:10 | 20 m     | Activate | Coding     | In-class Challenges                          |
 
 
+| Time | Duration | Purpose | Format   | Name            |
+| ---- | -------- | ------- | -------- | --------------- |
+| 3:50 | 30 m     | Engage  | Activity | Homework Review |
+| x    | x        | x       | x        | x               |
+
 
 ::: .activity
 ## Homework Review
