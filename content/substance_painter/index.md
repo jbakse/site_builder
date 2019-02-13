@@ -41,6 +41,26 @@ Substance Painter is a tool that makes working with PBR texture sets easy in mul
 - Photoshop like management of layers, folders, and composting.
 - View the composite effect with a PBR shader in real-time in the viewport
 
+## Lesson Plan
+
+| Time | Duration | Purpose  | Format   | Name                                      |
+| ---- | -------- | -------- | -------- | ----------------------------------------- |
+| 3:50 | 15 m     | Study    | Lecture  | Introduction                              |
+| 4:05 | 5 m      | Study    | Lecture  | Creating A Project                        |
+| 4:10 | 10 m     | Engage   | Hands-on | Creating A Project + Open Play            |
+| 4:20 | 5 m      | Study    | Lecture  | Environment and Camera Settings           |
+| 4:25 | 5 m      | Engage   | Hands-on | Environment and Camera Settings           |
+| 4:30 | 5 m      | Study    | Lecture  | Fill and Paint Layers                     |
+| 4:35 | 5 m      | Engage   | Hands-on | Challenge 1 Part 1                        |
+| 4:40 | 5 m      | Study    | Lecture  | Baking Maps, Smart Masks, Smart Materials |
+| 4:45 | 5 m      | Engage   | Hands-on | Challenge 1 Part 2                        |
+| 4:50 | 10 m     | Break    | Break    | Break                                     |
+| 5:00 | 5 m      | Study    | Lecture  | Export to Unity                           |
+| 5:05 | 5 m      | Engage   | Hands-on | Challenge 1 Part 3                        |
+| 5:10 | 30 m     | Activate | Hands-on | Challenge 2                               |
+| 5:40 | 30 m     | Activate | Hands-on | Challenge 3                               |
+| 6:10 | 30 m     | Engage   | Present  | Show Off Challenge 3 + Voting             |
+
 ## Substance Painter Tour
 
 - Creating a Project
@@ -64,14 +84,23 @@ Substance Painter is a tool that makes working with PBR texture sets easy in mul
 ![Block](./block/wireframe.png)
 Model of a beveled block created in Blender 2.8. [block.blend](./block/block.blend){figure}
 
+Part 1:
+
 1. Download the [block.fbx](./block/block.fbx) model.
 2. Create a new Substance Painter project with the model.
 3. Create a fill layer on the box, explore setting the color, metallic, and smoothness values.
 4. Create a paint layer on the box, paint with different color, metallic, smoothness, and height values.
 5. Texture the block to look like a plastic six-sided die.
+
+Part 2:
+
 6. Texture the block to look like a clean concrete block.
 7. Texture the block to look like a dirty concrite block.
 8. What else can you turn the block into?
+
+Part 3:
+
+9. Export your texture sets and load in unity.
 
 ## Challenge 2: Amanita Muscaria
 
