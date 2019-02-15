@@ -21,7 +21,15 @@ software: p5.js
 
 ## Noise
 
-Random values are extremely common and important in procedural generation, but in many situations they are hard to work with. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly-distributed values. If we want *related* or *repeatable* random values we have to do extra work.
+Random values are extremely common and important in procedural generation, but in many situations they are hard to work with. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly-distributed values. If we want *related* or *repeatable* random values we have to do extra work. If we want random variation that *looks good* we have to do extra work.
+
+Before we continue, look at the code below. What if `random()` didn't exist? How could you modify this example to get the same effect using the provided `randomValues` array?
+
+::: js-lab
+/noise/sketches/without_random.js
+/::
+
+
 
 Noise functions are often a better source of random values. 
 
@@ -59,6 +67,11 @@ Noise functions provide a "cloud" of random values that can be used in a wide va
 
 
 /:: -->
+
+
+
+
+
 
 
 ## Noise vs. Random
@@ -152,13 +165,23 @@ By controlling what you pass to `noise(x)`, you can control the frequency of the
 How does the `noise(x)` function work? Explore the underlying concepts by building a simplified noise function with pencil&nbsp;and&nbsp;paper.
 
 
-### Instructions
+### Part 1: Simple Noise
 - Roll 1d12 for each square on the sheet and plot the value on the graph.
-- Connect the plotted points with straight lines or a smooth curve.
+- Connect the plotted points with straight lines.
 - According to your hand-made noise function, what is the value of `noise(3)`, `noise(4)`, and `noise(6.5)`?
+
+### Part 2: Custom Noise
+- Discuss strategies for populating the values. Populate each square on the graph and plot the values.
+- Discuss strategies for interpolating the values. Connect the plotted points using your interpolation strategy.
+- According to your hand-made noise function, what is the value of `noise(3)`, `noise(4)`, and `noise(6.5)`?
+
 
 <p class="boxed download">
     <a href="../handouts/1d_noise_graph.svg" download>1d_noise_graph.svg</a>
+</p>
+
+<p class="boxed download">
+    <a href="../handouts/1d_noise_graph.ai" download>1d_noise_graph.ai</a>
 </p>
 
 

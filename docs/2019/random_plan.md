@@ -31,7 +31,7 @@ Students will be able to:
 | Time | Duration | Purpose  | Format     | Name                                 |
 | ---- | -------- | -------- | ---------- | ------------------------------------ |
 | 3:50 | 10 m     | Engage   | Activity   | Homework Tagging                     |
-| 4:00 | 30 m     | Review   | Critique   | Homework Review Questions            |
+| 4:00 | 30 m     | Review   | Critique   | Sketch Review Questions              |
 | 4:30 | 10 m     | Study    | Lecture    | Intro + Slides                       |
 | 4:40 | 20 m     | Engage   | Activity   | 2d6 vs 1d12 Dice Chart               |
 | 5:00 | 20 m     | Study    | Lecture    | The Methodical Application of Chance |

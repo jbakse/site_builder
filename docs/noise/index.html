@@ -8,7 +8,14 @@
 </svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Noise</span><div class="buttons"><a class="previous" href="../parameters"><i class="fa fa-caret-left fa-lg"></i>Parameters</a><a class="next" href="../strategy">Strategies<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Noise</h1><h6>Overview</h6><p class="description">Noise provides a flexible, powerful, and aesthetic source of variation that often works better than using a plain random number generator.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
 <script src="../mess/noise_mess_3.js"></script>
 <h2 id="noise">Noise</h2>
-<p>Random values are extremely common and important in procedural generation, but in many situations they are hard to work with. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly-distributed values. If we want <em>related</em> or <em>repeatable</em> random values we have to do extra work.</p>
+<p>Random values are extremely common and important in procedural generation, but in many situations they are hard to work with. Psuedo-random number generators are designed to provide independent, unpredictable, and evenly-distributed values. If we want <em>related</em> or <em>repeatable</em> random values we have to do extra work. If we want random variation that <em>looks good</em> we have to do extra work.</p>
+<p>Before we continue, look at the code below. What if <code>random()</code> didn’t exist? How could you modify this example to get the same effect using the provided <code>randomValues</code> array?</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/noise/sketches/without_random.js">
+</iframe>
+</div>
+</div>
 <p>Noise functions are often a better source of random values.</p>
 <p>There are several common noise functions, each with different characteristics. The most widely known noise function is probably <a href="https://en.wikipedia.org/wiki/Perlin_noise">Perlin Noise</a>, developed by Ken Perlin while working on visual effects for the amazing 1982 motion picture <a href="http://www.imdb.com/title/tt0084827/"><em>Tron</em></a>. Ken later developed a similar and faster version called <a href="https://en.wikipedia.org/wiki/Simplex_noise">simplex noise</a>. Other noise functions include <a href="https://en.wikipedia.org/wiki/Worley_noise">Worley noise</a>, developed by Steven Worley, and the simpler <a href="https://en.wikipedia.org/wiki/Value_noise">value noise</a>.</p>
 <div id="" class="three-up">
@@ -276,14 +283,23 @@ Value Noise</p>
 <div id="" class="activity">
 <h2 id="building-1d-noise">Building 1D Noise</h2>
 <p>How does the <code>noise(x)</code> function work? Explore the underlying concepts by building a simplified noise function with pencil and paper.</p>
-<h3 id="instructions">Instructions</h3>
+<h3 id="part-1-simple-noise">Part 1: Simple Noise</h3>
 <ul>
 <li>Roll 1d12 for each square on the sheet and plot the value on the graph.</li>
-<li>Connect the plotted points with straight lines or a smooth curve.</li>
+<li>Connect the plotted points with straight lines.</li>
+<li>According to your hand-made noise function, what is the value of <code>noise(3)</code>, <code>noise(4)</code>, and <code>noise(6.5)</code>?</li>
+</ul>
+<h3 id="part-2-custom-noise">Part 2: Custom Noise</h3>
+<ul>
+<li>Discuss strategies for populating the values. Populate each square on the graph and plot the values.</li>
+<li>Discuss strategies for interpolating the values. Connect the plotted points using your interpolation strategy.</li>
 <li>According to your hand-made noise function, what is the value of <code>noise(3)</code>, <code>noise(4)</code>, and <code>noise(6.5)</code>?</li>
 </ul>
 <p class="boxed download">
     <a href="../handouts/1d_noise_graph.svg" download>1d_noise_graph.svg</a>
+</p>
+<p class="boxed download">
+    <a href="../handouts/1d_noise_graph.ai" download>1d_noise_graph.ai</a>
 </p>
 </div>
 <h3 id="1d-2d-3d-noise">1D, 2D, + 3D Noise</h3>

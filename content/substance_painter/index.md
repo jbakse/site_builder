@@ -29,7 +29,11 @@ Personally, I greatly improved my 3D projects by learning the basics of PBR text
 
 This [Substance Painter Crash Course](https://www.youtube.com/watch?v=IhBVsn2tfGc&t=949s) video is a pretty good introduction to what working in Substance Painter looks like. It is based on an older version, but the basics are still the same.
 
+For a brief technical overview of PBR, try the [Allegortihmic PBR Guid](https://academy.allegorithmic.com/courses/the-pbr-guide-part-1)
+
 ## Substance Painter
+
+PBR shaders rely on texture sets to describe the physical properties of a surface. In addition to a basic color texture, a PBR texture set has texture data for roughness, bumps, metallic, etc.
 
 Substance Painter is a tool that makes working with PBR texture sets easy in multiple ways:
 
@@ -38,43 +42,59 @@ Substance Painter is a tool that makes working with PBR texture sets easy in mul
 - Paint with materials that impact all the surface properties at once.
 - Use "smart" materials and masks to automatically add realistic effects like ground dirt, dust, and scratches.
 - Non-distructively switch between texture resolutions as needed for faster processing or higher quality display.
-- Photoshop like management of layers, folders, and composting.
+- Photoshop-like management of layers, folders, and composting.
 - View the composite effect with a PBR shader in real-time in the viewport
 
 ## Lesson Plan
 
-| Time | Duration | Purpose  | Format   | Name                                      |
-| ---- | -------- | -------- | -------- | ----------------------------------------- |
-| 3:50 | 15 m     | Study    | Lecture  | Introduction                              |
-| 4:05 | 5 m      | Study    | Lecture  | Creating A Project                        |
-| 4:10 | 10 m     | Engage   | Hands-on | Creating A Project + Open Play            |
-| 4:20 | 5 m      | Study    | Lecture  | Environment and Camera Settings           |
-| 4:25 | 5 m      | Engage   | Hands-on | Environment and Camera Settings           |
-| 4:30 | 5 m      | Study    | Lecture  | Fill and Paint Layers                     |
-| 4:35 | 5 m      | Engage   | Hands-on | Challenge 1 Part 1                        |
-| 4:40 | 5 m      | Study    | Lecture  | Baking Maps, Smart Masks, Smart Materials |
-| 4:45 | 5 m      | Engage   | Hands-on | Challenge 1 Part 2                        |
-| 4:50 | 10 m     | Break    | Break    | Break                                     |
-| 5:00 | 5 m      | Study    | Lecture  | Export to Unity                           |
-| 5:05 | 5 m      | Engage   | Hands-on | Challenge 1 Part 3                        |
-| 5:10 | 30 m     | Activate | Hands-on | Challenge 2                               |
-| 5:40 | 30 m     | Activate | Hands-on | Challenge 3                               |
-| 6:10 | 30 m     | Engage   | Present  | Show Off Challenge 3 + Voting             |
+| Time   | Duration | Purpose      | Format   | Name                                 |
+| ------ | -------- | ------------ | -------- | ------------------------------------ |
+| 3:50   | 15 m     | Study        | Lecture  | Introduction                         |
+| 4:05   | 40 m     | Engage+Study | Hands-on | Substance Painter Intro              |
+| &nbsp; | &nbsp;   | Engage+Study | Hands-on | Quick Start and Interface Tour       |
+| &nbsp; | &nbsp;   | Engage+Study | Hands-on | Layers                               |
+| &nbsp; | &nbsp;   | Engage+Study | Hands-on | Display Settings and Smart Materials |
+| 4:45   | 5 m      | Engage+Study | Hands-on | Creating a Project                   |
+| 4:50   | 15 m     | Engage+Study | Hands-on | Challenge 1                          |
+| 5:05   | 10 m     | Break        | Break    | Break                                |
+| 5:15   | 20 m     | Engage+Study | Hands-on | Challenge 2                          |
+| 5:30   | 40 m     | Engage+Study | Hands-on | Micro Jam: Gross Food                |
+| 6:10   | 30 m     | Engage       | Present  | Micro Jam Show Off + Voting          |
 
 ## Substance Painter Tour
 
+- Quick Start
+  - Launch Substance Painter
+  - Choose `Start Painting` to open demo file.
+
+- Interface Tour
+  - Main View Port, Switching Views, Rotating View, Tool Settings
+  - Shelf
+  - Texture Set List, One texture set per material in model
+  - Layers Panel, paint layers, fill layers
+  - Texture Set Settings, exported textures, mesh maps
+  - Properties Paint, brush, alpha, stencil, material
+
+- Layers
+  - Paint Layer
+  - Fill Layer
+  - Fill Layer Masks
+
+- Display Settings
+  - Environment Mapping and Lighting
+  
+- Smart Materials + Masks 
+  - Smart Materials
+  - Smart Mask on Fill Layer
+  - Adjusting Mask Settings
+  - 
+
 - Creating a Project
+  - First, you need a model to texture: [block.fbx](./block/block.fbx)
   - Template: `PBR - Metallic Roughness (allegorithmic)`
-- Interface Overivew
-- Environment and Camera Settings
-- `play`
-- Fill Layers
-- Paint Layers
-- `challenge`
+
+
 - Baking Maps
-- Smart Masks
-- Smart Materials
-- `challenge`
 - Export to Unity
   - [Substance Painter Docs](https://support.allegorithmic.com/documentation/spdoc/unity-5-130842630.html)
   - Preset: `Unity 5 (Standard Metallic)`
@@ -88,19 +108,12 @@ Part 1:
 
 1. Download the [block.fbx](./block/block.fbx) model.
 2. Create a new Substance Painter project with the model.
-3. Create a fill layer on the box, explore setting the color, metallic, and smoothness values.
-4. Create a paint layer on the box, paint with different color, metallic, smoothness, and height values.
-5. Texture the block to look like a plastic six-sided die.
+3. Texture the block to look like a plastic six-sided die.
+4. Texture the block to look like a clean concrete block.
+5. Texture the block to look like a dirty concrete block.
+6. What else can you turn the block into?
 
-Part 2:
 
-6. Texture the block to look like a clean concrete block.
-7. Texture the block to look like a dirty concrite block.
-8. What else can you turn the block into?
-
-Part 3:
-
-9. Export your texture sets and load in unity.
 
 ## Challenge 2: Amanita Muscaria
 
@@ -132,6 +145,12 @@ Image provided by Tony Wills [CC BY-SA 2.5](https://creativecommons.org/licenses
 
 </style>
 
-## Big Challenge
+## Micro Jam: Gross Food
 
-- Model + Texture + Create a Scene in Unity
+
+### Voting Catagories
+- Grossest: Gag me with a spoon.
+- Foodiest: Good enough to eat.
+- Most Photorealistic: Pretty as a picture.
+- Best Stylized: Flight of fancy.
+
