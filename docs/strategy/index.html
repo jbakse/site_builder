@@ -26,16 +26,20 @@ canvas {
 <p><em>Strategies are composed of tactics.</em></p>
 <dl>
 <dt>Tactics</dt>
-<dd>Tactics are low- to mid-level concrete approaches to solving common problems. Tactics include <a href="https://www.khanacademy.org/computing/computer-science/algorithms">algorithms</a>, <a href="https://en.wikipedia.org/wiki/List_of_data_structures">data structures</a>, <a href="https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">design patterns</a>, and other reusable components that can be applied to a variety of problems.</dd>
+<dd>Tactics are low- to mid-level concrete approaches to solving common problems. Tactics can include specific <a href="https://www.khanacademy.org/computing/computer-science/algorithms">algorithms</a>, <a href="https://en.wikipedia.org/wiki/List_of_data_structures">data structures</a>, <a href="https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">design patterns</a>, and other reusable components that can be applied to a variety of problems.</dd>
 </dl>
-<p><em>Tactics are composed of primitives.</em></p>
+<p><em>Tactics are composed of smaller tactics and primitives.</em></p>
 <dl>
 <dt>Primitives</dt>
 <dd>Primitives are the programming building blocks provided by your <a href="(https://en.wikipedia.org/wiki/Language_primitive)">language</a> and libraries. These include control structures like loops and functions and built-in data types like variables, objects, and arrays. They may also include more complex tasks like <code>rect()</code> and <code>random()</code> when the complexity is hidden from your program’s frame of reference.</dd>
 </dl>
-<p><em>Primitives are atomic: they are the smallest units of composition and cannot be further broken down.</em></p>
+<p><em>Primitives are atomic: they are the smallest units of composition and are not further broken down.</em></p>
+<div id="" class="callout">
+<p>If you are already familiar with the idea of <em>design patterns</em>, my use of the term <em>tactics</em> will sound familiar. I am using <em>tactics</em> to talk of a broader category which includes individual design patterns but also other specific reusable ideas that wouldn’t count as design patterns.</p>
+</div>
 <h3 id="building-a-toolbox">Building a Toolbox</h3>
 <p>Becoming familiar with common tactics and being able to recognize the problems they solve is critical to creating more complex code. Tactics are powerful and useful because they are <strong>reusable</strong> and <strong>composable</strong>: the problems they solve appear over and over in a variety of contexts and you can combine tactics in different ways to solve different problems.</p>
+<p><em>The trick is recognizing the abstract similarities between problems.</em></p>
 <p>For example, compare this code that animates a bouncing ball:</p>
 <div id="" class="">
 <div class="js-lab">
@@ -132,7 +136,7 @@ Working this way will let you discover the details of how your ball—an importa
 </div>
 <h2 id="where-should-i-put-things">Where Should I Put Things?</h2>
 <p>Many procedural systems have to answer a fundamental question: <em>Where should I put things?</em></p>
-<p>This problem area shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches on a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don’t tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn’t overlap because when beads of water touch, they join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, you can determine how planned, chaotic, random, natural, or mechanical the placement feels.</p>
+<p>This problem shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches on a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don’t tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn’t overlap because when beads of water touch, they join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, you can determine how planned, chaotic, random, natural, or mechanical the placement feels.</p>
 <p>The problems above are all specific instances of the general problem of arranging points. Below we’ll look at several tactics for placing and moving points on a square. These tactics can be combined in different ways to generate a wide variety of arrangements. These tactics can help with planting trees, beading water, or banging up a spaceship. They could be adapted to arranging points on lines or in cubes or arranging events in time. You can find applications for these tactics in all areas of procedural generation any time you have things that need to be arranged.</p>
 <div id="" class="!short slides-wrap slideInfos">
 <div id="carousel-1" class="carousel slide" data-ride="carousel">
@@ -240,6 +244,7 @@ Working this way will let you discover the details of how your ball—an importa
 <li>What characteristics could be used to group similar examples?</li>
 <li>What applications might each placement pattern have?</li>
 </ul>
+<p>Group the examples as you see fit.</p>
 <p class="scale"><img src="figures/pp_tall.png" alt="overview"></p>
 <p class="boxed download">
     <a href="../handouts/strategy_workshop.ai" download>strategy_workshop.ai</a>
@@ -254,6 +259,7 @@ Working this way will let you discover the details of how your ball—an importa
 y = random() * height;
 </code></pre>
 <p>This is a quick, effective, and straightforward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half of the square. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.</p>
+<p class="three-up no-margin"><img src="figures/random.png" alt="random placement"></p>
 <h4 id="grid-placement">Grid Placement</h4>
 <p>Place points on grid squares. One way to do this is a nested loop. This approach guarantees a perfectly even distribution.</p>
 <pre><code class="language-javascript"><span class="hljs-keyword">for</span> (row = <span class="hljs-number">0</span>; row &lt; grid_rows; row++) {
@@ -264,6 +270,7 @@ y = random() * height;
 	}
 }
 </code></pre>
+<p class="three-up no-margin"><img src="figures/grid.png" alt="grid placement"></p>
 <h4 id="noise-placement">Noise Placement</h4>
 <p>Place each point at a location determined by a noise lookup.</p>
 <ul>
@@ -275,6 +282,8 @@ y = random() * height;
 x = noise(i * frequency, <span class="hljs-number">0</span>) * w;
 y = noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 </code></pre>
+<p class="three-up no-margin"><img src="figures/noise_low.png" alt="noise placement">
+<img src="figures/noise_high.png" alt="noise placement"></p>
 <h4 id="proximity-cull-placement">Proximity Cull Placement</h4>
 <p>Place points randomly, but reject a point if it is too close to an existing point or too far from all existing points. In the example below, three points already exist and a fourth is being considered. Three possible values are shown. One is too close and one is too far, so they are rejected. The third location is okay, and a fourth point is added at that location.</p>
 <p class="three-up no-margin"><img src="figures/cull_placement_1.svg" alt="cull placement 1">
@@ -297,6 +306,7 @@ y = noise(i * frequency, <span class="hljs-number">1000</span>) * h;
 <pre><code class="language-javascript">x = x + random() * width;
 y = y + random() * height;
 </code></pre>
+<p class="three-up no-margin"><img src="figures/random_displacement.png" alt="noise placement"></p>
 <h4 id="noise-displacement">Noise Displacement</h4>
 <p>Displace each point by an amount determined by a noise lookup.</p>
 <ul>
@@ -306,6 +316,7 @@ y = y + random() * height;
 <pre><code class="language-javascript">x = x + noise(i * frequency, <span class="hljs-number">0</span>) * amount;
 y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * amount;
 </code></pre>
+<p class="three-up no-margin"><img src="figures/noise_displacement.png" alt="noise placement"></p>
 <h4 id="relaxation-displacement">Relaxation Displacement</h4>
 <p>Find pairs of points that are near each other. Move them towards or away from each other by a small amount. This technique is often applied several times in a row with small movements, which avoids the problem of pushing a point away from one point, but into another.</p>
 <ul>
@@ -443,8 +454,7 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * amount;
 <li>For each <code>draw()</code> move the snowmen a random step left, up, right, or down.</li>
 </ol>
 </div>
-<!-- 
-## Properties of PCG System
+<h2 id="properties-of-pcg-system">Properties of PCG System</h2>
 <p>When designing a procedural generation system there are several properties to consider. The following properties are borrowed from <a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCGBook: Chapter 1</a></p>
 <h3 id="speed">Speed</h3>
 <ul>
@@ -479,7 +489,7 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * amount;
 </ul>
 <h3 id="repeatability">Repeatability</h3>
 <ul>
-<li>Do you need the ability to generate the same result more than once? --&gt;</li>
+<li>Do you need the ability to generate the same result more than once?</li>
 </ul>
 <div id="" class="assignment">
 <h2 id="challenge-sketch">Challenge + Sketch!</h2>
@@ -529,7 +539,11 @@ y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * amount;
 </div>
 </div>
 <div id="" class="assignment">
-<h3 id="special-assignment">Special Assignment</h3>
+<h2 id="special-assignments">Special Assignments</h2>
+<h3 id="read">Read</h3>
+<p><a href="http://pcgbook.com/">Procedural Content Generation in Games</a> is a collection of research in the field of procedural game content. It covers many interesting topics including dungeon+maze generation, fractals, L-systems, generating rules/mechanics, and mixing proc-gen and human-authored content.</p>
+<p class="boxed right"><a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCG Book, Chapter 1</a></p>
+<h3 id="prepare">Prepare</h3>
 <p>Later in this class I will ask you to create special sketches using equipment available to you through The New School. If you haven’t used the following equipment before, you should sign up for orientations. Be ready to use the following equipment by week 8.</p>
 <ul>
 <li>Laser Cutters</li>

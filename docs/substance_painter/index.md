@@ -20,11 +20,13 @@ software: Blender, Substance Painter, Unity
 
 ## Physically Based Rendering
 
-[Physically Based Rendering](https://en.wikipedia.org/wiki/Physically_based_rendering) (PBR) is an approach to rendering graphics based on mathematically simulating how light reacts to surfaces. PBR simulates real-world surface properties including small bumps, roughness, and metallicity making it particullary well suited to photorealistic styles.
+[Physically Based Rendering](https://en.wikipedia.org/wiki/Physically_based_rendering) (PBR) is an approach to rendering graphics based on mathematically simulating how light reacts to surfaces. PBR simulates real-world surface properties including small bumps, roughness, and metallicity making it particularly well suited to photo-realistic styles.
 
-PBR shaders are common in both realtime game engines and prerendering engines and the workflow is relatively artist-friendly. Learning PBR texturing is very worthwhile.
+![blender PBR](https://docs.blender.org/manual/en/latest/_images/render_cycles_nodes_types_shaders_principled_example-1a.jpg)
 
-Personally, I greatly improved my 3D projects by learning the basics of PBR texturing with Substance Painter.
+PBR shaders are common in both real-time game engines and pre-rendering engines and the workflow is relatively artist-friendly. Learning PBR texturing is very worthwhile.
+
+From personal experience, spending 2 or 3 days learning the basics of PBR texturing with substance painter improved my 3D projects by at least 3x.
 {bigger}
 
 This [Substance Painter Crash Course](https://www.youtube.com/watch?v=IhBVsn2tfGc&t=949s) video is a pretty good introduction to what working in Substance Painter looks like. It is based on an older version, but the basics are still the same.
@@ -38,10 +40,10 @@ PBR shaders rely on texture sets to describe the physical properties of a surfac
 Substance Painter is a tool that makes working with PBR texture sets easy in multiple ways:
 
 - Directly paint onto your 3D Object instead of the flat texture.
-- Paint into all of the textures in the set simultaniously.
+- Paint into all of the textures in the set simultaneously.
 - Paint with materials that impact all the surface properties at once.
 - Use "smart" materials and masks to automatically add realistic effects like ground dirt, dust, and scratches.
-- Non-distructively switch between texture resolutions as needed for faster processing or higher quality display.
+- Non-destructively switch between texture resolutions as needed for faster processing or higher quality display.
 - Photoshop-like management of layers, folders, and composting.
 - View the composite effect with a PBR shader in real-time in the viewport
 
@@ -145,12 +147,15 @@ Image provided by Tony Wills [CC BY-SA 2.5](https://creativecommons.org/licenses
 
 </style>
 
-## Micro Jam: Gross Food
+## Micro Jam: Food
 
+40 Minutes to model, texture, and render anything you want starting with the them of FOOD!
+Work alone or in teams (be careful teams are slower).
+20 Minutes to show off and vote!
 
 ### Voting Catagories
-- Grossest: Gag me with a spoon.
-- Foodiest: Good enough to eat.
-- Most Photorealistic: Pretty as a picture.
-- Best Stylized: Flight of fancy.
+- Gag me with a spoon.
+- Good enough to eat.
+- Pretty as a picture.
+- Flight of fancy.
 

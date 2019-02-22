@@ -5,7 +5,8 @@
 // places points on squares
 
 // PREVIEW SETTINGS
-var POINT_COUNT = 800;
+var POINT_COUNT = 500;
+var POINT_SIZE = 10;
 var CANVAS_SIZE = 500;
 
 // RENDER SETTINGS
@@ -17,9 +18,9 @@ var strategies;
 var strat_i = 0;
 
 function setup() {
-    createCanvas(CANVAS_SIZE, CANVAS_SIZE * .75);
-    noFill();
-    stroke(255);
+    createCanvas(CANVAS_SIZE, CANVAS_SIZE);
+    noStroke();
+    fill("#4A4A4A");
     ellipseMode(CENTER);
 
     strategies = buildStrategies();
@@ -168,7 +169,7 @@ function buildStrategies() {
 
 function draw() {
     // clear the background
-    background(60);
+    background("#F4F3F1");
 
     randomSeed(1);
     noiseSeed(2);
@@ -217,7 +218,7 @@ function drawPoints(points) {
         // draw an ellipse at point
         // noStroke();
         // fill(255);
-        ellipse(x, y, 6, 6);
+        ellipse(x, y, POINT_SIZE, POINT_SIZE);
     }
 }
 

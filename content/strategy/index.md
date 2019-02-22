@@ -40,19 +40,25 @@ Strategies
 _Strategies are composed of tactics._
 
 Tactics
-: Tactics are low- to mid-level concrete approaches to solving common problems. Tactics include [algorithms](https://www.khanacademy.org/computing/computer-science/algorithms), [data structures](https://en.wikipedia.org/wiki/List_of_data_structures), [design patterns](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612), and other reusable components that can be applied to a variety of problems. 
+: Tactics are low- to mid-level concrete approaches to solving common problems. Tactics can include specific [algorithms](https://www.khanacademy.org/computing/computer-science/algorithms), [data structures](https://en.wikipedia.org/wiki/List_of_data_structures), [design patterns](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612), and other reusable components that can be applied to a variety of problems. 
 
-_Tactics are composed of primitives._
+_Tactics are composed of smaller tactics and primitives._
 
 Primitives
 : Primitives are the programming building blocks provided by your [language]((https://en.wikipedia.org/wiki/Language_primitive)) and libraries. These include control structures like loops and functions and built-in data types like variables, objects, and arrays. They may also include more complex tasks like `rect()` and `random()` when the complexity is hidden from your program's frame of reference. 
 
-_Primitives are atomic: they are the smallest units of composition and cannot be further broken down._
+_Primitives are atomic: they are the smallest units of composition and are not further broken down._
 
+
+::: .callout
+If you are already familiar with the idea of _design patterns_, my use of the term _tactics_ will sound familiar. I am using _tactics_ to talk of a broader category which includes individual design patterns but also other specific reusable ideas that wouldn't count as design patterns.
+/::
 
 ### Building a Toolbox
 
 Becoming familiar with common tactics and being able to recognize the problems they solve is critical to creating more complex code. Tactics are powerful and useful because they are **reusable** and **composable**: the problems they solve appear over and over in a variety of contexts and you can combine tactics in different ways to solve different problems.
+
+*The trick is recognizing the abstract similarities between problems.*
 
 For example, compare this code that animates a bouncing ball:
 
@@ -169,7 +175,7 @@ Consider the image below. How might you make something like this?
 
 Many procedural systems have to answer a fundamental question: _Where should I put things?_
 
-This problem area shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches on a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don't tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn't overlap because when beads of water touch, they join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, you can determine how planned, chaotic, random, natural, or mechanical the placement feels.
+This problem shows up all the time: putting trees on an island, putting beads of water on glass, putting scratches on a spaceship. In these situations, it is important to control the placement carefully to achieve an appropriate look. Trees tend to grow in groups and in certain areas where the conditions are right. They don't tend to grow at high altitudes, in the water, or where there is no rain. Beads of water shouldn't overlap because when beads of water touch, they join into a bigger bead. Scratches are more likely on raised, exposed parts of the ship that might collide with debris. Each situation has different requirements, and depending on your approach, you can determine how planned, chaotic, random, natural, or mechanical the placement feels.
 
 The problems above are all specific instances of the general problem of arranging points. Below we'll look at several tactics for placing and moving points on a square. These tactics can be combined in different ways to generate a wide variety of arrangements. These tactics can help with planting trees, beading water, or banging up a spaceship. They could be adapted to arranging points on lines or in cubes or arranging events in time. You can find applications for these tactics in all areas of procedural generation any time you have things that need to be arranged.
 
@@ -187,6 +193,8 @@ Analyze each of the examples below. Carefully consider their similarities and di
 * How does each example compare to the others?
 * What characteristics could be used to group similar examples?
 * What applications might each placement pattern have?
+
+Group the examples as you see fit.
 
 ![overview](figures/pp_tall.png){scale}
 
@@ -213,6 +221,9 @@ y = random() * height;
 
 This is a quick, effective, and straightforward way to lay points down. In theory, since the placement is random, all of the points might be placed in a clump or on one half of the square. In practice, the points are mostly evenly distributed over the plane, with some areas a little more or less dense.
 
+![random placement](figures/random.png){three-up no-margin}
+
+
 #### Grid Placement
 
 Place points on grid squares. One way to do this is a nested loop. This approach guarantees a perfectly even distribution.
@@ -227,6 +238,8 @@ for (row = 0; row < grid_rows; row++) {
 }
 ```
 
+![grid placement](figures/grid.png){three-up no-margin}
+
 #### Noise Placement
 
 Place each point at a location determined by a noise lookup.
@@ -240,6 +253,10 @@ Place each point at a location determined by a noise lookup.
 x = noise(i * frequency, 0) * w;
 y = noise(i * frequency, 1000) * h;
 ```
+
+
+![noise placement](figures/noise_low.png)
+![noise placement](figures/noise_high.png){three-up no-margin}
 
 #### Proximity Cull Placement
 
@@ -278,6 +295,8 @@ x = x + random() * width;
 y = y + random() * height;
 ```
 
+![noise placement](figures/random_displacement.png){three-up no-margin}
+
 #### Noise Displacement
 
 Displace each point by an amount determined by a noise lookup.
@@ -289,6 +308,8 @@ Displace each point by an amount determined by a noise lookup.
 x = x + noise(i * frequency, 0) * amount;
 y = x + noise(i * frequency, 1000) * amount;
 ```
+![noise placement](figures/noise_displacement.png){three-up no-margin}
+
 
 #### Relaxation Displacement
 
@@ -406,7 +427,7 @@ Continue with the stored random placement code you made above.
    {continue}
 
 /::
-<!-- 
+
 ## Properties of PCG System
 
 When designing a procedural generation system there are several properties to consider. The following properties are borrowed from [PCGBook: Chapter 1](http://pcgbook.com/wp-content/uploads/chapter01.pdf)
@@ -444,7 +465,9 @@ When designing a procedural generation system there are several properties to co
 
 ### Repeatability
 
-* Do you need the ability to generate the same result more than once? -->
+* Do you need the ability to generate the same result more than once?
+
+
 
 ::: .assignment
 
@@ -496,10 +519,18 @@ Same as above: Analyze, Strategize, Study, Recreate, Extend, Post
 /::
 
 
-
 ::: .assignment
 
-### Special Assignment
+## Special Assignments
+
+### Read
+
+[Procedural Content Generation in Games](http://pcgbook.com/) is a collection of research in the field of procedural game content. It covers many interesting topics including dungeon+maze generation, fractals, L-systems, generating rules/mechanics, and mixing proc-gen and human-authored content.
+
+[PCG Book, Chapter 1](http://pcgbook.com/wp-content/uploads/chapter01.pdf){boxed right}
+
+
+### Prepare
 Later in this class I will ask you to create special sketches using equipment available to you through The New School. If you haven’t used the following equipment before, you should sign up for orientations. Be ready to use the following equipment by week 8.
 
 - Laser Cutters

@@ -34,7 +34,7 @@ This page houses information specific to the spring 2019 section of Computationa
 | [Week 2, February 1](random_plan.html)       | [Random Values](../random)                                 |
 | [Week 3, February 8](parameters_plan.html)   | [Parameters](../parameters)                                |
 | [Week 4, February 15](noise_plan.html)       | [Noise](../noise)                                          |
-| [Week 5, February 22](#strategy_plan.html)   | [Strategy](../strategy)                                    |
+| [Week 5, February 22](strategy_plan.html)    | [Strategy](../strategy)                                    |
 
 
 ## Exploration Unit
@@ -54,6 +54,12 @@ This page houses information specific to the spring 2019 section of Computationa
 | [Week 16, May 10](#postmortem_party_plan.html) | Postmortem Party{gray}        |
 
 
+## After-class Lectures
+
+| Lesson Plan | Topics                                             |
+| ----------- | -------------------------------------------------- |
+| February 22 | [Intro to Substance Painter](../substance_painter) |
+| February 22 | [Multiuser Webpage](../socketio)                   |
 
 <style>
 .top {
