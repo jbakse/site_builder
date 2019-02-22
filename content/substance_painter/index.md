@@ -31,7 +31,7 @@ From personal experience, spending 2 or 3 days learning the basics of PBR textur
 
 This [Substance Painter Crash Course](https://www.youtube.com/watch?v=IhBVsn2tfGc&t=949s) video is a pretty good introduction to what working in Substance Painter looks like. It is based on an older version, but the basics are still the same.
 
-For a brief technical overview of PBR, try the [Allegortihmic PBR Guid](https://academy.allegorithmic.com/courses/the-pbr-guide-part-1)
+For a brief technical overview of PBR, try the [Allegortihmic PBR Guide](https://academy.allegorithmic.com/courses/the-pbr-guide-part-1)
 
 ## Substance Painter
 
@@ -59,8 +59,9 @@ Substance Painter is a tool that makes working with PBR texture sets easy in mul
 | 4:45   | 5 m      | Engage+Study | Hands-on | Creating a Project                   |
 | 4:50   | 15 m     | Engage+Study | Hands-on | Challenge 1                          |
 | 5:05   | 10 m     | Break        | Break    | Break                                |
-| 5:15   | 20 m     | Engage+Study | Hands-on | Challenge 2                          |
-| 5:30   | 40 m     | Engage+Study | Hands-on | Micro Jam: Gross Food                |
+| 5:15   | 15 m     | Engage+Study | Hands-on | Challenge 2                          |
+| 5:30   | 5 m      | Engage+Study | Hands-on | Import in Unity                      |
+| 5:35   | 40 m     | Engage+Study | Hands-on | Micro Jam: Gross Food                |
 | 6:10   | 30 m     | Engage       | Present  | Micro Jam Show Off + Voting          |
 
 ## Substance Painter Tour
