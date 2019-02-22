@@ -31,7 +31,7 @@ From personal experience, spending 2 or 3 days learning the basics of PBR textur
 
 This [Substance Painter Crash Course](https://www.youtube.com/watch?v=IhBVsn2tfGc&t=949s) video is a pretty good introduction to what working in Substance Painter looks like. It is based on an older version, but the basics are still the same.
 
-For a brief technical overview of PBR, try the [Allegortihmic PBR Guid](https://academy.allegorithmic.com/courses/the-pbr-guide-part-1)
+For a brief technical overview of PBR, try the [Allegortihmic PBR Guide](https://academy.allegorithmic.com/courses/the-pbr-guide-part-1)
 
 ## Substance Painter
 
