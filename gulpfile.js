@@ -1,64 +1,66 @@
-var gulp = require('gulp');
+var gulp = require("gulp");
 
 // util
-var tap = require('gulp-tap');
-var changed = require('gulp-changed');
-var del = require('del');
+var tap = require("gulp-tap");
+var changed = require("gulp-changed");
+var del = require("del");
 
 // serve
-var browserSync = require('browser-sync').create();
+var browserSync = require("browser-sync").create();
 
 // md/template
-var wrap = require('gulp-wrap');
-var frontMatter = require('gulp-front-matter');
-var layout = require('gulp-layout');
-var file_include = require('gulp-file-include');
+var wrap = require("gulp-wrap");
+var frontMatter = require("gulp-front-matter");
+var layout = require("gulp-layout");
+var file_include = require("gulp-file-include");
 
 // css + sass
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+var sass = require("gulp-sass");
+var sourcemaps = require("gulp-sourcemaps");
 
 // webpack
-var webpack = require('webpack-stream');
+var webpack = require("webpack-stream");
 
-markdownToHTML = require('./build_src/markdown_builder');
-gulp.task('markdown', function() {
-    // console.log("markdown");
-    return gulp.src('content/**/*.md')
-        // .pipe(changed('docs'))
-        .pipe(frontMatter())
-        .pipe(tap(setFileOptions))
-        .pipe(file_include())
-        .pipe(tap(markdownToHTML))
-        // .pipe(wrap({ src: 'layouts/main.html' }))
-        .pipe(layout((file) => file.frontMatter))
-        .pipe(gulp.dest('docs'))
-        .pipe(browserSync.stream());;
+markdownToHTML = require("./build_src/markdown_builder");
+gulp.task("markdown", function() {
+  // console.log("markdown");
+  return (
+    gulp
+      .src("content/**/*.md")
+      .pipe(changed("docs"))
+      .pipe(frontMatter())
+      .pipe(tap(setFileOptions))
+      .pipe(file_include())
+      .pipe(tap(markdownToHTML))
+      // .pipe(wrap({ src: 'layouts/main.html' }))
+      .pipe(layout(file => file.frontMatter))
+      .pipe(gulp.dest("docs"))
+      .pipe(browserSync.stream())
+  );
 });
 
 function setFileOptions(file) {
-    // console.log("setFileOptions");
-    file.frontMatter.debug = false;
-    // console.log(file.path, file.frontMatter);
+  // console.log("setFileOptions");
+  file.frontMatter.debug = false;
+  // console.log(file.path, file.frontMatter);
 }
 
-
-gulp.task('copy_content', function() {
-    return gulp.src(['content/**/*.*', 'content/**/CNAME'])
-        .pipe(gulp.dest('docs'));
+gulp.task("copy_content", function() {
+  return gulp
+    .src(["content/**/*.*", "content/**/CNAME"])
+    .pipe(gulp.dest("docs"));
 });
 
-gulp.task('vendor', function() {
-    return gulp.src('vendor/**/*.*')
-        .pipe(gulp.dest('docs/vendor'));
+gulp.task("vendor", function() {
+  return gulp.src("vendor/**/*.*").pipe(gulp.dest("docs/vendor"));
 });
 
-gulp.task('copy_js_lab', function() {
-    return gulp.src(['js_lab/**/*.*'])
-        .pipe(gulp.dest('docs/js_lab'))
-        .pipe(browserSync.stream());
+gulp.task("copy_js_lab", function() {
+  return gulp
+    .src(["js_lab/**/*.*"])
+    .pipe(gulp.dest("docs/js_lab"))
+    .pipe(browserSync.stream());
 });
-
 
 // gulp.task('src_copy', function () {
 //     return gulp.src(['src/**/*.*', '!src/**/*.scss'])
@@ -75,79 +77,83 @@ gulp.task('copy_js_lab', function() {
 //         .pipe(browserSync.stream());
 // });
 
-
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-gulp.task('src_webpack', function() {
-    return gulp.src('src/entry.js')
-        .pipe(webpack({
-            watch: true,
-            devtool: 'source-map',
-            module: {
-                rules: [{
-                    test: /\.scss$/,
-                    use: ExtractTextPlugin.extract({
-                        fallback: "style-loader",
-                        use: [{
-                            loader: "css-loader?sourceMap"
-                        }, {
-                            loader: "sass-loader?sourceMap"
-                        }]
-                    })
-                }]
-            },
-            plugins: [
-                new ExtractTextPlugin("styles.css"),
-            ],
-
-            output: {
-                path: __dirname + '/docs', // `dist` is the destination
-                filename: 'bundle.js',
-            },
-
-        }))
-        .pipe(gulp.dest('docs/src'))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('start_watch', function() {
-    gulp.watch('vendor/**/*.*', ['vendor']);
-    gulp.watch('js_lab/**/*.*', ['copy_js_lab']);
-    gulp.watch('content/**/*.*', ['copy_content']);
-    gulp.watch(['content/**/*.md', 'content/**/*.*', 'layouts/**/*.**'], ['markdown']);
-    // gulp.watch('src/**/*.scss', ['src_sass']);//.on('change', browserSync.reload);
-});
-
-gulp.task('serve', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./docs",
+gulp.task("src_webpack", function() {
+  return gulp
+    .src("src/entry.js")
+    .pipe(
+      webpack({
+        watch: true,
+        devtool: "source-map",
+        module: {
+          rules: [
+            {
+              test: /\.scss$/,
+              use: ExtractTextPlugin.extract({
+                fallback: "style-loader",
+                use: [
+                  {
+                    loader: "css-loader?sourceMap"
+                  },
+                  {
+                    loader: "sass-loader?sourceMap"
+                  }
+                ]
+              })
+            }
+          ]
         },
-        open: false
-    }, function() {
-        console.log("\n\nServer at http://localhost:3000/");
-        // browserSync.reload();
-    });
+        plugins: [new ExtractTextPlugin("styles.css")],
 
+        output: {
+          path: __dirname + "/docs", // `dist` is the destination
+          filename: "bundle.js"
+        }
+      })
+    )
+    .pipe(gulp.dest("docs/src"))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('clean', function() {
-    return del(['docs/**/*']);
+gulp.task("start_watch", function() {
+  gulp.watch("vendor/**/*.*", ["vendor"]);
+  gulp.watch("js_lab/**/*.*", ["copy_js_lab"]);
+  gulp.watch("content/**/*.*", ["copy_content"]);
+  gulp.watch(
+    ["content/**/*.md", "content/**/*.*", "layouts/**/*.**"],
+    ["markdown"]
+  );
+  // gulp.watch('src/**/*.scss', ['src_sass']);//.on('change', browserSync.reload);
 });
 
+gulp.task("serve", function() {
+  browserSync.init(
+    {
+      server: {
+        baseDir: "./docs"
+      },
+      open: false
+    },
+    function() {
+      console.log("\n\nServer at http://localhost:3000/");
+      // browserSync.reload();
+    }
+  );
+});
 
-gulp.task('build', ['markdown', 'vendor', 'copy_js_lab', 'copy_content', 'src_webpack']);
-gulp.task('watch', ['build', 'start_watch']);
-gulp.task('default', ['build', 'serve', 'start_watch']);
+gulp.task("clean", function() {
+  return del(["docs/**/*"]);
+});
 
-
-
-
-
-
-
-
-
-
+gulp.task("build", [
+  "markdown",
+  "vendor",
+  "copy_js_lab",
+  "copy_content",
+  "src_webpack"
+]);
+gulp.task("watch", ["build", "start_watch"]);
+gulp.task("default", ["build", "serve", "start_watch"]);
 
 // webpack rule for sass + extract-loader
 // module: {
@@ -158,7 +164,7 @@ gulp.task('default', ['build', 'serve', 'start_watch']);
 //             options: {name: 'styles.css'}
 //         },
 //         {
-//             loader: "extract-loader" 
+//             loader: "extract-loader"
 //         },
 //         // {
 //         //     loader: "style-loader"

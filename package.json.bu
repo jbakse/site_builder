@@ -1,7 +1,7 @@
 {
   "name": "site_builder",
-  "version": "0.0.1",
-  "description": "This repos has the publishing system used to publish compform.net. It also has the content of compform.net.",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "gulp clean && gulper default"
@@ -22,7 +22,7 @@
     "del": "^3.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-changed": "^3.2.0",
     "gulp-file-include": "^1.2.0",
     "gulp-front-matter": "^1.3.0",
@@ -47,8 +47,5 @@
   },
   "dependencies": {
     "npm": "^5.10.0"
-  },
-  "directories": {
-    "doc": "docs"
   }
 }

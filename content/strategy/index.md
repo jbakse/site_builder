@@ -135,8 +135,8 @@ This week we'll look at some tactics for a very common problem in procedural gen
 <!-- [[I agree. The following discussion section feels awkward too. Knowing that these named strategies are actually tools for solving specific problems is important--I hadn't though of them like that before. But the language in the first paragraph here is pretty vague. Discussing design patterns and composition might clarify it.]]-->
 
  
+<!-- 
 ::: .callout
-
 **Tackling Complexity**
 
 When beginner and intermediate programmers run into trouble building more complex projects, they often hear this advice:
@@ -156,7 +156,7 @@ Instead, you could start with a very simple program: just draw a little square�
 
 Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. This reason this strategy works is simple: **instead of trying to do something you can't, you are trying to do something you can.**
 
-/::
+/:: -->
 
 
 ::: .discussion
