@@ -56,10 +56,12 @@ This page houses information specific to the spring 2019 section of Computationa
 
 ## After-class Lectures
 
-| Lesson Plan | Topics                                             |
-| ----------- | -------------------------------------------------- |
-| February 22 | [Intro to Substance Painter](../substance_painter) |
-| February 22 | [Multiuser Webpage](../socketio)                   |
+| Lesson Plan             | Topics                                             |
+| ----------------------- | -------------------------------------------------- |
+| January 25              | My Javascript Workspace                            |
+| February 8              | Discovering OOP in Javascript                      |
+| February 1, February 22 | [Intro to Substance Painter](../substance_painter) |
+| February 22             | [Multiuser Webpage](../socketio)                   |
 
 <style>
 .top {

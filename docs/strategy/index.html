@@ -104,21 +104,30 @@ canvas {
  -->
 <!-- [[above section feels awkwardly positioned, especially after the preceding aside. Maybe this should talk more about "design patterns", composition? -->
 <!-- [[I agree. The following discussion section feels awkward too. Knowing that these named strategies are actually tools for solving specific problems is important--I hadn't though of them like that before. But the language in the first paragraph here is pretty vague. Discussing design patterns and composition might clarify it.]]-->
+<!-- 
 <div id="" class="callout">
-<p><strong>Tackling Complexity</strong></p>
-<p>When beginner and intermediate programmers run into trouble building more complex projects, they often hear this advice:</p>
-<blockquote>
-<p>Break your problem into smaller parts, and solve those parts.</p>
-</blockquote>
-<p>[[process vs. structure]]
+
+**Tackling Complexity**
+
+When beginner and intermediate programmers run into trouble building more complex projects, they often hear this advice:
+
+> Break your problem into smaller parts, and solve those parts.
+
+[[process vs. structure]]
 [[this confuses the process of developing a program with the structure of that program]]
 [[a well factored/composed program breaks problems down into sub-problems ]]
-[[as a process this is necessary but not sufficient ]]</p>
-<p>This advice falls short because it describes how the final program should be structured rather than the process of developing it. It is hard to understand a complex problem and it is hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together?  With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can’t initially understand well enough to break down. When this happens to you, you still have an option for getting started: <strong>make a simpler program</strong>.</p>
-<p>Imagine you want to make a game like <a href="https://www.youtube.com/watch?v=1LsRGUODHlQ">pong</a>. You could begin by trying to break it down into sub-tasks—keyboard controlled paddles, an animated ball, a scoreboard—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won’t know the details. Without understanding the details, the pieces you make probably won’t fit together. You might end up with a lot of code that doesn’t work and you don’t understand. It is much better to have a little bit of code that does work and that you do understand.</p>
-<p>Instead, you could start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don’t worry about the paddles or the score yet: focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do, take the time to review the code and make sure you understand how everything works.</p>
-<p>Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but <em>in the beginning, you didn’t know enough to make a complete plan</em>. This reason this strategy works is simple: <strong>instead of trying to do something you can’t, you are trying to do something you can.</strong></p>
-</div>
+[[as a process this is necessary but not sufficient ]]
+
+This advice falls short because it describes how the final program should be structured rather than the process of developing it. It is hard to understand a complex problem and it is hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together?  With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can't initially understand well enough to break down. When this happens to you, you still have an option for getting started: **make a simpler program**.
+
+Imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You could begin by trying to break it down into sub-tasks—keyboard controlled paddles, an animated ball, a scoreboard—but it is hard to plan all those pieces all at once. At the planning stage, you will have a rough idea of how each piece should work. But before you start implementing each piece, you won't know the details. Without understanding the details, the pieces you make probably won't fit together. You might end up with a lot of code that doesn't work and you don't understand. It is much better to have a little bit of code that does work and that you do understand.
+
+Instead, you could start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don't worry about the paddles or the score yet: focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do, take the time to review the code and make sure you understand how everything works.
+
+Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you see how that piece will work with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. This reason this strategy works is simple: **instead of trying to do something you can't, you are trying to do something you can.**
+
+
+</div> -->
 <div id="" class="discussion">
 <h2 id="points-on-a-square">Points on a Square</h2>
 <p>Consider the image below. How might you make something like this?</p>
