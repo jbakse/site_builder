@@ -31,22 +31,6 @@ When you work with a graphics library like p5.js or the Javascript [Canvas API](
 
 When you work at a high level you are not responsible for the details. Because you are not responsible for the details you tend to consider them less. Working directly with the pixels by reading and writing their red, green, and blue values one-by-one leads to thinking about drawing with code differently.
 
-::: .callout
-### Changes in Perspective
-
-> Paradigm: a framework containing the basic assumptions, ways of thinking, and methodology that are commonly accepted by members of a scientific community.
-
-Dictionary.com{attrib}
-
-Beginning in this chapter we will look at different approaches to making form that encourage you to think about form making in fundamentally different ways.
-
-- High Level Drawing APIs vs Direct Pixel Manipulation
-- Absolute vs Relative Coordinates
-- Vector Drawing vs Raster Drawing
-- Immediate Mode Drawing vs Retained Mode Drawing
-
-
-/::
 
 
 ::: .callout
@@ -66,7 +50,7 @@ Computer displays don't have to use pixels at all. One of the earliest video gam
 
 ### Video Memory
 
-Modern video pipelines are fairly complicated, but at a basic level they work something like this: The red, green, and blue brightness values of every pixel on a display are stored in memory. This data is usually stored on the video card's VRAM, but might also be stored in the computer's main RAM. The video hardware repeatedly runs through this data, pixel by pixel, and sends it to the display over a display interface like DVI or HDMI. Hardware in the display receives this data and updates the brightness of each pixel as needed. When you change the values in the RAM, a new picture appears on the screen. 
+Modern video pipelines are fairly complicated, but at a basic level they work something like this: The red, green, and blue brightness values of every pixel on a display are stored in memory. This data is usually stored on the video card's VRAM. In simpler systems without dedicated VRAM this data is stored in the computer's main RAM. Once per refresh, the video hardware repeatedly reads through this data, pixel by pixel, and sends it to the display over a display interface like DVI or HDMI. Hardware in the display receives this data and updates the brightness of each pixel as needed. When you change the values in the RAM, a new picture appears on the screen. 
 
 
 ::: .callout
@@ -78,7 +62,7 @@ Today, 6 megabytes isn't much, but many older computers didn't have enough RAM t
 
 ### The Pixels Array
 
-The memory storing the image shown on the screen is called the video buffer or framebuffer. Direct access to the screen's framebuffer is pretty unusual on modern computers, and libraries like p5.js don't (can't) provide it.  P5.js _does_ give you access to a pixel buffer storing the image shown on your sketch's canvas. When you call drawing functions like `rect()` and `ellipse()`, p5.js updates the appropriate values in this buffer. The buffer is then composited into the rendered webpage by the browser and shown in the browser's window. The browser window is composited onto the display's framebuffer by the operating system and video hardware.
+The memory storing the image shown on the screen is called the video buffer or framebuffer. Direct access to the screen's framebuffer is pretty unusual on modern computers, and high level libraries like p5.js don't (and can't) provide it.  P5.js _does_ give you access to a pixel buffer storing the image shown on your sketch's canvas. When you call drawing functions like `rect()` and `ellipse()`, p5.js updates the appropriate values in this buffer. The buffer is then composited into the rendered webpage by the browser. The browser window is composited onto the display's framebuffer by the operating system and video hardware.
 
 ::: .links-sidebar
 [p5.js<br/>pixels array](https://p5js.org/reference/#/p5/pixels)
@@ -110,6 +94,22 @@ Raster images are represented as samples
 /::
 
 
+::: .callout
+### Changes in Perspective
+
+> Paradigm: a framework containing the basic assumptions, ways of thinking, and methodology that are commonly accepted by members of a scientific community.
+
+Dictionary.com{attrib}
+
+Beginning in this chapter we will look at different approaches to making form that encourage you to think about form making in fundamentally different ways.
+
+- High Level Drawing APIs vs Direct Pixel Manipulation
+- Absolute vs Relative Coordinates
+- Vector Drawing vs Raster Drawing
+- Immediate Mode Drawing vs Retained Mode Drawing
+- Serial Drawing on a CPU vs Parallel Drawing on a GPU
+
+/::
 
 ## Writing Pixel Data
 
@@ -357,7 +357,20 @@ Explore using p5's pixel manipulation functions by modifying the scripts above. 
 
 ### Performance
 
-The built-in p5 `get()` function gets the RGBA values of a pixel in an image. Internally `get()` calls `loadPixels()` to make sure it is working with up-to-date information. This means that even when getting the values for a single pixel, _every_ pixel is read. As noted in the [reference](https://p5js.org/reference/#/p5/get), this makes `get()` slower than accessing the values in the `pixels[]` array directly. In fact, `get()` can easily be 1000s of times slower.
+The built-in p5 `get()` function gets the RGBA values of a pixel in an image. Internally `get()` calls `loadPixels()` to make sure it is working with up-to-date information. This means that even when getting the values for a single pixel, _every_ pixel is read _every_ time. As noted in the [reference](https://p5js.org/reference/#/p5/get), this makes `get()` slower than accessing the values in the `pixels[]` array directly. In fact, `get()` can easily be 1000s of times slower.
+
+::: .callout
+
+A `10 x 10` image has `100` pixels. Reading each pixel reloads all `100` pixel values. That means `10,000` pixel values are copied from the image into pixels[] array. 
+
+A `50 x 50` image has `2,500` pixels. Reading each pixel reloads all `2,500` pixels. That is `6,250,000` pixels copied.
+
+A `1,920 x 1,080` image has `2,073,600` pixels. Reading all of those pixels with `get()` would require copying `4,299,816,960,000` pixels, but your browser will crash first.
+
+
+
+/::
+
 
 We can get much faster results by loading all of the pixel values **once** with `loadPixels()`, and then reading and writing the `pixels[]` array directly.
 
