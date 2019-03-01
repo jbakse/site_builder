@@ -31,6 +31,23 @@ When you work with a graphics library like p5.js or the Javascript [Canvas API](
 
 When you work at a high level you are not responsible for the details. Because you are not responsible for the details you tend to consider them less. Working directly with the pixels by reading and writing their red, green, and blue values one-by-one leads to thinking about drawing with code differently.
 
+::: .callout
+### Changes in Perspective
+
+> Paradigm: a framework containing the basic assumptions, ways of thinking, and methodology that are commonly accepted by members of a scientific community.
+
+Dictionary.com{attrib}
+
+Beginning in this chapter we will look at different approaches to making form that encourage you to think about form making in fundamentally different ways.
+
+- High Level Drawing APIs vs Direct Pixel Manipulation
+- Absolute vs Relative Coordinates
+- Vector Drawing vs Raster Drawing
+- Immediate Mode Drawing vs Retained Mode Drawing
+
+
+/::
+
 
 ::: .callout
 ### Vector Monitors

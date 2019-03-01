@@ -41,7 +41,7 @@ This page houses information specific to the spring 2019 section of Computationa
 
 | Lesson Plan                                    | Topics                        |
 | ---------------------------------------------- | ----------------------------- |
-| [Week 6, March 1](#pixels_plan.html)           | [Pixel Data](../pixels)       |
+| [Week 6, March 1](pixels_plan.html)            | [Pixel Data](../pixels)       |
 | [Week 7, March 8](#turtles_plan.html)          | [Turtle Graphics](../turtles) |
 | [Week 8, March 15](#vectors_plan.html)         | [Vector Data](../vectors)     |
 | Week 9, March 23{gray}                         | Spring Break{gray}            |
