@@ -39,19 +39,19 @@ This page houses information specific to the spring 2019 section of Computationa
 
 ## Exploration Unit
 
-| Lesson Plan                                    | Topics                        |
-| ---------------------------------------------- | ----------------------------- |
-| [Week 6, March 1](pixels_plan.html)            | [Pixel Data](../pixels)       |
-| [Week 7, March 8](#turtles_plan.html)          | [Turtle Graphics](../turtles) |
-| [Week 8, March 15](#vectors_plan.html)         | [Vector Data](../vectors)     |
-| Week 9, March 23{gray}                         | Spring Break{gray}            |
-| Week 10, March 29{gray}                        | [Animation](../animation)     |
-| [Week 11, April 5](#text_plan.html)            | [Generating Text](../text)    |
-| [Week 12, April 12](#sound_plan.html)          | [Generating Sound](../sound)  |
-| [Week 13, April 19](#music_plan.html)          | [Music](../music)             |
-| [Week 14, April 26](#3D_plan.html)             | [3D Forms](../3D)             |
-| [Week 15, May 3](#microgames_plan.html)        | [Microgames](../microgames)   |
-| [Week 16, May 10](#postmortem_party_plan.html) | Postmortem Party{gray}        |
+| Lesson Plan                                    | Topics                                                           |
+| ---------------------------------------------- | ---------------------------------------------------------------- |
+| [Week 6, March 1](pixels_plan.html)            | [Pixel Data](../pixels)                                          |
+| [Week 7, March 8](turtles_plan.html)           | [Learning + Play](../concept_map), [Turtle Graphics](../turtles) |
+| [Week 8, March 15](#vectors_plan.html)         | [Vector Data](../vectors)                                        |
+| Week 9, March 23{gray}                         | Spring Break{gray}                                               |
+| Week 10, March 29{gray}                        | [Animation](../animation)                                        |
+| [Week 11, April 5](#text_plan.html)            | [Generating Text](../text)                                       |
+| [Week 12, April 12](#sound_plan.html)          | [Generating Sound](../sound)                                     |
+| [Week 13, April 19](#music_plan.html)          | [Music](../music)                                                |
+| [Week 14, April 26](#3D_plan.html)             | [3D Forms](../3D)                                                |
+| [Week 15, May 3](#microgames_plan.html)        | [Microgames](../microgames)                                      |
+| [Week 16, May 10](#postmortem_party_plan.html) | Postmortem Party{gray}                                           |
 
 
 ## After-class Lectures

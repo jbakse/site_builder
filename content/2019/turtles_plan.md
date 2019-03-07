@@ -30,6 +30,18 @@ debug: false
 | 6:10 | Intro         | Intro          | MFA Assignment              |
 
 
+| Time | Duration | Purpose  | Format      | Name                              |
+| ---- | -------- | -------- | ----------- | --------------------------------- |
+| 3:50 | 10 m     | Review   | Discussion  | Questions                         |
+| 4:00 | 75 m     | ESA      | Game        | Learning Through Play Concept Map |
+| 5:15 | 5 m      | Break    | Break       | Break                             |
+| 5:20 | 10 m     | Study    | Lecture     | 01 Logo and Turtle Graphics       |
+| 5:30 | 5 m      | Study    | Lecture     | 02 A Simple Turtle in p5.js       |
+| 5:35 | 20 m     | Activate | Coding      | Turtle Challenges                 |
+| 5:55 | 20 m     | Study    | Live-Coding | Images, Push, Pop, Tree           |
+| 6:15 | 5 m      | Study    | Lecture     | Homework Intro                    |
+
+
 ## Lecture
 
 ### Logo and Turtle Graphics
