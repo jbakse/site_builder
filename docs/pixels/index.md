@@ -366,13 +366,16 @@ A `10 x 10` image has `100` pixels. Reading each pixel reloads all `100` pixel v
 A `50 x 50` image has `2,500` pixels. Reading each pixel reloads all `2,500` pixels. That is `6,250,000` pixels copied.
 
 A `1,920 x 1,080` image has `2,073,600` pixels. Reading all of those pixels with `get()` would require copying `4,299,816,960,000` pixels, but your browser will crash first.
-
-
-
 /::
 
 
 We can get much faster results by loading all of the pixel values **once** with `loadPixels()`, and then reading and writing the `pixels[]` array directly.
+
+
+::: .callout
+When reading from `pixels[]` ourselves we can make sure we haven't changed the values we are trying to read.
+
+/::
 
 The `getQuick()` function below reads a pixel's color value from an image's `pixels[]` array. You must call `loadPixels()` before calling this function. When you are done working with the `pixels[]` array, you should call `updatePixels()` to update the image with your changes.
 

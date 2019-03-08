@@ -6,7 +6,9 @@ debug: false
 
 ## Week 8, Vector Data {plain}
 
-### Materials
+### Class Notes
+
+[Vectors](./index.html){boxed right}
 
 ### Learning Objectives
 - Understand essential differences between raster and vector graphics.
@@ -17,20 +19,20 @@ debug: false
 - Understand retained mode and immediate Mode graphics
 
 
-
 ### Schedule
-| Time | ESA           | Type         | Activity                          |
-| ---- | ------------- | ------------ | --------------------------------- |
-| Pre  | TBA           | -            | TBA                               |
-| 3:50 | Review+Engage | Discussion   | Homework Review                   |
-| 4:20 | Study         | Lecture      | 01 Pixels                         |
-| 4:30 | Activate      | Code         | Pixel Writing Challenges          |
-| 4:50 | Study         | Code Lecture | Challenges Discussion             |
-| 5:00 | Activate      | Code         | Pixel Processing Challenges       |
-| 5:20 | Study         | Code Lecture | Challenges Discussion             |
-| 5:30 | Study         | Lecture      | 04 pixels[]                       |
-| 5:45 | Activate      | Code         | setQuick +Grass Example Live Code |
-| 6:10 | Study         | Lecture      | Vector vs Raster                  |
+
+| Time | Duration | Purpose  | Format      | Name                      |
+| ---- | -------- | -------- | ----------- | ------------------------- |
+| 3:50 | 30 m     | Review   | Discussion  | Homework Review           |
+| 4:20 | 20 m     | Engage   | Activity    | Felt Board Activity       |
+| 4:40 | 15 m     | Study    | Lecture     | 01 Vector Data            |
+| 4:55 | 20 m     | Study    | Lecture     | 02 Paper.js               |
+| 5:15 | 5 m      | Study    | Lecture     | Case Study: Paper Jewelry |
+| 5:20 | 10 m     | Break    | Break       | Break                     |
+| 5:30 | 25 m     | Activate | Coding      | Code Challenge            |
+| 5:55 | 15 m     | Study    | Live Coding | Challenge Discussion      |
+| 6:10 | 15 m     | Activate | Activity    | Running Paper.js Locally  |
+
 
 ### Lecture Notes
 
@@ -43,14 +45,14 @@ debug: false
 ### Groups
 
 ::: .headless
-| Group | Question                                                                                                            |
-| ----- | ------------------------------------------------------------------------------------------------------------------- |
-| 1     | Alyssa, Carla, Dahee <br/> Choose a work that was **very clearly** made using turtle graphics.                      |
-| 2     | Max, Aakanksha, Patricia <br/> Choose a work that uses turtle graphics, but doesn't look "turtley".                 |
-| 3     | Sue, Julian, Madison  <br/> Choose a work that is well "framed".                                                    |
-| 4     | Earl, Ting, Bella <br/> This week several sketches used dense lines to create form. Choose one of these to discuss. |
-| 5     | Patrick, Leah, Mario <br/> Choose your favorite challenge response. Discuss.                                        |
-| 6     | Jack, Rik, Kirsten <br/> Which work got the most 😂 + 😍 + 🤓. Discuss.                                             |
+| Group | Question                                                                                                  |
+| ----- | --------------------------------------------------------------------------------------------------------- |
+| 1     | Anna, Janice, Ray<br/> Choose a work that was **very clearly** made using turtle graphics.                |
+| 2     | Tinsley, Noah, Akshansh <br/> Choose a work that uses turtle graphics, but doesn't look "turtley".        |
+| 3     | Brad, Batool, Andrew<br/> Choose a work that uses an image as a input, but doesn't show the image itself. |
+| 4     | Joe, Felix, Kathrin<br/> Choose a work that "filters" an image.                                           |
+| 5     | Archit, Phoebe, Brooke<br/> Choose your favorite pixel challenge response.                                |
+| 6     | Ivy, Alonso, Jungo, Kevin<br/> Choose your favorite turtle challenge response.                            |
 /::
 
 
@@ -61,12 +63,6 @@ debug: false
 
 
 /::
-<!-- Choose a project that presents an interesting direction for further design inquiry. Suggest possible variations on this project. -->
-
-
-### Class Notes
-
-[Vectors](./index.html){boxed right}
 
 
 <style> 

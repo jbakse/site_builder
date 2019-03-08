@@ -16,7 +16,7 @@ debug: false
 
 
 ## Schedule
-
+<!--
 | Time | ESA           | Type           | Activity                    |
 | ---- | ------------- | -------------- | --------------------------- |
 | Pre  | TBA           | -              | Seymour Papert Videos       |
@@ -28,11 +28,11 @@ debug: false
 | 5:35 | Study         | Study Examples | Images, Push, Pop, Tree     |
 | 5:50 | Study         | Code Lecture   | Turtle Class                |
 | 6:10 | Intro         | Intro          | MFA Assignment              |
-
+-->
 
 | Time | Duration | Purpose  | Format      | Name                              |
 | ---- | -------- | -------- | ----------- | --------------------------------- |
-| 3:50 | 10 m     | Review   | Discussion  | Questions                         |
+| 3:50 | 10 m     | Study    | Lecture     | Intro                             |
 | 4:00 | 75 m     | ESA      | Game        | Learning Through Play Concept Map |
 | 5:15 | 5 m      | Break    | Break       | Break                             |
 | 5:20 | 10 m     | Study    | Lecture     | 01 Logo and Turtle Graphics       |
@@ -42,6 +42,7 @@ debug: false
 | 6:15 | 5 m      | Study    | Lecture     | Homework Intro                    |
 
 
+<!--
 ## Lecture
 
 ### Logo and Turtle Graphics
@@ -169,6 +170,6 @@ This project has two main deliverables:
 
 /::
 
-
+-->
 
 
