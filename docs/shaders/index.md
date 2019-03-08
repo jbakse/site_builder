@@ -10,7 +10,7 @@ next: false
 next_url: false
 
 hero_title: Fragment Shaders
-description: ???
+description: Shaders are programs that are run on the GPU to color individual pixels.
 software: GLSL, Unity
 ---
 
@@ -32,7 +32,7 @@ For more information on what a shader is, how they work, and how to make them, p
 
 GPUs can run shaders very quickly because they are designed for parallel processing.
 
-A problem is _parallelizable_ if it can be divided into parts that can be solved independencly and concurrently. If a problem is parallelizable, a high number of slow agents can solve it quickly, and a high number of fast agents can solve it VERY quickly.
+A problem is _parallelizable_ if it can be divided into parts that can be solved **independently and concurrently**. If a problem is parallelizable, a high number of slow agents can solve it quickly, and a high number of fast agents can solve it VERY quickly.
 
 ### Serial: Baking a Cake
 
@@ -52,7 +52,7 @@ Most of these steps must be done in order. You can't measure ingredients you hav
 
 ### Parallel: Tinting an Image
 
-In contrast, Tinting an image is _[embarrasingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel)_. If you divide the image into two parts—top and bottom—and tint both parts at once. Tinting the top doen't rely on tinting the bottom, and tinting the bottom doesn't rely on tinting the top. You can divide the image into 4 parts or 8 parts just as well. Because tinting one pixel doesn't rely on tinting any other, you can divide the image all the way down to each independent pixel and process them all at once. This is the type of problem that GPUs are specifically designed to solve.
+In contrast, Tinting an image is _[embarrasingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel)_. You can divide the image into two parts—top and bottom—and tint both parts at once. Tinting the top doesn't rely on tinting the bottom, and tinting the bottom doesn't rely on tinting the top. Recombining the parts is easy, so splitting up the work allows it to be done much faster. You can divide the image into 4 parts or 8 parts just as well. Because tinting one pixel doesn't rely on tinting any other, you can divide the image all the way down to each independent pixel and process them all at once. This is the type of problem that GPUs are specifically designed to solve.
 
 ## CPUs vs GPUs
 
@@ -64,10 +64,11 @@ CPUs are designed to solve serial problems very quickly. They have super-high cl
 
 ### Multi-Thread CPU
 
-Modern CPUs can do more than one thing at a time. Many CPUs have several cores, and the cores can process multiple threads simultaniously.
+Modern CPUs can do more than one thing at a time. Many CPUs have several cores, and the cores can process multiple threads simultaneously.
 
 ![cpu](figures/Multi_CPU_1.svg)
 
+This allows CPUs to run multiple applications at once, but can't always speed up a single application if it doesn't parallelize well.
 When problems don't parallelize well, threads often have to wait on data from other threads.
 
 ![cpu](figures/Multi_CPU_2.svg)
@@ -86,6 +87,8 @@ Shaders can run very fast because they are strictly limited to fit the optimized
 
 Shaders do not allow data to be passed from thread to thread. None of the values determined while calculating one pixel can be shared by another. The calculations of one pixel can not affect the calculations for other pixels.
 
+This can lead to a lot of redundant work, but often the GPU is so much faster that you still get great performance. It is also possible to precalculate data on the CPU and pass it to the shader.
+
 #### Short Memory
 
 The values determined in the shader are not remembered. Every time the shader runs, it starts from scratch.
@@ -93,6 +96,8 @@ The values determined in the shader are not remembered. Every time the shader ru
 #### Limited Branching
 
 In imparative languages like C and Javascript, `if` is used to create a conditional branch, dynamically choosing which instructions should be run. GPU hardware is not optimized for branching. Early shader models didn't allow branching at all. Generally, the most performant path is for the shader to perform the same sequence of operations on every pixel.
+
+When a shader encounters branching it might actually execute both possible sets of instructions and simply throw away what it doesn't need.
 
 ## p5.js vs Shaders
 
@@ -157,6 +162,24 @@ This example creates a complex image by tracing brownian motion. It draws a seri
 
 ::: js-lab
 /shaders/sketches/brownian.js
+/::
+
+::: .activity
+
+## In-class Challenge One
+
+Explore using p5's pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. <br/> Don't skip any.
+
+### Modify the Gradient Example
+
+1. Change both versions to make a solid blue image.
+2. Change both versions to make a gradient from white to black.
+
+### Modify the Rectangle Example
+
+1. Change all three versions to move the rectangle to the lower half.
+2. Change all three versions to add a second rectangle colored blue.
+
 /::
 
 <script src="./shader_loader.js"></script>

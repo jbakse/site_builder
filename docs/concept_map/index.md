@@ -71,7 +71,7 @@ Lego → [Lego Commercial, 1955](https://www.youtube.com/watch?v=C1gmrgnYD5A)
 
 John Dewey → [Noam Chomsky on John Dewey, 0:00-1:17](https://www.youtube.com/watch?v=uZFuOZ0yTNM)
 
-Maria Montessori → [Montessori School Education](https://www.youtube.com/watch?v=UzmvtVAuuyI)
+Maria Montessori → [Montessori School Education](<[https://www.youtube.com/watch?v=UzmvtVAuuyI](https://www.youtube.com/watch?v=sjOvCC0jVCs)>)
 
 > At an early age, Montessori broke gender barriers and expectations when she enrolled in classes at an all-boys technical school, with hopes of becoming an engineer. She soon had a change of heart and began medical school at the University of Rome, where she graduated – with honors – in 1896.
 

@@ -62,7 +62,7 @@ This page houses information specific to the spring 2019 section of Computationa
 | February 8              | Discovering OOP in Javascript                      |
 | February 1, February 22 | [Intro to Substance Painter](../substance_painter) |
 | February 22             | [Multiuser Webpage](../socketio)                   |
-
+| March 8                 | [Shaders + Unity Live Code](../shaders)            |
 <style>
 .top {
     padding: 0;
