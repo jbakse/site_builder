@@ -25,6 +25,29 @@
 </div>
 <p>Vector graphics must be converted to raster graphics—a process called <a href="https://magcius.github.io/xplain/article/rast1.html">rasterization</a>—in order to be viewed on a pixel-based display. Fortunately, it is easy to rasterize vector graphics: vector graphics contain all the information necessary to do so. It is <em>not</em> easy to convert from raster images to vector images: In order to do so we would have to make inferences about the meaning implied by the raster image. When the form is ambiguous our inferences are just guesses, and they may be wrong.</p>
 <!-- [[ recipe vs finished dish? you can go one way, not the other. you can easily remove salt from a recipe, you can't easily remove salt from a dish]] -->
+<div id="" class="activity">
+<h2 id="felt-board">Felt Board</h2>
+<p>Compare creating scenes using direct mark making vs. cut-out shapes.</p>
+<h3 id="setup">Setup</h3>
+<p>Divide class into groups. Give some groups flet and scissors and the other group paper and makers.</p>
+<h3 id="create">Create</h3>
+<p><em>Groups, 5 minutes</em></p>
+<p>Using only the materials on the table, create a scene that includes a car.</p>
+<p>Before you begin, consider the elements that will make up your image of the car: wheels, doors, windows.</p>
+<h3 id="share">Share</h3>
+<p><em>Individually, 2 minutes</em></p>
+<p>Look around the room at what the other groups have made.</p>
+<h3 id="discussion">Discussion</h3>
+<p><em>Groups, 5 minutes</em></p>
+<p><em>Class, 5 minutes</em></p>
+<ul>
+<li>What are the benefits to creating the scene from felt?</li>
+<li>What are the benefits to creating the scene with paper and markers?</li>
+<li>What are the drawbacks to each?</li>
+<li>What qualities emerge from the two approaches?</li>
+<li>How would you approach animating this scene using the tools you were given?</li>
+</ul>
+</div>
 <h3 id="meaning-vs-form">Meaning vs. Form</h3>
 <p>Consider the image below. What would the image look like if the black circle were removed?</p>
 <p><img src="figures/inference-01.png" alt="inference-01"></p>
@@ -58,6 +81,7 @@ We don’t know if the blue background should continue either.</p>
 <li><a href="https://www.youtube.com/watch?v=psOPu3TldgY">Two Minute Papers: Learning to Fill Holes in Images</a></li>
 </ul>
 </div>
+<h2 id="a-hybrid-workflow">A Hybrid Workflow</h2>
 <p>Using a vector-based graphics library allows us to computationally generate images, export them in a way that preserves their shape information, and further manipulate them in vector editing software.</p>
 <div id="" class="callout">
 <p><img src="figures/post.svg" alt="figures/post.svg"></p>
@@ -80,7 +104,18 @@ We don’t know if the blue background should continue either.</p>
 </iframe>
 </div>
 </div>
-<p>PaperScript programs are sandboxed in their own scope with access to all the Paper.js methods. PaperScript also lets you use mathematical operators to work with Point and Size objects. You can see this on line 12. <code>circle1Location + new Point(100, 0)</code> adds two points together. JavaScript is not able to overload operators like this: this is a feature of PaperScript.</p>
+<h4 id="library-exports">Library Exports</h4>
+<p>If you use Paper.js as a Javascript library, you will access the library through the <code>paper</code> object. In PaperScript, the library contents are exported to the scope of the program and can be accessed directly.</p>
+<p>Javascript:</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> path = <span class="hljs-keyword">new</span> paper.Path();
+</code></pre>
+<p>PaperScript:</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> path = <span class="hljs-keyword">new</span> Path();
+</code></pre>
+<h4 id="operator-overloads">Operator Overloads</h4>
+<p>PaperScript also lets you use mathematical operators to work with Point and Size objects. You can see this on line 12. <code>circle1Location + new Point(100, 0)</code> adds two points together. JavaScript is not able to overload operators like this: this is a feature of PaperScript.</p>
+<h4 id="let-does-not-work-in-paperscript"><code>Let</code> Does Not Work in PaperScript</h4>
+<p>Javascript now allows you to declar variables with <code>let</code> and <code>const</code>, but PaperScript uses only <code>var</code></p>
 <h3 id="retained-mode-vs-immediate-mode">Retained Mode vs. Immediate Mode</h3>
 <p>The p5.js library is an <em>immediate mode</em> graphics library. When you call <code>rect()</code> or <code>ellipse()</code>, p5.js immediately draws the shape to the canvas.</p>
 <p>Paper.js is a <em>retained mode</em> graphics library. When you call <code>Path.Rectangles()</code> or <code>Path.Ellipses()</code>, Paper.js creates object instances to represent the shapes and adds them to a <em>scene graph</em>. The scene graph can then be changed. You can add and remove shapes and change their properties. The shapes in the scene graph are all drawn to the canvas at once, when you are done making changes to it.</p>
@@ -198,6 +233,8 @@ We don’t know if the blue background should continue either.</p>
 <dd>A Google AI experiment that interprets sketches, using Paper.js for the draw area.</dd>
 <dt><a href="http://www.pluminjs.com/">Plumin.js</a></dt>
 <dd>Javascript typeface editing using Paper.js.</dd>
+<dt><a href="https://v-fonts.com/">Variable Fonts</a></dt>
+<dd>Experiment with OpenType customizable typefaces.</dd>
 </dl>
 <!-- 
 Describe the steps taken to make a drawing

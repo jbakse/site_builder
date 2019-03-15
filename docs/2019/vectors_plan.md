@@ -34,10 +34,6 @@ debug: false
 | 6:10 | 15 m     | Activate | Activity    | Running Paper.js Locally  |
 
 
-### Lecture Notes
-
-
-
 ::: .activity
 ## Homework Review
 
