@@ -184,6 +184,12 @@ Explore using p5's pixel manipulation functions by modifying the scripts above. 
 
 <script src="./shader_loader.js"></script>
 
+## Live Code
+
+<video controls>
+  <source src="figures/shader_demo.mp4" type="video/mp4">
+</video>
+
 ## Resources
 
 [The Book of Shaders](https://thebookofshaders.com/)
