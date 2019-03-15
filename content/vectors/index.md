@@ -254,6 +254,9 @@ Create a lasercut thing. This can be anything you like that combines generative 
 [Plumin.js](http://www.pluminjs.com/)
 : Javascript typeface editing using Paper.js.
 
+[Variable Fonts](https://v-fonts.com/)
+: Experiment with OpenType customizable typefaces.
+
 
 
 <!-- 
