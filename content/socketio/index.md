@@ -40,7 +40,7 @@ Source Code: [https://github.com/jbakse/multi_user_page](https://github.com/jbak
 
   - How should that information be communicated?
 
-    This project uses Socket.io for server-client communication.
+    This project uses Socket.IO for server-client communication.
 
   - How much should the application trust the client?
 
