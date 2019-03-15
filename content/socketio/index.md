@@ -10,8 +10,8 @@ next: false
 next_url: false
 
 hero_title: Multiuser Webpage
-description: Build a very simple multiuser web app with a back-end powered by node.js and express and communication powered by socket.io.
-software: Node, Express, Socket IO, Heroku
+description: Build a very simple multiuser web app with a back-end powered by Node.js and Express and communication powered by Socket.IO.
+software: Node, Express, Socket.IO, Heroku
 ---
 
 ## Afterclass Live-Code, Multiuser Webpage
@@ -35,32 +35,48 @@ Source Code: [https://github.com/jbakse/multi_user_page](https://github.com/jbak
 - Basic Client-Server App Architecture
 
   - What information needs to be shared?
+
+    When building a multi-user webpage, decide what information should be shared from the server and what information will be handled on the client side.
+
   - How should that information be communicated?
+
+    This project uses Socket.IO for server-client communication.
+
   - How much should the application trust the client?
 
-- [Isomorphic Javascript](https://en.wikipedia.org/wiki/Isomorphic_JavaScript)
+    More complex games must keep user input and game world information coordinated on the server side, so that all players' experiences are coordinated. However, server-side information is slower to display, creating more lag for players. 
+    
+    When designing your game's architecture, it's important to balance information coordination, timing, and user experience.
+
 - Setting up a Node.js Project
 - Building a simple static web server with Express.js
-- Client-server communication with Socket.io
-- Debugging with `console.log`
+- [Isomorphic Javascript](https://en.wikipedia.org/wiki/Isomorphic_JavaScript)
+
+  Isomorphic JavaScript applications run JavaScript on both the server and client sides. 
+
+<!-- - Client-server communication with Socket.io -->
+
+- Fitting the pieces together and debugging with `console.log`
+
+  This project uses many different elements to construct a webpage. Building thing little by little, testing as you go. Be prepared for backtracking, debugging, and restructuring as you develop the project.
 
 ## Tools Discussed
 
 ### Node.js
 
-Serverside JavaScript runtime.
+Serverside JavaScript runtime. Node.js 
 
 [Homepage](https://nodejs.org/)
 
 ### NPM
 
-The Node Package Manager, used to install and manage javascript libraries and tools
+The Node Package Manager, used to install and manage javascript libraries and tools. 
 
 [homepage](https://npm.org/)
 
 ### Nodemon
 
-Relaunches a Node applicatoin when source is changed.
+Relaunches a Node application when source is changed.
 
 [Homepage](https://nodemon.io/)
 
