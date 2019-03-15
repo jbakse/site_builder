@@ -34,9 +34,29 @@ debug: false
 | 6:10 | 15 m     | Activate | Activity    | Running Paper.js Locally  |
 
 
+### Felt Board
+3 groups have felt sheets, a white base sheet, and scissors
+3 groups have markers and a sheet of paper
+
+## Introduction
+Depict a car, using only the materials on the table. Include at least one other element in the scene, maybe a tree, or a person, or a cat.
+
+Consider the elements that make up an image of a car: wheels, doors, windows. Your groups will each make one scene, so share paper, markers, felt and scissors.
+
+##Create Cars: 10m
+
+## Discussion
+Each group share their scene.
+What are the benefits to creating the scene from felt?
+What are the benefits to creating the scene with paper and markers?
+
+What are the drawbacks to each?
+What qualities emerge from the two approaches?
+
+Now, pretend that your scene is part of an animation. You’d need to create the next frame. With your group, discuss how you’d move the car forward, or re-position other scene elements.
+How would you move the scene forward?
+
 ### Lecture Notes
-
-
 
 ::: .activity
 ## Homework Review
