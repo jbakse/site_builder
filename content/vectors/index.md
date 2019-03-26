@@ -3,7 +3,7 @@ title: Vector Data
 layout: layouts/compform_chapter.pug
 debug: false
 
-header_title: "Pixel Data"
+header_title: "Vector Data"
 next:
 next_url: 
 previous: Turtle Graphics

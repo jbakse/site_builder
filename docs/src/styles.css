@@ -228,7 +228,7 @@
 .comp-form-copy {
   font-family: "Roboto";
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0.31px;
   line-height: 25px;
   /* headers */
@@ -272,7 +272,7 @@
   .comp-form-copy > h2.plain::before {
     content: none; }
   .comp-form-copy h3 {
-    font-family: 'Miriam Libre';
+    font-family: "Miriam Libre";
     font-size: 24px;
     color: #000;
     letter-spacing: 0.31px;
@@ -293,7 +293,7 @@
     margin-bottom: 10px;
     font-family: "Roboto";
     font-weight: 300;
-    font-size: 1em;
+    font-size: 20px;
     letter-spacing: 0.31px;
     line-height: calc(25 / 16); }
   .comp-form-copy blockquote {
@@ -320,7 +320,7 @@
   .comp-form-copy .attrib::before {
     content: "\2014"; }
   .comp-form-copy code {
-    font-family: 'Overpass Mono', monospace;
+    font-family: "Overpass Mono", monospace;
     color: #000;
     background-color: #F4F3F1;
     border-radius: 0; }
@@ -390,7 +390,8 @@
     margin-bottom: 15px; }
   .comp-form-copy hr {
     border-top: 1px solid #CCC; }
-  .comp-form-copy a, .comp-form-copy a:hover {
+  .comp-form-copy a,
+  .comp-form-copy a:hover {
     color: inherit;
     padding-bottom: 2px;
     border-bottom: 1px solid;
@@ -398,10 +399,12 @@
   .comp-form-copy a:hover {
     background-color: #F4F3F1; }
   .comp-form-copy .table {
-    font-size: .85em; }
+    font-size: 0.85em; }
   .comp-form-copy .table th {
     border-top: none; }
-  .comp-form-copy img, .comp-form-copy svg, .comp-form-copy video {
+  .comp-form-copy img,
+  .comp-form-copy svg,
+  .comp-form-copy video {
     display: block;
     max-width: 100%;
     margin-left: auto;
@@ -434,7 +437,7 @@
   .comp-form-copy .three-up img:nth-child(3n - 1) {
     margin-right: 10px; }
   .comp-form-copy .figure {
-    font-size: .75em;
+    font-size: 0.75em;
     margin-bottom: 2em; }
     .comp-form-copy .figure img {
       width: 100%;
@@ -442,7 +445,7 @@
   .comp-form-copy .three-up .figure {
     width: calc((100% - 20px) / 3);
     float: left;
-    font-size: .75em; }
+    font-size: 0.75em; }
     .comp-form-copy .three-up .figure img {
       width: 100%;
       margin-bottom: 0; }
@@ -452,7 +455,7 @@
   .comp-form-copy .two-up .figure {
     width: calc((100% - 20px) / 2);
     float: left;
-    font-size: .75em; }
+    font-size: 0.75em; }
     .comp-form-copy .two-up .figure img {
       width: 100%;
       margin-bottom: 0; }

@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script><title>Paper Garden | Comp Form</title></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<polygon points="32,64 0,119.4 64,119.4"/>
+<polygon points="64,8.6 32,64 96,64"/>
+<polygon points="80,91.7 64,119.4 96,119.4"/>
+<polygon points="112,91.7 96,119.4 128,119.4"/>
+<polygon points="96,64 80,91.7 112,91.7"/>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Paper Garden</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Paper Garden</h1><h6>Overview</h6><p class="description">Demo project using Paper.js to create images of wall gardens in a hand drawn style.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="case-study-paper-garden">Case Study: Paper Garden</h2>
+<p>Paper Garden is a program written in about 300 lines of PaperScript using <a href="http://paperjs.org/">Paper.js</a>. It generates stylized drawings of plants arranged in a wall garden. The plants are rendered as clumps of leaves, sometimes with hanging vines or long drooping flowers. All of this is drawn in rough little circles meant to simulate pen doodles in a sketchbook.</p>
+<p><img src="./images/1500.png" alt="close"></p>
+<p>The image above was drawn by the Paper Garden script, configured to generate, compose, and draw 255 plants. The script allows you to configure the number and spacing of plants; the number, spacing, and sorting of leaves on each plant; and how rough, sloppy, and thick the strokes are. This allows the script to squeeze out a few different looks.</p>
+<div id="" class="three-up full-width">
+<p><img src="./variations/close.png" alt="close">
+<img src="./variations/coloring_book.png" alt="coloring_book">
+<img src="./variations/gappy.png" alt="gappy">
+<img src="./variations/pen_scribble.png" alt="pen_scribble">
+<img src="./variations/soft_sloppy.png" alt="soft_sloppy">
+<img src="./variations/soft.png" alt="soft">
+<img src="./variations/spare.png" alt="spare">
+<img src="./variations/wood_block.png" alt="wood_block">
+<img src="./variations/bottom_up.png" alt="pen_scribble2"></p>
+</div>
+<p>You can configure, edit, and run the script in the editor below, or go on to read a breakdown of how it works.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/vectors/paper_garden/paper_garden.js">
+</iframe>
+</div>
+</div>
+<h2 id="overview">Overview</h2>
+<p>Paper Garden is written in <a href="http://paperjs.org/tutorials/getting-started/working-with-paper-js/">PaperScript</a>, a Paper.js extension of Javascript that supports using mathematical operators on Paper.js objects. Other than that, PaperScript is basically the same as Javascript.</p>
+<p>Paper Garden is written in a <a href="https://en.wikipedia.org/wiki/Procedural_programming">procedural</a> style and comprises 18 functions. The diagram below organizes these functions into general responsibilities and maps out he key relationships between them.</p>
+<p><img src="function_map.svg" alt="function_map"></p>
+<h4 id="application">Application</h4>
+<p>The application doesn’t have much of an interface: you load it and it draws plants. <code>makeScene()</code> is the main entry point for the application.</p>
+<h4 id="composition-planning">Composition Planning</h4>
+<p>These functions build the structure of the drawing. <code>createPlants()</code> decides where plants will go and what kind they should be. <code>createPlant()</code> creates the leaves, flowers and vines that make up an individual plant. <code>createLeaf()</code>, <code>createFlower()</code>, and <code>createVine()</code> draw the plant parts.</p>
+<h4 id="point-placing">Point Placing</h4>
+<p>These functions generate an array of nicely arranged points. <code>clusterPoints()</code> creates some randomly placed points near <code>0,0</code> and then calls <code>relaxPoints()</code> to space them out. <code>relaxPoints()</code> repeatedly compares each pair of points and pushes them apart if they are too close.</p>
+<p>The <code>sort*()</code> functions take an array of points and reorders them based on their positions. Shapes drawn early will be covered up by later shapes, so the order of the points in the array has a big impact on the look of the drawing.</p>
+<p>For more on point placing see the chapter on <a href="/strategy">strategies</a>.</p>
+<h4 id="drawing-style">Drawing + Style</h4>
+<p>The <code>create*()</code> functions all call <code>drawCircle()</code> to create the individual circles in the drawing. The look of the circles created by <code>drawCircle()</code> is configured through global parameters.</p>
+<h4 id="math-random-utilities">Math + Random Utilities</h4>
+<p>These functions are called from all over the program.</p>
+<ul>
+<li><code>map()</code> map a value from one range to another</li>
+<li><code>randomRange()</code> creates a random value in a given range</li>
+<li><code>randomPoint()</code> creates a random Point between <code>-1,-1</code> and <code>1,1</code></li>
+<li><code>pick()</code> chooses and returns a random item from an array</li>
+<li><code>shuffle()</code> randomly reorders the items in an array</li>
+</ul>
+<h2 id="drawing-the-circles">Drawing The Circles</h2>
+<p>I want this program to produce a somewhat hand-drawn look,but <code>new Path.Circle()</code> makes perfect circles. <code>drawCiricle()</code> uses a few tricks and techniques to achieve a more hand drawn appearance.</p>
+<h4 id="draw-back-to-front">Draw Back to Front</h4>
+<p>In my sketchbook doodles, I draw front to back.
+This program draws back to front, and each circle covers any marks already on the drawing.
+This works find for rasterized output on the screen, but won’t vector outputs like pen plotters and laser cutters.</p>
+<h4 id="distorting-the-circle">Distorting the Circle</h4>
+<p><code>rough</code>
+Displaces each control point of the bezier curve by a random amount.</p>
+<h4 id="creating-gaps">Creating Gaps</h4>
+<p><code>drawCircle()</code> creates an unstroked white circle behind the stroked one. This circle is made larger to create gaps—<code>GAPPY</code>—and randomly offset so the gaps are not even—<code>SLOPPY</code>.</p>
+<h4 id="uneven-stroke-width">Uneven Stroke Width</h4>
+<p>Looking closely at my sketchbook drawings shows that the strokes have uneven width and uneven color. To simulate this, <code>drawCircle()</code> duplicates the circle path an draws it again with a slightly thicker stroke. This thicker stroke is broken up using <code>dashOffset</code> and <code>dashArray</code> to create a randomized dash pattern. The effect is subtle, but it helps sell the hand drawn feel.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/vectors/paper_garden/paper_garden_circle_study.js">
+</iframe>
+</div>
+</div>
+<h2 id="drawing-a-plant">Drawing a Plant</h2>
+<h2 id="composing-the-plants">Composing the Plants</h2>
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>

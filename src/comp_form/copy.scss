@@ -1,352 +1,335 @@
 .comp-form-copy {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.31px;
+  line-height: 25px;
+
+  /* headers */
+  > h1 {
+    font-family: "Miriam Libre";
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 1.5;
+    color: $dark-grey;
+    letter-spacing: 0.31px;
+    margin-top: 100px;
+    margin-bottom: 24px;
+  }
+  > h2 {
+    font-family: "Miriam Libre";
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 1.5;
+    color: $dark-grey;
+    letter-spacing: 0.31px;
+    margin-top: 100px;
+    margin-bottom: 24px;
+    padding-left: 3em;
+  }
+
+  counter-reset: h2s;
+  > h2::before {
+    counter-increment: h2s;
+    content: counter(h2s, decimal-leading-zero);
+    position: absolute;
+    margin-left: -3em;
+  }
+
+  > h2.plain {
+    padding-left: 0;
+  }
+  > h2.plain::before {
+    content: none;
+  }
+
+  h3 {
+    font-family: "Miriam Libre";
+    font-size: 24px;
+    color: $dark-grey;
+    letter-spacing: 0.31px;
+    line-height: 25px;
+    margin-top: 52px;
+    margin-bottom: 15px;
+  }
+
+  h4,
+  h5,
+  h6 {
+    margin-top: 45px;
+
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.31px;
+    line-height: 25px;
+
+    color: $dark-grey;
+  }
+
+  /* blocks */
+  /* paragraphs */
+  p {
+    margin-bottom: 10px;
+
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0.31px;
+    line-height: calc(25 / 16);
+  }
+
+  /* blockquote */
+  blockquote {
+    margin-bottom: 10px;
+
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.31px;
+    line-height: 25px;
+    margin-left: 15px;
+    position: relative;
+  }
+  blockquote::before {
+    content: "";
+    background: $middle-grey;
+    width: 4px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -15px;
+    border-radius: 3px;
+  }
+  .attrib {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  .attrib::before {
+    content: "—";
+  }
+
+  /* code */
+  code {
+    font-family: "Overpass Mono", monospace;
+    color: $black;
+    background-color: $light-grey;
+    border-radius: 0;
+  }
+
+  p code {
+    // display: inline-block;
+    // margin-bottom: 4px;
+  }
+  .bad > pre {
+    border: 1px solid $red;
+    background: $light-red;
+  }
+
+  .bad > pre code {
+    background-color: transparent;
+  }
+
+  .good > pre {
+    border: 1px solid $green;
+  }
+
+  pre {
+    margin-left: -15px;
+    margin-right: -15px;
+    /* border: 1px solid $middle-grey; */
+    background-color: $light-grey;
+    padding: 15px;
+    overflow-x: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  pre code {
+    line-height: 1.5;
+    padding: 0;
+    overflow-x: visible;
+  }
+
+  .half pre {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* ul, ol */
+  ul,
+  ol {
+    list-style-type: none;
+    padding-left: 50px;
+
     font-family: "Roboto";
     font-weight: 300;
     font-size: 16px;
     letter-spacing: 0.31px;
     line-height: 25px;
 
+    color: black;
 
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    /* headers */
-    >h1 {
-        font-family: "Miriam Libre";
-        font-weight: bold;
-        font-size: 25px;
-        line-height: 1.5;
-        color: $dark-grey;
-        letter-spacing: 0.31px;
-        margin-top: 100px;
-        margin-bottom: 24px;
+  ul > li,
+  ol > li {
+    .debug & {
+      background-color: $debug-red-transparent;
     }
-    >h2 {
-        font-family: "Miriam Libre";
-        font-weight: bold;
-        font-size: 25px;
-        line-height: 1.5;
-        color: $dark-grey;
-        letter-spacing: 0.31px;
-        margin-top: 100px;
-        margin-bottom: 24px;
-        padding-left: 3em;
+    margin-bottom: 10px;
+  }
+
+  ul > li:before,
+  ol > li:before {
+    .debug & {
+      background-color: $debug-red-transparent;
     }
 
-    counter-reset: h2s;
-    >h2::before {
-        counter-increment: h2s;
-        content: counter(h2s, decimal-leading-zero);
-        position: absolute;
-        margin-left: -3em;
+    position: absolute;
+    margin-left: -50px;
+    margin-right: 30px;
+    width: 30px;
+    text-align: right;
+  }
+
+  ul > li:before {
+    content: "•";
+  }
+
+  ol {
+    counter-reset: ollis;
+  }
+
+  ol.continue {
+    counter-reset: none;
+  }
+
+  ol > li::before {
+    counter-increment: ollis;
+    content: counter(ollis, decimal-leading-zero); // margin-right: 30px;
+  }
+
+  /* dl */
+  dl {
+    // padding-left: 50px;
+  }
+  dl > dt {
+    // font-size: 14px;
+    font-weight: 400;
+  }
+  dl > dd {
+    margin-bottom: 15px;
+  }
+
+  /* hr */
+  hr {
+    border-top: 1px solid $middle-grey;
+  }
+
+  /* links */
+  a,
+  a:hover {
+    color: inherit;
+    padding-bottom: 2px;
+    border-bottom: 1px solid;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: $light-grey;
+  }
+
+  /* tables */
+  .table {
+    font-size: 0.85em;
+  }
+
+  .table th {
+    border-top: none;
+  }
+
+  /* images */
+  img,
+  svg,
+  video {
+    display: block; // margin-bottom: 15px;
+    max-width: 100%; // border: 10px solid $dark-grey;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+
+  .scale img {
+    width: 100%;
+  }
+
+  .pixel img {
+    image-rendering: pixelated;
+  }
+
+  .two-up {
+    @include clearfix;
+  }
+  .two-up img {
+    width: calc(50% - 5px);
+    float: left;
+  }
+  .two-up img:nth-child(2n - 1) {
+    margin-right: 10px;
+  }
+
+  .three-up {
+    margin-top: 1em;
+    @include clearfix;
+  }
+  .three-up img {
+    width: calc((100% - 20px) / 3);
+    float: left;
+  }
+
+  .three-up img:nth-child(3n - 2),
+  .three-up img:nth-child(3n - 1) {
+    margin-right: 10px;
+  }
+
+  .figure {
+    font-size: 0.75em;
+    img {
+      width: 100%;
+      margin-bottom: 0;
     }
+    margin-bottom: 2em;
+  }
 
-    >h2.plain {
-        padding-left: 0;
+  .three-up .figure {
+    width: calc((100% - 20px) / 3);
+    float: left;
+    font-size: 0.75em;
+    img {
+      width: 100%;
+      margin-bottom: 0;
     }
-    >h2.plain::before {
-        content: none;
+  }
+
+  .three-up .figure:nth-child(3n - 2),
+  .three-up .figure:nth-child(3n - 1) {
+    margin-right: 10px;
+  }
+
+  .two-up .figure {
+    width: calc((100% - 20px) / 2);
+    float: left;
+    font-size: 0.75em;
+    img {
+      width: 100%;
+      margin-bottom: 0;
     }
+  }
 
-    h3 {
-        font-family: 'Miriam Libre';
-        font-size: 24px;
-        color: $dark-grey;
-        letter-spacing: 0.31px;
-        line-height: 25px;
-        margin-top: 52px;
-        margin-bottom: 15px;
-    }
-
-    h4,
-    h5,
-    h6 {
-        margin-top: 45px;
-
-        font-family: "Roboto";
-        font-weight: 500;
-        font-size: 16px;
-        letter-spacing: 0.31px;
-        line-height: 25px;
-
-        color: $dark-grey;
-    }
-
-    /* blocks */
-    /* paragraphs */
-    p {
-        margin-bottom: 10px;
-
-        font-family: "Roboto";
-        font-weight: 300;
-        font-size: 1em;
-        letter-spacing: 0.31px;
-        line-height: calc(25 / 16);
-    }
-
-    /* blockquote */
-    blockquote {
-        margin-bottom: 10px;
-
-        font-family: "Roboto";
-        font-weight: 300;
-        font-size: 16px;
-        letter-spacing: 0.31px;
-        line-height: 25px;
-        margin-left: 15px;
-        position: relative;
-    }
-    blockquote::before {
-        content: "";
-        background: $middle-grey;
-        width: 4px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: -15px;
-        border-radius: 3px;
-    }
-    .attrib {
-        font-style: italic;
-        margin-bottom: 20px;
-    }
-    .attrib::before {
-        content: "—";
-    }
-
-    /* code */
-    code {
-        font-family: 'Overpass Mono', monospace;
-        color: $black;
-        background-color: $light-grey;
-        border-radius: 0;
-    }
-
-    p code {
-        // display: inline-block;
-        // margin-bottom: 4px;
-    }
-    .bad>pre {
-        border: 1px solid $red;
-        background: $light-red;
-    }
-
-
-    .bad>pre code {
-        background-color: transparent;
-    }
-
-
-    .good>pre {
-        border: 1px solid $green;
-    }
-
-
-    pre {
-        margin-left: -15px;
-        margin-right: -15px;
-        /* border: 1px solid $middle-grey; */
-        background-color: $light-grey;
-        padding: 15px;
-        overflow-x: auto;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    pre code {
-        line-height: 1.5;
-        padding: 0;
-        overflow-x: visible;
-    }
-    
-    .half pre {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    /* ul, ol */
-    ul,
-    ol {
-        list-style-type: none;
-        padding-left: 50px;
-
-
-        font-family: "Roboto";
-        font-weight: 300;
-        font-size: 16px;
-        letter-spacing: 0.31px;
-        line-height: 25px;
-
-        color: black;
-
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    ul>li,
-    ol>li {
-        .debug & {
-            background-color: $debug-red-transparent;
-        }
-        margin-bottom: 10px;
-    }
-
-    ul>li:before,
-    ol>li:before {
-
-        .debug & {
-            background-color: $debug-red-transparent;
-        }
-
-        position: absolute;
-        margin-left: -50px;
-        margin-right: 30px;
-        width: 30px;
-        text-align: right;
-    }
-
-    ul>li:before {
-        content: "•";
-    }
-
-    ol {
-        counter-reset: ollis;
-    }
-
-
-    ol.continue {
-        counter-reset: none;
-    }
-
-
-    ol>li::before {
-        counter-increment: ollis;
-        content: counter(ollis, decimal-leading-zero); // margin-right: 30px;
-    }
-
-
-    /* dl */
-    dl {
-        // padding-left: 50px;
-    }
-    dl>dt {
-        // font-size: 14px;
-        font-weight: 400;
-    }
-    dl>dd {
-        margin-bottom: 15px;
-    }
-
-
-    /* hr */
-    hr {
-        border-top: 1px solid $middle-grey;
-    }
-
-    /* links */
-    a, a:hover {
-        color: inherit;
-        padding-bottom: 2px;
-        border-bottom: 1px solid;
-        text-decoration: none;
-    }
-    a:hover {
-        background-color: $light-grey;
-    }
-
-
-    /* tables */
-    .table {
-
-        font-size: .85em;
-    }
-
-    .table th {
-        border-top: none;
-    }
-
-
-    /* images */
-    img, svg, video {
-        display: block; // margin-bottom: 15px;
-        max-width: 100%; // border: 10px solid $dark-grey;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        margin-top: 20px;
-    }
-
-    .scale img {
-        width: 100%;
-    }
-
-
-
-
-    .pixel img {
-        image-rendering: pixelated;
-    }
-
-    .two-up {
-        @include clearfix;
-    }
-    .two-up img {
-        width: calc(50% - 5px);
-        float: left;
-    }
-    .two-up img:nth-child(2n - 1) {
-        margin-right: 10px;
-    }
-
-    .three-up {
-        margin-top: 1em;
-        @include clearfix;
-    }
-    .three-up img {
-        width: calc((100% - 20px) / 3);
-        float: left;
-    }
-
-    .three-up img:nth-child(3n - 2),
-    .three-up img:nth-child(3n - 1) {
-        margin-right: 10px;
-    }
-
-    .figure {
-        font-size: .75em;
-        img {
-            width: 100%;
-            margin-bottom: 0;
-        }
-        margin-bottom: 2em;
-
-
-    }
-    
-    .three-up .figure {
-        width: calc((100% - 20px) / 3);
-        float: left;
-        font-size: .75em;
-        img {
-            width: 100%;
-            margin-bottom: 0;
-        }
-    }
-
-    .three-up .figure:nth-child(3n - 2),
-    .three-up .figure:nth-child(3n - 1) {
-        margin-right: 10px;
-    }
-
-
-    .two-up .figure {
-        width: calc((100% - 20px) / 2);
-        float: left;
-        font-size: .75em;
-        img {
-            width: 100%;
-            margin-bottom: 0;
-        }
-    }
-
-    .two-up .figure:nth-child(2n - 1) {
-        margin-right: 10px;
-    }
+  .two-up .figure:nth-child(2n - 1) {
+    margin-right: 10px;
+  }
 }
