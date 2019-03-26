@@ -42,6 +42,40 @@ Vector graphics must be converted to raster graphics—a process called [rasteri
 
 <!-- [[ recipe vs finished dish? you can go one way, not the other. you can easily remove salt from a recipe, you can't easily remove salt from a dish]] -->
 
+
+::: .activity
+## Felt Board
+Compare creating scenes using direct mark making vs. cut-out shapes.
+
+### Setup
+Divide class into groups. Give some groups flet and scissors and the other group paper and makers.
+
+### Create
+*Groups, 5 minutes*
+
+Using only the materials on the table, create a scene that includes a car.
+
+Before you begin, consider the elements that will make up your image of the car: wheels, doors, windows. 
+
+### Share
+*Individually, 2 minutes*
+
+Look around the room at what the other groups have made.
+
+### Discussion
+*Groups, 5 minutes*
+
+*Class, 5 minutes*
+
+- What are the benefits to creating the scene from felt?
+- What are the benefits to creating the scene with paper and markers?
+- What are the drawbacks to each?
+- What qualities emerge from the two approaches?
+- How would you approach animating this scene using the tools you were given?
+
+
+/::
+
 ### Meaning vs. Form
 
 Consider the image below. What would the image look like if the black circle were removed?
@@ -90,6 +124,8 @@ The [Two Minute Papers](https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg
 /::
 
 
+## A Hybrid Workflow
+
 Using a vector-based graphics library allows us to computationally generate images, export them in a way that preserves their shape information, and further manipulate them in vector editing software.
 
 ::: .callout
@@ -122,7 +158,25 @@ Here is an example of a Paper.js program written in PaperScript:
 /::
 
 
-PaperScript programs are sandboxed in their own scope with access to all the Paper.js methods. PaperScript also lets you use mathematical operators to work with Point and Size objects. You can see this on line 12. `circle1Location + new Point(100, 0)` adds two points together. JavaScript is not able to overload operators like this: this is a feature of PaperScript.
+#### Library Exports
+If you use Paper.js as a Javascript library, you will access the library through the `paper` object. In PaperScript, the library contents are exported to the scope of the program and can be accessed directly. 
+
+Javascript:
+```javascript
+var path = new paper.Path();
+```
+
+PaperScript:
+```javascript
+var path = new Path();
+```
+
+#### Operator Overloads
+PaperScript also lets you use mathematical operators to work with Point and Size objects. You can see this on line 12. `circle1Location + new Point(100, 0)` adds two points together. JavaScript is not able to overload operators like this: this is a feature of PaperScript.
+
+#### `Let` Does Not Work in PaperScript
+Javascript now allows you to declar variables with `let` and `const`, but PaperScript uses only `var`
+
 
 
 ### Retained Mode vs. Immediate Mode
@@ -253,6 +307,9 @@ Create a lasercut thing. This can be anything you like that combines generative 
 
 [Plumin.js](http://www.pluminjs.com/)
 : Javascript typeface editing using Paper.js.
+
+[Variable Fonts](https://v-fonts.com/)
+: Experiment with OpenType customizable typefaces.
 
 
 

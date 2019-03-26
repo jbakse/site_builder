@@ -447,6 +447,9 @@ var blended_color = lerpColor(color_a, color_b, .5);
 <p>A <code>1,920 x 1,080</code> image has <code>2,073,600</code> pixels. Reading all of those pixels with <code>get()</code> would require copying <code>4,299,816,960,000</code> pixels, but your browser will crash first.</p>
 </div>
 <p>We can get much faster results by loading all of the pixel values <strong>once</strong> with <code>loadPixels()</code>, and then reading and writing the <code>pixels[]</code> array directly.</p>
+<div id="" class="callout">
+<p>When reading from <code>pixels[]</code> ourselves we can make sure we haven’t changed the values we are trying to read.</p>
+</div>
 <p>The <code>getQuick()</code> function below reads a pixel’s color value from an image’s <code>pixels[]</code> array. You must call <code>loadPixels()</code> before calling this function. When you are done working with the <code>pixels[]</code> array, you should call <code>updatePixels()</code> to update the image with your changes.</p>
 <pre><code class="language-javascript"><span class="hljs-comment">// returns the RGBA values of the pixel at x, y in the img's pixels[] array</span>
 <span class="hljs-comment">// returns values as an array [r, g, b, a]</span>
