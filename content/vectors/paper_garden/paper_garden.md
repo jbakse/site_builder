@@ -18,11 +18,11 @@ software: p5.js
 
 ## Case Study: Paper Garden
 
-Paper Garden is a program written in about 300 lines of PaperScript using [Paper.js](http://paperjs.org/). It generates stylized drawings of plants arranged in a wall garden. The plants are rendered as clumps of leaves, sometimes with hanging vines or long drooping flowers. All of this is drawn in rough little circles meant to simulate pen doodles in a sketchbook.
+Paper Garden is a program written in about 300 lines of PaperScript using [Paper.js](http://paperjs.org/). It generates stylized drawings of plants arranged in a wall garden. The plants are rendered as clumps of leaves, sometimes with hanging vines or long drooping flowers. All of this is drawn with rough little circles meant to simulate pen doodles from my sketchbook.
 
 ![close](./images/1500.png)
 
-The image above was drawn by the Paper Garden script, configured to generate, compose, and draw 255 plants. The script allows you to configure the number and spacing of plants; the number, spacing, and sorting of leaves on each plant; and how rough, sloppy, and thick the strokes are. This allows the script to squeeze out a few different looks.
+The image above was drawn by the Paper Garden script. For this image the script was configured configured to generate, compose, and draw 255 plants. The script allows you to configure the number and spacing of plants; the number, spacing, and sorting of leaves on each plant; and how rough, sloppy, and thick the strokes are. This allows the script to squeeze out a range of different looks.
 
 ::: .three-up .full-width
 ![close](./variations/close.png)
@@ -82,30 +82,37 @@ These functions are called from all over the program.
 
 ## Drawing The Circles
 
-Paper Garden produces images with a somewhat hand-drawn look similar to doodles from my sketchbook, but `new Path.Circle()` makes perfect circles. `drawCiricle()` uses a few tricks and techniques to achieve a more hand-pdrawn appearance.
+Paper Garden produces images with a somewhat hand-drawn look based on a doodles from my sketchbook, but `new Path.Circle()` makes perfect circles. `drawCiricle()` uses a few tricks and techniques to achieve a more hand-drawn appearance.
+
+![./images/sketch.jpg](./images/sketch.jpg)
 
 #### Draw Back to Front
 
-In my sketchbook doodles, I drew the circles in front first. When drawing by hand, it is easy to not draw part of the circle and hard to erase pen marks. In Paper.js the oppiste is true. New circles easily cover any marks already on the drawing, and drawing only part of the circle requires extra work. Because of this, Paper Flowers draws from back to front.
+In my sketchbook doodle, I drew the circles front to back. When drawing with a pen, it is easy to not draw part of the circle and hard to erase marks. In Paper.js the opposite is true. New circles easily cover any marks already on the drawing, and drawing only part of the circle requires substantial extra work. Because of this, Paper Flowers draws from back to front.
 
-This works fine for rasterized output on the screen, but won't work on vector outputs like pen plotters or laser cutters.
+::: .callout .warn
+This approach works fine for rasterized output on the screen, but won't work on vector outputs like pen plotters or laser cutters which will draw the entire path of each circle even if another circle covers it.
+/::
 
 #### Distorting the Circle
 
-`rough`
-Displaces each control point of the bezier curve by a random amount.
+The circles in my doodle are not very round. Paper Garden simulates this by displacing each control point of the bezier curve in a random direction. The amount of displacement is controlled by the `ROUGH` parameter.
 
 #### Creating Gaps
 
-`drawCircle()` creates an unstroked white circle behind the stroked one. This circle is made larger to create gaps—`GAPPY`—and randomly offset so the gaps are not even—`SLOPPY`.
+The lines in the circles don't always perfectly meet. To recreate this, `drawCircle()` creates an unstroked white circle behind the stroked one. This circle is made larger to create gaps—`GAPPY`—and randomly offset so the gaps are not even—`SLOPPY`.
 
 #### Uneven Stroke Width
 
-Looking closely at my sketchbook drawings shows that the strokes have uneven width and uneven color. To simulate this, `drawCircle()` duplicates the circle path an draws it again with a slightly thicker stroke. This thicker stroke is broken up using `dashOffset` and `dashArray` to create a randomized dash pattern. The effect is subtle, but it helps sell the hand drawn feel.
+The strokes in the doodle have uneven widths and uneven color. In particular, the first little bit of each stroke is heavier than the rest. To simulate this, `drawCircle()` duplicates the circle path an draws it again with a slightly thicker stroke. This thicker stroke is broken up using `dashOffset` and `dashArray` to create a randomized dash pattern.
 
 ::: js-lab
 /vectors/paper_garden/paper_garden_circle_study.js
 /::
+
+#### Subtlety
+
+The circles produced by `drawCircle()` are rough, gappy, and uneven, but they are still much more "perfect" than the strokes on the doodle. This is largely an artistic judgement. I wanted to keep some of the richness and subtlety of the hand drawn doodle, but wanted the final image to look less sloppy and rushed. Also Paper Flower generates drawings that are much more complex than the doodle above with hundreds of plants and thousands of leaves. This added complexity already makes the overall drawing more rich and interesting. The stroke quality should support that interest without distracting from it.
 
 ## Drawing a Plant
 
