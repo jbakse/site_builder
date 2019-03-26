@@ -116,4 +116,8 @@ The circles produced by `drawCircle()` are rough, gappy, and uneven, but they ar
 
 ## Drawing a Plant
 
+::: js-lab
+/vectors/paper_garden/paper_garden_relax_study.js
+/::
+
 ## Composing the Plants
