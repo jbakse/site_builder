@@ -21,42 +21,41 @@ Simply put, a procedure is a set of instructions, and computational form is any 
 
 Artists ranging from Sol Lewitt to Yoko Ono have explored the conceptual and aesthetic implications of generative art. The increasing prevalence of digital fabrication and short-run manufacturing has driven interest in parametric design. Procedurally generated content is widely used in the video game industry to create worlds far too complex to craft by hand. The world wide web is a digital-native platform where procedures are commonly used to generate up-to-date, personalized content.
 
-
 ::: slides .contain
 @@include('./compform_slides.yaml')
 /::
 
-
 ::: .discussion
+
 ## Why use Procedures?
+
 Consider the advantages and disadvantages of using procedures to generate form.
 
-- What types of art can __only__ be created using procedures?
-- What types of art can __not__ be created using procedures?
-/::
-
+- What types of art can **only** be created using procedures?
+- What types of art can **not** be created using procedures?
+  /::
 
 ### The Benefits of Computational Form
 
 #### Reduces Tedium and Errors
+
 Doing simple, repetitious work by hand is tedious and very prone to simple errors. Following defined procedures makes errors less likely and well-defined procedures can often be automated completely by computers.
 
 #### Speeds Iteration
-The processes of defining a computer program to create form is often initially slower than creating the form directly by hand. But once the program is completed it can be very fast to try many variations. 
+
+The processes of defining a computer program to create form is often initially slower than creating the form directly by hand. But once the program is completed it can be very fast to try many variations.
 
 ##### Enables Greater Detail
+
 Practical concerns often limit how much detail can be included in manually created form. Working with procedures allows extremely—even infinitely—detailed compositions to be created.
 
 #### Shifts Focus from Results to Intent
-Creating form through procedures shifts the artist's perspective and can lead to novel, creative approaches to problems. 
+
+Creating form through procedures shifts the artist's perspective and can lead to novel, creative approaches to problems.
 
 #### Allows Real-time and Personalized Content
+
 Because procedures can be executed quickly and tirelessly by computers, it is possible to create systems that produce unique variations for every viewer.
-
-
-
-
-
 
 ::: .activity
 
@@ -76,19 +75,17 @@ Please take out a sheet of paper and pen and follow these instructions:
 4. Choose any empty, up-pointing triangle on the page.
 5. Go to instruction 2.
 
-
 Yes, these instructions will go on forever. Stop after a few minutes.
 
 [stand-alone instructions](../introduction/sierpinski.html){boxed right}
 
 /::
 
-
 ## Computers and Programming
 
 Computational Form doesn't necessarily require computers or computer programming. Artists have been experimenting with generative concepts since before computers even existed and artists still write instructions and then carry them out themselves manually. But computers are an _exceptionally_ powerful tool for exploring procedural generation and computational form. They are fast, accurate, predictable, and reliable and they don't complain about tedious tasks.
 
-This site explores a variety of computer languages and tools which can be used to create form computationally. Many of the examples—including those in this chapter—are written using [p5.js](https://p5js.org/). For a quick introduction to p5.js, see the [Hello, p5!](../p5) chapter and the [p5.js](https://p5js.org/) website. 
+This site explores a variety of computer languages and tools which can be used to create form computationally. Many of the examples—including those in this chapter—are written using [p5.js](https://p5js.org/). For a quick introduction to p5.js, see the [Hello, p5!](../p5) chapter and the [p5.js](https://p5js.org/) website.
 
 Here is a simple example of a p5.js program that draws a house.
 
@@ -104,16 +101,13 @@ At first, this indirect way of working can feel cumbersome. It would be easier t
 /procedures/sketches/houses.js
 /::
 
-This example is only little more complex but instead of drawing one specific house, can generate many, many variations. The procedure used here introduces a few new concepts like making decisions based on random numbers and mixing colors, but the flow of the program is still straight down from top to bottom. 
+This example is only little more complex but instead of drawing one specific house, can generate many, many variations. The procedure used here introduces a few new concepts like making decisions based on random numbers and mixing colors, but the flow of the program is still straight down from top to bottom.
 
-As procedures begin to include `looping` and `conditional branching` they become much more powerful and even a short program can produce complex, detailed form. The following program draws a Sierpinski triangle using a completely different procedure from the one above. 
+As procedures begin to include `looping` and `conditional branching` they become much more powerful and even a short program can produce complex, detailed form. The following program draws a Sierpinski triangle using a completely different procedure from the one above.
 
 ::: js-lab
 /procedures/sketches/donkey.js
 /::
-
-
-
 
 ::: .callout
 
@@ -123,21 +117,21 @@ When beginner and intermediate programmers run into trouble building more comple
 
 > Break your problem into smaller parts, and solve those parts.
 
-Unfortunately this advice often isn't helpful: programmers often try to follow it and still get stuck. This advice falls short because it describes how the final program should be structured rather than the process of developing it. It is hard to understand a complex problem and it is hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together?  With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can't initially understand well enough to break down. When this happens to you, you still have an option for getting started: **make a simpler program**.
+Unfortunately this advice often isn't helpful: programmers often try to follow it and still get stuck. This advice falls short because it describes how the final program should be structured rather than the process of developing it. It is hard to understand a complex problem and it is hard to break complex problems down into parts. How big should the parts be? How do you build an individual part without the other parts it depends on? Once you have a few working parts, how do you put them together? With experience, these questions get easier to answer, but advanced programmers still frequently encounter problems they can't initially understand well enough to break down. When this happens to you, you still have an option for getting started: **make a simpler program**.
 
-Imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You could begin by trying to break it down into sub-tasks—keyboard controlled paddles, an animated ball, a scoreboard—but it is hard to plan all those pieces all at once. At the planning stage you will have a rough idea of how each piece should work, but you won't know the details until you start building each piece. Without understanding the details, the pieces you make probably won't fit together. You might end up with *a lot* of code that *doesn't work* and that you *don't understand*. It is much better to have *a little bit* of code that *does work* and that you *do understand*.
+Imagine you want to make a game like [pong](https://www.youtube.com/watch?v=1LsRGUODHlQ). You could begin by trying to break it down into sub-tasks—keyboard controlled paddles, an animated ball, a scoreboard—but it is hard to plan all those pieces all at once. At the planning stage you will have a rough idea of how each piece should work, but you won't know the details until you start building each piece. Without understanding the details, the pieces you make probably won't fit together. You might end up with _a lot_ of code that _doesn't work_ and that you _don't understand_. It is much better to have _a little bit_ of code that _does work_ and that you _do understand_.
 
 Instead, you could start with a very simple program: just draw a little square—the ball—on the screen. Build and run this program to make sure it works. Then start adding on. Make the ball move to the right. Don't worry about the paddles or the score yet: focus on the ball. Make the square bounce when it hits the side. Then make it move diagonally. Make the ball bounce off all the sides. You might make dozens of incremental working programs as you get the basic ball working. As you do, take the time to review the code and make sure you understand how everything works.
 
-Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you discover how that piece will connect with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_. 
+Working this way will let you discover the details of how your ball—an important piece of your program—works. These details will help you discover how that piece will connect with the others. As you start to build other elements—like the paddles or scoreboard—you might find out that you need to go back and change how the ball works. Expect to run into some dead ends, and expect the need to back track. This might have been avoided if you had made a complete plan in the beginning, but _in the beginning, you didn't know enough to make a complete plan_.
 
 This reason this strategy works is simple: **instead of trying to do something you can't, you try to do something you can.**
 
 /::
 
-<!-- e.g. Gall's law
-> A complex system that works is invariably found to have evolved from a simple system that worked. The inverse proposition also appears to be true: A complex system designed from scratch never works and cannot be made to work. You have to start over, beginning with a working simple system. -->
+> A complex system that works is invariably found to have evolved from a simple system that worked. The inverse proposition also appears to be true: A complex system designed from scratch never works and cannot be made to work. You have to start over, beginning with a working simple system.
 
+[Gall](<https://en.wikipedia.org/wiki/John_Gall_(author)>)'s Law{attrib}
 
 ## Properties of PCG Systems
 
@@ -147,48 +141,42 @@ The following properties are borrowed from [the first chapter of Procedural Cont
 
 ### Speed
 
-* How fast does your program need to run?
-* Is it okay if it takes a very long time to complete?
-* Many times a faster-running program is harder to code and understand.
-* A frame of VR content needs to be rendered in under 10ms, while a short pre-rendered animation may take days to render.
+- How fast does your program need to run?
+- Is it okay if it takes a very long time to complete?
+- Many times a faster-running program is harder to code and understand.
+- A frame of VR content needs to be rendered in under 10ms, while a short pre-rendered animation may take days to render.
 
 ### Reliability
 
-* Does your program need to produce a good result every time?
-* Are results shown directly to your audience, or will you have the opportunity to edit?
+- Does your program need to produce a good result every time?
+- Are results shown directly to your audience, or will you have the opportunity to edit?
 
 ### Controllability
 
-* Does your program expose any user parameters?
-* Do you want explore the parameter space manually?
-* Do you want to have tight control over the results or should everything work automatically?
+- Does your program expose any user parameters?
+- Do you want explore the parameter space manually?
+- Do you want to have tight control over the results or should everything work automatically?
 
 ### Expressivity and Diversity
 
-* How much apparent range does your system have?
-* Does everything look same-y?
-* Is it okay for your output to be completely wild or does it need to satisfy some constraints?
-* If you are exposing parameters, do they allow for meaningful control?
+- How much apparent range does your system have?
+- Does everything look same-y?
+- Is it okay for your output to be completely wild or does it need to satisfy some constraints?
+- If you are exposing parameters, do they allow for meaningful control?
 
 ### Creativity and Believability
 
-* Do you want your results to look natural or hand-made?
-* Is it okay for them to look "computer-y"?
-* If your system is generating variations on something that already exists, how closely do you want to copy the original?
+- Do you want your results to look natural or hand-made?
+- Is it okay for them to look "computer-y"?
+- If your system is generating variations on something that already exists, how closely do you want to copy the original?
 
 ### Repeatability
 
-* Do you need the ability to generate the same result more than once?
-
-
-
-
+- Do you need the ability to generate the same result more than once?
 
 ::: .assignment
 
 ## Read + Watch + Play
-
-
 
 ### Watch
 
@@ -210,7 +198,6 @@ If you want to play Spelunky—which I highly recommend—the original version (
 [For Mac](https://forums.tigsource.com/index.php?topic=28467.0){boxed right}
 
 /::
-
 
 ## Additional Reading
 
