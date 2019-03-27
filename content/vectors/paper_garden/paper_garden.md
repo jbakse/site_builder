@@ -112,7 +112,9 @@ The strokes in the doodle have uneven widths and uneven color. In particular, th
 
 #### Subtlety
 
-The circles produced by `drawCircle()` are rough, gappy, and uneven, but they are still much more "perfect" than the strokes on the doodle. This is largely an artistic judgement. I wanted to keep some of the richness and subtlety of the hand drawn doodle, but wanted the final image to look less sloppy and rushed. Also Paper Flower generates drawings that are much more complex than the doodle above with hundreds of plants and thousands of leaves. This added complexity already makes the overall drawing more rich and interesting. The stroke quality should support that interest without distracting from it.
+The circles produced by `drawCircle()` are rough, gappy, and uneven, but they are still much more "perfect" than the strokes on the doodle. This is largely an artistic judgement. I wanted to keep some of the richness and subtlety of the hand drawn doodle, but wanted the final image to look less sloppy and rushed.
+
+Also, Paper Flower generates drawings that are much more complex than the doodle above with hundreds of plants and thousands of leaves. This added complexity already makes the overall drawing more rich and interesting. The stroke quality should support that interest without distracting from it.
 
 ## Drawing a Plant
 
