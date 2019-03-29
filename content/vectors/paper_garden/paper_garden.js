@@ -16,9 +16,9 @@
 
 ////////////////////////////////////////////////
 // composition settings
-var WIDTH = 1000;
-var HEIGHT = 1000;
-var MARGIN = 50;
+var WIDTH = 490;
+var HEIGHT = 490;
+var MARGIN = 30;
 
 ////////////////////////////////////////////////
 // drawing settings
@@ -69,7 +69,12 @@ function makeScene() {
 
   // fit drawing onto canvas
   project.activeLayer.fitBounds(
-    new Rectangle(0 + MARGIN, 0 + MARGIN, 1000 - MARGIN * 2, 1000 - MARGIN * 2)
+    new Rectangle(
+      0 + MARGIN,
+      0 + MARGIN,
+      WIDTH - MARGIN * 2,
+      HEIGHT - MARGIN * 2
+    )
   );
 }
 
