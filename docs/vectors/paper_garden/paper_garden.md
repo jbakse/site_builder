@@ -20,6 +20,10 @@ software: p5.js
 
 Paper Garden is a program written in about 300 lines of PaperScript using [Paper.js](http://paperjs.org/). It generates stylized drawings of plants arranged in a wall garden. The plants are rendered as clumps of leaves, sometimes with hanging vines or long drooping flowers. All of this is drawn with rough little circles meant to simulate pen doodles from my sketchbook.
 
+::: .callout
+This example was inspired by the [r/proceduralgeneration](https://www.reddit.com/r/proceduralgeneration/) monthly challenge for [March 2019, Procedural Garden](https://www.reddit.com/r/proceduralgeneration/comments/apyz31/challenge_2019_1_procedural_garden/).
+/::
+
 ![close](./images/1500.png)
 
 The image above was drawn by the Paper Garden script. For this image, the script was configured to generate, compose, and draw 255 plants. The script allows you to configure the number and spacing of plants; the number, spacing, and sorting of leaves on each plant; and how rough, sloppy, and thick the strokes are. This allows the script to squeeze out a range of different looks.
