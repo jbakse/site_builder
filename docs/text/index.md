@@ -24,11 +24,16 @@ Procedural generation can be used to create form in almost any media: image, vid
 [Google:<br/>How search works.](https://www.google.com/search/howsearchworks/)
 /::
 
+<!-- <img src="./images/google.png" style = "border: 1px solid #AAA; width: 320px; position: absolute; left: -340px;" /> -->
+
+Consider how a Google [search result](https://www.google.com/search?q=comp%20form) page is built.
 Google uses programs to crawl the web, collecting a database of information about every page. When you perform a search, another program searches this database for relevant information. This information is then carefully excerpted, summarized, formatted, and collated. The resulting web page of results is built on the fly and sent to your browser for you to read.
 
 Social media sites like Facebook and Twitter are software systems for collecting and sharing user-created content, largely text. Even websites primarily concerned with other media, like YouTube and Instagram, must generate HTML text to showcase their videos and images.
 
-### The Imitation Game
+::: .callout
+
+**The Imitation Game**
 
 Search engines and social media sites are certainly procedurally generating text, but for the most part they are not generating _content_. Few would argue that these sites are being truly _creative_. In fact, many have argued that computers are not capable of true creativity at all.
 
@@ -36,20 +41,33 @@ Search engines and social media sites are certainly procedurally generating text
 
 Geoffrey Jefferson{attrib}
 
-In 1950, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) addressed this argument and several others in [Computing Machinery and Intelligence](https://home.manhattan.edu/~tina.tian/CMPT420/Turing.pdf), in which he considered the question "Can machines think?" Rather than answering the question directly, Turing proposes an _imitation game_, often referred to as the Turing Test, which challenges a machine to imitate a human over "a teleprinter communicating between two rooms". Turing asks whether a machine could do well enough that a human interrogator would be unable to tell such a machine from an actual human. He argues that passing such a test would actually be harder than thinking—after all, a human can certainly think, but could not convincingly imitate a computer.
+In 1950, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) directly addressed this argument and several others in [Computing Machinery and Intelligence](https://home.manhattan.edu/~tina.tian/CMPT420/Turing.pdf), in which he considered the question "Can machines think?" Rather than answering the question directly, Turing proposes an _imitation game_, often referred to as the Turing Test, which challenges a machine to imitate a human over "a teleprinter communicating between two rooms". Turing asks whether a machine could do well enough that a human interrogator would be unable to tell such a machine from an actual human. He argues that such a test would actually be **harder** than needed to prove the machine was thinking—after all, a human can certainly think, but could not convincingly imitate a computer.
+/::
 
 ### Generating Language
 
-Creativity can be expressed in many media, but—perhaps as a consequence of the Turing Test using verbal communication—artificial creativity is often explored in the context of natural-language text generation. This chapter introduces three common and accessible text generation tactics: string templating, Markov chains, and context-free grammars. These techniques focus on **syntax**—the patterns and structure of language—without much concern for **semantics**, the underlying meaning expressed. Natural-language processing and natural-language generation are areas of active research with numerous sub-fields including automatic summarization, translation, question answering, and sentiment analysis. Much of this research is focused on semantics, knowledge, and understanding and often approaches these problems with machine learning.
+Creativity can be expressed in many mediums, but—perhaps as a consequence of the Turing Test using verbal communication—artificial creativity is often explored in the context of natural-language text generation. This chapter introduces three common and accessible text generation tactics: string templating, Markov chains, and context-free grammars.
 
-The following projects explore many areas related to generative text:
+These techniques focus on **syntax**—the patterns and structure of language—without much concern for **semantics**—the underlying meaning expressed. They tend to result in somewhat gramatical but mostly nonesensical. Natural-language processing and natural-language generation are areas of active research with numerous sub-fields including automatic summarization, translation, question answering, and sentiment analysis. Much of this research is focused on semantics, knowledge, and understanding and often approaches these problems with machine learning.
 
-#### Content Generators
+### Generating other Media via Text
+
+Generating text can be a step in the process for generating form in other media. The structure of a webpage is defined in [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML). The layout and style is defined in [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS). [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) is a popular format for defining vector images. The [ABC](https://en.wikipedia.org/wiki/ABC_notation) and [JAM](https://en.wikipedia.org/wiki/JAM_notation) formats represent music. Three-dimensional objects can be represented in [OBJ](https://en.wikipedia.org/wiki/Wavefront_.obj_file) files. **All of these formats are plain text files.**
+
+You can think about these media in terms of the text files that represent them. This provides a fundamentally different point of view and can lead to novel approaches for generating form.
+
+### Programs that Write Programs
+
+Most programming languages are themselves text-based. Programs that generate programs are common and important computing tools. [Compilers](https://en.wikipedia.org/wiki/Compiler) are programs that rewrite code from one language to another. GUI coding environments like [Blocky](https://blockly-demo.appspot.com/static/demos/generator/index.html) and [MakeCode](https://makecode.com/) generate corresponding JavaScript. Interface builders like the one in Xcode generate code scaffolding which can be added to manually. Of course, programs that write programs can also have more esoteric functions. A [Quine](<https://en.wikipedia.org/wiki/Quine_(computing)>) is a program that generates a copy of itself.
+
+## Examples of Computational Text
+
+### Content Generators
 
 [Subreddit Simulator](https://www.reddit.com/r/SubredditSimulator/), [Explanation](https://www.reddit.com/r/SubredditSimulator/comments/3g9ioz/what_is_rsubredditsimulator/)
 : The Subreddit Simulator is a subreddit populated entirely by bots using Markov Chains trained on posts made across Reddit.
 
-[NaNoGenMo 2017](https://github.com/NaNoGenMo/2017)
+[NaNoGenMo 2018](https://github.com/NaNoGenMo/2018)
 : Annual competition to procedurally generate a 50,000 word novel.
 
 [Indie Game Generator](http://orteil.dashnet.org/gamegen), [Another Indie Game Generator](https://applepinegames.com/tech/steam-game-generator)
@@ -58,7 +76,7 @@ The following projects explore many areas related to generative text:
 [Pentametron](https://twitter.com/pentametron?lang=en)
 : A twitter bot that pairs up tweets to create couplets in iambic pentameter.
 
-#### Procedural Journalism
+### Procedural Journalism
 
 [NYT: The Best and Worst Places to Grow Up](https://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html)
 : This fantastic NYT piece looks at how where someone grows up impacts income. To make the information relatable the story adapts itself based on the location of the reader.
@@ -72,23 +90,13 @@ The following projects explore many areas related to generative text:
 Associated Press
 : The Associated Press procedurally generates [college sports coverage](https://www.ap.org/press-releases/2015/ap-ncaa-to-grow-college-sports-coverage-with-automated-game-stories) and [corporate earnings reports](https://blog.ap.org/announcements/automated-earnings-stories-multiply).
 
-#### Bots
+### Bots
 
 [ELIZA](https://en.wikipedia.org/wiki/ELIZA)
 : In 1964 Joseph Weizenbaum created ELIZA, a therapist chatbot that you can still [talk to today](http://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm).
 
 [Tay](<https://en.wikipedia.org/wiki/Tay_(bot)>), [Verge covers Tay](http://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist)
 : Tay was an AI twitterbot created by Microsoft and launched on March 23, 2016. Less than a day later, it was shut down after posting many controversial, inflammatory, and racist tweets.
-
-### Generating other Media via Text
-
-Generating text can be a step in the process for generating form in other media. The structure of a webpage is defined in [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML). The layout and style is defined in [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS). [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) is a popular format for defining vector images. The [ABC](https://en.wikipedia.org/wiki/ABC_notation) and [JAM](https://en.wikipedia.org/wiki/JAM_notation) formats represent music. Three-dimensional objects can be represented in [OBJ](https://en.wikipedia.org/wiki/Wavefront_.obj_file) files. **All of these formats are plain text files.**
-
-You can think about these media in terms of the text files that represent them. This provides a fundamentally different point of view and can lead to novel approaches for generating form.
-
-### Programs that Write Programs
-
-Most programming languages are themselves text-based. Programs that generate programs are common and important computing tools. [Compilers](https://en.wikipedia.org/wiki/Compiler) are programs that rewrite code from one language to another. GUI coding environments like [Blocky](https://blockly-demo.appspot.com/static/demos/generator/index.html) and [MakeCode](https://makecode.com/) generate corresponding JavaScript. Interface builders like the one in Xcode generate code scaffolding which can be added to manually. Of course, programs that write programs can also have more esoteric functions. A [Quine](<https://en.wikipedia.org/wiki/Quine_(computing)>) is a program that generates a copy of itself.
 
 ## String Templates
 

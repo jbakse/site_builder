@@ -7,11 +7,9 @@ debug: false
 ## Week 6, Pixel Data {plain}
 
 ### Class Notes
+[Pixels](../pixels){boxed right}
 
-[Pixels](./index.html){boxed right}
-
-
-## Learning Objectives
+### Learning Objectives
 - Understand how raster image data is represented in memory.
 - Consider relationship between vector images, raster images, p5.js drawing api, and pixel access.
 - Technical: Using p5's `get()` and `set()` function to read and write pixel values.
