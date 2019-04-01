@@ -9,8 +9,8 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
 </svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Animation</span><div class="buttons"><a class="previous" href="../vectors"><i class="fa fa-caret-left fa-lg"></i>Vector Data</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Animation</h1><h6>Overview</h6><p class="description">Procedural generation can be used to describe motion in animations. In both pre-rendered and real-time animations, an understanding of frame rate and timing are crucial for generating satisfying motion graphics.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="animation">Animation</h2>
-<p>At heart, a procedurally-generated animation is just a series of procedurally-generated images. These images, called frames, are shown in quick succession—like a flipbook—to show motion. Even a short animation will have hundreds of frames so creating animations by hand—while <a href="https://www.theguardian.com/artanddesign/2013/jan/09/oskar-fischinger-animation-disney-nazis">beautiful</a>—can be tedious. This makes animation a great medium to explore with procedural methods. Making a procedurally-generated animation is similar to making a procedurally-generated image, but with additional instructions to express how the image will change over time.</p>
-<p>Creatively, animation differs from still images by introducing another dimension: time. Because animations live in time, they excel at showing actions, cause and effect, expressing narrative arcs, and telling stories.</p>
+<p>At heart, a procedurally-generated animation is just a series of procedurally-generated images. These images, called frames, are shown in quick succession—like a flipbook—to show motion. Even a short animation will have hundreds of frames. Creating animations by hand can lead to <a href="https://www.theguardian.com/artanddesign/2013/jan/09/oskar-fischinger-animation-disney-nazis">beautiful results</a> but is very laborious. This makes animation a great medium to explore with procedural methods. Making a procedurally-generated animation is similar to making a procedurally-generated image, but with additional instructions to express how the image will change over time.</p>
+<p>Creatively, animation differs from still images by introducing another dimension: time. Because animations live in time, they excel at depicting actions, showing cause and effect, expressing narrative arcs, and telling stories.</p>
 <div id="" class="contain slides-wrap slideInfos">
 <div id="carousel-1" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner slides" role="listbox">
@@ -163,7 +163,7 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <!--[[todo: Slide show: Oskar Fischinger on here,  show a smear frame, Chuck Jones (mention golden age), boids, inside the mind's eye, pixar, realtime indie game "inside", realtime AAA game thats really animaty... ]]-->
 <h2 id="real-time-vs-pre-rendered">Real-time vs. Pre-rendered</h2>
 <h3 id="frames-per-second">Frames Per Second</h3>
-<p>Generally, faster frame rates produce smoother motion. At rates below about 10 frames per second, we tend to see a series of images as a series of images. Above 10, we begin to perceive a series of images as motion. Hand-drawn animation is often shown at 12 or 24 frames per second. Films are traditionally shot at 24 frames per second. Modern video games usually target 30 or 60 frames per second. Frame rates higher than 60 frames per second don’t improve animation very much, but they are necessary for virtual reality. Virtual reality is more demanding than flat animation because it is trying to create an illusion of <em>presence</em>, not just motion. Current VR systems run at 90 frames per second.</p>
+<p>Generally, faster frame rates produce smoother motion. At rates below about 10 frames per second, we tend to perceive a series of images as just that: a series of images. Above 10, we can begin to perceive a series of images as motion. Hand-drawn animation is often shown at 12 or 24 frames per second. Films are traditionally shot at 24 frames per second. Modern video games usually target 30 or 60 frames per second. Frame rates higher than 60 frames per second don’t improve animation very much, but they are necessary for virtual reality. Virtual reality is more demanding than flat animation partly because it is trying to create an illusion of <em>presence</em>, not just motion. Current VR systems run at 90+ frames per second.</p>
 <div id="" class="aspect-4-1 no-margin">
 <div class="js-show">
 <iframe class="js-show" src="/js_lab/js_show.html?/animation/sketches/metronome_fps.js">
@@ -173,22 +173,26 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <p class="caption">Metronomes animated at 5, 15, 30, and 60 frames per second.</p>
 <br/>
 <p>In <strong>pre-rendered</strong> animation, all the frames are created ahead of time. In <strong>real-time</strong> animations, the frames are created as they are shown.</p>
-<p>Real-time rendering needs to be done quickly. To render an animation at 30 frames per second, each frame must be generated in 33 milliseconds or less. To render VR at 90 frames per second, two frames—one for each eye—must be rendered in 10 milliseconds. In exchange for limiting how much time can be spent rendering each frame, we gain a huge benefit. Real-time animation can react to information—including user input—that is not known ahead of time. This allows real-time animation to be <em>interactive</em>.</p>
-<p>But pre-rendering provides its own huge benefit. Limiting the time spent rendering each frame often means compromising on the quality or complexity of the animation. Pre-rendered animations can take as long as necessary to create each frame, allowing for high complexity and quality. Individual frames in high-end animated films often take hours or even days to render, and they look better as a result.</p>
+<p>Real-time rendering for animation needs to be done quickly. To render an animation at 30 frames per second, each frame must be generated in 33 milliseconds or less. To render VR at 90 frames per second, two frames—one for each eye—must be rendered in 10 milliseconds. In exchange for limiting how much time can be spent rendering each frame, we gain a huge benefit. Real-time animation can react to information—including user input—that is not known ahead of time. This allows real-time animation to be <em>interactive</em>.</p>
+<p>But pre-rendering provides its own huge benefit. Limiting the time spent rendering each frame often means compromising on the quality or complexity of the animation. When creating a pre-rendered animation, one can take as long as necessary to create each frame, allowing for high complexity and quality. Individual frames in high-end animated films often take hours or even days to render, and they look better as a result.</p>
 <h3 id="time-keeping">Time Keeping</h3>
-<p>Real-time animation is computed faster than it is shown, while pre-rendered animation is computed slower than it is shown. Because of this, each requires a different approach to keeping track of time.</p>
+<p>Time keeping is essential to generating animation. Time is the foundation for sequencing, pace, rhythm, and speed. Choosing an appropriate method for keeping time is an important step to getting the results you want.</p>
+<p>Real-time animation is computed at the same rate it is shown. If a frame is rendered faster than needed, the application can simply wait to display it. If the frame takes too long, frames will be dropped and the frame rate will dip. In either case the render time and display time move at the same pace. Something drawn four seconds after rendering begins is seen four seconds after the animation begins.</p>
+<p>Pre-rendered animation is computed at a different rate—probably much slower, but maybe faster—than it is displayed so the render time and display time are not the same. A frame seen four seconds into an animation may have been drawn several hours into the rendering job that created it.</p>
 <h3 id="the-simple-approach">The Simple Approach</h3>
-<p>A common simple approach to keeping time is to first set the frame rate, and then count the frames. In p5.js you can set the framerate with <code>frameRate(fps)</code> and get the current frame number from <code>frameCount</code>.</p>
+<p>A common and simple approach to keeping time is to first set the frame rate, and then count the frames. In p5.js you can set the framerate with <code>frameRate(fps)</code> and get the current frame number from <code>frameCount</code>.</p>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/animation/sketches/metronome_simple.js">
 </iframe>
 </div>
 </div>
-<p>This example draws a metronome that swings its pendulum <strong>once every second</strong>. The <code>metronome()</code> function draws the metronome. One of its parameters is <code>pendulumAngle</code> which controls the position of the swinging arm.</p>
-<p><strong>Line 10</strong> uses <code>map()</code> to map the current <code>frameCount</code> to <code>theta</code> such that <code>theta</code> increases by 2π every 60 frames or 1 second.</p>
-<p><strong>Line 11</strong> calculates <code>pendulumAngle</code> using <code>sin()</code>. Because the sin function has a period of 2π, <code>sin(theta)</code> will produce a smooth wave that repeats every 1 second.</p>
-<p>This approach works fine for a simple example like the metronome, but it has some problems. The <code>frameCount</code> variable tells us how many <em>frames</em> have been drawn: It doesn’t actually tell us how much <em>time</em> has gone by. We can calculate time from <code>frameCount</code>, but only if we assume that each frame is drawn exactly on schedule. Unfortunately, that is not always the case.</p>
+<p>This example draws a metronome that swings its pendulum <strong>once every second</strong>. The <code>metronome()</code> function draws the metronome. This function doesn’t position the arm based on time, it exposes a parameter called <code>pendulumAngle</code> which controls the position instead. The calling code is responsible for controlling how fast the arm swings. Lines 10 and 11 do this work.</p>
+<ul>
+<li><strong>Line 10</strong> uses <code>map()</code> to map the current <code>frameCount</code> to <code>theta</code> such that <code>theta</code> increases by 2π every 60 frames or 1 second.</li>
+<li><strong>Line 11</strong> calculates <code>pendulumAngle</code> using <code>sin()</code>. Because the sin function has a period of 2π, <code>sin(theta)</code> will produce a smooth wave that repeats every 1 second.</li>
+</ul>
+<p>This approach works fine for many simpler programs, but it has some problems. The <code>frameCount</code> variable tells us how many <em>frames</em> have been drawn: It doesn’t actually tell us how much <em>time</em> has gone by. We can calculate time from <code>frameCount</code>, but only if we assume that each frame is drawn exactly on schedule. Unfortunately, that is not always the case.</p>
 <h3 id="real-time-draw-loops">Real-time Draw Loops</h3>
 <p>The heart of a real-time animation system is the draw loop. Most real-time draw loops work something like this:</p>
 <p><strong>Read Inputs » Draw Frame » Wait » Show Frame » Repeat</strong></p>
@@ -196,7 +200,7 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <div id="" class="links-sidebar">
 <p><a href="https://github.com/processing/p5.js/blob/ed94431045900c61cb1f78942a64e0f2a623df69/src/core/core.js#L341">p5.js<br/> draw loop code</a></p>
 </div>
-<p>Consider what happens if drawing a frame takes too long: 20 milliseconds. The draw loop might show the frame as soon as possible, but it will still be a few milliseconds late. Alternatively, the draw loop might wait an additional 13.2 milliseconds, a longer delay but in sync with the global framerate. In either case, the frame count is now behind the actual elapsed time. These delays are cumulative: slow frames set things back but fast frames don’t recover the lost time. Over time, the frame count will lag more and more.</p>
+<p>On the other hand, consider what happens if drawing a frame takes too long: 20 milliseconds. The draw loop might show the frame as soon as possible, but it will still be a few milliseconds late. Alternatively, the draw loop might wait an additional 13.2 milliseconds, a longer delay but in sync with the global framerate. In either case, the frame count is now behind the actual elapsed time. These delays are cumulative: slow frames set things back but fast frames don’t recover the lost time. Over time, the frame count will lag more and more.</p>
 <p>Another way your frame count can fall out of sync with time is if your requested frame rate just isn’t possible. Many environments, including p5.js in the browser, synchronize drawing to the screen’s refresh rate, commonly 60hz. In p5.js your framerate will effectively get rounded to a factor of 60.</p>
 <div id="" class="">
 <div class="js-lab">
@@ -350,7 +354,7 @@ pre-rendere with recording -->
 <div id="" class="full-width">
 <p><video src="videos/render_color.mp4" poster="videos/render_color_0030.jpg" controls></video></p>
 </div>
-<p>::: .assignment</p>
+<div id="" class="assignment">
 <h2 id="keep-sketching">Keep Sketching!</h2>
 <h3 id="base">Base</h3>
 <p class="bigger">This week focuses on creating smooth pre-rendered animations.</p>
@@ -369,9 +373,9 @@ pre-rendere with recording -->
 <li><a href="https://vimeo.com/51716890">My MTV</a></li>
 <li><a href="https://vimeo.com/91392344">TF1 Bumpers</a></li>
 <li><a href="https://vimeo.com/17663706">Much Bumpers</a></li>
-<li><a href="https://vimeo.com/71789191">Nickelodeon Bumpers</a>
-/::</li>
+<li><a href="https://vimeo.com/71789191">Nickelodeon Bumpers</a></li>
 </ul>
+</div>
 <h2 id="reference-links">Reference Links</h2>
 <dl>
 <dt><a href="https://www.youtube.com/watch?v=mr5xkf6zSzk">GDC: Fast and Funky 1D Nonlinear Transformations</a></dt>
@@ -380,7 +384,7 @@ pre-rendere with recording -->
 <dd>Now out of print, this iconic book by Disney animators describes 12 principles for good animation.</dd>
 <dt><a href="https://www.youtube.com/watch?v=haa7n3UGyDc">12 Principles of Animation: Squash and Stretch</a></dt>
 <dd>Squash and stretch is a crucial principle for creating engaging, lifelike animation.</dd>
-<dt>&lt;!-- <a href="https://idearocketanimation.com/8857-animation-techniques-smear/">Animation Techniques: The Smear</a></dt>
-<dd>A history of the smear frame, featuring a gallery of images. --&gt;</dd>
+<dt><a href="https://idearocketanimation.com/8857-animation-techniques-smear/">Animation Techniques: The Smear</a></dt>
+<dd>A history of the smear frame, featuring a gallery of images.</dd>
 </dl>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>
