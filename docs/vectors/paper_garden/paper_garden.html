@@ -8,10 +8,10 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Paper Garden</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Paper Garden</h1><h6>Overview</h6><p class="description">Demo project using Paper.js to create images of wall gardens in a hand drawn style.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="case-study-paper-garden">Case Study: Paper Garden</h2>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Paper Garden</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Paper Garden</h1><h6>Overview</h6><p class="description">Demo project using Paper.js to create images of wall gardens in a hand-drawn style.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="case-study-paper-garden">Case Study: Paper Garden</h2>
 <p>Paper Garden is a program written in about 300 lines of PaperScript using <a href="http://paperjs.org/">Paper.js</a>. It generates stylized drawings of plants arranged in a wall garden. The plants are rendered as clumps of leaves, sometimes with hanging vines or long drooping flowers. All of this is drawn with rough little circles meant to simulate pen doodles from my sketchbook.</p>
 <p><img src="./images/1500.png" alt="close"></p>
-<p>The image above was drawn by the Paper Garden script. For this image the script was configured configured to generate, compose, and draw 255 plants. The script allows you to configure the number and spacing of plants; the number, spacing, and sorting of leaves on each plant; and how rough, sloppy, and thick the strokes are. This allows the script to squeeze out a range of different looks.</p>
+<p>The image above was drawn by the Paper Garden script. For this image, the script was configured to generate, compose, and draw 255 plants. The script allows you to configure the number and spacing of plants; the number, spacing, and sorting of leaves on each plant; and how rough, sloppy, and thick the strokes are. This allows the script to squeeze out a range of different looks.</p>
 <div id="" class="three-up full-width">
 <p><img src="./variations/close.png" alt="close">
 <img src="./variations/coloring_book.png" alt="coloring_book">
@@ -32,15 +32,15 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 </div>
 <h2 id="overview">Overview</h2>
 <p>Paper Garden is written in <a href="http://paperjs.org/tutorials/getting-started/working-with-paper-js/">PaperScript</a>, a Paper.js extension of Javascript that supports using mathematical operators on Paper.js objects. Other than that, PaperScript is basically the same as Javascript.</p>
-<p>Paper Garden is written in a <a href="https://en.wikipedia.org/wiki/Procedural_programming">procedural</a> style and comprises 18 functions. The diagram below organizes these functions into general responsibilities and maps out he key relationships between them.</p>
+<p>Paper Garden is written in a <a href="https://en.wikipedia.org/wiki/Procedural_programming">procedural</a> style and comprises 18 functions. The diagram below organizes these functions into general responsibilities and maps out the key relationships between them.</p>
 <p><img src="function_map.svg" alt="function_map"></p>
 <h4 id="application">Application</h4>
 <p>The application doesn’t have much of an interface: you load it and it draws plants. <code>makeScene()</code> is the main entry point for the application.</p>
 <h4 id="composition-planning">Composition Planning</h4>
-<p>These functions build the structure of the drawing. <code>createPlants()</code> decides where plants will go and what kind they should be. <code>createPlant()</code> creates the leaves, flowers and vines that make up an individual plant. <code>createLeaf()</code>, <code>createFlower()</code>, and <code>createVine()</code> draw the plant parts.</p>
+<p>These functions build the structure of the drawing. <code>createPlants()</code> decides where plants will go and what kind they should be. <code>createPlant()</code> creates the leaves, flowers, and vines that make up an individual plant. <code>createLeaf()</code>, <code>createFlower()</code>, and <code>createVine()</code> draw the plant parts.</p>
 <h4 id="point-placing">Point Placing</h4>
 <p>These functions generate an array of nicely arranged points. <code>clusterPoints()</code> creates some randomly placed points near <code>0,0</code> and then calls <code>relaxPoints()</code> to space them out. <code>relaxPoints()</code> repeatedly compares each pair of points and pushes them apart if they are too close.</p>
-<p>The <code>sort*()</code> functions take an array of points and reorders them based on their positions. Shapes drawn early will be covered up by later shapes, so the order of the points in the array has a big impact on the look of the drawing.</p>
+<p>Each of the <code>sort*()</code> functions take an array of points and reorders them based on their positions. Shapes drawn early will be covered up by later shapes, so the order of the points in the array has a big impact on the look of the drawing.</p>
 <p>For more on point placing see the chapter on <a href="/strategy">strategies</a>.</p>
 <h4 id="drawing-style">Drawing + Style</h4>
 <p>The <code>create*()</code> functions all call <code>drawCircle()</code> to create the individual circles in the drawing. The look of the circles created by <code>drawCircle()</code> is configured through global parameters.</p>
@@ -54,19 +54,19 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <li><code>shuffle()</code> randomly reorders the items in an array</li>
 </ul>
 <h2 id="drawing-the-circles">Drawing The Circles</h2>
-<p>Paper Garden produces images with a somewhat hand-drawn look based on a doodles from my sketchbook, but <code>new Path.Circle()</code> makes perfect circles. <code>drawCiricle()</code> uses a few tricks and techniques to achieve a more hand-drawn appearance.</p>
+<p>Paper Garden produces images with a somewhat hand-drawn look based on a doodle from my sketchbook, but <code>new Path.Circle()</code> makes perfect circles. <code>drawCiricle()</code> uses a few tricks and techniques to achieve a more hand-drawn appearance.</p>
 <p><img src="./images/sketch.jpg" alt="./images/sketch.jpg"></p>
 <h4 id="draw-back-to-front">Draw Back to Front</h4>
 <p>In my sketchbook doodle, I drew the circles front to back. When drawing with a pen, it is easy to not draw part of the circle and hard to erase marks. In Paper.js the opposite is true. New circles easily cover any marks already on the drawing, and drawing only part of the circle requires substantial extra work. Because of this, Paper Flowers draws from back to front.</p>
 <div id="" class="callout warn">
-<p>This approach works fine for rasterized output on the screen, but won’t work on vector outputs like pen plotters or laser cutters which will draw the entire path of each circle even if another circle covers it.</p>
+<p>This approach works fine for rasterized output on the screen but won’t work on vector outputs like pen plotters or laser cutters which will draw the entire path of each circle even if another circle covers it.</p>
 </div>
 <h4 id="distorting-the-circle">Distorting the Circle</h4>
-<p>The circles in my doodle are not very round. Paper Garden simulates this by displacing each control point of the bezier curve in a random direction. The amount of displacement is controlled by the <code>ROUGH</code> parameter.</p>
+<p>The circles in my doodle are not very round. Paper Garden simulates this by displacing each control point of the Bezier curve in a random direction. The amount of displacement is controlled by the <code>ROUGH</code> parameter.</p>
 <h4 id="creating-gaps">Creating Gaps</h4>
 <p>The lines in the circles don’t always perfectly meet. To recreate this, <code>drawCircle()</code> creates an unstroked white circle behind the stroked one. This circle is made larger to create gaps—<code>GAPPY</code>—and randomly offset so the gaps are not even—<code>SLOPPY</code>.</p>
 <h4 id="uneven-stroke-width">Uneven Stroke Width</h4>
-<p>The strokes in the doodle have uneven widths and uneven color. In particular, the first little bit of each stroke is heavier than the rest. To simulate this, <code>drawCircle()</code> duplicates the circle path an draws it again with a slightly thicker stroke. This thicker stroke is broken up using <code>dashOffset</code> and <code>dashArray</code> to create a randomized dash pattern.</p>
+<p>The strokes in the doodle have uneven widths and uneven color. In particular, the first little bit of each stroke is heavier than the rest. To simulate this, <code>drawCircle()</code> duplicates the circle path and draws it again with a slightly thicker stroke. This thicker stroke is broken up using <code>dashOffset</code> and <code>dashArray</code> to create a randomized dash pattern.</p>
 <div id="" class="">
 <div class="js-show">
 <iframe class="js-show" src="/js_lab/js_show.html?/vectors/paper_garden/paper_garden_circle_study.js">
@@ -74,14 +74,14 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 </div>
 </div>
 <h4 id="subtlety">Subtlety</h4>
-<p>The circles produced by <code>drawCircle()</code> are rough, gappy, and uneven, but they are still much more “perfect” than the strokes on the doodle. This is largely an artistic judgement. I wanted to keep some of the richness and subtlety of the hand drawn doodle, but wanted the final image to look less sloppy and rushed.</p>
+<p>The circles produced by <code>drawCircle()</code> are rough, gappy, and uneven, but they are still much more “perfect” than the strokes on the doodle. This is largely an artistic judgment. I wanted to keep some of the richness and subtlety of the hand-drawn doodle but wanted the final image to look less sloppy and rushed.</p>
 <p>Also, Paper Flower generates drawings that are much more complex than the doodle above with hundreds of plants and thousands of leaves. This added complexity already makes the overall drawing more rich and interesting. The stroke quality should support that interest without distracting from it.</p>
 <h2 id="generating-a-plant">Generating a Plant</h2>
 <p>Individual plants are generated by the <code>createPlant()</code> function. This function places the leaves by following these steps:</p>
 <ol>
 <li>Create a tight cluster of random points between <code>-1,-1</code> and <code>1,1</code></li>
 <li>Use the <a href="/strategy/#relaxation-displacement">relaxation displacement</a> tactic to space these points out evenly.</li>
-<li>Sort these points into a desired drawing order.</li>
+<li>Sort these points into the desired drawing order.</li>
 </ol>
 <div id="" class="">
 <div class="js-show">
@@ -90,11 +90,11 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 </div>
 </div>
 <h2 id="composing-the-plants">Composing the Plants</h2>
-<p>The layout of the entire garden is generated by <code>createPlants()</code>. This function follows the same steps used to generate the leaves with one additon.</p>
+<p>The layout of the entire garden is generated by <code>createPlants()</code>. This function follows the same steps used to generate the leaves with one addition: it removes some of the points after they are arranged.</p>
 <ol>
 <li>Create a tight cluster of random points between <code>-1,-1</code> and <code>1,1</code></li>
 <li>Use the <a href="/strategy/#relaxation-displacement">relaxation displacement</a> tactic to space these points out evenly.</li>
 <li><strong>Remove some randomly selected points to create gaps.</strong></li>
-<li>Sort these points into a desired drawing order.</li>
+<li>Sort these points into the desired drawing order.</li>
 </ol>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>
