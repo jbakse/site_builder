@@ -19,9 +19,9 @@ software: p5.js
 
 ### p5.js Sound Library
 
-In addition to the basic drawing API, p5.js includes add-on [libraries](https://p5js.org/libraries/). The interface chapter introduces the p5.dom library, and the examples in the chapter use the p5.sound library. The p5.sound library builds on the [Web Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) API and provides functions for generating tones, playing recorded sounds, and visualizing the waveform and spectrum of sounds. I highly suggest taking a look at **all** of the sound examples to get an idea of what the sound library can do.
+In addition to the basic drawing API, p5.js includes add-on [libraries](https://p5js.org/libraries/). The [parameters](../parameters) chapter introduces the p5.dom library, and the examples in this chapter use the p5.sound library. The p5.sound library builds on the [Web Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) API and provides functions for generating tones, playing recorded sounds, and visualizing the waveform and spectrum of sounds. I highly suggest taking a look at **all** of the sound examples to get an idea of what the sound library can do.
 
-<!--[[Is the interface chapter on the p5 website? I couldn't find it.]]-->
+This chapter will focus on playing and visualizing pre-recorded sound assets. The [comp music](../music) chapter talks more about sound synthesis.
 
 - [p5.sound API Reference](https://p5js.org/reference/#/libraries/p5.sound)
 - [p5.sound Examples](https://p5js.org/examples/)
@@ -35,25 +35,33 @@ Compare a basic p5.js drawing with a p5.audio sketch. What do they have in commo
 ### Hello, p5.js!
 
 ```javascript
+let myImg;
+
+function preload() {
+  myImg = loadImage('images/world.jpg');
+}
+
 function setup() {
   createCanvas(500, 500);
 }
 
 function draw() {
-  fill(255, 0, 0);
-  noStroke();
-  ellipse(250, 250, 100, 100);
+  image(myImg, 0, 0);
 }
 ```
 
 ### Hello, p5.sound!
 
 ```javascript
+
+let mySound;
+
+function preload() {
+  mySound = loadSound('sounds/hack-comp.wav');
+}
+
 function setup() {
-  myOscillator = new p5.Oscillator("sine");
-  myOscillator.amp(1);
-  myOscillator.freq(440);
-  myOscillator.start();
+  mySound.loop(0, 1, 1, 0, 4);
 }
 ```
 
@@ -67,8 +75,9 @@ Light and sound flow through our environment as electromagnetic and air pressure
 
 [Light and Sound Lecture Notes](./light_and_sound.html)
 
-## Generating Sound with p5.js
+## Playing Sound with p5.js
 
+<!-- 
 ### Hello, Sound!
 
 ::: js-lab
@@ -85,15 +94,44 @@ Light and sound flow through our environment as electromagnetic and air pressure
 
 ::: js-lab
 /sound/sketches/modulator.js
-/::
+/:: -->
+
 
 ### Playing Recorded Sounds
+
+p5.js makes it pretty easy to play sound assets, like this audio clip from [Hackers(1995)](http://www.imdb.com/title/tt0113243/).
+
+::: js-lab
+/sound/sketches/hello_play.js
+/::
+
+### Changing Rate + Pitch
+
+The third parameter to `play()` controlls the rate of playback. If you play a sound faster the pitch will go up; play it slower and the pitch will go down. p5 cannot change the pitch of a sound without changing its length.
+
+::: js-lab
+/sound/sketches/hello_pitch.js
+/::
+
+
+### Looping
 
 ::: js-lab
 /sound/sketches/two_loops.js
 /::
 
-Audio clip from [Hackers(1995)](http://www.imdb.com/title/tt0113243/)
+
+### Drum Kit
+
+This example uses `frameCount` to keep time and play a beat with drum samples. This works for a quick sketch, but `frameCount` isn't a great timekeeping source, so you might notice hitches in your rhythm. The [Tone.js](https://tonejs.github.io) lets you precisely schedule when samples are played, and might be a better choice if you want to make music.
+
+::: js-lab
+/sound/sketches/hello_drum.js
+/::
+
+
+
+
 
 ## Capturing Output
 
@@ -122,11 +160,22 @@ function record(length) {
 
 ## In-class Challenge
 
-[Play a little melody.](https://www.youtube.com/watch?v=DGCvo3RsLkU)
+- In the Drum Kit example, change the samples used to play the beat.
+- Change the timing to create a more complex beat.
+- Try adjusting the amplitude and rate/pitch parameters when you play samples.
+- Tie the rate of all of the samples to `mouseX`.
 
 /::
 
 ## Visualizing Sound with p5.js
+
+
+### Cuepoints
+
+::: js-lab
+/sound/sketches/hello_cue.js
+/::
+
 
 ### Volume
 
@@ -154,7 +203,24 @@ Display a little melody.
 
 /::
 
+
+
+### Making Sounds from Scratch
+
+You can create an empty soundFile object with `new p5.SoundFile()` and generate the sound data yourself with Javascript. To do so you will create and fill a [Float32Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array) and then attach it to the SoundFile object with `setBuffer()`. 
+
+::: js-lab
+/sound/sketches/buffer.js
+/::
+
+Creating sounds this way lets you work at the lowest possible level: individual samples. This can be fun, and it gives you complete control, but you will probably need to reinvent some basics.
+
+P5.js has functions for working with oscillators, envelopes, and effects if you want to work at a little higher level. You might also consider using a dedicated Javascript sound synthesis library like [Tone.js](https://tonejs.github.io), which is a little more powerful and better documented.
+
+
+
 ::: .assignment
+
 
 ## Sketch!
 
