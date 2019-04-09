@@ -99,6 +99,10 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 </iframe>
 </div>
 </div>
+<div id="" class="callout warn">
+<p>Chrome won’t start playing sound on a page until the user performs a “gesture” on that page.</p>
+<p><a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio">Web Audio Autoplay Policy</a></p>
+</div>
 <h3 id="changing-rate-pitch">Changing Rate + Pitch</h3>
 <p>The third parameter to <code>play()</code> controlls the rate of playback. If you play a sound faster the pitch will go up; play it slower and the pitch will go down. p5 cannot change the pitch of a sound without changing its length.</p>
 <div id="" class="">
@@ -119,6 +123,13 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/hello_drum.js">
+</iframe>
+</div>
+</div>
+<h3 id="bounce">Bounce</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/bounce.js">
 </iframe>
 </div>
 </div>
@@ -144,8 +155,8 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <ul>
 <li>In the Drum Kit example, change the samples used to play the beat.</li>
 <li>Change the timing to create a more complex beat.</li>
-<li>Try adjusting the amplitude and rate/pitch parameters when you play samples.</li>
-<li>Tie the rate of all of the samples to <code>mouseX</code>.</li>
+<li>In the Bounce example, add a drum sound when the ball bounces.</li>
+<li>Add a little randomness to the playback rate of the sound each time the ball bounces. This little trick can add some realism to sound effects.</li>
 </ul>
 </div>
 <h2 id="visualizing-sound-with-p5js">Visualizing Sound with p5.js</h2>
@@ -177,10 +188,13 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 </iframe>
 </div>
 </div>
-<div id="" class="activity">
-<h2 id="in-class-challenge-2">In-class Challenge</h2>
-<p>Display a little melody.</p>
-</div>
+<!-- ::: .activity
+
+## In-class Challenge
+
+Display a little melody.
+
+/:: -->
 <h3 id="making-sounds-from-scratch">Making Sounds from Scratch</h3>
 <p>You can create an empty soundFile object with <code>new p5.SoundFile()</code> and generate the sound data yourself with Javascript. To do so you will create and fill a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array">Float32Array</a> and then attach it to the SoundFile object with <code>setBuffer()</code>.</p>
 <div id="" class="">

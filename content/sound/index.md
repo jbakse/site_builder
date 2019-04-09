@@ -105,6 +105,16 @@ p5.js makes it pretty easy to play sound assets, like this audio clip from [Hack
 /sound/sketches/hello_play.js
 /::
 
+
+::: .callout .warn
+Chrome won't start playing sound on a page until the user performs a "gesture" on that page.
+
+
+[Web Audio Autoplay Policy](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio)
+
+/::
+
+
 ### Changing Rate + Pitch
 
 The third parameter to `play()` controlls the rate of playback. If you play a sound faster the pitch will go up; play it slower and the pitch will go down. p5 cannot change the pitch of a sound without changing its length.
@@ -127,6 +137,14 @@ This example uses `frameCount` to keep time and play a beat with drum samples. T
 
 ::: js-lab
 /sound/sketches/hello_drum.js
+/::
+
+
+### Bounce
+
+
+::: js-lab
+/sound/sketches/bounce.js
 /::
 
 
@@ -160,10 +178,12 @@ function record(length) {
 
 ## In-class Challenge
 
+
 - In the Drum Kit example, change the samples used to play the beat.
 - Change the timing to create a more complex beat.
-- Try adjusting the amplitude and rate/pitch parameters when you play samples.
-- Tie the rate of all of the samples to `mouseX`.
+- In the Bounce example, add a drum sound when the ball bounces.
+- Add a little randomness to the playback rate of the sound each time the ball bounces. This little trick can add some realism to sound effects.
+
 
 /::
 
@@ -195,13 +215,13 @@ function record(length) {
 /sound/sketches/fft.js
 /::
 
-::: .activity
+<!-- ::: .activity
 
 ## In-class Challenge
 
 Display a little melody.
 
-/::
+/:: -->
 
 
 
