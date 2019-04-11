@@ -38,7 +38,7 @@ Compare a basic p5.js drawing with a p5.audio sketch. What do they have in commo
 let myImg;
 
 function preload() {
-  myImg = loadImage('images/world.jpg');
+  myImg = loadImage("images/world.jpg");
 }
 
 function setup() {
@@ -53,11 +53,10 @@ function draw() {
 ### Hello, p5.sound!
 
 ```javascript
-
 let mySound;
 
 function preload() {
-  mySound = loadSound('sounds/hack-comp.wav');
+  mySound = loadSound("sounds/hack-comp.wav");
 }
 
 function setup() {
@@ -77,7 +76,7 @@ Light and sound flow through our environment as electromagnetic and air pressure
 
 ## Playing Sound with p5.js
 
-<!-- 
+<!--
 ### Hello, Sound!
 
 ::: js-lab
@@ -96,7 +95,6 @@ Light and sound flow through our environment as electromagnetic and air pressure
 /sound/sketches/modulator.js
 /:: -->
 
-
 ### Playing Recorded Sounds
 
 p5.js makes it pretty easy to play sound assets, like this audio clip from [Hackers(1995)](http://www.imdb.com/title/tt0113243/).
@@ -105,15 +103,12 @@ p5.js makes it pretty easy to play sound assets, like this audio clip from [Hack
 /sound/sketches/hello_play.js
 /::
 
-
 ::: .callout .warn
 Chrome won't start playing sound on a page until the user performs a "gesture" on that page.
-
 
 [Web Audio Autoplay Policy](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio)
 
 /::
-
 
 ### Changing Rate + Pitch
 
@@ -123,13 +118,11 @@ The third parameter to `play()` controlls the rate of playback. If you play a so
 /sound/sketches/hello_pitch.js
 /::
 
-
 ### Looping
 
 ::: js-lab
 /sound/sketches/two_loops.js
 /::
-
 
 ### Drum Kit
 
@@ -139,17 +132,12 @@ This example uses `frameCount` to keep time and play a beat with drum samples. T
 /sound/sketches/hello_drum.js
 /::
 
-
 ### Bounce
 
-
+This example doesn't have any sound in it... yet.
 ::: js-lab
 /sound/sketches/bounce.js
 /::
-
-
-
-
 
 ## Capturing Output
 
@@ -178,24 +166,20 @@ function record(length) {
 
 ## In-class Challenge
 
-
-- In the Drum Kit example, change the samples used to play the beat.
+- In the Drum Kit example, switch the samples used to play the beat.
 - Change the timing to create a more complex beat.
 - In the Bounce example, add a drum sound when the ball bounces.
 - Add a little randomness to the playback rate of the sound each time the ball bounces. This little trick can add some realism to sound effects.
 
-
 /::
 
 ## Visualizing Sound with p5.js
-
 
 ### Cuepoints
 
 ::: js-lab
 /sound/sketches/hello_cue.js
 /::
-
 
 ### Volume
 
@@ -211,6 +195,10 @@ function record(length) {
 
 ### FFT
 
+The Fast Fourier Transform transform a signal from the time domain to the frequency domain. For audio analysis that means the FFT can tell the strenght of different frequencies in an audio buffer.
+
+For a visual exploration of FFT, see this excelent video by 3Blue1Brown [https://www.youtube.com/watch?v=spUNpyF58BY](But what is the Fourier Transform? A visual introduction.)
+
 ::: js-lab
 /sound/sketches/fft.js
 /::
@@ -223,11 +211,9 @@ Display a little melody.
 
 /:: -->
 
-
-
 ### Making Sounds from Scratch
 
-You can create an empty soundFile object with `new p5.SoundFile()` and generate the sound data yourself with Javascript. To do so you will create and fill a [Float32Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array) and then attach it to the SoundFile object with `setBuffer()`. 
+You can create an empty soundFile object with `new p5.SoundFile()` and generate the sound data yourself with Javascript. To do so you will create and fill a [Float32Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array) and then attach it to the SoundFile object with `setBuffer()`.
 
 ::: js-lab
 /sound/sketches/buffer.js
@@ -237,10 +223,7 @@ Creating sounds this way lets you work at the lowest possible level: individual 
 
 P5.js has functions for working with oscillators, envelopes, and effects if you want to work at a little higher level. You might also consider using a dedicated Javascript sound synthesis library like [Tone.js](https://tonejs.github.io), which is a little more powerful and better documented.
 
-
-
 ::: .assignment
-
 
 ## Sketch!
 
