@@ -7,8 +7,6 @@ debug: false
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
 <script src="./index_mess.js"></script>
 
-
-
 # Comp Form
 
 <div class="col-6 col-md-6 overview top">
@@ -16,6 +14,7 @@ This site introduces tools, methods, and concepts used in creating computational
 </div>
 
 ## Foundation
+
 <!-- Outer -->
 <div class="row">
 
@@ -37,6 +36,7 @@ p5.js
 <a class="col-6 col-md-4" data-ready="true" href="./procedures">
 
 ### Procedures
+
 p5.js
 
 </a>
@@ -44,25 +44,23 @@ p5.js
 <a class="col-6 col-md-4" data-ready="true" href="./random">
 
 ### Random Values
+
 p5.js
 
 </a>
-
 
 <a class="col-6 col-md-4" href="./parameters">
 
 ### Parameters
+
 p5.js
 
 </a>
 
-
-
-
-
 <a class="col-6 col-md-4" data-ready="true" href="./noise">
 
 ### Noise
+
 p5.js
 
 </a>
@@ -70,19 +68,16 @@ p5.js
 <a class="col-6 col-md-4" data-ready="true" href="./strategy">
 
 ### Strategies
+
 p5.js
 
 </a>
-
 
 </div>
 </div>
 <!-- /Inner -->
 </div>
 <!-- /Outer -->
-
-
-
 
 ## Exploration
 
@@ -97,27 +92,26 @@ Independent chapters exploring specific procedural generation tools, languages, 
 <div class="col-12 col-md-9">
 <div class="row">
 
-
 <a class="col-6 col-md-4" data-ready="true" href="./tiles">
 
 ### Tile Maps
+
 pencil + paper
 
 </a>
 
-
 <a class="col-6 col-md-4" data-ready="true" href="./p5">
 
 ### Hello, p5!
+
 p5.js + github
 
 </a>
 
-
-
 <a class="col-6 col-md-4" data-ready="true" href="./pixels">
 
 ### Pixel Data
+
 p5.js
 
 </a>
@@ -125,38 +119,39 @@ p5.js
 <a class="col-6 col-md-4" data-ready="true" href="./turtles">
 
 ### Turtle Graphics
+
 p5.js + custom library
 
 </a>
 
-
 <a class="col-6 col-md-4" data-ready="true" href="./vectors">
 
 ### Vector Data
+
 paper.js
 
 </a>
 
-
 <a class="col-6 col-md-4" data-ready="true" href="./animation">
 
 ### Animation
+
 p5.js
 
 </a>
 
-
 <a class="col-6 col-md-4" data-ready="true" href="./text">
 
 ### Generating Text
+
 javascript + html
 
 </a>
 
-
 <a class="col-6 col-md-4" data-ready="true" href="./sound">
 
 ### Comp Sound
+
 p5.js + p5.sound
 
 </a>
@@ -164,28 +159,28 @@ p5.js + p5.sound
 <a class="col-6 col-md-4" data-ready="true" href="./music">
 
 ### Comp Music
-p5.js + p5.sound
+
+tone.js
 
 </a>
-
 
 <a class="col-6 col-md-4" data-ready="true" href="./3D">
 
 ### 3D Forms
+
 OpenSCAD
 
 </a>
 
-
 <a class="col-6 col-md-4" data-ready="ture" href="./microgames">
 
 ### Microgames
+
 p5.js + p5.play
 
 </a>
 
-
-<!-- 
+<!--
 
 <a class="col-6 col-md-4" data-ready="false" href="./#">
 
@@ -195,20 +190,13 @@ Vuo
 </a>
  -->
 
-
 </div>
 </div>
 <!-- /Inner -->
 </div>
 <!-- /Outer -->
 
-
-
-
-
-
 ## Class Resources
-
 
 <!-- Outer -->
 <div class="row">
@@ -221,21 +209,17 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 <div class="col-12 col-md-6">
 <div class="row">
 
-
 <!-- <a class="col-6 col-md-6" data-ready="true" href="./introduction">
 
 &nbsp;
 
 </a> -->
 
-
-
 <a class="col-6 col-md-6" data-ready="true" href="./2019">
 
 ### Class Notes 2019
 
 </a>
-
 
 <a class="col-6 col-md-6" data-ready="true" href="http://sketches2019.compform.net">
 
@@ -249,14 +233,11 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 
 </a>
 
-
 <a class="col-6 col-md-6" data-ready="true" href="http://sketches2018.compform.net">
 
 ### Sketch Book 2018
 
 </a>
-
-
 
 <a class="col-6 col-md-6" data-ready="true" href="http://2017.compform.net/">
 
@@ -264,13 +245,11 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 
 </a>
 
-
 <a class="col-6 col-md-6" data-ready="true" href="http://sketches.compform.net">
 
 ### Sketch Book 2017
 
 </a>
-
 
 <a class="col-6 col-md-6" data-ready="true" href="http://psam3060-d-s16.github.io/class_notes/">
 
@@ -278,14 +257,11 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 
 </a>
 
-
 <a class="col-6 col-md-6" data-ready="true" href="http://compform.tumblr.com/">
 
 ### Sketch Book 2016
 
 </a>
-
-
 
 </div>
 </div>
@@ -334,7 +310,6 @@ p5.js
 
 
 -->
-
 
 <style>
     

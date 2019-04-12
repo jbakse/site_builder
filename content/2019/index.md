@@ -47,7 +47,7 @@ This page houses information specific to the spring 2019 section of Computationa
 | Week 9, March 23{gray}                         | Spring Break{gray}                                               |
 | [Week 10, March 29](animation_plan.html)       | [Animation](../animation)                                        |
 | [Week 11, April 5](text_plan.html)             | [Generating Text](../text)                                       |
-| [Week 12, April 12](#sound_plan.html)          | [Generating Sound](../sound)                                     |
+| [Week 12, April 12](sound_plan.html)           | [Generating Sound](../sound)                                     |
 | [Week 13, April 19](#music_plan.html)          | [Music](../music)                                                |
 | [Week 14, April 26](#3D_plan.html)             | [3D Forms](../3D)                                                |
 | [Week 15, May 3](#microgames_plan.html)        | [Microgames](../microgames)                                      |

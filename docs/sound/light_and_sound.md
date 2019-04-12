@@ -7,29 +7,11 @@ debug: false
 
 ### Preamble
 
-[Kraftwerk: Pocket Calculator](https://www.youtube.com/watch?v=DGCvo3RsLkU)
-
-[ElectroBOOM: ESD Safety](https://www.youtube.com/watch?v=RtlYi1yLTVQ)
-
-[Human Benchmark](https://www.humanbenchmark.com/tests/reactiontime/)
-
-[Mystery Melody](https://www.youtube.com/watch?v=mN4FNmoLIrw&feature=youtu.be) 
-
-[An Audio Illusion](https://www.youtube.com/watch?v=tG9HSvNPVKQ&feature=youtu.be)
-
-### Key Takeaways
-
-- Computers are physical machines.
-- Computers can interface with the physical environment.
-- Data flows through our physical environment.
-- Our eyes and ears are sensors.
-- They sense only a small amount of the data flowing through our environment.
-- Our eyes and ears are significantly different in structure.
-- The types of data gathered by our eyes and ears are rooted in their structure.
-- Our eyes and ears are just sensors, they provide data.
-- Our brain is needed to process this data and provide information.
-- Our brain's visual and auditory data processing is powerful and valuable.
-- We can take advantage of this power by creating visual and auditory form.
+- [Kraftwerk: Pocket Calculator](https://www.youtube.com/watch?v=DGCvo3RsLkU)
+- [ElectroBOOM: ESD Safety](https://www.youtube.com/watch?v=RtlYi1yLTVQ)
+- [Human Benchmark](https://www.humanbenchmark.com/tests/reactiontime/)
+- [Mystery Melody](https://www.youtube.com/watch?v=mN4FNmoLIrw&feature=youtu.be) 
+- [An Audio Illusion](https://www.youtube.com/watch?v=tG9HSvNPVKQ&feature=youtu.be)
 
 
 ## Carefully Arranged Sand and Lightning
@@ -39,30 +21,42 @@ debug: false
 
 ## Light
 
-We see by detecting electromagnetic radiation that reaches our eyes. The information we gather by sight is only a small amount of the information present in the EM field. We can only see radiation with wavelengths from around 390nm to 700nm that enters our pupil. We have limited ability to discern frequencies even in the visible range, and we can't detect light polarization. Well maybe we can, [a little](https://www.polarization.com/haidinger/haidinger.html). Even with these constraints, we are able to glean a highly detailed understanding of our surroundings. We are especially good at building a spacial understanding of our environment based based on light.
+We see by detecting electromagnetic radiation that reaches our eyes. The information we gather by sight is only a small amount of the information present in the EM field. 
+
+**We can only see the EM radiation with wavelengths from around 390nm to 700nm that happens enter our pupils.** We have limited ability to discern frequencies even in the visible range, and we [can't*](https://www.polarization.com/haidinger/haidinger.html) detect light polarization.
+
+ Even with these constraints, we are able to glean a highly detailed understanding of our surroundings. Vision is perhaps our most powerful sense. We are especially good at building a **spacial** understanding of our environment based based on light.
+
+### Videos
+
+- [UV Imaging: How the Sun Sees You](https://www.youtube.com/watch?v=o9BqrSAHbTc)
+- [IR Imaging: Thermal Imaging and It's Applications](https://youtu.be/1DiqL8iFD8g?t=21s)
+- [Richard Feynman on Light](https://www.youtube.com/watch?v=FjHJ7FmV0M4)
 
 
 ### Emissive Color
 
 - Sunlight contains electromagnetic radiation in many wavelengths.
-- An LED provides electromagnetic radiation in a narrow range of wavelengths.
-- An LED computer display has LEDs of three colors. It can vary the intensity of those three colors, but can’t provide electromagnetic radiation in the wavelengths between them.
+- An individual LED provides electromagnetic radiation at a very specific wavelength.
+- An LED computer display has LEDs of three colors. It can vary the intensity of those three colors, but **can’t provide electromagnetic radiation in the wavelengths between them**.
 - We perceive the mix of the three colors as a single color.
 - Red, green, and blue LEDs are used because they correspond with our biology.
+- Our eyes have color trichromatic vision with sensors for red, green, and blue wavelengths. We can percieve colors between these wavelengths, but **we can’t determine what combination of stimulating frequencies contribute to that perception**.
+
 
 ### Reflective/Absorptive Color
 
-- A reflective object doesn’t reflect color of single wavelength. Instead it reflects/absorbs all wavelengths at different amounts.
+- A reflective object reflects and absorbs all light wavelengths at different amounts.
 - We perceive the reflections as a single color.
-- We can’t determine what combination of stimulating frequencies contribute to that color.
 - A reflective color cannot be brighter than the lighting in any wavelength.
-- We adjust our perceived color of an image based on our understanding of the lighting.
-
+- We adjust our perceived color of an image based on our understanding of the lighting. [The Dress](https://en.wikipedia.org/wiki/The_dress)
 
 
 ### Visible EM Range
 
 ![EM Radiation](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/675px-EM_Spectrum_Properties_edit.svg.png)
+
+
 <!-- 
 [Wikipedia: EM Spectrum](https://en.wikipedia.org/wiki/Electromagnetic_spectrum)
 
@@ -75,7 +69,9 @@ We see by detecting electromagnetic radiation that reaches our eyes. The informa
 | Visible Spectrum | ~500 nm       |
 | Ultraviolet      | 100nm to 10nm |
 | X-Rays           | 1nm to 10pm   |
-| Gamma Rays       | 1pm           | -->
+| Gamma Rays       | 1pm           |
+
+-->
 
 
 ![Cone Response](https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Cone-fundamentals-with-srgb-spectrum.svg/540px-Cone-fundamentals-with-srgb-spectrum.svg.png)
@@ -87,22 +83,18 @@ We see by detecting electromagnetic radiation that reaches our eyes. The informa
 | ----------------- | ---------- |
 | Visible Blue (S)  | ~430nm     |
 | Visible Green (M) | ~545nm     |
-| Visible Red (L)   | ~570nm     | -->
+| Visible Red (L)   | ~570nm     |
+-->
 
 
-### Videos
 
-[UV Imaging: How the Sun Sees You](https://www.youtube.com/watch?v=o9BqrSAHbTc)
-
-[IR Imaging: Thermal Imaging and It's Applications](https://youtu.be/1DiqL8iFD8g?t=21s)
-
-[Richard Feynman on Light](https://www.youtube.com/watch?v=FjHJ7FmV0M4)
 
 
 ### Our Eyes
 
 **Color Sensitivity**
 : Able to perceive electromagnetic waves from 390 to 700nm, and can differentiate hues as close as 1-10 nm.
+: Trichromatic sensors for red, green, blue.
 
 **Contrast Sensitivity**
 : Have a contrast range something like 1:1000000 (20+ stops). Film cameras are 9-10, high end digital camera are a little better. A typical screen might have a true contrast ratio of 1:1000.
@@ -132,7 +124,6 @@ Our [Visual Cortex](https://en.wikipedia.org/wiki/Visual_cortex) processes the d
 - Pattern recognition
 - Estimation of true color, accounting for lighting
 
-[The Dress](https://en.wikipedia.org/wiki/The_dress)
 
 
 
@@ -145,9 +136,9 @@ We consider a color as a single value: dark blue, pink, vivid green. We don’t 
 
 ## Sound
 
-Sound is an audible wave of pressure that propagates through the air. Sound begins when something in contact with the air vibrates. As that thing pushes forward, it pushes the particles air in front of it forward into the the particles of air in front of them. Making an area of higher pressure. This high pressure area pushes out in all directions, and a wave of pressure begins to propagate though the air.
+Sound is an audible wave of pressure that propagates through the air. Sound begins when something in contact with the air vibrates. As that thing pushes forward, it pushes the particles of air in front of it forward into the the particles of air in front of them. Making an area of higher pressure. This high pressure area pushes out in all directions, and a wave of pressure begins to propagate though the air.
 
-This pressure wave can push on other things like microphones and our ears. Our ears are able to detect very rapid and subtle changes in this pressure. And we are then able to understand the amplitude, frequency, and even shape of these changes. Because we have two ears, spaced a few inches apart, we can compare what each ear hears to gain spacial information as well.
+This pressure wave can push on other things like microphones and our ears. Our ears are able to detect very rapid and subtle changes in this pressure. And we are then able to understand the amplitude, frequency, and even "shape" of these changes. Because we have two ears, spaced a few inches apart, we can compare what each ear hears to gain spacial information as well.
 
 
 ### Videos
@@ -189,26 +180,42 @@ Our [Auditory Cortex](https://en.wikipedia.org/wiki/Auditory_cortex) processes t
 
 
 
-## Vision vs Hearing
+## Vision vs. Hearing
 
 Our visual and auditory sensory systems prioritize different types of information. 
 
-| Vision                         | Hearing                          |
-| ------------------------------ | -------------------------------- |
-| Two Sensors                    | Two Sensors                      |
-| EM                             | Air Pressure                     |
-| Lens                           | No Lens                          |
-| 120 million sensors each       | ~18k sensors each                |
-| 4 frequency responses          | thousands of frequency responses |
-| spatially arranged             | not spatially arranged           |
-| 160° FOV                       | 360° FOV                         |
-| Contrast 1:1,000,000           | Contrast 1:10,000,000,000        |
-| great at spatial understanding | great at spectral understanding  |
+| Vision                             | Hearing                             |
+| ---------------------------------- | ----------------------------------- |
+| Two Eyes                           | Two Ears                            |
+| EM                                 | Air Pressure                        |
+| 120 million sensors each           | ~18k sensors each                   |
+| 1 + 3 frequency responses          | thousands of frequency responses    |
+| Lens  + spatially arranged         | No Lens + not spatially arranged    |
+| 160° FOV                           | 360° FOV                            |
+| Contrast 1:1,000,000               | Contrast 1:10,000,000,000           |
+| great at **spatial** understanding | great at **spectral** understanding |
 
+We see a single color at a very specific point.
+We hear chords from a general direction.
 
-## Vision + Hearing
+### Vision + Hearing
 
 Our visual and auditory sensory systems support one another.
 
 [McGurk Effect](https://www.youtube.com/watch?v=G-lN8vWm3m0)
 
+
+
+## Key Takeaways
+
+- Computers are physical machines.
+- Computers can interface with the physical environment.
+- Data flows through our physical environment.
+- Our eyes and ears are sensors.
+- They sense only a small amount of the data flowing through our environment.
+- Our eyes and ears are significantly different in structure.
+- The types of data gathered by our eyes and ears are rooted in their structure.
+- Our eyes and ears are just sensors, they provide data.
+- Our brain is needed to process this data and provide information.
+- Our brain's visual and auditory data processing is powerful and valuable.
+- We can take advantage of this power by creating visual and auditory form.
