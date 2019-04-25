@@ -32,7 +32,7 @@ Generative Music
 [Six Marimbas](https://www.youtube.com/watch?v=mLZelvSvh3A) [Come Out](https://www.youtube.com/watch?v=g0WVh1D0N50) [Its Gonna Rain](https://www.youtube.com/watch?v=vugqRAX7xQE)
 : Three compositions by Steve Reich
 
-[Cobra](https://www.youtube.com/watch?v=UdNdSJUf_8I)
+[Cobra](https://www.youtube.com/watch?v=UdNdSJUf_8I) [Zorn on Cobra](https://www.youtube.com/watch?v=yp-oZbmsQVw&t=152s)
 : John Zorn's "game piece" music.
 
 [Music for Airports](https://en.wikipedia.org/wiki/Ambient_1:_Music_for_Airports)
