@@ -7,26 +7,23 @@ debug: false
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
 <script src="./index_mess.js"></script>
 
-
-
 # Computational Form 2019
 
 <div class="col-6 col-md-6 overview top">
 This page houses information specific to the spring 2019 section of Computational Form.
 </div>
 
-
 # Resources
 
 ### [Welcome Letter](./welcome_letter.html)
+
 ### [Syllabus](./syllabus.html)
-### [Sketch Book](http://sketches2019.compform.net/) 
 
-
+### [Sketch Book](http://sketches2019.compform.net/)
 
 # Schedule
 
-## Foundation Unit                                
+## Foundation Unit
 
 | Lesson Plan                                  | Topics                                                     |
 | -------------------------------------------- | ---------------------------------------------------------- |
@@ -35,7 +32,6 @@ This page houses information specific to the spring 2019 section of Computationa
 | [Week 3, February 8](parameters_plan.html)   | [Parameters](../parameters)                                |
 | [Week 4, February 15](noise_plan.html)       | [Noise](../noise)                                          |
 | [Week 5, February 22](strategy_plan.html)    | [Strategy](../strategy)                                    |
-
 
 ## Exploration Unit
 
@@ -48,11 +44,10 @@ This page houses information specific to the spring 2019 section of Computationa
 | [Week 10, March 29](animation_plan.html)       | [Animation](../animation)                                        |
 | [Week 11, April 5](text_plan.html)             | [Generating Text](../text)                                       |
 | [Week 12, April 12](sound_plan.html)           | [Generating Sound](../sound)                                     |
-| [Week 13, April 19](#music_plan.html)          | [Music](../music)                                                |
-| [Week 14, April 26](#3D_plan.html)             | [3D Forms](../3D)                                                |
+| [Week 13, April 19](music_plan.html)           | [Music](../music)                                                |
+| [Week 14, April 26](3D_plan.html)              | [3D Forms](../3D)                                                |
 | [Week 15, May 3](#microgames_plan.html)        | [Microgames](../microgames)                                      |
 | [Week 16, May 10](#postmortem_party_plan.html) | Postmortem Party{gray}                                           |
-
 
 ## After-class Lectures
 

@@ -16,7 +16,7 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <p>Most of the favorite subjects of representational art—human figures, landscapes, still lifes—are three dimensional forms. Paintings and drawings represent these forms by projecting them into two dimensions. This is a destructive process in which part of the form is lost. You cannot walk around a painting to see its subject from the other side. Where a painting strives to convey a sense of scale, of volume, of substance, and of presence, a sculpture cannot escape them.</p>
 <p>On screen, 3D graphics exist in between painting and sculpture. You can rotate computer generated 3D shapes, but you are still seeing a 2D projection. 3D Printing brings these shapes into the physical world. Getting “real” results from procedural generation can be very gratifying, providing physical evidence of your efforts. While not physical, VR is also a compelling medium for computational form. I especially enjoy combining the rapid iteration enabled by working procedurally with the sense of presence and scale afforded by virtual reality. It is an intensely creative experience to procedurally generate a tree and immediately stand in its shadow looking up at the sky through its branches.</p>
 <h2 id="openscad">OpenSCAD</h2>
-<p><a href="http://www.openscad.org/about.html">OpenSCAD</a> is a language for specifying procedural 3D forms using <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">constructive solid geometry</a>. CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well-suited to designing mechanical parts for manufacturing, but not well-suited for organic shapes, characters, or animation.</p>
+<p><a href="http://www.openscad.org/about.html">OpenSCAD</a> is a language for specifying procedural 3D forms using <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">constructive solid geometry</a>. CSG is a modeling technique in which complex shapes are created by combining simple shapes using boolean operations like union, difference, and intersection. It is well-suited to designing mechanical parts for manufacturing, but not well-suited for organic shapes or characters.</p>
 <p><img src="images/OpenSCAD_screenshot.png" alt="OpenSCAD"></p>
 <dl>
 <dt><a href="http://www.openscad.org/">OpenSCAD.org</a></dt>
@@ -42,14 +42,14 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
     <span class="hljs-built_in">cylinder</span> (h=<span class="hljs-number">1</span>, r=<span class="hljs-number">3</span>, center = <span class="hljs-literal">true</span>);
 }
 </code></pre>
-<p>In the example, <code>difference()</code> looks like a function call, but instead of being followed by a semicolon it is followed by what looks like a block of statements starting and ending with braces. In the vocabulary of OpenSCAD <code>difference()</code> is an <strong>operator</strong> and <code>cylinder(...);</code> is an <strong>action</strong>. Operators act on an action or a <strong>group</strong> of actions in braces.</p>
+<p>In the example, <code>difference()</code> works somewhat like a function call and looks somewhat like a function definition. It isn’t really either of things. In the vocabulary of OpenSCAD <code>difference()</code> is an <strong>operator</strong> and <code>cylinder(...);</code> is an <strong>action</strong>. Operators act on an action or a <strong>group</strong> of actions in braces.</p>
 <p>These differences reflect the fundamentally different approach to programming in OpenSCAD compared to C.</p>
 <h3 id="functional-vs-procedural">Functional vs. Procedural</h3>
 <div id="" class="links-sidebar">
 <p><a href="https://en.wikipedia.org/wiki/Programming_paradigm">Wikipeda:<br/>Programming Paradigms</a></p>
 <p><a href="https://www.youtube.com/watch?v=cgVVZMfLjEI">Talk:<br/>4 Paradigms in 40 Minutes</a></p>
 </div>
-<p>The <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language">OpenSCAD Manual</a> describes OpenSCAD as a <a href="https://en.wikipedia.org/wiki/Functional_programming">functional</a> programming language. One could also generally refer to OpenSCAD as a <a href="https://en.wikipedia.org/wiki/Declarative_programming">declarative</a> language. In contrast to JavaScript, C, and Processing, it is not an <a href="https://en.wikipedia.org/wiki/Imperative_programming">imperative</a> or <a href="https://en.wikipedia.org/wiki/Procedural_programming">procedural</a> language.</p>
+<p>The <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language">OpenSCAD Manual</a> describes OpenSCAD as a <a href="https://en.wikipedia.org/wiki/Functional_programming">functional</a> programming language. One could also more generally refer to OpenSCAD as a <a href="https://en.wikipedia.org/wiki/Declarative_programming">declarative</a> language. In contrast to JavaScript, C, and Processing, it is not an <a href="https://en.wikipedia.org/wiki/Imperative_programming">imperative</a> or <a href="https://en.wikipedia.org/wiki/Procedural_programming">procedural</a> language.</p>
 <p>Classifying programming languages by paradigm is tricky in practice. The boundaries of paradigms are not always clear. Different paradigms have different primary concerns and may be orthogonal to each other, and many languages support multiple paradigms.</p>
 <table class="table table-responsive">
 <thead>
@@ -104,7 +104,7 @@ a = <span class="hljs-number">2</span>;
 (<span class="hljs-name">*</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span>) -&gt; <span class="hljs-number">24</span>
 (<span class="hljs-name">*</span> <span class="hljs-number">2</span> (<span class="hljs-name">+</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span>)) -&gt; <span class="hljs-number">14</span>
 </code></pre>
-<p>Prefix notation isn’t that crazy. Compare it to function calls in JavaScript.</p>
+<p>While the example above looks unusual if you are used to C or JavaScript, prefix notation isn’t really that crazy. Compare it to function calls in JavaScript.</p>
 <pre><code class="language-javascript">multiply(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>) -&gt; <span class="hljs-number">6</span>
 multiply(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>) -&gt; <span class="hljs-number">24</span>
 multiply(<span class="hljs-number">2</span>, add(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)) -&gt; <span class="hljs-number">14</span>
@@ -117,10 +117,10 @@ multiply(<span class="hljs-number">2</span>, add(<span class="hljs-number">3</sp
 </code></pre>
 <h3 id="named-vs-positional-parameters">Named vs. Positional Parameters</h3>
 <p>OpenSCAD with named parameters</p>
-<pre><code class="language-javascript">cylinder (h=<span class="hljs-number">4</span>, r=<span class="hljs-number">1</span>, center=<span class="hljs-literal">true</span>);
+<pre><code class="language-javascript">cylinder((h = <span class="hljs-number">4</span>), (r = <span class="hljs-number">1</span>), (center = <span class="hljs-literal">true</span>));
 </code></pre>
 <p>OpenSCAD with positional parameters</p>
-<pre><code class="language-javascript">cylinder (<span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">true</span>);
+<pre><code class="language-javascript">cylinder(<span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">true</span>);
 </code></pre>
 <p>Javascript emulating named params with an object literal</p>
 <pre><code class="language-javascript">cylinder ({h=<span class="hljs-number">4</span>, r=<span class="hljs-number">1</span>, center=<span class="hljs-literal">true</span>});
@@ -136,7 +136,7 @@ multiply(<span class="hljs-number">2</span>, add(<span class="hljs-number">3</sp
 <dd>Manual for OpenJSCAD syntax and library.</dd>
 </dl>
 <h2 id="study-examples">Study Examples</h2>
-<p>These examples will build up to a simplified parametric Lego brick. To get started we’ll need the <a href="https://www.cailliau.org/Lego/Dimensions/zMeasurements-en.xhtml">dimensions of a Lego brick</a>.</p>
+<p>These examples will build up to a simplified parametric Lego brick, introducing many features of OpenSCAD along the way. To get started we’ll need the <a href="https://www.cailliau.org/Lego/Dimensions/zMeasurements-en.xhtml">dimensions of a Lego brick</a>.</p>
 <h3 id="generating-primitives">Generating Primitives</h3>
 <pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
 % <span class="hljs-built_in">cube</span>([<span class="hljs-number">8</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9.6</span>], <span class="hljs-literal">true</span>);
@@ -292,26 +292,24 @@ Greg Schomburg and I created this custom <a href="http://justinbakse.com/v2/new_
 <p>Blender is free to everyone under the <a href="https://www.blender.org/about/license/">GNU GPL license</a>.</p>
 <dl>
 <dt><a href="https://www.autodesk.com/products/fusion-360/overview">Fusion 360</a> and <a href="https://www.tinkercad.com">Tinkercad</a></dt>
-<dd>
-<p>Fusion 360 is a cloud-based computer-aided design, manufacturing, and engineering package. Tinkercad is a much simpler tool for designing and printing 3D objects.</p>
-<p>Tinkercad is free to use, and Fusion 360 has an <a href="https://www.autodesk.com/education/free-software/featured">academic license</a></p>
-</dd>
-<dt><a href="https://www.sidefx.com/">Houdini</a></dt>
-<dd>
-<p>Houdini is an extremely powerful tool for procedural 3D modeling and simulating for visual effects work. Houdini can be used to build parametric tools that work inside other 3D tools like Maya and Unity.</p>
-<p>Houdini has a reduced cost <a href="https://www.sidefx.com/products/houdini-education/">educational license</a>.</p>
-</dd>
-<dt><a href="https://www.allegorithmic.com/products/substance-designer">Substance Designer</a></dt>
-<dd>
-<p>Substance designer is a tool for procedurally creating realistic materials for 3D rendering.</p>
-<p>Available for free with an <a href="https://www.allegorithmic.com/buy/education">educational license</a>.</p>
-</dd>
-<dt><a href="http://www.grasshopper3d.com/">Grasshopper + Rhino</a></dt>
-<dd>
-<p>Grasshopper is a visual scripting plug-in for the 3D modeling software Rhino. It is used in generative architecture, product design, and art.</p>
-<p>Rhino 6 includes Grasshopper (Windows only) and has a reduced cost <a href="https://www.rhino3d.com/edu">educational license</a>.</p>
-</dd>
+<dd>Fusion 360 is a cloud-based computer-aided design, manufacturing, and engineering package. Tinkercad is a much simpler tool for designing and printing 3D objects.</dd>
 </dl>
+<p>Tinkercad is free to use, and Fusion 360 has an <a href="https://www.autodesk.com/education/free-software/featured">academic license</a></p>
+<dl>
+<dt><a href="https://www.sidefx.com/">Houdini</a></dt>
+<dd>Houdini is an extremely powerful tool for procedural 3D modeling and simulating for visual effects work. Houdini can be used to build parametric tools that work inside other 3D tools like Maya and Unity.</dd>
+</dl>
+<p>Houdini has a reduced cost <a href="https://www.sidefx.com/products/houdini-education/">educational license</a>.</p>
+<dl>
+<dt><a href="https://www.allegorithmic.com/products/substance-designer">Substance Designer</a></dt>
+<dd>Substance designer is a tool for procedurally creating realistic materials for 3D rendering.</dd>
+</dl>
+<p>Available for free with an <a href="https://www.allegorithmic.com/buy/education">educational license</a>.</p>
+<dl>
+<dt><a href="http://www.grasshopper3d.com/">Grasshopper + Rhino</a></dt>
+<dd>Grasshopper is a visual scripting plug-in for the 3D modeling software Rhino. It is used in generative architecture, product design, and art.</dd>
+</dl>
+<p>Rhino 6 includes Grasshopper (Windows only) and has a reduced cost <a href="https://www.rhino3d.com/edu">educational license</a>.</p>
 <div id="" class="assignment">
 <h2 id="keep-sketching">Keep Sketching!</h2>
 <h3 id="base">Base</h3>
