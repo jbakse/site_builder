@@ -166,3 +166,16 @@ And here are some of the plots.
 ![green](./plots/green.jpg)
 ![blue](./plots/blue.jpg)
 /::
+
+
+<meta property="og:site_name" content="compform.net">
+<meta property="og:title" content="Paper_Garden.js Case Study" />
+<meta property="og:description" content="Creating a procedurally generated drawing of plants using Javascript and Paper.js">
+<meta property="og:image" content="http://compform.net/vectors/paper_garden/images/1500.png">
+<meta property="og:url" content="http://compform.net/vectors/paper_garden/paper_garden.html">
+
+
+<meta property="twitter:title" content="Paper_Garden.js Case Study" />
+<meta property="twitter:description" content="Creating a procedurally generated drawing of plants using Javascript and Paper.js">
+<meta property="twitter:image" content="http://compform.net/vectors/paper_garden/images/1500.png">
+<meta name="twitter:card" content="summary_large_image">
