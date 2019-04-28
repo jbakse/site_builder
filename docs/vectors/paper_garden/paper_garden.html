@@ -62,7 +62,7 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <h4 id="draw-back-to-front">Draw Back to Front</h4>
 <p>In my sketchbook doodle, I drew the circles front to back. When drawing with a pen, it is easy to not draw part of the circle and hard to erase marks. In Paper.js the opposite is true. New circles easily cover any marks already on the drawing, and drawing only part of the circle requires substantial extra work. Because of this, Paper Flowers draws from back to front.</p>
 <div id="" class="callout warn">
-<p>This approach works fine for rasterized output on the screen but won’t work on vector outputs like pen plotters or laser cutters which will draw the entire path of each circle even if another circle covers it.</p>
+<p>This approach works fine for rasterized output on the screen but won’t work on vector outputs like pen plotters or laser engraving which will draw the entire path of each circle even if another circle covers it. See <code>Plotting the Drawing</code> below.</p>
 </div>
 <h4 id="distorting-the-circle">Distorting the Circle</h4>
 <p>The circles in my doodle are not very round. Paper Garden simulates this by displacing each control point of the Bezier curve in a random direction. The amount of displacement is controlled by the <code>ROUGH</code> parameter.</p>
@@ -100,4 +100,21 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <li><strong>Remove some randomly selected points to create gaps.</strong></li>
 <li>Sort these points into the desired drawing order.</li>
 </ol>
-</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
+<p>Thats pretty much it: decide where plants should be, decide where the leaves should be, draw the leaves. To add a little more variation and interest, some of the leaves are swaped out for vines or flowers.</p>
+<h2 id="plotting-the-drawing">Plotting The Drawing</h2>
+<p>With different drawing parameters Paper Garden can generate a range of looks, but I like the slightly hand-drawn line-drawing style best, so I tried drawing it on a Silhouette Cameo pen plotter. The Paper Garden script can export vector files to draw with the plotter, but a little extra work needs to be done to get them to work correctly.</p>
+<p>The version of the script above draws the the circles white fill to cover up the lines from other circles. Since the pen plotter doesn’t fill in the shapes, I created a version for plotting that procedurally removes the hidden lines.</p>
+<p>This script shows how I removed the lines.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/vectors/paper_garden/remove_lines.js">
+</iframe>
+</div>
+</div>
+<p>And here are some of the plots.</p>
+<div id="" class="two-up full-width">
+<p><img src="./plots/purple.jpg" alt="purple">
+<img src="./plots/yellow.jpg" alt="yellow">
+<img src="./plots/green.jpg" alt="green">
+<img src="./plots/blue.jpg" alt="blue"></p>
+</div></div></div></div><div class="container" id="scroll-out"></div></div></body></html>
