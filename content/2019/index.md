@@ -51,14 +51,14 @@ This page houses information specific to the spring 2019 section of Computationa
 
 ## After-class Lectures
 
-| Lesson Plan             | Topics                                             |
-| ----------------------- | -------------------------------------------------- |
-| January 25              | My Javascript Workspace                            |
-| February 8              | Discovering OOP in Javascript                      |
-| February 1, February 22 | [Intro to Substance Painter](../substance_painter) |
-| February 22             | [Multiuser Webpage](../socketio)                   |
-| March 8                 | [Shaders + Unity Live Code](../shaders)            |
-
+| Lesson Plan             | Topics                                                                                                                                  |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| January 25              | My Javascript Workspace                                                                                                                 |
+| February 8              | [Discovering OOP in Javascript](https://jbakse.github.io/livecode_19_sketchbook/sketchbook/sketchbook.html?sketch=02_bounce_oop&source) |
+| February 1, February 22 | [Intro to Substance Painter](../substance_painter)                                                                                      |
+| February 22             | [Multiuser Webpage](../socketio)                                                                                                        |
+| March 8                 | [Shaders + Unity Live Code](../shaders)                                                                                                 |
+| April 26                | [Vue.js + Firebase](https://jbakse.github.io/livecode_19_sketchbook/sketchbook/sketchbook.html?sketch=03_firenotes)                     |
 <style>
 .top {
     padding: 0;
