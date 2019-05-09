@@ -46,7 +46,7 @@ This page houses information specific to the spring 2019 section of Computationa
 | [Week 12, April 12](sound_plan.html)           | [Generating Sound](../sound)                                     |
 | [Week 13, April 19](music_plan.html)           | [Music](../music)                                                |
 | [Week 14, April 26](3D_plan.html)              | [3D Forms](../3D)                                                |
-| [Week 15, May 3](#microgames_plan.html)        | [Microgames](../microgames)                                      |
+| [Week 15, May 3](microgames_plan.html)         | [Microgames](../microgames)                                      |
 | [Week 16, May 10](#postmortem_party_plan.html) | Postmortem Party{gray}                                           |
 
 ## After-class Lectures
