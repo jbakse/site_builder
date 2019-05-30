@@ -48,7 +48,7 @@ Vector graphics must be converted to raster graphics—a process called [rasteri
 Compare creating scenes using direct mark making vs. cut-out shapes.
 
 ### Setup
-Divide class into groups. Give some groups flet and scissors and the other group paper and makers.
+Divide class into groups. Give some groups felt and scissors and the other group paper and makers.
 
 ### Create
 *Groups, 5 minutes*
