@@ -8,9 +8,7 @@ debug: false
 
 ### Materials
 
-
 ### Learning Objectives
-
 
 ### Schedule
 
@@ -26,7 +24,6 @@ debug: false
 | 5:55 | Activate      | Coding Challenge  | Coding Challenge  |
 | 6:15 | Activate      | Coding Discussion | Coding Discussion |
 | 6:25 | Study         | Lecture           | Assignment Intro  |
-
 
 ::: .activity
 
@@ -49,27 +46,22 @@ Review last week's class, this week's sketches, and this semester's class.
 - "Big things seem smaller when put outside."
 - "People outside are going to other places."
 
-
 ::: .headless
-| Group | Question                      |
+| Group | Question |
 | ----- | ----------------------------- |
-| 1     | 3D vs 2D                      |
-| 2     | Functional vs Procedural      |
-| 3     | 3D vs Sound                   |
-| 4     | OpenSCAD vs Other 3D Software |
-| 5     | Procedural vs Manual          |
-| 6     | Sketches vs Projects          |
+| 1 | 3D vs 2D |
+| 2 | Functional vs Procedural |
+| 3 | 3D vs Sound |
+| 4 | OpenSCAD vs Other 3D Software |
+| 5 | Procedural vs Manual |
+| 6 | Sketches vs Projects |
 /::
 
 /::
-
 
 ### Class Notes
 
 [Microgames](./index.html) {boxed right}
-
-
-
 
 <style> 
     .headless thead {
