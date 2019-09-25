@@ -51,3 +51,9 @@ software: ""
 ::: js-lab
 /why_we_code/intelligent.js
 /::
+
+## Living
+
+::: js-lab
+/why_we_code/living.js
+/::
