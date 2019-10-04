@@ -33,7 +33,8 @@ Consider the advantages and disadvantages of using procedures to generate form.
 
 - What types of art can **only** be created using procedures?
 - What types of art can **not** be created using procedures?
-  /::
+
+/::
 
 ### The Benefits of Computational Form
 

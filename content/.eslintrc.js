@@ -6,10 +6,14 @@ module.exports = {
     "no-use-before-define": 0,
     "no-plusplus": 0,
     "no-mixed-operators": 0,
+    camelcase: 0,
+    "no-restricted-syntax": 0,
+    "no-console": 0,
     "no-unused-vars": [
       "error",
       {
-        varsIgnorePattern: "setup|draw|mousePressed|keyPressed"
+        varsIgnorePattern:
+          "setup|draw|mousePressed|keyPressed|mouseClicked|preload"
       }
     ]
     // "array-element-newline": 0

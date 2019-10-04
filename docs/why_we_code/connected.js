@@ -5,9 +5,7 @@
 let weatherJSON;
 
 async function preload() {
-  const response = await fetch(
-    "https://fcc-weather-api.glitch.me/api/current?lat=40.7&lon=-74"
-  );
+  const response = await fetch('https://fcc-weather-api.glitch.me/api/current?lat=40&lon=-72');
   weatherJSON = await response.json();
 }
 
@@ -22,9 +20,9 @@ function draw() {
 
   textSize(40);
   if (weatherJSON) {
-    let temp = floor(map(weatherJSON.main.temp, 0, 100, 32, 212));
+    const temp = floor(map(weatherJSON.main.temp, 0, 100, 32, 212));
     text(`It is ${temp}°`, 200, 200);
   } else {
-    text("waiting...", 200, 200);
+    text('waiting...', 200, 200);
   }
 }
