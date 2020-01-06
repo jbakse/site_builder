@@ -1,0 +1,62 @@
+- artist: Sergio Albiac
+  title: Stardust
+  image: https://www.sergioalbiac.com/images/star01.jpg
+  comments: One of more than 15,000 portraits created by a project by Sergio Albiac
+  links:
+    - label: "Artist's Site"
+      href: https://www.sergioalbiac.com/wall/stardust.html
+    - label: "Huge Gallery on Flickr"
+      href: https://www.flickr.com/photos/97510924@N04/
+
+
+- artist: Michael Bromley
+  title: Chromata
+  image: slides/chromata.png
+  comments: JavaScript image-to-art machine.
+  links:
+    - label: "Chromata"
+      href: https://www.michaelbromley.co.uk/experiments/chromata/
+
+
+- artist: Greg Schomburg
+  title: Sketching 2014 Identity
+  image: slides/2014_in.png
+  comments: Input map for a generative illustration.
+  links:
+    - label: "Greg Schomburg"
+      href: https://www.gregschomburg.com
+
+- artist: Greg Schomburg
+  title: Sketching 2014 Identity
+  image: slides/2014_out.png
+  comments: Generated Illustration
+  links:
+    - label: "Greg Schomburg"
+      href: https://www.gregschomburg.com
+
+- artist: Greg Schomburg
+  title: Sketching 2014 Identity
+  image: slides/castle_in.png
+  comments: Input map for a generative illustration.
+  links:
+    - label: "Greg Schomburg"
+      href: https://www.gregschomburg.com
+
+- artist: Greg Schomburg
+  title: Sketching 2014 Identity
+  image: slides/castle_out.png
+  comments: Generated Illustration
+  links:
+    - label: "Greg Schomburg"
+      href: https://www.gregschomburg.com
+  
+
+
+
+- artist: Derek Yu
+  title: Pixel Art Tutorial
+  image: http://www.derekyu.com/images/extras/pixel-tools.jpg
+  comments: This is not about computation, but is about making pixels look good. This is a short and useful tutorial on handcrafting pixel art written by Derek Yu, the designer of Spelunky.
+  links:
+    - label: "Pixel Art Tutorial"
+      href: http://makegames.tumblr.com/post/42648699708/pixel-art-tutorial

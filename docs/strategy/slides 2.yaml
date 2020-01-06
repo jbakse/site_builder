@@ -1,0 +1,38 @@
+
+- artist: Klei Entertainment
+  title: Don't Starve
+  image: https://www.klei.com/sites/default/files/games/dont-starve/gallery/ds16.png
+  comments: Don't Starve's procedurally generated maps included carefully placed trees, bushes, and shrubs.
+  links:
+    - label: "Don't Starve"
+      href: https://www.klei.com/games/dont-starve
+
+
+- artist: Hello Games
+  title:  No Man's Sky
+  image: https://nmswp.azureedge.net/wp-content/uploads/2017/02/NewEridu-700x394.png
+  comments: No Man's Sky populates its vegetation on the three-dimensional surface of its planets.
+  links:
+    - label: "No Man's Sky"
+      href: https://www.nomanssky.com
+
+
+- artist: Evil Mad Scientist Laboratories
+  title: StippleGen
+  image: http://evilmadscience.s3.amazonaws.com/wiki/eggbot/stipplegen/v2docs/graceegg-640.jpg
+  comments: StippleGen was created in Processing to turn photographs into pen-plottable drawings.
+  links:
+    - label: "Stipple Gen"
+      href: https://wiki.evilmadscientist.com/StippleGen
+
+
+
+- artist: Martijn Steinrucken
+  title: The Drive Home
+  image: ./slides/the_drive_home.png
+  comments: Realtime procedurally generated view from a windshield in the rain.
+  links:
+    - label: "Live Demo and Code"
+      href: https://www.shadertoy.com/view/MdfBRX
+    - label: "Making of Video Series"
+      href: https://www.youtube.com/watch?v=52TMliAWocY

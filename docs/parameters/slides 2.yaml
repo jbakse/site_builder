@@ -1,0 +1,53 @@
+- artist: Zaha Hadid
+  title: Galaxy SOHO
+  image: http://images.adsttc.com/media/images/5285/1f2b/e8e4/4e52/4b00/01ab/slideshow/HAC_photo_by_Iwan_Baan_(2).jpg?1384455904
+  comments: >
+  links:
+    - label: Zaha Hadid Studio
+      href: http://www.zaha-hadid.com/
+    - label: "Wikipedia: Parametricism"
+      href: https://en.wikipedia.org/wiki/Parametricism
+
+# - artist: Kuva.io
+#   title: Hair
+#   image: ./slides/hair.png
+#   comments: >
+#   links:
+#     - label: "Kuva.io: Hair"
+#       href: https://www.kuva.io/hair-simulation/
+
+
+- artist: MakeHuman Community
+  title: MakeHuman
+  image: http://upload.wikimedia.org/wikipedia/commons/c/c7/Makehuman_1_0_alpha8_rc_screenshot.png
+  links:
+    - label: "Makehuman"
+      href: http://www.makehuman.org/
+
+- artist: Droftarts
+  title: Parametric Pulley
+  image: ./slides/pulley.png
+  links:
+    - label: "Parametric Pulley"
+      href: http://www.thingiverse.com/apps/customizer/run?thing_id=16627&code=65885a90cc68e3e23b0b36718f8b4242
+
+- artist: mataflop
+  title: modulator
+  image: ./slides/modulator.png
+  links:
+    - label: "modulator"
+      href: http://www.metaflop.com/modulator/font/pQkUOJOPk8
+
+- artist: Greg Schomburg
+  title: Gregfont
+  image: ./slides/gregfont.png
+  links:
+    - label: "Gregfont"
+      href: http://gregschomburg.com/gregfont/
+
+- artist: Plastaq Software
+  title: elsy
+  image: ./slides/elsy.png
+  links:
+    - label: elsy
+      href: http://www.plastaq.com/elsy/
