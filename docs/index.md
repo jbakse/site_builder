@@ -10,7 +10,7 @@ debug: false
 # Comp Form
 
 <div class="col-6 col-md-6 overview top">
-This site introduces tools, methods, and concepts used in creating computational form, algorithmic images, generative art, procedurally generated content, and parametric designs in many mediums primarily as a method of aesthetic experimentation. This site is a companion to the Computational Form elective taught by <a href="http://justinbakse.com">Justin Bakse</a> in the <a href="parsons.edu">Parsons</a> Design and Technology program.
+This site introduces tools, methods, and concepts used in creating computational form, algorithmic images, generative art, procedurally generated content, and parametric designs. It introduces computational form in many mediums and primarily as a method of aesthetic experimentation. This site is a companion to the Computational Form elective taught by <a href="http://justinbakse.com">Justin Bakse</a> in the <a href="parsons.edu">Parsons</a> Design and Technology program.
 </div>
 
 ## Foundation
@@ -214,6 +214,19 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 &nbsp;
 
 </a> -->
+
+<a class="col-6 col-md-6" data-ready="true" href="./2020">
+
+### Class Notes 2020
+
+</a>
+
+<a class="col-6 col-md-6" data-ready="true" href="#http://sketches2020.compform.net">
+
+### Sketch Book 2020
+
+</a>
+
 
 <a class="col-6 col-md-6" data-ready="true" href="./2019">
 

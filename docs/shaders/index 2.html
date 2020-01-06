@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head><title>Fragment Shaders | Comp Form</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-41378785-2"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- open graph--><meta property="og:site_name" content="compform.net"><meta property="og:title" content="Fragment Shaders"><meta property="og:description" content="Shaders are programs that are run on the GPU to color individual pixels."><meta property="og:image"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<polygon points="32,64 0,119.4 64,119.4"/>
+<polygon points="64,8.6 32,64 96,64"/>
+<polygon points="80,91.7 64,119.4 96,119.4"/>
+<polygon points="112,91.7 96,119.4 128,119.4"/>
+<polygon points="96,64 80,91.7 112,91.7"/>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Fragment Shaders</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Fragment Shaders</h1><h6>Overview</h6><p class="description">Shaders are programs that are run on the GPU to color individual pixels.</p><h6>Tools</h6><p class="software">GLSL, Unity</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><link type="text/css" rel="stylesheet" href="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.css"/>
+<script type="application/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.js"></script>
+<link type="text/css" href="shader.css"/>
+<h2 id="fragment-shaders">Fragment Shaders</h2>
+<p>A Fragment Shader is a program for drawing pixels on the video card. A shader recieves the postion of a single pixel, and maybe some additional application-specific information, and returns a single color. Conceptually, the instructions in a fragment shader are run for every single pixel being drawn simultaniously. This allows shaders to run very quickly, but also imposes strict limitations on them. Do to these limitations, programming a shader often requires thinking in a different way.</p>
+<!-- Shaders are run at a specific point in the modern graphics pipeline. When rendering 3D geometry the pipeline will first determine where on the screen the object will appear and which pixels it will cover. Conceptually, the instructions in a fragment shader are then run for every single pixel being drawn simultaniously. The video card takes the returned color values and composites them onto the final image. -->
+<div id="" class="callout">
+<p>For more information on what a shader is, how they work, and how to make them, please take a look at <a href="https://thebookofshaders.com/">thebookofshaders.com</a>. It is an excellent resource for learning how to create purely generative drawings with shaders, and it is one of the inspirations for this site.</p>
+</div>
+<h2 id="serial-vs-parallel">Serial vs Parallel</h2>
+<p>GPUs can run shaders very quickly because they are designed for parallel processing.</p>
+<p>A problem is <em>parallelizable</em> if it can be divided into parts that can be solved <strong>independently and concurrently</strong>. If a problem is parallelizable, a high number of slow agents can solve it quickly, and a high number of fast agents can solve it VERY quickly.</p>
+<h3 id="serial-baking-a-cake">Serial: Baking a Cake</h3>
+<p>Not all problems can be divided efficiently. Some problems are <em>inherently serial</em>. For example, consider the steps needed to bake a cake.</p>
+<ol>
+<li>Collect ingredients</li>
+<li>Measure ingredients</li>
+<li>Combine ingredients</li>
+<li>Pour batter into pan</li>
+<li>Preheat oven</li>
+<li>Bake batter</li>
+<li>Cool cake</li>
+<li>Ice cake</li>
+<li>Decorate cake</li>
+</ol>
+<p>Most of these steps must be done in order. You can’t measure ingredients you haven’t collected, you can’t combine ingredients before you measure them, you can’t ice a cake you haven’t baked. You <em>can</em> preheat the oven while you collect, measure, and combine the ingredients but that is the only part of the process where working in parallel can help.</p>
+<h3 id="parallel-tinting-an-image">Parallel: Tinting an Image</h3>
+<p>In contrast, Tinting an image is <em><a href="https://en.wikipedia.org/wiki/Embarrassingly_parallel">embarrasingly parallel</a></em>. You can divide the image into two parts—top and bottom—and tint both parts at once. Tinting the top doesn’t rely on tinting the bottom, and tinting the bottom doesn’t rely on tinting the top. Recombining the parts is easy, so splitting up the work allows it to be done much faster. You can divide the image into 4 parts or 8 parts just as well. Because tinting one pixel doesn’t rely on tinting any other, you can divide the image all the way down to each independent pixel and process them all at once. This is the type of problem that GPUs are specifically designed to solve.</p>
+<h2 id="cpus-vs-gpus">CPUs vs GPUs</h2>
+<h3 id="single-thread-cpu">Single-Thread CPU</h3>
+<p>CPUs are designed to solve serial problems very quickly. They have super-high clock-speeds and flexible architectures that allow you to mix data reads, writes, and operations freely.</p>
+<p><img src="figures/Single_CPU.svg" alt="cpu"></p>
+<h3 id="multi-thread-cpu">Multi-Thread CPU</h3>
+<p>Modern CPUs can do more than one thing at a time. Many CPUs have several cores, and the cores can process multiple threads simultaneously.</p>
+<p><img src="figures/Multi_CPU_1.svg" alt="cpu"></p>
+<p>This allows CPUs to run multiple applications at once, but can’t always speed up a single application if it doesn’t parallelize well.
+When problems don’t parallelize well, threads often have to wait on data from other threads.</p>
+<p><img src="figures/Multi_CPU_2.svg" alt="cpu"></p>
+<h3 id="gpus">GPUs</h3>
+<p>GPUs are designed to solve parallel problems very quickly. They tend to have somewhat lower clock-speeds than GPUs but many, many more cores. The GPU is optimized to perform a fixed set of operations on many sets of data simultaniously. The GPU prepares the data, performs the operations, and reads the final results.</p>
+<p><img src="figures/GPU.svg" alt="cpu"></p>
+<h2 id="shader-limitations">Shader Limitations</h2>
+<p>Shaders can run very fast because they are strictly limited to fit the optimized path on the GPU. Some types of problems can not be easily expressed within these limitations and are better processed on a CPU. Many graphics processing problems—including 3d rendering and 2d image compositing—fit neatly into these limitations making GPUs much faster for these types of problems.</p>
+<h4 id="no-communication">No Communication</h4>
+<p>Shaders do not allow data to be passed from thread to thread. None of the values determined while calculating one pixel can be shared by another. The calculations of one pixel can not affect the calculations for other pixels.</p>
+<p>This can lead to a lot of redundant work, but often the GPU is so much faster that you still get great performance. It is also possible to precalculate data on the CPU and pass it to the shader.</p>
+<h4 id="short-memory">Short Memory</h4>
+<p>The values determined in the shader are not remembered. Every time the shader runs, it starts from scratch.</p>
+<h4 id="limited-branching">Limited Branching</h4>
+<p>In imparative languages like C and Javascript, <code>if</code> is used to create a conditional branch, dynamically choosing which instructions should be run. GPU hardware is not optimized for branching. Early shader models didn’t allow branching at all. Generally, the most performant path is for the shader to perform the same sequence of operations on every pixel.</p>
+<p>When a shader encounters branching it might actually execute both possible sets of instructions and simply throw away what it doesn’t need.</p>
+<h2 id="p5js-vs-shaders">p5.js vs Shaders</h2>
+<h3 id="embarassingly-parallel-creating-a-gradient">Embarassingly Parallel: Creating a Gradient</h3>
+<p>This example creates a two dimensional color gradient. Changing from black to red on the X axis and from black to green on the Y axis. Every pixel is assigned a color, and calculating the correct color depends only on knowing the position of the pixel. This is a pretty easy image to generate in both p5.js and in a GLSL shader, and the solutions look somewhat similar.</p>
+<p>A key difference is that the shader just calculates the color and returns it. The p5.js example has to do the surrounding work of looping through all the pixels, setting up a drawing area, etc.</p>
+<h4 id="p5js-gradient">p5.js Gradient</h4>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/shaders/sketches/gradient.js">
+</iframe>
+</div>
+</div>
+<h4 id="glsl-gradient">GLSL Gradient</h4>
+<div id="" class="full-width">
+<div class="glsl_editor" data="shaders/gradient.frag"></div>
+</div>
+<h3 id="a-shift-in-perspective-drawing-a-rectangle">A Shift in Perspective: Drawing a Rectangle</h3>
+<p>This example draws a red rectangle on a gray background. The p5.js version doesn’t use any high level API calls like <code>rect()</code> or <code>background()</code> so we can directly see how the pixel values are being set. The p5.js verson approaches the problem like this.</p>
+<ol>
+<li>Loop over all the pixels; Set them to gray.</li>
+<li>Loop over the pixels inside the rectangle; Set them to red.</li>
+</ol>
+<p>The shader example can not follow the same approach. A shader can’t choose which pixels to visit and can’t choose to visit pixels twice. The shader is simply run once for every pixel and must determine what color the pixel should be while it runs. The shader approaches the problem like this:</p>
+<ol>
+<li>Check if the pixel is in the rectangle.</li>
+<li>If so, return red. If not, return gray.</li>
+</ol>
+<p>The final version uses a shader that calculates the color without branching.</p>
+<h4 id="p5js-rect">p5.js Rect</h4>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/shaders/sketches/rect.js">
+</iframe>
+</div>
+</div>
+<h4 id="glsl-rect">GLSL Rect</h4>
+<div id="" class="full-width">
+<div class="glsl_editor" data="shaders/rect_branch.frag"></div>
+</div>
+<h4 id="glsl-rect-without-branching">GLSL Rect without Branching</h4>
+<div id="" class="full-width">
+<div class="glsl_editor" data="shaders/rect.frag"></div>
+</div>
+<h3 id="inherently-serial-brownian">Inherently Serial: Brownian</h3>
+<p>This example creates a complex image by tracing brownian motion. It draws a series of circles moving in a random direction. The location of each circle depends on the location of the previous circle and is inherently serial. Additionally the circles are drawn with transparency, so calculating each pixel color depends on reading the color of the canvas where it will be drawn. This effect would not translate to a shader well.</p>
+<h4 id="p5js-brownian">p5.js Brownian</h4>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/shaders/sketches/brownian.js">
+</iframe>
+</div>
+</div>
+<div id="" class="activity">
+<h2 id="in-class-challenge-one">In-class Challenge One</h2>
+<p>Explore using p5’s pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. <br/> Don’t skip any.</p>
+<h3 id="modify-the-gradient-example">Modify the Gradient Example</h3>
+<ol>
+<li>Change both versions to make a solid blue image.</li>
+<li>Change both versions to make a gradient from white to black.</li>
+</ol>
+<h3 id="modify-the-rectangle-example">Modify the Rectangle Example</h3>
+<ol>
+<li>Change all three versions to move the rectangle to the lower half.</li>
+<li>Change all three versions to add a second rectangle colored blue.</li>
+</ol>
+</div>
+<script src="./shader_loader.js"></script>
+<h2 id="live-code">Live Code</h2>
+<video controls>
+  <source src="figures/shader_demo.mp4" type="video/mp4">
+</video>
+<h2 id="resources">Resources</h2>
+<p><a href="https://thebookofshaders.com/">The Book of Shaders</a></p>
+<p><a href="https://docs.unity3d.com/Manual/SL-ShaderPrograms.html">Unity Writing Vertex and Fragment Shaders</a></p>
+<p><a href="http://theorangeduck.com/page/avoiding-shader-conditionals">Avoiding Shader Conditionals</a></p>
+<p><a href="https://unity3d.com/learn/tutorials/topics/graphics/gentle-introduction-shaders">A Gentle Introduction to Shaders (in Unity)</a></p>
+<p><a href="https://docs.unity3d.com/Manual/SL-Reference.html">Unity Shader Reference</a></p>
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>

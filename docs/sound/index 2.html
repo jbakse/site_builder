@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="en"><head><title>Sound | Comp Form</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-41378785-2"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- open graph--><meta property="og:site_name" content="compform.net"><meta property="og:title" content="Sound"><meta property="og:description" content="Make some noise using the p5 sound library."><meta property="og:image"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<polygon points="32,64 0,119.4 64,119.4"/>
+<polygon points="64,8.6 32,64 96,64"/>
+<polygon points="80,91.7 64,119.4 96,119.4"/>
+<polygon points="112,91.7 96,119.4 128,119.4"/>
+<polygon points="96,64 80,91.7 112,91.7"/>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Comp Sound</span><div class="buttons"><a class="previous" href="../text"><i class="fa fa-caret-left fa-lg"></i>Generating Text</a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Comp Sound</h1><h6>Overview</h6><p class="description">Make some noise using the p5 sound library.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="sound">Sound</h2>
+<h3 id="p5js-sound-library">p5.js Sound Library</h3>
+<p>In addition to the basic drawing API, p5.js includes add-on <a href="https://p5js.org/libraries/">libraries</a>. The <a href="../parameters">parameters</a> chapter introduces the p5.dom library, and the examples in this chapter use the p5.sound library. The p5.sound library builds on the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio</a> API and provides functions for generating tones, playing recorded sounds, and visualizing the waveform and spectrum of sounds. I highly suggest taking a look at <strong>all</strong> of the sound examples to get an idea of what the sound library can do.</p>
+<p>This chapter will focus on playing and visualizing pre-recorded sound assets. The <a href="../music">comp music</a> chapter talks more about sound synthesis.</p>
+<ul>
+<li><a href="https://p5js.org/reference/#/libraries/p5.sound">p5.sound API Reference</a></li>
+<li><a href="https://p5js.org/examples/">p5.sound Examples</a></li>
+</ul>
+<div id="" class="discussion">
+<h2 id="drawings-and-sounds">Drawings and Sounds</h2>
+<p>Compare a basic p5.js drawing with a p5.audio sketch. What do they have in common? How are they different?</p>
+<h3 id="hello-p5js">Hello, p5.js!</h3>
+<pre><code class="language-javascript"><span class="hljs-keyword">let</span> myImg;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">preload</span>(<span class="hljs-params"></span>) </span>{
+  myImg = loadImage(<span class="hljs-string">"images/world.jpg"</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+  createCanvas(<span class="hljs-number">500</span>, <span class="hljs-number">500</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+  image(myImg, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+}
+</code></pre>
+<h3 id="hello-p5sound">Hello, p5.sound!</h3>
+<pre><code class="language-javascript"><span class="hljs-keyword">let</span> mySound;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">preload</span>(<span class="hljs-params"></span>) </span>{
+  mySound = loadSound(<span class="hljs-string">"sounds/hack-comp.wav"</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+  mySound.loop(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>);
+}
+</code></pre>
+</div>
+<h3 id="computers-light-sound-and-people">Computers, Light, Sound, and People</h3>
+<p>Light and sound flow through our environment as electromagnetic and air pressure waves. Our eyes and our ears collect data about these waves and our visual and auditory cortexes process that data to create information. Though they work in different ways, both of these sensory systems are powerful. We can take advantage of these systems by choosing the types of forms we create.</p>
+<!--[[This last sentence is unclear to me...I'll work on it.]]-->
+<p><a href="./light_and_sound.html">Light and Sound Lecture Notes</a></p>
+<h2 id="playing-sound-with-p5js">Playing Sound with p5.js</h2>
+<!--
+### Hello, Sound!
+
+<div id="" class="">
+
+
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/hello_sound.js">
+</iframe>
+</div>
+
+
+</div>
+
+### Changing the Frequency
+
+<div id="" class="">
+
+
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/oscillator.js">
+</iframe>
+</div>
+
+
+</div>
+
+### Modulating the Frequency
+
+<div id="" class="">
+
+
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/modulator.js">
+</iframe>
+</div>
+
+
+</div> -->
+<h3 id="playing-recorded-sounds">Playing Recorded Sounds</h3>
+<p>p5.js makes it pretty easy to play sound assets, like this audio clip from <a href="http://www.imdb.com/title/tt0113243/">Hackers(1995)</a>.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/hello_play.js">
+</iframe>
+</div>
+</div>
+<div id="" class="callout warn">
+<p>Chrome won’t start playing sound on a page until the user performs a “gesture” on that page.</p>
+<p><a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio">Web Audio Autoplay Policy</a></p>
+</div>
+<h3 id="changing-rate-pitch">Changing Rate + Pitch</h3>
+<p>The third parameter to <code>play()</code> controlls the rate of playback. If you play a sound faster the pitch will go up; play it slower and the pitch will go down. p5 cannot change the pitch of a sound without changing its length.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/hello_pitch.js">
+</iframe>
+</div>
+</div>
+<h3 id="looping">Looping</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/two_loops.js">
+</iframe>
+</div>
+</div>
+<h3 id="drum-kit">Drum Kit</h3>
+<p>This example uses <code>frameCount</code> to keep time and play a beat with drum samples. This works for a quick sketch, but <code>frameCount</code> isn’t a great timekeeping source, so you might notice hitches in your rhythm. The <a href="https://tonejs.github.io">Tone.js</a> lets you precisely schedule when samples are played, and might be a better choice if you want to make music.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/hello_drum.js">
+</iframe>
+</div>
+</div>
+<h3 id="bounce">Bounce</h3>
+<p>This example doesn’t have any sound in it… yet.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/bounce.js">
+</iframe>
+</div>
+</div>
+<h2 id="capturing-output">Capturing Output</h2>
+<p>p5.sound provides methods for recording the sound generated by your program and saving it to a file. The following function records <code>length</code> milliseconds of audio and saves it as <code>output.wav</code>.</p>
+<p>Your audio may sound fine at run time but clipped when you play back the <code>.wav</code>. If this happens, try reducing the volume of the sounds you generate.</p>
+<p>If you can’t get good quality audio capture from p5.SoundRecorder, you might get better results using a screen recording program like Quicktime Player.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// uses the p5 SoundRecorder and SoundFile classes to record the audio output.</span>
+<span class="hljs-comment">// begins recording when called. records for _length_ time in milliseconds.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">record</span>(<span class="hljs-params">length</span>) </span>{
+  <span class="hljs-keyword">var</span> soundRecorder = <span class="hljs-keyword">new</span> p5.SoundRecorder();
+  <span class="hljs-keyword">var</span> soundFile = <span class="hljs-keyword">new</span> p5.SoundFile();
+  soundRecorder.record(soundFile);
+  setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Recording Complete"</span>);
+    soundRecorder.stop();
+    save(soundFile, <span class="hljs-string">"output.wav"</span>);
+  }, length);
+}
+</code></pre>
+<div id="" class="activity">
+<h2 id="in-class-challenge">In-class Challenge</h2>
+<ul>
+<li>In the Drum Kit example, switch the samples used to play the beat.</li>
+<li>Change the timing to create a more complex beat.</li>
+<li>In the Bounce example, add a drum sound when the ball bounces.</li>
+<li>Add a little randomness to the playback rate of the sound each time the ball bounces. This little trick can add some realism to sound effects.</li>
+</ul>
+</div>
+<h2 id="visualizing-sound-with-p5js">Visualizing Sound with p5.js</h2>
+<h3 id="cuepoints">Cuepoints</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/hello_cue.js">
+</iframe>
+</div>
+</div>
+<h3 id="volume">Volume</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/volume.js">
+</iframe>
+</div>
+</div>
+<h3 id="wave">Wave</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/wave.js">
+</iframe>
+</div>
+</div>
+<h3 id="fft">FFT</h3>
+<p>The Fast Fourier Transform transform a signal from the time domain to the frequency domain. For audio analysis that means the FFT can tell the strenght of different frequencies in an audio buffer.</p>
+<p>For a visual exploration of FFT, see this excelent video by 3Blue1Brown [<a href="https://www.youtube.com/watch?v=spUNpyF58BY">https://www.youtube.com/watch?v=spUNpyF58BY</a>](But what is the Fourier Transform? A visual introduction.)</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/fft.js">
+</iframe>
+</div>
+</div>
+<!-- ::: .activity
+
+## In-class Challenge
+
+Display a little melody.
+
+/:: -->
+<h3 id="making-sounds-from-scratch">Making Sounds from Scratch</h3>
+<p>You can create an empty soundFile object with <code>new p5.SoundFile()</code> and generate the sound data yourself with Javascript. To do so you will create and fill a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array">Float32Array</a> and then attach it to the SoundFile object with <code>setBuffer()</code>.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/sound/sketches/buffer.js">
+</iframe>
+</div>
+</div>
+<p>Creating sounds this way lets you work at the lowest possible level: individual samples. This can be fun, and it gives you complete control, but you will probably need to reinvent some basics.</p>
+<p>P5.js has functions for working with oscillators, envelopes, and effects if you want to work at a little higher level. You might also consider using a dedicated Javascript sound synthesis library like <a href="https://tonejs.github.io">Tone.js</a>, which is a little more powerful and better documented.</p>
+<div id="" class="assignment">
+<h2 id="sketch">Sketch!</h2>
+<h3 id="base">Base</h3>
+<p>Keep sketching. Make a bunch of noise!</p>
+<h3 id="challenge-1-synesthesia-1">Challenge 1: Synesthesia 1</h3>
+<p>Choose a 15 second video clip. Use p5.sound to create a new soundtrack for your clip. Combine audio and sound and post.</p>
+<h3 id="challenge-2-synesthesia-2">Challenge 2: Synesthesia 2</h3>
+<p>Choose a 15 second audio clip. Use p5.sound to generate graphics driven by the sound. Combine audio and sound and post.</p>
+<h3 id="challenge-3-synesthesia-3">Challenge 3: Synesthesia 3</h3>
+<p>Create a 15 second procedurally generated audio+visual form. Try to “feed” the audio and the video from the same process.</p>
+</div>
+<h2 id="reference-links">Reference Links</h2>
+<dl>
+<dt><a href="http://jamie-wong.com/post/color/">Jamie Wong: Color from Hexcodes to Eyeballs</a></dt>
+<dd>Jamie Wong describes the each step of how color is expressed and interpreted.</dd>
+<dt><a href="http://psam3060-d-s16.github.io/class_notes/week_9/">Compform '16 Comp Music Notes</a></dt>
+<dd>Compform '16 week on computational music.</dd>
+<dt><a href="http://psam3060-d-s16.github.io/class_notes/week_9/docco_out/">Compform '16 Comp Music Notes</a></dt>
+<dd>Examples from Compform '16 week on computational music.</dd>
+<dt><a href="https://github.com/cwilso/WebMIDIAPIShim">WebMidiAPIShim</a></dt>
+<dd>A javascript shim for accessing midi devices.</dd>
+<dt><a href="https://www.youtube.com/watch?v=spUNpyF58BY">3Blue1Brown: Fourier Transform</a></dt>
+<dd>A great visual introduction to the Fourier transform.</dd>
+<dt><a href="http://www.jezzamon.com/fourier/index.html">An Interactive Introduction to Fourier Transforms</a></dt>
+<dd>Visual and interactive demos of Fourier Transforms for both sound and drawing.</dd>
+</dl>
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
