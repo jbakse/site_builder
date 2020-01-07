@@ -221,7 +221,7 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 
 </a>
 
-<a class="col-6 col-md-6" data-ready="true" href="#http://sketches2020.compform.net">
+<a class="col-6 col-md-6" data-ready="true" href="http://sketches2020.compform.net">
 
 ### Sketch Book 2020
 

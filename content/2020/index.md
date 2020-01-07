@@ -19,7 +19,7 @@ This page houses information specific to the spring 2020 section of Computationa
 
 ### [Syllabus](./syllabus.html)
 
-### [Sketch Book](#http://sketches2020.compform.net/)
+### [Sketch Book](http://sketches2020.compform.net/)
 
 # Schedule
 
@@ -36,7 +36,7 @@ This page houses information specific to the spring 2020 section of Computationa
 ## Exploration Unit
 
 <div class="col-6 col-md-6 overview top">
-Explorationd topic dates subject to change based on class interest in adding two new topics—<b>Simulation</b> and <b>Machine Learning</b>—and restoring <b>Microgames</b>.
+Exploration topics and dates subject to change based on student interest. Possible additions: <b>Simulation</b>, <b>Machine Learning</b>, <b>Microgames</b>.
 </div>
 
 
