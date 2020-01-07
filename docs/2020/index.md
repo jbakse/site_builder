@@ -17,7 +17,7 @@ This page houses information specific to the spring 2020 section of Computationa
 
 ### [Welcome Letter](./welcome_letter.html)
 
-### [Syllabus](#./syllabus.html)
+### [Syllabus](./syllabus.html)
 
 ### [Sketch Book](#http://sketches2020.compform.net/)
 
@@ -42,8 +42,8 @@ Explorationd topic dates subject to change based on class interest in adding two
 
 | Lesson Plan                                   | Topics                                                                       |
 | --------------------------------------------- | ---------------------------------------------------------------------------- |
-| [Week 6, February 26](#pixels_plan.html)      | [Pixel Data](../pixels)                                                      |
-| [Week 7, March 4](#turtles_plan.html)         | [Learning + Play](../concept_map), [Turtle Graphics](../turtles)             |
+| [Week 6, February 26](#turtles_plan.html)     | [Learning + Play](../concept_map), [Turtle Graphics](../turtles)             |
+| [Week 7, March 4](#pixels_plan.html)          | [Pixel Data](../pixels)                                                      |
 | [Week 8, March 11](#vectors_plan.html)        | [Vector Data](../vectors)                                                    |
 | Week 9, March 19{gray}                        | Spring Break{gray}                                                           |
 | [Week 10, April 8](#animation_plan.html)      | [Animation](../animation)                                                    |
