@@ -1,5 +1,5 @@
 ---
-title: "2019"
+title: "2020"
 layout: layouts/compform_toc.pug
 debug: false
 ---
@@ -15,7 +15,7 @@ This page houses information specific to the spring 2020 section of Computationa
 
 # Resources
 
-### [Welcome Letter](#./welcome_letter.html)
+### [Welcome Letter](./welcome_letter.html)
 
 ### [Syllabus](#./syllabus.html)
 
