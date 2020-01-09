@@ -27,14 +27,14 @@ This class will utilize an experimental format. The first half of the course wil
 
 ## Introduction Unit
 
-| Lesson Plan                   | Topics                                    |
-| ----------------------------- | ----------------------------------------- |
-| [Week 1, January 22](#)       | The Paradigm Shift                        |
-| [Crash Course, January 25](#) | Introduction to GLSL + Shader Programming |
-| [Week 2, Januray 29](#)       | Shaders in WebGL + 2D Techniques          |
-| [Week 3, February 5](#)       | Shaders in Unity + 3D Techniques          |
-| [Week 4, February 12](#)      | Working with Textures                     |
-| [Week 5, February 19](#)      | Vertex Shaders or TBA                     |
+| Lesson Plan                             | Topics                                    |
+| --------------------------------------- | ----------------------------------------- |
+| [Week 1, January 22](lesson_plans.html) | [The Paradigm Shift](paradigm_shift.html) |
+| [Crash Course, January 25](#)           | Introduction to GLSL + Shader Programming |
+| [Week 2, Januray 29](#)                 | Shaders in WebGL + 2D Techniques          |
+| [Week 3, February 5](#)                 | Shaders in Unity + 3D Techniques          |
+| [Week 4, February 12](#)                | Working with Textures                     |
+| [Week 5, February 19](#)                | Vertex Shaders or TBA                     |
 
 ## Independent Study Unit
 
