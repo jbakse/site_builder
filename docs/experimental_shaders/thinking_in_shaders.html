@@ -1,16 +1,31 @@
 <!DOCTYPE html><html lang="en"><head><title>Thinking in Shaders | Comp Form</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-41378785-2"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- open graph--><meta property="og:site_name" content="compform.net"><meta property="og:title" content="Thinking in Shaders"><meta property="og:description" content="Shaders draw in a fundamentally different way than serial shaper rasterizers like the WebGL Canvas API or the Processing graphics API. This difference allows shaders to draw very quickly, but requires a new way of thinking when programming."><meta property="og:image"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- open graph--><meta property="og:site_name" content="compform.net"><meta property="og:title" content="Thinking in Shaders"><meta property="og:description" content="Shaders draw in a fundamentally different way than shape drawing APIs like Canvas or Processing. This difference allows shaders to draw very quickly, but requires a new way of thinking when programming."><meta property="og:image"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
 <polygon points="32,64 0,119.4 64,119.4"/>
 <polygon points="64,8.6 32,64 96,64"/>
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Thinking in Shaders</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Thinking in Shaders</h1><h6>Overview</h6><p class="description">Shaders draw in a fundamentally different way than serial shaper rasterizers like the WebGL Canvas API or the Processing graphics API. This difference allows shaders to draw very quickly, but requires a new way of thinking when programming.</p><h6>Tools</h6><p class="software">ShaderToy + glslCanvas</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="a-paradigm-shift">A Paradigm Shift</h2>
-<p>The CPU—central processing unit—executes the instructions in computer programs. CPU architecutres are designed to be general. They run a wide variety of programs pretty quickly. The GPU-graphics processing unit-also executes computer programs. GPU architectures are specifically designed to address parallelizable problems. They can execute these types of problems extremely quickly, but aren’t as well suited serial problems.</p>
-<p>Shaders are programs that run on a GPU, often as part of a 3D graphics pipeline. Because the architectures of GPUs and CPUs have different affordances, shader programs have different strengths and limitations. When programming shaders you will often have to think about problems in a entirely new ways.</p>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Thinking in Shaders</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Thinking in Shaders</h1><h6>Overview</h6><p class="description">Shaders draw in a fundamentally different way than shape drawing APIs like Canvas or Processing. This difference allows shaders to draw very quickly, but requires a new way of thinking when programming.</p><h6>Tools</h6><p class="software">ShaderToy + glslCanvas</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="a-paradigm-shift">A Paradigm Shift</h2>
+<p>The CPU—central processing unit—executes the instructions in computer programs. CPU architecutres are designed to be general. They run a wide variety of programs and run them all pretty quickly. The GPU—graphics processing unit—also executes computer programs. GPU architectures are designed to specifically address parallelizable problems. They can execute these types of problems extremely quickly, but aren’t as well suited serial problems.</p>
+<p>Shaders are programs that run on the GPU. Because the architectures of GPUs and CPUs are different, shader programs have different strengths and limitations compared to programs running on the CPU. When programming shaders you will often have to think about problems in a entirely new ways.</p>
+<div id="" class="callout">
+<h3 id="types-of-shaders">Types of Shaders</h3>
+<p>There are several types of shaders. The most common are vertex, fragment, geometry, and compute shaders.</p>
+<dl>
+<dt>Vertex</dt>
+<dd>A <a href="https://www.khronos.org/opengl/wiki/Vertex_Shader">vertex shader</a> maps a vertex from a 3d model onto the screen.</dd>
+<dt>Fragment</dt>
+<dd>A <a href="https://www.khronos.org/opengl/wiki/Fragment_Shader">fragment shader</a> determines what color a single pixel should be. Fragment shaders are sometimes also called pixel shaders.</dd>
+<dt>Geometry</dt>
+<dd>A <a href="https://www.khronos.org/opengl/wiki/Geometry_Shader">geometry shader</a> can generate shapes to render.</dd>
+<dt>Compute</dt>
+<dd>A <a href="https://www.khronos.org/opengl/wiki/Compute_Shader">compute shader</a> is a general purpose shader that can be used compute arbitrary information. Compute shaders allow GPUs to accelerate non-graphical applications.</dd>
+</dl>
+<p>This chapter is focused on fragment shaders.</p>
+</div>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
 <script src="../mess/faces_mess.js"></script> -->
 <div id="" class="activity">
@@ -187,7 +202,7 @@ for (var i = 0; i < els.length; i++) {
 <p><a href="https://www.youtube.com/watch?v=ZrJeYFxpUyQ">Mythbusters Leonardo + Leonardo 2.0</a></p>
 <p><a href="https://www.youtube.com/watch?v=-P28LKWTzrI">Short Version</a></p>
 <h3 id="single-thread-cpu">Single-Thread CPU</h3>
-<p>CPUs are designed to solve serial problems very quickly. They have super-high clock-speeds and flexible architectures that allow you to mix data reads, writes, and operations freely.</p>
+<p>CPUs are designed to solve serial problems very quickly. They have super-high clock-speeds and flexible architectures that allow you to mix data reads, writes, and operations freely. They are designed for very low latency, they perform a single operation at a time and finish it as quickly as possible.</p>
 <p><img src="figures/Single_CPU.svg" alt="cpu"></p>
 <h3 id="multi-thread-cpu">Multi-Thread CPU</h3>
 <p>Modern CPUs can do more than one thing at a time. Many CPUs have several cores, and the cores can process multiple threads simultaneously.</p>
@@ -196,14 +211,42 @@ for (var i = 0; i < els.length; i++) {
 When problems don’t parallelize well, threads often have to wait on data from other threads.</p>
 <p><img src="figures/Multi_CPU_2.svg" alt="cpu"></p>
 <h3 id="gpus">GPUs</h3>
-<p>GPUs are designed to solve parallel problems very quickly. They tend to have somewhat lower clock-speeds than GPUs but many, many more cores. The GPU is optimized to perform a fixed set of operations on many sets of data simultaniously. The GPU prepares the data, performs the operations, and reads the final results.</p>
+<p>GPUs are designed to solve parallel problems very quickly. They tend to have somewhat lower clock-speeds than GPUs but many, many more cores. The GPU is futher optimized to perform the same sequence of operations on many sets of data simultaniously. For example a GPU can very quickly halve the R, G, and B values of every pixel in an image to darkin it. GPUs are designed for very high throughput. Performing an operation on the GPU takes longer than on a CPU, but the GPU can perform that operation on many sets of data at once.</p>
 <p><img src="figures/GPU.svg" alt="cpu"></p>
-<h3 id="latency-vs-throughput">Latency vs Throughput</h3>
-<p>CPUs are designed for low latency, they perform one operation at a time as quickly as possible.</p>
-<p>GPUs are designed for high throughput, they perform thousands of operations at a time but not as quickly.</p>
+<h3 id="latency-and-throughput">Latency and Throughput</h3>
+<p>CPUs are designed for low latency and GPUs are designed for high thoughput. As an anologie consider carrying potatoes across a field. If you carry the potatoes in your hands, you can carry one or two potatoes across the field as fast as you can run. If you carry the potatoes in a wheel barrow, it will take longer to load up and you won’t be able to run. But you can carry many, many potatoes at once. The wheel barrow will be faster in the end, but only if you need to move a lot of potatoes to the same place.</p>
 <h2 id="shading-vs-drawing">Shading vs Drawing</h2>
-<p>So thats how the hardware differs, but how do the programming models differ?</p>
-<p>!!! PULL IN /shaders</p>
+<p>Drawing APIs that run on CPUs are offer a lot of freedoms. They allow you to:</p>
+<ul>
+<li>Set pixel colors in any order.</li>
+<li>Set some pixels more than once and skip others altogether.</li>
+<li>Interleave reading and setting pixel colors.</li>
+<li>Use information calculated for one pixel to color another pixel.</li>
+<li>Use a different procedure to determine the color of each pixel.</li>
+<li>Interleave drawing code with other code.</li>
+</ul>
+<p>Because fragment shaders are strictly limited to fit the optimized path on the GPU, they can’t do any of these things.</p>
+<p>A fragment shaders is a small program with one job: calculating the color of a single output pixel. The graphics pipeline will run the fragment once for each pixel that needs to be shaded, providing the contextual information she shader needs. During the rendering of a single frame, a shader might be run millions of times. The GPU can use its many cores and threads to run the shader for many pixels simultaniously. The shader returns a color to the graphics pipeline, which then composites the color onto the target image.</p>
+<p>To allow all of this to happen as quickly as possible, shaders must conform to strict limitations.</p>
+<h4 id="limited-operations">Limited Operations</h4>
+<p>Fragment shaders are confined a narrow set of operations, mostly:</p>
+<ul>
+<li>accessing context information provided by the graphics pipeline</li>
+<li>scalar, vector, and matrix arithmetic</li>
+<li>mathematic functions related to trigonometry, exponents, etc.</li>
+<li>sampling values from textures</li>
+</ul>
+<h4 id="no-communication-no-memory">No Communication, No Memory</h4>
+<p>Because many shaders run in parallel every thread is isolated from every other thread. Information can not be passed from pixel to pixel. None of the values determined while calculating one pixel can be shared with another and the calculations of one pixel can not affect the calculations for other pixels. When the shader is finished it returns a color value and the values stored in its variables are forgotten.</p>
+<p>Every time the shader runs, it starts from scratch.</p>
+<p>This often leads to a lot of redundant calculation, but the GPU is so much faster that it often doesn’t matter. When it does matter, you may be able to precalculate data on the CPU and pass it to the shader.</p>
+<h4 id="limited-branching">Limited Branching</h4>
+<p>In imparative languages like C and Javascript, <code>if</code>, <code>for</code>, and <code>while</code> can be used to create conditional branches, dynamically choosing which instructions should be run. GPU hardware is not optimized for branching and early shader models didn’t allow branching at all. Generally, the most performant path is for the shader to perform the same sequence of operations on every pixel.</p>
+<p>Modern shader models do allow you to include branching in your code, but when a shader encounters branching it might actually execute both possible sets of instructions and simply throw away what it doesn’t need.</p>
+<div id="" class="callout">
+<h3 id="derivatives">Derivatives</h3>
+<p>blah blah</p>
+</div>
 <h2 id="problem-1-drawing-a-rectangle">Problem 1: Drawing a Rectangle</h2>
 <p>rect()</p>
 <p>Pixel by Pixel</p>

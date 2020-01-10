@@ -10,15 +10,39 @@ next:
 next_url: 
 
 hero_title: Thinking in Shaders
-description: Shaders draw in a fundamentally different way than serial shaper rasterizers like the WebGL Canvas API or the Processing graphics API. This difference allows shaders to draw very quickly, but requires a new way of thinking when programming.
+description: Shaders draw in a fundamentally different way than shape drawing APIs like Canvas or Processing. This difference allows shaders to draw very quickly, but requires a new way of thinking when programming.
 
 software: ShaderToy + glslCanvas
 ---
 
 ## A Paradigm Shift
-The CPU—central processing unit—executes the instructions in computer programs. CPU architecutres are designed to be general. They run a wide variety of programs pretty quickly. The GPU-graphics processing unit-also executes computer programs. GPU architectures are specifically designed to address parallelizable problems. They can execute these types of problems extremely quickly, but aren't as well suited serial problems.
+The CPU—central processing unit—executes the instructions in computer programs. CPU architecutres are designed to be general. They run a wide variety of programs and run them all pretty quickly. The GPU—graphics processing unit—also executes computer programs. GPU architectures are designed to specifically address parallelizable problems. They can execute these types of problems extremely quickly, but aren't as well suited serial problems.
 
-Shaders are programs that run on a GPU, often as part of a 3D graphics pipeline. Because the architectures of GPUs and CPUs have different affordances, shader programs have different strengths and limitations. When programming shaders you will often have to think about problems in a entirely new ways.
+Shaders are programs that run on the GPU. Because the architectures of GPUs and CPUs are different, shader programs have different strengths and limitations compared to programs running on the CPU. When programming shaders you will often have to think about problems in a entirely new ways.
+
+::: .callout
+
+### Types of Shaders
+
+There are several types of shaders. The most common are vertex, fragment, geometry, and compute shaders. 
+
+Vertex
+: A [vertex shader](https://www.khronos.org/opengl/wiki/Vertex_Shader) maps a vertex from a 3d model onto the screen.
+
+Fragment
+: A [fragment shader](https://www.khronos.org/opengl/wiki/Fragment_Shader) determines what color a single pixel should be. Fragment shaders are sometimes also called pixel shaders.
+
+Geometry
+: A [geometry shader](https://www.khronos.org/opengl/wiki/Geometry_Shader) can generate shapes to render.
+
+Compute
+: A [compute shader](https://www.khronos.org/opengl/wiki/Compute_Shader) is a general purpose shader that can be used compute arbitrary information. Compute shaders allow GPUs to accelerate non-graphical applications.
+
+
+This chapter is focused on fragment shaders.
+
+/::
+
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
 <script src="../mess/faces_mess.js"></script> -->
@@ -204,7 +228,7 @@ For a long time computer designers focused on digging faster. They crammed in mo
 
 ### Single-Thread CPU
 
-CPUs are designed to solve serial problems very quickly. They have super-high clock-speeds and flexible architectures that allow you to mix data reads, writes, and operations freely.
+CPUs are designed to solve serial problems very quickly. They have super-high clock-speeds and flexible architectures that allow you to mix data reads, writes, and operations freely. They are designed for very low latency, they perform a single operation at a time and finish it as quickly as possible.
 
 ![cpu](figures/Single_CPU.svg)
 
@@ -221,25 +245,63 @@ When problems don't parallelize well, threads often have to wait on data from ot
 
 ### GPUs
 
-GPUs are designed to solve parallel problems very quickly. They tend to have somewhat lower clock-speeds than GPUs but many, many more cores. The GPU is optimized to perform a fixed set of operations on many sets of data simultaniously. The GPU prepares the data, performs the operations, and reads the final results.
+GPUs are designed to solve parallel problems very quickly. They tend to have somewhat lower clock-speeds than GPUs but many, many more cores. The GPU is futher optimized to perform the same sequence of operations on many sets of data simultaniously. For example a GPU can very quickly halve the R, G, and B values of every pixel in an image to darkin it. GPUs are designed for very high throughput. Performing an operation on the GPU takes longer than on a CPU, but the GPU can perform that operation on many sets of data at once.
 
 ![cpu](figures/GPU.svg)
 
-### Latency vs Throughput
+### Latency and Throughput
 
-CPUs are designed for low latency, they perform one operation at a time as quickly as possible.
-
-GPUs are designed for high throughput, they perform thousands of operations at a time but not as quickly.
-
-
-
+CPUs are designed for low latency and GPUs are designed for high thoughput. As an anologie consider carrying potatoes across a field. If you carry the potatoes in your hands, you can carry one or two potatoes across the field as fast as you can run. If you carry the potatoes in a wheel barrow, it will take longer to load up and you won't be able to run. But you can carry many, many potatoes at once. The wheel barrow will be faster in the end, but only if you need to move a lot of potatoes to the same place.
 
 ## Shading vs Drawing
 
-So thats how the hardware differs, but how do the programming models differ?
+Drawing APIs that run on CPUs are offer a lot of freedoms. They allow you to:
+
+- Set pixel colors in any order.
+- Set some pixels more than once and skip others altogether.
+- Interleave reading and setting pixel colors.
+- Use information calculated for one pixel to color another pixel.
+- Use a different procedure to determine the color of each pixel. 
+- Interleave drawing code with other code.
+
+Because fragment shaders are strictly limited to fit the optimized path on the GPU, they can't do any of these things.
+
+A fragment shaders is a small program with one job: calculating the color of a single output pixel. The graphics pipeline will run the fragment once for each pixel that needs to be shaded, providing the contextual information she shader needs. During the rendering of a single frame, a shader might be run millions of times. The GPU can use its many cores and threads to run the shader for many pixels simultaniously. The shader returns a color to the graphics pipeline, which then composites the color onto the target image.
+
+To allow all of this to happen as quickly as possible, shaders must conform to strict limitations.
 
 
-!!!!! PULL IN /shaders
+#### Limited Operations
+Fragment shaders are confined a narrow set of operations, mostly:
+
+- accessing context information provided by the graphics pipeline
+- scalar, vector, and matrix arithmetic
+- mathematic functions related to trigonometry, exponents, etc.
+- sampling values from textures
+  
+
+#### No Communication, No Memory
+Because many shaders run in parallel every thread is isolated from every other thread. Information can not be passed from pixel to pixel. None of the values determined while calculating one pixel can be shared with another and the calculations of one pixel can not affect the calculations for other pixels. When the shader is finished it returns a color value and the values stored in its variables are forgotten.
+
+Every time the shader runs, it starts from scratch.
+
+This often leads to a lot of redundant calculation, but the GPU is so much faster that it often doesn't matter. When it does matter, you may be able to precalculate data on the CPU and pass it to the shader.
+
+
+#### Limited Branching
+In imparative languages like C and Javascript, `if`, `for`, and `while` can be used to create conditional branches, dynamically choosing which instructions should be run. GPU hardware is not optimized for branching and early shader models didn't allow branching at all. Generally, the most performant path is for the shader to perform the same sequence of operations on every pixel.
+
+Modern shader models do allow you to include branching in your code, but when a shader encounters branching it might actually execute both possible sets of instructions and simply throw away what it doesn't need.
+
+
+
+::: .callout
+### Derivatives
+blah blah
+
+/::
+
+
 
 
 ## Problem 1: Drawing a Rectangle
