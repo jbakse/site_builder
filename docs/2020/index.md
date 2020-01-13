@@ -25,13 +25,13 @@ This page houses information specific to the spring 2020 section of Computationa
 
 ## Foundation Unit
 
-| Lesson Plan                                   | Topics                                                     |
-| --------------------------------------------- | ---------------------------------------------------------- |
-| [Week 1, January 22](#introduction_plan.html) | [Introduction](../introduction), [Tile Graphics](../tiles) |
-| [Week 2, January 29](#random_plan.html)       | [Random Values](../random)                                 |
-| [Week 3, February 5](#parameters_plan.html)   | [Parameters](../parameters)                                |
-| [Week 4, February 12](#noise_plan.html)       | [Noise](../noise)                                          |
-| [Week 5, February 19](#strategy_plan.html)    | [Strategy](../strategy)                                    |
+| Lesson Plan                                  | Topics                                                     |
+| -------------------------------------------- | ---------------------------------------------------------- |
+| [Week 1, January 22](introduction_plan.html) | [Introduction](../introduction), [Tile Graphics](../tiles) |
+| [Week 2, January 29](random_plan.html)       | [Random Values](../random)                                 |
+| [Week 3, February 5](#parameters_plan.html)  | [Parameters](../parameters)                                |
+| [Week 4, February 12](#noise_plan.html)      | [Noise](../noise)                                          |
+| [Week 5, February 19](#strategy_plan.html)   | [Strategy](../strategy)                                    |
 
 ## Exploration Unit
 

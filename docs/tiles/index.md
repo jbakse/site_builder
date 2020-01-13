@@ -193,13 +193,17 @@ Daily exercise:
 2. Use the tile set to create a design.
 3. Screengrab or photograph your work and post to the class sketch blog.
 
-Explore a different idea every day. If you need some ideas, consider using one of the following prompts. If you use one of these prompts, include it in your blog post.
+Explore a different idea every day. If you need some ideas, consider using one of the following prompts. If you use one of these prompts, mention it in your blog post.
 
 `paper` `pixels` `vectors` `typography` `self-portrait` `3d` `hexagons` `triangles` `photocopier` `big` `huge` `edge` `corner` `pattern` `trade` `teamwork` `stamps` `scissors` `make-things-that-make-things`
 
-### Challenge: Alphabet
+### Individual Challenge: Alphabet
 
-Design a full alphabet using a single tile set. Post an image that shows your alphabet in use.
+Design a full alphabet using a single tile set. Create a compostion that shows your alphabet in use. Post an image of your tileset and your composition to the sketch blog.
+
+### Pair Challenge: Tile Swap
+
+Partner with one other person in the class. Create a tile set and trade it with your partner. Use the tileset you receive to create a composition. Post an image of your tile set and your composition to the sketh blog.
 
 /::
 
