@@ -8,7 +8,7 @@ debug: false
 
 # Hello Students!
 
-Welcome to Computational Form, I'm looking forward to meeting you all (and seeing some of you again).
+Welcome to Computational Form, I'm looking forward to meeting you all (and seeing some of you again). 
 
 
 # You have Homework
@@ -17,9 +17,9 @@ Well, not much homework. Please read this email fully and do everything listed h
 
 
 # Bookmark this Site
-The class website is http://compform.net
+The course website and textbook is http://compform.net
 
-This site will host the class calendar, syllabus, assignments, and lecture notes.
+This site hosts the course calendar, syllabus, assignments, and lecture notes. Click the "Class Notes 2020" link to access them.
 
 
 # Read the Syllabus
@@ -44,9 +44,9 @@ Watch these videos *before* class on Wednesday:
 
 Read this chapter *before* class on Wednesday.
 
-*Procedural Content Generation in Games* is a free online textbook. The book focuses on gaming applications, but the [first chapter](http://pcgbook.com/wp-content/uploads/chapter01.pdf) is good to read no matter what kind of procedual generation you are interested in. This is the only chapter of this book that will be assigned in Comp Form, but you might be interested in some of the other chapters, so take a look at the [table of contents](http://pcgbook.com/).
+*Procedural Content Generation in Games* is a free online textbook. The book focuses on gaming applications, but the [first chapter](http://pcgbook.com/wp-content/uploads/chapter01.pdf) is good to read no matter what kind of procedural generation you are interested in. This is the only chapter of this book that will be assigned in Comp Form, but you might be interested in some of the other chapters, so take a look at the [table of contents](http://pcgbook.com/).
 
-[First chapter pcgbook](http://pcgbook.com/wp-content/uploads/chapter01.pdf).
+[First chapter of pcgbook](http://pcgbook.com/wp-content/uploads/chapter01.pdf).
 
 # Be on Time
 The short version of my attendance policy:

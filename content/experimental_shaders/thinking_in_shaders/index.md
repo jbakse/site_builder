@@ -15,6 +15,9 @@ description: Shaders draw in a fundamentally different way than shape drawing AP
 software: ShaderToy + glslCanvas
 ---
 
+
+
+
 ## A Paradigm Shift
 The CPU—central processing unit—executes the instructions in computer programs. CPU architecutres are designed to be general. They run a wide variety of programs and run them all pretty quickly. The GPU—graphics processing unit—also executes computer programs. GPU architectures are designed to specifically address parallelizable problems. They can execute these types of problems extremely quickly, but aren't as well suited serial problems.
 
@@ -271,16 +274,16 @@ A fragment shaders is a small program with one job: calculating the color of a s
 To allow all of this to happen as quickly as possible, shaders must conform to strict limitations.
 
 
-#### Limited Operations
+### Limited Operations
 Fragment shaders are confined a narrow set of operations, mostly:
 
-- accessing context information provided by the graphics pipeline
+- accessing only specific information provided by the graphics pipeline
 - scalar, vector, and matrix arithmetic
 - mathematic functions related to trigonometry, exponents, etc.
 - sampling values from textures
   
 
-#### No Communication, No Memory
+### No Communication, No Memory
 Because many shaders run in parallel every thread is isolated from every other thread. Information can not be passed from pixel to pixel. None of the values determined while calculating one pixel can be shared with another and the calculations of one pixel can not affect the calculations for other pixels. When the shader is finished it returns a color value and the values stored in its variables are forgotten.
 
 Every time the shader runs, it starts from scratch.
@@ -288,62 +291,146 @@ Every time the shader runs, it starts from scratch.
 This often leads to a lot of redundant calculation, but the GPU is so much faster that it often doesn't matter. When it does matter, you may be able to precalculate data on the CPU and pass it to the shader.
 
 
-#### Limited Branching
+### Limited Branching
 In imparative languages like C and Javascript, `if`, `for`, and `while` can be used to create conditional branches, dynamically choosing which instructions should be run. GPU hardware is not optimized for branching and early shader models didn't allow branching at all. Generally, the most performant path is for the shader to perform the same sequence of operations on every pixel.
 
-Modern shader models do allow you to include branching in your code, but when a shader encounters branching it might actually execute both possible sets of instructions and simply throw away what it doesn't need.
+Modern shader models do allow you to include branching in your code, but when a shader encounters branching it threads that don't follow the branch will wait for the threads that do.
 
 
 
 ::: .callout
-### Derivatives
-blah blah
+### dFdx and dFdy
+As mentioned above one shader thread cannot generally access information calculated in another shader thread. The glsl [dFdx and dFdy](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/dFdx.xhtml) functions provide exception. These functions allow you to compare the value of an expression calculated for the current pixel with the value calculated for a neighboring pixel. 
+
+This stack overflow [answer](https://stackoverflow.com/a/16368768) provides a summary of how these functions work.
+
+This [Anti-aliased grid shader](http://madebyevan.com/shaders/grid/) shows how useful these functions can be.
 
 /::
 
 
 
 
-## Problem 1: Drawing a Rectangle
+## Drawing a Rectangle
 
-rect()
-
-Pixel by Pixel
-
-Shader
-
-Challenge
-
-## Problem 2: Drawing a Gradient
-
-~rect()~
-
-Pixel by Pixel
-
-Shader
-
-Challenge
+Let's compare drawing a rectangle using p5.js to drawing a rectangle with a glsl fragment shader.
 
 
 
-## Shader Practicalities
 
-!!!!! PULL IN /shaders
+### p5.js — p5_rect_api.js
+
+With p5.js we don't have to think about pixels at all, we just ask p5.js to draw the rectangle for us.
+
+::: js-lab
+/experimental_shaders/thinking_in_shaders/sketches/pt_rect_api.js
+/::
+
+#### p5.js — p5_rect_pixel.js
+
+Of course, we _want_ to think about how the rectangle is drawn, pixel by pixel. This version doesn't use any high level API calls like `rect()` or `background()`. It sets the pixel values directly using the following approach.
+
+1. Loop over all the pixels on the canvas; set them to black.
+2. Loop over the pixels inside the rectangle; set them to red.
 
 
-## Live Code Problem: Skyline
+::: js-lab
+/experimental_shaders/thinking_in_shaders/sketches/p5_rect_pixel.js
+/::
 
-Goal
+### glsl — rect_branch.frag
 
-p5.js
+This example draws the same thing using a fragment shader. A fragment shader can't choose which pixels to visit and can't choose to visit pixels twice. The shader can only provide what color its assigned pixel should be. The shader approaches the problem like this:
 
-Shader
+1. Check if the pixel is in the rectangle.
+2. If so, return red. If not, return black.
 
+
+::: .full-width
+<div class="glsl_editor" data="shaders/rect_branch.frag"></div>
+/::
+
+
+### glsl rect_no_branch.frag
+
+This example draws the rectangle without using conditional branching. The [step](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/step.xhtml) and [mix](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/mix.xhtml) functions are built into glsl. `step(edge, x)` returns `0.0` if x < step, and `1.0` otherwise. `mix(x, y, a)` returns provides linear interpolation between `x` and `y`.  
+
+::: .full-width
+<div class="glsl_editor" data="shaders/rect_no_branch.frag"></div>
+/::
+
+
+## Drawing a Gradient
+
+In the examples above, drawing a rectangle in a fragment shader might seem awkward, especially when compared to the p5.js solutions. Take a look at the following examples. Each draws a two-dimensional color gradient. This task is well suited to a fragment shader, and the code more graceful. 
+
+### p5.js — gradient.js
+
+::: js-lab
+/experimental_shaders/thinking_in_shaders/sketches/gradient.js
+/::
+
+### glsl — gradient.frag
+
+::: .full-width
+<div class="glsl_editor" data="shaders/gradient.frag"></div>
+/::
+
+
+
+
+
+::: .activity
+
+## In-class Challenge
+
+Explore the code examples above by completing the following challenges in order. <br/> Don't skip any.
+
+### Modify the rect_branch.frag example
+
+1. Change the background color to white.
+2. Change the rect color to blue.
+3. Change the code so it draws two rectangles of the same color.
+4. Change the code so it draws two rectangles of different color.
+
+### Modify the rect_no_branch.frag example
+
+1. Change the background color to white.
+2. Change the rect color to blue.
+3. Change the code so it draws two rectangles of the same color.
+4. Change the code so it draws two rectangles of different color.
+
+
+### Modify the gradient.frag example
+
+1. Create a vertical gradient from black to red.
+2. Create a horizontal gradient from white to blue.
+3. Create a vertical gradient from red to black to red.
+4. Create a vertical gradient from red to black to blue.
+
+
+/::
+
+
+## Live Code: Skyline
+
+[Skyline Live Code](../skyline/)
 
 
 ## Resources
 
-!!!!! PULL IN /shaders
+
+[The Book of Shaders](https://thebookofshaders.com/)
+
+[Unity Writing Vertex and Fragment Shaders](https://docs.unity3d.com/Manual/SL-ShaderPrograms.html)
+
+[Avoiding Shader Conditionals](http://theorangeduck.com/page/avoiding-shader-conditionals)
+
+[A Gentle Introduction to Shaders (in Unity)](https://unity3d.com/learn/tutorials/topics/graphics/gentle-introduction-shaders)
+
+[Unity Shader Reference](https://docs.unity3d.com/Manual/SL-Reference.html)
+
+
 
 
 [Udacity: Intro to Parallel Programming](https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2)
@@ -353,9 +440,9 @@ Shader
 [Udacity: Core GPU Design Tenets](https://www.youtube.com/watch?v=KdN49C0bxOk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2&index=17)
 
 
-[http://oeis.org/](On-line Encyclopedia of Integer Sequences)
+[On-line Encyclopedia of Integer Sequences](http://oeis.org/)
 
-[https://www.theguardian.com/science/alexs-adventures-in-numberland/2014/oct/07/neil-sloane-the-man-who-loved-only-integer-sequences](Neil Sloane Profile)
+[Neil Sloane Profile](https://www.theguardian.com/science/alexs-adventures-in-numberland/2014/oct/07/neil-sloane-the-man-who-loved-only-integer-sequences)
 
 
 [Mathnet: Case of the Willing Parrot](https://www.youtube.com/watch?v=hrLjLeGUjio)
@@ -364,3 +451,8 @@ Shader
 [Visual 6502](http://visual6502.org/)
 
 [See How a CPU Works](https://www.youtube.com/watch?v=cNN_tTXABUA)
+
+<link type="text/css" rel="stylesheet" href="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.css"/>
+<script type="application/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.js"></script>
+<link type="text/css" href="./shader.css"/>
+<script src="./shader_loader.js"></script>
