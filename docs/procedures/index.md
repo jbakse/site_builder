@@ -202,8 +202,6 @@ If you want to play Spelunky—which I highly recommend—the original version (
 
 ## Additional Reading
 
-PCG Book
-Dan Shiffman Book + Site
-Generative Design
+[PCG Book](http://pcgbook.com/)
 
 [Procedures and Algorithms](http://web.uvic.ca/~ling48x/ling484/notes/procedures.html)

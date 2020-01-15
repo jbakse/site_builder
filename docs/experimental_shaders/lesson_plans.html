@@ -8,156 +8,133 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><div id="content"><div class="container comp-form-copy" id="copy"><h2 id="week-1-the-paradigm-shift" class="plain">Week 1, The Paradigm Shift</h2>
-<p>!! Myth-busters video.</p>
-<h3 id="learning-objectives">Learning Objectives</h3>
-<p>Students will be able to:</p>
-<ul>
-<li>Compare Serial and Paralell problems</li>
-<li>Compare CPU and GPU operation</li>
-<li>Compare shader programming to primative rasterization</li>
-<li>Describe practical limitations and advantages of shader programs</li>
-<li>? Compare syntax of GLSL to c-like languages.</li>
-<li>? Outline the fixed and programmable graphics pipelines</li>
-<li>? Compare pure functions and procedures</li>
-</ul>
-<h3 id="materials">Materials</h3>
-<h3 id="schedule">Schedule</h3>
-<table class="table table-responsive">
-<thead>
-<tr>
-<th>Time</th>
-<th>Duration</th>
-<th>Purpose</th>
-<th>Format</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>7:00</td>
-<td>15 m</td>
-<td>Engage</td>
-<td>Activity</td>
-<td>Serial vs Parallel</td>
-</tr>
-<tr>
-<td>7:15</td>
-<td>15 m</td>
-<td>Study</td>
-<td>Lecture</td>
-<td>Serial vs Parallel</td>
-</tr>
-<tr>
-<td>7:30</td>
-<td>15 m</td>
-<td>Study</td>
-<td>Lecture</td>
-<td>CPU vs GPU</td>
-</tr>
-<tr>
-<td>7:45</td>
-<td>5 m</td>
-<td>Study</td>
-<td>Lecture</td>
-<td>Shading vs Drawing</td>
-</tr>
-<tr>
-<td>7:50</td>
-<td>10 m</td>
-<td>Study</td>
-<td>Lecture</td>
-<td>Problem 1: Drawing a Rectangle</td>
-</tr>
-<tr>
-<td>8:00</td>
-<td>10 m</td>
-<td>Apply</td>
-<td>Coding Challenge</td>
-<td>Problem 1: Drawing a Rectangle</td>
-</tr>
-<tr>
-<td>8:10</td>
-<td>10 m</td>
-<td>Study</td>
-<td>Lecture</td>
-<td>Problem 2: Drawing a Gradient</td>
-</tr>
-<tr>
-<td>8:20</td>
-<td>10 m</td>
-<td>Apply</td>
-<td>Coding Challenge</td>
-<td>Problem 2: Drawing a Gradient</td>
-</tr>
-<tr>
-<td>8:30</td>
-<td>10 m</td>
-<td>Study</td>
-<td>Lecture</td>
-<td>Shader Practicalities</td>
-</tr>
-<tr>
-<td>8:40</td>
-<td>60 m</td>
-<td>Study</td>
-<td>Live Code</td>
-<td>Skyline</td>
-</tr>
-</tbody>
-</table>
-<h2 id="crashcourse" class="plain">Crashcourse</h2>
-<h3 id="learning-objectives-2">Learning Objectives</h3>
-<p>Students will be able to:</p>
-<ul>
-<li>Set up a local workspace for shader programming using a provided project template based on Patricio Gonzalez Vivo’s <code>glslCanvas</code></li>
-<li>Explore the basics of fragment shader programming</li>
-<li>Combine periodic and shaping functions to create a variety of effects.</li>
-<li>Work with <code>u_resolution</code></li>
-<li>Create shaders that draw basic shapes.</li>
-<li>Understand and use signed distance fields to draw 2D primitives</li>
-<li>Create animated effects with <code>u_time</code></li>
-<li>Create interactive shader effects with <code>u_mouse</code></li>
-<li>Create randomized effects using a psuedo-random generator</li>
-<li>Create a scene that combines these techniques.</li>
-</ul>
-<h2 id="week-2-shaders-in-web-gl-2d-techniques" class="plain">Week 2: Shaders in Web Gl + 2D Techniques</h2>
-<h3 id="learning-objectives-3">Learning Objectives</h3>
-<ul>
-<li>Create WebGL fragment shader project from scratch</li>
-<li>Understand WebGL/OpenGL at a high level as a state-full, procedural graphics api.</li>
-<li>Understand what glslCanvas library abstracts</li>
-<li>Send program data to a fragment shader</li>
-<li>Understand the shader programs role in the graphics pipeline</li>
-<li>Understand the implications of branching in shaders</li>
-<li>Learn specific tactics commonly used in 2D shaders</li>
-</ul>
-<h2 id="week-3-shaders-in-unity-2d-techniques" class="plain">Week 3: Shaders in Unity + 2D Techniques</h2>
-<h3 id="learning-objectives-4">Learning Objectives</h3>
-<ul>
-<li>Create a Unity fragment shader project from scratch</li>
-<li>Create simple shaders to shade 3d models</li>
-<li>Implement unlit shaders.</li>
-<li>Implement basic <a href="https://en.wikipedia.org/wiki/Phong_shading">Phong shading</a></li>
-<li>Implement basic <a href="https://en.wikipedia.org/wiki/Cel_shading">toon shading</a></li>
-<li>Describe key concepts related to physically based rendering.</li>
-<li></li>
-</ul>
-<h2 id="week-4-working-with-textures" class="plain">Week 4: Working with Textures</h2>
-<h3 id="learning-objectives-5">Learning Objectives</h3>
-<ul>
-<li>Load and display a texture in a WebGL shader project</li>
-<li>Describe Mipmapping</li>
-<li>Understand and use OpenGL wrapping and filtering settings</li>
-<li>Use textures as images</li>
-<li>Implement a color biasing effect</li>
-<li>Implement a simple convolutional blur effect</li>
-<li>Identify common convolution image effects</li>
-<li>Use textures as data</li>
-<li>Use textures as a color lookup</li>
-<li>Use textures as a source of noise</li>
-<li>Use textures for procedural masking</li>
-</ul>
+</svg></a></div><div id="content"><div class="container comp-form-copy" id="copy">
+## Week 1, The Paradigm Shift {plain}
+
+### Learning Objectives
+Students will be able to:
+- Compare Serial and Paralell problems
+- Compare CPU and GPU operation
+- Compare shader programming to primative rasterization
+- Describe practical limitations and advantages of shader programs
+- ? Compare syntax of GLSL to c-like languages.  
+- ? Outline the fixed and programmable graphics pipelines
+- ? Compare pure functions and procedures
+
+### Materials
+
+### Schedule
+
+| Time | Duration | Purpose | Format           | Name                  |
+| ---- | -------- | ------- | ---------------- | --------------------- |
+| 7:00 | 15 m     | Engage  | Activity         | Serial vs Parallel    |
+| 7:15 | 15 m     | Study   | Lecture          | Serial vs Parallel    |
+| 7:30 | 15 m     | Study   | Lecture          | CPU vs GPU            |
+| 7:45 | 15 m     | Study   | Lecture          | Shading vs Drawing    |
+| 8:00 | 10 m     | Study   | Lecture          | Drawing a Rectangle   |
+| 8:10 | 10 m     | Apply   | Coding Challenge | Drawing a Rectangle   |
+| 8:20 | 10 m     | Break   | Break            | Break                 |
+| 8:30 | 10 m     | Study   | Lecture          | Shader Practicalities |
+| 8:40 | 60 m     | Study   | Live Code        | Skyline               |
+
+### Announcements
+
+- Crash Course Lunch Plan
+
+
+
+
+## Crashcourse {plain}
+
+### Learning Objectives
+Students will be able to:
+- Set up a local workspace for shader programming using a provided project template based on Patricio Gonzalez Vivo's `glslCanvas`
+- Explore the basics of fragment shader programming
+- Learn to use important glsl built-in functions
+- Combine periodic and shaping functions to create a variety of effects.
+- Work with `u_resolution`
+- Create shaders that draw basic shapes.
+- Understand and use signed distance fields to draw 2D primitives
+- Create animated effects with `u_time`
+- Create interactive shader effects with `u_mouse`
+- Create randomized effects using a psuedo-random generator
+- Create a scene that combines these techniques.
+
+
+Saturday, January 25th
+
+
+| Time                           | Duration | Purpose | Format | Name               |
+| ------------------------------ | -------- | ------- | ------ | ------------------ |
+|                                | 20 m     |         |        | Hello, glslCanvas! |
+|                                | 20 m     |         |        | Coding Warmups     |
+| Basics + Built-ins             |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+| Periodic and Shaping Functions |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+Lunch
+| u_resolution, u_time, u_mouse  |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+| Random                         |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+Break
+| Signed Distance Fields         |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+| Micro Jam                      |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+
+
+
+## Week 2: Shaders in Web Gl + 2D Techniques {plain}
+
+### Learning Objectives
+
+- Create WebGL fragment shader project from scratch
+- Understand WebGL/OpenGL at a high level as a state-full, procedural graphics api.
+- Understand what glslCanvas library abstracts
+- Send program data to a fragment shader
+- Understand the shader programs role in the graphics pipeline
+- Understand the implications of branching in shaders
+- Learn specific tactics commonly used in 2D shaders
+
+## Week 3: Shaders in Unity + 2D Techniques {plain}
+
+### Learning Objectives
+- Create a Unity fragment shader project from scratch
+- Create simple shaders to shade 3d models
+- Implement unlit shaders.
+- Implement basic [Phong shading](https://en.wikipedia.org/wiki/Phong_shading)
+- Implement basic [toon shading](https://en.wikipedia.org/wiki/Cel_shading)
+- Describe key concepts related to physically based rendering.
+- 
+
+## Week 4: Working with Textures {plain}
+
+### Learning Objectives
+- Load and display a texture in a WebGL shader project
+- Describe Mipmapping
+- Understand and use OpenGL wrapping and filtering settings
+- Use textures as images
+- Implement a color biasing effect
+- Implement a simple convolutional blur effect
+- Identify common convolution image effects
+- Use textures as data
+- Use textures as a color lookup
+- Use textures as a source of noise
+- Use textures for procedural masking
+
 <style> 
     .headless thead {
         display: none;

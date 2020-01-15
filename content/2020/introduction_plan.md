@@ -7,6 +7,7 @@ debug: false
 ## Week 1, Introduction + Tiles {plain}
 
 [Introduction](../introduction/index.html){boxed right}
+[Procedures](../procedures/index.html){boxed right}
 [Tiles Maps](../tiles/index.html){boxed right}
 
 ### Learning Objectives
@@ -71,8 +72,10 @@ Who are you people? What are we doing here?
 ### Announcements
 
 1. Livecoding Firesides!
-2. New Exploration Topics! Microgames + Machine Learning + Simulation
-
+2. New Exploration Options! Microgames + Machine Learning + Simulation
+3. Vote on combining Random + Noise.
+4. Vote on what to cut, what to keep.
+5. Limited Spots open for Shader Crash Course
 
 
 <style>

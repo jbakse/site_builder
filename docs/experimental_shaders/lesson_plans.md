@@ -6,8 +6,6 @@ debug: false
 
 ## Week 1, The Paradigm Shift {plain}
 
-!! Myth-busters video.
-
 ### Learning Objectives
 Students will be able to:
 - Compare Serial and Paralell problems
@@ -22,20 +20,21 @@ Students will be able to:
 
 ### Schedule
 
+| Time | Duration | Purpose | Format           | Name                  |
+| ---- | -------- | ------- | ---------------- | --------------------- |
+| 7:00 | 15 m     | Engage  | Activity         | Serial vs Parallel    |
+| 7:15 | 15 m     | Study   | Lecture          | Serial vs Parallel    |
+| 7:30 | 15 m     | Study   | Lecture          | CPU vs GPU            |
+| 7:45 | 15 m     | Study   | Lecture          | Shading vs Drawing    |
+| 8:00 | 10 m     | Study   | Lecture          | Drawing a Rectangle   |
+| 8:10 | 10 m     | Apply   | Coding Challenge | Drawing a Rectangle   |
+| 8:20 | 10 m     | Break   | Break            | Break                 |
+| 8:30 | 10 m     | Study   | Lecture          | Shader Practicalities |
+| 8:40 | 60 m     | Study   | Live Code        | Skyline               |
 
+### Announcements
 
-| Time | Duration | Purpose | Format           | Name                           |
-| ---- | -------- | ------- | ---------------- | ------------------------------ |
-| 7:00 | 15 m     | Engage  | Activity         | Serial vs Parallel             |
-| 7:15 | 15 m     | Study   | Lecture          | Serial vs Parallel             |
-| 7:30 | 15 m     | Study   | Lecture          | CPU vs GPU                     |
-| 7:45 | 5 m      | Study   | Lecture          | Shading vs Drawing             |
-| 7:50 | 10 m     | Study   | Lecture          | Problem 1: Drawing a Rectangle |
-| 8:00 | 10 m     | Apply   | Coding Challenge | Problem 1: Drawing a Rectangle |
-| 8:10 | 10 m     | Study   | Lecture          | Problem 2: Drawing a Gradient  |
-| 8:20 | 10 m     | Apply   | Coding Challenge | Problem 2: Drawing a Gradient  |
-| 8:30 | 10 m     | Study   | Lecture          | Shader Practicalities          |
-| 8:40 | 60 m     | Study   | Live Code        | Skyline                        |
+- Crash Course Lunch Plan
 
 
 
@@ -46,6 +45,7 @@ Students will be able to:
 Students will be able to:
 - Set up a local workspace for shader programming using a provided project template based on Patricio Gonzalez Vivo's `glslCanvas`
 - Explore the basics of fragment shader programming
+- Learn to use important glsl built-in functions
 - Combine periodic and shaping functions to create a variety of effects.
 - Work with `u_resolution`
 - Create shaders that draw basic shapes.
@@ -54,6 +54,42 @@ Students will be able to:
 - Create interactive shader effects with `u_mouse`
 - Create randomized effects using a psuedo-random generator
 - Create a scene that combines these techniques.
+
+
+Saturday, January 25th
+
+
+| Time                           | Duration | Purpose | Format | Name               |
+| ------------------------------ | -------- | ------- | ------ | ------------------ |
+|                                | 20 m     |         |        | Hello, glslCanvas! |
+|                                | 20 m     |         |        | Coding Warmups     |
+| Basics + Built-ins             |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+| Periodic and Shaping Functions |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+Lunch
+| u_resolution, u_time, u_mouse  |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+| Random                         |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+Break
+| Signed Distance Fields         |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+| Micro Jam                      |
+|                                | 20 m     |         |        | Lecture            |
+|                                | 20 m     |         |        | Study Examples     |
+|                                | 20 m     |         |        | Coding Challenges  |
+
 
 
 ## Week 2: Shaders in Web Gl + 2D Techniques {plain}

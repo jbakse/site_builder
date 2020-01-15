@@ -279,7 +279,7 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 
 <a class="col-6 col-md-6" data-ready="true" href="./experimental_shaders/">
 
-### Exerimenting with Shaders
+### Exp. Shaders 2020
 
 </a>
 

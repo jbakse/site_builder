@@ -4,7 +4,7 @@ layout: layouts/compform_toc.pug
 debug: false
 ---
 
-# Assignemnt Zero
+# Assignement Zero
 
 Please review and study the following resources over the winter break. These resources are listed in the suggested order.
 
