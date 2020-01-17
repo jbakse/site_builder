@@ -12,7 +12,7 @@ next_url:
 hero_title: Crash Course
 description: Let's Make Some Shaders
 
-software: glslCaglslEditornvas
+software: glslEditor
 ---
 
 ## Hello, glslEditor!
@@ -99,253 +99,27 @@ Below is a very basic shader that sets every pixel to red. Copy this code into t
 <br style="clear: both;"/>
 
 
+## Workshops
 
+[Basics +  Built-ins](basics.html)
 
-## Basics and Built-ins
+[Shaping + Mixing](shaping.html)
 
-`precision` `main` `gl_FragColor` `step` `mod` `floor` `vec2` `vec3` `vec4` `distance` `sin` `domain warping` `swizzling`
+[Uniforms](uniforms.html)
 
-### Stripes
-::: .full-width
-<div class="glsl_editor" data="./stripes.frag"></div>
-/::
-<br style="clear: both;"/>
+[Random](random.html)
 
+[Signed Distance Fields](sdf.html)
 
 
-### Checkerboard
-::: .full-width
-<div class="glsl_editor" data="./checkerboard.frag"></div>
-/::
-<br style="clear: both;"/>
 
-### Rings
-::: .full-width
-<div class="glsl_editor" data="./rings.frag"></div>
-/::
-<br style="clear: both;"/>
 
-### Dots
-::: .full-width
-<div class="glsl_editor" data="./dots.frag"></div>
-/::
-<br style="clear: both;"/>
 
-### Waves
-::: .full-width
-<div class="glsl_editor" data="./waves.frag"></div>
-/::
-<br style="clear: both;"/>
 
 
 
-::: .activity
 
-## In-class Challenge
 
-Explore the code examples above by completing the following challenges in order. <br/> Don't skip any.
-
-### Modify the Stripes example
-
-1. Make the stripes horizontal.
-2. Make wide white stripes with small black spaces.
-
-### Modify the Checkerboard example
-
-1. Make the checkers smaller
-2. Make the checkers wide
-3. Find the `mod` call. Change the second parameter to `4.0`. This creates diagonal "stripes". Make the stripes go the other way.
-
-
-### Modify the Rings example
-
-1. Make the wider.
-2. Move the center of the rings.
-
-### Modify the Dots example
-
-1. Make the dots bigger.
-2. Make the dots closer.
-
-### Modify the Waves example
-
-1. Increase the frequency of the waves.
-2. Increase the amplitude of the waves.
-
-### Challenging Challenges
-
-Make these!
-
-::: .three-up
-![Dot Gradient](./images/dot_gradient.png)
-![Wave Wave](./images/wave_wave.png)
-![Wave Check](./images/wave_check.png)
-/::
-
-/::
-
-
-## Shaping + Mixing
-
-`abs` `min` `max` `clamp` `mix` `smoothstep`
-
-
-### Disc
-::: .full-width
-<div class="glsl_editor" data="./disc.frag"></div>
-/::
-<br style="clear: both;"/>
-
-
-### Puzzle
-::: .full-width
-<div class="glsl_editor" data="./puzzle.frag"></div>
-/::
-<br style="clear: both;"/>
-
-### Moon
-::: .full-width
-<div class="glsl_editor" data="./moon.frag"></div>
-/::
-<br style="clear: both;"/>
-
-
-
-### Sticker
-::: .full-width
-<div class="glsl_editor" data="./sticker.frag"></div>
-/::
-<br style="clear: both;"/>
-
-### Checkerboard 2
-::: .full-width
-<div class="glsl_editor" data="./checkerboard_2.frag"></div>
-/::
-<br style="clear: both;"/>
-
-
-
-::: .activity
-
-## In-class Challenge
-
-Explore the code examples above by completing the following challenges in order. <br/> Don't skip any.
-
-### Modify the Disc example
-
-1. Make the disc less blury.
-2. Make a radial gradient from white out to black.
-
-### Modify the Moon example
-
-1. Remove the small bumps from the horizon.
-2. Move the horizon up.
-3. Lighten the sky.
-
-
-### Modify the Sticker example
-
-1. Move the stripe up a little.
-2. Make the sticker white, with a black stripe.
-  
-### Modify the Checkerboard 2 example
-
-1. Make the dark squares middle gray.
-2. Make the light squares a gradient from black to white.
-  
-### Challenging Challenges
-
-Make these!
-
-::: .three-up
-![Two Discs](./images/two_discs.png)
-![Moon Two](./images/moon_2.png)
-![Checker Sticker](./images/checker_sticker.png)
-/::
-
-
-/::
-
-
-
-
-## u_resolution, u_time, u_mouse
-<!-- 
-
-### Venn
-u_resolution, addative blending
-
-::: .full-width
-<div class="glsl_editor" data="./venn.frag"></div>
-/::
-<br style="clear: both;"/>
-
-### Infinite Hills
-u_time, paralax
-
-::: .full-width
-<div class="glsl_editor" data="./hills.frag"></div>
-/::
-<br style="clear: both;"/>
-
-### Spotlight
-u_mouse, functions
-::: .full-width
-<div class="glsl_editor" data="./spotlight.frag"></div>
-/::
-<br style="clear: both;"/> -->
-
-
-## random
-<!-- 
-### Checkerboard 3
-::: .full-width
-<div class="glsl_editor" data="./checkerboard_3.frag"></div>
-/::
-<br style="clear: both;"/>
-
-
-### Scattered Dots
-::: .full-width
-<div class="glsl_editor" data="./scattered_dots.frag"></div>
-/::
-<br style="clear: both;"/>
-
-
-### Autopainter
-1 circle-on-field painting per second, random background color, random foreground color, random placement
-translate
-
-::: .full-width
-<div class="glsl_editor" data="./autopainter.frag"></div>
-/::
-<br style="clear: both;"/> -->
-
-
-
-
-## Signed Distance Fields
-<!-- 
-### SDF Circle
-::: .full-width
-<div class="glsl_editor" data="./sdf_circle.frag"></div>
-/::
-<br style="clear: both;"/>
-
-### SDF Rectangle
-rotate
-::: .full-width
-<div class="glsl_editor" data="./sdf_rectangle.frag"></div>
-/::
-<br style="clear: both;"/>
-
-### SDF Mix
-::: .full-width
-<div class="glsl_editor" data="./sdf_mix.frag"></div>
-/::
-<br style="clear: both;"/>
-
- -->
 
 
 
@@ -373,6 +147,8 @@ rotate
 /::
 <br style="clear: both;"/>
 -->
+
+
 
 
 

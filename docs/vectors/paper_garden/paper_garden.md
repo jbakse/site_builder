@@ -149,7 +149,7 @@ Thats pretty much it: decide where plants should be, decide where the leaves sho
 
 With different drawing parameters Paper Garden can generate a range of looks, but I like the slightly hand-drawn line-drawing style best, so I tried drawing it on a Silhouette Cameo pen plotter. The Paper Garden script can export vector files to draw with the plotter, but a little extra work needs to be done to get them to work correctly.
 
-The version of the script above draws the the circles white fill to cover up the lines from other circles. Since the pen plotter doesn't fill in the shapes, I created a version for plotting that procedurally removes the hidden lines.
+The version of the script above draws the circles with a white fill to cover up the lines from other circles. Since the pen plotter only draws lines, using fills to cover things up isn't possible. I created a version of the script for plotting that procedurally removes the hidden lines.
 
 This script shows how I removed the lines.
 
