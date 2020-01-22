@@ -30,9 +30,7 @@ For more information on what a shader is, how they work, and how to make them, p
 
 ## Serial vs Parallel
 
-GPUs can run shaders very quickly because they are designed for parallel processing.
 
-A problem is _parallelizable_ if it can be divided into parts that can be solved **independently and concurrently**. If a problem is parallelizable, a high number of slow agents can solve it quickly, and a high number of fast agents can solve it VERY quickly.
 
 ### Serial: Baking a Cake
 

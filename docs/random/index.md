@@ -530,11 +530,11 @@ The following study examples demonstrate different ways to bias and map random v
 Explore the study examples above by completing the following challenges in order. <br/> Don't skip any.
 
 
-Time | Comment
---- | ---
-< 6 in 20 Minutes | You need to put in some extra work to strengthen your understanding of these topics.
-6 in 20 Minutes | Good.
-All 10 in 20 Minutes   | Great.
+| Time                 | Comment                                                                              |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| < 6 in 20 Minutes    | You need to put in some extra work to strengthen your understanding of these topics. |
+| 6 in 20 Minutes      | Good.                                                                                |
+| All 10 in 20 Minutes | Great.                                                                               |
 
 
 ### Modify the Small Multiples Example

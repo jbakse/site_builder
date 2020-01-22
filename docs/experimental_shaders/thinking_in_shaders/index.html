@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="en"><head><title>Thinking in Shaders | Comp Form</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-41378785-2"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- open graph--><meta property="og:site_name" content="compform.net"><meta property="og:title" content="Thinking in Shaders"><meta property="og:description" content="Shaders draw in a fundamentally different way than shape drawing APIs like Canvas or Processing. This difference allows shaders to draw very quickly, but requires a new way of thinking when programming."><meta property="og:image"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<polygon points="32,64 0,119.4 64,119.4"/>
+<polygon points="64,8.6 32,64 96,64"/>
+<polygon points="80,91.7 64,119.4 96,119.4"/>
+<polygon points="112,91.7 96,119.4 128,119.4"/>
+<polygon points="96,64 80,91.7 112,91.7"/>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Thinking in Shaders</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Thinking in Shaders</h1><h6>Overview</h6><p class="description">Shaders draw in a fundamentally different way than shape drawing APIs like Canvas or Processing. This difference allows shaders to draw very quickly, but requires a new way of thinking when programming.</p><h6>Tools</h6><p class="software">ShaderToy + glslCanvas</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="a-paradigm-shift">A Paradigm Shift</h2>
+<p>The CPU—central processing unit—executes the instructions in computer programs. CPU architecutres are designed to be general. They run a wide variety of programs and run them all pretty quickly. The GPU—graphics processing unit—also executes computer programs. GPU architectures are designed to specifically address parallelizable problems. They can execute these types of problems extremely quickly, but aren’t as well suited serial problems.</p>
+<p>Shaders are programs that run on the GPU. Because the architectures of GPUs and CPUs are different, shader programs have different strengths and limitations compared to programs running on the CPU. When programming shaders you will often have to think about problems in a entirely new ways.</p>
+<div id="" class="callout">
+<h3 id="types-of-shaders">Types of Shaders</h3>
+<p>There are several types of shaders. The most common are vertex, fragment, geometry, and compute shaders.</p>
+<dl>
+<dt>Vertex</dt>
+<dd>A <a href="https://www.khronos.org/opengl/wiki/Vertex_Shader">vertex shader</a> maps a vertex from a 3d model onto the screen.</dd>
+<dt>Fragment</dt>
+<dd>A <a href="https://www.khronos.org/opengl/wiki/Fragment_Shader">fragment shader</a> determines what color a single pixel should be. Fragment shaders are sometimes also called pixel shaders.</dd>
+<dt>Geometry</dt>
+<dd>A <a href="https://www.khronos.org/opengl/wiki/Geometry_Shader">geometry shader</a> can generate shapes to render.</dd>
+<dt>Compute</dt>
+<dd>A <a href="https://www.khronos.org/opengl/wiki/Compute_Shader">compute shader</a> is a general purpose shader that can be used compute arbitrary information. Compute shaders allow GPUs to accelerate non-graphical applications.</dd>
+</dl>
+<p>This chapter is focused on fragment shaders.</p>
+</div>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+<script src="../mess/faces_mess.js"></script> -->
+<div id="" class="activity">
+<h2 id="serial-vs-parallel">Serial vs Parallel</h2>
+<p>Working in large groups, complete the following tasks as quickly as possible without making any mistakes.</p>
+<h3 id="task-1">Task 1</h3>
+<p><strong>Calculate the first 25 <a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci numbers</a>.</strong></p>
+<p>The Fibonacci numbers are a sequence of integers in which each integer is the sum of the previous two, starting with 0 and 1.</p>
+<pre><code class="language-javascript"><span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, ...
+</code></pre>
+<p>One way to describe the Fibonacci sequence is with this set of recursive rules.</p>
+<pre><code class="language-javascript">F(<span class="hljs-number">0</span>) = <span class="hljs-number">0</span>, F(<span class="hljs-number">1</span>) = <span class="hljs-number">1</span>, F(n) = F(n<span class="hljs-number">-1</span>) + F(n<span class="hljs-number">-2</span>)
+</code></pre>
+<h3 id="task-2">Task 2</h3>
+<p><strong>Calculate the following 25 expressions.</strong></p>
+<div id="" class="headless">
+<table class="table table-responsive">
+<thead>
+<tr>
+<th>a</th>
+<th>c</th>
+<th>d</th>
+<th>e</th>
+<th>f</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>68 * 89</td>
+<td>86 * 43</td>
+<td>30 * 11</td>
+<td>88 * 13</td>
+<td>72 * 53</td>
+</tr>
+<tr>
+<td>83 * 85</td>
+<td>14 * 32</td>
+<td>92 * 26</td>
+<td>93 * 35</td>
+<td>13 * 85</td>
+</tr>
+<tr>
+<td>15 * 93</td>
+<td>13 * 51</td>
+<td>43 * 74</td>
+<td>98 * 60</td>
+<td>44 * 69</td>
+</tr>
+<tr>
+<td>61 * 54</td>
+<td>55 * 19</td>
+<td>24 * 16</td>
+<td>11 * 70</td>
+<td>11 * 36</td>
+</tr>
+<tr>
+<td>25 * 16</td>
+<td>19 * 23</td>
+<td>83 * 34</td>
+<td>42 * 47</td>
+<td>24 * 11</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="discussion">Discussion</h3>
+<ul>
+<li>Did working in a group make Task 1 faster?</li>
+<li>Did working in a group make Task 2 faster?</li>
+<li>Which task required more difficult arithmetic?</li>
+<li>How did your group approach these two problems?</li>
+<li>Would using other approaches make either task faster?</li>
+</ul>
+<h3 id="binets-fibonacci-number-formula">Binet’s Fibonacci Number Formula</h3>
+<div id="" class="spoiler">
+<p><a href="http://mathworld.wolfram.com/BinetsFibonacciNumberFormula.html">Binet’s Formula</a> describes the Fibonacci sequence explicitly. With this formula you can calculate any integer in the sequence without relying on the previous values. With Binet’s Formula it is easy to parallelize task 1 above.</p>
+<pre><code class="language-javascript">(n) =&gt; (
+    <span class="hljs-built_in">Math</span>.pow( (<span class="hljs-number">1</span> + <span class="hljs-built_in">Math</span>.sqrt(<span class="hljs-number">5</span>)) / <span class="hljs-number">2</span> , n) -
+    <span class="hljs-built_in">Math</span>.pow( (<span class="hljs-number">1</span> - <span class="hljs-built_in">Math</span>.sqrt(<span class="hljs-number">5</span>)) / <span class="hljs-number">2</span> , n)
+    ) 
+    / <span class="hljs-built_in">Math</span>.sqrt(<span class="hljs-number">5</span>);
+</code></pre>
+</div>
+</div>
+<style>
+.headless thead {
+    display: none;
+}
+.spoiler h3 {
+    margin-top: 0;    
+}
+.spoiler {
+    
+    position: relative;
+}
+.spoiler::after {
+    content: "Show Spoiler";
+    font-family: "Roboto";
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 30px;
+    background: black;
+    color: white;
+    
+}
+</style>
+<script>
+var els = document.getElementsByClassName("spoiler");
+for (var i = 0; i < els.length; i++) {
+    let el = els[i];
+    els[i].addEventListener('click', ()=>el.classList.remove("spoiler"));
+}
+
+</script>
+<h2 id="inherently-serial-vs-embarrassingly-parallel">Inherently Serial vs Embarrassingly Parallel</h2>
+<blockquote>
+<p>The bearing of a child takes nine months, no matter how many women are assigned.</p>
+<p>— Frederick Brooks, The Mythical Man-Month</p>
+</blockquote>
+<p>GPUs can run shaders very quickly because they are designed for parallel processing.</p>
+<p>A problem is <em>parallelizable</em> if it can be divided into parts that can be solved <strong>independently and concurrently</strong>. If a problem is parallelizable, a high number of slow agents can solve it quickly, and a high number of FAST agents can solve it VERY quickly.</p>
+<p>A problem is <em>inherently serial</em> if it can’t be divided in this way. If many steps rely on the results of previous steps, you have to run the steps in order and one step cannot start until the previous steps are fully complete.</p>
+<h3 id="digging-a-shaft-vs-digging-a-trench">Digging a Shaft vs Digging a Trench</h3>
+<p>Consider <a href="https://www.youtube.com/watch?v=bun_WSB9iRw&amp;list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2&amp;index=3">digging a hole</a>. To dig the hole faster you need to either 1) dig faster or 2) hire more diggers. If you are already digging as fast as you can, your only option is hiring more diggers.</p>
+<p>If you are digging a trench, you are in luck: it is easy for many diggers to work together to dig a trench. Digging the trench is easily parallelizable. A 10 mile trench doesn’t take any longer to dig than 10 foot trench, if you have enough diggers.</p>
+<p>If you are digging a shaft, you have a problem: diggers can’t work on the bottom until the top is dug. You have to dig the shaft from the top down. Digging a shaft is inherintly serial. If you hire 100 diggers, 99 of them are going to stand around and watch.</p>
+<h3 id="serial-baking-a-cake">Serial: Baking a Cake</h3>
+<p>Not all problems can be divided efficiently. Some problems are <a href="https://en.wikipedia.org/wiki/Parallel_algorithm">inherently serial</a>. For example, consider the steps needed to bake a cake.</p>
+<ol>
+<li>Collect ingredients</li>
+<li>Measure ingredients</li>
+<li>Combine ingredients</li>
+<li>Pour batter into pan</li>
+<li>Preheat oven</li>
+<li>Bake batter</li>
+<li>Cool cake</li>
+<li>Ice cake</li>
+<li>Decorate cake</li>
+</ol>
+<p>Most of these steps must be done in order. You can’t measure ingredients you haven’t collected, you can’t combine ingredients before you measure them, you can’t ice a cake you haven’t baked. You <em>can</em> preheat the oven while you collect, measure, and combine the ingredients but that is the only part of the process where working in parallel can help.</p>
+<p><a href="https://en.wikipedia.org/wiki/Amdahl%27s_law">Amdahl’s Law</a></p>
+<h3 id="parallel-tinting-an-image">Parallel: Tinting an Image</h3>
+<p>In contrast, Tinting an image is <a href="https://en.wikipedia.org/wiki/Embarrassingly_parallel">embarrasingly parallel</a>. You can divide the image into two parts—maybe the top and bottom—and tint both parts at once. Tinting the top doesn’t rely on tinting the bottom, and tinting the bottom doesn’t rely on tinting the top. Splitting and recombining the parts is very easy. Since there is almost no overhead splitting up the work allows it to be done twice as fast. You can divide the image into 4 parts or 8 parts just as well. Because tinting one pixel doesn’t rely on tinting any other, you can divide the image all the way down to each independent pixel and process them all at once. This is the type of problem that GPUs are specifically designed to solve.</p>
+<div id="" class="columns">
+<div id="" class="half">
+<h4 id="serial">Serial</h4>
+<ul>
+<li>Three body problem</li>
+<li>Computing Pi</li>
+<li>Newton’s method</li>
+<li>Making a baby</li>
+<li>Baking a cake</li>
+<li>Digging Shafts</li>
+</ul>
+</div>
+<div id="" class="half">
+<h4 id="parallel">Parallel</h4>
+<ul>
+<li>Monte Carlo simulation</li>
+<li>Perlin noise</li>
+<li>Ray-tracing</li>
+<li>Brute-force password cracking</li>
+<li>Tinting images</li>
+<li>Digging trenches</li>
+</ul>
+</div>
+</div>
+<h2 id="cpus-vs-gpus">CPUs vs GPUs</h2>
+<p>For a long time computer designers focused on digging faster. They crammed in more and more transistors, making them smaller and smaller, and clocking them faster and faster. And for a long time <a href="https://en.wikipedia.org/wiki/Moore%27s_law">Moore’s law</a> held: the number of transistors in CPUs doubled every two years and so did their speed, more or less. But recently CPU designs have approached physical limits and CPU speed improvements are slowing. This has led to computer designers relying more on hiring more diggers.</p>
+<p><a href="https://www.youtube.com/watch?v=ZrJeYFxpUyQ">Mythbusters Leonardo + Leonardo 2.0</a></p>
+<p><a href="https://www.youtube.com/watch?v=-P28LKWTzrI">Short Version</a></p>
+<h3 id="single-thread-cpu">Single-Thread CPU</h3>
+<p>CPUs are designed to solve serial problems very quickly. They have super-high clock-speeds and flexible architectures that allow you to mix data reads, writes, and operations freely. They are designed for very low latency, they perform a single operation at a time and finish it as quickly as possible.</p>
+<p><img src="figures/Single_CPU.svg" alt="cpu"></p>
+<h3 id="multi-thread-cpu">Multi-Thread CPU</h3>
+<p>Modern CPUs can do more than one thing at a time. Many CPUs have several cores, and the cores can process multiple threads simultaneously.</p>
+<p><img src="figures/Multi_CPU_1.svg" alt="cpu"></p>
+<p>This allows CPUs to run multiple applications at once, but can’t always speed up a single application if it doesn’t parallelize well.
+When problems don’t parallelize well, threads often have to wait on data from other threads.</p>
+<p><img src="figures/Multi_CPU_2.svg" alt="cpu"></p>
+<h3 id="gpus">GPUs</h3>
+<p>GPUs are designed to solve parallel problems very quickly. They tend to have somewhat lower clock-speeds than GPUs but many, many more cores. The GPU is futher optimized to perform the same sequence of operations on many sets of data simultaniously. For example a GPU can very quickly halve the R, G, and B values of every pixel in an image to darkin it. GPUs are designed for very high throughput. Performing an operation on the GPU takes longer than on a CPU, but the GPU can perform that operation on many sets of data at once.</p>
+<p><img src="figures/GPU.svg" alt="cpu"></p>
+<h3 id="latency-and-throughput">Latency and Throughput</h3>
+<p>CPUs are designed for low latency and GPUs are designed for high thoughput. As an anologie consider carrying potatoes across a field. If you carry the potatoes in your hands, you can carry one or two potatoes across the field as fast as you can run. If you carry the potatoes in a wheel barrow, it will take longer to load up and you won’t be able to run. But you can carry many, many potatoes at once. The wheel barrow will be faster in the end, but only if you need to move a lot of potatoes to the same place.</p>
+<h2 id="shading-vs-drawing">Shading vs Drawing</h2>
+<p>Drawing APIs that run on CPUs are offer a lot of freedoms. They allow you to:</p>
+<ul>
+<li>Set pixel colors in any order.</li>
+<li>Set some pixels more than once and skip others altogether.</li>
+<li>Interleave reading and setting pixel colors.</li>
+<li>Use information calculated for one pixel to color another pixel.</li>
+<li>Use a different procedure to determine the color of each pixel.</li>
+<li>Interleave drawing code with other code.</li>
+</ul>
+<p>Because fragment shaders are strictly limited to fit the optimized path on the GPU, they can’t do any of these things.</p>
+<p>A fragment shaders is a small program with one job: calculating the color of a single output pixel. The graphics pipeline will run the fragment once for each pixel that needs to be shaded, providing the contextual information she shader needs. During the rendering of a single frame, a shader might be run millions of times. The GPU can use its many cores and threads to run the shader for many pixels simultaniously. The shader returns a color to the graphics pipeline, which then composites the color onto the target image.</p>
+<p>To allow all of this to happen as quickly as possible, shaders must conform to strict limitations.</p>
+<h3 id="limited-operations">Limited Operations</h3>
+<p>Fragment shaders are confined a narrow set of operations, mostly:</p>
+<ul>
+<li>accessing only specific information provided by the graphics pipeline</li>
+<li>scalar, vector, and matrix arithmetic</li>
+<li>mathematic functions related to trigonometry, exponents, etc.</li>
+<li>sampling values from textures</li>
+</ul>
+<h3 id="no-communication-no-memory">No Communication, No Memory</h3>
+<p>Because many shaders run in parallel every thread is isolated from every other thread. Information can not be passed from pixel to pixel. None of the values determined while calculating one pixel can be shared with another and the calculations of one pixel can not affect the calculations for other pixels. When the shader is finished it returns a color value and the values stored in its variables are forgotten.</p>
+<p>Every time the shader runs, it starts from scratch.</p>
+<p>This often leads to a lot of redundant calculation, but the GPU is so much faster that it often doesn’t matter. When it does matter, you may be able to precalculate data on the CPU and pass it to the shader.</p>
+<h3 id="limited-branching">Limited Branching</h3>
+<p>In imparative languages like C and Javascript, <code>if</code>, <code>for</code>, and <code>while</code> can be used to create conditional branches, dynamically choosing which instructions should be run. GPU hardware is not optimized for branching and early shader models didn’t allow branching at all. Generally, the most performant path is for the shader to perform the same sequence of operations on every pixel.</p>
+<p>Modern shader models do allow you to include branching in your code, but when a shader encounters branching it threads that don’t follow the branch will wait for the threads that do.</p>
+<div id="" class="callout">
+<h3 id="dfdx-and-dfdy">dFdx and dFdy</h3>
+<p>As mentioned above one shader thread cannot generally access information calculated in another shader thread. The glsl <a href="https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/dFdx.xhtml">dFdx and dFdy</a> functions provide exception. These functions allow you to compare the value of an expression calculated for the current pixel with the value calculated for a neighboring pixel.</p>
+<p>This stack overflow <a href="https://stackoverflow.com/a/16368768">answer</a> provides a summary of how these functions work.</p>
+<p>This <a href="http://madebyevan.com/shaders/grid/">Anti-aliased grid shader</a> shows how useful these functions can be.</p>
+</div>
+<h2 id="drawing-a-rectangle">Drawing a Rectangle</h2>
+<p>Let’s compare drawing a rectangle using p5.js to drawing a rectangle with a glsl fragment shader.</p>
+<h3 id="p5js-p5-rect-apijs">p5.js — p5_rect_api.js</h3>
+<p>With p5.js we don’t have to think about pixels at all, we just ask p5.js to draw the rectangle for us.</p>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/experimental_shaders/thinking_in_shaders/sketches/pt_rect_api.js">
+</iframe>
+</div>
+</div>
+<h4 id="p5js-p5-rect-pixeljs">p5.js — p5_rect_pixel.js</h4>
+<p>Of course, we <em>want</em> to think about how the rectangle is drawn, pixel by pixel. This version doesn’t use any high level API calls like <code>rect()</code> or <code>background()</code>. It sets the pixel values directly using the following approach.</p>
+<ol>
+<li>Loop over all the pixels on the canvas; set them to black.</li>
+<li>Loop over the pixels inside the rectangle; set them to red.</li>
+</ol>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/experimental_shaders/thinking_in_shaders/sketches/p5_rect_pixel.js">
+</iframe>
+</div>
+</div>
+<h3 id="glsl-rect-branchfrag">glsl — rect_branch.frag</h3>
+<p>This example draws the same thing using a fragment shader. A fragment shader can’t choose which pixels to visit and can’t choose to visit pixels twice. The shader can only provide what color its assigned pixel should be. The shader approaches the problem like this:</p>
+<ol>
+<li>Check if the pixel is in the rectangle.</li>
+<li>If so, return red. If not, return black.</li>
+</ol>
+<div id="" class="full-width">
+<div class="glsl_editor" data="shaders/rect_branch.frag"></div>
+</div>
+<h3 id="glsl-rect-no-branchfrag">glsl rect_no_branch.frag</h3>
+<p>This example draws the rectangle without using conditional branching. The <a href="https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/step.xhtml">step</a> and <a href="https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/mix.xhtml">mix</a> functions are built into glsl. <code>step(edge, x)</code> returns <code>0.0</code> if x &lt; step, and <code>1.0</code> otherwise. <code>mix(x, y, a)</code> returns provides linear interpolation between <code>x</code> and <code>y</code>.</p>
+<div id="" class="full-width">
+<div class="glsl_editor" data="shaders/rect_no_branch.frag"></div>
+</div>
+<h2 id="drawing-a-gradient">Drawing a Gradient</h2>
+<p>In the examples above, drawing a rectangle in a fragment shader might seem awkward, especially when compared to the p5.js solutions. Take a look at the following examples. Each draws a two-dimensional color gradient. This task is well suited to a fragment shader, and the code more graceful.</p>
+<h3 id="p5js-gradientjs">p5.js — gradient.js</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/experimental_shaders/thinking_in_shaders/sketches/gradient.js">
+</iframe>
+</div>
+</div>
+<h3 id="glsl-gradientfrag">glsl — gradient.frag</h3>
+<div id="" class="full-width">
+<div class="glsl_editor" data="shaders/gradient.frag"></div>
+</div>
+<div id="" class="activity">
+<h2 id="in-class-challenge">In-class Challenge</h2>
+<p>Explore the code examples above by completing the following challenges in order. <br/> Don’t skip any.</p>
+<h3 id="modify-the-rect-branchfrag-example">Modify the rect_branch.frag example</h3>
+<ol>
+<li>Change the background color to white.</li>
+<li>Change the rect color to blue.</li>
+<li>Change the code so it draws two rectangles of the same color.</li>
+<li>Change the code so it draws two rectangles of different color.</li>
+</ol>
+<h3 id="modify-the-rect-no-branchfrag-example">Modify the rect_no_branch.frag example</h3>
+<ol>
+<li>Change the background color to white.</li>
+<li>Change the rect color to blue.</li>
+<li>Change the code so it draws two rectangles of the same color.</li>
+<li>Change the code so it draws two rectangles of different color.</li>
+</ol>
+<h3 id="modify-the-gradientfrag-example">Modify the gradient.frag example</h3>
+<ol>
+<li>Create a vertical gradient from black to red.</li>
+<li>Create a horizontal gradient from white to blue.</li>
+<li>Create a vertical gradient from red to black to red.</li>
+<li>Create a vertical gradient from red to black to blue.</li>
+</ol>
+</div>
+<h2 id="live-code-skyline">Live Code: Skyline</h2>
+<p><a href="../skyline/">Skyline Live Code</a></p>
+<h2 id="resources">Resources</h2>
+<p><a href="https://thebookofshaders.com/">The Book of Shaders</a></p>
+<p><a href="https://docs.unity3d.com/Manual/SL-ShaderPrograms.html">Unity Writing Vertex and Fragment Shaders</a></p>
+<p><a href="http://theorangeduck.com/page/avoiding-shader-conditionals">Avoiding Shader Conditionals</a></p>
+<p><a href="https://unity3d.com/learn/tutorials/topics/graphics/gentle-introduction-shaders">A Gentle Introduction to Shaders (in Unity)</a></p>
+<p><a href="https://docs.unity3d.com/Manual/SL-Reference.html">Unity Shader Reference</a></p>
+<p><a href="https://www.youtube.com/watch?v=F620ommtjqk&amp;list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2">Udacity: Intro to Parallel Programming</a></p>
+<p><a href="https://www.youtube.com/watch?v=bun_WSB9iRw&amp;list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2&amp;index=3">Udacity: Digging Holes</a></p>
+<p><a href="https://www.youtube.com/watch?v=KdN49C0bxOk&amp;list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2&amp;index=17">Udacity: Core GPU Design Tenets</a></p>
+<p><a href="http://oeis.org/">On-line Encyclopedia of Integer Sequences</a></p>
+<p><a href="https://www.theguardian.com/science/alexs-adventures-in-numberland/2014/oct/07/neil-sloane-the-man-who-loved-only-integer-sequences">Neil Sloane Profile</a></p>
+<p><a href="https://www.youtube.com/watch?v=hrLjLeGUjio">Mathnet: Case of the Willing Parrot</a></p>
+<p><a href="http://visual6502.org/">Visual 6502</a></p>
+<p><a href="https://www.youtube.com/watch?v=cNN_tTXABUA">See How a CPU Works</a></p>
+<link type="text/css" rel="stylesheet" href="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.css"/>
+<script type="application/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.js"></script>
+<link type="text/css" href="./shader.css"/>
+<script src="./shader_loader.js"></script></div></div></div><div class="container" id="scroll-out"></div></div></body></html>

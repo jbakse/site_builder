@@ -125,14 +125,14 @@ This class focuses on exploration. Each class introduces a new topic or tool, us
 
 ![This not That](figures/this_not_that.png){full-width}
 
-
+<!-- 
 ### MFA Writing Assignment
 
 As noted in the Syllabus, students in the MFA program must complete one extra assignment. BFA students are encouraged to also complete this assignment for extra credit. 
 
 In short, this assignment is to choose a topic for further exploration, build a somewhat larger project, and write up a case study for the project. This assignment is intended to be flexible, so feel free to propose your own spin.
 
-You can complete this assignment at any time during the semester. I suggest turning this in around midterms. Please discuss with me your general plan for your project before starting.
+You can complete this assignment at any time during the semester. I suggest turning this in around midterms. Please discuss with me your general plan for your project before starting. -->
 
 ### Notes on Daily Sketching
 Your goal **each day** should be to explore a different aspect of the weekly theme. Ideally, you will spend **1 to 2 hours on an idea**, resulting in an image or other artifact. Each day you will work on **different ideas**, possibly informed by something you did earlier in the week or class.
@@ -197,6 +197,14 @@ Post anyway. If you can't do exactly what you want, find something close that yo
 
 <br>
 
+> What about the challenges? Do they count as sketches?
+
+Yes, they do. Each week I'll include one or more individual, pair, or group challenges. Unless noted, the challenges are *required*, but each challenge counts towards your weekly sketches.
+
+<br>
+
+
+
 > I'm tired of looking at the computer screen. Can I do a couple of posts with paper/paint/glue/wood/whatever?
 
 Absolutely. **I highly recommend that you do!** The more variety between your posts the better. If the work relates to the weekly topic, you can make it however you want.
@@ -251,11 +259,11 @@ All the work you submit for this class should be your own. For the most part you
 
 
 ### Syllabus Review
-Please review the [syllabus here](../2019/syllabus.html).
+Please review the [syllabus here](../2020/syllabus.html).
 
 ### The Class Sketch Blog
 
 Our class sketch blog will host your daily experiments and links to content of interest to the class. As you create sketches throughout the week, post them to the blog. Also be sure to review the work of everyone else.
 
-[2019 Sketch Blog](http://sketches2019.compform.net){boxed right}
+[2019 Sketch Blog](http://sketches2020.compform.net){boxed right}
 

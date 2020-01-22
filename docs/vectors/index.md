@@ -280,7 +280,7 @@ It might help to have the documentation for [Paper.js Path](http://paperjs.org/r
 
 Paper Garden is a program written in about 300 lines of PaperScript using [Paper.js](http://paperjs.org/). It generates stylized drawings of plants arranged in a wall garden. Read about how this program works and explore the code.
 
-[Paper Garden Script](./paper_garden/paper_garden.html){boxed right}
+[Paper Garden Case Study](./paper_garden/paper_garden.html){boxed right}
 
 ![paper_garden](./paper_garden/images/1500.png)
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GLSL Workspace</title>
+</head>
+
+<body>
+
+    <div id="glsl_editor" data="./my_shader.frag"></div>
+
+    <link type="text/css" rel="stylesheet"
+        href="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.css" />
+    <script type="application/javascript"
+        src="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.js"></script>
+
+    <script lang="javascript">
+        let el = document.getElementById("glsl_editor");
+        console.log(el);
+        const editor = new GlslEditor(el, {
+            canvas_size: 512,
+            canvas_follow: true,
+            canvas_float: 'right',
+            menu: true,
+            theme: 'monokai',
+            lineWrapping: true,
+            autofocus: true,
+        });
+        editor.open(el.getAttribute('data'));
+    </script>
+
+</body>
+
+</html>

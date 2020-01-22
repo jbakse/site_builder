@@ -33,7 +33,8 @@ Consider the advantages and disadvantages of using procedures to generate form.
 
 - What types of art can **only** be created using procedures?
 - What types of art can **not** be created using procedures?
-  /::
+
+/::
 
 ### The Benefits of Computational Form
 
@@ -201,8 +202,6 @@ If you want to play Spelunky—which I highly recommend—the original version (
 
 ## Additional Reading
 
-PCG Book
-Dan Shiffman Book + Site
-Generative Design
+[PCG Book](http://pcgbook.com/)
 
 [Procedures and Algorithms](http://web.uvic.ca/~ling48x/ling484/notes/procedures.html)
