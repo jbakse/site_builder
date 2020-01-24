@@ -68,6 +68,14 @@ Make these!
 /::
 
 
+::: .spoiler
+```javascript
+out_color *= 1.0 - (step(d, 0.2) - step(d, 0.19));
+```
+/::
+
+
+
 
 
 <link type="text/css" rel="stylesheet" href="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.css"/>
@@ -85,4 +93,35 @@ Make these!
   .ge_editor {
     min-height: 300px;
   }
+
+  .spoiler h3 {
+    margin-top: 0;    
+}
+.spoiler {
+    
+    position: relative;
+}
+.spoiler::after {
+    content: "Show Spoiler";
+    font-family: "Roboto";
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 30px;
+    background: black;
+    color: white;
+    
+}
 </style>
+
+<script>
+var els = document.getElementsByClassName("spoiler");
+for (var i = 0; i < els.length; i++) {
+    let el = els[i];
+    els[i].addEventListener('click', ()=>el.classList.remove("spoiler"));
+}
+
+</script>
