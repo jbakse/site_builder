@@ -12,37 +12,37 @@ vec2 rotate(vec2 coord, float angle) {
     );
 }
 
-float rectangle(vec2 coord, vec2 radius) {
-    vec2 componentDistance = abs(coord) - radius;
+float rectangle(vec2 frag_coord, vec2 size) {
+    vec2 componentDistance = abs(frag_coord) - size;
     float outside = length(max(componentDistance, 0.0));
     float inside = min(max(componentDistance.x, componentDistance.y), 0.0);
     return outside + inside;
 }
 
-float circle(vec2 coord, float radius) {
-    return length(coord) - radius;
-}
-
-float roundTo(float n, float d) {
-    return floor(n / d) * d;
+float circle(vec2 frag_coord, float radius) {
+    return length(frag_coord) - radius;
 }
 
 void main() {
     vec2 coord_N = gl_FragCoord.xy / u_resolution;
     coord_N.y /= u_resolution.x / u_resolution.y;
     
-    vec2 rect_transform = coord_N;
-    rect_transform -= vec2(0.5);
-    rect_transform = rotate(rect_transform, u_time);
-    float rect_sdf = rectangle(rect_transform, vec2(0.1, 0.3));
+    vec2 rect_coord = coord_N;
+    rect_coord -= vec2(0.5);
+    rect_coord = rotate(rect_coord, u_time);
+    float rect_sdf = rectangle(rect_coord, vec2(0.1, 0.3));
     
-    float circle_sdf = circle(coord_N - vec2(0.5, 0.5), 0.2);
+    vec2 circle_coord = coord_N;
+    circle_coord = circle_coord - vec2(0.5, 0.5);
+    float circle_sdf = circle(circle_coord, 0.2);
     float combined_sdf = max(rect_sdf, circle_sdf);
+    // try min
     
-    // float combined_sdf = min(rect_sdf, circle_sdf);
-    float gray = smoothstep(0.0, 0.1, combined_sdf);
+    float fill = step(0.0, combined_sdf);
+    float stroke = step(-0.01, combined_sdf) - step(0.0, combined_sdf);
     
-    gray = roundTo(gray, 0.5);
+    vec3 c = vec3(fill);
+    c.r += stroke;
     
-    gl_FragColor = vec4(vec3(gray), 1.0);
+    gl_FragColor = vec4(c, 1.0);
 }

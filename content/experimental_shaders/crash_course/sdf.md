@@ -61,12 +61,12 @@ debug: false
 
 Explore the code examples above by completing the following challenges in order. <br/> Don't skip any.
 
-### Modify the SDF Cricle Example
+### Modify the SDF Circle Example
 
 1. Move the field up.
 2. Negate the field.
 
-### Modify the Checkerboard 3 Example
+### Modify the SDF Rect Example
 
 1. Make the rectangle wide and short.
 2. Align the rectangle to the bottom of the canvas.
