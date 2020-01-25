@@ -8,12 +8,13 @@ void main() {
     vec2 i = floor(gl_FragCoord.xy / vec2(50.0, 50.0));
     vec2 f = fract(gl_FragCoord.xy / vec2(50.0, 50.0));
     
-    vec2 offset = vec2(
-        rand(i),
-        rand(i + 1.0)
+    vec3 color = vec3(
+        rand(vec2(i.x , 0.1)),
+        rand(vec2(i.x , 0.2)),
+        rand(vec2(i.x , 0.3))
     );
     
-    float d = distance(vec2(0.5, 0.5), f + offset * 0.3);
-    float g = step(0.2, d);
-    gl_FragColor = vec4(g, g, g, 1.0);
+    color = color * (rand(vec2(i.y, 0.0)) + 0.5);
+    
+    gl_FragColor = vec4(color, 1.0);
 }

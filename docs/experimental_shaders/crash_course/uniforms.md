@@ -8,10 +8,10 @@ debug: false
 
 `u_resolution` `u_time` `u_mouse` `component masks` `functions` `coordinate translation`
 
-
 ### Venn
 
 ::: .full-width
+
 <div class="glsl_editor" data="./venn.frag"></div>
 /::
 <br style="clear: both;"/>
@@ -19,6 +19,7 @@ debug: false
 ### Infinite Hills
 
 ::: .full-width
+
 <div class="glsl_editor" data="./infinite_hills.frag"></div>
 /::
 <br style="clear: both;"/>
@@ -26,12 +27,10 @@ debug: false
 ### Spotlight
 
 ::: .full-width
+
 <div class="glsl_editor" data="./spotlight.frag"></div>
 /::
 <br style="clear: both;"/>
-
-
-
 
 ::: .activity
 
@@ -49,11 +48,10 @@ Explore the code examples above by completing the following challenges in order.
 1. Make the hills scroll faster.
 2. Add a yellow sun near the horizon.
 
-
 ### Modify the Spotlight Example
 
 1. Make the spotlight have a soft edge.
-2. Show a dim version of the pattern in the darkeness.
+2. Show a dim version of the pattern in the darkness.
 
 ### Challenging Challenges
 
@@ -62,21 +60,19 @@ Make these!
 ::: .three-up
 ![Hills Challenge](./images/hills_challenge.png)
 ![Venn Outline](./images/venn_outline.png)
-
-/::  
+![Crosshair](./images/crosshair.png)
 
 /::
 
+/::
 
 ::: .spoiler
+
 ```javascript
 out_color *= 1.0 - (step(d, 0.2) - step(d, 0.19));
 ```
+
 /::
-
-
-
-
 
 <link type="text/css" rel="stylesheet" href="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.css"/>
 <script type="application/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.js"></script>
