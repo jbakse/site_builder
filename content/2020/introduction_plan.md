@@ -11,7 +11,9 @@ debug: false
 [Tiles Maps](../tiles/index.html){boxed right}
 
 ### Learning Objectives
+
 Students will be able to:
+
 - Discuss the course content and structure
 - Understand homework expectations
 - Set up account and begin using the class sketch site
@@ -22,15 +24,14 @@ Students will be able to:
 - Create and use an edge-matched tile toolkit
 - Explore the relationship between tools, authors, and artworks
 
-
 ### Materials
+
 - Comp Form stationary
 - Blank tile kits
 - Markers
 - Camera
 
 ### Schedule
-
 
 | Time | Duration | Purpose  | Format     | Name                                                                   |
 | ---- | -------- | -------- | ---------- | ---------------------------------------------------------------------- |
@@ -44,39 +45,32 @@ Students will be able to:
 | 5:40 | 35 m     | Activate | Activity   | Tile Sets Workshop                                                     |
 | 6:15 | 15 m     | Activate | Activity   | Set up Sketch Blog Accounts + Post                                     |
 
-
-
-
 ::: .activity
+
 ## Class Introduction Activity
 
 Who are you people? What are we doing here?
 
-*pairs, 5 Minutes*
+_pairs, 5 Minutes_
 
 - Introduce yourself to your partner. Learn their name and one interesting thing about them.
-- Compare your syllabus questions. 
-    - Note which questions you have in common. 
-    - Note which questions have been answered in class already, which have not. 
-    - Identify the most important unanswered question, if you have any.
+- Compare your syllabus questions.
+  - Note which questions you have in common.
+  - Note which questions have been answered in class already, which have not.
+  - Identify the most important unanswered question, if you have any.
 
-*class, 15 minutes*
+_class, 15 minutes_
 
 - Introduce your partner in **exactly one sentence** that includes their name and one interesting thing about them.
 - Ask your most important unanswered syllabus question.
-/::
-
-
-
+  /::
 
 ### Announcements
 
-1. Livecoding Firesides!
-2. New Exploration Options! Microgames + Machine Learning + Simulation
-3. Vote on combining Random + Noise.
-4. Vote on what to cut, what to keep.
-5. Limited Spots open for Shader Crash Course
-
+1. Livecoding Firesides! What Night?
+2. New Exploration Options! Microgames + Machine Learning + Simulation! Which One?
+3. Combining Random + Noise. Vote!
+4. Limited Spots open for Shader Crash Course. Sign Up!
 
 <style>
   .headless thead {
