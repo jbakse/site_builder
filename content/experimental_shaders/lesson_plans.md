@@ -59,36 +59,34 @@ Students will be able to:
 Saturday, January 25th
 
 
-| Time                           | Duration | Purpose | Format | Name               |
-| ------------------------------ | -------- | ------- | ------ | ------------------ |
-|                                | 20 m     |         |        | Hello, glslCanvas! |
-|                                | 20 m     |         |        | Coding Warmups     |
-| Basics + Built-ins             |
-|                                | 20 m     |         |        | Lecture            |
-|                                | 20 m     |         |        | Study Examples     |
-|                                | 20 m     |         |        | Coding Challenges  |
-| Periodic and Shaping Functions |
-|                                | 20 m     |         |        | Lecture            |
-|                                | 20 m     |         |        | Study Examples     |
-|                                | 20 m     |         |        | Coding Challenges  |
-Lunch
-| u_resolution, u_time, u_mouse  |
-|                                | 20 m     |         |        | Lecture            |
-|                                | 20 m     |         |        | Study Examples     |
-|                                | 20 m     |         |        | Coding Challenges  |
-| Random                         |
-|                                | 20 m     |         |        | Lecture            |
-|                                | 20 m     |         |        | Study Examples     |
-|                                | 20 m     |         |        | Coding Challenges  |
-Break
-| Signed Distance Fields         |
-|                                | 20 m     |         |        | Lecture            |
-|                                | 20 m     |         |        | Study Examples     |
-|                                | 20 m     |         |        | Coding Challenges  |
-| Micro Jam                      |
-|                                | 20 m     |         |        | Lecture            |
-|                                | 20 m     |         |        | Study Examples     |
-|                                | 20 m     |         |        | Coding Challenges  |
+| Time  | Duration | Name                           |
+| ----- | -------- | ------------------------------ |
+| -     | -        | **Basics + Built-ins**         |
+| 10:00 | 10 m     | Hello, glslCanvas!             |
+| -     | 5 m      | Study Examples                 |
+| -     | 20 m     | Coding Challenges              |
+| -     | 10 m     | Discussion                     |
+| -     | -        | **Shaping + Mixing Functions** |
+| 10:45 | 5 m      | Study Examples                 |
+| -     | 20 m     | Coding Challenges              |
+| -     | 20 m     | Discussion                     |
+| -     | -        | **Uniforms**                   |
+| 11:30 | 5 m      | Lecture                        |
+| -     | 20 m     | Study Examples                 |
+| -     | 35 m     | Discussion                     |
+| 12:30 | 60 m     | Lunch                          |
+| -     | -        | **Random**                     |
+| 1:30  | 20 m     | Lecture                        |
+| -     | 20 m     | Study Examples                 |
+| -     | 20 m     | Discussion                     |
+| -     | -        | **Signed Distance Fields**     |
+| 2:30  | 20 m     | Lecture                        |
+| -     | 20 m     | Study Examples                 |
+| -     | 20 m     | Discussion                     |
+| -     | -        | **Micro Jam**                  |
+| 3:30  | 60 m     | Jamming                        |
+| 4:30  | 30 m     | Demoing                        |
+
 
 
 

@@ -13,7 +13,7 @@ debug: false
 
 [Ronja's 2D Signed Distance Field Basics](https://www.ronja-tutorials.com/2018/11/10/2d-sdf-basics.html)
 
-[Ronja's 2D Signed Distance Fiedl Combination](https://www.ronja-tutorials.com/2018/11/17/2d-sdf-combination.html)
+[Ronja's 2D Signed Distance Field Combination](https://www.ronja-tutorials.com/2018/11/17/2d-sdf-combination.html)
 
 ### SDF Circle
 ::: .full-width
