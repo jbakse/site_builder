@@ -3,12 +3,12 @@ precision highp float;
 uniform vec2 u_resolution;
 uniform float u_time;
 
-vec2 rotate(vec2 coord, float angle) {
+vec2 rotate(vec2 p, float angle) {
     float sine = sin(angle);
     float cosine = cos(angle);
     return vec2(
-        cosine * coord.x + sine * coord.y,
-        cosine * coord.y - sine * coord.x
+        cosine * p.x + sine * p.y,
+        cosine * p.y - sine * p.x
     );
 }
 
