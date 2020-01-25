@@ -7,7 +7,7 @@ debug: false
 ## Signed Distance Fields
 
 `signed distance field` `circles` `rectangles` `translation` `rotation` `scale`
-`union` `intersection` `visualization` 
+`union` `intersection` `visualization`
 
 <br/>
 
@@ -16,35 +16,44 @@ debug: false
 [Ronja's 2D Signed Distance Field Combination](https://www.ronja-tutorials.com/2018/11/17/2d-sdf-combination.html)
 
 ### SDF Circle
+
 ::: .full-width
+
 <div class="glsl_editor" data="./sdf_circle.frag"></div>
 /::
 <br style="clear: both;"/>
 
 ### SDF Rectangle
+
 ::: .full-width
+
 <div class="glsl_editor" data="./sdf_rectangle.frag"></div>
 /::
 <br style="clear: both;"/>
 
 ### SDF Visualize
+
 ::: .full-width
+
 <div class="glsl_editor" data="./sdf_visualize.frag"></div>
 /::
 <br style="clear: both;"/>
 
 ### SDF Transform
+
 ::: .full-width
+
 <div class="glsl_editor" data="./sdf_transform.frag"></div>
 /::
 <br style="clear: both;"/>
 
 ### SDF Combine
+
 ::: .full-width
+
 <div class="glsl_editor" data="./sdf_combine.frag"></div>
 /::
 <br style="clear: both;"/>
-
 
 ::: .activity
 
@@ -60,14 +69,12 @@ Explore the code examples above by completing the following challenges in order.
 ### Modify the Checkerboard 3 Example
 
 1. Make the rectangle wide and short.
-2. Align the rectangle to the bottom of the canvas. 
-
+2. Align the rectangle to the bottom of the canvas.
 
 ### Modify the SDF Transform Example
 
 1. Disable the scaling.
 2. Make the rectangle move in a circle without rotating.
-
 
 ### Modify the SDF Combine Example
 
@@ -76,12 +83,14 @@ Explore the code examples above by completing the following challenges in order.
 
 ### Challenging Challenges
 
-TBA
+Make these!
 
-
+::: .three-up
+![sdf challenge 1](./images/sdf_challenge.png)
+![sdf challenge 2](./images/sdf_challenge_2.png)
 /::
 
-
+/::
 
 <link type="text/css" rel="stylesheet" href="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.css"/>
 <script type="application/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.js"></script>

@@ -75,8 +75,8 @@ Explore the code examples above by completing the following challenges in order.
 Make these!
 
 ::: .three-up
-![Dots Challenge](./images/dot_challenge.png)
 ![Checkerboard Challenge](./images/checkerboard_challenge.png)
+![Dots Challenge](./images/dot_challenge.png)
 
 /::
 
