@@ -41,19 +41,65 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <h3 id="modify-the-spotlight-example">Modify the Spotlight Example</h3>
 <ol>
 <li>Make the spotlight have a soft edge.</li>
-<li>Show a dim version of the pattern in the darkeness.</li>
+<li>Show a dim version of the pattern in the darkness.</li>
 </ol>
 <h3 id="challenging-challenges">Challenging Challenges</h3>
 <p>Make these!</p>
 <div id="" class="three-up">
 <p><img src="./images/hills_challenge.png" alt="Hills Challenge">
-<img src="./images/venn_outline.png" alt="Venn Outline"></p>
-</div>  
+<img src="./images/venn_outline.png" alt="Venn Outline">
+<img src="./images/crosshair.png" alt="Crosshair"></p>
+</div>
 </div>
 <div id="" class="spoiler">
 <pre><code class="language-javascript">out_color *= <span class="hljs-number">1.0</span> - (step(d, <span class="hljs-number">0.2</span>) - step(d, <span class="hljs-number">0.19</span>));
 </code></pre>
 </div>
+<pre><code class="language-javascript">precision highp float;
+
+uniform vec2 u_resolution;
+uniform float u_time;
+
+float hill_mask(vec2 coord) {
+    float hill1 = sin(coord.x * <span class="hljs-number">1.1</span>) * <span class="hljs-number">0.20</span>;
+    float hill2 = sin(coord.x * <span class="hljs-number">15.0</span>) * <span class="hljs-number">0.05</span>;
+    float hill3 = sin(coord.x * <span class="hljs-number">21.1</span>) * <span class="hljs-number">0.02</span>;
+    float hill_mask = step(coord.y, <span class="hljs-number">0.3</span> + hill1 + hill2 + hill3);
+    <span class="hljs-keyword">return</span> hill_mask;
+}
+
+float sun_mask(vec2 coord) {
+    float d = distance(vec2(<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>), coord);
+    float sun_mask = step(<span class="hljs-number">0.2</span>, d);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1.0</span> - sun_mask;
+}
+
+<span class="hljs-keyword">void</span> main() {
+    <span class="hljs-comment">// boilerplate get normalized coord</span>
+    vec2 coord_N = gl_FragCoord.xy / u_resolution;
+    coord_N.y /= u_resolution.x / u_resolution.y;
+
+    <span class="hljs-comment">// calculate sky</span>
+    vec3 sky = mix(vec3(<span class="hljs-number">0.7</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">1.0</span>), vec3(<span class="hljs-number">0.0</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">1.0</span>), coord_N.y);
+
+    <span class="hljs-comment">// start scene</span>
+    vec3 scene = sky;
+
+    <span class="hljs-comment">// composite sun</span>
+    vec3 sun_yellow = vec3(<span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>, <span class="hljs-number">0.0</span>);
+    scene = mix(scene, sun_yellow, sun_mask(coord_N + vec2(u_time * <span class="hljs-number">0.04</span>, <span class="hljs-number">0.0</span>)));
+
+    <span class="hljs-comment">// composite hills</span>
+    vec3 hill_green = vec3(<span class="hljs-number">0.0</span>, <span class="hljs-number">0.9</span>, <span class="hljs-number">0.0</span>);
+    scene = mix(scene, hill_green, hill_mask(coord_N + vec2(u_time, <span class="hljs-number">0.0</span>)));
+
+    <span class="hljs-comment">// add alpha to scene color, return to pipeline</span>
+    gl_FragColor = vec4(scene, <span class="hljs-number">1.0</span>);
+}
+
+
+
+</code></pre>
 <link type="text/css" rel="stylesheet" href="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.css"/>
 <script type="application/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.js"></script>
 <link type="text/css" href="./shader.css"/>
@@ -98,4 +144,5 @@ for (var i = 0; i < els.length; i++) {
     els[i].addEventListener('click', ()=>el.classList.remove("spoiler"));
 }
 
-</script></div></div></div><div class="container" id="scroll-out"></div></div></body></html>
+</script>
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>

@@ -10,8 +10,9 @@ void main() {
     
     vec2 offset = vec2(
         rand(i),
-        rand(i + vec2(1.0))
+        rand(i + 1.0)
     );
+    
     float d = distance(vec2(0.5, 0.5), f + offset * 0.3);
     float g = step(0.2, d);
     gl_FragColor = vec4(g, g, g, 1.0);
