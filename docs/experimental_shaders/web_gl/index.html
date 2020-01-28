@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><title>WebGL | Comp Form</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-41378785-2"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- open graph--><meta property="og:site_name" content="compform.net"><meta property="og:title" content="WebGL"><meta property="og:description" content="The WebGL API allows JavaScript running in the browser to access  hardware graphics accleration. Today, we'll look at setting up a WebGL context for fullscreen fragment shader drawing."><meta property="og:image"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<polygon points="32,64 0,119.4 64,119.4"/>
+<polygon points="64,8.6 32,64 96,64"/>
+<polygon points="80,91.7 64,119.4 96,119.4"/>
+<polygon points="112,91.7 96,119.4 128,119.4"/>
+<polygon points="96,64 80,91.7 112,91.7"/>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">WebGL</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>WebGL</h1><h6>Overview</h6><p class="description">The WebGL API allows JavaScript running in the browser to access  hardware graphics accleration. Today, we'll look at setting up a WebGL context for fullscreen fragment shader drawing.</p><h6>Tools</h6><p class="software">JavaScript + WebGL API</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="glslcanvas-from-scratch">GLSLCanvas From “Scratch”</h2>
+<blockquote>
+<p>If you wish to make an apple pie from scratch, you must first invent the universe.</p>
+<p>― Carl Sagan, Cosmos</p>
+</blockquote>
+<p>Last week we looked at fragment shader programming using the very handy <a href="https://github.com/patriciogonzalezvivo/glslEditor">glslEditor</a>. This JavaScript tool sets up a WebGL context and runs your fullscreen fragment shader. It provides some basic context information through the uniforms u_resolution, u_mouse, and u_time.</p>
+<p>Even the bare minimum WebGL program has several parts. It needs to create a context, load and compile both a vertex shader and fragment shader, buffer the geometry to draw, and then actually draw it.</p>
+<p>We’ll start with a minimal setup and then add some of the niceties of glslEditor/glslCanvas.</p>
+<h2 id="hello-webgl">Hello, WebGL</h2>
+<h2 id="adding-uniforms">Adding Uniforms</h2>
+<h2 id="gl-fragcoord-vs-uvs">gl_FragCoord vs UVs</h2>
+<h2 id="resources">Resources</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL">MDN: WebGL Tutorial</a></p>
+</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
