@@ -30,6 +30,9 @@ We'll start with a minimal setup and then add some of the niceties of glslEditor
 
 ## Hello, WebGL
 
+
+
+
 ## Adding Uniforms
 
 ## gl_FragCoord vs UVs
