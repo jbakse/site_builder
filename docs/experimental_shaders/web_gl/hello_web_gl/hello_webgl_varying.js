@@ -2,10 +2,14 @@
 // Vertex shader program
 const VS_SOURCE = `
     precision highp float;
-    
+
     attribute vec4 aVertexPosition;
-    
+    attribute vec4 aVertexColor;
+
+    varying vec4 vColor;
+
     void main(void) {
+      vColor = aVertexColor;
       gl_Position = aVertexPosition;
     }
 `;
@@ -15,8 +19,10 @@ const VS_SOURCE = `
 const FS_SOURCE = `
     precision highp float;
 
+    varying vec4 vColor;
+
     void main(void) {
-      gl_FragColor = vec4(gl_FragCoord.x / 640.0, 0.0, 0.0, 1.0);
+      gl_FragColor = vColor;
     }
 `;
 
@@ -53,7 +59,7 @@ function main() {
     //////////////////////////////////////////////
     // query the shaders for attibute and uniform locations
     const vertex_position_location = gl.getAttribLocation(shader_program, 'aVertexPosition');
-
+    const vertex_color_location = gl.getAttribLocation(shader_program, 'aVertexColor');
 
     //////////////////////////////////////////////
     // buffer the vertex data
@@ -70,6 +76,20 @@ function main() {
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
     gl.vertexAttribPointer(vertex_position_location, 2, gl.FLOAT, false, 0, 0);
     gl.enableVertexAttribArray(vertex_position_location);
+
+
+    // vertex color data
+    const color_buffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, color_buffer);
+    const colors = [
+        1.0, 1.0, 1.0, 1.0, // white
+        1.0, 0.0, 0.0, 1.0, // red
+        0.0, 1.0, 0.0, 1.0, // green
+        0.0, 0.0, 1.0, 1.0, // blue
+    ];
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
+    gl.vertexAttribPointer(vertex_color_location, 4, gl.FLOAT, false, 0, 0);
+    gl.enableVertexAttribArray(vertex_color_location);
 
 
     //////////////////////////////////////////////

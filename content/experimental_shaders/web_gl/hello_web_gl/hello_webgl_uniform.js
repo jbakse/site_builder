@@ -2,10 +2,14 @@
 // Vertex shader program
 const VS_SOURCE = `
     precision highp float;
-    
+
     attribute vec4 aVertexPosition;
-    
+    attribute vec4 aVertexColor;
+
+    varying vec4 vColor;
+
     void main(void) {
+      vColor = aVertexColor;
       gl_Position = aVertexPosition;
     }
 `;
@@ -15,10 +19,23 @@ const VS_SOURCE = `
 const FS_SOURCE = `
     precision highp float;
 
+    uniform vec2 u_mouse;
+    uniform float u_time;
+
+    varying vec4 vColor;
+
     void main(void) {
-      gl_FragColor = vec4(gl_FragCoord.x / 640.0, 0.0, 0.0, 1.0);
+      float d = distance(u_mouse, gl_FragCoord.xy);
+      d += u_time * 150.0;
+      d = mod(d, 100.0);
+      d = step(50.0, d);
+
+      gl_FragColor = vec4(vColor.rgb * d, 1.0);
     }
 `;
+
+// stores the mouse position
+let mouse_xy = [0, 0];
 
 main();
 function main() {
@@ -29,6 +46,16 @@ function main() {
     const canvas = document.querySelector('#glcanvas');
     const gl = canvas.getContext('webgl');
 
+
+    //////////////////////////////////////////////
+    // keep track of the mouse position
+    canvas.addEventListener('mousemove', event => {
+        let bounds = canvas.getBoundingClientRect();
+        let x = event.clientX - bounds.left - canvas.clientLeft;
+        let y = event.clientY - bounds.top - canvas.clientTop;
+        mouse_xy = [x, bounds.height - y];
+        // console.log("mouse_xy", mouse_xy);
+    });
 
     //////////////////////////////////////////////
     // compile/link the shader program
@@ -51,9 +78,11 @@ function main() {
 
 
     //////////////////////////////////////////////
-    // query the shaders for attibute and uniform locations
+    // query the shaders for attibute and uniform "locations"
     const vertex_position_location = gl.getAttribLocation(shader_program, 'aVertexPosition');
-
+    const vertex_color_location = gl.getAttribLocation(shader_program, 'aVertexColor');
+    const u_mouse_location = gl.getUniformLocation(shader_program, "u_mouse");
+    const u_time_location = gl.getUniformLocation(shader_program, "u_time");
 
     //////////////////////////////////////////////
     // buffer the vertex data
@@ -72,6 +101,20 @@ function main() {
     gl.enableVertexAttribArray(vertex_position_location);
 
 
+    // vertex color data
+    const color_buffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, color_buffer);
+    const colors = [
+        1.0, 1.0, 1.0, 1.0, // white
+        1.0, 0.0, 0.0, 1.0, // red
+        0.0, 1.0, 0.0, 1.0, // green
+        0.0, 0.0, 1.0, 1.0, // blue
+    ];
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
+    gl.vertexAttribPointer(vertex_color_location, 4, gl.FLOAT, false, 0, 0);
+    gl.enableVertexAttribArray(vertex_color_location);
+
+
     //////////////////////////////////////////////
     // configure gl
     gl.enable(gl.DEPTH_TEST);
@@ -86,9 +129,24 @@ function main() {
     gl.clearDepth(1.0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-    // draw the geometry with our shaders
-    gl.useProgram(shader_program);
-    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+
+    //////////////////////////////////////////////
+    // set up animation loop
+    let start_time = Date.now();
+    function render() {
+        // activate our program
+        gl.useProgram(shader_program);
+
+        // update uniforms
+        gl.uniform2fv(u_mouse_location, mouse_xy);
+        gl.uniform1f(u_time_location, (Date.now() - start_time) * .001);
+
+        // draw the geometry
+        gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+        requestAnimationFrame(render);
+    }
+
+    requestAnimationFrame(render);
 
 }
 
