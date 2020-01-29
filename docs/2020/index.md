@@ -29,8 +29,8 @@ This page houses information specific to the spring 2020 section of Computationa
 | -------------------------------------------- | ---------------------------------------------------------- |
 | [Week 1, January 22](introduction_plan.html) | [Introduction](../introduction), [Tile Graphics](../tiles) |
 | [Week 2, January 29](random_plan.html)       | [Random Values](../random)                                 |
-| [Week 3, February 5](#parameters_plan.html)  | [Parameters](../parameters)                                |
-| [Week 4, February 12](#noise_plan.html)      | [Noise](../noise)                                          |
+| [Week 4, February 5](#noise_plan.html)       | [Noise](../noise)                                          |
+| [Week 3, February 12](#parameters_plan.html) | [Parameters](../parameters)                                |
 | [Week 5, February 19](#strategy_plan.html)   | [Strategy](../strategy)                                    |
 
 ## Exploration Unit
@@ -38,7 +38,6 @@ This page houses information specific to the spring 2020 section of Computationa
 <div class="col-6 col-md-6 overview top">
 Exploration topics and dates subject to change based on student interest. Possible additions: <b>Simulation</b>, <b>Machine Learning</b>, <b>Microgames</b>.
 </div>
-
 
 | Lesson Plan                                   | Topics                                                                       |
 | --------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -60,7 +59,8 @@ Exploration topics and dates subject to change based on student interest. Possib
 ## After-class Lectures
 
 TBA!
-<!-- 
+
+<!--
 | Lesson Plan             | Topics                                                                                                                                  |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | January 25              | My Javascript Workspace                                                                                                                 |
@@ -70,8 +70,6 @@ TBA!
 | March 8                 | [Shaders + Unity Live Code](../shaders)                                                                                                 |
 | April 26                | [Vue.js + Firebase](https://jbakse.github.io/livecode_19_sketchbook/sketchbook/sketchbook.html?sketch=03_firenotes)                     |
 -->
-
-
 
 <style>
 .top {
