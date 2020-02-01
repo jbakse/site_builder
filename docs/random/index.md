@@ -17,15 +17,13 @@ software: p5.js + p5.dom
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
 <script src="../mess/faces_mess.js"></script>
 
-
 ## Random Values
 
-We use the word *random* to mean an hodgepodge of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety. 
+We use the word _random_ to mean an hodgepodge of related ideas. Depending on context we might mean unplanned, unexpected, unpatterned, uncontrolled, or unpredictable. Random values are a staple of procedural generation systems, often used as the main source of variety.
 
-Artists began working with randomness and chance long before the invention of computers. Then, as now, artists had to decide what aspects to control within a piece, and what aspects to leave to chance. 
+Artists began working with randomness and chance long before the invention of computers. Then, as now, artists had to decide what aspects to control within a piece, and what aspects to leave to chance.
 
-The 18th-century composition *Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition*, [which may have been written](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) by Mozart, uses chance to select and sequence pre-composed musical phrases. By placing rules on selection and ordering of the phrases, the system ensures that each variation makes musical sense.
-
+The 18th-century composition _Instructions for the composition of as many waltzes as one desires with two dice, without understanding anything about music or composition_, [which may have been written](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) by Mozart, uses chance to select and sequence pre-composed musical phrases. By placing rules on selection and ordering of the phrases, the system ensures that each variation makes musical sense.
 
 Consider the works below:
 
@@ -36,21 +34,23 @@ Consider the works below:
 @@include('./slides.yaml')
 /::
 
-
-
 ## The Methodical Application of Chance
 
 Using random values in your procedural system doesn't mean your results must be haphazard, uncontrolled, or unorganized. While individual random values are unpredictable, you can use these values to create a coherent cumulative effect.
 
 ::: .activity
+
 ## 2d6 vs 1d12 Chart
+
 Compare the outcomes of rolling 2 6-sided dice to rolling 1 12-sided die.
 
 ### Chart One
+
 Roll two six-sided dice 50 times.<br/>
 Plot the sums.{bigger}
 
 ### Chart Two
+
 Roll a twelve-sided die 50 times.<br/>
 Plot the values.{bigger}
 
@@ -59,8 +59,6 @@ Plot the values.{bigger}
 </p>
 
 /::
-
-
 
 ### Generating Random Numbers
 
@@ -74,56 +72,55 @@ Plain Javascript provides `Math.random()` to generate a random number.
 
 MDN{attrib}
 
-
-
 ### Specifying a Range
 
 `Math.random()` always gives you a value between 0 and 1. If you want a different range, you can scale and offset the value yourself:
 
 ```javascript
-random() * range + start
+random() * range + start;
 
 // even distribution between [10 and 15)
-random() * 5 + 10 
+random() * 5 + 10;
 ```
 
 ### Random Integers
-The `Math.random()` function returns floating point values, but sometimes you want *integers*. The `Math.floor()` function will round a number down, chopping off the decimal part.
+
+The `Math.random()` function returns floating point values, but sometimes you want _integers_. The `Math.floor()` function will round a number down, chopping off the decimal part.
 
 ```javascript
 // roll a standard die
-Math.floor(Math.random()*6) + 1;
+Math.floor(Math.random() * 6) + 1;
 ```
 
-Be careful when generating integers: it is easy to get results that are slightly off. `Math.floor()` rounds down to the nearest integer, so you need to have values that go *above* the highest integer you want returned. 
+Be careful when generating integers: it is easy to get results that are slightly off. `Math.floor()` rounds down to the nearest integer, so you need to have values that go _above_ the highest integer you want returned.
 
 Using `Math.round()` instead of `Math.floor()` can lead to unevenly distributed results. In the example below, `1` will get picked half as often as it should, and `7` will sometimes get picked though it should not.
 
-
 ::: .bad
+
 ```javascript
 // roll a standard die
 // this won't quite work. why?
-Math.floor(Math.random()*7);
+Math.floor(Math.random() * 7);
 
 // this also doesn't quite work. why?
-Math.round(Math.random()*6)+1;
+Math.round(Math.random() * 6) + 1;
 ```
+
 /::
 
 ### p5 `random()`
 
-Processing provides the `random()` function for generating random numbers. Without any parameters, `random()` works very much like `Math.random()` producing numbers between [0 and 1). 
-
+Processing provides the `random()` function for generating random numbers. Without any parameters, `random()` works very much like `Math.random()` producing numbers between [0 and 1).
 
 ```javascript
-console.log("random()");        // random()
-console.log(random());          // 0.45...
-console.log(random());          // 0.12...
-console.log(random());          // 0.37...
+console.log("random()"); // random()
+console.log(random()); // 0.45...
+console.log(random()); // 0.12...
+console.log(random()); // 0.37...
 ```
 
-P5's `random()` function accepts optional parameters to control the range of the number, so you don't have to do it yourself. 
+P5's `random()` function accepts optional parameters to control the range of the number, so you don't have to do it yourself.
 
 ```
 console.log("random(10)");      // random(10) -> range [0, 10)
@@ -141,22 +138,22 @@ P5 provides `floor()` which you can use to generate random integers.
 
 ```javascript
 // roll a standard die
-floor(random(0,6)) + 1
+floor(random(0, 6)) + 1;
 // or
-floor(random(1,7))
+floor(random(1, 7));
 ```
 
 ::: .bad
+
 ```javascript
 // this won't quite work. why?
-floor(random(1,6))
+floor(random(1, 6));
 ```
+
 /::
 
-
-
-
 ### Biased Distribution
+
 The examples above will produce results evenly distributed across their range.
 
 Often even distribution isn’t what you really want. Often you want to **bias** the results towards the low end, high end, or middle. Simple averaging and the `min()` and `max()` functions can help with this.
@@ -164,22 +161,23 @@ Often even distribution isn’t what you really want. Often you want to **bias**
 #### Even Distribution
 
 ```javascript
-random(1,11)
+random(1, 11);
 ```
+
 {bigger}
 
 ::: .callout
 ![even distribution](./figures/even_bias.svg){scale}
 /::
 
-
 #### Low Bias Distribution
 
 Taking the lowest of two or more random numbers will bias the result toward the low end.
 
 ```javascript
-min(random(10), random(10))
+min(random(10), random(10));
 ```
+
 {bigger}
 
 ::: .callout
@@ -189,42 +187,42 @@ min(random(10), random(10))
 The more random numbers you use, the stronger the bias.
 
 ```javascript
-min(random(10), random(10), random(10), random(10))
+min(random(10), random(10), random(10), random(10));
 ```
+
 {bigger}
 
 ::: .callout
 ![even distribution](./figures/low_bias2.svg){scale}
 /::
 
-
 #### High Bias Distribution
 
 Taking the highest of two or more random numbers will bias the result toward the high end.
 
 ```javascript
-max(random(10), random(10))
+max(random(10), random(10));
 ```
+
 {bigger}
 
 ::: .callout
 ![even distribution](./figures/high_bias.svg){scale}
 /::
 
-
 #### Middle Bias Distribution
 
 Averaging two or more random numbers will bias the result toward the middle.
 
 ```javascript
-(random(1,11) + random(1,11)) / 2
+(random(1, 11) + random(1, 11)) / 2;
 ```
+
 {bigger}
 
 ::: .callout
 ![even distribution](./figures/middle_bias.svg){scale}
 /::
-
 
 #### Normal Distribution
 
@@ -235,15 +233,14 @@ Averaging two or more random numbers will bias the result toward the middle.
 If you generate several random numbers and average them, the results get close to **normal distribution**. Normal distribution, or Gaussian distribution, is the "bell curve" distribution which is often found in natural systems.
 
 ```javascript
-(random(1,11) + random(1,11) + random(1,11)) / 3
+(random(1, 11) + random(1, 11) + random(1, 11)) / 3;
 ```
+
 {bigger}
 
 ::: .callout
 ![even distribution](./figures/normal_bias.svg){scale}
 /::
-
-
 
 ::: .links-sidebar
 [P5:<br/> `randomGaussian()`](https://p5js.org/reference/#/p5/randomGaussian)
@@ -253,36 +250,35 @@ If you generate several random numbers and average them, the results get close t
 **Note:** P5 also provides the `randomGaussian()` function for generating numbers with a true normal distribution. With `randomGaussian()` the possible values are not clamped to a range; extreme outliers are just really rare.
 /::
 
-
 #### More Info
+
 [Anydice Dice Calculator](http://anydice.com/)
 
 [Anydice: Three Basic Distributions](http://anydice.com/articles/three-basic-distributions/)
 
 [Redblob: Damage Rolls](https://www.redblobgames.com/articles/probability/damage-rolls.html)
 
-
 ### Dice vs. Decks
 
 When you roll a **die**, you get **random values**. You **might get the same value more than once**, and it **might take a long time to get a particular value**.
 
-If you roll a normal die six times, it is unlikely—*about a 1.5% chance*—that you’ll get all six values without repeats. You have a pretty good chance—*about 33%*–of not rolling any 1s. You can be pretty sure—*98.5% sure*—that at least one number won’t have appeared after six rolls. 
+If you roll a normal die six times, it is unlikely—_about a 1.5% chance_—that you’ll get all six values without repeats. You have a pretty good chance—_about 33%_–of not rolling any 1s. You can be pretty sure—_98.5% sure_—that at least one number won’t have appeared after six rolls.
 
 A **deck of cards** works differently. When you pull cards from a deck, you don't get random values. You get **values in a random order**. You avoid duplicates, and you know you will have toured all the values when you reach the end of the deck.
 
 #### Dice Visualizer
+
 ::: js-lab
 /random/sketches/dice.js
 /::
 
 #### Deck Visualizer
+
 ::: js-lab
 /random/sketches/cards.js
 /::
 
-
 ### Modeling a Deck with an Array
-
 
 ::: .links-sidebar
 [P5:<br/> `shuffle()`](https://p5js.org/reference/#/p5/shuffle)
@@ -298,34 +294,32 @@ var values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var position = 0;
 
 function setup() {
-    // shuffle the deck first
-    values = shuffle(values);
+  // shuffle the deck first
+  values = shuffle(values);
 
-    // pull as many values as we need
-    for(let i = 0; i < 50; i++) {
-        console.log(valueFromDeck());
-    }
+  // pull as many values as we need
+  for (let i = 0; i < 50; i++) {
+    console.log(valueFromDeck());
+  }
 }
 
 function valueFromDeck() {
-    // find the value at the current position in the deck
-    var v = values[position];
+  // find the value at the current position in the deck
+  var v = values[position];
 
-    // change the position for next time
-    position++;
+  // change the position for next time
+  position++;
 
-    // if we run out of "cards", shuffle and start over from the top
-    if (position == values.length) {
-        values = shuffle(values);
-        position = 0;
-    }
+  // if we run out of "cards", shuffle and start over from the top
+  if (position == values.length) {
+    values = shuffle(values);
+    position = 0;
+  }
 
-    // return the value
-    return v;
+  // return the value
+  return v;
 }
 ```
-
-
 
 ### Random Choices
 
@@ -333,18 +327,18 @@ If you want your code to make a decision at random, you can combine `random()` w
 
 ```javascript
 // do something only half the time
-if (random() < .5) {
-    console.log("Optional Thing");
+if (random() < 0.5) {
+  console.log("Optional Thing");
 }
 
 // do something only 10% of the time
-if (random() < .1) {
-    console.log("Rare Thing");
+if (random() < 0.1) {
+  console.log("Rare Thing");
 }
 
 // another way to do something only 10% of the time
 if (random(100) < 10) {
-    console.log("Rare Thing");
+  console.log("Rare Thing");
 }
 ```
 
@@ -352,10 +346,10 @@ With `else` you can pick between two optional things to do.
 
 ```javascript
 // do one thing, or the other. even odds.
-if (random() < .5) {
-    console.log("Option A");
+if (random() < 0.5) {
+  console.log("Option A");
 } else {
-    console.log("Option B");
+  console.log("Option B");
 }
 ```
 
@@ -365,14 +359,14 @@ With `else if` you can pick between multiple optional things to do.
 var r = random(100);
 
 if (r < 20) {
-    // r is < 20
-    console.log("Rare Thing 1 (20%)");
-} else if (r < 40){
-    // r is >= 20 and < 40
-    console.log("Rare Thing 2 (20%)"); 
+  // r is < 20
+  console.log("Rare Thing 1 (20%)");
+} else if (r < 40) {
+  // r is >= 20 and < 40
+  console.log("Rare Thing 2 (20%)");
 } else {
-    // r is >= 40
-    console.log("Normal Thing (60%)");
+  // r is >= 40
+  console.log("Normal Thing (60%)");
 }
 ```
 
@@ -385,30 +379,31 @@ A common mistake when following this pattern is calling random multiple times. I
 ```javascript
 // this code doesn't work as expected
 if (random(100) < 20) {
-    // Actually a 20% chance
-    console.log("Rare Thing 1 (20%)"); 
-} else if (random(100) < 40){
-    // Actually a 32% chance
-    console.log("Rare Thing 2 (20%)");
+  // Actually a 20% chance
+  console.log("Rare Thing 1 (20%)");
+} else if (random(100) < 40) {
+  // Actually a 32% chance
+  console.log("Rare Thing 2 (20%)");
 } else {
-    // Actually a 48% chance
-    console.log("Normal Thing (60%)"); 
+  // Actually a 48% chance
+  console.log("Normal Thing (60%)");
 }
 ```
 
 /::
 
-
-
 ::: .activity
 
 ## Skyline Tactic Match
+
 Study the example city skylines below. Each skyline was made using a different tactic for picking random values. <br/> Match each skyline to its corresponding tactic.
 
 ### Tactics
+
 Pure Random, Low Bias, Normal Bias, High Bias, Deck{bigger}
 
 ### Skylines
+
 ![deck.png](./figures/city_deck.png){scale}
 
 ![low.png](./figures/city_low.png){scale}
@@ -422,19 +417,16 @@ Pure Random, Low Bias, Normal Bias, High Bias, Deck{bigger}
 ### Discuss
 
 - Which tactic is the "best"?
-- When would you choose to use different types of bias? 
+- When would you choose to use different types of bias?
 - Where is each type of bias found in the world?
 
 /::
-
-
-
 
 ## Pseudo-random vs. Random
 
 Computers are deterministic systems. When a computer is in a particular state and performs a specific instruction, the resulting state will always be the same. **The results are never random.**
 
-So how can `random()` produce a random value? Technically, it can't. It can produce values that *appear to be random*, called **pseudorandom values**. Pseudorandom values appear random—unless you look very closely—but are created by a deterministic process.
+So how can `random()` produce a random value? Technically, it can't. It can produce values that _appear to be random_, called **pseudorandom values**. Pseudorandom values appear random—unless you look very closely—but are created by a deterministic process.
 
 A common method to create pseudorandom values is a [Linear Congruential Generator](https://en.wikipedia.org/wiki/Linear_congruential_generator).
 
@@ -444,7 +436,7 @@ LCGs begin with an initial value called the **seed**, then use multiplication, a
 /random/sketches/random_lcg.js
 /::
 
-For our purposes, it is not important to understand exactly how the generator works. 
+For our purposes, it is not important to understand exactly how the generator works.
 
 **It is important to understand that the sequence of `random()` numbers is perfectly predictable, if you know the seed.**
 
@@ -453,7 +445,6 @@ For our purposes, it is not important to understand exactly how the generator wo
 ::: .links-sidebar
 [P5:<br/> `randomSeed()`](https://p5js.org/reference/#/p5/randomSeed)
 /::
-
 
 P5 provides `randomSeed()` to set the **seed** used by `random()`. Once you have set the seed, the sequence of values produced by random will always be the same.
 
@@ -473,15 +464,16 @@ Be careful when relying on the seed to get random but repeatable results. There 
 Javascript does not provide any way for you to set the seed used by `Math.random()`, so if you need to set the seed and are not using p5, you'll need to find and use another Javascript library for generating random numbers.
 /::
 
-
 ::: .activity
+
 ## Pencil + Paper LCG
+
 Explore how an Linear Congruential Generator works by generating pseudo-random values by hand.
 
 ### Instructions
+
 1. Enter your assigned seed in the top box.
 2. Follow the arrows, perform the indicated operations, and put each result in the following box.
-
 
 <p class="boxed download">
     <a href="../handouts/lcg_random.svg" download>lcg_random.svg</a>
@@ -489,29 +481,30 @@ Explore how an Linear Congruential Generator works by generating pseudo-random v
 
 /::
 
-
-
 ## Study Examples
 
 The following study examples demonstrate different ways to bias and map random values to get different looks and effects. Carefully study each example to understand how it works. Several of the examples offer varied approaches which can be commented in and out to compare their results.
 
 ### Skyline
+
 ::: js-lab
 /random/sketches/skyline.js
 /::
 
-
 ### Small Multiples
+
 ::: js-lab
 /random/sketches/small_mult.js
 /::
 
 ### Grass
+
 ::: js-lab
 /random/sketches/grass.js
 /::
 
 ### Brownian Motion
+
 ::: js-lab
 /random/sketches/brownian.js
 /::
@@ -519,16 +512,16 @@ The following study examples demonstrate different ways to bias and map random v
 [Wikipedia: Brownian Motion](https://en.wikipedia.org/wiki/Brownian_motion)
 
 ### Horizon
+
 ::: js-lab
 /random/sketches/horizon.js
 /::
 
-
 ::: .activity
+
 ## In-class Challenge
 
 Explore the study examples above by completing the following challenges in order. <br/> Don't skip any.
-
 
 | Time                 | Comment                                                                              |
 | -------------------- | ------------------------------------------------------------------------------------ |
@@ -536,47 +529,48 @@ Explore the study examples above by completing the following challenges in order
 | 6 in 20 Minutes      | Good.                                                                                |
 | All 10 in 20 Minutes | Great.                                                                               |
 
-
 ### Modify the Small Multiples Example
+
 1. Change the background color to dark grey.
 2. Change the circle color to white.
 3. Draw each circle filled with a randomly-chosen color.
 
 ### Modify the Grass Example
+
 1. Make the grass taller.
 2. Make the grass green.
 3. Make the grass messier.
-{continue}
+   {continue}
 
 ### Challenging Challenges
+
 1. Modify the small multiples example so that each row is a randomly-chosen color.
 2. Modify the small multiples example so that each column is a randomly-chosen color.
 3. Modify the grass example so that each blade of grass is a different, randomly-chosen shade of green.
 4. Modify the grass example so that the short grass is darker.
-{continue}
-
+   {continue}
 
 /::
-
-
 
 ::: .assignment
 
 ## Sketch!
 
 ### Base
+
 Experiment with procedurally generating images using `random()`. Explore each of the tactics discussed above. Post your results to the Sketchblog.
 
+### Individual Challenge: Master Study
 
-### Challenge: Master Study
 Kasimir Malevich, Mark Rothko, Piet Modrian, and Anni Albers all worked with basic shapes, color, and natural media. Create a sketch that generates new works in the style of one of these artists. Pay particular attention to the subtleties and textures of your chosen artist's work. How closely can you recreate these subtleties?
+
+### Pair Challenge: Deck
+
+Working with a partner from the class, create a sketch that generates random images. All randomly chosen values should use the deck tactic discussed above. Work together in the same place and time. Both you and your partner should post output from your sketch.
 
 /::
 
-
-
 ## Reference Links
-
 
 [Mozart's Musikalisches Würfelspiel](http://sunsite.univie.ac.at/Mozart/dice/)
 : Essay on Mozart's 1787 musical dice game. This webpage is from 1995!
