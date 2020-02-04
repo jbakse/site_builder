@@ -32,7 +32,7 @@ This class will utilize an experimental format. The first half of the course wil
 | [Week 1, January 22](lesson_plans.html)       | [Thinking in Shaders](thinking_in_shaders/) |
 | [Crash Course, January 25](lesson_plans.html) | [Crash Course](crash_course)                |
 | [Week 2, Januray 29](#)                       | [Shaders in WebGL + 2D Techniques](web_gl)  |
-| [Week 3, February 5](#)                       | Shaders in Unity + 3D Techniques            |
+| [Week 3, February 5](#)                       | [Shaders in Unity + 3D Techniques](unity)   |
 | [Week 4, February 12](#)                      | Working with Textures                       |
 | [Week 5, February 19](#)                      | Vertex Shaders or TBA                       |
 
@@ -40,7 +40,7 @@ This class will utilize an experimental format. The first half of the course wil
 
 | Lesson Plan              | Topics                   |
 | ------------------------ | ------------------------ |
-| [Week 6, February 26](#) | Student Workshops or TBA |
+| [Week 6, February 26](#) | Guest: Char Stiles       |
 | [Week 7, March 4](#)     | Student Workshops        |
 | [Week 8, March 11](#)    | Student Workshops        |
 | Week 9, March 18 {gray}  | Spring Break {gray}      |
