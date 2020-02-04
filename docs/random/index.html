@@ -159,33 +159,33 @@ Plot the values.</p>
 <p class="attrib">MDN</p>
 <h3 id="specifying-a-range">Specifying a Range</h3>
 <p><code>Math.random()</code> always gives you a value between 0 and 1. If you want a different range, you can scale and offset the value yourself:</p>
-<pre><code class="language-javascript">random() * range + start
+<pre><code class="language-javascript">random() * range + start;
 
 <span class="hljs-comment">// even distribution between [10 and 15)</span>
-random() * <span class="hljs-number">5</span> + <span class="hljs-number">10</span> 
+random() * <span class="hljs-number">5</span> + <span class="hljs-number">10</span>;
 </code></pre>
 <h3 id="random-integers">Random Integers</h3>
 <p>The <code>Math.random()</code> function returns floating point values, but sometimes you want <em>integers</em>. The <code>Math.floor()</code> function will round a number down, chopping off the decimal part.</p>
 <pre><code class="language-javascript"><span class="hljs-comment">// roll a standard die</span>
-<span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">6</span>) + <span class="hljs-number">1</span>;
+<span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">6</span>) + <span class="hljs-number">1</span>;
 </code></pre>
 <p>Be careful when generating integers: it is easy to get results that are slightly off. <code>Math.floor()</code> rounds down to the nearest integer, so you need to have values that go <em>above</em> the highest integer you want returned.</p>
 <p>Using <code>Math.round()</code> instead of <code>Math.floor()</code> can lead to unevenly distributed results. In the example below, <code>1</code> will get picked half as often as it should, and <code>7</code> will sometimes get picked though it should not.</p>
 <div id="" class="bad">
 <pre><code class="language-javascript"><span class="hljs-comment">// roll a standard die</span>
 <span class="hljs-comment">// this won't quite work. why?</span>
-<span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">7</span>);
+<span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">7</span>);
 
 <span class="hljs-comment">// this also doesn't quite work. why?</span>
-<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">6</span>)+<span class="hljs-number">1</span>;
+<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">6</span>) + <span class="hljs-number">1</span>;
 </code></pre>
 </div>
 <h3 id="p5-random">p5 <code>random()</code></h3>
 <p>Processing provides the <code>random()</code> function for generating random numbers. Without any parameters, <code>random()</code> works very much like <code>Math.random()</code> producing numbers between [0 and 1).</p>
-<pre><code class="language-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"random()"</span>);        <span class="hljs-comment">// random()</span>
-<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.45...</span>
-<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.12...</span>
-<span class="hljs-built_in">console</span>.log(random());          <span class="hljs-comment">// 0.37...</span>
+<pre><code class="language-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"random()"</span>); <span class="hljs-comment">// random()</span>
+<span class="hljs-built_in">console</span>.log(random()); <span class="hljs-comment">// 0.45...</span>
+<span class="hljs-built_in">console</span>.log(random()); <span class="hljs-comment">// 0.12...</span>
+<span class="hljs-built_in">console</span>.log(random()); <span class="hljs-comment">// 0.37...</span>
 </code></pre>
 <p>P5’s <code>random()</code> function accepts optional parameters to control the range of the number, so you don’t have to do it yourself.</p>
 <pre><code>console.log(&quot;random(10)&quot;);      // random(10) -&gt; range [0, 10)
@@ -200,20 +200,20 @@ console.log(random(20, 30));    // 22.36...
 </code></pre>
 <p>P5 provides <code>floor()</code> which you can use to generate random integers.</p>
 <pre><code class="language-javascript"><span class="hljs-comment">// roll a standard die</span>
-floor(random(<span class="hljs-number">0</span>,<span class="hljs-number">6</span>)) + <span class="hljs-number">1</span>
+floor(random(<span class="hljs-number">0</span>, <span class="hljs-number">6</span>)) + <span class="hljs-number">1</span>;
 <span class="hljs-comment">// or</span>
-floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">7</span>))
+floor(random(<span class="hljs-number">1</span>, <span class="hljs-number">7</span>));
 </code></pre>
 <div id="" class="bad">
 <pre><code class="language-javascript"><span class="hljs-comment">// this won't quite work. why?</span>
-floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</span>))
+floor(random(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>));
 </code></pre>
 </div>
 <h3 id="biased-distribution">Biased Distribution</h3>
 <p>The examples above will produce results evenly distributed across their range.</p>
 <p>Often even distribution isn’t what you really want. Often you want to <strong>bias</strong> the results towards the low end, high end, or middle. Simple averaging and the <code>min()</code> and <code>max()</code> functions can help with this.</p>
 <h4 id="even-distribution">Even Distribution</h4>
-<pre><code class="language-javascript">random(<span class="hljs-number">1</span>,<span class="hljs-number">11</span>)
+<pre><code class="language-javascript">random(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>);
 </code></pre>
 <p></p>
 <div id="" class="callout">
@@ -221,14 +221,14 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 </div>
 <h4 id="low-bias-distribution">Low Bias Distribution</h4>
 <p>Taking the lowest of two or more random numbers will bias the result toward the low end.</p>
-<pre><code class="language-javascript">min(random(<span class="hljs-number">10</span>), random(<span class="hljs-number">10</span>))
+<pre><code class="language-javascript">min(random(<span class="hljs-number">10</span>), random(<span class="hljs-number">10</span>));
 </code></pre>
 <p></p>
 <div id="" class="callout">
 <p class="scale"><img src="./figures/low_bias.svg" alt="even distribution"></p>
 </div>
 <p>The more random numbers you use, the stronger the bias.</p>
-<pre><code class="language-javascript">min(random(<span class="hljs-number">10</span>), random(<span class="hljs-number">10</span>), random(<span class="hljs-number">10</span>), random(<span class="hljs-number">10</span>))
+<pre><code class="language-javascript">min(random(<span class="hljs-number">10</span>), random(<span class="hljs-number">10</span>), random(<span class="hljs-number">10</span>), random(<span class="hljs-number">10</span>));
 </code></pre>
 <p></p>
 <div id="" class="callout">
@@ -236,7 +236,7 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 </div>
 <h4 id="high-bias-distribution">High Bias Distribution</h4>
 <p>Taking the highest of two or more random numbers will bias the result toward the high end.</p>
-<pre><code class="language-javascript">max(random(<span class="hljs-number">10</span>), random(<span class="hljs-number">10</span>))
+<pre><code class="language-javascript">max(random(<span class="hljs-number">10</span>), random(<span class="hljs-number">10</span>));
 </code></pre>
 <p></p>
 <div id="" class="callout">
@@ -244,7 +244,7 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 </div>
 <h4 id="middle-bias-distribution">Middle Bias Distribution</h4>
 <p>Averaging two or more random numbers will bias the result toward the middle.</p>
-<pre><code class="language-javascript">(random(<span class="hljs-number">1</span>,<span class="hljs-number">11</span>) + random(<span class="hljs-number">1</span>,<span class="hljs-number">11</span>)) / <span class="hljs-number">2</span>
+<pre><code class="language-javascript">(random(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>) + random(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>)) / <span class="hljs-number">2</span>;
 </code></pre>
 <p></p>
 <div id="" class="callout">
@@ -255,7 +255,7 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 <p><a href="https://en.wikipedia.org/wiki/Normal_distribution">Wikipedia:<br/> Normal Distribution</a></p>
 </div>
 <p>If you generate several random numbers and average them, the results get close to <strong>normal distribution</strong>. Normal distribution, or Gaussian distribution, is the “bell curve” distribution which is often found in natural systems.</p>
-<pre><code class="language-javascript">(random(<span class="hljs-number">1</span>,<span class="hljs-number">11</span>) + random(<span class="hljs-number">1</span>,<span class="hljs-number">11</span>) + random(<span class="hljs-number">1</span>,<span class="hljs-number">11</span>)) / <span class="hljs-number">3</span>
+<pre><code class="language-javascript">(random(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>) + random(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>) + random(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>)) / <span class="hljs-number">3</span>;
 </code></pre>
 <p></p>
 <div id="" class="callout">
@@ -301,69 +301,69 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 <span class="hljs-keyword">var</span> position = <span class="hljs-number">0</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-comment">// shuffle the deck first</span>
-    values = shuffle(values);
+  <span class="hljs-comment">// shuffle the deck first</span>
+  values = shuffle(values);
 
-    <span class="hljs-comment">// pull as many values as we need</span>
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">50</span>; i++) {
-        <span class="hljs-built_in">console</span>.log(valueFromDeck());
-    }
+  <span class="hljs-comment">// pull as many values as we need</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">50</span>; i++) {
+    <span class="hljs-built_in">console</span>.log(valueFromDeck());
+  }
 }
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">valueFromDeck</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-comment">// find the value at the current position in the deck</span>
-    <span class="hljs-keyword">var</span> v = values[position];
+  <span class="hljs-comment">// find the value at the current position in the deck</span>
+  <span class="hljs-keyword">var</span> v = values[position];
 
-    <span class="hljs-comment">// change the position for next time</span>
-    position++;
+  <span class="hljs-comment">// change the position for next time</span>
+  position++;
 
-    <span class="hljs-comment">// if we run out of "cards", shuffle and start over from the top</span>
-    <span class="hljs-keyword">if</span> (position == values.length) {
-        values = shuffle(values);
-        position = <span class="hljs-number">0</span>;
-    }
+  <span class="hljs-comment">// if we run out of "cards", shuffle and start over from the top</span>
+  <span class="hljs-keyword">if</span> (position == values.length) {
+    values = shuffle(values);
+    position = <span class="hljs-number">0</span>;
+  }
 
-    <span class="hljs-comment">// return the value</span>
-    <span class="hljs-keyword">return</span> v;
+  <span class="hljs-comment">// return the value</span>
+  <span class="hljs-keyword">return</span> v;
 }
 </code></pre>
 <h3 id="random-choices">Random Choices</h3>
 <p>If you want your code to make a decision at random, you can combine <code>random()</code> with a conditional—<code>if</code>—statement.</p>
 <pre><code class="language-javascript"><span class="hljs-comment">// do something only half the time</span>
-<span class="hljs-keyword">if</span> (random() &lt; <span class="hljs-number">.5</span>) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Optional Thing"</span>);
+<span class="hljs-keyword">if</span> (random() &lt; <span class="hljs-number">0.5</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Optional Thing"</span>);
 }
 
 <span class="hljs-comment">// do something only 10% of the time</span>
-<span class="hljs-keyword">if</span> (random() &lt; <span class="hljs-number">.1</span>) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing"</span>);
+<span class="hljs-keyword">if</span> (random() &lt; <span class="hljs-number">0.1</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing"</span>);
 }
 
 <span class="hljs-comment">// another way to do something only 10% of the time</span>
 <span class="hljs-keyword">if</span> (random(<span class="hljs-number">100</span>) &lt; <span class="hljs-number">10</span>) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing"</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing"</span>);
 }
 </code></pre>
 <p>With <code>else</code> you can pick between two optional things to do.</p>
 <pre><code class="language-javascript"><span class="hljs-comment">// do one thing, or the other. even odds.</span>
-<span class="hljs-keyword">if</span> (random() &lt; <span class="hljs-number">.5</span>) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Option A"</span>);
+<span class="hljs-keyword">if</span> (random() &lt; <span class="hljs-number">0.5</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Option A"</span>);
 } <span class="hljs-keyword">else</span> {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Option B"</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Option B"</span>);
 }
 </code></pre>
 <p>With <code>else if</code> you can pick between multiple optional things to do.</p>
 <pre><code class="language-javascript"><span class="hljs-keyword">var</span> r = random(<span class="hljs-number">100</span>);
 
 <span class="hljs-keyword">if</span> (r &lt; <span class="hljs-number">20</span>) {
-    <span class="hljs-comment">// r is &lt; 20</span>
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 1 (20%)"</span>);
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (r &lt; <span class="hljs-number">40</span>){
-    <span class="hljs-comment">// r is &gt;= 20 and &lt; 40</span>
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 2 (20%)"</span>); 
+  <span class="hljs-comment">// r is &lt; 20</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 1 (20%)"</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (r &lt; <span class="hljs-number">40</span>) {
+  <span class="hljs-comment">// r is &gt;= 20 and &lt; 40</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 2 (20%)"</span>);
 } <span class="hljs-keyword">else</span> {
-    <span class="hljs-comment">// r is &gt;= 40</span>
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Normal Thing (60%)"</span>);
+  <span class="hljs-comment">// r is &gt;= 40</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Normal Thing (60%)"</span>);
 }
 </code></pre>
 <p>A common mistake when following this pattern is calling random multiple times. If you are making one choice between several options, you only want to call <code>random()</code> once.</p>
@@ -371,14 +371,14 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 <div id="" class="bad">
 <pre><code class="language-javascript"><span class="hljs-comment">// this code doesn't work as expected</span>
 <span class="hljs-keyword">if</span> (random(<span class="hljs-number">100</span>) &lt; <span class="hljs-number">20</span>) {
-    <span class="hljs-comment">// Actually a 20% chance</span>
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 1 (20%)"</span>); 
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (random(<span class="hljs-number">100</span>) &lt; <span class="hljs-number">40</span>){
-    <span class="hljs-comment">// Actually a 32% chance</span>
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 2 (20%)"</span>);
+  <span class="hljs-comment">// Actually a 20% chance</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 1 (20%)"</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (random(<span class="hljs-number">100</span>) &lt; <span class="hljs-number">40</span>) {
+  <span class="hljs-comment">// Actually a 32% chance</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 2 (20%)"</span>);
 } <span class="hljs-keyword">else</span> {
-    <span class="hljs-comment">// Actually a 48% chance</span>
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Normal Thing (60%)"</span>); 
+  <span class="hljs-comment">// Actually a 48% chance</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Normal Thing (60%)"</span>);
 }
 </code></pre>
 </div>
@@ -536,8 +536,10 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 <h2 id="sketch">Sketch!</h2>
 <h3 id="base">Base</h3>
 <p>Experiment with procedurally generating images using <code>random()</code>. Explore each of the tactics discussed above. Post your results to the Sketchblog.</p>
-<h3 id="challenge-master-study">Challenge: Master Study</h3>
+<h3 id="individual-challenge-master-study">Individual Challenge: Master Study</h3>
 <p>Kasimir Malevich, Mark Rothko, Piet Modrian, and Anni Albers all worked with basic shapes, color, and natural media. Create a sketch that generates new works in the style of one of these artists. Pay particular attention to the subtleties and textures of your chosen artist’s work. How closely can you recreate these subtleties?</p>
+<h3 id="pair-challenge-deck">Pair Challenge: Deck</h3>
+<p>Working with a partner from the class, create a sketch that generates random images. All randomly chosen values should use the deck tactic discussed above. Work together in the same place and time. Both you and your partner should post output from your sketch.</p>
 </div>
 <h2 id="reference-links">Reference Links</h2>
 <dl>
