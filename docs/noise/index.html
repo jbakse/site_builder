@@ -321,31 +321,30 @@ Value Noise</p>
 <h3 id="controlling-the-frequency">Controlling the Frequency</h3>
 <p>You can control the frequency of returned values by scaling the values you pass in for <code>x</code>, <code>y</code>, and <code>z</code>.</p>
 <pre><code class="language-javascript"><span class="hljs-comment">// get a value that changes over time</span>
-n = noise(frameCount); 
+n = noise(frameCount);
 
 <span class="hljs-comment">// get a value that changes over time more slowly</span>
-n = noise(frameCount * <span class="hljs-number">.1</span>); 
+n = noise(frameCount * <span class="hljs-number">0.1</span>);
 
 <span class="hljs-comment">// get a value that changes over time more quickly</span>
-n = noise(frameCount * <span class="hljs-number">10</span>); 
-
+n = noise(frameCount * <span class="hljs-number">10</span>);
 </code></pre>
 <h3 id="controlling-the-amplitude-and-range">Controlling the Amplitude and Range</h3>
 <p>The <code>noise(x)</code> function returns values in the range of 0 to 1. Use multiplication and addition to shift values to the range you need. Be aware that while <code>random()</code> provides evenly-distributed values, <code>noise()</code> values are biased towards the middle.</p>
 <pre><code class="language-javascript"><span class="hljs-comment">// scale values to sit between 10 and 20;</span>
-n = noise(frameCount) * <span class="hljs-number">10</span> + <span class="hljs-number">10</span>; 
+n = noise(frameCount) * <span class="hljs-number">10</span> + <span class="hljs-number">10</span>;
 </code></pre>
 <p>You could also use <code>map()</code>:</p>
 <pre><code class="language-javascript"><span class="hljs-comment">// get values from 0 to 1</span>
-n = noise(frameCount); 
+n = noise(frameCount);
 <span class="hljs-comment">// map to 10 to 20</span>
-n = map(n, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>);  
+n = map(n, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>);
 </code></pre>
 <h3 id="controlling-the-detail">Controlling the Detail</h3>
 <div id="" class="links-sidebar">
 <p><a href="https://p5js.org/reference/#/p5/noiseDetail">p5:<br/>noiseDetail()</a></p>
 </div>
-<p>The <code>noiseDetail()</code>  function allows you to control the “roughness” or “detail” of the noise returned.</p>
+<p>The <code>noiseDetail()</code> function allows you to control the “roughness” or “detail” of the noise returned.</p>
 <!--[[Sometimes in sketches you call this octaves, sometimes detail. Maybe make clear that octaves, detail, and roughness all refer to the same noiseDetail() function. "Octaves" especially might require explanation, since the function itself is just called "detail".]]-->
 <h3 id="controlling-the-seed">Controlling the Seed</h3>
 <div id="" class="links-sidebar">
@@ -452,6 +451,18 @@ n = map(n, <span class="hljs-number">0</span>, <span class="hljs-number">1</span
 <li>Each map should be shown as an image, not a video.</li>
 <li>Consider posting a first run at this challenge early in the week, and then revisiting it towards the end of the week with a second post.</li>
 </ul>
+<h3 id="pair-challenge-layer-tennis">Pair Challenge: Layer Tennis</h3>
+<h4 id="part-1">Part 1</h4>
+<ol>
+<li>Create an computationally generated image.</li>
+<li>Pass the image—not the code—to your partner.</li>
+</ol>
+<h4 id="part-2">Part 2</h4>
+<ol>
+<li>Receive a computationally generated image from your partner.</li>
+<li>Create a computationally generated image in response.</li>
+<li>Composite your image and their image in photoshop and post the result.</li>
+</ol>
 </div>
 <h2 id="reference-links">Reference Links</h2>
 <dl>
