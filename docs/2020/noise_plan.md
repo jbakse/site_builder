@@ -101,13 +101,14 @@ Challenges
 
 ::: .headless
 | Group | Question |
-| ----- | --------------------------------------------------------------------------------------------------------------------------------- |
-| 1 | Batool, Noah, Kathrin <br/>Choose a common theme that has appeared in several pieces. Discuss the theme and two example sketches. |
-| 2 | Andrew, Fei, Archit <br/>Choose a work that you feel used parameters is a very well. Why did you choose this piece? |
-| 3 | Felix, Kevin, Ray <br/>Choose a work that you like and and don't know how it was made. Describe what you see. |
-| 4 | Alonso, Josefina, Akshansh <br/>Choose a sketch that you think started with plan. What benefits did starting with a plan have? |
-| 5 | Anna, Tinsley, Brooke <br/>Choose a sketch that you think started without a plan. What benefits did starting without a plan have? |
-| 6 | Janice, Jungu <br/>The challenge is not a competition. Who won? |
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 | Isabel, Simon, Elena <br/>When allowing chance to influence their artwork, does an artist give up authorship? |
+| 2 | Mickell, Neena, Dit <br/>Choose two sketches that you believe demonstrate a biasing technique discussed last week. What kind of bias do you think was used in each? |
+| 3 | Sungmin, Munro, Robin, Ran <br/>Does computationally generated art have an inherent aesthetic? |
+| 4 | Fifi, Yang, Adam, OJ <br/>Choose a work that combines procedural and non-procedural elements well. What works about this piece? |
+| 5 | Yoon, Amanda, Ran <br/>Choose a project that presents an interesting direction for further design inquiry. Suggest 5 possible avenues of development for this project. |
+| 6 | John, Karen, Ping <br/>The individual challenge is not a competition. But who won? |
+/::
 /::
 
 /::
