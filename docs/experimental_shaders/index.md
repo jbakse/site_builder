@@ -19,7 +19,10 @@ This class will utilize an experimental format. The first half of the course wil
 # Course Materials
 
 ### [Syllabus](syllabus.html)
+
 ### [Assignment Zero](assignment_0.html)
+
+### [Example Proposal](example_proposal.html)
 
 # Resources
 
@@ -51,9 +54,6 @@ This class will utilize an experimental format. The first half of the course wil
 | [Week 14, April 26](#)   | No Class                 |
 | [Week 15, April 29](#)   | No Class                 |
 | [Week 16, May 6](#)      | No Class                 |
-
-
-
 
 <style>
 .top {
