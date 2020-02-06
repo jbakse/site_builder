@@ -27,7 +27,7 @@ Last week we looked at fragment shader programming using the very handy [glslEdi
 Today we'll build get a fragment shader running without glslEditor, working from scratch: vanilla JavaScript and the WebGL API. We'll start with a minimal setup and then add some of the niceties of glslEditor/glslCanvas.
 
 By the end, we should have something like this:
-<iframe style = "border: 0; width: 100%; height: 400px;"src = "./hello_web_gl/"></iframe>
+<iframe style = "border: 0; width: 100%; height: 400px;"src = "./hello_web_gl/demo.html"></iframe>
 
 ## Hello, WebGL
 I like to start every program with a minimal hello world. Hopefully just a few lines of code to get something on the screen and make sure everything is working correctly. That way, if something does go wrong, I only have to look through a few lines of code to find the problem. 

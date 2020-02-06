@@ -12,7 +12,7 @@ next_url:
 hero_title: Shading 3D Objects
 description: In a typcial 3D graphics pipeline, the fragment shader is used to "shade" a 3D object. The fragment shader considers the surface qualities of the object and the environmental lighting and determines how each pixel covered by the object should look. Today we'll create a basic lit shader in Unity.
 
-software: ShaderToy + glslCanvas
+software: Unity Game Engine
 ---
 
 ## Demo Project
