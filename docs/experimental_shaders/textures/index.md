@@ -41,7 +41,19 @@ software: WebGL
 ### 02_color/
 <iframe scrolling="no" style = "border: 0; width: 512px; height: 512px; overflow: hidden;"src = "./02_color"></iframe>
 
-- Convolutional Blur
+
+### 03_color/
+<iframe scrolling="no" style = "border: 0; width: 512px; height: 512px; overflow: hidden;"src = "./03_blur"></iframe>
+
+### 04_emboss/
+<iframe scrolling="no" style = "border: 0; width: 512px; height: 512px; overflow: hidden;"src = "./04_emboss"></iframe>
+
+[Convolution Explorer](https://www.taylorpetrick.com/portfolio/webgl/convolution)
+[Jam3/glsl-fast-gaussian-blur](https://github.com/Jam3/glsl-fast-gaussian-blur);
+[Wikipedia: Kernel Image Processing](https://en.wikipedia.org/wiki/Kernel_(image_processing))
+
+
+
 - Other Convolutions
 
 # Textures as Data
