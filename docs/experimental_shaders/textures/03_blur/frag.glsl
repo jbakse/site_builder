@@ -24,18 +24,23 @@ void main() {
     vec4 blur = vec4(0.0);
     
     // horizontal box blur
-    blur += texture2D(u_sampler, uv - (2.0 / u_resolution)) * 0.2;
-    blur += texture2D(u_sampler, uv - (1.0 / u_resolution)) * 0.2;
-    blur += texture2D(u_sampler, uv) * 0.2;
-    blur += texture2D(u_sampler, uv + (1.0 / u_resolution)) * 0.2;
-    blur += texture2D(u_sampler, uv + (2.0 / u_resolution)) * 0.2;
+    blur += texture2D(u_sampler, uv - vec2(3.0 / u_resolution.x, 0.0));
+    blur += texture2D(u_sampler, uv - vec2(2.0 / u_resolution.x, 0.0));
+    blur += texture2D(u_sampler, uv - vec2(1.0 / u_resolution.x, 0.0));
+    blur += texture2D(u_sampler, uv);
+    blur += texture2D(u_sampler, uv + vec2(1.0 / u_resolution.x, 0.0));
+    blur += texture2D(u_sampler, uv + vec2(2.0 / u_resolution.x, 0.0));
+    blur += texture2D(u_sampler, uv + vec2(4.0 / u_resolution.x, 0.0));
+    blur /= 7.0;
     
-    // horizontal gaussian-ish blur
-    // blur += texture2D(u_sampler, uv - (2.0 / u_resolution)) * 0.1;
-    // blur += texture2D(u_sampler, uv - (1.0 / u_resolution)) * 0.2;
-    // blur += texture2D(u_sampler, uv) * 0.4;
-    // blur += texture2D(u_sampler, uv + (1.0 / u_resolution)) * 0.2;
-    // blur += texture2D(u_sampler, uv + (2.0 / u_resolution)) * 0.1;
+    // horizontal gaussian-ish blur (i didn't actually look up or calc the constants)
+    // blur += texture2D(u_sampler, uv - vec2(3.0 / u_resolution.x, 0.0)) * 0.00598;
+    // blur += texture2D(u_sampler, uv - vec2(2.0 / u_resolution.x, 0.0)) * 0.060626;
+    // blur += texture2D(u_sampler, uv - vec2(1.0 / u_resolution.x, 0.0)) * 0.241843;
+    // blur += texture2D(u_sampler, uv) * 0.383103;
+    // blur += texture2D(u_sampler, uv + vec2(1.0 / u_resolution.x, 0.0)) * 0.241843;
+    // blur += texture2D(u_sampler, uv + vec2(2.0 / u_resolution.x, 0.0)) * 0.060626;
+    // blur += texture2D(u_sampler, uv + vec2(4.0 / u_resolution.x, 0.0)) * 0.00598;
     
     gl_FragColor = mix(color, blur, step(0.5, uv.x));
 }

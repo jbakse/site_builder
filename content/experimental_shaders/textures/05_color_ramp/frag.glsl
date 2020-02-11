@@ -39,9 +39,9 @@ void main() {
     float circle_2_sdf = circle(coord_N - vec2(0.6, 0.6), 0.1);
     
     float d = min(circle_1_sdf, circle_2_sdf);
+    d += 0.14;
     d *= 2.0;
-    
-    d = clamp(d, 0.0, 1.0);
+    d = clamp(d, 0.01, 0.99);
     
     // float g = step(0.1, fract(d * 30.0));
     // g = min(g, step(0.0, d));
