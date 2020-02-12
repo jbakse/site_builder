@@ -93,7 +93,7 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <p>The following code has been adapted from a real program that displays animated messages.</p>
 <div id="" class="bad">
 <pre><code class="language-javascript"><span class="hljs-comment">// original version</span>
-offset = (<span class="hljs-number">40</span> * transitionPercent) + (transitionPercent * sin(i + <span class="hljs-number">3</span> * <span class="hljs-number">.5</span>) * <span class="hljs-number">80</span>);
+offset = <span class="hljs-number">40</span> * transitionPercent + transitionPercent * sin(i + <span class="hljs-number">3</span> * <span class="hljs-number">0.5</span>) * <span class="hljs-number">80</span>;
 </code></pre>
 </div>
 <p>It calculates an offset used in an animated transition. The original has several magic numbers: <code>40</code>, <code>3</code>, <code>.5</code>, and <code>80</code> and had become hard to reason about and change.</p>
@@ -258,20 +258,20 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 <li>Which values should be accepted for each parameter?</li>
 </ul>
 <h4 id="balance">Balance</h4>
-<div id="" class="half">
+<p>::: .half</p>
 <ul>
 <li>Exposing <strong>more</strong> gives your user more control.</li>
 <li>Exposing <strong>more</strong> makes your interface harder to understand.</li>
-<li>Exposing <strong>more</strong> allows your users to do more good things.</li>
+<li>Exposing <strong>more</strong> allows your users to do more good things.
+/::</li>
 </ul>
-</div>
-<div id="" class="half">
+<p>::: .half</p>
 <ul>
 <li>Exposing <strong>less</strong> gives you more control.</li>
 <li>Exposing <strong>less</strong> makes your interface easier to understand.</li>
-<li>Exposing <strong>less</strong> prevents your users from doing bad things.</li>
+<li>Exposing <strong>less</strong> prevents your users from doing bad things.
+/::</li>
 </ul>
-</div>
 <div id="" class="clear">
 </div>
 <h4 id="presenting-your-interface">Presenting Your Interface</h4>
@@ -312,7 +312,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 </div>
 <p><a href="https://en.wikipedia.org/wiki/Constraint_programming">Wikipedia: Constraint Programming</a></p>
 <p><a href="https://www.mattkeeter.com/projects/constraints/">Matt Keeter: Constraint Solver</a></p>
-<div id="" class="activity">
+<p>::: .activity</p>
 <h2 id="fictional-machines">Fictional Machines</h2>
 <p>Begin designing a user interface for a fictional machine by considering which parameters you would expose.</p>
 <ol>
@@ -326,7 +326,7 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 <li>For each parameter carefully choose a name, data type, and possible values if applicable.</li>
 <li>Present your machine, user, and parameters to the class. You will have 2 minutes to present.</li>
 </ol>
-<div id="" class="half">
+<p>::: .half</p>
 <h4 id="machine-types" class="underline">Machine Types</h4>
 <ul>
 <li>A self-driving car</li>
@@ -334,9 +334,9 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 <li>Grocery-shopping bot</li>
 <li>Song Composer</li>
 <li>Genetic pet builder</li>
-<li>Love potion mixer</li>
+<li>Love potion mixer
+/::</li>
 </ul>
-</div>
 <div id="" class="half">
 <h4 id="users" class="underline">Users</h4>
 <ul>
@@ -345,9 +345,9 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 <li>A child</li>
 <li>An enthusiast</li>
 <li>Another machine</li>
-<li>A small accounting firm</li>
+<li>A small accounting firm
+/::</li>
 </ul>
-</div>
 </div>
 <h2 id="parameters-p5">Parameters + p5</h2>
 <h3 id="globals-as-interfaces">Globals as Interfaces</h3>
@@ -431,13 +431,26 @@ offset = transitionPercent * sin(angle + phase) * amplitude;
 <h2 id="keep-sketching">Keep Sketching!</h2>
 <h3 id="base">Base</h3>
 <p class="bigger">Continue experimenting with procedurally-generated images. Now, focus on exposing parameters and exploring the parameter spaces of your sketches. You can mix random and parametric elements, but I suggest doing at least a couple of sketches that are not random at all.</p>
-<h3 id="challenge-face-generator">Challenge: Face Generator</h3>
+<h3 id="individual-challenge-face-generator">Individual Challenge: Face Generator</h3>
 <p>Build a face-generating tool. This tool will create an image of a face that can be adjusted by the user with sliders and other inputs.</p>
 <ul>
 <li>Don’t use the built-in shape drawing commands like rect and ellipse. Build your face from hand-drawn or photographic images.</li>
 <li>Make your resulting images look as seamless and cohesive as possible.</li>
 <li>Inputs can range from straightforward (eye color, nose size) to complex (anger, lighting).</li>
 </ul>
+<h3 id="pair-challenge-code-swap">Pair Challenge: Code Swap</h3>
+<h4 id="part-1">Part 1</h4>
+<ol>
+<li>Create an computationally generated image.</li>
+<li>Post your image.</li>
+<li>Pass the code—not the image—to your partner.</li>
+</ol>
+<h4 id="part-2">Part 2</h4>
+<ol>
+<li>Receive the code from your partner.</li>
+<li>Extend the code in any way you wish.</li>
+<li>Post the result.</li>
+</ol>
 </div>
 <h2 id="reference-links">Reference Links</h2>
 <dl>
