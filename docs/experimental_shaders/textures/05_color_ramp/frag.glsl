@@ -35,12 +35,12 @@ void main() {
     vec2 coord_N = gl_FragCoord.xy / u_resolution;
     coord_N.y /= u_resolution.x / u_resolution.y;
     
-    float circle_1_sdf = circle(coord_N - vec2(0.3, 0.3), 0.15);
-    float circle_2_sdf = circle(coord_N - vec2(0.6, 0.6), 0.1);
+    float circle_1_sdf = circle(coord_N - vec2(0.3, 0.3), 0.01);
+    float circle_2_sdf = circle(coord_N - vec2(0.6, 0.6), 0.15);
     
-    float d = min(circle_1_sdf, circle_2_sdf);
-    d += 0.14;
-    d *= 2.0;
+    float d = circle_1_sdf * circle_2_sdf;
+    d += 0.05;
+    d *= 4.0;
     d = clamp(d, 0.01, 0.99);
     
     // float g = step(0.1, fract(d * 30.0));
