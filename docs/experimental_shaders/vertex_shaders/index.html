@@ -8,22 +8,55 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Vertex Shaders</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Vertex Shaders</h1><h6>Overview</h6><p class="description">Vertex Shaders typically take model-space vertex data and return the corresponding screen-space vertex data.</p><h6>Tools</h6><p class="software">WebGL</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="tangents-and-normals">Tangents and Normals</h2>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Vertex Shaders</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Vertex Shaders</h1><h6>Overview</h6><p class="description">Vertex Shaders typically take model-space vertex data and return the corresponding screen-space vertex data.</p><h6>Tools</h6><p class="software">WebGL</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="unity-project">Unity Project</h2>
+<p class="boxed right"><a href="../unity/demo_project.zip">Demo Project</a></p>
+<h2 id="tangents-and-normals">Tangents and Normals</h2>
 <blockquote>
-<p>The <strong>tangent</strong> line to a curve at a given point is the straight line that “just touches” the curve at that point.
-— <a href="https://en.wikipedia.org/wiki/Tangent">Wikipedia</a> (edited)</p>
+<p>The <strong>tangent</strong> line to a curve at a given point is the straight line that “just touches” the curve at that point.</p>
+<p>— <a href="https://en.wikipedia.org/wiki/Tangent">Wikipedia</a> (edited)</p>
 </blockquote>
-<p>The tangent has the same slope that the line has at that point.</p>
+<p>The tangent line matches the slope where it touches.</p>
 <div id="" class="two-up">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tangent_to_a_curve.svg/440px-Tangent_to_a_curve.svg.png" alt="tangent line">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Image_Tangent-plane.svg/440px-Image_Tangent-plane.svg.png" alt="tangent plane"></p>
 </div>
 <blockquote>
-<p>The <strong>normal</strong> line to a curve at a given point is the line perpendicular to the tangent line at that point.
-— <a href="https://en.wikipedia.org/wiki/Normal_(geometry)">Wikipedia</a> (editied)</p>
+<p>The <strong>normal</strong> line to a curve at a given point is the line perpendicular to the tangent line at that point.</p>
+<p>— <a href="https://en.wikipedia.org/wiki/Normal_(geometry)">Wikipedia</a> (editied)</p>
 </blockquote>
 <div id="" class="two-up">
 <p><img src="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2018/04/02174230/800px-Tangent-768x503.png" alt="normal line">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Normal_vectors_on_a_curved_surface.svg/620px-Normal_vectors_on_a_curved_surface.svg.png" alt="normal plane"></p>
 </div>
+<p>For our 3D lighting purposes today we don’t need to know the position of the tangent or normal. We just need the direction, which we can represent with tangent and normal vectors.</p>
+<!-- ![vectors](https://math.libretexts.org/@api/deki/files/71/line_1.jpg?revision=1) -->
+<h2 id="numerical-vs-symbolic-differentiation">Numerical vs Symbolic Differentiation</h2>
+<blockquote>
+<p>The derivative of a function at a chosen input value is the slope of the tangent line at that point.</p>
+<p>Differentiation is the action of computing a derivative.</p>
+<p>— <a href="https://en.wikipedia.org/wiki/Derivative">Wikipedia</a></p>
+</blockquote>
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Derivative">Derivative</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Numerical_differentiation">Numerial Differentiation</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/43455320/difference-between-symbolic-differentiation-and-automatic-differentiation">Stack Overflow: Numerical vs Symbolic vs Automatic Differentiation</a></p>
+</li>
+</ul>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3f07ddc190e96e17d5d7e1ab262e8e5baf865949" alt="slope of line"></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Derivative.svg/460px-Derivative.svg.png" alt="secant"></p>
+<p>If you know the function for a curve and you know calculus, you might be able to find a derivative function by applying known rules.</p>
+<p>If you don’t know the function (but you can sample it), don’t know calculus, or can’t find the derivative function, you can numerically estimate the derivative/slope/tangent by finding two nearby points and substracting.</p>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/433137b00708049d18711c32ff08f010e171c385" alt="simple"></p>
+<h2 id="cross-product">Cross Product</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cross_product_vector.svg/440px-Cross_product_vector.svg.png" alt="cross product"></p>
+<h2 id="resources">Resources</h2>
+<p class="boxed right"><a href="https://catlikecoding.com/unity/tutorials/flow/waves/">Catlike Coding: Wave</a></p>
+<p class="boxed right"><a href="https://blogs.unity3d.com/2018/10/05/art-that-moves-creating-animated-materials-with-shader-graph/">Unity Blog: Animated Materials</a></p>
+<p class="boxed right"><a href="https://docs.unity3d.com/Manual/SL-SurfaceShaders.html">Unity: Writing Surface Shaders</a></p>
+<p class="boxed right"><a href="https://docs.unity3d.com/Manual/SL-SurfaceShaderExamples.html">Unity: Surface Shader Examples</a></p>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>
