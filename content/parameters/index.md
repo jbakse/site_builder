@@ -198,14 +198,14 @@ Exposing parameters allows artists and designers to create systems that can be c
 - Exposing **more** gives your user more control.
 - Exposing **more** makes your interface harder to understand.
 - Exposing **more** allows your users to do more good things.
-  /::
+/::
 
 ::: .half
 
 - Exposing **less** gives you more control.
 - Exposing **less** makes your interface easier to understand.
 - Exposing **less** prevents your users from doing bad things.
-  /::
+/::
 
 ::: .clear
 
@@ -274,8 +274,6 @@ Begin designing a user interface for a fictional machine by considering which pa
 8. For each parameter carefully choose a name, data type, and possible values if applicable.
 9. Present your machine, user, and parameters to the class. You will have 2 minutes to present.
 
-::: .half
-
 #### Machine Types {underline}
 
 - A self-driving car
@@ -284,9 +282,6 @@ Begin designing a user interface for a fictional machine by considering which pa
 - Song Composer
 - Genetic pet builder
 - Love potion mixer
-  /::
-
-::: .half
 
 #### Users {underline}
 
@@ -296,7 +291,6 @@ Begin designing a user interface for a fictional machine by considering which pa
 - An enthusiast
 - Another machine
 - A small accounting firm
-  /::
 
 /::
 

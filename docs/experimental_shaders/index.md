@@ -37,7 +37,7 @@ This class will utilize an experimental format. The first half of the course wil
 | [Week 2, Januray 29](#)                       | [Shaders in WebGL + 2D Techniques](web_gl)  |
 | [Week 3, February 5](#)                       | [Shaders in Unity + 3D Techniques](unity)   |
 | [Week 4, February 12](#)                      | [Working with Textures](textures)           |
-| [Week 5, February 19](#)                      | Vertex Shaders or TBA                       |
+| [Week 5, February 19](#)                      | [Vertex Shaders or TBA](vertex_shaders)     |
 
 ## Independent Study Unit
 
