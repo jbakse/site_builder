@@ -60,7 +60,8 @@ We'll use the vertex shader to distort a plane to create a rippling effect.
 | 8:30 | 10 m     | Activate | Code Discussion  | Challenges Solutions                    |
 | 8:40 | 10 m     | Engage   | Review           | Answer the Questions                    |
 | 8:50 | 10 m     | Activate | Group Discussion | Could you do that with a Vertex Shader? |
-| 9:00 | 20 m     | Study    | Assignment Intro | Intro Lesson Plan Assignment            |
+| 9:00 | 10 m     | Zach     | Zach             | Zach                                    |
+| 9:10 | 20 m     | Study    | Assignment Intro | Intro Lesson Plan Assignment            |
 
 ### Students Should Bring
 
@@ -156,10 +157,9 @@ If you don't know the function (but you can sample it), don't know calculus, or 
 
 ## Challenges
 
-- Make the waves wider.
-- Makes the waves deeper.
-- Make the waves flow top to bottom.
-- Add a second wave going left to right.
+- Explore the effect by adjusting the speed, period, and amplitude sliders.
+- The waves flow in the X direction. Make the waves flow in the Z direction.
+- Make the effect have two sets of waves—X and Z—added together.
 - Make the waves ripple out from the center in circles.
 - Make the waves ripple out from the center in squares.
 
