@@ -10,9 +10,66 @@ next:
 next_url:
 
 hero_title: Vertex Shaders
-description: Vertex Shaders typically take model-space vertex data and return the corresponding screen-space vertex data.
+description: Vertex Shaders receive the vertex attribute data for a single vertex and output modified data for that vertex. They are often used to map model-space data to projection-space data.
 software: WebGL
 ---
+
+## Overview
+
+### Description
+Two weeks ago we looked at suface shader's in Unity. Today we'll return to unity and add a vertex shader stage to a custom surface shader. This shader will change the vertex positions in  model-space. Unity will then handle the projection for us.
+
+We'll use the vertex shader to distort a plane to create a rippling effect.
+
+### Learning Objectives
+- Demonstrate the ability for vertex shaders to change the shape of geometry
+- Demonstrate how to use the vertex function with a surface shader in Unity
+
+### Questions
+
+**What is a Vertex Shader?**
+
+**What is a Normal Vector?**
+
+**What is a Tangent Vector?**
+
+**Why are Normal Vectors important?**
+
+**How can you calculate a 2D Normal Vector for a point on a curve/function?**
+
+**How can you caclucate a 3D Normal Vector for a point on a mesh?**
+
+**What is a Cross Product?**
+
+**How do you calcuate the Cross Product?**
+
+
+### Schedule
+| Time | Duration | Purpose  | Format         | Name                        |
+| ---- | -------- | -------- | -------------- | --------------------------- |
+| 7:00 | 10 m     | Engage   | ?              | ?                           |
+| -    | 10 m     | Study    | Lecture        | Tangents + Normals          |
+| -    | 10 m     | Study    | Lecture        | Numerical + Differentiation |
+| -    | 10 m     | Study    | Lecture        | Cross Products              |
+| -    | 10 m     | Activate | Code Reading   | Read the Example            |
+| -    | 20 m     | Activate | Code Challenge | Complete the Challenges     |
+
+### Students Should Bring
+- Unity 2019.3
+- Blender 2.8
+
+### Materials
+- Ripple Effect: A unity scene showing the working ripple effect.
+- Effect Template: A unity scene with a pass-through effect for student experimentation.
+
+## Vertex Shader Examples
+
+
+[Curved World: Inception](https://www.youtube.com/watch?time_continue=39&v=lagDz75cfdM&feature=emb_logo){boxed right}
+
+[Curved World](https://www.youtube.com/watch?v=OMfTp2uuepg)
+
+
 
 ## Unity Project
 

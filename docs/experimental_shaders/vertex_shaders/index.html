@@ -1,14 +1,101 @@
 <!DOCTYPE html><html lang="en"><head><title>Vertex Shaders | Comp Form</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-41378785-2"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- open graph--><meta property="og:site_name" content="compform.net"><meta property="og:title" content="Vertex Shaders"><meta property="og:description" content="Vertex Shaders typically take model-space vertex data and return the corresponding screen-space vertex data."><meta property="og:image"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><!-- open graph--><meta property="og:site_name" content="compform.net"><meta property="og:title" content="Vertex Shaders"><meta property="og:description" content="Vertex Shaders receive the vertex attribute data for a single vertex and output modified data for that vertex. They are often used to map model-space data to projection-space data."><meta property="og:image"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><!-- jquery--><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><!-- bootstrap--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script><link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><script src="/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><!-- font awesome--><link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css"><!-- syntax hilighting--><link rel="stylesheet" href="/vendor/highlightjs/css/atom-one-dark.css"><!-- styles--><link rel="stylesheet" href="/src/styles.css"><!--scripts--><script src="/src/bundle.js"></script></head><body class="comp-form"><div id="logo"><a href="/"><svg width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
 <polygon points="32,64 0,119.4 64,119.4"/>
 <polygon points="64,8.6 32,64 96,64"/>
 <polygon points="80,91.7 64,119.4 96,119.4"/>
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
-</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Vertex Shaders</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Vertex Shaders</h1><h6>Overview</h6><p class="description">Vertex Shaders typically take model-space vertex data and return the corresponding screen-space vertex data.</p><h6>Tools</h6><p class="software">WebGL</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="unity-project">Unity Project</h2>
+</svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Vertex Shaders</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Vertex Shaders</h1><h6>Overview</h6><p class="description">Vertex Shaders receive the vertex attribute data for a single vertex and output modified data for that vertex. They are often used to map model-space data to projection-space data.</p><h6>Tools</h6><p class="software">WebGL</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="overview">Overview</h2>
+<h3 id="description">Description</h3>
+<p>Two weeks ago we looked at suface shader’s in Unity. Today we’ll return to unity and add a vertex shader stage to a custom surface shader. This shader will change the vertex positions in  model-space. Unity will then handle the projection for us.</p>
+<p>We’ll use the vertex shader to distort a plane to create a rippling effect.</p>
+<h3 id="learning-objectives">Learning Objectives</h3>
+<ul>
+<li>Demonstrate the ability for vertex shaders to change the shape of geometry</li>
+<li>Demonstrate how to use the vertex function with a surface shader in Unity</li>
+</ul>
+<h3 id="questions">Questions</h3>
+<p><strong>What is a Vertex Shader?</strong></p>
+<p><strong>What is a Normal Vector?</strong></p>
+<p><strong>What is a Tangent Vector?</strong></p>
+<p><strong>Why are Normal Vectors important?</strong></p>
+<p><strong>How can you calculate a 2D Normal Vector for a point on a curve/function?</strong></p>
+<p><strong>How can you caclucate a 3D Normal Vector for a point on a mesh?</strong></p>
+<p><strong>What is a Cross Product?</strong></p>
+<p><strong>How do you calcuate the Cross Product?</strong></p>
+<h3 id="schedule">Schedule</h3>
+<table class="table table-responsive">
+<thead>
+<tr>
+<th>Time</th>
+<th>Duration</th>
+<th>Purpose</th>
+<th>Format</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7:00</td>
+<td>10 m</td>
+<td>Engage</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>-</td>
+<td>10 m</td>
+<td>Study</td>
+<td>Lecture</td>
+<td>Tangents + Normals</td>
+</tr>
+<tr>
+<td>-</td>
+<td>10 m</td>
+<td>Study</td>
+<td>Lecture</td>
+<td>Numerical + Differentiation</td>
+</tr>
+<tr>
+<td>-</td>
+<td>10 m</td>
+<td>Study</td>
+<td>Lecture</td>
+<td>Cross Products</td>
+</tr>
+<tr>
+<td>-</td>
+<td>10 m</td>
+<td>Activate</td>
+<td>Code Reading</td>
+<td>Read the Example</td>
+</tr>
+<tr>
+<td>-</td>
+<td>20 m</td>
+<td>Activate</td>
+<td>Code Challenge</td>
+<td>Complete the Challenges</td>
+</tr>
+</tbody>
+</table>
+<h3 id="students-should-bring">Students Should Bring</h3>
+<ul>
+<li>Unity 2019.3</li>
+<li>Blender 2.8</li>
+</ul>
+<h3 id="materials">Materials</h3>
+<ul>
+<li>Ripple Effect: A unity scene showing the working ripple effect.</li>
+<li>Effect Template: A unity scene with a pass-through effect for student experimentation.</li>
+</ul>
+<h2 id="vertex-shader-examples">Vertex Shader Examples</h2>
+<p class="boxed right"><a href="https://www.youtube.com/watch?time_continue=39&amp;v=lagDz75cfdM&amp;feature=emb_logo">Curved World: Inception</a></p>
+<p><a href="https://www.youtube.com/watch?v=OMfTp2uuepg">Curved World</a></p>
+<h2 id="unity-project">Unity Project</h2>
 <p class="boxed right"><a href="../unity/demo_project.zip">Demo Project</a></p>
 <h2 id="tangents-and-normals">Tangents and Normals</h2>
 <blockquote>
