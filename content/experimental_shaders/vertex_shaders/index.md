@@ -47,14 +47,20 @@ We'll use the vertex shader to distort a plane to create a rippling effect.
 
 ### Schedule
 
-| Time | Duration | Purpose  | Format         | Name                                    |
-| ---- | -------- | -------- | -------------- | --------------------------------------- |
-| 7:00 | 10 m     | Engage   | Brainstorm     | What could you do with a Vertex Shader? |
-| 7:10 | 10 m     | Study    | Lecture        | Tangents + Normals                      |
-| 7:20 | 10 m     | Study    | Lecture        | Numerical + Differentiation             |
-| 7:30 | 10 m     | Study    | Lecture        | Cross Products                          |
-| 7:40 | 10 m     | Activate | Code Reading   | Read the Example                        |
-| 8:00 | 20 m     | Activate | Code Challenge | Complete the Challenges                 |
+| Time | Duration | Purpose  | Format           | Name                                    |
+| ---- | -------- | -------- | ---------------- | --------------------------------------- |
+| 7:00 | 10 m     | Engage   | Brainstorm       | What could you do with a Vertex Shader? |
+| 7:10 | 10 m     | Engage   | Q+A              | Answer the Questions                    |
+| 7:20 | 10 m     | Study    | Lecture          | Tangents + Normals                      |
+| 7:30 | 10 m     | Study    | Lecture          | Numerical + Differentiation             |
+| 7:40 | 10 m     | Study    | Lecture          | Cross Products                          |
+| 7:50 | 10 m     | Activate | Code Reading     | Read the Example                        |
+| 8:00 | 20 m     | Activate | Code Challenge   | Complete the Challenges                 |
+| 8:20 | 10 m     | Break    | Break            | Break                                   |
+| 8:30 | 10 m     | Activate | Code Discussion  | Challenges Solutions                    |
+| 8:40 | 10 m     | Engage   | Review           | Answer the Questions                    |
+| 8:50 | 10 m     | Activate | Group Discussion | Could you do that with a Vertex Shader? |
+| 9:00 | 20 m     | Study    | Assignment Intro | Intro Lesson Plan Assignment            |
 
 ### Students Should Bring
 
@@ -135,6 +141,8 @@ If you don't know the function (but you can sample it), don't know calculus, or 
 ## Cross Product
 
 ![cross product](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cross_product_vector.svg/440px-Cross_product_vector.svg.png)
+
+[Math is Fun (Advanced)! Cross Product](https://www.mathsisfun.com/algebra/vectors-cross-product.html)
 
 ## Resources
 
