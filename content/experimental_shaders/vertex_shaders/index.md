@@ -63,8 +63,14 @@ We'll use the vertex shader to distort a plane to create a rippling effect.
 
 ### Materials
 
-- Ripple Effect: A unity scene showing the working ripple effect.
+- Wave Effect: A unity scene showing the working wave effect.
 - Effect Template: A unity scene with a pass-through effect for student experimentation.
+
+## The Rendering Pipeline
+
+[The Rendering Pipeline](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview)
+
+What could you do with a Vertex Shader?
 
 ## Vertex Shader Examples
 
@@ -139,3 +145,46 @@ If you don't know the function (but you can sample it), don't know calculus, or 
 [Unity: Writing Surface Shaders](https://docs.unity3d.com/Manual/SL-SurfaceShaders.html){boxed right}
 
 [Unity: Surface Shader Examples](https://docs.unity3d.com/Manual/SL-SurfaceShaderExamples.html){boxed right}
+
+## Challenges
+
+- Make the waves wider.
+- Makes the waves deeper.
+- Make the waves flow top to bottom.
+- Add a second wave going left to right.
+- Make the waves ripple out from the center in circles.
+- Make the waves ripple out from the center in squares.
+
+## Answers
+
+### Procedural Vertex Displacement
+
+[three.js](https://medium.com/@joshmarinacci/customizing-vertex-shaders-86527c5693b2)
+[Unity Shader Graph](https://www.youtube.com/watch?v=vh85pzT959M)
+[Explosion](https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js/)
+[Noise Displacement](https://catlikecoding.com/unity/tutorials/advanced-rendering/surface-displacement/)
+[2D Distortions](https://qmlbook.github.io/ch10-shaders/shaders.html)
+
+### Outlining
+
+[Outlining](https://www.youtube.com/watch?v=SlTkBe4YNbo)
+
+### Texture Vertex Displacement
+
+[Water](https://developer.nvidia.com/gpugems/gpugems2/part-ii-shading-lighting-and-shadows/chapter-18-using-vertex-texture-displacement)
+
+### Shape Morphing
+
+[Morphing](https://www.geeks3d.com/20140205/glsl-simple-morph-target-animation-opengl-glslhacker-demo/)
+
+### Vertex Skinning / Skeletal Animation
+
+[Skeletal Animation](https://chinedufn.github.io/skeletal-animation-system/)
+
+### Shadow Mapping
+
+[Shadow Mapping](https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping)
+
+### Scene Distortion
+
+[Minecraft](https://www.youtube.com/watch?v=79IhZnXSWbw)
