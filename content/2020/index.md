@@ -41,7 +41,7 @@ Exploration topics and dates subject to change based on student interest. Possib
 
 | Lesson Plan                                   | Topics                                                                       |
 | --------------------------------------------- | ---------------------------------------------------------------------------- |
-| [Week 6, February 26](#turtles_plan.html)     | [Learning + Play](../concept_map), [Turtle Graphics](../turtles)             |
+| [Week 6, February 26](turtles_plan.html)      | [Learning + Play](../concept_map), [Turtle Graphics](../turtles)             |
 | [Week 7, March 4](#pixels_plan.html)          | [Pixel Data](../pixels)                                                      |
 | [Week 8, March 11](#vectors_plan.html)        | [Vector Data](../vectors)                                                    |
 | Week 9, March 19{gray}                        | Spring Break{gray}                                                           |

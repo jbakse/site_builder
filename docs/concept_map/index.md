@@ -16,7 +16,7 @@ software: whiteboard + notecards
 
 ## Learning + Play
 
-Today we are going to play a game. Working in teams you will compete to complete the concept map of several key figures, institutions, ideas, and inventions related to **Learning + Play**. We are playing this game for several reasons:
+Today we are going to play a game. Working in teams you will compete to complete a concept map of several key figures, institutions, ideas, and inventions related to **Learning + Play**, design, and technology. We are playing this game for several reasons:
 
 ### Part 0: Preparation
 
@@ -30,12 +30,14 @@ _Groups, 10 minutes_
 
 Each group has a set of cards naming a concept that fits somewhere on the concept map.
 
-1. Write your team's names on the **back** of your card.
+<!-- 1. Write your team's names on the **back** of your card. -->
+
+1. Review your concept cards.
 2. Spend a few minutes researching each of the concepts on cards.
 3. Create a summary describing each concept in **exactly 7 words**.
 4. Clearly write your 7-word summary on the **front** of your card.
 
-If you have time left over discuss how the items on your cards relate to each other and study the map. Guess where each card might belong.
+If you have time left over, discuss how the items on your cards relate to each other and study the map. Guess where each card might belong.
 
 ### Part 2: Map
 
@@ -57,6 +59,8 @@ The instructor spends a few minutes explaining key ideas and concepts in more de
 
 ## Video Breaks
 
+::: .spoiler
+
 LOGO → [Seymour Papert: Logo + Body-syntonic Learning, 1986, 4:20 - 6:40](https://www.youtube.com/watch?v=ZG9cYhekB8A&feature=youtu.be&t=4m25s)
 
 Seymour Papert → [Seymour Papert: Learning with Toys, 1986, 2 minutes](https://www.youtube.com/watch?v=IhEovwWiniY)
@@ -75,47 +79,105 @@ Maria Montessori → [Montessori School Education](<[https://www.youtube.com/wat
 
 > At an early age, Montessori broke gender barriers and expectations when she enrolled in classes at an all-boys technical school, with hopes of becoming an engineer. She soon had a change of heart and began medical school at the University of Rome, where she graduated – with honors – in 1896.
 
+/::
+
 ## Thoughts on the Map
-
-### Why we Played this Game
-
-- Introduce key philosophies, figures, institutions, and tools related to project-based learning and play.
-- Emphasize the relationships between these concepts and connect them to students' day-to-day experience.
-- Frame learning as an active, student-led process of constructing knowledge.
-- Introduce concept maps as a way of organizing and understanding ideas and their relationships.
-- Help students learn how to approach Comp Form for maximum benefit.
 
 ### Constructivism
 
-learning as a reconstruction rather than as a transmission of knowledge {bigger}
+> learning as a reconstruction rather than as a transmission of knowledge {bigger}
 
 - Jean Piaget studied cognitive development and genetic epistemology.
 - humans build new understanding in relation to their existing experiences, knowledge, and ideas
 - suggests that education should be viewed as student-lead learning rather than instructor-led teaching
 
-#### Weekly Exploration
+::: .callout
 
-This class is built as a series of one week explorations of related topics. I hope it makes the topics accessible to a variety of students by providing conceptual footholds. I also hope this approach frames procedural generation as a network of connected tools, techniques, and media.
+### Connected Weekly Exploration
+
+This class is built as a series of one week explorations of related topics. I hope it makes the topics accessible to a variety of students by providing a variety of conceptual footholds. I also hope this approach frames procedural generation as a network of connected tools, techniques, and media.
+
+/::
 
 ### Constructionism
 
-learning is most effective when part of an activity the learner experiences as constructing a meaningful product{bigger}
+> learning is most effective when part of an activity the learner experiences as constructing a meaningful product{bigger}
 
 - Seymour Papert studied with Jean Piaget and then founded the Epistemology and Learning Research Group at MIT
 - Supports providing tools and environments for creative exploration as a means of promoting learning
 
-#### Sketch Log
+::: .callout
+
+### Sketch Log
 
 I built the sketch log website to shape the environment in which Comp Form is taught. Encouraging daily sketching and peer-to-peer learning and motivation.
+/::
 
-#### Activities vs Lectures
+::: .callout
 
-I try to balance class time towards hands-on activities, discussions, code challenges and away from lectures. This requires faith in the effectiveness of constructionism to quiet the fear that something important won't be mentioned without a lecture.
+### Activities vs Lectures
+
+I try to balance class time towards hands-on activities, discussions, code challenges and away from lectures. This requires faith in the effectiveness of constructionism to quiet the fear that something important will be overlooked without planned struture of a lecture.
+/::
 
 ### Creative Learning Spiral
 
 imagine → create → play → share → reflect → imagine{bigger}
 
+::: .callout
+
 #### Daily Sketching
 
-The homework structure is designed to directly support the kind of learning described by the creative learning spiral. Rather than fixed assignments students are given the opportunity to _imagine_ what they want to make. They are encouraged to _create_ that thing and _play_ with the ideas presented each week through a series of low-stakes sketches. The homework is meant to be done in small, spaced amounts allowing time to _share_ the work and _reflect_ on each piece in multiple cycles each week. Looking at both their own work and the work created by the rest of the class students are encouraged to _imagine_ new things to make.
+The homework structure is designed to directly support the kind of learning described by the creative learning spiral. Rather assigning fixed project, students are given the opportunity to _imagine_ what they want to make. They are encouraged to _create_ that thing and _play_ with the ideas presented each week through a series of low-stakes sketches. The homework is meant to be done in small, spaced efforts to allow time to _share_ the work and _reflect_ on each piece in multiple cycles each week. Looking at both their own work and the work created by the rest of the class students are encouraged to _imagine_ new things to make.
+/::
+
+### Why we Played this Game
+
+- Introduce key philosophies, figures, institutions, and tools related to project-based learning and play.
+- Emphasize the relationships between these concepts and connect them to students' day-to-day experience.
+- Introduce my view of learning as an active, student-led process of constructing knowledge.
+  <!-- - Introduce concept maps as a way of organizing and understanding ideas and their relationships. -->
+- Explain the motivation underlying several key decisions in the design of Comp Form.
+- Help students learn how to approach Comp Form for maximum benefit.
+
+<style>
+  .glsl_editor {
+    position: relative;
+    min-height: 300px;
+    
+   
+  }
+  .ge_editor {
+    min-height: 300px;
+  }
+  .spoiler h3 {
+    margin-top: 0;    
+  }
+  .spoiler {
+      
+      position: relative;
+  }
+  .spoiler::after {
+      content: "Show Spoiler";
+      font-family: "Roboto";
+      font-size: 10px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding: 30px;
+      background: black;
+      color: white;
+      
+  }
+</style>
+
+<script>
+var els = document.getElementsByClassName("spoiler");
+for (var i = 0; i < els.length; i++) {
+    let el = els[i];
+    els[i].addEventListener('click', ()=>el.classList.remove("spoiler"));
+}
+
+</script>
