@@ -329,9 +329,13 @@ Turtles are just one example of a drawing machine. Inventing your own drawing ma
 
 Explore using turtle graphics. Start with a crazy spirograph thing and get that out of the way. Then see how much variety you can get from the turtle.{bigger}
 
-### Challenge: Animal Face
+### Individual Challenge: Animal Face
 
 Using turtle graphics, create an **intricate** portrait of an animal. Begin by choosing an animal. Look at photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch? Create your sketch primarily using turtle graphics techniques.
+
+### Pair Challenge:
+
+Work with a partner you haven't worked with before.
 
 /::
 
