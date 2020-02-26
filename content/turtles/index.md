@@ -333,9 +333,9 @@ Explore using turtle graphics. Start with a crazy spirograph thing and get that 
 
 Using turtle graphics, create an **intricate** portrait of an animal. Begin by choosing an animal. Look at photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch? Create your sketch primarily using turtle graphics techniques.
 
-### Pair Challenge:
+### Pair Challenge: Turtle Garden
 
-Work with a partner you haven't worked with before.
+Work with a partner you haven't worked with before. Draw a garden.
 
 /::
 
