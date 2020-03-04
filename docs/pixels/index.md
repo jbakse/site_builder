@@ -18,7 +18,7 @@ software: p5.js
 
 ## Pixels
 
-Today, most computers use color displays that produce images using a grid of pixels. Conceptually, each pixel is made up of three sub-pixels—red, green, and blue—though the actual hardware may use a different pattern. Because these pixels are very close together, the image appears continuous.  Because our eyes can only directly sense red, green, and blue light, the screen can reproduce most of the colors we are capable of seeing.
+Today, most computers use color displays that produce images using a grid of pixels. Conceptually, each pixel is made up of three sub-pixels—red, green, and blue—though the actual hardware may use a different pattern. Because these pixels are very close together, the image appears continuous. Because our eyes can only directly sense red, green, and blue light, the screen can reproduce most of the colors we are capable of seeing.
 
 ![Pixels](https://upload.wikimedia.org/wikipedia/commons/c/cb/XO_screen_01_Pengo.jpg)
 Photo by [Peter Halasz](http://commons.wikimedia.org/wiki/File:XO_screen_01_Pengo.jpg){figure}
@@ -31,27 +31,21 @@ When you work with a graphics library like p5.js or the Javascript [Canvas API](
 
 When you work at a high level you are not responsible for the details. Because you are not responsible for the details you tend to consider them less. Working directly with the pixels by reading and writing their red, green, and blue values one-by-one leads to thinking about drawing with code differently.
 
-
-
 ::: .callout
+
 ### Vector Monitors
 
-Computer displays don't have to use pixels at all. One of the earliest video games, [Tennis for Two](https://en.wikipedia.org/wiki/Tennis_for_Two), used a cathode ray oscilloscope as its display.  In a cathode ray oscilloscope, signals are drawn by magnetically deflecting a beam of electrons as they race from an emitter—the cathode—towards a phosphor-coated glass screen. The phosphor glows where the electrons strike it, creating an image. This type of display can show smooth lines without any of the aliasing artifacts of a pixel display.
+Computer displays don't have to use pixels at all. One of the earliest video games, [Tennis for Two](https://en.wikipedia.org/wiki/Tennis_for_Two), used a cathode ray oscilloscope as its display. In a cathode ray oscilloscope, signals are drawn by magnetically deflecting a beam of electrons as they race from an emitter—the cathode—towards a phosphor-coated glass screen. The phosphor glows where the electrons strike it, creating an image. This type of display can show smooth lines without any of the aliasing artifacts of a pixel display.
 
-
-[Vector Monitors](https://en.wikipedia.org/wiki/Vector_monitor) were used in later video games as well, including the [Tempest](https://en.wikipedia.org/wiki/Tempest_(video_game)) arcade game and several games for the [Vectrex](https://en.wikipedia.org/wiki/Vectrex) home console.
-
+[Vector Monitors](https://en.wikipedia.org/wiki/Vector_monitor) were used in later video games as well, including the [Tempest](<https://en.wikipedia.org/wiki/Tempest_(video_game)>) arcade game and several games for the [Vectrex](https://en.wikipedia.org/wiki/Vectrex) home console.
 
 ![Tennis for Two](https://upload.wikimedia.org/wikipedia/commons/5/50/Tennis_For_Two_on_a_DuMont_Lab_Oscilloscope_Type_304-A.jpg)
-
-
 
 /::
 
 ### Video Memory
 
-Modern video pipelines are fairly complicated, but at a basic level they work something like this: The red, green, and blue brightness values of every pixel on a display are stored in memory. This data is usually stored on the video card's VRAM. In simpler systems without dedicated VRAM this data is stored in the computer's main RAM. Once per refresh, the video hardware repeatedly reads through this data, pixel by pixel, and sends it to the display over a display interface like DVI or HDMI. Hardware in the display receives this data and updates the brightness of each pixel as needed. When you change the values in the RAM, a new picture appears on the screen. 
-
+Modern video pipelines are fairly complicated, but at a basic level they work something like this: The red, green, and blue brightness values of every pixel on a display are stored in memory. This data is usually stored on the video card's VRAM. In simpler systems without dedicated VRAM this data is stored in the computer's main RAM. Once per refresh, the video hardware repeatedly reads through this data, pixel by pixel, and sends it to the display over a display interface like DVI or HDMI. Hardware in the display receives this data and updates the brightness of each pixel as needed. When you change the values in the RAM, a new picture appears on the screen.
 
 ::: .callout
 A high-definition display is 1920 pixels wide and 1080 tall, for 345,600 total pixels. Each pixel needs three bytes to represent its color value: one byte each for the red, green, and blue channels. In total that is 6,220,800 bytes—about 6 megabytes—of memory to keep track of the full HD image.
@@ -59,10 +53,9 @@ A high-definition display is 1920 pixels wide and 1080 tall, for 345,600 total p
 Today, 6 megabytes isn't much, but many older computers didn't have enough RAM to keep a full-color image of the screen in memory at all. They used a [variety of tricks](https://www.youtube.com/watch?v=Tfh0ytz8S0k) instead.
 /::
 
-
 ### The Pixels Array
 
-The memory storing the image shown on the screen is called the video buffer or framebuffer. Direct access to the screen's framebuffer is pretty unusual on modern computers, and high level libraries like p5.js don't (and can't) provide it.  P5.js _does_ give you access to a pixel buffer storing the image shown on your sketch's canvas. When you call drawing functions like `rect()` and `ellipse()`, p5.js updates the appropriate values in this buffer. The buffer is then composited into the rendered webpage by the browser. The browser window is composited onto the display's framebuffer by the operating system and video hardware.
+The memory storing the image shown on the screen is called the video buffer or framebuffer. Direct access to the screen's framebuffer is pretty unusual on modern computers, and high level libraries like p5.js don't (and can't) provide it. P5.js _does_ give you access to a pixel buffer storing the image shown on your sketch's canvas. When you call drawing functions like `rect()` and `ellipse()`, p5.js updates the appropriate values in this buffer. The buffer is then composited into the rendered webpage by the browser. The browser window is composited onto the display's framebuffer by the operating system and video hardware.
 
 ::: .links-sidebar
 [p5.js<br/>pixels array](https://p5js.org/reference/#/p5/pixels)
@@ -70,31 +63,29 @@ The memory storing the image shown on the screen is called the video buffer or f
 
 You can read and write pixel values with the `get()` and `set()` methods. These methods are easy to use, but they are really, really slow. With a little bit of math, you can work directly with the `pixels` array data. This is a little more work but can easily be **thousands of times faster**.
 
-
-<!-- 
+<!--
 Leah, I might come back to this section but i'm setting it aside for now to focus on getting everything else done. It might be helpful to talk over this together.
 
-I want this section to look at the relationship between vector and raster images formats, to compare that to working with shape drawing vs pixels in p5.js, and talk about the conceptual differences and how they lead to different types of aesthetics. A key point is that vector's describe how to make an image, rasters describe the made image. Intent vs detail. 
+I want this section to look at the relationship between vector and raster images formats, to compare that to working with shape drawing vs pixels in p5.js, and talk about the conceptual differences and how they lead to different types of aesthetics. A key point is that vector's describe how to make an image, rasters describe the made image. Intent vs detail.
 
 ### Rasterization
 [p5 rasterizes high-level descriptions to pixel values as you go (immediate mode?)]
 [vector images are rasterized before they are shown]
 ### Raster vs. Vector Images
-Raster and Vector images are conceptually very different. 
+Raster and Vector images are conceptually very different.
 Raster images are represented as samples
 [How raster images are stored in memory]
-[Not just about scalability. Scalability is the most often mentioned difference between raster and vector images, but other differences exist as well. Because vector images are described at a higher level—shapes instead of pixels—they are also easier to distort, recolor, change the stroke, etc. Not all images can be reasonably described as a collection of shapes. Photographic images, in particular, have too much detail to store as a collection of shapes. Similarly, some types of effects that consume or produce pixel-level detail require raster data, more information about what the images is made of, rather than what it looks like now] 
+[Not just about scalability. Scalability is the most often mentioned difference between raster and vector images, but other differences exist as well. Because vector images are described at a higher level—shapes instead of pixels—they are also easier to distort, recolor, change the stroke, etc. Not all images can be reasonably described as a collection of shapes. Photographic images, in particular, have too much detail to store as a collection of shapes. Similarly, some types of effects that consume or produce pixel-level detail require raster data, more information about what the images is made of, rather than what it looks like now]
 [slide show]
 
  -->
-
 
 ::: slides .contain
 @@include('./slides.yaml')
 /::
 
-
 ::: .callout
+
 ### Changes in Perspective
 
 > Paradigm: a framework containing the basic assumptions, ways of thinking, and methodology that are commonly accepted by members of a scientific community.
@@ -115,14 +106,13 @@ Beginning in this chapter we will look at different approaches to making form th
 
 ### A Basic Example
 
-The p5.js library provides two ways to read and write image pixel data. First, you can use `get()` and `set()` which are a bit easier but slower. Second, you can access the `pixels[]` array directly, which is faster but requires some math to find the address of the pixel you want to work with. 
+The p5.js library provides two ways to read and write image pixel data. First, you can use `get()` and `set()` which are a bit easier but slower. Second, you can access the `pixels[]` array directly, which is faster but requires some math to find the address of the pixel you want to work with.
 
 This example uses `set()` to create some random pixel data.
 
 ::: js-lab
 /pixels/sketches/basic_pixels.js
 /::
-
 
 Let's look at the code in depth.
 
@@ -147,11 +137,10 @@ Line 20
 : Use `updatePixels()` to tell p5 we are done accessing the pixels of the image.
 
 Line 22
-: Use `noSmooth()` to tell p5 not to smooth the image when we scale it: we want it pixelated. This resembles Photoshop's 'nearest neighbor' scaling method. 
+: Use `noSmooth()` to tell p5 not to smooth the image when we scale it: we want it pixelated. This resembles Photoshop's 'nearest neighbor' scaling method.
 
 Line 23
 : Draw the image, scaling up so we can clearly see each pixel.
-
 
 ### Gradient Example
 
@@ -161,10 +150,8 @@ This example has the same structure as the first one, but draws a gradient pixel
 /pixels/sketches/basic_pixels_2.js
 /::
 
-
 Line 15
 : Instead of choosing a color at random, this example calculates a color based on the current `x` and `y` position of the pixel being set.
-
 
 ### Random Access Example
 
@@ -175,6 +162,7 @@ The first two examples use a nested loop to set a value for every pixel in the i
 /::
 
 ::: .activity
+
 ## In-class Challenge One
 
 Explore using p5's pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. <br/> Don't skip any.
@@ -186,8 +174,8 @@ Explore using p5's pixel manipulation functions by modifying the scripts above. 
 | All in 20 Minutes  | Great.                                                                                |
 | All in 15 Minutes  | Hot Dang!                                                                             |
 
-
 ### Modify the Basic Example
+
 1. Change the image resolution to `20x20`
 2. Change the image resolution to `500x500`
 3. Change the image resolution back to `10x10`
@@ -195,41 +183,37 @@ Explore using p5's pixel manipulation functions by modifying the scripts above. 
 5. Make each pixel a random shade of gray.
 
 ### Modify the Gradient Example
+
 6. Make a horizontal black-to-blue gradient.
 7. Make a vertical green-to-black gradient.
 8. Make a horizontal white-to-blue gradient.
 9. Make a vertical rainbow gradient. Tip: `colorMode()`
 10. Create an inset square with a gradient, surrounded by randomly-colored pixels.
-{continue}
+    {continue}
 
 ### Modify the Random Access Example
+
 11. Change the image resolution to `50x50`, adjust scatter to fill.
 12. Instead of drawing single pixels, draw little `+` marks at random locations.
 13. Make each `+` a random color.
-{continue}
+    {continue}
 
 ### Challenging Challenges
+
 14. Color each pixel with `noise()` to visualize its values.
 15. Make a radial gradient from black to red. Tip: `dist()`
 16. Create a diagonal gradient.
 17. Use `sin()` to create a repeating black-to-red-to-black color wave.
 18. Create a `128x128` image and set the blue value of each pixel to `(y&x) * 16`
-{continue}
+    {continue}
 
 /::
 
-
-
-
-
-
 ## Reading + Processing Pixel Data
-
 
 The p5.js library also allows you to read pixel data, so you can process images or use images as inputs. These examples use this low-res black-and-white image of Earth.
 
 <img class="scale pixel" style="image-rendering: pixelated; height: 120px;" src="sketches/world.png" />
-
 
 ### Read Pixels Example 1
 
@@ -238,8 +222,6 @@ This example loads the image of Earth, loops over its pixels, and multiplies eac
 ::: js-lab
 /pixels/sketches/read_pixels_alt.js
 /::
-
-
 
 #### First we need to load an image to read pixel data from.
 
@@ -254,18 +236,17 @@ Line 6
 
 #### With our image loaded we can process the pixels.
 
-
 Line 18
 : Set up a nested loop to cover every pixel.
 
-Line 20 
+Line 20
 : Use `get()` to load the color data of the current pixel. `get()` returns an array like `[255, 0, 0, 255]` with components for red, green, blue, and alpha.
 
 Lines 22, 23, 24
 : Read the red, blue, and green parts of the color.
 
 Line 27
-: Check if the red value is 255 to see if it is black or white. Since we know the image is only black and white this is enough to check. 
+: Check if the red value is 255 to see if it is black or white. Since we know the image is only black and white this is enough to check.
 
 Line 28 and Line 30
 : Set `out_color` to red or blue.
@@ -277,9 +258,8 @@ Line 34
 : Use `updatePixels()` to tell the image there has been an update. We didn't need to do this in the loop when we were just setting pixels, but here we mix `set()` and `get()`. p5.js requires calling `updatePixels()` anytime we switch from setting to getting or drawing.
 
 ::: .callout
-Every time we switch from writing/setting to reading/getting, we have to call `updatePixels()`. This is because internally, p5.js will call `loadPixels()` when we call `get()` which will overwrite our changes in the pixel array. This extra updating and loading is why `get()` and `set()` are slower than accessing the `pixels[]` array directly. 
+Every time we switch from writing/setting to reading/getting, we have to call `updatePixels()`. This is because internally, p5.js will call `loadPixels()` when we call `get()` which will overwrite our changes in the pixel array. This extra updating and loading is why `get()` and `set()` are slower than accessing the `pixels[]` array directly.
 /::
-
 
 ### Read Pixels Example 2
 
@@ -289,8 +269,6 @@ This example compares each pixel to the one below it. If the upper pixel is dark
 /pixels/sketches/read_pixels_2.js
 /::
 
-
-
 ### Image as Input Example
 
 This example doesn't draw the image at all. Instead, the image is used as an input that controls where the red ellipses are drawn. Using images as inputs is a powerful technique that allows you to mix manual art and procedurally-generated content.
@@ -298,9 +276,6 @@ This example doesn't draw the image at all. Instead, the image is used as an inp
 ::: js-lab
 /pixels/sketches/read_pixels_3.js
 /::
-
-
-
 
 ::: .activity
 
@@ -316,6 +291,7 @@ Explore using p5's pixel manipulation functions by modifying the scripts above. 
 | All in 15 Minutes  | Hot Dang!                                                                             |
 
 ### Modify Example 1
+
 1. Make the program turn white pixels green.
 2. Turn the black pixels to a random shade of red.
 3. Turn the black pixels into a vertical, black-to-red gradient.
@@ -323,37 +299,36 @@ Explore using p5's pixel manipulation functions by modifying the scripts above. 
 
 <!-- <img src="sketches/world_100.png" style="image-rendering: pixelated;"> -->
 
-
 ### Modify Example 2
+
 4. Change the `lightness()` comparison to `>`.
 5. Change the `lightness()` comparison to `!=`.
 6. Add an `else` block that changes the pixels to black.
-{continue}
+   {continue}
 
 ### Modify Example 3
+
 <img src="sketches/world_100.png" style="image-rendering: pixelated;">
 
 8. Tell the program to use the image above by switching which `loadImage()` call is commented out in `preload()`.
 9. Adjust the expression that determines `dot_size` to make the result prettier.
-{continue}
+   {continue}
 
 ### Challenging Challenges
+
 11. Start with the original Example 2 code, without your changes. Set `out_color` to the average of `this_color` and `below_color`. Here is an example you could follow:
     ```
     var color_a = color(worldImage.get(0, 1));
     var color_b = color(worldImage.get(0, 2));
     var blended_color = lerpColor(color_a, color_b, .5);
-    ```    
+    ```
 12. Change `worldImage.set(x, y, out_color);` to `worldImage.set(x, y+1, out_color);`.
 13. Remove the `if` statement (but not its contents) so that its content always runs.
-{continue}
+    {continue}
 
 /::
 
-
-
 ## Working Directly with the `pixels[]` Array
-
 
 ### Performance
 
@@ -361,16 +336,14 @@ The built-in p5 `get()` function gets the RGBA values of a pixel in an image. In
 
 ::: .callout
 
-A `10 x 10` image has `100` pixels. Reading each pixel reloads all `100` pixel values. That means `10,000` pixel values are copied from the image into pixels[] array. 
+A `10 x 10` image has `100` pixels. Reading each pixel reloads all `100` pixel values. That means `10,000` pixel values are copied from the image into pixels[] array.
 
 A `50 x 50` image has `2,500` pixels. Reading each pixel reloads all `2,500` pixels. That is `6,250,000` pixels copied.
 
 A `1,920 x 1,080` image has `2,073,600` pixels. Reading all of those pixels with `get()` would require copying `4,299,816,960,000` pixels, but your browser will crash first.
 /::
 
-
 We can get much faster results by loading all of the pixel values **once** with `loadPixels()`, and then reading and writing the `pixels[]` array directly.
-
 
 ::: .callout
 When reading from `pixels[]` ourselves we can make sure we haven't changed the values we are trying to read.
@@ -387,27 +360,27 @@ The `getQuick()` function below reads a pixel's color value from an image's `pix
 // we don't need to worry about screen pixel density here, because we are not reading from the canvas
 
 function getQuick(img, x, y) {
-
-	var i = (y * img.width + x) * 4;
-	return [
-		testImage.pixels[i],
-		testImage.pixels[i+1],
-		testImage.pixels[i+2],
-		testImage.pixels[i+3],
-	];
+  var i = (y * img.width + x) * 4;
+  return [
+    testImage.pixels[i],
+    testImage.pixels[i + 1],
+    testImage.pixels[i + 2],
+    testImage.pixels[i + 3]
+  ];
 }
 ```
 
 Copy the `getQuick()` function above into your sketch. You can then replace a built-in p5 `get` call with a call to `getQuick`:
 
-
 #### Using `get()`
+
 ```javascript
 // in loop
 c = img.get(x, y);
 ```
 
 #### Using `getQuick()`
+
 ```javascript
 // before loop
 img.loadPixels();
@@ -425,20 +398,14 @@ The following example compares the performance of using `get()` and `getQuick()`
 /pixels/sketches/performance.js
 /::
 
-
-
-
 ### The Canvas + Pixel Density
-You can work with the pixels in an image using `image.pixels[]` or the pixels of the canvas with just `pixels[]`. 
+
+You can work with the pixels in an image using `image.pixels[]` or the pixels of the canvas with just `pixels[]`.
 When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default, p5 will create a high-dpi canvas when running on a high-dpi (retina) display. You can call `pixelDensity(1)` to disable this feature. Otherwise, you'll need to take into account the density when calculating a position in the `pixels[]` array.
 
 The examples on this page work with the pixels of images instead of the canvas to avoid this issue altogether. If you need to work with the canvas, the [pixels](https://p5js.org/reference/#/p5/pixels) documentation has info on working with higher pixel densities.
 
-
-
-
-
-<!-- 
+<!--
 ### Using the `pixels` array
 
 The p5.js `pixels` array holds four color values—red, green, blue, and alpha—for every pixel on the canvas. Images are two dimensional, but the `pixels` array is one dimensional. In order to read or write values in the `pixels` array, you need to find the index—the position in the array—of your target pixel. To do that, you need to know how the data is laid out. In p5.js the upper left pixel is the first pixel in the array and the other pixels follow left to right, top to bottom. Each pixel is represented by four values: red, green, blue, and alpha.
@@ -469,61 +436,55 @@ On a high-dpi or retina display, the canvas array may have more values than you 
 
 [get and set are slow, really slow, and why] -->
 
-
-
-
 ## Study Example
 
 This example uses an image as an input to control the density and placement of drawn grass.
 
 #### Input Image
-![cf.png](./sketches/cf.png){scale}
 
+![cf.png](./sketches/cf.png){scale}
 
 ::: js-lab
 /pixels/sketches/grass.js
 /::
 
-
-
-
-
-
-
 ::: .assignment
 
-## Keep Sketching! 
+## Keep Sketching!
 
 ### Base
 
 Explore working with image pixel data directly. This week, most of your posts should be still images.{bigger}
 
 Post **at least one** sketch **for each** of the following:
+
 1. Generate an image from scratch: pixel by pixel. Don't call any high-level drawing function like `ellipse()` or `rect()`.
 2. Load an image and process its pixels. Show the result.
 3. Use an image as an input source to control a drawing. Don't show the original image, just the output.
 
+### Invidual Challenge — Pixel Ouroboros.
 
-
-
-### Challenge
-Create a pixel Ouroboros. 
 Create code that processes an image. Feed the result back into your code and process it again. What happens after several generations?
 
 Post your source image, the result after one generation, and the result after several generations. Alternately, capture 90 generations as frames and post as a video.
 
+### Pair Challenge — Generate / Process.
+
+Work with a partner you haven't worked before.
+
+1. Make a sketch that generates an image pixel by pixel.
+2. Give your image to your partner.
+3. Create a sketch that pixel processess that image.
 
 /::
 
-
 ## Reference Links
-
 
 [Reaction Diffusion in Photoshop](https://vimeo.com/61154654)
 : Create a pattern in Photoshop by repeatedly applying filters.
 
 [Factorio](http://store.steampowered.com/app/427520/)
-: A game in which players gather resources to create increasingly complex technology and factories—sometimes building these structures into pixel art. 
+: A game in which players gather resources to create increasingly complex technology and factories—sometimes building these structures into pixel art.
 
 [Icon Machine](http://brianmacintosh.com/iconmachine/)
 : A pixel art web app that randomly generates potion bottle icons.
