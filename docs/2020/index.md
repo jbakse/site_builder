@@ -39,18 +39,19 @@ This page houses information specific to the spring 2020 section of Computationa
 Exploration topics and dates subject to change based on student interest. Possible additions: <b>Simulation</b>, <b>Machine Learning</b>, <b>Microgames</b>.
 </div>
 
-| Lesson Plan                                      | Topics                                                                       |
-| ------------------------------------------------ | ---------------------------------------------------------------------------- |
-| [Week 6, February 26](turtles_plan.html)         | [Learning + Play](../concept_map), [Turtle Graphics](../turtles)             |
-| [Week 7, March 4](pixels_plan.html)              | [Pixel Data](../pixels)                                                      |
-| [Week 8, March 11](sound_plan.html)              | [Light + Sound](../sound/light_and_sound.html), [Generating Sound](../sound) |
-| Week 9, March 18{gray}                           | Spring Break{gray}                                                           |
-| [Week 10, March 25](#vectors_plan.html)          | [Vector Data](../vectors)                                                    |
-| [Week 11, April 1](#animation_plan.html)         | [Animation](../animation)                                                    |
-| [Week 12, April 8](#text_plan.html)              | [Generating Text](../text)                                                   |
-| [Week 13, April 15](#music_plan.html)            | [Music](../music)                                                            |
-| [Week 14, April 22](#3D_plan.html)               | [3D Forms](../3D)                                                            |
-| [Week 15, April 29](#postmortem_party_plan.html) | Postmortem Party{gray}                                                       |
+| Lesson Plan                                   | Topics                                                                       |
+| --------------------------------------------- | ---------------------------------------------------------------------------- |
+| [Week 6, February 26](turtles_plan.html)      | [Learning + Play](../concept_map), [Turtle Graphics](../turtles)             |
+| [Week 7, March 4](pixels_plan.html)           | [Pixel Data](../pixels)                                                      |
+| [Week 8, March 11](sound_plan.html)           | [Light + Sound](../sound/light_and_sound.html), [Generating Sound](../sound) |
+| Week 9, March 18{gray}                        | Spring Break{gray}                                                           |
+| Week 9, March 25{gray}                        | Classes Canceled—Study Week{gray}                                            |
+| [Week 10, April 1](#vectors_plan.html)        | [Vector Data](../vectors)                                                    |
+| [Week 11, April 8](#animation_plan.html)      | [Animation](../animation)                                                    |
+| [Week 12, April 15](#text_plan.html)          | [Generating Text](../text)                                                   |
+| [Week 13, April 22](#music_plan.html)         | [Music](../music)                                                            |
+| [Week 14, April 29](#3D_plan.html)            | [3D Forms](../3D)                                                            |
+| [Week 15, May 6](#postmortem_party_plan.html) | Postmortem Party{gray}                                                       |
 
 <!--
 | [Week 15, May 6](#microgames_plan.html)        | [Microgames](../microgames)                                                  |
