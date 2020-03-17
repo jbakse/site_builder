@@ -241,7 +241,7 @@ Choose a 15 second audio clip. Use p5.sound to generate graphics driven by the s
 
 ### Challenge 3: Synesthesia 3
 
-Create a 15 second procedurally generated audio+visual form. Try to "feed" the audio and the video from the same process.
+Create a 15 second procedurally generated audio+visual form. Create the audio and the video from the same process.
 
 /::
 
