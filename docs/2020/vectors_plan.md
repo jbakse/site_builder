@@ -49,6 +49,10 @@ Most classes are asking participants to mute their mics when not in use.
 
 I'm asking you to keep you mics on unless there is backgound noise. I want people to be able to jump in with minimal friction. We'll change this if it doesn't work.
 
+### Chat
+
+Use the chat! Queue up some questions. This is one thing that works _better_ online.
+
 /::
 
 ::: .activity
