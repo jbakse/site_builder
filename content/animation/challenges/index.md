@@ -7,7 +7,11 @@ debug: false
 # Challenges
 
 ::: js-lab
-/animation/challenges/coins.js
+/animation/challenges/coins_0.js
+/::
+
+::: js-lab
+/animation/challenges/coins_1.js
 /::
 
 ::: js-lab
@@ -15,9 +19,17 @@ debug: false
 /::
 
 ::: js-lab
-/animation/challenges/coins_3.js
+/animation/challenges/fuzz_0.js
 /::
 
 ::: js-lab
-/animation/challenges/fuzz.js
+/animation/challenges/fuzz_1.js
+/::
+
+::: js-lab
+/animation/challenges/fuzz_2.js
+/::
+
+::: js-lab
+/animation/challenges/fuzz_3.js
 /::
