@@ -10,7 +10,7 @@ next:
 next_url:
 
 hero_title: Text
-description: Generate strings with templates, Markov chains, and context-free grammars.
+description: Explore generating strings with templates, Markov chains, and context-free grammars.
 software: p5.js
 ---
 
@@ -48,7 +48,7 @@ In 1950, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) directly addre
 
 Creativity can be expressed in many mediums, but—perhaps as a consequence of the Turing Test using verbal communication—artificial creativity is often explored in the context of natural-language text generation. This chapter introduces three common and accessible text generation tactics: string templating, Markov chains, and context-free grammars.
 
-These techniques focus on **syntax**—the patterns and structure of language—without much concern for **semantics**—the underlying meaning expressed. They tend to result in somewhat gramatical but mostly nonesensical. Natural-language processing and natural-language generation are areas of active research with numerous sub-fields including automatic summarization, translation, question answering, and sentiment analysis. Much of this research is focused on semantics, knowledge, and understanding and often approaches these problems with machine learning.
+These techniques focus on **syntax**—the patterns and structure of language—without much concern for **semantics**—the underlying meaning expressed. They tend to result in text that is somewhat gramatical but mostly nonesensical. Natural-language processing and natural-language generation are areas of active research with numerous sub-fields including automatic summarization, translation, question answering, and sentiment analysis. Much of this research is focused on semantics, knowledge, and understanding and often approaches these problems with machine learning.
 
 ### Generating other Media via Text
 
