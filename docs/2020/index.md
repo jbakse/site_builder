@@ -21,6 +21,8 @@ This page houses information specific to the spring 2020 section of Computationa
 
 ### [Sketch Book](http://sketches2020.compform.net/)
 
+### [Class Notion](https://www.notion.so/Computational-Form-2020-24c18b32bb094547a76ea9daf3872475)
+
 # Schedule
 
 ## Foundation Unit
@@ -31,7 +33,7 @@ This page houses information specific to the spring 2020 section of Computationa
 | [Week 2, January 29](random_plan.html)       | [Random Values](../random)                                 |
 | [Week 4, February 5](noise_plan.html)        | [Noise](../noise)                                          |
 | [Week 3, February 12](parameters_plan.html)  | [Parameters](../parameters)                                |
-| [Week 5, February 19](#strategy_plan.html)   | [Strategy](../strategy)                                    |
+| [Week 5, February 19](strategy_plan.html)    | [Strategy](../strategy)                                    |
 
 ## Exploration Unit
 
@@ -41,15 +43,16 @@ Exploration topics and dates subject to change based on student interest. Possib
 
 | Lesson Plan                                   | Topics                                                                       |
 | --------------------------------------------- | ---------------------------------------------------------------------------- |
-| [Week 6, February 26](#turtles_plan.html)     | [Learning + Play](../concept_map), [Turtle Graphics](../turtles)             |
-| [Week 7, March 4](#pixels_plan.html)          | [Pixel Data](../pixels)                                                      |
-| [Week 8, March 11](#vectors_plan.html)        | [Vector Data](../vectors)                                                    |
-| Week 9, March 19{gray}                        | Spring Break{gray}                                                           |
-| [Week 10, April 8](#animation_plan.html)      | [Animation](../animation)                                                    |
-| [Week 11, April 15](#text_plan.html)          | [Generating Text](../text)                                                   |
-| [Week 12, April 22](#sound_plan.html)         | [Light + Sound](../sound/light_and_sound.html), [Generating Sound](../sound) |
-| [Week 13, April 29](#music_plan.html)         | [Music](../music)                                                            |
-| [Week 14, April 26](#3D_plan.html)            | [3D Forms](../3D)                                                            |
+| [Week 6, February 26](turtles_plan.html)      | [Learning + Play](../concept_map), [Turtle Graphics](../turtles)             |
+| [Week 7, March 4](pixels_plan.html)           | [Pixel Data](../pixels)                                                      |
+| [Week 8, March 11](sound_plan.html)           | [Light + Sound](../sound/light_and_sound.html), [Generating Sound](../sound) |
+| Week 9, March 18{gray}                        | Spring Break{gray}                                                           |
+| Week 9, March 25{gray}                        | Classes Canceled—Study Week{gray}                                            |
+| [Week 10, April 1](vectors_plan.html)         | [Vector Data](../vectors)                                                    |
+| [Week 11, April 8](#animation_plan.html)      | [Animation](../animation)                                                    |
+| [Week 12, April 15](#text_plan.html)          | [Generating Text](../text)                                                   |
+| [Week 13, April 22](#music_plan.html)         | [Music](../music)                                                            |
+| [Week 14, April 29](#3D_plan.html)            | [3D Forms](../3D)                                                            |
 | [Week 15, May 6](#postmortem_party_plan.html) | Postmortem Party{gray}                                                       |
 
 <!--

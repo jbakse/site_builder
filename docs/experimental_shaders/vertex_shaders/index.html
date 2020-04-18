@@ -10,7 +10,7 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <polygon points="96,64 80,91.7 112,91.7"/>
 </svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Vertex Shaders</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Vertex Shaders</h1><h6>Overview</h6><p class="description">Vertex Shaders receive the vertex attribute data for a single vertex and output modified data for that vertex. They are often used to map model-space data to projection-space data.</p><h6>Tools</h6><p class="software">WebGL</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="overview">Overview</h2>
 <h3 id="description">Description</h3>
-<p>Two weeks ago we looked at suface shader’s in Unity. Today we’ll return to unity and add a vertex shader stage to a custom surface shader. This shader will change the vertex positions in  model-space. Unity will then handle the projection for us.</p>
+<p>Two weeks ago we looked at suface shader’s in Unity. Today we’ll return to unity and add a vertex shader stage to a custom surface shader. This shader will change the vertex positions in model-space. Unity will then handle the projection for us.</p>
 <p>We’ll use the vertex shader to distort a plane to create a rippling effect.</p>
 <h3 id="learning-objectives">Learning Objectives</h3>
 <ul>
@@ -42,43 +42,92 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <td>7:00</td>
 <td>10 m</td>
 <td>Engage</td>
-<td>?</td>
-<td>?</td>
+<td>Brainstorm</td>
+<td>What could you do with a Vertex Shader?</td>
 </tr>
 <tr>
-<td>-</td>
+<td>7:10</td>
+<td>10 m</td>
+<td>Engage</td>
+<td>Q+A</td>
+<td>Answer the Questions</td>
+</tr>
+<tr>
+<td>7:20</td>
 <td>10 m</td>
 <td>Study</td>
 <td>Lecture</td>
 <td>Tangents + Normals</td>
 </tr>
 <tr>
-<td>-</td>
+<td>7:30</td>
 <td>10 m</td>
 <td>Study</td>
 <td>Lecture</td>
 <td>Numerical + Differentiation</td>
 </tr>
 <tr>
-<td>-</td>
+<td>7:40</td>
 <td>10 m</td>
 <td>Study</td>
 <td>Lecture</td>
 <td>Cross Products</td>
 </tr>
 <tr>
-<td>-</td>
+<td>7:50</td>
 <td>10 m</td>
 <td>Activate</td>
 <td>Code Reading</td>
 <td>Read the Example</td>
 </tr>
 <tr>
-<td>-</td>
+<td>8:00</td>
 <td>20 m</td>
 <td>Activate</td>
 <td>Code Challenge</td>
 <td>Complete the Challenges</td>
+</tr>
+<tr>
+<td>8:20</td>
+<td>10 m</td>
+<td>Break</td>
+<td>Break</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>8:30</td>
+<td>10 m</td>
+<td>Activate</td>
+<td>Code Discussion</td>
+<td>Challenges Solutions</td>
+</tr>
+<tr>
+<td>8:40</td>
+<td>10 m</td>
+<td>Engage</td>
+<td>Review</td>
+<td>Answer the Questions</td>
+</tr>
+<tr>
+<td>8:50</td>
+<td>10 m</td>
+<td>Activate</td>
+<td>Group Discussion</td>
+<td>Could you do that with a Vertex Shader?</td>
+</tr>
+<tr>
+<td>9:00</td>
+<td>10 m</td>
+<td>Zach</td>
+<td>Zach</td>
+<td>Zach</td>
+</tr>
+<tr>
+<td>9:10</td>
+<td>20 m</td>
+<td>Study</td>
+<td>Assignment Intro</td>
+<td>Intro Lesson Plan Assignment</td>
 </tr>
 </tbody>
 </table>
@@ -89,9 +138,12 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 </ul>
 <h3 id="materials">Materials</h3>
 <ul>
-<li>Ripple Effect: A unity scene showing the working ripple effect.</li>
+<li>Wave Effect: A unity scene showing the working wave effect.</li>
 <li>Effect Template: A unity scene with a pass-through effect for student experimentation.</li>
 </ul>
+<h2 id="the-rendering-pipeline">The Rendering Pipeline</h2>
+<p><a href="https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview">The Rendering Pipeline</a></p>
+<p>What could you do with a Vertex Shader?</p>
 <h2 id="vertex-shader-examples">Vertex Shader Examples</h2>
 <p class="boxed right"><a href="https://www.youtube.com/watch?time_continue=39&amp;v=lagDz75cfdM&amp;feature=emb_logo">Curved World: Inception</a></p>
 <p><a href="https://www.youtube.com/watch?v=OMfTp2uuepg">Curved World</a></p>
@@ -141,9 +193,37 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/433137b00708049d18711c32ff08f010e171c385" alt="simple"></p>
 <h2 id="cross-product">Cross Product</h2>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cross_product_vector.svg/440px-Cross_product_vector.svg.png" alt="cross product"></p>
+<p><a href="https://www.mathsisfun.com/algebra/vectors-cross-product.html">Math is Fun (Advanced)! Cross Product</a></p>
 <h2 id="resources">Resources</h2>
 <p class="boxed right"><a href="https://catlikecoding.com/unity/tutorials/flow/waves/">Catlike Coding: Wave</a></p>
 <p class="boxed right"><a href="https://blogs.unity3d.com/2018/10/05/art-that-moves-creating-animated-materials-with-shader-graph/">Unity Blog: Animated Materials</a></p>
 <p class="boxed right"><a href="https://docs.unity3d.com/Manual/SL-SurfaceShaders.html">Unity: Writing Surface Shaders</a></p>
 <p class="boxed right"><a href="https://docs.unity3d.com/Manual/SL-SurfaceShaderExamples.html">Unity: Surface Shader Examples</a></p>
+<h2 id="challenges">Challenges</h2>
+<ul>
+<li>Explore the effect by adjusting the speed, period, and amplitude sliders.</li>
+<li>The waves flow in the X direction. Make the waves flow in the Z direction.</li>
+<li>Make the effect have two sets of waves—X and Z—added together.</li>
+<li>Make the waves ripple out from the center in circles.</li>
+<li>Make the waves ripple out from the center in squares.</li>
+</ul>
+<h2 id="answers">Answers</h2>
+<h3 id="procedural-vertex-displacement">Procedural Vertex Displacement</h3>
+<p><a href="https://medium.com/@joshmarinacci/customizing-vertex-shaders-86527c5693b2">three.js</a>
+<a href="https://www.youtube.com/watch?v=vh85pzT959M">Unity Shader Graph</a>
+<a href="https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js/">Explosion</a>
+<a href="https://catlikecoding.com/unity/tutorials/advanced-rendering/surface-displacement/">Noise Displacement</a>
+<a href="https://qmlbook.github.io/ch10-shaders/shaders.html">2D Distortions</a></p>
+<h3 id="outlining">Outlining</h3>
+<p><a href="https://www.youtube.com/watch?v=SlTkBe4YNbo">Outlining</a></p>
+<h3 id="texture-vertex-displacement">Texture Vertex Displacement</h3>
+<p><a href="https://developer.nvidia.com/gpugems/gpugems2/part-ii-shading-lighting-and-shadows/chapter-18-using-vertex-texture-displacement">Water</a></p>
+<h3 id="shape-morphing">Shape Morphing</h3>
+<p><a href="https://www.geeks3d.com/20140205/glsl-simple-morph-target-animation-opengl-glslhacker-demo/">Morphing</a></p>
+<h3 id="vertex-skinning-skeletal-animation">Vertex Skinning / Skeletal Animation</h3>
+<p><a href="https://chinedufn.github.io/skeletal-animation-system/">Skeletal Animation</a></p>
+<h3 id="shadow-mapping">Shadow Mapping</h3>
+<p><a href="https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping">Shadow Mapping</a></p>
+<h3 id="scene-distortion">Scene Distortion</h3>
+<p><a href="https://www.youtube.com/watch?v=79IhZnXSWbw">Minecraft</a></p>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>

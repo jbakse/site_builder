@@ -17,11 +17,13 @@ software: WebGL
 ## Overview
 
 ### Description
-Two weeks ago we looked at suface shader's in Unity. Today we'll return to unity and add a vertex shader stage to a custom surface shader. This shader will change the vertex positions in  model-space. Unity will then handle the projection for us.
+
+Two weeks ago we looked at suface shader's in Unity. Today we'll return to unity and add a vertex shader stage to a custom surface shader. This shader will change the vertex positions in model-space. Unity will then handle the projection for us.
 
 We'll use the vertex shader to distort a plane to create a rippling effect.
 
 ### Learning Objectives
+
 - Demonstrate the ability for vertex shaders to change the shape of geometry
 - Demonstrate how to use the vertex function with a surface shader in Unity
 
@@ -43,38 +45,49 @@ We'll use the vertex shader to distort a plane to create a rippling effect.
 
 **How do you calcuate the Cross Product?**
 
-
 ### Schedule
-| Time | Duration | Purpose  | Format         | Name                        |
-| ---- | -------- | -------- | -------------- | --------------------------- |
-| 7:00 | 10 m     | Engage   | ?              | ?                           |
-| -    | 10 m     | Study    | Lecture        | Tangents + Normals          |
-| -    | 10 m     | Study    | Lecture        | Numerical + Differentiation |
-| -    | 10 m     | Study    | Lecture        | Cross Products              |
-| -    | 10 m     | Activate | Code Reading   | Read the Example            |
-| -    | 20 m     | Activate | Code Challenge | Complete the Challenges     |
+
+| Time | Duration | Purpose  | Format           | Name                                    |
+| ---- | -------- | -------- | ---------------- | --------------------------------------- |
+| 7:00 | 10 m     | Engage   | Brainstorm       | What could you do with a Vertex Shader? |
+| 7:10 | 10 m     | Engage   | Q+A              | Answer the Questions                    |
+| 7:20 | 10 m     | Study    | Lecture          | Tangents + Normals                      |
+| 7:30 | 10 m     | Study    | Lecture          | Numerical + Differentiation             |
+| 7:40 | 10 m     | Study    | Lecture          | Cross Products                          |
+| 7:50 | 10 m     | Activate | Code Reading     | Read the Example                        |
+| 8:00 | 20 m     | Activate | Code Challenge   | Complete the Challenges                 |
+| 8:20 | 10 m     | Break    | Break            | Break                                   |
+| 8:30 | 10 m     | Activate | Code Discussion  | Challenges Solutions                    |
+| 8:40 | 10 m     | Engage   | Review           | Answer the Questions                    |
+| 8:50 | 10 m     | Activate | Group Discussion | Could you do that with a Vertex Shader? |
+| 9:00 | 10 m     | Zach     | Zach             | Zach                                    |
+| 9:10 | 20 m     | Study    | Assignment Intro | Intro Lesson Plan Assignment            |
 
 ### Students Should Bring
+
 - Unity 2019.3
 - Blender 2.8
 
 ### Materials
-- Ripple Effect: A unity scene showing the working ripple effect.
+
+- Wave Effect: A unity scene showing the working wave effect.
 - Effect Template: A unity scene with a pass-through effect for student experimentation.
 
-## Vertex Shader Examples
+## The Rendering Pipeline
 
+[The Rendering Pipeline](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview)
+
+What could you do with a Vertex Shader?
+
+## Vertex Shader Examples
 
 [Curved World: Inception](https://www.youtube.com/watch?time_continue=39&v=lagDz75cfdM&feature=emb_logo){boxed right}
 
 [Curved World](https://www.youtube.com/watch?v=OMfTp2uuepg)
 
-
-
 ## Unity Project
 
 [Demo Project](../unity/demo_project.zip){boxed right}
-
 
 ## Tangents and Normals
 
@@ -90,7 +103,7 @@ The tangent line matches the slope where it touches.
 /::
 
 > The **normal** line to a curve at a given point is the line perpendicular to the tangent line at that point.
-> 
+>
 > — [Wikipedia](<https://en.wikipedia.org/wiki/Normal_(geometry)>) (editied)
 
 ::: .two-up
@@ -102,17 +115,16 @@ For our 3D lighting purposes today we don't need to know the position of the tan
 
 <!-- ![vectors](https://math.libretexts.org/@api/deki/files/71/line_1.jpg?revision=1) -->
 
-
 ## Numerical vs Symbolic Differentiation
->  The derivative of a function at a chosen input value is the slope of the tangent line at that point.
+
+> The derivative of a function at a chosen input value is the slope of the tangent line at that point.
 >
->  Differentiation is the action of computing a derivative.
-> 
+> Differentiation is the action of computing a derivative.
+>
 > — [Wikipedia](https://en.wikipedia.org/wiki/Derivative)
 
-
 - [Derivative](https://en.wikipedia.org/wiki/Derivative)
-  
+
 - [Numerial Differentiation](https://en.wikipedia.org/wiki/Numerical_differentiation)
 
 - [Stack Overflow: Numerical vs Symbolic vs Automatic Differentiation](https://stackoverflow.com/questions/43455320/difference-between-symbolic-differentiation-and-automatic-differentiation)
@@ -121,21 +133,20 @@ For our 3D lighting purposes today we don't need to know the position of the tan
 
 ![secant](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Derivative.svg/460px-Derivative.svg.png)
 
-
 If you know the function for a curve and you know calculus, you might be able to find a derivative function by applying known rules.
 
 If you don't know the function (but you can sample it), don't know calculus, or can't find the derivative function, you can numerically estimate the derivative/slope/tangent by finding two nearby points and substracting.
 
 ![simple](https://wikimedia.org/api/rest_v1/media/math/render/svg/433137b00708049d18711c32ff08f010e171c385)
 
-
 ## Cross Product
 
 ![cross product](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cross_product_vector.svg/440px-Cross_product_vector.svg.png)
 
-
+[Math is Fun (Advanced)! Cross Product](https://www.mathsisfun.com/algebra/vectors-cross-product.html)
 
 ## Resources
+
 [Catlike Coding: Wave](https://catlikecoding.com/unity/tutorials/flow/waves/){boxed right}
 
 [Unity Blog: Animated Materials](https://blogs.unity3d.com/2018/10/05/art-that-moves-creating-animated-materials-with-shader-graph/){boxed right}
@@ -143,3 +154,45 @@ If you don't know the function (but you can sample it), don't know calculus, or 
 [Unity: Writing Surface Shaders](https://docs.unity3d.com/Manual/SL-SurfaceShaders.html){boxed right}
 
 [Unity: Surface Shader Examples](https://docs.unity3d.com/Manual/SL-SurfaceShaderExamples.html){boxed right}
+
+## Challenges
+
+- Explore the effect by adjusting the speed, period, and amplitude sliders.
+- The waves flow in the X direction. Make the waves flow in the Z direction.
+- Make the effect have two sets of waves—X and Z—added together.
+- Make the waves ripple out from the center in circles.
+- Make the waves ripple out from the center in squares.
+
+## Answers
+
+### Procedural Vertex Displacement
+
+[three.js](https://medium.com/@joshmarinacci/customizing-vertex-shaders-86527c5693b2)
+[Unity Shader Graph](https://www.youtube.com/watch?v=vh85pzT959M)
+[Explosion](https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js/)
+[Noise Displacement](https://catlikecoding.com/unity/tutorials/advanced-rendering/surface-displacement/)
+[2D Distortions](https://qmlbook.github.io/ch10-shaders/shaders.html)
+
+### Outlining
+
+[Outlining](https://www.youtube.com/watch?v=SlTkBe4YNbo)
+
+### Texture Vertex Displacement
+
+[Water](https://developer.nvidia.com/gpugems/gpugems2/part-ii-shading-lighting-and-shadows/chapter-18-using-vertex-texture-displacement)
+
+### Shape Morphing
+
+[Morphing](https://www.geeks3d.com/20140205/glsl-simple-morph-target-animation-opengl-glslhacker-demo/)
+
+### Vertex Skinning / Skeletal Animation
+
+[Skeletal Animation](https://chinedufn.github.io/skeletal-animation-system/)
+
+### Shadow Mapping
+
+[Shadow Mapping](https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping)
+
+### Scene Distortion
+
+[Minecraft](https://www.youtube.com/watch?v=79IhZnXSWbw)

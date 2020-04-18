@@ -36,7 +36,6 @@ Seymour Papert with a physical turtle robot, photo by Cynthia Solomon{figure}
 A virtual turtle in action!{figure}
 /::
 
-
 Logo's use of turtles allows students to make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this _body-syntonic_ learning. Body-syntonic learning supports understanding of abstract ideas through sensory experience. Papert often discussed these ideas in writing and videos.
 
 - [Seymour Papert and Students (1972)](https://www.youtube.com/watch?v=5dZMgdqy7zY), [longer cut](https://www.youtube.com/watch?v=xMzojQFyMo0)
@@ -50,94 +49,102 @@ Logo's use of turtles allows students to make a strong association between what 
 
 Explore body-syntonic reasoning by acting out a logo-like program.
 
-
 ### Write a Program
+
 - Draw an image from the deck and keep it secret.
 - Think about the path someone would need to take to trace that image as they walked.
 - Write a series of instructions for tracing the image using `turn(degrees)` and `forward(steps)`.
 
-
 ### Run a Program
+
 - Break into pairs.
 - Trade instructions, but not images, with your partner.
 - Follow the instructions your partner wrote, and think about the shape you are tracing on the ground.
 - Draw an image of the path you took, and compare that image with your partner's original image.
 
 ### Discuss
+
 Did involving your bodily senses and physical movement impact how you thought about the program?
 
 /::
 
-
-
 # A Shift in Perspective
-The p5.js graphics API uses a _Cartesian_ coordinate system. To draw a line in p5.js you might use code like this: 
+
+The p5.js graphics API uses a _Cartesian_ coordinate system. To draw a line in p5.js you might use code like this:
 
 ```javascript
-line(100, 100, 200, 200)
+line(100, 100, 200, 200);
 ```
 
 This prioritizes the `x,y` coordinates of the **start** and **end** of the line. The **length** and **angle** of the line are deprioritized: they are not directly specified at all.
 
 Turtle graphics flips these priorities around. This is code you might write to draw a line using a turtle:
+
 ```javascript
-right(45); forward(100);
+right(45);
+forward(100);
 ```
-Now the line's **angle** and **length** are specified instead of its **start** and **end**. This is one of the key shifts in thinking encouraged by turtle graphics. 
+
+Now the line's **angle** and **length** are specified instead of its **start** and **end**. This is one of the key shifts in thinking encouraged by turtle graphics.
 
 The second shift becomes apparent if we ask where the line in the second example should be drawn. We can figure out the angle and length of a line from its start and end points, but we can't go the other way. Knowing the length and angle of a line does not tell us where it should be drawn. In turtle graphics, commands like `right` and `forward` use coordinates **relative** to the turtle, rather than **absolute** coordinates measured on the canvas.
 
 This shift in priorities makes some things easier to express and some things harder:
 
-
-
 ::: .columns
 
 ::: .half
 **Cartesian: Drawing a Square**
+
 ```javascript
 rect(100, 100, 100, 100);
 ```
+
 /::
 
 ::: .half
 **Turtle Graphics: Drawing a Square**
+
 ```javascript
 t.moveTo(100, 100);
 t.penDown();
-for(side = 0; side < 4; side++) {
-    t.forward(100);
-    t.turnRight(90);
+for (side = 0; side < 4; side++) {
+  t.forward(100);
+  t.turnRight(90);
 }
 ```
-/::
 
 /::
 
+/::
 
 ::: .columns
 
 ::: .half
 **Cartesian: Drawing a Star**
+
 ```javascript
 line(100, 100, 200, 100);
 line(200, 100, 119.09, 158.77);
 line(119.09, 158.77, 150, 63.67);
-line(150, 63.67, 180.90, 158.77);
-line(180.90, 158.77, 100.00, 100.00);
+line(150, 63.67, 180.9, 158.77);
+line(180.9, 158.77, 100.0, 100.0);
 ```
+
 /::
 
 ::: .half
 **Turtle Graphics: Drawing a Star**
+
 ```javascript
 t.moveTo(100, 100);
 t.penDown();
-for(side = 0; side < 5; side++) {
-    t.forward(100);
-    t.turnRight(135);
+for (side = 0; side < 5; side++) {
+  t.forward(100);
+  t.turnRight(135);
 }
 ```
+
 /::
 
 /::
@@ -148,12 +155,9 @@ In the examples above, the Cartesian system works well for drawing a square, but
 /turtles/sketches/turtle_star.js
 /:: -->
 
+Both frameworks can be used to draw a square or star. We are not [_forced_](https://en.wikipedia.org/wiki/Technological_determinism) to draw specific things by either framework, but each framework encourages a different way of thinking. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with turtle graphics encourages yet other forms.
 
-Both frameworks can be used to draw a square or star. We are not [_forced_](https://en.wikipedia.org/wiki/Technological_determinism) to draw specific things by either framework, but each framework encourages a different way of thinking. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with turtle graphics encourages yet other forms. 
-
-
-Two of the forms that turtles are very good for are spirograph-like figures and recursive trees.
-
+Two of the forms that turtles tend to encourage are spirograph-like figures and recursive trees.
 
 ::: js-lab
 /turtles/sketches/turtle_spirograph.js
@@ -162,8 +166,6 @@ Two of the forms that turtles are very good for are spirograph-like figures and 
 ::: js-lab
 /turtles/sketches/turtle_tree.js
 /::
-
-
 
 ## A Simple Turtle in p5.js
 
@@ -174,7 +176,6 @@ Grab [the code here](turtle/turtle.html).
 <!-- ::: js-lab
 /turtles/sketches/turtle_house.js
 /:: -->
-
 
 ### Comp Form Turtle API
 
@@ -206,7 +207,7 @@ Rotates the turtle's bearing counter-clockwise by the provided angle in degrees.
 
 `myTurtle.turnTo(angleDegrees)`
 
-Changes the turtle's bearing to the provided angle. The angle is measured in clockwise degrees from straight right. 
+Changes the turtle's bearing to the provided angle. The angle is measured in clockwise degrees from straight right.
 
 `myTurtle.penUp()`
 
@@ -222,42 +223,37 @@ Draws an image centered on the turtle's current location and aligned with the tu
 
 `myTurtle.pushState()`
 
-Records the turtle’s current state (position, bearing, etc.) to a stack. 
+Records the turtle’s current state (position, bearing, etc.) to a stack.
 
 `myTurtle.popState()`
 
 Restores the turtle’s state to the top recorded state on the stack.
 
-
-
-
 ## Turtle Examples
 
 ### Turtle Square Example
+
 ::: js-lab
 /turtles/sketches/turtle_square.js
 /::
 
 ### Turtle Triangle Example
+
 ::: js-lab
 /turtles/sketches/turtle_triangle.js
 /::
 
 ### Turtle Multiple Triangles Example
+
 ::: js-lab
 /turtles/sketches/turtle_triangles.js
 /::
 
-
-
-
-
 ::: .activity
+
 ## In-class Challenge
 
-
 Explore turtle graphics by modifying the examples above. Work through the following challenges in order. Don't skip any.
-
 
 | Time                 | Comment                                                      |
 | -------------------- | ------------------------------------------------------------ |
@@ -265,84 +261,83 @@ Explore turtle graphics by modifying the examples above. Work through the follow
 | 11 in 20 Minutes     | Good.                                                        |
 | All 15 in 20 Minutes | Great.                                                       |
 
-
-
-
 ### Modify the Triangle Example
+
 1. Draw a pentagon.
 2. Draw an octagon.
 3. Draw a circle.
 4. Draw a circle with a dashed line. Tip: `penUp() + penDown()`
 
 ### Modify the Multiple Triangles Example
+
 5. Draw each triangle with different colors.
 6. Change the triangle function to draw pentagons.
 7. Draw a 3x3 grid of pentagons.
-{continue}
+   {continue}
 
 Style Tip: If you change what a function does, you should change its name as well. Did you change the function name when completing challenge 6?
 
 ### Modify the Spirograph Example
+
 8. Change the `moveForward()` parameter to `i * 3`.
 9. Center the drawing.
 10. Comment out the `noLoop()`
 11. Change the `turnRight()` parameter to `175 + frameCount`.
-{continue}
-
+    {continue}
 
 ### Challenging Challenges
+
 12. Start with the original Triangle Example. Change it to draw a spiral.
 13. Using a loop, draw 10 concentric triangles.
 14. Draw the figure below.
 15. Create a `polygon(sides)` function that receives a `sides` parameter and draws a regular polygon.
-{continue}
+    {continue}
 
 ![challenge_1.png](challenge_1.png)
 
 /::
 
-
 ### Turtle + Images
+
 ::: js-lab
 /turtles/sketches/turtle_image.js
 /::
 
-
 ### Turtle Push + Pop
+
 ::: js-lab
 /turtles/sketches/turtle_push.js
 /::
 
-
 ### Turtle Recursive Tree
+
 ::: js-lab
 /turtles/sketches/turtle_tree_2.js
 /::
-
-
 
 ## Drawing Machines in Code
 
 Turtles make it possible to change how you think about drawing and give you a new set of tools for expressing an image in code. They don't change _what you can do_ though: [under the hood](turtle/turtle.html) the turtle class uses the standard p5.js drawing API and a little trigonometry. Instead, using a turtle changes _how you do it_. Changing your approach and mental model has a significant effect on the solutions you create. You could make the same exact drawing with or without turtles, but in practice using turtles tends to lead to certain motifs and styles.
 
-Turtles are just one example of a drawing machine. Inventing your own drawing machine is a rewarding exercise. It leads to new ways of approaching problems, a deeper understanding of programming, and new aesthetics to explore. 
+Turtles are just one example of a drawing machine. Inventing your own drawing machine is a rewarding exercise. It leads to new ways of approaching problems, a deeper understanding of programming, and new aesthetics to explore.
 
 ::: .assignment
 
 ## Keep Sketching!
 
 ### Base
+
 Explore using turtle graphics. Start with a crazy spirograph thing and get that out of the way. Then see how much variety you can get from the turtle.{bigger}
 
-### Challenge: Animal Face
+### Individual Challenge: Animal Face
+
 Using turtle graphics, create an **intricate** portrait of an animal. Begin by choosing an animal. Look at photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch? Create your sketch primarily using turtle graphics techniques.
 
+### Pair Challenge: Turtle Garden
+
+Work with a partner you haven't worked with before. Draw a garden.
+
 /::
-
-
-
-
-
 
 ## Reference Links
 
@@ -352,4 +347,4 @@ Using turtle graphics, create an **intricate** portrait of an animal. Begin by c
 
 [Turtle for Processing](http://leahbuechley.com/Turtle/): A turtle library for Processing from Leah Buechley.
 
-[iLogo](http://www.cr31.co.uk/logojs/logo.html): Draw with turtles on this web editor, iLogo. 
+[iLogo](http://www.cr31.co.uk/logojs/logo.html): Draw with turtles on this web editor, iLogo.

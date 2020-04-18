@@ -9,7 +9,7 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <polygon points="112,91.7 96,119.4 128,119.4"/>
 <polygon points="96,64 80,91.7 112,91.7"/>
 </svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Pixel Data</span><div class="buttons"><a class="previous" href="../strategy"><i class="fa fa-caret-left fa-lg"></i>Strategies</a><a class="next" href="../turtles">Turtle Graphics<i class="fa fa-caret-right fa-lg"></i></a></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Pixel Data</h1><h6>Overview</h6><p class="description">Access pixel values directly to process and generate images.</p><h6>Tools</h6><p class="software">p5.js</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="pixels">Pixels</h2>
-<p>Today, most computers use color displays that produce images using a grid of pixels. Conceptually, each pixel is made up of three sub-pixels—red, green, and blue—though the actual hardware may use a different pattern. Because these pixels are very close together, the image appears continuous.  Because our eyes can only directly sense red, green, and blue light, the screen can reproduce most of the colors we are capable of seeing.</p>
+<p>Today, most computers use color displays that produce images using a grid of pixels. Conceptually, each pixel is made up of three sub-pixels—red, green, and blue—though the actual hardware may use a different pattern. Because these pixels are very close together, the image appears continuous. Because our eyes can only directly sense red, green, and blue light, the screen can reproduce most of the colors we are capable of seeing.</p>
 <p class="figure"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/XO_screen_01_Pengo.jpg" alt="Pixels">
 Photo by <a href="http://commons.wikimedia.org/wiki/File:XO_screen_01_Pengo.jpg">Peter Halasz</a></p>
 <div id="" class="links-sidebar">
@@ -19,7 +19,7 @@ Photo by <a href="http://commons.wikimedia.org/wiki/File:XO_screen_01_Pengo.jpg"
 <p>When you work at a high level you are not responsible for the details. Because you are not responsible for the details you tend to consider them less. Working directly with the pixels by reading and writing their red, green, and blue values one-by-one leads to thinking about drawing with code differently.</p>
 <div id="" class="callout">
 <h3 id="vector-monitors">Vector Monitors</h3>
-<p>Computer displays don’t have to use pixels at all. One of the earliest video games, <a href="https://en.wikipedia.org/wiki/Tennis_for_Two">Tennis for Two</a>, used a cathode ray oscilloscope as its display.  In a cathode ray oscilloscope, signals are drawn by magnetically deflecting a beam of electrons as they race from an emitter—the cathode—towards a phosphor-coated glass screen. The phosphor glows where the electrons strike it, creating an image. This type of display can show smooth lines without any of the aliasing artifacts of a pixel display.</p>
+<p>Computer displays don’t have to use pixels at all. One of the earliest video games, <a href="https://en.wikipedia.org/wiki/Tennis_for_Two">Tennis for Two</a>, used a cathode ray oscilloscope as its display. In a cathode ray oscilloscope, signals are drawn by magnetically deflecting a beam of electrons as they race from an emitter—the cathode—towards a phosphor-coated glass screen. The phosphor glows where the electrons strike it, creating an image. This type of display can show smooth lines without any of the aliasing artifacts of a pixel display.</p>
 <p><a href="https://en.wikipedia.org/wiki/Vector_monitor">Vector Monitors</a> were used in later video games as well, including the <a href="https://en.wikipedia.org/wiki/Tempest_(video_game)">Tempest</a> arcade game and several games for the <a href="https://en.wikipedia.org/wiki/Vectrex">Vectrex</a> home console.</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Tennis_For_Two_on_a_DuMont_Lab_Oscilloscope_Type_304-A.jpg" alt="Tennis for Two"></p>
 </div>
@@ -30,24 +30,24 @@ Photo by <a href="http://commons.wikimedia.org/wiki/File:XO_screen_01_Pengo.jpg"
 <p>Today, 6 megabytes isn’t much, but many older computers didn’t have enough RAM to keep a full-color image of the screen in memory at all. They used a <a href="https://www.youtube.com/watch?v=Tfh0ytz8S0k">variety of tricks</a> instead.</p>
 </div>
 <h3 id="the-pixels-array">The Pixels Array</h3>
-<p>The memory storing the image shown on the screen is called the video buffer or framebuffer. Direct access to the screen’s framebuffer is pretty unusual on modern computers, and high level libraries like p5.js don’t (and can’t) provide it.  P5.js <em>does</em> give you access to a pixel buffer storing the image shown on your sketch’s canvas. When you call drawing functions like <code>rect()</code> and <code>ellipse()</code>, p5.js updates the appropriate values in this buffer. The buffer is then composited into the rendered webpage by the browser. The browser window is composited onto the display’s framebuffer by the operating system and video hardware.</p>
+<p>The memory storing the image shown on the screen is called the video buffer or framebuffer. Direct access to the screen’s framebuffer is pretty unusual on modern computers, and high level libraries like p5.js don’t (and can’t) provide it. P5.js <em>does</em> give you access to a pixel buffer storing the image shown on your sketch’s canvas. When you call drawing functions like <code>rect()</code> and <code>ellipse()</code>, p5.js updates the appropriate values in this buffer. The buffer is then composited into the rendered webpage by the browser. The browser window is composited onto the display’s framebuffer by the operating system and video hardware.</p>
 <div id="" class="links-sidebar">
 <p><a href="https://p5js.org/reference/#/p5/pixels">p5.js<br/>pixels array</a></p>
 </div>
 <p>You can read and write pixel values with the <code>get()</code> and <code>set()</code> methods. These methods are easy to use, but they are really, really slow. With a little bit of math, you can work directly with the <code>pixels</code> array data. This is a little more work but can easily be <strong>thousands of times faster</strong>.</p>
-<!-- 
+<!--
 Leah, I might come back to this section but i'm setting it aside for now to focus on getting everything else done. It might be helpful to talk over this together.
 
-I want this section to look at the relationship between vector and raster images formats, to compare that to working with shape drawing vs pixels in p5.js, and talk about the conceptual differences and how they lead to different types of aesthetics. A key point is that vector's describe how to make an image, rasters describe the made image. Intent vs detail. 
+I want this section to look at the relationship between vector and raster images formats, to compare that to working with shape drawing vs pixels in p5.js, and talk about the conceptual differences and how they lead to different types of aesthetics. A key point is that vector's describe how to make an image, rasters describe the made image. Intent vs detail.
 
 ### Rasterization
 [p5 rasterizes high-level descriptions to pixel values as you go (immediate mode?)]
 [vector images are rasterized before they are shown]
 ### Raster vs. Vector Images
-Raster and Vector images are conceptually very different. 
+Raster and Vector images are conceptually very different.
 Raster images are represented as samples
 [How raster images are stored in memory]
-[Not just about scalability. Scalability is the most often mentioned difference between raster and vector images, but other differences exist as well. Because vector images are described at a higher level—shapes instead of pixels—they are also easier to distort, recolor, change the stroke, etc. Not all images can be reasonably described as a collection of shapes. Photographic images, in particular, have too much detail to store as a collection of shapes. Similarly, some types of effects that consume or produce pixel-level detail require raster data, more information about what the images is made of, rather than what it looks like now] 
+[Not just about scalability. Scalability is the most often mentioned difference between raster and vector images, but other differences exist as well. Because vector images are described at a higher level—shapes instead of pixels—they are also easier to distort, recolor, change the stroke, etc. Not all images can be reasonably described as a collection of shapes. Photographic images, in particular, have too much detail to store as a collection of shapes. Similarly, some types of effects that consume or produce pixel-level detail require raster data, more information about what the images is made of, rather than what it looks like now]
 [slide show]
 
  -->
@@ -461,14 +461,13 @@ var blended_color = lerpColor(color_a, color_b, .5);
 <span class="hljs-comment">// we don't need to worry about screen pixel density here, because we are not reading from the canvas</span>
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getQuick</span>(<span class="hljs-params">img, x, y</span>) </span>{
-
-	<span class="hljs-keyword">var</span> i = (y * img.width + x) * <span class="hljs-number">4</span>;
-	<span class="hljs-keyword">return</span> [
-		testImage.pixels[i],
-		testImage.pixels[i+<span class="hljs-number">1</span>],
-		testImage.pixels[i+<span class="hljs-number">2</span>],
-		testImage.pixels[i+<span class="hljs-number">3</span>],
-	];
+  <span class="hljs-keyword">var</span> i = (y * img.width + x) * <span class="hljs-number">4</span>;
+  <span class="hljs-keyword">return</span> [
+    testImage.pixels[i],
+    testImage.pixels[i + <span class="hljs-number">1</span>],
+    testImage.pixels[i + <span class="hljs-number">2</span>],
+    testImage.pixels[i + <span class="hljs-number">3</span>]
+  ];
 }
 </code></pre>
 <p>Copy the <code>getQuick()</code> function above into your sketch. You can then replace a built-in p5 <code>get</code> call with a call to <code>getQuick</code>:</p>
@@ -497,7 +496,7 @@ img.updatePixels();
 <p>You can work with the pixels in an image using <code>image.pixels[]</code> or the pixels of the canvas with just <code>pixels[]</code>.
 When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default, p5 will create a high-dpi canvas when running on a high-dpi (retina) display. You can call <code>pixelDensity(1)</code> to disable this feature. Otherwise, you’ll need to take into account the density when calculating a position in the <code>pixels[]</code> array.</p>
 <p>The examples on this page work with the pixels of images instead of the canvas to avoid this issue altogether. If you need to work with the canvas, the <a href="https://p5js.org/reference/#/p5/pixels">pixels</a> documentation has info on working with higher pixel densities.</p>
-<!-- 
+<!--
 ### Using the `pixels` array
 
 The p5.js `pixels` array holds four color values—red, green, blue, and alpha—for every pixel on the canvas. Images are two dimensional, but the `pixels` array is one dimensional. In order to read or write values in the `pixels` array, you need to find the index—the position in the array—of your target pixel. To do that, you need to know how the data is laid out. In p5.js the upper left pixel is the first pixel in the array and the other pixels follow left to right, top to bottom. Each pixel is represented by four values: red, green, blue, and alpha.
@@ -549,10 +548,16 @@ On a high-dpi or retina display, the canvas array may have more values than you 
 <li>Load an image and process its pixels. Show the result.</li>
 <li>Use an image as an input source to control a drawing. Don’t show the original image, just the output.</li>
 </ol>
-<h3 id="challenge">Challenge</h3>
-<p>Create a pixel Ouroboros.
-Create code that processes an image. Feed the result back into your code and process it again. What happens after several generations?</p>
+<h3 id="invidual-challenge-pixel-ouroboros">Invidual Challenge — Pixel Ouroboros.</h3>
+<p>Create code that processes an image. Feed the result back into your code and process it again. What happens after several generations?</p>
 <p>Post your source image, the result after one generation, and the result after several generations. Alternately, capture 90 generations as frames and post as a video.</p>
+<h3 id="pair-challenge-generate-process">Pair Challenge — Generate / Process.</h3>
+<p>Work with a partner you haven’t worked before.</p>
+<ol>
+<li>Make a sketch that generates an image pixel by pixel.</li>
+<li>Give your image to your partner.</li>
+<li>Create a sketch that pixel processess that image.</li>
+</ol>
 </div>
 <h2 id="reference-links">Reference Links</h2>
 <dl>

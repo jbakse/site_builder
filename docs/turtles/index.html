@@ -52,11 +52,12 @@ A virtual turtle in action!</p>
 </div>
 <h1 id="a-shift-in-perspective">A Shift in Perspective</h1>
 <p>The p5.js graphics API uses a <em>Cartesian</em> coordinate system. To draw a line in p5.js you might use code like this:</p>
-<pre><code class="language-javascript">line(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>)
+<pre><code class="language-javascript">line(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>);
 </code></pre>
 <p>This prioritizes the <code>x,y</code> coordinates of the <strong>start</strong> and <strong>end</strong> of the line. The <strong>length</strong> and <strong>angle</strong> of the line are deprioritized: they are not directly specified at all.</p>
 <p>Turtle graphics flips these priorities around. This is code you might write to draw a line using a turtle:</p>
-<pre><code class="language-javascript">right(<span class="hljs-number">45</span>); forward(<span class="hljs-number">100</span>);
+<pre><code class="language-javascript">right(<span class="hljs-number">45</span>);
+forward(<span class="hljs-number">100</span>);
 </code></pre>
 <p>Now the line’s <strong>angle</strong> and <strong>length</strong> are specified instead of its <strong>start</strong> and <strong>end</strong>. This is one of the key shifts in thinking encouraged by turtle graphics.</p>
 <p>The second shift becomes apparent if we ask where the line in the second example should be drawn. We can figure out the angle and length of a line from its start and end points, but we can’t go the other way. Knowing the length and angle of a line does not tell us where it should be drawn. In turtle graphics, commands like <code>right</code> and <code>forward</code> use coordinates <strong>relative</strong> to the turtle, rather than <strong>absolute</strong> coordinates measured on the canvas.</p>
@@ -71,9 +72,9 @@ A virtual turtle in action!</p>
 <p><strong>Turtle Graphics: Drawing a Square</strong></p>
 <pre><code class="language-javascript">t.moveTo(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
 t.penDown();
-<span class="hljs-keyword">for</span>(side = <span class="hljs-number">0</span>; side &lt; <span class="hljs-number">4</span>; side++) {
-    t.forward(<span class="hljs-number">100</span>);
-    t.turnRight(<span class="hljs-number">90</span>);
+<span class="hljs-keyword">for</span> (side = <span class="hljs-number">0</span>; side &lt; <span class="hljs-number">4</span>; side++) {
+  t.forward(<span class="hljs-number">100</span>);
+  t.turnRight(<span class="hljs-number">90</span>);
 }
 </code></pre>
 </div>
@@ -84,17 +85,17 @@ t.penDown();
 <pre><code class="language-javascript">line(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>);
 line(<span class="hljs-number">200</span>, <span class="hljs-number">100</span>, <span class="hljs-number">119.09</span>, <span class="hljs-number">158.77</span>);
 line(<span class="hljs-number">119.09</span>, <span class="hljs-number">158.77</span>, <span class="hljs-number">150</span>, <span class="hljs-number">63.67</span>);
-line(<span class="hljs-number">150</span>, <span class="hljs-number">63.67</span>, <span class="hljs-number">180.90</span>, <span class="hljs-number">158.77</span>);
-line(<span class="hljs-number">180.90</span>, <span class="hljs-number">158.77</span>, <span class="hljs-number">100.00</span>, <span class="hljs-number">100.00</span>);
+line(<span class="hljs-number">150</span>, <span class="hljs-number">63.67</span>, <span class="hljs-number">180.9</span>, <span class="hljs-number">158.77</span>);
+line(<span class="hljs-number">180.9</span>, <span class="hljs-number">158.77</span>, <span class="hljs-number">100.0</span>, <span class="hljs-number">100.0</span>);
 </code></pre>
 </div>
 <div id="" class="half">
 <p><strong>Turtle Graphics: Drawing a Star</strong></p>
 <pre><code class="language-javascript">t.moveTo(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
 t.penDown();
-<span class="hljs-keyword">for</span>(side = <span class="hljs-number">0</span>; side &lt; <span class="hljs-number">5</span>; side++) {
-    t.forward(<span class="hljs-number">100</span>);
-    t.turnRight(<span class="hljs-number">135</span>);
+<span class="hljs-keyword">for</span> (side = <span class="hljs-number">0</span>; side &lt; <span class="hljs-number">5</span>; side++) {
+  t.forward(<span class="hljs-number">100</span>);
+  t.turnRight(<span class="hljs-number">135</span>);
 }
 </code></pre>
 </div>
@@ -104,7 +105,7 @@ t.penDown();
 /turtles/sketches/turtle_star.js
 /:: -->
 <p>Both frameworks can be used to draw a square or star. We are not <a href="https://en.wikipedia.org/wiki/Technological_determinism"><em>forced</em></a> to draw specific things by either framework, but each framework encourages a different way of thinking. Just as working directly with pixels encourages different forms than working with higher-level drawing APIs, working with turtle graphics encourages yet other forms.</p>
-<p>Two of the forms that turtles are very good for are spirograph-like figures and recursive trees.</p>
+<p>Two of the forms that turtles tend to encourage are spirograph-like figures and recursive trees.</p>
 <div id="" class="">
 <div class="js-lab">
 <iframe class="js-lab" src="/js_lab/js_lab.html?/turtles/sketches/turtle_spirograph.js">
@@ -254,8 +255,10 @@ t.penDown();
 <h2 id="keep-sketching">Keep Sketching!</h2>
 <h3 id="base">Base</h3>
 <p class="bigger">Explore using turtle graphics. Start with a crazy spirograph thing and get that out of the way. Then see how much variety you can get from the turtle.</p>
-<h3 id="challenge-animal-face">Challenge: Animal Face</h3>
+<h3 id="individual-challenge-animal-face">Individual Challenge: Animal Face</h3>
 <p>Using turtle graphics, create an <strong>intricate</strong> portrait of an animal. Begin by choosing an animal. Look at photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch? Create your sketch primarily using turtle graphics techniques.</p>
+<h3 id="pair-challenge-turtle-garden">Pair Challenge: Turtle Garden</h3>
+<p>Work with a partner you haven’t worked with before. Draw a garden.</p>
 </div>
 <h2 id="reference-links">Reference Links</h2>
 <p><a href="https://www.media.mit.edu/posts/the-seeds-that-seymour-sowed/">Mitchel Resnick: The Seeds that Seymour Sowed</a></p>
