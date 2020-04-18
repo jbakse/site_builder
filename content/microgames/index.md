@@ -94,6 +94,12 @@ Since p5.play builds on p5.js it should feel pretty familiar. One key difference
 - [p5.play examples](http://p5play.molleindustria.org/examples/index.html)
 - [p5.play api reference](http://p5play.molleindustria.org/docs/index.html)
 
+::: .callout
+
+**NOTE:** p5.play hasn't been updated in a while, and produces some console errors in newer browsers. The examples seem to work fine still.
+
+/::
+
 ## Study Examples
 
 ### Example 1: Sprites

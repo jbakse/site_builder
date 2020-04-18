@@ -1,4 +1,4 @@
-// require https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js
+// require https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js
 // require /microgames/sketches/p5.play.js
 
 
