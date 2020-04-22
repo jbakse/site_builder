@@ -28,6 +28,7 @@ Animal Crossing NES Collection</p>
 <img src="figures/ww-catch.png" alt="WarioWare"></p>
 </div>
 <p>Designing and building Microgames is a great way to explore game design. Their small scope allows even a single person to conceive, build, and test a game idea in a short amount of time. Each microgame is stripped to its essential element, allowing no distractions to cover up weak central mechanic. When building a microgame is left with a little to worry about as possible beyond the essentials of game design.</p>
+<div id="" class="spoiler">
 <div id="" class="activity">
 <h2 id="what-is-a-game">What is a Game?</h2>
 <p>Many interactive artifacts fall into the categories of <em>games</em>, <em>toys</em>, or <em>tools</em>. What is the difference?</p>
@@ -45,32 +46,7 @@ Animal Crossing NES Collection</p>
 <h3 id="class-5-minutes">Class, 5 minutes</h3>
 <p>Compare features to each of the artifacts in the list above. Do these features support the way each artifact was grouped?</p>
 </div>
-<h2 id="approaching-libraries">Approaching Libraries</h2>
-<p>The tools of creative technology change continuously. Computer hardware gets smaller, cheaper, and faster. New software is created and old software is updated. Those who work closely with technology need to continuously learn to use new tools to make new projects and maintain old ones.</p>
-<p>Because being adept at learning new tools is a skill that supports many others, it is one of the most valuable skills to cultivate.</p>
-<div id="" class="activity">
-<h2 id="getting-started-with-new-tools">Getting Started with New Tools</h2>
-<p>In this class, we have explored a number of libraries, languages, mediums, and tools. Reflect on your process for learning new tools.</p>
-<h3 id="groups-5-minutes-3">Groups, 5 minutes</h3>
-<p>Brainstorm at least 8 tactics for initially learning about a new tool.</p>
-<h3 id="groups-10-minutes">Groups, 10 minutes</h3>
-<p>Look at your list of tactics, group those that are similar, and write out a list of the 5 most important tactics. State each tactic clearly using fewer than 10 words.</p>
-<h3 id="class-10-minutes-3">Class, 10 minutes</h3>
-<p>Compare group lists.</p>
 </div>
-<br/>
-Here are some of the key tactics I use when learning new tools:
-<ul>
-<li>Read the home page and feature overview.</li>
-<li>Look through the examples. Focus on the library features that are demonstrated, not the code.</li>
-<li>Scan the API reference. Note how it is organized and any interesting function names.</li>
-<li>Create a “Hello, World!” from scratch or following a tutorial.</li>
-<li>Look at the examples again. Read the code of an interesting example.</li>
-<li>Modify the example.</li>
-<li>Extend the example.</li>
-<li>Build an original project of small scope.</li>
-</ul>
-<!-- [[move this section to new page someday? this isn't tied to microgames, it is just here because of the class calendar.]] -->
 <h2 id="p5play">p5.play</h2>
 <p>The p5.play library builds on p5.js to add features commonly needed in interactive applications, especially games. The p5.play homepage describes the library like this:</p>
 <blockquote class="bigger">
@@ -82,6 +58,9 @@ Here are some of the key tactics I use when learning new tools:
 <li><a href="http://p5play.molleindustria.org/examples/index.html">p5.play examples</a></li>
 <li><a href="http://p5play.molleindustria.org/docs/index.html">p5.play api reference</a></li>
 </ul>
+<div id="" class="callout">
+<p><strong>NOTE:</strong> p5.play hasn’t been updated in a while, and produces some console errors in newer browsers. The examples seem to work fine still.</p>
+</div>
 <h2 id="study-examples">Study Examples</h2>
 <h3 id="example-1-sprites">Example 1: Sprites</h3>
 <div id="" class="">
@@ -137,4 +116,33 @@ Here are some of the key tactics I use when learning new tools:
 <dd>Game Maker’s Toolkit is an excellent Youtube series about game design. This video addresses how to design a good micro challenge, and <a href="https://www.youtube.com/watch?v=7daTGyVZ60I">The Secret Of Mario’s Jump</a> analyzes player input.</dd>
 </dl>
 <p><a href="https://www.piskelapp.com/">Piskel</a>: A tool for building animated sprites.</p>
-</div></div></div><div class="container" id="scroll-out"></div></div></body></html>
+<style>
+  .spoiler h3 {
+    margin-top: 0;    
+  }
+  .spoiler {
+      position: relative;
+  }
+  .spoiler::after {
+      content: "Redacted! We'll look at this in class.";
+      font-family: "Roboto";
+      font-size: 10px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding: 30px;
+      background: black;
+      color: white;
+      
+  }
+</style>
+<script>
+var els = document.getElementsByClassName("spoiler");
+for (var i = 0; i < els.length; i++) {
+    let el = els[i];
+    els[i].addEventListener('click', ()=>el.classList.remove("spoiler"));
+}
+
+</script></div></div></div><div class="container" id="scroll-out"></div></div></body></html>
