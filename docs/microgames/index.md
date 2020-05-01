@@ -14,6 +14,12 @@ description: Microgames are tiny games, stripped to their essential elements, of
 software: p5.js p5.play
 ---
 
+<script src="https://togetherjs.com/togetherjs-min.js"></script>
+
+
+<div style="cursor: pointer; margin-top: 1em; padding: 5px; border: 1px solid black; display: inline-block" onclick="TogetherJS(this); return false;">Collaborate</div>
+
+
 ## Microgames
 
 
