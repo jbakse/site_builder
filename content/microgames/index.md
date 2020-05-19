@@ -16,6 +16,7 @@ software: p5.js p5.play
 
 <script> 
 TogetherJSConfig_hubBase = "https://clover-grateful-source.glitch.me/";
+//https://clover-grateful-source.glitch.me/
 </script>
 <script src="https://togetherjs.com/togetherjs-min.js"></script>
 

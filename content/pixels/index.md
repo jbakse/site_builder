@@ -217,7 +217,7 @@ The p5.js library also allows you to read pixel data, so you can process images 
 
 ### Read Pixels Example 1
 
-This example loads the image of Earth, loops over its pixels, and multiplies each pixel's color with a random color.
+This example loads the image of Earth, loops over its pixels, and white pixels to red and black pixels to blue.
 
 ::: js-lab
 /pixels/sketches/read_pixels_alt.js
