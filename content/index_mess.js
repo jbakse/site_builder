@@ -107,7 +107,7 @@ function step() {
         });
 
         // draw it
-        console.log("Draw");
+        // console.log("Draw");
         fill(100, 100, 100);
         rect(mouseX, mouseY, 0, 0);
 

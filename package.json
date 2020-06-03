@@ -12,6 +12,9 @@
   },
   "author": "Justin Bakse",
   "license": "UNLICENSED",
+  "engines": {
+    "node": "10.20.1"
+  },
   "bugs": {
     "url": "https://github.com/jbakse/site_builder/issues"
   },
