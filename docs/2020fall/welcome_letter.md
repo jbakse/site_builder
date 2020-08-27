@@ -40,7 +40,7 @@ These will count toward your "participation" grade! This can be an **easy A** or
 
 # Watch These Things
 
-Watch these videos _before_ class on Wednesday:
+Watch these videos _before_ class on Monday.
 
 [How (and Why) Spelunky Makes its Own Levels | Game Maker's Toolkit](https://www.youtube.com/watch?v=Uqk5Zf0tw3o)
 
@@ -50,7 +50,7 @@ Watch these videos _before_ class on Wednesday:
 
 # Read This Thing
 
-Read this chapter _before_ class on Wednesday.
+Read this chapter _before_ class on Monday.
 
 _Procedural Content Generation in Games_ is a free online textbook. The book focuses on gaming applications, but the [first chapter](http://pcgbook.com/wp-content/uploads/chapter01.pdf) is good to read no matter what kind of procedural generation you are interested in. This is the only chapter of this book that will be assigned in Comp Form, but you might be interested in some of the other chapters, so take a look at the [table of contents](http://pcgbook.com/).
 
@@ -58,13 +58,15 @@ _Procedural Content Generation in Games_ is a free online textbook. The book foc
 
 # Read This Thing Too
 
-I usually start Computational Form by talking about tile based graphics. Its a fun topic, and works really well for a quick-start on-site workshop. I don't think it would work as well on-line, so I'm cutting it and we'll jump right into random numbers on the first day. It is still a fun topic though so take a little time to read the related chapter anyway.
+Read the tilemaps chapter on compform.net before class on Monday.
 
-Read the compform.net chapter on [tile maps](http://compform.net/tiles/).
+I usually start Computational Form by talking about tile-based graphics. It's a fun topic, and works really well for a quick-start on-site workshop. I don't think it would work as well online, so I'm cutting it and we'll jump right into random numbers on the first day. It is still a fun topic though so take a little time to read the related chapter anyway.
+
+Read the compform.net chapter on [tilemaps](http://compform.net/tiles/).
 
 # Buy These Things
 
-This is optional, but recommended! Get a set of [polyhedral dice](https://www.amazon.com/s?k=polyhedral+dice&rh=p_85%3A2470955011&s=price-asc-rank&dc&qid=1598292783&rnid=2470954011&ref=sr_st_price-asc-rank). You can find single sets for ~$5 or buy several sets for ~$10.
+This is optional, but recommended! Get a set of [polyhedral dice](https://www.amazon.com/s?k=polyhedral+dice&rh=p_85%3A2470955011&s=price-asc-rank&dc&qid=1598292783&rnid=2470954011&ref=sr_st_price-asc-rank). You can find single sets for ~$5 or buy several sets for ~$10. You can never have to many dice!
 
 If you can't get a physical set, there are [places](https://diceroll.fun/) you can roll online.
 
@@ -85,10 +87,14 @@ The short version of my attendance policy:
 
 **Attend every class, arrive early, stay late.**
 
-I'll open the zooms early so everyone can join, make sure their AV is working, and get settled in.
+I'll open the zooms 15 minutes before class starts so you can join early, make sure your AV is working, and get settled in, and ask me any quick questions you might have.
 
 # Be Prepared
 
-Bring these things to Wednesday's class and to every class:
+Bring these things to Monday's class and to every class:
 
 **computer + a Comp Form sketchbook + red pen + black pen + pencil + polyhedral dice + camera/phone**
+
+See you Monday!
+
+Justin
