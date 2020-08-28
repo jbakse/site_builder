@@ -29,14 +29,14 @@ This page houses information specific to the fall 2020 section of Computational 
 
 ## Foundation Unit
 
-| Lesson Plan                                  | Topics                                                      |
-| -------------------------------------------- | ----------------------------------------------------------- |
-| [Week 1, August 31](#introduction_plan.html) | [Introduction](../introduction), [Random Values](../random) |
-| Labor Day, September 7 {gray}                | Labor Day {gray}                                            |
-| [Week 2, September 14](#random_plan.html)    | [Noise](../noise)                                           |
-| [Week 3, September 21](#noise_plan.html)     | [Parameters](../parameters)                                 |
-| Yom Kippur, September 28 {gray}              | Yom Kippur {gray}                                           |
-| [Week 4, October 5](#parameters_plan.html)   | [Strategy](../strategy)                                     |
+| Lesson Plan                                 | Topics                                                      |
+| ------------------------------------------- | ----------------------------------------------------------- |
+| [Week 1, August 31](intro_random_plan.html) | [Introduction](../introduction), [Random Values](../random) |
+| Labor Day, September 7 {gray}               | Labor Day {gray}                                            |
+| [Week 2, September 14](#random_plan.html)   | [Noise](../noise)                                           |
+| [Week 3, September 21](#noise_plan.html)    | [Parameters](../parameters)                                 |
+| Yom Kippur, September 28 {gray}             | Yom Kippur {gray}                                           |
+| [Week 4, October 5](#parameters_plan.html)  | [Strategy](../strategy)                                     |
 
 ## Exploration Unit
 
