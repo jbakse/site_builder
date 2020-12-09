@@ -1,3 +1,6 @@
+// require https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js
+// require /microgames/sketches/p5.play.js
+
 var sprite1, sprite2;
 
 // art from opengameart.org

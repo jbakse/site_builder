@@ -1,4 +1,4 @@
-// require https://cdn.jsdelivr.net/npm/p5@0.7.3/lib/p5.min.js
+// require https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js
 // require /microgames/sketches/p5.play.js
 
 //http://keycode.info/

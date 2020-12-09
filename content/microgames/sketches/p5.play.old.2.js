@@ -1208,19 +1208,6 @@ function Sprite(pInst, _x, _y, _w, _h) {
   */
   this.animation = undefined;
 
-  /**
-  * Internal variable to keep track of whether this sprite is drawn while
-  * the camera is active.
-  * Used in Sprite.update() to know whether to use camera mouse coordinates.
-  * @see https://github.com/molleindustria/p5.play/issues/107
-  *
-  * @private
-  * @property _drawnWithCamera
-  * @type {Boolean}
-  * @default false
-  */
-  this._drawnWithCamera = false;
-
   /*
    * @private
    * Keep animation properties in sync with how the animation changes.
@@ -1427,7 +1414,7 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
     var mousePosition;
 
-    if(this._drawnWithCamera)
+    if(camera.active)
       mousePosition = createVector(camera.mouseX, camera.mouseY);
     else
       mousePosition = createVector(pInst.mouseX, pInst.mouseY);
@@ -1649,7 +1636,6 @@ function Sprite(pInst, _x, _y, _w, _h) {
       //draw debug info
       pop();
 
-      this._drawnWithCamera = camera.active;
 
       if(this.debug)
       {
@@ -3582,8 +3568,8 @@ function Animation(pInst) {
       {
         if (this.spriteSheet) {
           var frame_info = this.images[frame].frame;
-          pInst.image(this.spriteSheet.image, this.offX, this.offY, frame_info.width, frame_info.height,
-            frame_info.x, frame_info.y, frame_info.width, frame_info.height);
+          pInst.image(this.spriteSheet.image, frame_info.x, frame_info.y, frame_info.width,
+            frame_info.height, this.offX, this.offY, frame_info.width, frame_info.height);
         } else {
           pInst.image(this.images[frame], this.offX, this.offY);
         }
@@ -3642,13 +3628,9 @@ function Animation(pInst) {
           frame++;
       }
     }
-    if (frame == this.images.length - 1 && this.onComplete != undefined)
-      this.onComplete(); //fire when on last frame
 
     if(previousFrame !== frame)
       this.frameChanged = true;
-
-    
 
   };//end update
 
@@ -3678,16 +3660,6 @@ function Animation(pInst) {
   */
   this.rewind = function() {
     frame = 0;
-  };
-
-  /**
-  * fire when animation ends
-  *
-  * @method onComplete
-  * @return {Animation} 
-  */
-  this.onComplete = function () {
-    return undefined;
   };
 
   /**
