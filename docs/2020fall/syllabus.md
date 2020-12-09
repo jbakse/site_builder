@@ -5,17 +5,16 @@ layout: layouts/compform_plain.pug
 debug: false
 ---
 
-# Computational Form 2020 Course Syllabus
+# Computational Form Fall 2020 Course Syllabus
 
 | Course Info
 | ---
 | Parsons The New School for Design
 | School of Art, Media, and Technology
-| PSAM 5012 A, CRN 5789
-| Spring 2020
-| Wednesdays 4:00pm—6:40pm
-| 6 East 16th Street
-| Room D1205
+| PSAM 5012 A, CRN 9182
+| Fall 2020
+| Monday 4:00pm—6:40pm
+| Online
 
 | Justin Bakse
 | ---
@@ -24,7 +23,7 @@ debug: false
 
 ## Course Description
 
-Computer programming is a powerful tool for creating and manipulating form. It has long been used by artists, designers, and composers to explore new aesthetics. In this class, students will continue this tradition of experimentation by creating images, animation, video, sound, and 3D forms with rules, algorithms, and code. This class emphasizes formal exploration through daily "sketching". This class will build on existing programming skills by introducing a variety of techniques, programming languages, and tools related to procedural generation. Topics will include: creating raster and vector images with Javascript and p5.js, synthesizing audio in Javascript, and using OpenSCAD to create models for 3D printing.
+Computer programming is a powerful tool for creating and manipulating form. It has long been used by artists, designers, and composers to explore new aesthetics. In this class, students will continue this tradition of experimentation by creating images, animation, video, sound, and 3D forms with rules, algorithms, and code. This class emphasizes formal exploration through daily "sketching". This class will build on existing programming skills by introducing a variety of techniques, programming languages, and tools related to procedural generation. Topics will include using random number generators and noise functions; creating interfaces for procedural generators; designing procedural systems; turtle graphics; generationg raster and vector images; generating sound; and generating text.
 
 In this class we will make things that make things.
 
@@ -63,22 +62,21 @@ Each week follows a similar format: an introduction and discussion of the weekly
 | Class           | Topics                           |
 | --------------- | -------------------------------- |
 | **Foundation**  | &nbsp;                           |
-| Week 1          | Introduction, Tile Graphics      |
-| Week 2          | Random Values                    |
+| Week 1          | Introduction, Random Values      |
+| Week 2          | Noise                            |
 | Week 3          | Parameters                       |
-| Week 4          | Noise                            |
-| Week 5          | Strategy                         |
+| Week 4          | Strategy                         |
 | **Exploration** | &nbsp;                           |
-| Week 7          | Learning + Play, Turtle Graphics |
+| Week 5          | Learning + Play, Turtle Graphics |
 | Week 6          | Pixel Data                       |
-| Week 8          | Vector Data                      |
-| ~~Week 9~~      | Spring Break                     |
-| Week 10         | Animation                        |
-| Week 11         | Generating Text                  |
-| Week 12         | Light + Sound, Generating Sound  |
-| Week 13         | Music                            |
-| Week 14         | 3D Forms                         |
-| Week 15         | Postmortem Party                 |
+| Week 7          | Vector Data                      |
+| Week 8          | Animation                        |
+| Week 9          | Light + Sound, Generating Sound  |
+| Week 10         | Generating Text                  |
+| Week 11         | Music                            |
+| Week 12         | Microgames                       |
+| Week 13         | TBD                              |
+| Week 14         | Postmortem Party                 |
 
 ## Assessable Tasks
 
@@ -116,13 +114,41 @@ Extra Credit will be given for formal contributions to the class. One way to con
 
 ## Class Policies
 
+### Comp Form Online
+
+Computational Form was developed as a traditional on-site course and I am adapting it to remote education this semester. Weekly, syncronous meetings will remain an important part of this class. These meetings will be held using Zoom, and will involve a variety of full class and group discussions and activities.
+
+While I highly encourage all students to attend every meeting, I will be allowing flexibility given the extraordinaty circumstances of this semester. Please contact me if you have concerns about attendance.
+
+To help make our online meetings run smoothly, I will:
+
+- Publish a schedule ahead of each class.
+- Use most of the class time for hands-on activities, break-out group work, and class discussions.
+- Publish class notes for each meeting.
+- Record and share videos of full-class discussions.
+
+I ask that you:
+
+- Please enable video whenever possible.
+- Mute your audio when not speaking if your environment is noisy.
+- Do not multitask during class.
+- Join class 5 to 10 minutes early to make sure your tech is working (and for socializing).
+
+In between meetings I ask that you:
+
+- Check the course sketch blog every day, to see what your fellow students are working on.
+- Meet online with at least one other student each week to discuss the class and your sketches.
+- Reach out to me via email with any thoughts or questions.
+
 ### Required Reading
 
-There is no required textbook for this course. Students will not need to purchase any readings for this class. Links to online articles will occasionally be provided.
+The [compform.net](compform.net) website is the "textbook" for this class.
+
+Students will not need to purchase any readings for this class. Links to online articles will occasionally be provided.
 
 ### Materials and Supplies
 
-Please bring your laptop, a notebook, a sketchbook, a black pen, a red pen, and a pencil to each class.
+Please bring your laptop, a notebook, a sketchbook, a black pen, a red pen, a pencil, your polyhedral dice, and a camera/phone to each class.
 
 ### Email
 
@@ -140,12 +166,13 @@ Each student **must** keep backups of their daily sketches, including source cod
 
 In short: **attend every class, arrive early, stay late.**
 
-We meet only once per week and new material will be introduced each week. I strongly discourage missing any classes. In accordance with Parson's attendance policy, if you miss three classes your grade **will be reduced** and you miss more you will likely be asked to withdraw from the class. This includes absences from the first class due to late enrollment. I don't make a distinction between excused an unexcused absenses. Our classesTwo late arrivals or early departures will count as one absence. Inappropriate use of a laptop (e.g. browsing social media during critiques or lectures) may result in being marked as absent.
-We meet only once per week and new material will be introduced each week. I strongly discourage missing any classes. In accordance with Parson's attendance policy, if you miss three classes your grade **will be reduced** and you miss more you will likely be asked to withdraw from the class. This includes absences from the first class due to late enrollment. I don't make a distinction between excused an unexcused absenses. Two late arrivals or early departures will count as one absence. Inappropriate use of a laptop (e.g. browsing social media during critiques or lectures) may result in being marked as absent.
+We meet only once per week and new material will be introduced each week. I strongly discourage missing any classes.
+
+~~In accordance with Parson's attendance policy, if you miss three classes your grade **will be reduced** and you miss more you will likely be asked to withdraw from the class. This includes absences from the first class due to late enrollment. I don't make a distinction between excused an unexcused absenses. Two late arrivals or early departures will count as one absence. Inappropriate use of a laptop (e.g. browsing social media during critiques or lectures) may result in being marked as absent.~~
 
 ### Laptops + Devices
 
-We will spend a good amount of class time working together on coding projects. During work time, computers will be used. However, during lectures, discussions, and critiques computers must be closed. Note-taking can be done on paper. Nothing kills a conversation like a room full of people staring at screens.
+~~We will spend a good amount of class time working together on coding projects. During work time, computers will be used. However, during lectures, discussions, and critiques computers must be closed. Note-taking can be done on paper. Nothing kills a conversation like a room full of people staring at screens.~~
 
 ### Plagiarism, Code, and Open-Source
 
@@ -171,14 +198,7 @@ In keeping with the university’s policy of providing equal access for students
 
 ### Making Center
 
-The Making Center is a constellation of shops, labs, and open workspaces that are situated across the New
-School to help students express their ideas in a variety of materials and methods. We have resources to help
-support woodworking, metalworking, ceramics and pottery work, photography and film, textiles, printmaking,
-3D printing, manual and CNC machining, and more. A staff of technicians and student workers provide expertise
-and maintain the different shops and labs. Safety is a primary concern, so each area has policies for access,
-training, and etiquette that students and faculty should be familiar with. Many areas require specific
-orientations or trainings before access is granted. Detailed information about the resources available, as well as
-schedules, trainings, and policies can be found at resources.parsons.edu.
+The Making Center is a constellation of shops, labs, and open workspaces that are situated across the New School to help students express their ideas in a variety of materials and methods. We have resources to help support woodworking, metalworking, ceramics and pottery work, photography and film, textiles, printmaking, 3D printing, manual and CNC machining, and more. A staff of technicians and student workers provide expertise and maintain the different shops and labs. Safety is a primary concern, so each area has policies for access, training, and etiquette that students and faculty should be familiar with. Many areas require specific orientations or trainings before access is granted. Detailed information about the resources available, as well as schedules, trainings, and policies can be found at resources.parsons.edu.
 
 ### Undergraduate Grading
 

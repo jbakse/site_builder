@@ -215,18 +215,29 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 
 </a> -->
 
+<a class="col-6 col-md-6" data-ready="true" href="./2020fall">
+
+### Class Notes Fall 2020
+
+</a>
+
+<a class="col-6 col-md-6" data-ready="true" href="http://sketches2020fall.compform.net">
+
+### Sketch Book Fall 2020
+
+</a>
+
 <a class="col-6 col-md-6" data-ready="true" href="./2020">
 
-### Class Notes 2020
+### Class Notes Spring 2020
 
 </a>
 
 <a class="col-6 col-md-6" data-ready="true" href="http://sketches2020.compform.net">
 
-### Sketch Book 2020
+### Sketch Book Spring 2020
 
 </a>
-
 
 <a class="col-6 col-md-6" data-ready="true" href="./2019">
 
@@ -275,7 +286,6 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 ### Sketch Book 2016
 
 </a>
-
 
 <!-- <a class="col-6 col-md-6" data-ready="true" href="./experimental_shaders/">
 

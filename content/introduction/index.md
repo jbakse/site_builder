@@ -10,22 +10,20 @@ next: Random Values
 next_url: ../random
 
 hero_title: Introduction
-description: Using a computer to explore aesthetics is a powerful creative process. This class explores a variety of tools and techniques for creating algorithmic images, generative art, parametric designs, and procedurally generated content. 
+description: Using a computer to explore aesthetics is a powerful creative process. This class explores a variety of tools and techniques for creating algorithmic images, generative art, parametric designs, and procedurally generated content.
 software: p5.js + p5.dom
 ---
-
 
 ## What Computational Form Is
 
 > Q: Can the computer substitute for the Designer?
 >
 > A: Probably, in some special cases, but usually the computer is an aid to the Designer.
-{bigger}
+> {bigger}
 
 [Charles Eames, Design Q&A](http://www.markwunsch.com/eames.html){attrib}
 
-
-This is a class about computational form, algorithmic images, generative art, parametric design, and procedural generation. In this class, we will explore a creative process in which form is made by following defined processes. We will write instructions that a computer will follow to create images, animations, sounds, and sculptures. 
+This is a class about computational form, algorithmic images, generative art, parametric design, and procedural generation. In this class, we will explore a creative process in which form is made by following defined processes. We will write instructions that a computer will follow to create images, animations, sounds, and sculptures.
 
 We will make things that make things.{bigger}
 
@@ -36,25 +34,19 @@ There are many reasons artists and designers employ algorithmic methods. Some im
 - enhancing variety
 - creating dynamic, responsive content
 
-
 <!-- ::: slides .contain
 // needs @@ before inclue
 include('./compform_slides.yaml')
 /:: -->
 
-
-
 ### What Computational Form is Not
 
 While we use computer programming throughout this class, it is important to understand that procedural generation doesn't require a computer. Procedural generation is about defining instructions that create form. Computers are very useful tools for carrying out these instructions, but artists have also built systems that rely on humans or purpose-built machines instead. Many of the works included in the slideshow below embody principles of computation and instruction without using computers.
-
 
 ::: slides .contain
 @@include('../procedures/compform_slides.yaml')
 /::
 
-
-<!-- 
 ::: .activity
 
 ## The Sierpinski Triangle
@@ -73,16 +65,11 @@ Please take out a sheet of paper and pen and follow these instructions:
 4. Choose any empty, up-pointing triangle on the page.
 5. Go to instruction 2.
 
-
 Yes, these instructions will go on forever. I'll interrupt you in a minute.
 
 [stand-alone instructions](./sierpinski.html){boxed right}
 
-/:: -->
-
-
-
-
+/::
 
 ## About this Class
 
@@ -91,15 +78,17 @@ In this class, we will make things that make things. We will **explore** a varie
 ![Make Things that Make Things](./figures/make_things.png){full-width}
 
 Along the way we'll use a variety of programming languages and tools:
+
 - Javascript
 - p5.js
 - paper.js
 - OpenSCAD
-- Vuo 
+- Vuo
 
 <!--Will you use Vuo this year?-->
 
 We will also explore some interesting programming topics including:
+
 - pseudo-random numbers
 - Perlin noise
 - composing strategies and tactics
@@ -115,26 +104,25 @@ I am Justin Bakse. I am an assistant professor of interaction design at Parsons.
 @@include('./justin_slides.yaml')
 /::
 
-
-
 ### Class Format + Homework
 
-This class focuses on exploration. Each class introduces a new topic or tool, usually with an in-class workshop. Throughout the week you will be expected to create daily sketches/experiments related to that topic. 
+This class focuses on exploration. Each class introduces a new topic or tool, usually with an in-class workshop. Throughout the week you will be expected to create daily sketches/experiments related to that topic.
 
 **The emphasis in this class will be on personal exploration, learning to learn, and process rather than outcomes.**
 
 ![This not That](figures/this_not_that.png){full-width}
 
-<!-- 
+<!--
 ### MFA Writing Assignment
 
-As noted in the Syllabus, students in the MFA program must complete one extra assignment. BFA students are encouraged to also complete this assignment for extra credit. 
+As noted in the Syllabus, students in the MFA program must complete one extra assignment. BFA students are encouraged to also complete this assignment for extra credit.
 
 In short, this assignment is to choose a topic for further exploration, build a somewhat larger project, and write up a case study for the project. This assignment is intended to be flexible, so feel free to propose your own spin.
 
 You can complete this assignment at any time during the semester. I suggest turning this in around midterms. Please discuss with me your general plan for your project before starting. -->
 
 ### Notes on Daily Sketching
+
 Your goal **each day** should be to explore a different aspect of the weekly theme. Ideally, you will spend **1 to 2 hours on an idea**, resulting in an image or other artifact. Each day you will work on **different ideas**, possibly informed by something you did earlier in the week or class.
 
 <br>
@@ -187,7 +175,7 @@ Yes. But don't work on one thing the whole week. Sketch a variety of ideas each 
 
 > I can't decide what to work on today.
 
-If you have more than one idea, just pick one at random. Don't change your mind, just run with it. You are only investing an hour or two. If you have no ideas, review the class notes, do some Google image searches, be open to *any* idea that pops up. Just run with the first bad idea.
+If you have more than one idea, just pick one at random. Don't change your mind, just run with it. You are only investing an hour or two. If you have no ideas, review the class notes, do some Google image searches, be open to _any_ idea that pops up. Just run with the first bad idea.
 
 <br>
 
@@ -199,11 +187,9 @@ Post anyway. If you can't do exactly what you want, find something close that yo
 
 > What about the challenges? Do they count as sketches?
 
-Yes, they do. Each week I'll include one or more individual, pair, or group challenges. Unless noted, the challenges are *required*, but each challenge counts towards your weekly sketches.
+Yes, they do. Each week I'll include one or more individual, pair, or group challenges. Unless noted, the challenges are _required_, but each challenge counts towards your weekly sketches.
 
 <br>
-
-
 
 > I'm tired of looking at the computer screen. Can I do a couple of posts with paper/paint/glue/wood/whatever?
 
@@ -226,6 +212,7 @@ Don't put more than 2 hours in on a sketch. If your sketch takes that long it is
 Don't put in less than 45 minutes. Sometimes, you'll make a really nice sketch pretty quickly. If that happens, post it! But keep exploring variations on your idea. If you often get done very quickly, you probably need to work on more challenging sketches.
 
 ### Prerequisites
+
 In this class, we will be exploring and creating projects in a variety of programming tools and languages. It is pretty likely that some of them will be completely new to you. To be comfortable in this class, you will need a foundation in a procedural programming language such as Javascript or Processing.
 
 Coming into this class, you should:
@@ -238,32 +225,33 @@ Coming into this class, you should:
 That said, this class offers a good deal of flexibility. If you are not sure if you are ready for this class, please speak with me today to make a plan.
 
 ### Attend every class, arrive early, stay late.
+
 Attend every class. This class moves fast. New content is introduced in every meeting. We will have individual or group activities in most if not all meetings. Don't miss any.
 
 Arrive early. Get to the room early, review the work of your fellow students, and review the class notes from the previous week. Get yourself mentally settled and ready for class.
 
-Stay late. After class, take some time to summarize the week's key content in your sketchbook. 
+Stay late. After class, take some time to summarize the week's key content in your sketchbook.
 
 ### Breaks
+
 I will plan for a short break in the middle of each class. Avoid leaving class except during the break. Coming and going during lectures, activities, and class discussion is disruptive and rude.
 
-
 ### Be Prepared
+
 Bring a laptop + a Comp Form sketchbook + red pen + black pen + pencil + camera/phone to every class.
 
-
 ### Original Work
+
 All the work you submit for this class should be your own. For the most part you should create all the code, images, and writing used in your sketches yourself. In some cases it might make sense to incorporate something you didn't make yourself, like a code library.
 
 **If your work builds on or includes anyone else's work, make sure you cite it and give them credit!**
 
-
 ### Syllabus Review
-Please review the [syllabus here](../2020/syllabus.html).
+
+Please review the [2020 fall syllabus here](../2020fall/syllabus.html).
 
 ### The Class Sketch Blog
 
 Our class sketch blog will host your daily experiments and links to content of interest to the class. As you create sketches throughout the week, post them to the blog. Also be sure to review the work of everyone else.
 
-[2019 Sketch Blog](http://sketches2020.compform.net){boxed right}
-
+[2020 Fall Sketch Blog](http://sketches2020fall.compform.net){boxed right}
