@@ -38,7 +38,7 @@ Consider the works below:
 
 Using random values in your procedural system doesn't mean your results must be haphazard, uncontrolled, or unorganized. While individual random values are unpredictable, you can use these values to create a coherent cumulative effect.
 
-::: .activity
+::: .activity .spoiler
 
 ## 2d6 vs 1d12 Chart
 
@@ -392,7 +392,7 @@ if (random(100) < 20) {
 
 /::
 
-::: .activity
+::: .activity .spoiler
 
 ## Skyline Tactic Match
 
@@ -464,7 +464,7 @@ Be careful when relying on the seed to get random but repeatable results. There 
 Javascript does not provide any way for you to set the seed used by `Math.random()`, so if you need to set the seed and are not using p5, you'll need to find and use another Javascript library for generating random numbers.
 /::
 
-::: .activity
+::: .activity .spoiler
 
 ## Pencil + Paper LCG
 

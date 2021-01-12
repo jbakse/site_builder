@@ -834,4 +834,30 @@ iframe.js-show {
   width: 100%;
   height: 100%; }
 
+.spoiler h3 {
+  margin-top: 0; }
+
+.spoiler {
+  position: relative; }
+
+.comp-form-copy div.spoiler::after {
+  content: "Spoiler!\A   Click to reveal in-class activty.";
+  font-family: "Roboto";
+  white-space: pre;
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 30px;
+  background: black;
+  color: white;
+  opacity: 100;
+  transition: opacity .5s; }
+
+.comp-form-copy div.spoiler.reveal::after {
+  opacity: 0;
+  color: white; }
+
 /*# sourceMappingURL=styles.css.map*/
