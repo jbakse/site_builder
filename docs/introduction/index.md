@@ -96,7 +96,7 @@ We will also explore interesting programming topics including:
 
 ### Prerequisites
 
-This class is designed to support beginning, intermediate, and advnced students. That said, to be comfortable in this class, it is best if you have had an introduction to a procedural programming language such as Javascript or Processing.
+This class is designed to support beginning, intermediate, and advanced students. That said, to be comfortable in this class, it is best if you have had an introduction to a procedural programming language such as Javascript or Processing.
 
 We will be exploring and creating projects in a variety of programming tools and languages. It is very likely that some of them will be completely new to you, no matter your current level of experience. 
 
@@ -127,7 +127,6 @@ Your goal **each day** should be to explore a different aspect of the weekly the
 <br>
 
 > So I have to post something **every single day**?
-
 The spirit of the assignment is daily practice + flexibility. ~~Five~~ Four posts a week that explore the weekly theme in a variety of ways is considered `A` work.
 
 ::: .callout
@@ -154,6 +153,8 @@ Don't do that. This process is about exploring different ideas. Spacing out your
 > How long should I spend on a sketch?
 
 Between 1 and 2 hours. Ideally 90 minutes.
+
+<br>
 
 > What if I make something I like in 15 minutes?
 
@@ -214,6 +215,8 @@ Absolutely. **I highly recommend that you do!** The more variety between your po
 > I'm a data vis major. I'm a game design major. I like making websites. I'm interested in dance. Can I make data visualizations/games/websites/dances in this class?
 
 Yes! I encourage you to think about how each weekly theme relates to your own interests and practice. It is a great idea to make a sketches that explore those relationships. 
+
+<br>
 
 > What about in-class work? Does that count?
 
