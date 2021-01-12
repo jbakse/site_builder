@@ -1,6 +1,6 @@
 - artist: Desmond Paul Henry
   title: Untitled, 1962
-  image: http://desmondhenry.com/media/1015/bombsight-computer-02.jpg
+  image: https://upload.wikimedia.org/wikipedia/commons/9/97/Wiki.Henry_Drawing_Machine_1.jpg
   comments: Desmond Paul Henry modified WW2 analogue computers to create drawing machines.
   links:
     - label: Artist's Site
@@ -14,17 +14,17 @@
     - label: Artist's Site
       href: http://www.desmondhenry.com/
 
-- artist: Golan Levin
-  title: Floccular Portraits, 1999
-  image: http://www.flong.com/storage/images/projects/floccugraph_2.jpg
-  comments: These portraits are created by drawing "filaments" that seek the light or dark areas of a photo data-source.
-  links:
-    - label: Floccular Portraits on Artist's Site
-      href: http://www.flong.com/projects/floccugraph/
+# - artist: Golan Levin
+#   title: Floccular Portraits, 1999
+#   image: https://www.flong.com/storage/images/projects/floccugraph_2.jpg
+#   comments: These portraits are created by drawing "filaments" that seek the light or dark areas of a photo data-source.
+#   links:
+#     - label: Floccular Portraits on Artist's Site
+#       href: http://www.flong.com/projects/floccugraph/
 
 - artist: Craig Reynolds
   title: Boids Simulation, 1986
-  image: http://www.red3d.com/cwr/boids/images/flocking_around_19.gif
+  image: https://www.red3d.com/cwr/boids/images/flocking_around_19.gif
   comments: Craig Reynolds' <i>Boids</i> paper was presented at SIGGRAPH in 1986. In this program animation <b>emerges</b> from the application of basic rules.
   links:
     - label: Video
@@ -50,7 +50,7 @@
 
 - artist: Yoko Ono
   title: Voice Piece for Soprano, 1961
-  image: http://iberia.music.coocan.jp/top/yoko_ono_scream.gif
+  image: https://pbs.twimg.com/media/C4SFfrJUoAMKt1R.jpg
   comments: Yoko Ono's "instruction pieces" are intended to be seen, considered, and performed by the audience.
   links:
     - label: Voice Piece for Soprano @ Moma
@@ -58,7 +58,7 @@
 
 - artist: John Cage
   title: 4'33", 1952
-  image: http://www.moma.org/d/assets/W1siZiIsIjIwMTUvMTAvMjEvMXNvcXVnb3NieV90aGVyZXdpbGxuZXZlcmJlc2lsZW5jZS5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXJlc2l6ZSAyMDAweDIwMDBeIC1ncmF2aXR5IENlbnRlciAtY3JvcCAyMDAweDIwMDArMCswIl1d/therewillneverbesilence.jpg?sha=db5713acfc387367
+  image: https://www.moma.org/d/assets/W1siZiIsIjIwMTUvMTAvMjEvMXNvcXVnb3NieV90aGVyZXdpbGxuZXZlcmJlc2lsZW5jZS5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXJlc2l6ZSAyMDAweDIwMDBeIC1ncmF2aXR5IENlbnRlciAtY3JvcCAyMDAweDIwMDArMCswIl1d/therewillneverbesilence.jpg?sha=db5713acfc387367
   links:
     - label: 4'33" on moma.org
       href: http://www.moma.org/calendar/exhibitions/1386?locale=en
@@ -67,25 +67,25 @@
 
 - artist: Nervous System
   title: Kinematics Dress 6, 2015
-  image: http://n-e-r-v-o-u-s.com/projects/i.php?/000/976/Test-337,xlarge.2x.1441893095.jpg
+  image: https://n-e-r-v-o-u-s.com/projects/i.php?/000/976/Test-337,xlarge.2x.1441893095.jpg
   comments: Design studio Nervous System uses computation and 3D printing to explore fashion aesthetics.
   links:
     - label: n-e-r-v-o-u-s.com
       href: http://n-e-r-v-o-u-s.com/
 
-- artist: Micheal Hansmeyer and Benjamin Dillenburger
-  title: Digital Grotesque, 2013
-  image: http://www.michael-hansmeyer.com/images/digital-grotesque-I/digital-grotesque-installation-4-xl.webp
-  links:
-    - label: Video
-      href: https://vimeo.com/74350367
-    - label: Project Site
-      href: http://www.digital-grotesque.com/
+# - artist: Micheal Hansmeyer and Benjamin Dillenburger
+#   title: Digital Grotesque, 2013
+#   image: https://www.michael-hansmeyer.com/images/digital-grotesque-I/digital-grotesque-installation-4-xl.webp
+#   links:
+#     - label: Video
+#       href: https://vimeo.com/74350367
+#     - label: Project Site
+#       href: http://www.digital-grotesque.com/
 
 
 - artist: Markus "Notch" Persson
   title: Minecraft, 2009
-  image: http://static.planetminecraft.com/files/resource_media/screenshot/1245/Minecraft-2_4091491_lrg.jpg
+  image: https://static.planetminecraft.com/files/resource_media/screenshot/1245/Minecraft-2_4091491_lrg.jpg
   comments: Minecraft drops players into a procedurally-generated world on which they can build.
   links:
     - label: minecraft.net
@@ -94,14 +94,14 @@
 - artist: Tarn Adams and Zach Adams
   title: Dwarf Fortress, 2006
   comments: Dwarf Fortress is an uncompromising game created entirely by Tarn and Zach Adams. Dwarf Fortress procedurally generates and simulates the game world in crazy detail.
-  image: http://images.eurogamer.net/2013/articles/a/1/5/5/2/4/0/0/eurogamer-ign5y9.jpg
+  image: https://images.eurogamer.net/2013/articles/a/1/5/5/2/4/0/0/eurogamer-ign5y9.jpg
   links:
     - label: Dwarf Fortress Site
       href: http://www.bay12games.com/dwarves/
 
 - artist: Hello Games
   title: No Man's Sky, 2016
-  image: http://cdn0.vox-cdn.com/assets/4646823/no-mans-sky-gallery-04.jpg
+  image: https://cdn0.vox-cdn.com/assets/4646823/no-mans-sky-gallery-04.jpg
   comments: An (overly) ambitious title that uses procedural generation to create a galaxy of planets, each with their own geology and ecosystems. The game's initial release was seen as disappointing by many, as it failed to deliver on some heavily-promoted features.
   links:
     - label: Infinite Worlds Trailer
