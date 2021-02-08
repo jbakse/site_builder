@@ -325,7 +325,22 @@ The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides fun
 /parameters/sketches/square_slider.js
 /::
 
+### HTML Interfaces with Tweakpane
+
+[Tweakpane](https://cocopon.github.io/tweakpane/) is a javascript library that lets you quickly setup and display a interactive pane for adjusting parameters.
+
+
+
+::: js-lab
+/parameters/sketches/square_tweakpane.js
+/::
+
+
 ::: .activity
+
+
+
+
 
 ## In-class Challenge
 
