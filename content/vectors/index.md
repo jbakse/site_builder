@@ -13,7 +13,7 @@ hero_title: Vector Drawing
 
 description: Vector graphics encode high-level meaning about the shapes that make up a drawing allowing you to manipulate them in higher-level ways.
 
-software: p5.js
+software: paper.js
 ---
 
 ## Vector Data
@@ -51,7 +51,7 @@ Compare creating scenes using direct mark making vs. cut-out shapes.
 
 ### Setup
 
-Divide class into groups. Give some groups flet and scissors and the other group paper and makers.
+Divide class into groups. Give some groups felt and scissors and the other group paper and makers.
 
 ### Create
 
