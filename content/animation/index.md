@@ -264,8 +264,105 @@ You can even apply Photoshop effects in the bargain.
 <video src="videos/render_color.mp4" poster="videos/render_color_0030.jpg" controls></video>
 /::
 
-::: .assignment
 
+## Study Examples
+
+### Example 1: Bounce
+::: js-lab
+/animation/challenges/bounce_01.js
+/::
+
+### Example 2: Fuzz
+In this sketch `fuzz_ellipse(x,y,w,h,fuzz)` takes parameters like ellipse but instead of drawing one ellipse, it draws many in random positions near `x,y`. It can be used to create a textured ellipse with a fuzzy edge.
+
+Take some time to study `fuzzy_ellipse()` in detail. Try to build an understanding of every line.
+- How many parameters does it take? Are they all required?
+- What does `if (dist(0, 0, xx, yy) > fuzz) continue;` do?
+- What happens without this line?
+- How many ellipses are drawn on each call of fuzzy_ellipse?
+- Does it have a return value? Why or why not?
+
+::: js-lab
+/animation/challenges/fuzzy_01.js
+/::
+
+### Looking a little deeper.
+The Fuzz example also defines a function called `fuzzy_ellipse_2()`. It is a drop-in replacement for `fuzzy_ellipse()`. Change line 31 to call `fuzzy_ellipse_2()` to see it in action..
+1. Do the functions produce the same outcome?
+2. Do the functions produce the exact same outcome?
+3. Look at the frame_rate display. Is one more performant than then the other?
+4. How does `fuzzy_ellipse_2()` approach the problem differently?
+5. Which is better `fuzzy_ellipse` or `fuzzy_ellipse_2`?
+
+::: .activity
+
+## Coding Challenges
+
+Complete the following challenges to deepen your understanding of the examples above.
+
+### Modify the Bounce Example
+
+1. Imagine what would happen if you commented in line 22.
+2. Comment in line 22. 
+3. Make the ball bounce higher
+4. Make the ball bounce slower
+5. Make the ball bounce faster
+6. Make the ball bounce exactly 1 time per second
+### Challenging Challenge 
+7. Recreate this:
+
+::: js-show
+/animation/challenges/bounce_02.js
+/::
+
+### Modify the Fuzz Example
+
+1. Drawing a lot of transparent ellipses can be processor intensive.\
+  What framerate does the fuzz example run at on your computer?
+
+2. Increase the the loop count from 100 to 1000.\
+  How does that impact the drawing?\
+  How does that impact the framerate?
+
+3. Increase the the loop count (again) from 1000 to 10000.\
+  How does that impact the drawing?\
+  How does that impact the framerate?
+
+4. Export 60 frames of this animation and turn them into a 30 fps video.\
+  How long (in seconds) did it take to render 60 frames?\
+  How long (in seconds) is your resulting video?\
+  Does it matter what the frameRate() is set to in setup?
+
+### Challenging Challenge
+1. Recreate This
+
+::: js-show
+/animation/challenges/fuzzy_02.js
+/::
+
+
+
+
+/::
+
+
+<style>
+.center {
+border: 1px solid red;
+text-align: center;
+width: 100%;
+padding: 0;
+margin: 0;
+
+}
+.center .js-show {
+  margin: auto;
+}
+</style>
+
+
+
+::: .assignment
 ## Keep Sketching!
 
 ### Base

@@ -310,11 +310,9 @@ A quick-and-dirty way to make your comp form sketches “tweakable” is to use 
 
 ### HTML Interfaces with p5.dom.js
 
-::: .links-sidebar
-[p5.js DOM Library](https://p5js.org/reference/#/libraries/p5.dom)
-/::
 
-The [p5.dom library](https://p5js.org/reference/#/libraries/p5.dom) provides functions that allow you create HTML elements and user interface controls. This is more complicated to set up, but still pretty quick. It is a much better choice if you want anyone else to adjust your parameters. You should consider this approach even for projects only you will use; it allows you to explore your parameter space without having to reload your sketch.
+
+The [p5 DOM functions](https://p5js.org/reference/#group-DOM) provide functions that allow you create HTML elements and user interface controls. This is more complicated to set up, but still pretty quick. It is a much better choice if you want anyone else to adjust your parameters. You should consider this approach even for projects only you will use; it allows you to explore your parameter space without having to reload your sketch.
 
 - Label your inputs clearly.
 - Consider your interface carefully.

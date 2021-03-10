@@ -354,6 +354,108 @@ pre-rendere with recording -->
 <div id="" class="full-width">
 <p><video src="videos/render_color.mp4" poster="videos/render_color_0030.jpg" controls></video></p>
 </div>
+<h2 id="study-examples">Study Examples</h2>
+<h3 id="example-1-bounce">Example 1: Bounce</h3>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/animation/challenges/bounce_01.js">
+</iframe>
+</div>
+</div>
+<h3 id="example-2-fuzz">Example 2: Fuzz</h3>
+<p>In this sketch <code>fuzz_ellipse(x,y,w,h,fuzz)</code> takes parameters like ellipse but instead of drawing one ellipse, it draws many in random positions near <code>x,y</code>. It can be used to create a textured ellipse with a fuzzy edge.</p>
+<p>Take some time to study <code>fuzzy_ellipse()</code> in detail. Try to build an understanding of every line.</p>
+<ul>
+<li>How many parameters does it take? Are they all required?</li>
+<li>What does <code>if (dist(0, 0, xx, yy) &gt; fuzz) continue;</code> do?</li>
+<li>What happens without this line?</li>
+<li>How many ellipses are drawn on each call of fuzzy_ellipse?</li>
+<li>Does it have a return value? Why or why not?</li>
+</ul>
+<div id="" class="">
+<div class="js-lab">
+<iframe class="js-lab" src="/js_lab/js_lab.html?/animation/challenges/fuzzy_01.js">
+</iframe>
+</div>
+</div>
+<h3 id="looking-a-little-deeper">Looking a little deeper.</h3>
+<p>The Fuzz example also defines a function called <code>fuzzy_ellipse_2()</code>. It is a drop-in replacement for <code>fuzzy_ellipse()</code>. Change line 31 to call <code>fuzzy_ellipse_2()</code> to see it in action…</p>
+<ol>
+<li>Do the functions produce the same outcome?</li>
+<li>Do the functions produce the exact same outcome?</li>
+<li>Look at the frame_rate display. Is one more performant than then the other?</li>
+<li>How does <code>fuzzy_ellipse_2()</code> approach the problem differently?</li>
+<li>Which is better <code>fuzzy_ellipse</code> or <code>fuzzy_ellipse_2</code>?</li>
+</ol>
+<div id="" class="activity">
+<h2 id="coding-challenges">Coding Challenges</h2>
+<p>Complete the following challenges to deepen your understanding of the examples above.</p>
+<h3 id="modify-the-bounce-example">Modify the Bounce Example</h3>
+<ol>
+<li>Imagine what would happen if you commented in line 22.</li>
+<li>Comment in line 22.</li>
+<li>Make the ball bounce higher</li>
+<li>Make the ball bounce slower</li>
+<li>Make the ball bounce faster</li>
+<li>Make the ball bounce exactly 1 time per second</li>
+</ol>
+<h3 id="challenging-challenge">Challenging Challenge</h3>
+<ol start="7">
+<li>Recreate this:</li>
+</ol>
+<div id="" class="">
+<div class="js-show">
+<iframe class="js-show" src="/js_lab/js_show.html?/animation/challenges/bounce_02.js">
+</iframe>
+</div>
+</div>
+<h3 id="modify-the-fuzz-example">Modify the Fuzz Example</h3>
+<ol>
+<li>
+<p>Drawing a lot of transparent ellipses can be processor intensive.<br>
+What framerate does the fuzz example run at on your computer?</p>
+</li>
+<li>
+<p>Increase the the loop count from 100 to 1000.<br>
+How does that impact the drawing?<br>
+How does that impact the framerate?</p>
+</li>
+<li>
+<p>Increase the the loop count (again) from 1000 to 10000.<br>
+How does that impact the drawing?<br>
+How does that impact the framerate?</p>
+</li>
+<li>
+<p>Export 60 frames of this animation and turn them into a 30 fps video.<br>
+How long (in seconds) did it take to render 60 frames?<br>
+How long (in seconds) is your resulting video?<br>
+Does it matter what the frameRate() is set to in setup?</p>
+</li>
+</ol>
+<h3 id="challenging-challenge-2">Challenging Challenge</h3>
+<ol>
+<li>Recreate This</li>
+</ol>
+<div id="" class="">
+<div class="js-show">
+<iframe class="js-show" src="/js_lab/js_show.html?/animation/challenges/fuzzy_02.js">
+</iframe>
+</div>
+</div>
+</div>
+<style>
+.center {
+border: 1px solid red;
+text-align: center;
+width: 100%;
+padding: 0;
+margin: 0;
+
+}
+.center .js-show {
+  margin: auto;
+}
+</style>
 <div id="" class="assignment">
 <h2 id="keep-sketching">Keep Sketching!</h2>
 <h3 id="base">Base</h3>
