@@ -294,6 +294,9 @@ The Fuzz example also defines a function called `fuzzy_ellipse_2()`. It is a dro
 4. How does `fuzzy_ellipse_2()` approach the problem differently?
 5. Which is better `fuzzy_ellipse` or `fuzzy_ellipse_2`?
 
+For lots of discussion on these two approaches, and others, and their merits take a look at this [stackoverflow question](http://stackoverflow.com/questions/5837572/generate-a-random-point-within-a-circle-uniformly
+).
+
 ::: .activity
 
 ## Coding Challenges

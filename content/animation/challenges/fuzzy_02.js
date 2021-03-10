@@ -48,9 +48,9 @@ function fuzzy_ellipse(x, y, w, h, fuzz = 100) {
 
 // eslint-disable-next-line
 function fuzzy_ellipse_2(x, y, w, h, fuzz = 100) {
-  //stackoverflow.com/questions/5837572/generate-a-random-point-within-a-circle-uniformly
+  // http://stackoverflow.com/questions/5837572/generate-a-random-point-within-a-circle-uniformly
 
-  https: for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 100; i++) {
     const a = random(2 * PI);
     const d = sqrt(random()) * fuzz;
     ellipse(
