@@ -103,9 +103,14 @@ a = 2;
 echo(a); // -> 2
 ```
 
-This takes some getting used to. It helps to keep in mind that variables are given their value before the script is run. The OpenSCAD manual goes into more detail about how [variables](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables) behave.
+.
+This takes some getting used to. It helps to keep in mind that variables are given their value before the script is run. Really, you shouldn't be writing code like this: data is immutable; a is constant; don't try setting it to two values.
+
+The OpenSCAD manual goes into more detail about how [variables](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables) behave.
 
 ### Prefix vs. Infix Notation
+
+Another thing that might seem a little weird in OpenSCAD is that operators are stated before operands (prefix notation) rathern than between operands (infix notation).
 
 Javascript expression with infix notation
 
@@ -140,7 +145,12 @@ union() {
 }
 ```
 
+It is important to remember that operand order is important for many operations. `2 - 3 !== 3 - 2` This is true with OpenSCAD operations like difference() as well: the second shape (and any others after it) will be subtracted from the first shape.
+
 ### Named vs. Positional Parameters
+
+OpenSCAD allows for named parameters
+
 
 OpenSCAD with named parameters
 

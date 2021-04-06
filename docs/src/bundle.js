@@ -73,25 +73,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__style_scss__);
 
 
-
 $(main);
 
 function main() {
-    $('.carousel').carousel({
-        interval: false,
-        wrap: false
-    })
-    $('.carousel').carousel('pause');
+  $(".carousel").carousel({
+    interval: false,
+    wrap: false,
+  });
+  $(".carousel").carousel("pause");
 
-
-    var els = document.getElementsByClassName("spoiler");
-    for (var i = 0; i < els.length; i++) {
-        let el = els[i];
-        els[i].addEventListener('click', ()=>el.classList.add("reveal"));
-    }
+  var els = document.getElementsByClassName("spoiler");
+  for (var i = 0; i < els.length; i++) {
+    let el = els[i];
+    els[i].addEventListener("click", () => el.classList.add("reveal"));
+  }
 }
-
-
 
 // $(window).on("load", () => {
 //     console.log("activate labs");
@@ -101,7 +97,6 @@ function main() {
 //     });
 
 // });
-
 
 // $(document).ready(function() {
 
@@ -127,6 +122,7 @@ function main() {
 //     });
 
 // });
+
 
 /***/ }),
 /* 1 */

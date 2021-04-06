@@ -92,8 +92,11 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 a = <span class="hljs-number">2</span>;
 <span class="hljs-built_in">echo</span>(a); <span class="hljs-comment">// -&gt; 2</span>
 </code></pre>
-<p>This takes some getting used to. It helps to keep in mind that variables are given their value before the script is run. The OpenSCAD manual goes into more detail about how <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables">variables</a> behave.</p>
+<p>.
+This takes some getting used to. It helps to keep in mind that variables are given their value before the script is run. Really, you shouldn’t be writing code like this: data is immutable; a is constant; don’t try setting it to two values.</p>
+<p>The OpenSCAD manual goes into more detail about how <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables">variables</a> behave.</p>
 <h3 id="prefix-vs-infix-notation">Prefix vs. Infix Notation</h3>
+<p>Another thing that might seem a little weird in OpenSCAD is that operators are stated before operands (prefix notation) rathern than between operands (infix notation).</p>
 <p>Javascript expression with infix notation</p>
 <pre><code class="language-javascript"><span class="hljs-number">2</span> * <span class="hljs-number">3</span> -&gt; <span class="hljs-number">6</span>
 <span class="hljs-number">2</span> * <span class="hljs-number">3</span> * <span class="hljs-number">4</span> -&gt; <span class="hljs-number">24</span>
@@ -115,7 +118,9 @@ multiply(<span class="hljs-number">2</span>, add(<span class="hljs-number">3</sp
     rotate ([<span class="hljs-number">90</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]) cylinder (h=<span class="hljs-number">4</span>, r=<span class="hljs-number">1</span>, center=<span class="hljs-literal">true</span>);
 }
 </code></pre>
+<p>It is important to remember that operand order is important for many operations. <code>2 - 3 !== 3 - 2</code> This is true with OpenSCAD operations like difference() as well: the second shape (and any others after it) will be subtracted from the first shape.</p>
 <h3 id="named-vs-positional-parameters">Named vs. Positional Parameters</h3>
+<p>OpenSCAD allows for named parameters</p>
 <p>OpenSCAD with named parameters</p>
 <pre><code class="language-javascript">cylinder((h = <span class="hljs-number">4</span>), (r = <span class="hljs-number">1</span>), (center = <span class="hljs-literal">true</span>));
 </code></pre>
