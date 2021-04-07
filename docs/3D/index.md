@@ -147,24 +147,28 @@ union() {
 
 It is important to remember that operand order is important for many operations. `2 - 3 !== 3 - 2` This is true with OpenSCAD operations like difference() as well: the second shape (and any others after it) will be subtracted from the first shape.
 
-### Named vs. Positional Parameters
+### Named vs. Positional Arguments
 
-OpenSCAD allows for named parameters
+OpenSCAD allows for named parameters. I really like named parameters because it makes _reading_ code easier by labeling the arguments.
 
 
-OpenSCAD with named parameters
-
-```javascript
-cylinder((h = 4), (r = 1), (center = true));
-```
-
-OpenSCAD with positional parameters
+OpenSCAD with positional arguments
 
 ```javascript
 cylinder(4, 1, 1, true);
 ```
 
-Javascript emulating named params with an object literal
+In the example above, its not clear what each argument is for. In the example below the arguments are named, which helps quite a bit.
+
+OpenSCAD with named arguments
+
+```javascript
+cylinder(h = 4, r1 = 1, r2 = 1, center = true);
+```
+
+
+
+Javascript emulating named arguments with an object literal
 
 ```javascript
 cylinder ({h=4, r=1, center=true});

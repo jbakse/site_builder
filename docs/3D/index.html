@@ -119,15 +119,16 @@ multiply(<span class="hljs-number">2</span>, add(<span class="hljs-number">3</sp
 }
 </code></pre>
 <p>It is important to remember that operand order is important for many operations. <code>2 - 3 !== 3 - 2</code> This is true with OpenSCAD operations like difference() as well: the second shape (and any others after it) will be subtracted from the first shape.</p>
-<h3 id="named-vs-positional-parameters">Named vs. Positional Parameters</h3>
-<p>OpenSCAD allows for named parameters</p>
-<p>OpenSCAD with named parameters</p>
-<pre><code class="language-javascript">cylinder((h = <span class="hljs-number">4</span>), (r = <span class="hljs-number">1</span>), (center = <span class="hljs-literal">true</span>));
-</code></pre>
-<p>OpenSCAD with positional parameters</p>
+<h3 id="named-vs-positional-arguments">Named vs. Positional Arguments</h3>
+<p>OpenSCAD allows for named parameters. I really like named parameters because it makes <em>reading</em> code easier by labeling the arguments.</p>
+<p>OpenSCAD with positional arguments</p>
 <pre><code class="language-javascript">cylinder(<span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">true</span>);
 </code></pre>
-<p>Javascript emulating named params with an object literal</p>
+<p>In the example above, its not clear what each argument is for. In the example below the arguments are named, which helps quite a bit.</p>
+<p>OpenSCAD with named arguments</p>
+<pre><code class="language-javascript">cylinder(h = <span class="hljs-number">4</span>, r1 = <span class="hljs-number">1</span>, r2 = <span class="hljs-number">1</span>, center = <span class="hljs-literal">true</span>);
+</code></pre>
+<p>Javascript emulating named arguments with an object literal</p>
 <pre><code class="language-javascript">cylinder ({h=<span class="hljs-number">4</span>, r=<span class="hljs-number">1</span>, center=<span class="hljs-literal">true</span>});
 </code></pre>
 <h3 id="javascript-alternatives">JavaScript Alternatives</h3>
