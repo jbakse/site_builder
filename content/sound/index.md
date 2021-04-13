@@ -197,10 +197,26 @@ function record(length) {
 
 The Fast Fourier Transform transform a signal from the time domain to the frequency domain. For audio analysis that means the FFT can tell the strenght of different frequencies in an audio buffer.
 
-For a visual exploration of FFT, see this excelent video by 3Blue1Brown [https://www.youtube.com/watch?v=spUNpyF58BY](But what is the Fourier Transform? A visual introduction.)
+For a visual exploration of FFT, see this excelent video by 3Blue1Brown [But what is the Fourier Transform? A visual introduction.](https://www.youtube.com/watch?v=spUNpyF58BY)
 
 ::: js-lab
 /sound/sketches/fft.js
+/::
+
+::: .activity
+
+## In-class Challenge
+
+- In the Cuepoints example, and a second cue that calls cueBig when the word "computers" is spoken.
+
+- Change the Volume example so that the circle is centered and grows and shrinks to show the volume.
+
+- Read the [p5.fft documentation](https://p5js.org/reference/#/p5.FFT), then experiment in the FFT example. Try chaning the params passed to `new p5.FFT()` one at a time and observe the changes.
+
+- Study the code in the Making Sounds from Scratch example. Try to understand every line: look up anything you are unfamilliar with. When you start to understand, try commenting out the sin wave code and commenting in click, noise, and retro future. See what they do.
+
+
+
 /::
 
 <!-- ::: .activity
