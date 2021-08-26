@@ -323,7 +323,7 @@ Let's compare drawing a rectangle using p5.js to drawing a rectangle with a glsl
 With p5.js we don't have to think about pixels at all, we just ask p5.js to draw the rectangle for us.
 
 ::: js-lab
-/experimental_shaders/thinking_in_shaders/sketches/pt_rect_api.js
+/experimental_shaders/thinking_in_shaders/sketches/p5_rect_api.js
 /::
 
 #### p5.js — p5_rect_pixel.js

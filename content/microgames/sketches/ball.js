@@ -12,15 +12,19 @@ function setup() {
   ball.velocity.y = 5;
 
   walls = new Group();
+
   const left_wall = createSprite(5, height * 0.5, 10, height);
   left_wall.immovable = true;
   walls.add(left_wall);
+
   const right_wall = createSprite(width - 5, height * 0.5, 10, height);
   right_wall.immovable = true;
   walls.add(right_wall);
+
   const top_wall = createSprite(width * 0.5, 5, width, 10);
   top_wall.immovable = true;
   walls.add(top_wall);
+
   const bottom_wall = createSprite(width * 0.5, height - 5, width, 10);
   bottom_wall.immovable = true;
   walls.add(bottom_wall);

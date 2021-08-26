@@ -227,9 +227,6 @@ Syllabi, schedules, and lesson plans for the Computational Form class.
 
 </a>
 
-
-
-
 <a class="col-6 col-md-6" data-ready="true" href="./2020fall">
 
 ### Class Notes Fall 2020

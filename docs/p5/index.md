@@ -14,7 +14,6 @@ description: Many of the examples on this site use p5.js, a Javascript creative 
 software: p5.js + p5.dom
 ---
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
 <script src="../mess/flakes_mess.js"></script>
 
@@ -34,12 +33,9 @@ There are many live, working code examples throught this site. Many of these exa
 [Daniel Shiffman](http://shiffman.net/)
 /::
 
-
-
 [Processing](https://processing.org/) is a programming language created for visual artists learning to make creative coding projects. It was created in 2001 by MIT Media Lab alumni and creative coders [Casey Reas](http://reas.com/) and [Benjamin Fry](http://benfry.com/). The project is now also let by [Daniel Shiffman](http://shiffman.net/), who has published a number of popular books and video tutorials on creating art with Processing.
 
 Processing combines a simple programming environment and a programming language to create an low friction entry point for creative computing. Processing provides a basic but powerful [drawing API](https://processing.org/reference/), and has libraries for other common applications like sound and networking.
-
 
 ### p5.js
 
@@ -49,25 +45,22 @@ Processing combines a simple programming environment and a programming language 
 [Lauren McCarthy](http://lauren-mccarthy.com/)
 /::
 
-
 [p5.js](https://p5js.org/) was created by artist [Lauren McCarthy](http://lauren-mccarthy.com/) to brings the Processing API and spirit to Javascript and the web. Working in p5.js is very similar to working in Processing, with the benefit that p5.js sketches work in any modern browser.
-
 
 ### Learning Processing and p5.js
 
 Processing and p5.js are both widely popular open-source projects with large, active communities. They are both well documented as well. You can start with either language, you don't need to know Processing to learn p5.js.
 
-Site  | Description
----   | ---
-[Processing](https://processing.org/) | Processing Homepage
-[Reference](https://processing.org/reference/) | The Processing core API Documentation
-[Tutorials](https://processing.org/tutorials/) | Official Processing tutorials
-[p5.js](https://p5js.org/) | pt.js Homepage
-[p5.js Reference](https://p5js.org/reference/) | The p5.js core API Documentation
-[p5.js Tutorials](https://p5js.org/learn/) | Official p5.js tutorials 
-[Shiffman's Videos](http://shiffman.net/videos/) | Dan Shiffman has a full range of video tutorials for p5.js and creative code.
-[Khan Academy<br/> JS Drawing & Animation](https://www.khanacademy.org/computing/computer-programming/programming) | Complete, free course on drawing with code using p5.js.
-
+| Site                                                                                                               | Description                                                                   |
+| ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| [Processing](https://processing.org/)                                                                              | Processing Homepage                                                           |
+| [Reference](https://processing.org/reference/)                                                                     | The Processing core API Documentation                                         |
+| [Tutorials](https://processing.org/tutorials/)                                                                     | Official Processing tutorials                                                 |
+| [p5.js](https://p5js.org/)                                                                                         | pt.js Homepage                                                                |
+| [p5.js Reference](https://p5js.org/reference/)                                                                     | The p5.js core API Documentation                                              |
+| [p5.js Tutorials](https://p5js.org/learn/)                                                                         | Official p5.js tutorials                                                      |
+| [Shiffman's Videos](http://shiffman.net/videos/)                                                                   | Dan Shiffman has a full range of video tutorials for p5.js and creative code. |
+| [Khan Academy<br/> JS Drawing & Animation](https://www.khanacademy.org/computing/computer-programming/programming) | Complete, free course on drawing with code using p5.js.                       |
 
 ### A p5.js Example Sketch
 
@@ -77,11 +70,9 @@ This sketch draws a very simple house. You can try changing or adding to the hou
 /p5/sketches/house.js
 /::
 
-
 ## Sketching Locally
 
-You can try out p5.js in the editor above, but to start making your own sketches you'll want a better setup. The most common way to work with p5.js is to use a local editor and browser. You will probably need a local web server too, because Chrome won't let your code do certain things unless it comes from a server. 
-
+You can try out p5.js in the editor above, but to start making your own sketches you'll want a better setup. The most common way to work with p5.js is to use a local editor and browser. You will probably need a local web server too, because Chrome won't let your code do certain things unless it comes from a server.
 
 ### Recommended Tools
 
@@ -91,12 +82,12 @@ You can try out p5.js in the editor above, but to start making your own sketches
 [Atom](https://atom.io/){boxed right}
 : Atom is a free text editor from Github. It works pretty good for quick p5.js sketches, especially if you install a few add-on packages. I recommend installing and using these.
 
-Package       | Purpose
----           | ---
-jsformat      | Consistently formats the spacing and indenting of your code. Well formatted code is much easier to read and work with.
-linter        | Base package that looks for and reports mistakes in your code.
-linter-jshint | Language linter for javascript
-atom-live-server | Provides a simple webserver right from Atom, complete with live reload.
+| Package          | Purpose                                                                                                                |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| jsformat         | Consistently formats the spacing and indenting of your code. Well formatted code is much easier to read and work with. |
+| linter           | Base package that looks for and reports mistakes in your code.                                                         |
+| linter-jshint    | Language linter for javascript                                                                                         |
+| atom-live-server | Provides a simple webserver right from Atom, complete with live reload.                                                |
 
 Lately, I've also been using [VS Code](https://code.visualstudio.com/) with similar packages. You can use any text editor you wish.
 
@@ -114,30 +105,29 @@ To create a p5.js Project from scratch you need to do a few things.
 [p5.js:<br/> Get Started](https://p5js.org/get-started/)
 /::
 
-This process is detailed in the [p5.js Get Started guide](https://p5js.org/get-started/). 
-
+This process is detailed in the [p5.js Get Started guide](https://p5js.org/get-started/).
 
 ### Tips
 
 1. Always Read your Error Messages
-   
-    Once you are up and running be sure to open the Javascript console to see error messages and debugging information. In Chrome you can open the console with the `View » Developer » JavaScript Console` menu or by pressing `command-option-j`. When something goes wrong with your code, Chrome tries to help by providing error messages in the console. Sometimes these messages are not very clear, but they are always more helpful than nothing.
-   
-   Keep the console open all of the time. 
 
-2. Run a Local Server 
+   Once you are up and running be sure to open the Javascript console to see error messages and debugging information. In Chrome you can open the console with the `View » Developer » JavaScript Console` menu or by pressing `command-option-j`. When something goes wrong with your code, Chrome tries to help by providing error messages in the console. Sometimes these messages are not very clear, but they are always more helpful than nothing.
 
-    You are going to need a local server. As soon as you start working with images or other network resources, Chrome is going to require that your code be served via `http` instead of the local file system. The `atom-live-server` package for Atom provides a super easy-to-use and simple web server you can start right from within Atom.
+   Keep the console open all of the time.
+
+2. Run a Local Server
+
+   You are going to need a local server. As soon as you start working with images or other network resources, Chrome is going to require that your code be served via `http` instead of the local file system. The `atom-live-server` package for Atom provides a super easy-to-use and simple web server you can start right from within Atom.
 
 3. Use Live Reload
 
-    It is important to break down your problem into small steps and try them out one by one. It is a good idea to reload your sketch after each small change, so you will be reloading very often. Manual reloading requires saving, switching to the browser, and reloading. The `atom-live-server` provides live reloading: it will tell the browser to reload every time you save. This keeps you in your editor and speeds up your workflow.
+   It is important to break down your problem into small steps and try them out one by one. It is a good idea to reload your sketch after each small change, so you will be reloading very often. Manual reloading requires saving, switching to the browser, and reloading. The `atom-live-server` provides live reloading: it will tell the browser to reload every time you save. This keeps you in your editor and speeds up your workflow.
 
 4. Use a Code Formatter
 
-    When your code is well formatted it is easier to read and it is easier to spot mistakes. A code formatter will keep your code consistently formated completely automatically, giving you this benefit without any extra effort. 
+   When your code is well formatted it is easier to read and it is easier to spot mistakes. A code formatter will keep your code consistently formated completely automatically, giving you this benefit without any extra effort.
 
-<!-- 
+<!--
 ### The Comp Form p5.js Template Project
 
 
@@ -192,9 +182,6 @@ Normally, you use the Git software through its command line interface. If you ar
 ### Getting Started with Git and Github
 [[ just a little info?]]
  -->
-
-
-
 
 <style>
 td:first-child { width : 25% }
