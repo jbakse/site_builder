@@ -10,16 +10,20 @@ next:
 next_url:
 
 hero_title: Working with Textures
-description: Common ways textures are used as image and data sources in shaders.
+description: Using textures as image and data sources in shaders.
 
 software: WebGL
 ---
 
 ## Working With Textures
 
-Today, we go back to WebGL. We'll start by adding texture loading to the from-scratch version of glslCanvas. Then we'll look at several common ways textures are used as image and data sources in shaders.
+Today we work with textures. We'll start by adding texture loading to the from-scratch WebGL demo we looked at last week. Then we'll look at several common ways textures are used as images and data sources in shaders.
 
-[Example Source](https://scrimba.com/c/cKpnZ4HB){boxed right}
+GL doesn't have any concpet of images vs data sources. Textures are textures. I think it is helpful to think about textures in both ways though, depending on context.{callout}
+
+[Hello, Shaders! Broken Textures](https://codepen.io/jbakse/pen/jOwXEdg?editors=0010){boxed right}
+
+[Hello, Shaders! Textures](https://codepen.io/jbakse/pen/BaZvyaJ?editors=0010){boxed right}
 
 ## Loading Textures
 
@@ -35,23 +39,45 @@ Draw:
 
 1. select the active texture unit - `activeTexture()`
 2. bind the texture to active unit - `bindTexture()`
-3. store texture unit id in glsl sampler2D  - `gl.uniform1i()`
+3. store texture unit id in glsl sampler2D - `gl.uniform1i()`
 
 ### Loading is Asynchronous
 
+```javascript
+const image = new Image();
+image.onload = function () {
+    ...
+    gl.texImage2D(...);
+    ...
+};
+image.crossOrigin = ""; // ask for CORS permission
+image.src = url;
+```
+
 ### Mipmapping
 
+![MipMapping example](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mipmap_Aliasing_Comparison.png/880px-Mipmap_Aliasing_Comparison.png){full-width}
+
+[Wikipedia: Mipmapping](https://en.wikipedia.org/wiki/Mipmap)
+
 ### Powers of 2
-WebGL 1 only supports mipmapping when textures dimensions to be powers of two. 
+
+WebGL 1 only supports mipmapping when textures dimensions to be powers of two.
+
 WebGL 1 also requires wrapping to be CLAMP_TO_EDGE for NPOT textures.
+
 WebGL supports NPOT textures fully. Its still very common to use power of two textures.
 
+I often use square power-of-two images for assests. I also often use just numbers, letters, and underscores in file names. A lot of the times you don't have to, but if you do it will work more places.b
+
 ### TEXTURE_WRAP_S + TEXTURE_WRAP_T
+
 - CLAMP_TO_EDGE
 - MIRRORED_REPEAT
 - **REPEAT**
 
 ### TEXTURE_MIN_FILTER
+
 - LINEAR
 - NEAREST
 - NEAREST_MIPMAP_NEAREST
@@ -60,14 +86,13 @@ WebGL supports NPOT textures fully. Its still very common to use power of two te
 - LINEAR_MIPMAP_LINEAR.
 
 ### TEXTURE_MAG_FILTER
+
 - **LINEAR**
 - NEAREST
 
 [glTexParameterf](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glTexParameter.xhtml){boxed right}
 
-
 [MDN: Using Textures](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL){boxed right}
-
 
 ## Textures as Images
 
@@ -75,7 +100,6 @@ The following examples use this image texture.
 ::: .three-up
 ![pear](./textures/pear.jpg)
 /::
-
 
 ### 01_texture/
 
@@ -122,9 +146,6 @@ The following examples use these data textures.
 
 [Substance Designer](https://www.substance3d.com/products/substance-designer/){boxed right}
 
-
-
-
 ### 05_color_ramp/
 
 <iframe scrolling="no" style = "border: 0; width: 512px; height: 512px; overflow: hidden;"src = "./05_color_ramp"></iframe>
@@ -136,4 +157,3 @@ The following examples use these data textures.
 ### 07_normal_map/
 
 <iframe scrolling="no" style = "border: 0; width: 512px; height: 512px; overflow: hidden;"src = "./07_normal_map"></iframe>
-
