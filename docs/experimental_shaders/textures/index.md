@@ -17,7 +17,7 @@ software: WebGL
 
 ## Working With Textures
 
-Today we work with textures. We'll start by adding texture loading to the from-scratch WebGL demo we looked at last week. Then we'll look at several common ways textures are used as images and data sources in shaders.
+Today we work with textures! We'll start by adding texture loading to the from-scratch WebGL demo we looked at last week. Then we'll look at several common ways textures are used as images and data sources in shaders.
 
 GL doesn't have any concpet of images vs data sources. Textures are textures. I think it is helpful to think about textures in both ways though, depending on context.{callout}
 
