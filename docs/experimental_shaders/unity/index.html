@@ -10,44 +10,148 @@ gtag('config', 'UA-41378785-2');</script><meta charset="utf-8"><meta name="viewp
 <polygon points="96,64 80,91.7 112,91.7"/>
 </svg></a></div><header class="container" id="top-nav"><div class="row justify-content-md-center"><div class="col-md-8"><span class="title">Shading 3D Objects</span><div class="buttons"></div></div></div></header><div id="content"><div class="container" id="hero"><div class="row justify-content-md-center"><div class="col-md-8"><h1>Shading 3D Objects</h1><h6>Overview</h6><p class="description">In a typcial 3D graphics pipeline, the fragment shader is used to "shade" a 3D object. The fragment shader considers the surface qualities of the object and the environmental lighting and determines how each pixel covered by the object should look. Today we'll create a basic lit shader in Unity.</p><h6>Tools</h6><p class="software">Unity Game Engine</p></div></div></div><div class="container" id="copy"><div class="row justify-content-md-center"><div class="col-md-8 comp-form-copy"><h2 id="demo-project">Demo Project</h2>
 <p><a href="./demo_project.zip">Demo Project</a></p>
-<h2 id="basic-builtin">Basic_Builtin</h2>
-<p>First lets look at a simple scene in unity and see how it is structured.</p>
+<h2 id="unity-editor-tour">Unity Editor Tour</h2>
+<p>Lets start with a quick tour of the Unity Editor.</p>
+<p>! Unity is a game engine and editor UI, not just a library. In p5 you are responsible for most of what happens when you run your sketch. There is no GUI for laying out the scene. You move and draw everything yourself with support from the library. In Unity, the basic world is handled for you. You can import assets, arrange them in your scene, and configure everything without writing code. The code you write only has to handle the application specific behavior of your objects. “You call your library. Your framework calls you.”</p>
+<p><a href="https://docs.unity3d.com/Manual/UsingTheEditor.html">Unity’s Interface</a></p>
 <ul>
-<li>Cube, Camera, Directional Light</li>
-<li>Cube: Transform, Mesh, Mesh Renderer, Collider</li>
-<li>Environmental Lighting</li>
-<li>PBR Materials</li>
-<li>Rotate script: applied to cube, public properties in inspector.</li>
-</ul>
-<h2 id="unlit-rings">Unlit_rings</h2>
-<p>Lets add our own shader, starting with a simple shader that doesn’t take into account lighting.</p>
+<li>
+<p>Workspace</p>
 <ul>
-<li>Tour Unlit_Example.shader</li>
-<li>Unity shaders use an HLSL varient</li>
-<li>Unity translates shaders to match platform</li>
-<li><a href="https://docs.unity3d.com/Manual/SL-ShadingLanguage.html">Unity Shader Language</a></li>
-<li><a href="https://codepen.io/alaingalvan/post/glsl-vs-hlsl">https://codepen.io/alaingalvan/post/glsl-vs-hlsl</a></li>
-<li><a href="https://docs.microsoft.com/en-us/windows/uwp/gaming/glsl-to-hlsl-reference">https://docs.microsoft.com/en-us/windows/uwp/gaming/glsl-to-hlsl-reference</a></li>
-</ul>
-<h2 id="unlit-lit">Unlit_Lit</h2>
-<p>Now a shader with lighting.</p>
-<ul>
-<li>Albedo</li>
-<li>Ambient</li>
-<li>Diffuse
-<ul>
-<li>Why its cold in winter.</li>
+<li>Toolbar, Scene, Game, Console, Inspector, Project, Heirarchy</li>
 </ul>
 </li>
-<li>Normals</li>
-<li>Dot Products</li>
-<li>Phong: Ambient + Diffuse + Specular</li>
-<li>Exposing parameters to UI</li>
-</ul>
-<h2 id="surface-rings">Surface_Rings</h2>
-<p>When working in Unity it is often a good idea to build on top of the rich feature set Unity provides. Instead of shading our objects from scratch, we can create surface shaders. A surface shader describes only the surface qualities of the object and leaves the lighting to Unity.</p>
+<li>
+<p>Scene Navigation</p>
 <ul>
-<li>A surface shader computes the PBR properties of surface.</li>
-<li>Properties are then used by the standard shader lighting to determine fragment color.</li>
+<li>Middle-Drag to Pan</li>
+<li>Option-Drag to Orbit</li>
+<li>Shift F to focus on object</li>
 </ul>
+</li>
+<li>
+<p>Locking the Inspector</p>
+</li>
+<li>
+<p>Scenes</p>
+</li>
+</ul>
+<h2 id="01-basic-builtin">01_Basic_Builtin</h2>
+<p>Lets look at a simple scene in Unity and see how it is structured.</p>
+<ol>
+<li>Load the scene</li>
+<li>Run it!</li>
+</ol>
+<ul>
+<li><a href="https://docs.unity3d.com/Manual/GameObjects.html">Game Objects</a>
+<ul>
+<li>Cube, Camera, Directional Light</li>
+</ul>
+</li>
+<li><a href="https://docs.unity3d.com/Manual/Components.html">Components</a>
+<ul>
+<li>Cube: Transform, Mesh Filter, Mesh Renderer, Box Collider</li>
+<li>Rotate Script: applied to cube, public properties in inspector.</li>
+</ul>
+</li>
+<li><a href="https://blog.unity.com/technology/working-with-physically-based-shading-a-practical-approach">Physically Based Rendering</a></li>
+<li>Physics Engine
+<ul>
+<li>Rigid Bodies</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>Add a cube</li>
+<li>Position the cube</li>
+<li>Add a rigid body component</li>
+<li>Run it!</li>
+</ol>
+<h2 id="02-unlit-rings">02_Unlit_Rings</h2>
+<p>When Unity draws your scene, it uses a shader to color each fragment/pixel. You can provide your own shaders for custom effects.</p>
+<p>We are going to start with an “unlit” shader. Unlit shaders don’t interact with Unity’s lighting system. They are simpler, and more like the fullscreen shader work we’ve done so far.</p>
+<ol>
+<li>Load the scene</li>
+<li>Run it!</li>
+</ol>
+<ul>
+<li>
+<p>Tour <code>Unlit_rings.shader</code></p>
+<ul>
+<li>
+<p>You write <code>.shader</code> files in <a href="https://docs.unity3d.com/Manual/SL-Reference.html">ShaderLab</a>, a declarative “container” format with metadata about the shader and the shaders themesleves.</p>
+</li>
+<li>
+<p>You write the shader programs themselves in <a href="https://docs.unity3d.com/Manual/SL-ShaderPrograms.html">HLSL</a>: High Level Shader Language. Unity translates HLSL to match platform.</p>
+</li>
+<li>
+<p class="">Shader “name”</p>
+</li>
+<li>
+<p class="">Properties</p>
+</li>
+<li>
+<p>SubShader {}, Tags, LOD</p>
+</li>
+<li>
+<p>Pass {} CGPROGRAM, #pragma</p>
+</li>
+<li>
+<p>#include “UnityCG.cginc” // does a lot!</p>
+</li>
+<li>
+<p>data structs</p>
+</li>
+<li>
+<p>vert and frag</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://docs.unity3d.com/Manual/SL-ShadingLanguage.html">Writing shaders overview</a></p>
+</li>
+<li>
+<p><a href="https://codepen.io/alaingalvan/post/glsl-vs-hlsl">GLSL vs HLSL</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/windows/uwp/gaming/glsl-to-hlsl-reference">GLSL-to-HLSL reference</a></p>
+</li>
+</ul>
+<ol>
+<li>Make the shapes red.</li>
+<li>Make red and white rings.</li>
+</ol>
+<h2 id="03-surface-rings">03_Surface_Rings</h2>
+<p>If you want to write your own shader and also want to take advantage of Unity’s lighting system, you can write a Surface shader.</p>
+<p>Instead of directly describing the color of each fragment/pixel, a Surface shader describes the characteristics of the 3d objects surface Unity needs to calculate the color itself.</p>
+<ol>
+<li>Open the scene.</li>
+<li>run it.</li>
+</ol>
+<ul>
+<li>
+<p>A surface shader computes the PBR properties of surface for each fragment rendered.</p>
+</li>
+<li>
+<p>Properties are then used by the standard shader lighting to determine fragment color.</p>
+</li>
+<li>
+<p>Tour of Surface_Rings.shader</p>
+<ul>
+<li>Shell in ShaderLab</li>
+<li>#pragma surface surf Standard fullforwardshadows</li>
+<li><a href="https://docs.unity3d.com/Manual/SL-SurfaceShaders.html">SurfaceOutputStandard</a></li>
+<li>Albedo</li>
+<li>Metallic</li>
+<li>Smoothness</li>
+<li>Alpha</li>
+</ul>
+</li>
+</ul>
+<h2 id="unlit-lit">Unlit_Lit</h2>
+<p>The Unlit_Lit scene shows how to cacluate lighting using your own model with an unlit shader.</p>
+<h2 id="vertex-wave">Vertex_Wave</h2>
+<p>The Vertex_Wave scene shows how to distort a 3d object using a custom vertex shader.</p>
+<h2 id="vertex-map">Vertex_Map</h2>
+<p>The Vertex_Map scene shows how to use a bitmap as data for distorting vertex positions.</p>
 </div></div></div><div class="container" id="scroll-out"></div></div></body></html>
